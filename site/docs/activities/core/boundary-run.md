@@ -34,6 +34,11 @@ Builds listening skills, safety awareness, and familiarity with the play space.`
 
 <FullOnly>
 
+<figure style={{float:'right', margin:'0 0 1rem 1.5rem', maxWidth:'25%'}}>
+  <img src="/curriculum/img/activities/boundary-run.png" alt="Boundary Run setup diagram showing a play area with red arrows tracing the boundary" style={{width:'100%', borderRadius:'6px'}} />
+  <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: leader traces the boundary</figcaption>
+</figure>
+
 # Boundary Run
 
 **Travel the boundary of the play area.**
@@ -46,11 +51,6 @@ Builds listening skills, safety awareness, and familiarity with the play space.`
 />
 
 > "In orienteering we stay inside a boundary"
-
-<figure style={{margin:'0 0 1.25rem', maxWidth:'25%'}}>
-  <img src="/curriculum/img/activities/boundary-run.png" alt="Boundary Run setup diagram showing a play area with red arrows tracing the boundary" style={{width:'100%', borderRadius:'6px'}} />
-  <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: leader traces the boundary</figcaption>
-</figure>
 
 <Description>{description}</Description>
 

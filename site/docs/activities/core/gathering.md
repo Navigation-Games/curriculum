@@ -34,6 +34,17 @@ Builds divided attention, group responsibility, and awareness in terrain.`;
 
 <FullOnly>
 
+<div style={{float:'right', margin:'0 0 1rem 1.5rem', maxWidth:'25%'}}>
+  <figure style={{margin:'0 0 0.75rem'}}>
+    <img src="/curriculum/img/activities/gathering-kids.jpg" alt="Children running back to the teacher during a gathering activity" style={{width:'100%', borderRadius:'6px'}} />
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Students returning on a signal</figcaption>
+  </figure>
+  <figure style={{margin:0}}>
+    <img src="/curriculum/img/activities/gathering.png" alt="Gathering setup diagram showing students returning to a central point" style={{width:'100%', borderRadius:'6px'}} />
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup diagram</figcaption>
+  </figure>
+</div>
+
 # Gathering
 
 **Return to the teacher on a signal.**
@@ -46,17 +57,6 @@ Builds divided attention, group responsibility, and awareness in terrain.`;
 />
 
 > "In orienteering, it's important to stay aware and return on time"
-
-<div style={{display:'flex', gap:'1rem', marginBottom:'1.25rem'}}>
-  <figure style={{margin:0, maxWidth:'25%'}}>
-    <img src="/curriculum/img/activities/gathering-kids.jpg" alt="Children running back to the teacher during a gathering activity" style={{width:'100%', borderRadius:'6px'}} />
-    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Students returning to the teacher on a signal</figcaption>
-  </figure>
-  <figure style={{margin:0, maxWidth:'25%'}}>
-    <img src="/curriculum/img/activities/gathering.png" alt="Gathering setup diagram showing students returning to a central point" style={{width:'100%', borderRadius:'6px'}} />
-    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: return to the teacher on the signal</figcaption>
-  </figure>
-</div>
 
 <Description>{description}</Description>
 
