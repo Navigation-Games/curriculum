@@ -47,12 +47,10 @@ Builds listening skills, safety awareness, and familiarity with the play space.`
 
 > "In orienteering we stay inside a boundary"
 
-<div style={{display:'flex', gap:'1rem', marginBottom:'1.25rem'}}>
-  <figure style={{margin:0, flex:1}}>
-    <img src="/curriculum/img/activities/boundary-run.png" alt="Boundary Run setup diagram showing a play area with red arrows tracing the boundary" style={{width:'100%'}} />
-    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: leader traces the boundary of the play area</figcaption>
-  </figure>
-</div>
+<figure style={{margin:'0 0 1.25rem', maxWidth:'25%'}}>
+  <img src="/curriculum/img/activities/boundary-run.png" alt="Boundary Run setup diagram showing a play area with red arrows tracing the boundary" style={{width:'100%', borderRadius:'6px'}} />
+  <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: leader traces the boundary</figcaption>
+</figure>
 
 <Description>{description}</Description>
 
