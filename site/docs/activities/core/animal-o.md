@@ -257,7 +257,6 @@ See [Using SI Equipment](/equipment/si-timing) for setup instructions.
     'Move the checkpoints to new locations and start over',
     'Have students draw a map of the area and checkpoint locations',
     'Cover up animals with napkins, students must communicate to finish course',
-    'Use electronic timing',
   ]}
 />
 

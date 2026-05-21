@@ -51,18 +51,17 @@
 }
 
 .descriptionText {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 0 0 0.75rem;
-  white-space: pre-line;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  margin: 0 0 0.5rem;
 }
 
 .epigraph {
   text-align: center;
   font-style: italic;
   color: #e8941a;
-  font-size: 0.95rem;
-  margin: 0.5rem 0 1rem;
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0.6rem;
   font-weight: 600;
 }
 
@@ -80,7 +79,24 @@
 }
 
 .section {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.deliveryContent p,
+.deliveryContent ol,
+.deliveryContent ul {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0 0 0.2rem;
+  padding-left: 1.25rem;
+}
+
+.deliveryContent p {
+  padding-left: 0;
+}
+
+.deliveryContent li {
+  margin-bottom: 0.1rem;
 }
 
 .sectionTitle {

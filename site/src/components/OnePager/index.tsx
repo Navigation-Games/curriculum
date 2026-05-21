@@ -74,7 +74,7 @@ export default function OnePager({
             {delivery && (
               <div className={styles.section}>
                 <h3 className={styles.sectionTitle}>Delivery</h3>
-                <div>{delivery}</div>
+                <div className={styles.deliveryContent}>{delivery}</div>
               </div>
             )}
           </div>
