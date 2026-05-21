@@ -4,12 +4,25 @@ Authors' guide for editing and maintaining the curriculum site.
 
 **Live site:** https://navigation-games.github.io/curriculum/ *(not yet deployed)*
 
+## Why This Tech Stack
+
+The curriculum has lived in GitBook and then Google Sites. Both worked well for writing and sharing content, but as the curriculum grew we hit a consistency problem: each activity exists in multiple forms (one-pager, full description, script, lesson plan reference, vocabulary list) and keeping them in sync across formats and across activities was manual and error-prone.
+
+We moved to Docusaurus + GitHub so that:
+
+- **Content is structured and reusable.** Activity metadata (goals, vocabulary, materials, reflection questions) is stored once and rendered into multiple views: full activity page, printable one-pager, lesson plan card, etc. A change to vocabulary propagates everywhere.
+- **Consistency can be checked programmatically.** Scripts and AI tools can scan the structured content to flag missing sections, inconsistent terminology, or activities that have drifted out of sync.
+- **Multiple views from one source.** The same activity file produces both the full interactive page and the compact one-pager. No separate documents to reconcile.
+- **Version history and collaboration.** Git tracks every change, who made it, and why. Multiple editors can work in parallel without overwriting each other.
+
+The tradeoff is that editing requires working with text files and git instead of a WYSIWYG editor. For day-to-day content editing, authors can edit Markdown files directly on GitHub.com (no local setup needed) or draft in Google Docs and sync changes back into the repo.
+
 ## Tech Stack
 
 - **[Docusaurus](https://docusaurus.io/)** (v3) - static site generator built on React. Turns Markdown files into a fast, searchable website with navigation, sidebar, and versioning built in.
 - **[MDX](https://mdxjs.com/)** - Markdown with support for React components inline. Activity cards, video embeds, and grid layouts are all MDX components.
 - **[React](https://react.dev/)** (v19) - powers custom components like `<ActivityCard>`, `<CardGrid>`, and `<YouTube>`.
-- **[GitHub Pages](https://pages.github.com/)** - free static hosting. The site is published from the `gh-pages` branch of the repo.
+- **[GitHub Pages](https://pages.github.com/)** - free static hosting. The site deploys automatically when changes are pushed to main.
 - **[GitHub](https://github.com/Navigation-Games/curriculum)** - source control and collaboration. Content is edited as Markdown files in the repo.
 - **[Node.js](https://nodejs.org/)** (v20+) - runtime for the build toolchain. Required for local preview and deployment.
 
@@ -207,6 +220,7 @@ import YouTube from '@site/src/components/YouTube';
 
 ## Content Sources
 
+- [GitBook published site](https://navigation-games-2.gitbook.io/orienteering-curriculum-for-schools) (good reference for layout and card style)
 - [GitBook source repo](https://github.com/navgames/orienteering-lessons) (older but has good structure)
 - [Current school curriculum (Google Sites)](https://sites.google.com/navigationgames.org/ngactivities/curricula/run-a-school-based-activity)
 - [Current camp curriculum (Google Sites)](https://sites.google.com/navigationgames.org/ngactivities/curricula/orienteering-at-camp)

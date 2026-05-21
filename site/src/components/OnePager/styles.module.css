@@ -1,0 +1,145 @@
+.page {
+  max-width: 8.5in;
+  margin: 0 auto;
+}
+
+.frame {
+  border: 3px solid #e8941a;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.headerText {
+  flex: 1;
+}
+
+.orgName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  margin: 0 0 0.25rem;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #444;
+  margin: 0;
+}
+
+.headerImage {
+  flex-shrink: 0;
+  max-width: 180px;
+}
+
+.headerImage img {
+  width: 100%;
+  height: auto;
+}
+
+.descriptionText {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 0.75rem;
+  white-space: pre-line;
+}
+
+.epigraph {
+  text-align: center;
+  font-style: italic;
+  color: #e8941a;
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1rem;
+  font-weight: 600;
+}
+
+.body {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.mainCol {
+  flex: 3;
+}
+
+.sideCol {
+  flex: 2;
+}
+
+.section {
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: 0.9rem;
+  text-decoration: underline;
+  margin: 0 0 0.25rem;
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.list li {
+  margin-bottom: 0.15rem;
+}
+
+.sideText {
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.bottomRow {
+  display: flex;
+  gap: 1.5rem;
+  border-top: 1px solid #ddd;
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.bottomSection {
+  flex: 1;
+}
+
+@media print {
+  .page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .frame {
+    border-width: 2px;
+    padding: 0.75rem 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .list,
+  .sideText {
+    font-size: 0.8rem;
+  }
+
+  .sectionTitle {
+    font-size: 0.85rem;
+  }
+}

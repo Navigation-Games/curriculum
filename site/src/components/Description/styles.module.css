@@ -1,0 +1,21 @@
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  color: var(--ifm-font-color-base);
+}
+
+.description p {
+  margin-bottom: 0.5rem;
+}
+
+.description p:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+}

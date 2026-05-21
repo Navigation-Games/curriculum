@@ -7,6 +7,13 @@ interface YouTubeProps {
 }
 
 export default function YouTube({id, title = 'Video'}: YouTubeProps): React.ReactElement {
+  if (!id || id === 'TODO') {
+    return (
+      <div className={styles.placeholder}>
+        <span>Video coming soon</span>
+      </div>
+    );
+  }
   return (
     <div className={styles.wrapper}>
       <iframe

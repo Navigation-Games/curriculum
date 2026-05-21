@@ -3,11 +3,14 @@ title: "1 - Explore"
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ActivityCard from '@site/src/components/ActivityCard';
+import CardGrid from '@site/src/components/CardGrid';
+
 # 1 - Explore
 
 > "In orienteering, you look for checkpoints within a boundary"
-
-## Overview
 
 | | |
 |---|---|
@@ -19,12 +22,32 @@ sidebar_position: 1
 
 ## Activities
 
-- **Boundary Run**: Run the boundary; discuss inside/outside
-- **Gathering**: Practice returning on the teacher's signal
-- **Explore & Find** *(companion: readiness for Animal-O)*: In pairs, explore to find animal checkpoints
-- **Animal Relay**: Take turns running to animal checkpoints
+<CardGrid columns={2}>
+  <ActivityCard
+    title="Boundary Run"
+    description="Run the boundary; discuss inside/outside."
+    tag="core"
+  />
+  <ActivityCard
+    title="Gathering"
+    description="Practice returning on the teacher's signal."
+    tag="core"
+  />
+  <ActivityCard
+    title="Explore & Find"
+    description="In pairs, explore to find animal checkpoints."
+    link="/activities/core/animal-o"
+    tag="readiness"
+  />
+  <ActivityCard
+    title="Animal Relay"
+    description="Take turns running to animal checkpoints."
+    tag="variation"
+  />
+</CardGrid>
 
-## Goals
+<Tabs>
+<TabItem value="goals" label="Goals" default>
 
 ### Orienteering Goals
 - Stay within a boundary
@@ -38,7 +61,8 @@ sidebar_position: 1
 - Accept corrective feedback from the teacher (S4.E3)
 - Work cooperatively with others (S4.E5)
 
-## Delivery
+</TabItem>
+<TabItem value="delivery" label="Delivery">
 
 1. Run the boundary; discuss what is inside and outside
 2. Practice gathering on the teacher's signal
@@ -46,7 +70,8 @@ sidebar_position: 1
 4. Explore to find animal checkpoints; return on a signal
 5. Animal relay: take turns running to checkpoints
 
-## Reflection
+</TabItem>
+<TabItem value="reflection" label="Reflection">
 
 - How many animals did you find? Which animal was the hardest to find?
 - Did you stay within the boundary? How did you remember to do so?
@@ -55,9 +80,13 @@ sidebar_position: 1
 - Do you remember where the animals are?
 - Were some animals easier or harder to find? Why?
 
-## Extensions
+</TabItem>
+<TabItem value="extensions" label="Extensions">
 
 - Use different movements and speeds during the boundary run
 - Play Shrinking Boundary Tag
 - Move the checkpoints to new locations and start over
 - Have students draw a map of the area and checkpoint locations
+
+</TabItem>
+</Tabs>

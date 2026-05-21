@@ -28,3 +28,50 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+@media print {
+  .navbar,
+  .footer,
+  .theme-doc-sidebar-container,
+  .theme-doc-toc-desktop,
+  .theme-doc-breadcrumbs,
+  .pagination-nav,
+  .theme-doc-footer,
+  .docMetadata_src,
+  article > footer,
+  .row .col:last-child > nav,
+  .tag_src,
+  [class*="tags_"] {
+    display: none !important;
+  }
+
+  .main-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+
+  body {
+    font-size: 11pt;
+  }
+
+  h1 {
+    font-size: 18pt;
+    margin-bottom: 0.25rem;
+  }
+
+  h3 {
+    font-size: 13pt;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  ol, ul {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}

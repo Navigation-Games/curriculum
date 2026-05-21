@@ -2,27 +2,67 @@
 title: Animal-O
 sidebar_position: 3
 tags: [core, level-1]
+time: 15-30 minutes
+space: Gym, schoolyard, or local park
+materials:
+  - Checkpoints (pictures of animals)
+  - Clue sheets
+setup: Place animal checkpoints around the defined space
+vocabulary:
+  - term: Clue sheet
+    definition: A list showing the order to visit checkpoints. In Animal-O, the clue sheet shows animal pictures.
+  - term: Checkpoint
+    definition: A location marked with a cone or flag. In Animal-O, each checkpoint has an animal picture attached.
+  - term: Course
+    definition: A sequence of checkpoints from start to finish.
+  - term: Boundary
+    definition: The perimeter of the play area. All checkpoints are inside the boundary.
+  - term: Spatial memory
+    definition: The ability to remember where things are in space.
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import ActivityMeta from '@site/src/components/ActivityMeta';
+import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
+import OnePager from '@site/src/components/OnePager';
+import Description from '@site/src/components/Description';
+import YouTube from '@site/src/components/YouTube';
+import CardGrid from '@site/src/components/CardGrid';
+
+export const description = `Explore within the boundary to find animal checkpoints. Use a clue sheet to find checkpoints in order. Repeat for a faster time. Repeat from memory. Then start over with a different clue sheet.
+
+Builds spatial memory, observation, and navigation skills.`;
+
+<ViewToggle />
+
+<FullOnly>
 
 # Animal-O (Clue Sheet Orienteering)
 
 **Find animal checkpoints in order using a clue sheet.**
 
+<ActivityMeta
+  time={frontMatter.time}
+  space={frontMatter.space}
+  materials={frontMatter.materials.join(', ')}
+  vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
+/>
+
 > "In orienteering, you find checkpoints in order using clue sheets"
 
-| | |
-|---|---|
-| **Time** | 15-30 minutes |
-| **Space** | Gym, schoolyard, or local park |
-| **Materials** | Cones with animal pictures, clue sheets (animal strips), start/finish markers |
-| **Vocabulary** | Checkpoint, clue sheet, course, boundary |
+<div style={{display:'flex', gap:'1rem', marginBottom:'1.25rem'}}>
+  <figure style={{margin:0, flex:1}}>
+    <img src="/curriculum/img/activities/animal-o.png" alt="Animal-O setup diagram" style={{width:'100%'}} />
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: animal checkpoints scattered within a boundary</figcaption>
+  </figure>
+  <figure style={{margin:0, flex:1}}>
+    <img src="/curriculum/img/activities/animal-o-clue-sheet.png" alt="Clue sheets" style={{width:'100%'}} />
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Clue sheets</figcaption>
+  </figure>
+</div>
 
-Students explore within a boundary to find animal-picture checkpoints. Each student or pair gets a clue sheet showing a sequence of animals. They visit checkpoints in the order shown on the clue sheet, checking the animal picture at each cone to confirm they're at the right one.
-
-The activity builds spatial memory through repetition. Students who complete a course can try again faster, try from memory, or try a different clue sheet with a different sequence.
+<Description>{description}</Description>
 
 <Tabs>
 <TabItem value="run" label="How to Run It" default>
@@ -102,10 +142,11 @@ Start simple and add challenge as students succeed:
 </TabItem>
 <TabItem value="vocabulary" label="Vocabulary">
 
-- **Checkpoint**: a location marked with a cone or flag. In Animal-O, each checkpoint has an animal picture attached
-- **Clue sheet**: a list showing the order to visit checkpoints. In Animal-O, the clue sheet shows animal pictures. In standard orienteering, clue sheets use numbers and feature descriptions
-- **Course**: a sequence of checkpoints from start to finish
-- **Boundary**: the perimeter of the play area. All checkpoints are inside the boundary
+{frontMatter.vocabulary.map(v => (
+  <p key={v.term}><strong>{v.term}</strong>: {v.definition}</p>
+))}
+
+See the [Glossary](/reference/glossary) for all curriculum terms.
 
 </TabItem>
 <TabItem value="companions" label="Companions">
@@ -127,6 +168,81 @@ Use this before Animal-O if students need to get familiar with the space and the
 </TabItem>
 </Tabs>
 
-:::tip Electronic Timing
-This activity supports electronic timing (SI system). See [Using SI Equipment](/equipment/si-timing) for setup instructions.
+:::tip Electronic timing optional
+See [Using SI Equipment](/equipment/si-timing) for setup instructions.
 :::
+
+## Videos
+
+<CardGrid columns={3}>
+  <div>
+    <YouTube id="rok2Ghx3fq4" title="Animal Orienteering for Instructors" />
+    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>Overview for teachers</p>
+  </div>
+  <div>
+    <YouTube id="HpDzuzA03X0" title="How to play Animal-O" />
+    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>How to play, for participants</p>
+  </div>
+  <div>
+    <YouTube id="TODO" title="Electronic timing with Animal-O" />
+    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>Electronic timing and EasyGec with Animal-O</p>
+  </div>
+</CardGrid>
+
+</FullOnly>
+
+<CompactOnly>
+
+<OnePager
+  title="Animal-O"
+  tagline="Use a clue sheet to find checkpoints in order"
+  epigraph="In orienteering, you find checkpoints in order using clue sheets"
+  description={description}
+  image="/curriculum/img/activities/animal-o.png"
+  time={frontMatter.time}
+  space={frontMatter.space}
+  materials={frontMatter.materials}
+  setup={frontMatter.setup}
+  vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
+  goals={[
+    'Use a clue sheet (animal strip) to complete an orienteering course',
+    'Learn to check codes (animal pictures) at each checkpoint',
+    'Develop spatial memory and navigation skills',
+    'Manage rapid changes of direction',
+  ]}
+  delivery={
+    <>
+      <p>We recommend that younger students do this in pairs.</p>
+      <ol>
+        <li>Review the boundary and gathering signal</li>
+        <li>Explore to find animal checkpoints</li>
+        <li>Use the clue sheets to find checkpoints in order</li>
+      </ol>
+      <p>Progression:</p>
+      <ol type="a">
+        <li>Complete a course using a clue sheet</li>
+        <li>Repeat a clue sheet to get a faster time</li>
+        <li>Repeat a clue sheet from memory</li>
+        <li>Try a different clue sheet</li>
+        <li>Advance to clue sheets with more animals</li>
+      </ol>
+    </>
+  }
+  reflection={[
+    'What do you like most about orienteering so far?',
+    'What helped you get faster?',
+    'What was the hardest part of this activity? Why?',
+    'How did you remember where the animals are?',
+    'Were some courses easier/harder? Why?',
+    'How did you work together? What strategies did you use to be successful as a team?',
+  ]}
+  extensions={[
+    'Track course completion or times on a whiteboard',
+    'Move the checkpoints to new locations and start over',
+    'Have students draw a map of the area and checkpoint locations',
+    'Cover up animals with napkins, students must communicate to finish course',
+    'Use electronic timing',
+  ]}
+/>
+
+</CompactOnly>

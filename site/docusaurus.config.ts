@@ -40,7 +40,9 @@ const config: Config = {
   themeConfig: {
     image: 'img/social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'Navigation Games',
@@ -62,6 +64,12 @@ const config: Config = {
           sidebarId: 'equipmentSidebar',
           position: 'left',
           label: 'Equipment',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'referenceSidebar',
+          position: 'left',
+          label: 'Reference',
         },
         {
           href: 'https://github.com/Navigation-Games/curriculum',
