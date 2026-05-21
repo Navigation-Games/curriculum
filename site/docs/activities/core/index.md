@@ -8,4 +8,8 @@ Each activity is a reusable component describing one thing you do. Activities ow
 
 Companion activities (readiness, variation, extension) live with their parent core activity.
 
-*(Activity pages coming soon.)*
+| Activity | Level | Summary |
+|---|---|---|
+| [Boundary Run](boundary-run) | 1 | Travel the boundary of the play area |
+| [Gathering](gathering) | 1 | Return to the teacher on a signal |
+| [Animal-O](animal-o) | 1 | Find animal checkpoints in order using a clue sheet |
