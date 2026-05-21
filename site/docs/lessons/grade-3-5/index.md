@@ -5,18 +5,19 @@ sidebar_position: 0
 
 # Grade 3-5 Orienteering Curriculum
 
-Grades 3-5 (ages 9-11). Five lessons that build from basic spatial awareness to independent navigation with orienteering maps. Each lesson focuses on a learning outcome, not just an activity name.
+Grades 3-5 (ages 9-11). Six lessons that build from basic spatial awareness to independent navigation with orienteering maps. Each lesson focuses on a learning outcome, not just an activity name.
 
 ## Learning Progression
 
 Students move through increasing levels of abstraction:
 
-1. **Explore**: boundaries, gathering, finding checkpoints
-2. **Clue Sheets**: sequential navigation using picture codes
-3. **Patterns**: first use of maps; orient using landmarks
-4. **Map Symbols**: abstract symbols representing real features
-5. **Orienteering Courses**: route choice, independent navigation
-6. **Indoor Orienteering** *(alternative)*: gym/court adaptations
+1. **Explore**: safety, boundaries, gathering, observation, describing spaces
+2. **Clue Sheets**: sequential navigation using picture codes, confirming you are at the correct checkpoint
+3. **Patterns**: first use of maps, orienting the map with landmarks or spatial relationships of objects on the map
+4. **Map Introduction**: orienteering maps, symbols, map walking, relocation
+5. **Map Checkpoints**: finding and placing checkpoints on real maps (Score-O)
+6. **Point-to-Point Navigation**: following a course in order, route choice
+7. **Indoor Orienteering** *(alternative)*: gym/court adaptations
 
 ## Activities Referenced
 
@@ -28,9 +29,9 @@ Students move through increasing levels of abstraction:
 | Gathering | Lesson 1 | Return to the teacher on a signal |
 | Animal-O | Lesson 2 | Find animal checkpoints in order using clue sheets |
 | Geometric-O | Lesson 3 | Use a simple map to do progressively harder courses |
-| Symbol-O | Lesson 4 | Learn orienteering map symbols and the features they represent |
-| Map Discussion | Lesson 4 | Examine an orienteering map; connect symbols to real features |
-| Map Walk | Lesson 5 | Walk a route matching map symbols to real-world features |
+| Map Discussion | Lesson 4 | Introduce an orienteering map; connect symbols to real features |
+| Map Walk | Lesson 4 | Walk a route matching map symbols to real-world features |
+| Symbol-O | Lesson 4 | Learn orienteering map symbols by finding features |
 | Score-O | Lesson 5 | Visit as many checkpoints as possible in any order within a time limit |
 
 ### Companion Activities

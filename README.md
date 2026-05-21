@@ -2,7 +2,7 @@
 
 Authors' guide for editing and maintaining the curriculum site.
 
-**Live site:** https://navgames.github.io/curriculum/ *(not yet deployed)*
+**Live site:** https://navigation-games.github.io/curriculum/ *(not yet deployed)*
 
 ## Tech Stack
 
@@ -10,10 +10,12 @@ Authors' guide for editing and maintaining the curriculum site.
 - **[MDX](https://mdxjs.com/)** - Markdown with support for React components inline. Activity cards, video embeds, and grid layouts are all MDX components.
 - **[React](https://react.dev/)** (v19) - powers custom components like `<ActivityCard>`, `<CardGrid>`, and `<YouTube>`.
 - **[GitHub Pages](https://pages.github.com/)** - free static hosting. The site is published from the `gh-pages` branch of the repo.
-- **[GitHub](https://github.com/navgames/curriculum)** - source control and collaboration. Content is edited as Markdown files in the repo.
+- **[GitHub](https://github.com/Navigation-Games/curriculum)** - source control and collaboration. Content is edited as Markdown files in the repo.
 - **[Node.js](https://nodejs.org/)** (v20+) - runtime for the build toolchain. Required for local preview and deployment.
 
 Day-to-day editing is just Markdown. You don't need to know React or JavaScript to write content. The React layer only matters if you're building new components.
+
+For build tooling details, WSL troubleshooting, and config notes, see [DEVELOPMENT.md](DEVELOPMENT.md).
 
 ## Prerequisites
 
@@ -50,24 +52,11 @@ git push
 
 ### Publishing to GitHub Pages
 
-The published site at https://navgames.github.io/curriculum/ is served from the `gh-pages` branch. To update it, run the deploy command from the `site/` directory:
+The site auto-publishes whenever you push to `main`. A GitHub Actions workflow builds the site and deploys it to https://navigation-games.github.io/curriculum/. This typically takes 1-2 minutes after pushing.
 
-```bash
-cd site
-GIT_USER=<your-github-username> npm run deploy
-```
+You can check the deploy status on the [Actions tab](https://github.com/Navigation-Games/curriculum/actions) of the repo.
 
-On Windows (PowerShell):
-
-```powershell
-cd site
-$env:GIT_USER="<your-github-username>"
-npm run deploy
-```
-
-This builds the site and pushes the result to the `gh-pages` branch. The live site updates within a minute or two.
-
-> **TODO:** Set up a GitHub Actions workflow so the site auto-publishes whenever you push to `main`. Until then, run the deploy command manually after pushing changes.
+> **First-time setup:** A repo admin needs to go to Settings > Pages and set the source to "GitHub Actions" (not "Deploy from a branch"). This only needs to be done once.
 
 ## Repo Structure
 

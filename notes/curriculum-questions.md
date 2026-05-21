@@ -41,6 +41,23 @@ The scripts doc has the same SI system instructions (Clear, Start, Finish, Downl
 
 ---
 
+## Map Symbols generalized to Map Introduction; Map Checkpoints added
+
+"Map Symbols" was too narrow a name for lesson 4. Renamed to **Map Introduction** to cover the broader concept: introducing the orienteering map itself, learning symbols, and walking a route with the map.
+
+Added **Map Checkpoints** as a new lesson 5, between Map Introduction and Orienteering Courses. This lesson includes Score-O and a "Place Your Own Checkpoints" activity where students set markers using the map. Bridges the gap between learning symbols (lesson 4) and running full point-to-point courses (lesson 6).
+
+The progression is now 6 lessons + 1 alternative:
+1. Explore
+2. Clue Sheets
+3. Patterns
+4. Map Introduction
+5. Map Checkpoints
+6. Orienteering Courses
+A. Indoor Orienteering
+
+---
+
 ## More differences to track
 
 *(Add new items below as they come up.)*

@@ -1,40 +1,56 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
+import React from 'react';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+function PathCard({title, description, link, emoji}: {
+  title: string;
+  description: string;
+  link: string;
+  emoji: string;
+}) {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/lessons/grade-3-5">
-            Grade 3-5 Lesson Plans
-          </Link>
-        </div>
-      </div>
-    </header>
+    <Link to={link} className={styles.pathCard}>
+      <div className={styles.pathEmoji}>{emoji}</div>
+      <Heading as="h3" className={styles.pathTitle}>{title}</Heading>
+      <p className={styles.pathDescription}>{description}</p>
+    </Link>
   );
 }
 
-export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+export default function Home(): React.ReactElement {
   return (
-    <Layout
-      title="Orienteering Curriculum"
-      description="Orienteering curriculum for schools and camps">
-      <HomepageHeader />
+    <Layout title="Curricula" description="Orienteering curriculum for schools and camps">
+      <header className={styles.hero}>
+        <div className="container">
+          <Heading as="h1">Navigation Games</Heading>
+          <p className={styles.subtitle}>Orienteering curriculum for schools and camps</p>
+        </div>
+      </header>
+      <main className="container">
+        <div className={styles.paths}>
+          <PathCard
+            emoji="🚀"
+            title="Quick Start"
+            description="New to orienteering? Pick an activity and try it today."
+            link="/quick-start"
+          />
+          <PathCard
+            emoji="🏫"
+            title="Teach at a School"
+            description="Structured lesson progressions by grade band, aligned to PE standards."
+            link="/school"
+          />
+          <PathCard
+            emoji="⛺"
+            title="Orienteering at Camp"
+            description="Intro activities and multi-session skill development programs."
+            link="/camp"
+          />
+        </div>
+      </main>
     </Layout>
   );
 }

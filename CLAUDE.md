@@ -55,20 +55,30 @@ Every core activity needs these, consistent with each other:
 
 **Docusaurus + GitHub + GitHub Pages + GitHub Actions**
 
-- MDX (Markdown + JSX) for content — supports custom React components
+- MDX (Markdown + JSX) for content. Supports custom React components
 - Custom `<ActivityCard>` component for lesson pages to link to activities
+- `<CardGrid>` for responsive grid layouts (3 columns on desktop, 2 on tablet, 1 on phone)
+- `<YouTube>` for responsive video embeds
 - Tabs component for structured sections within activity/lesson pages
 - Compact/one-pager view rendered from the same MDX source (URL parameter or print-friendly toggle)
 - Day-to-day editing is just Markdown files in the repo; GitHub Actions rebuilds on commit
 
 ## Repo Layout
 
-- `background/` — source materials, reference docs, uploaded context files (site-tools-discussion.md, ng-curriculum-prep.html, etc.)
-- `docs/` — curriculum content organized by learning goal (not yet created)
+- `background/` - source materials, reference docs, uploaded context files (site-tools-discussion.md, ng-curriculum-prep.html, etc.)
+- `notes/` - curriculum decisions, open questions, author notes
+- `site/docs/activities/core/` - core activity pages with companions inline
+- `site/docs/lessons/grade-3-5/` - five-lesson progression plus indoor alternative
+- `site/docs/equipment/` - setup guides, SI timing
+- `site/src/components/` - reusable React components (ActivityCard, CardGrid, YouTube)
+- `site/src/pages/` - standalone landing pages (home, school, camp, quick-start)
 
 ## Working Conventions
 
 - Write content in Markdown
 - Keep filenames lowercase-kebab-case
-- Extensions (Basketball-O, Pacman-O, Poker-O, Poison-O, Relay Race) live with their parent activity, not as separate top-level items
-- Deferred activities (Corridor-O, Line-O, Window-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O) are set aside — don't include in main curriculum structure
+- Avoid em-dashes in all writing. They signal AI authorship. Split into separate sentences or use other connectors.
+- Companion activities live with their parent core activity, not as separate top-level items
+- Companion-to-core relationships tracked in frontmatter `parents` field (supports many-to-many)
+- SI (electronic timing) instructions live on their own equipment page, not repeated in every activity
+- Deferred activities (Corridor-O, Line-O, Window-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O) are set aside. Don't include in main curriculum structure

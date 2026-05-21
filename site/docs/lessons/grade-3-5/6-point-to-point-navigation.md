@@ -1,9 +1,9 @@
 ---
-title: "5 - Orienteering Courses"
-sidebar_position: 5
+title: "6 - Point-to-Point Navigation"
+sidebar_position: 6
 ---
 
-# 5 - Orienteering Courses
+# 6 - Point-to-Point Navigation
 
 > "Today we will be doing a real orienteering course using a map"
 
@@ -23,7 +23,7 @@ sidebar_position: 5
 - **Map Walk**: Walk a route together, matching map symbols to real features
 - **Partner Orienteering**: In pairs, plan and execute a course
 - **Solo Orienteering**: Do a course on your own
-- **Score-O** *(if time allows)*: Visit as many checkpoints as possible in any order
+- **Score-O** *(if not done in lesson 5)*: Visit as many checkpoints as possible in any order
 
 ## Goals
 

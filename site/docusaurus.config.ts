@@ -7,14 +7,10 @@ const config: Config = {
   tagline: 'Orienteering curriculum for schools and camps',
   favicon: 'img/favicon.ico',
 
-  future: {
-    v4: true,
-  },
-
-  url: 'https://navgames.github.io',
+  url: 'https://navigation-games.github.io',
   baseUrl: '/curriculum/',
 
-  organizationName: 'navgames',
+  organizationName: 'Navigation-Games',
   projectName: 'curriculum',
 
   onBrokenLinks: 'throw',
@@ -31,7 +27,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
-          editUrl: 'https://github.com/navgames/curriculum/tree/main/site/',
+          editUrl: 'https://github.com/Navigation-Games/curriculum/tree/main/site/',
         },
         blog: false,
         theme: {
@@ -68,7 +64,7 @@ const config: Config = {
           label: 'Equipment',
         },
         {
-          href: 'https://github.com/navgames/curriculum',
+          href: 'https://github.com/Navigation-Games/curriculum',
           label: 'GitHub',
           position: 'right',
         },
