@@ -53,16 +53,16 @@ Builds spatial memory, observation, and navigation skills.`;
 
 <div style={{display:'flex', gap:'1rem', marginBottom:'1.25rem'}}>
   <figure style={{margin:0, flex:1}}>
+    <img src="/curriculum/img/activities/animal-o-pig.jpg" alt="Child in yellow raincoat finding the pig checkpoint" style={{width:'100%', borderRadius:'6px'}} />
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Finding the pig checkpoint</figcaption>
+  </figure>
+  <figure style={{margin:0, flex:1}}>
     <img src="/curriculum/img/activities/animal-o.png" alt="Animal-O setup diagram" style={{width:'100%'}} />
-    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: animal checkpoints scattered within a boundary</figcaption>
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: checkpoints scattered within a boundary</figcaption>
   </figure>
   <figure style={{margin:0, flex:1}}>
     <img src="/curriculum/img/activities/animal-o-clue-sheet.png" alt="Two clue sheet strips showing animal sequences" style={{width:'100%'}} />
-    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Clue sheets: each strip shows a different sequence of animals to find</figcaption>
-  </figure>
-  <figure style={{margin:0, flex:1}}>
-    <img src="/curriculum/img/activities/animal-o-whiteboard.jpg" alt="Whiteboard tracking which animals each student has found" style={{width:'100%'}} />
-    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Optional: track completions on a whiteboard</figcaption>
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Clue sheets: each strip is a different course</figcaption>
   </figure>
 </div>
 
