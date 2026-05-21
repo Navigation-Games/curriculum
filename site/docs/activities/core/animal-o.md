@@ -51,18 +51,18 @@ Builds spatial memory, observation, and navigation skills.`;
 
 > "In orienteering, you find checkpoints in order using clue sheets"
 
-<div style={{display:'flex', gap:'1rem', marginBottom:'1.25rem'}}>
-  <figure style={{margin:0, flex:1}}>
+<div style={{float:'right', margin:'0 0 1rem 1.5rem', maxWidth:'25%'}}>
+  <figure style={{margin:'0 0 0.75rem'}}>
     <img src="/curriculum/img/activities/animal-o-pig.jpg" alt="Child in yellow raincoat finding the pig checkpoint" style={{width:'100%', borderRadius:'6px'}} />
     <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Finding the pig checkpoint</figcaption>
   </figure>
-  <figure style={{margin:0, flex:1}}>
-    <img src="/curriculum/img/activities/animal-o.png" alt="Animal-O setup diagram" style={{width:'100%'}} />
-    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: checkpoints scattered within a boundary</figcaption>
+  <figure style={{margin:'0 0 0.75rem'}}>
+    <img src="/curriculum/img/activities/animal-o.png" alt="Animal-O setup diagram" style={{width:'100%', borderRadius:'6px'}} />
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: checkpoints within a boundary</figcaption>
   </figure>
-  <figure style={{margin:0, flex:1}}>
-    <img src="/curriculum/img/activities/animal-o-clue-sheet.png" alt="Two clue sheet strips showing animal sequences" style={{width:'100%'}} />
-    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Clue sheets: each strip is a different course</figcaption>
+  <figure style={{margin:0}}>
+    <img src="/curriculum/img/activities/animal-o-clue-sheet.png" alt="Two clue sheet strips showing animal sequences" style={{width:'100%', borderRadius:'6px'}} />
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Clue sheets: each strip is a course</figcaption>
   </figure>
 </div>
 

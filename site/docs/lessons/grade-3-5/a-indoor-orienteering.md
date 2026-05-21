@@ -3,11 +3,14 @@ title: "A - Indoor Orienteering"
 sidebar_position: 7
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ActivityCard from '@site/src/components/ActivityCard';
+import CardGrid from '@site/src/components/CardGrid';
+
 # A - Indoor Orienteering
 
 > "Today we will be finding our way on a basketball court"
-
-## Overview
 
 | | |
 |---|---|
@@ -19,12 +22,28 @@ sidebar_position: 7
 
 ## Activities
 
-- **Boundary Run**: Run the boundary of the court and do warm-up exercises
-- **Find the Cone** *(companion: readiness)*: Stand next to the cone shown on your map; orient your map
-- **Basketball-O**: Run orienteering courses on the basketball court map
-- **Pacman-O** *(companion: extension)*: Line tag played while completing courses
+<CardGrid columns={3}>
+  <ActivityCard
+    title="Basketball-O"
+    description="Run orienteering courses on the basketball court map."
+    link="/activities/core/geometric-o"
+    tag="core"
+  />
+  <ActivityCard
+    title="Find the Cone"
+    description="Stand next to the cone shown on your map; orient your map."
+    tag="readiness"
+  />
+  <ActivityCard
+    title="Pacman-O"
+    description="Line tag played while completing courses."
+    link="/activities/core/geometric-o"
+    tag="extension"
+  />
+</CardGrid>
 
-## Goals
+<Tabs>
+<TabItem value="goals" label="Goals" default>
 
 ### Orienteering Goals
 - Orient a map using the court's line markings as landmarks
@@ -37,23 +56,29 @@ sidebar_position: 7
 - Work cooperatively and accept feedback from others (S4.E4, S4.E3)
 - Give feedback to peers (S4.E4)
 
-## Delivery
+</TabItem>
+<TabItem value="delivery" label="Delivery">
 
-1. Pair up and orient the map using the court lines
-2. Agree on the route you'll take before beginning the course
-3. Visit each checkpoint in order; compare the code to confirm the correct checkpoint
+1. **Boundary Run**: run the boundary of the court and warm up
+2. **Find the Cone**: pair up, orient the map using the court lines, stand next to the cone shown on the map
+3. **Basketball-O**: agree on the route, visit each checkpoint in order; compare the code to confirm the correct checkpoint
 4. Do the course individually several times to increase speed
 5. Do the course in reverse order and without a map
 6. Help fellow students by giving hints and teaching them how to read the map
 
-## Reflection
+</TabItem>
+<TabItem value="reflection" label="Reflection">
 
 - How could you tell the difference between checkpoints?
 - What shortcuts between checkpoints did you find?
 - If you were at a wrong checkpoint, how did you figure out where you needed to go?
 
-## Extensions
+</TabItem>
+<TabItem value="extensions" label="Extensions">
 
 - Students may only travel along the lines of the basketball court
 - Add obstacles: students may not pass any place marked with a red "X"
-- Pacman-O: play line tag while completing courses
+- **Pacman-O**: play line tag while completing courses
+
+</TabItem>
+</Tabs>

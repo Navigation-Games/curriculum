@@ -26,11 +26,13 @@ import CardGrid from '@site/src/components/CardGrid';
   <ActivityCard
     title="Boundary Run"
     description="Run the boundary; discuss inside/outside."
+    link="/activities/core/boundary-run"
     tag="core"
   />
   <ActivityCard
     title="Gathering"
     description="Practice returning on the teacher's signal."
+    link="/activities/core/gathering"
     tag="core"
   />
   <ActivityCard

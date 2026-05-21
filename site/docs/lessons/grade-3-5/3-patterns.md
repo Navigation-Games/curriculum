@@ -3,11 +3,14 @@ title: "3 - Patterns"
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ActivityCard from '@site/src/components/ActivityCard';
+import CardGrid from '@site/src/components/CardGrid';
+
 # 3 - Patterns
 
 > "We use a map to find things. We orient the map with landmarks"
-
-## Overview
 
 | | |
 |---|---|
@@ -19,12 +22,28 @@ sidebar_position: 3
 
 ## Activities
 
-- **Animal-O**: Warm up individually using the checkpoints in the geometric layout
-- **Geometric Readiness** *(companion: readiness)*: Use spatial vocabulary to describe cone locations; orient the map using landmarks
-- **Find the Cone** *(companion: readiness)*: Stand by the circled cone with your map oriented
-- **Geometric-O**: In pairs, progress through increasingly difficult courses on pattern maps
+<CardGrid columns={3}>
+  <ActivityCard
+    title="Animal-O"
+    description="Warm up individually using the geometric layout."
+    link="/activities/core/animal-o"
+    tag="core"
+  />
+  <ActivityCard
+    title="Geometric Readiness"
+    description="Use spatial vocabulary to describe cone locations; orient the map."
+    tag="readiness"
+  />
+  <ActivityCard
+    title="Geometric-O"
+    description="In pairs, progress through increasingly difficult courses."
+    link="/activities/core/geometric-o"
+    tag="core"
+  />
+</CardGrid>
 
-## Goals
+<Tabs>
+<TabItem value="goals" label="Goals" default>
 
 ### Orienteering Goals
 - Demonstrate mastery of orienteering with a clue sheet
@@ -40,19 +59,20 @@ sidebar_position: 3
 - Accept corrective feedback (S4.E3)
 - Describe positive social interactions (S5.E4)
 
-## Delivery
+</TabItem>
+<TabItem value="delivery" label="Delivery">
 
-1. Warm up individually with Animal-O using the geometric layout
-2. Answer spatial questions: "Which cone is closest to the red landmark?"
-3. Tell the teacher how to orient the demonstration map
-4. Pair up; receive a Level 1 map; stand by the circled checkpoint
-5. Progress through levels. Visit checkpoints in order starting with the triangle, ending with the double circle
-6. Navigate full courses (5+ checkpoints)
+1. **Animal-O** warm-up using the geometric layout
+2. **Geometric Readiness**: answer spatial questions ("Which cone is closest to the red landmark?") and orient the demonstration map
+3. Pair up; receive a Level 1 map; stand by the circled checkpoint
+4. **Geometric-O**: progress through levels, visiting checkpoints in order starting with the triangle, ending with the double circle
+5. Navigate full courses (5+ checkpoints)
    - Repeat for speed
    - Repeat from memory
    - Help other students who need assistance
 
-## Reflection
+</TabItem>
+<TabItem value="reflection" label="Reflection">
 
 - What was challenging about matching up the animals?
 - What was easy?
@@ -61,7 +81,8 @@ sidebar_position: 3
 - Describe the mental map you built of the space
 - How did you interact with others?
 
-## Extensions
+</TabItem>
+<TabItem value="extensions" label="Extensions">
 
 - Adjust the number of levels based on students' abilities
 - Substitute Group Memory for the Animal-O warm-up
@@ -69,3 +90,6 @@ sidebar_position: 3
 - Remove colored landmark cones from the corners (harder orientation)
 - Have students draw their own map of the space
 - Have students design their own course on a map
+
+</TabItem>
+</Tabs>

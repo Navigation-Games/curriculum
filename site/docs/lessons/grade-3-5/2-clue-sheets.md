@@ -3,11 +3,14 @@ title: "2 - Clue Sheets"
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ActivityCard from '@site/src/components/ActivityCard';
+import CardGrid from '@site/src/components/CardGrid';
+
 # 2 - Clue Sheets
 
 > "In orienteering, you find checkpoints in order using clue sheets"
-
-## Overview
 
 | | |
 |---|---|
@@ -19,11 +22,29 @@ sidebar_position: 2
 
 ## Activities
 
-- **Boundary Run**: Run the boundary; discuss inside/outside
-- **Explore & Find** *(companion: readiness)*: In pairs, explore to find animal checkpoints
-- **Animal-O**: In pairs, find the animals in order using clue sheets. Repeat for speed and from memory
+<CardGrid columns={3}>
+  <ActivityCard
+    title="Boundary Run"
+    description="Run the boundary; discuss inside/outside."
+    link="/activities/core/boundary-run"
+    tag="core"
+  />
+  <ActivityCard
+    title="Explore & Find"
+    description="In pairs, explore to find animal checkpoints."
+    link="/activities/core/animal-o"
+    tag="readiness"
+  />
+  <ActivityCard
+    title="Animal-O"
+    description="Find the animals in order using clue sheets."
+    link="/activities/core/animal-o"
+    tag="core"
+  />
+</CardGrid>
 
-## Goals
+<Tabs>
+<TabItem value="goals" label="Goals" default>
 
 ### Orienteering Goals
 - Use a clue sheet (animal strip) to complete an orienteering course
@@ -38,19 +59,21 @@ sidebar_position: 2
 - Accept corrective feedback from the teacher (S4.E3)
 - Work cooperatively with others (S4.E5)
 
-## Delivery
+</TabItem>
+<TabItem value="delivery" label="Delivery">
 
-1. Run the boundary; discuss what is inside and outside
+1. **Boundary Run**: run the boundary; discuss what is inside and outside
 2. Pair up
-3. Explore to find animal checkpoints; return on a signal
-4. Use the clue sheets to find checkpoints in order. Progression:
+3. **Explore & Find**: explore to find animal checkpoints; return on a signal
+4. **Animal-O**: use clue sheets to find checkpoints in order. Progression:
    - Start with a short clue sheet (2-3 animals)
    - Advance to clue sheets with more animals
    - Try a different clue sheet
    - Repeat the clue sheet from memory
    - Repeat to get a faster time
 
-## Reflection
+</TabItem>
+<TabItem value="reflection" label="Reflection">
 
 - What do you like most about orienteering so far?
 - What helped you get faster?
@@ -60,8 +83,12 @@ sidebar_position: 2
 - How did you work together?
 - How do you feel after running?
 
-## Extensions
+</TabItem>
+<TabItem value="extensions" label="Extensions">
 
 - Track course completion or times on a whiteboard
 - Move the checkpoints to new locations and start over
-- **Draw a map:** Have students draw a map of the area showing checkpoint locations. This builds the connection between the physical space and a visual representation. Students can compare their maps, discuss what they included or left out, and use each other's maps to try finding checkpoints
+- **Draw a map:** Have students draw a map of the area showing checkpoint locations. Students can compare their maps, discuss what they included or left out, and use each other's maps to try finding checkpoints
+
+</TabItem>
+</Tabs>
