@@ -57,14 +57,30 @@ Builds spatial memory, observation, and navigation skills.`;
     <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: animal checkpoints scattered within a boundary</figcaption>
   </figure>
   <figure style={{margin:0, flex:1}}>
-    <img src="/curriculum/img/activities/animal-o-clue-sheet.png" alt="Clue sheets" style={{width:'100%'}} />
-    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Clue sheets</figcaption>
+    <img src="/curriculum/img/activities/animal-o-clue-sheet.png" alt="Two clue sheet strips showing animal sequences" style={{width:'100%'}} />
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Clue sheets: each strip shows a different sequence of animals to find</figcaption>
+  </figure>
+  <figure style={{margin:0, flex:1}}>
+    <img src="/curriculum/img/activities/animal-o-whiteboard.jpg" alt="Whiteboard tracking which animals each student has found" style={{width:'100%'}} />
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Optional: track completions on a whiteboard</figcaption>
   </figure>
 </div>
 
 <Description>{description}</Description>
 
 <Tabs>
+<TabItem value="goals" label="Learning Goals">
+
+Students completing this activity will be able to:
+
+- Use a clue sheet to complete an orienteering course in order
+- Check the animal picture at each checkpoint to confirm they have the right one
+- Develop spatial memory by repeating courses and tracking where checkpoints are
+- Manage quick changes of direction while moving through the space
+
+See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits into the lesson sequence.
+
+</TabItem>
 <TabItem value="run" label="How to Run It" default>
 
 ### Setup
@@ -184,7 +200,7 @@ See [Using SI Equipment](/equipment/si-timing) for setup instructions.
     <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>How to play, for participants</p>
   </div>
   <div>
-    <YouTube id="TODO" title="Electronic timing with Animal-O" />
+    <YouTube id="i6sBtF-MGGA" title="Electronic timing with Animal-O" />
     <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>Electronic timing and EasyGec with Animal-O</p>
   </div>
 </CardGrid>
