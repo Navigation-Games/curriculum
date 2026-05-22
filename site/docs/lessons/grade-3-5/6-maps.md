@@ -32,11 +32,13 @@ import OnePager from '@site/src/components/OnePager';
   <ActivityCard
     title="Map Walk"
     description="Walk a route together, matching map symbols to real features."
+    link="/activities/core/map-walk"
     tag="core"
   />
   <ActivityCard
     title="Score-O"
     description="Visit as many checkpoints as possible in any order."
+    link="/activities/core/score-o"
     tag="core"
   />
 </CardGrid>
