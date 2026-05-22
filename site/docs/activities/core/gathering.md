@@ -14,6 +14,8 @@ vocabulary:
     definition: A signal from the leader (such as a whistle blast or raised hand) telling everyone to stop and gather at a designated spot.
 ---
 
+{/* AUTO-GENERATED from content/activities/gathering.md — do not edit directly */}
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ActivityMeta from '@site/src/components/ActivityMeta';
@@ -21,6 +23,7 @@ import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle
 import OnePager from '@site/src/components/OnePager';
 import Description from '@site/src/components/Description';
 import YouTube from '@site/src/components/YouTube';
+import CardGrid from '@site/src/components/CardGrid';
 
 export const description = `Students move freely within a defined boundary while maintaining awareness of a teacher-led signal. When the signal is given, students must stop and return to the teacher as quickly and safely as possible.
 
@@ -35,7 +38,7 @@ Builds divided attention, group responsibility, and awareness in terrain.`;
     <img src="/curriculum/img/activities/gathering-kids.jpg" alt="Children running back to the teacher during a gathering activity" style={{width:'100%', borderRadius:'6px'}} />
     <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Students returning on a signal</figcaption>
   </figure>
-  <figure style={{margin:0}}>
+  <figure style={{margin:'0 0 0.75rem'}}>
     <img src="/curriculum/img/activities/gathering.png" alt="Gathering setup diagram showing students returning to a central point" style={{width:'100%', borderRadius:'6px'}} />
     <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup diagram</figcaption>
   </figure>
@@ -43,7 +46,7 @@ Builds divided attention, group responsibility, and awareness in terrain.`;
 
 # Gathering
 
-**Return to the teacher on a signal.**
+**Return to the teacher on a signal**
 
 <ActivityMeta
   time={frontMatter.time}
@@ -61,12 +64,12 @@ Builds divided attention, group responsibility, and awareness in terrain.`;
 
 Students completing this activity will be able to:
 
-- Move freely within a defined space with confidence
 - Maintain awareness of a signal while moving
-- Respond quickly and safely to the gathering signal
-- Understand and respect boundaries
 - Be aware of others in shared space
+- Respond quickly and safely to the gathering signal
 - Communicate and coordinate with the group to improve gathering time
+- Move freely within a defined space with confidence
+- Understand and respect boundaries
 
 See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits into the lesson sequence.
 
@@ -160,10 +163,12 @@ See the [Glossary](/reference/glossary) for all curriculum terms.
   setup={frontMatter.setup}
   vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
   goals={[
-    'Maintain awareness for a signal while moving in a space',
-    'Be aware of other students\' locations',
-    'Communicate and strategize with other students',
-    'Respond quickly to a gathering signal',
+    'Signal awareness',
+    'Spatial awareness',
+    'Quick response',
+    'Group communication',
+    'Free movement with confidence',
+    'Boundary respect',
   ]}
   delivery={
     <>

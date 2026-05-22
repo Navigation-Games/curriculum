@@ -156,39 +156,61 @@ function deliveryToJsx(text) {
   const chunks = [];
   let i = 0;
 
+  function peekNextNonBlank() {
+    let j = i;
+    while (j < lines.length && lines[j].trim() === '') j++;
+    return j < lines.length ? lines[j] : null;
+  }
+
   while (i < lines.length) {
     const line = lines[i];
 
-    // Skip blank lines
     if (line.trim() === '') { i++; continue; }
 
-    // Numbered list (1. 2. 3.)
+    // Numbered list (1. 2. 3.) with possible lettered sub-items
     if (/^\d+\.\s/.test(line)) {
-      const items = [];
-      while (i < lines.length && /^\d+\.\s/.test(lines[i])) {
-        items.push(lines[i].replace(/^\d+\.\s*/, ''));
-        i++;
-      }
       chunks.push('<ol>');
-      for (const item of items) chunks.push(`  <li>${item}</li>`);
+      while (i < lines.length) {
+        // Skip blanks between items
+        if (lines[i] && lines[i].trim() === '') { i++; continue; }
+        if (!/^\d+\.\s/.test(lines[i])) break;
+
+        const itemText = lines[i].replace(/^\d+\.\s*/, '');
+        i++;
+
+        // Check if lettered sub-items follow
+        const next = peekNextNonBlank();
+        if (next && /^[a-z]\.\s/.test(next)) {
+          chunks.push(`  <li>${itemText}`);
+          // Skip blanks to reach the lettered items
+          while (i < lines.length && lines[i].trim() === '') i++;
+          chunks.push('    <ol type="a">');
+          while (i < lines.length && /^[a-z]\.\s/.test(lines[i])) {
+            chunks.push(`      <li>${lines[i].replace(/^[a-z]\.\s*/, '')}</li>`);
+            i++;
+          }
+          chunks.push('    </ol>');
+          chunks.push('  </li>');
+        } else {
+          chunks.push(`  <li>${itemText}</li>`);
+        }
+      }
       chunks.push('</ol>');
       continue;
     }
 
-    // Lettered list (a. b. c.)
+    // Standalone lettered list (not preceded by a numbered item)
     if (/^[a-z]\.\s/.test(line)) {
-      const items = [];
+      chunks.push('<ol type="a">');
       while (i < lines.length && /^[a-z]\.\s/.test(lines[i])) {
-        items.push(lines[i].replace(/^[a-z]\.\s*/, ''));
+        chunks.push(`  <li>${lines[i].replace(/^[a-z]\.\s*/, '')}</li>`);
         i++;
       }
-      chunks.push('<ol type="a">');
-      for (const item of items) chunks.push(`  <li>${item}</li>`);
       chunks.push('</ol>');
       continue;
     }
 
-    // Paragraph (collect consecutive non-blank, non-list lines)
+    // Paragraph
     const paraLines = [];
     while (
       i < lines.length &&

@@ -12,6 +12,8 @@ vocabulary:
     definition: The perimeter of the play area. All checkpoints are inside the boundary.
 ---
 
+{/* AUTO-GENERATED from content/activities/boundary-run.md — do not edit directly */}
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ActivityMeta from '@site/src/components/ActivityMeta';
@@ -19,6 +21,7 @@ import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle
 import OnePager from '@site/src/components/OnePager';
 import Description from '@site/src/components/Description';
 import YouTube from '@site/src/components/YouTube';
+import CardGrid from '@site/src/components/CardGrid';
 
 export const description = `The leader runs around the boundary of the play area while participants follow. Then participants show what they learned by identifying which spots are inside or outside the boundary, including tricky areas they should not enter.
 
@@ -28,14 +31,16 @@ Builds listening skills, safety awareness, and familiarity with the play space.`
 
 <FullOnly>
 
-<figure style={{float:'right', margin:'0 0 1rem 1.5rem', maxWidth:'25%'}}>
-  <img src="/curriculum/img/activities/boundary-run.png" alt="Boundary Run setup diagram showing a play area with red arrows tracing the boundary" style={{width:'100%', borderRadius:'6px'}} />
-  <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: leader traces the boundary</figcaption>
-</figure>
+<div style={{float:'right', margin:'0 0 1rem 1.5rem', maxWidth:'25%'}}>
+  <figure style={{margin:'0 0 0.75rem'}}>
+    <img src="/curriculum/img/activities/boundary-run.png" alt="Boundary Run setup diagram showing a play area with red arrows tracing the boundary" style={{width:'100%', borderRadius:'6px'}} />
+    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: leader traces the boundary</figcaption>
+  </figure>
+</div>
 
 # Boundary Run
 
-**Travel the boundary of the play area.**
+**Travel the boundary of the play area**
 
 <ActivityMeta
   time={frontMatter.time}
@@ -179,10 +184,10 @@ Reinforces boundary awareness while adding physical challenge and fun.
   setup={frontMatter.setup}
   vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
   goals={[
-    'Identify the boundary of the play area after following the leader',
-    'Tell whether landmarks and locations are inside or outside the boundary',
-    'Recognize areas within the boundary that are still off limits',
-    'Explain why boundaries matter for safety and respect',
+    'Identifying the boundary',
+    'Inside vs. outside',
+    'Recognizing off-limits areas',
+    'Why boundaries matter',
   ]}
   delivery={
     <>

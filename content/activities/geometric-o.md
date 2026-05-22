@@ -1,5 +1,8 @@
+# Geometric-O
+
 ---
-title: Geometric-O
+tagline: Use a simple map to do progressively harder courses
+epigraph: We use a map to know where something is before we even find it
 sidebar_position: 4
 tags: [core, level-1]
 time: 30-60 minutes
@@ -11,76 +14,83 @@ materials:
   - Whiteboard and markers
   - Master map
 setup: Arrange checkpoints and colored cones according to the master map
-vocabulary:
-  - term: Map
-    definition: A picture or image used to represent the environment.
-  - term: Spatial relationship
-    definition: Where something is based on other features in the space. Vocabulary includes next to, closest, furthest, between.
-  - term: Orient the map
-    definition: Turn the map until it matches the space. "Orient" is just a fancy word for "turn things."
-  - term: Landmark
-    definition: A distinct object or location in the space. In Geometric-O, the colored cones in the corners are the landmarks.
+images: []
+videos:
+  - id: 32D52UPa7Gw
+    title: How to Teach Geometric-O
+    caption: How to teach Geometric-O
+  - id: -Nk2K_QQ89s
+    title: Geometric-O in action
+    caption: Geometric-O in action
+  - id: Xu1DLRNDAlA
+    title: Geometric Animal-O
+    caption: Geometric Animal-O
+  - id: OtUZVh1cQPI
+    title: Orienteering with a pattern map
+    caption: "Choose your challenge: a clue sheet or a map!"
+  - id: 5-Z22BrQcD8
+    title: First courses with SPORTIdent
+    caption: You can also use electronic timing!
+  - id: HKYcVCUWYQ8
+    title: Basketball-O
+    caption: "Basketball-O: orienteering on a basketball court"
+si_timing: true
 ---
 
-{/* AUTO-GENERATED from content/activities/geometric-o.md — do not edit directly */}
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ActivityMeta from '@site/src/components/ActivityMeta';
-import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
-import OnePager from '@site/src/components/OnePager';
-import Description from '@site/src/components/Description';
-import YouTube from '@site/src/components/YouTube';
-import CardGrid from '@site/src/components/CardGrid';
+## Description
 
-export const description = `Orient the map using the colored landmarks in the corners. Visit each checkpoint on the map in order. Do it again, faster. Repeat, from memory. Geometric-O can be done outdoors or indoors.
+Orient the map using the colored landmarks in the corners. Visit each checkpoint on the map in order. Do it again, faster. Repeat, from memory. Geometric-O can be done outdoors or indoors.
 
-Builds map reading, orientation, spatial relationships, and the ability to connect a 2D map to 3D space.`;
+Builds map reading, orientation, spatial relationships, and the ability to connect a 2D map to 3D space.
 
-<ViewToggle />
 
-<FullOnly>
+## Goals
 
-# Geometric-O
+- Short: Simple maps
+  Long: Read a simple map and connect it to the physical space
 
-**Use a simple map to do progressively harder courses**
+- Short: Identifying landmarks
+  Long: Use landmarks (colored cones) to orient a map
 
-<ActivityMeta
-  time={frontMatter.time}
-  space={frontMatter.space}
-  materials={frontMatter.materials.join(', ')}
-  vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
-/>
+- Short: Spatial relationships
+  Long: Describe the location of checkpoints using spatial relationship vocabulary (closest, furthest, between, next to)
 
-> "We use a map to know where something is before we even find it"
+- Short: Orientation
+  Long: Identify and fix orientation mistakes
 
-<Description>{description}</Description>
-
-<Tabs>
-<TabItem value="goals" label="Learning Goals">
-
-Students completing this activity will be able to:
-
-- Read a simple map and connect it to the physical space
-- Use landmarks (colored cones) to orient a map
-- Describe the location of checkpoints using spatial relationship vocabulary (closest, furthest, between, next to)
-- Identify and fix orientation mistakes
-- Complete progressively harder courses using a map
+- Short: Fixing mistakes
+  Long: Complete progressively harder courses using a map
 
 This activity targets students who have already done [Animal-O](animal-o), have developed their sense of spatial awareness, and are ready to practice relative position between objects.
+
 See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits into the lesson sequence.
 
-</TabItem>
-<TabItem value="run" label="How to Run It" default>
 
-### Setup
+## Vocabulary
+
+- Map
+  A picture or image used to represent the environment.
+
+- Spatial relationship
+  Where something is based on other features in the space. Vocabulary includes next to, closest, furthest, between.
+
+- Orient the map
+  Turn the map until it matches the space. "Orient" is just a fancy word for "turn things."
+
+- Landmark
+  A distinct object or location in the space. In Geometric-O, the colored cones in the corners are the landmarks.
+
+
+## Setup
 
 1. Arrange checkpoints (cones with animal pictures and numbers 31-40) to match the master map
 2. Place colored cones (red, blue, green, yellow) in the corners as landmarks. Exact distances do not need to be perfect as long as cones are in the correct positions relative to the colored landmarks
 3. Draw the arrangement on a whiteboard without indicating which animal is at each location
 4. Set geometric maps out where students can see them, ideally next to a self-serve station
 
-### Steps
+
+## Steps
 
 **1. Whiteboard introduction.** Have students gather facing the arrangement:
    - Hold up the whiteboard map upside down (not oriented to the cones)
@@ -100,7 +110,8 @@ See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits i
    - The partner with the animal clue sheet can verify correctness
    - Progress to 10-checkpoint maps
 
-### Progression
+
+## Progression
 
 - **Younger students**: use all levels (1 checkpoint, then 2 on corners, then 2 with one off-corner, etc.)
 - **Older students**: skip to 5-checkpoint maps, then move to 10-checkpoint maps
@@ -108,14 +119,15 @@ See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits i
 - **From memory**: put the map away and try to complete the course
 - **Remove landmarks**: take away the colored corner cones for an extra challenge
 
-### Tips
+
+## Tips
 
 - The whiteboard introduction is essential. Do not skip it. It teaches orientation before students try courses on their own
 - Students should always orient their map before starting a course
 - If students are struggling, have them match the colored cones first, then find their checkpoint relative to those landmarks
 
-</TabItem>
-<TabItem value="script" label="Script">
+
+## Script
 
 ### Introducing the Map
 
@@ -147,17 +159,38 @@ See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits i
 
 "For the next game, you will receive a map like this one with several checkpoints marked on it. Your challenge is to find those checkpoints and go visit them. There are several levels of difficulty, so try to get as far as you can!"
 
-</TabItem>
-<TabItem value="vocabulary" label="Vocabulary">
 
-{frontMatter.vocabulary.map(v => (
-  <p key={v.term}><strong>{v.term}</strong>: {v.definition}</p>
-))}
+## Delivery
 
-See the [Glossary](/reference/glossary) for all curriculum terms.
+We recommend that younger students do this in pairs.
 
-</TabItem>
-<TabItem value="companions" label="Companions">
+1. Show the map and demonstrate how it matches the layout of cones and vice versa
+2. Hand out maps for each level and have students repeat until they have had 2 or 3 successes
+a. Participants visit the checkpoint marked by the triangle first and double circle last
+b. Move to the next level after successfully completing each level
+3. Courses (5+ checkpoints)
+a. Repeat for speed
+b. Repeat from memory
+c. Help other students who need assistance
+
+
+## Reflection
+
+- What was challenging about matching up the animals? What was easy?
+- What sort of mistakes did people make?
+- How did you figure out the correct answer?
+
+
+## Extensions
+
+- Remove the colored cones from the corners to further practice spatial relationships
+- Complete the course from memory
+- Track course completion or times on a whiteboard
+- Napkin-O (see Companions tab)
+- Use electronic timing
+
+
+## Companions
 
 ### Napkin-O *(extension)*
 
@@ -210,97 +243,3 @@ One participant has the map and the other is the runner. The map-holder must dir
 | **Time** | 15-20 minutes |
 | **Materials** | Geometric-O setup, Word Bank sheets |
 | **How to run it** | Pair up. One partner has the map, the other runs. The map-holder can only use words from the Word Bank to direct their partner. Switch roles after each course. |
-
-</TabItem>
-</Tabs>
-
-:::tip Electronic timing optional
-See [Using SI Equipment](/equipment/si-timing) for setup instructions.
-:::
-
-## Videos
-
-<CardGrid columns={3}>
-  <div>
-    <YouTube id="32D52UPa7Gw" title="How to Teach Geometric-O" />
-    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>How to teach Geometric-O</p>
-  </div>
-  <div>
-    <YouTube id="-Nk2K_QQ89s" title="Geometric-O in action" />
-    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>Geometric-O in action</p>
-  </div>
-  <div>
-    <YouTube id="Xu1DLRNDAlA" title="Geometric Animal-O" />
-    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>Geometric Animal-O</p>
-  </div>
-  <div>
-    <YouTube id="OtUZVh1cQPI" title="Orienteering with a pattern map" />
-    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>Choose your challenge: a clue sheet or a map!</p>
-  </div>
-  <div>
-    <YouTube id="5-Z22BrQcD8" title="First courses with SPORTIdent" />
-    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>You can also use electronic timing!</p>
-  </div>
-  <div>
-    <YouTube id="HKYcVCUWYQ8" title="Basketball-O" />
-    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>Basketball-O: orienteering on a basketball court</p>
-  </div>
-</CardGrid>
-
-</FullOnly>
-
-<CompactOnly>
-
-<OnePager
-  title="Geometric-O"
-  tagline="Use a simple map to do progressively harder courses"
-  epigraph="We use a map to know where something is before we even find it"
-  description={description}
-  time={frontMatter.time}
-  space={frontMatter.space}
-  materials={frontMatter.materials}
-  setup={frontMatter.setup}
-  vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
-  goals={[
-    'Simple maps',
-    'Identifying landmarks',
-    'Spatial relationships',
-    'Orientation',
-    'Fixing mistakes',
-  ]}
-  delivery={
-    <>
-      <p>We recommend that younger students do this in pairs.</p>
-      <ol>
-        <li>Show the map and demonstrate how it matches the layout of cones and vice versa</li>
-        <li>Hand out maps for each level and have students repeat until they have had 2 or 3 successes
-          <ol type="a">
-            <li>Participants visit the checkpoint marked by the triangle first and double circle last</li>
-            <li>Move to the next level after successfully completing each level</li>
-          </ol>
-        </li>
-        <li>Courses (5+ checkpoints)
-          <ol type="a">
-            <li>Repeat for speed</li>
-            <li>Repeat from memory</li>
-            <li>Help other students who need assistance</li>
-          </ol>
-        </li>
-      </ol>
-    </>
-  }
-  reflection={[
-    'What was challenging about matching up the animals? What was easy?',
-    'What sort of mistakes did people make?',
-    'How did you figure out the correct answer?',
-  ]}
-  extensions={[
-    'Remove the colored cones from the corners to further practice spatial relationships',
-    'Complete the course from memory',
-    'Track course completion or times on a whiteboard',
-    'Napkin-O (see Companions tab)',
-    'Use electronic timing',
-  ]}
-/>
-
-</CompactOnly>
