@@ -717,4 +717,18 @@ function emitStringArray(L, prop, sectionText) {
 }
 
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  parseContentFile,
+  parseSections,
+  parseGoals,
+  parseVocabulary,
+  validate,
+  deliveryToJsx,
+  mdToJsx,
+  generateActivityMDX,
+  generateLessonMDX,
+};
