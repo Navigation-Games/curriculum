@@ -280,3 +280,5 @@ notes/                   Curriculum decisions, open questions
 - [Current camp curriculum (Google Sites)](https://sites.google.com/navigationgames.org/ngactivities/curricula/orienteering-at-camp)
 
 For build tooling details, component documentation, and WSL troubleshooting, see [DEVELOPMENT.md](DEVELOPMENT.md).
+
+For what's done, what's next, and known gaps, see [ROADMAP.md](ROADMAP.md).
