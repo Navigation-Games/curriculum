@@ -15,6 +15,10 @@ What's done, what's next, and what's deferred.
 
 ## Next
 
+### Editing workflow
+
+- **Set up Google Docs editing for Kieran.** Figure out a workflow where Kieran edits content in Google Docs instead of directly in GitHub. Needs a process for syncing Google Docs changes back into the repo's content files. Options to explore: manual copy-paste, a script that pulls from Google Docs, or a shared folder with export conventions.
+
 ### Content gaps
 
 - **Companion activities without links.** Four companion activities are referenced in lesson plan cards but have no link because they live inline with their parent core activity, not as separate pages. Editors should know these exist but are intentionally not separate pages:
