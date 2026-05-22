@@ -14,6 +14,7 @@ We moved to Docusaurus + GitHub so that:
 - **Consistency can be checked programmatically.** The build script and tests scan the structured content to flag missing sections, inconsistent terminology, or activities that have drifted out of sync.
 - **Multiple views from one source.** The same content file produces both the full interactive page and the compact one-pager. No separate documents to reconcile.
 - **Version history and collaboration.** Git tracks every change, who made it, and why. Multiple editors can work in parallel without overwriting each other.
+- **AI-friendly format.** Plain-text Markdown and structured metadata work well with AI tools for drafting new content, generating explanatory videos, writing scripts, and keeping language consistent across activities.
 
 The tradeoff is that editing requires working with text files and git instead of a WYSIWYG editor. To make this easier, authors edit clean Markdown files in the `content/` folder (no markup or code), and a build script generates the formatted site pages.
 
