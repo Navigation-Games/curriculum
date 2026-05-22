@@ -2,7 +2,7 @@
 
 Authors' guide for editing and maintaining the curriculum site.
 
-**Live site:** https://navigation-games.github.io/curriculum/ *(not yet deployed)*
+**Live site:** https://navigation-games.github.io/curriculum/
 
 ## Why This Tech Stack
 

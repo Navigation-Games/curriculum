@@ -21,6 +21,8 @@ vocabulary:
     definition: The ability to remember where things are in space.
 ---
 
+{/* AUTO-GENERATED from content/activities/animal-o.md — do not edit directly */}
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ActivityMeta from '@site/src/components/ActivityMeta';
@@ -38,19 +40,6 @@ Builds spatial memory, observation, and navigation skills.`;
 
 <FullOnly>
 
-# Animal-O (Clue Sheet Orienteering)
-
-**Find animal checkpoints in order using a clue sheet.**
-
-<ActivityMeta
-  time={frontMatter.time}
-  space={frontMatter.space}
-  materials={frontMatter.materials.join(', ')}
-  vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
-/>
-
-> "In orienteering, you find checkpoints in order using clue sheets"
-
 <div style={{float:'right', margin:'0 0 1rem 1.5rem', maxWidth:'25%'}}>
   <figure style={{margin:'0 0 0.75rem'}}>
     <img src="/curriculum/img/activities/animal-o-pig.jpg" alt="Child in yellow raincoat finding the pig checkpoint" style={{width:'100%', borderRadius:'6px'}} />
@@ -60,11 +49,24 @@ Builds spatial memory, observation, and navigation skills.`;
     <img src="/curriculum/img/activities/animal-o.png" alt="Animal-O setup diagram" style={{width:'100%', borderRadius:'6px'}} />
     <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Setup: checkpoints within a boundary</figcaption>
   </figure>
-  <figure style={{margin:0}}>
+  <figure style={{margin:'0 0 0.75rem'}}>
     <img src="/curriculum/img/activities/animal-o-clue-sheet.png" alt="Two clue sheet strips showing animal sequences" style={{width:'100%', borderRadius:'6px'}} />
     <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>Clue sheets: each strip is a course</figcaption>
   </figure>
 </div>
+
+# Animal-O (Clue Sheet Orienteering)
+
+**Use a clue sheet to find checkpoints in order**
+
+<ActivityMeta
+  time={frontMatter.time}
+  space={frontMatter.space}
+  materials={frontMatter.materials.join(', ')}
+  vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
+/>
+
+> "In orienteering, you find checkpoints in order using clue sheets"
 
 <Description>{description}</Description>
 
@@ -203,10 +205,10 @@ See [Using SI Equipment](/equipment/si-timing) for setup instructions.
   setup={frontMatter.setup}
   vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
   goals={[
-    'Use a clue sheet (animal strip) to complete an orienteering course',
-    'Learn to check codes (animal pictures) at each checkpoint',
-    'Develop spatial memory and navigation skills',
-    'Manage rapid changes of direction',
+    'Clue sheet navigation',
+    'Confirming checkpoints',
+    'Spatial memory',
+    'Agility',
   ]}
   delivery={
     <>
