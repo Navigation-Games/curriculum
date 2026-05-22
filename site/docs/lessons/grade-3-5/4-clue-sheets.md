@@ -3,10 +3,14 @@ title: "4 - Clue Sheets"
 sidebar_position: 4
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
+import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
+import OnePager from '@site/src/components/OnePager';
+
+<ViewToggle />
+
+<FullOnly>
 
 # 4 - Clue Sheets
 
@@ -37,8 +41,7 @@ import CardGrid from '@site/src/components/CardGrid';
   />
 </CardGrid>
 
-<Tabs>
-<TabItem value="goals" label="Goals" default>
+## Goals
 
 ### Orienteering Goals
 - Use a clue sheet to complete a course in order
@@ -52,8 +55,7 @@ import CardGrid from '@site/src/components/CardGrid';
 - Accept corrective feedback from the teacher (S4.E3)
 - Work cooperatively with others (S4.E5)
 
-</TabItem>
-<TabItem value="delivery" label="Delivery">
+## Delivery
 
 1. [**Boundary Run**](/activities/core/boundary-run): quick review of the boundary
 2. Pair up
@@ -64,8 +66,7 @@ import CardGrid from '@site/src/components/CardGrid';
    - Repeat from memory
    - Repeat for a faster time
 
-</TabItem>
-<TabItem value="reflection" label="Reflection">
+## Reflection
 
 - What do you like most about orienteering so far?
 - What helped you get faster?
@@ -74,12 +75,60 @@ import CardGrid from '@site/src/components/CardGrid';
 - Were some courses easier or harder? Why?
 - How did you work together?
 
-</TabItem>
-<TabItem value="extensions" label="Extensions">
+## Extensions
 
 - Track course completion or times on a whiteboard
 - Move the checkpoints to new locations and start over
 - Have students draw a map of the area showing checkpoint locations
 
-</TabItem>
-</Tabs>
+</FullOnly>
+
+<CompactOnly>
+
+<OnePager
+  variant="lesson"
+  title="4 - Clue Sheets"
+  tagline="Find them in this specific order"
+  epigraph="In orienteering, you find checkpoints in order using clue sheets"
+  time="30-60 minutes"
+  space="Gym, schoolyard, or local park"
+  materials={['Checkpoints (cones with animal pictures)', 'Clue sheets', 'Start/finish markers']}
+  setup="Place animal checkpoints and start/finish markers around the space"
+  vocabulary={['Clue sheet', 'Course', 'Spatial memory']}
+  goals={[
+    'Use a clue sheet to complete a course in order',
+    'Check the animal picture at each checkpoint',
+    'Build spatial memory by repeating courses',
+    'Complete the activity faster by remembering locations',
+  ]}
+  delivery={
+    <>
+      <ol>
+        <li><strong>Boundary Run</strong>: quick review</li>
+        <li>Pair up</li>
+        <li><strong>Animal-O</strong>: use clue sheets to find checkpoints in order</li>
+      </ol>
+      <p>Progression:</p>
+      <ol type="a">
+        <li>Short clue sheet (2-3 animals)</li>
+        <li>Advance to more animals</li>
+        <li>Try a different clue sheet</li>
+        <li>Repeat from memory</li>
+        <li>Repeat for a faster time</li>
+      </ol>
+    </>
+  }
+  reflection={[
+    'What helped you get faster?',
+    'How do you check you are at the right place?',
+    'How did you remember where the animals are?',
+    'Were some courses easier or harder? Why?',
+  ]}
+  extensions={[
+    'Track times on a whiteboard',
+    'Move checkpoints to new locations and start over',
+    'Draw a map of the area showing checkpoint locations',
+  ]}
+/>
+
+</CompactOnly>

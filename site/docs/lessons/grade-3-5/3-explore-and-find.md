@@ -3,10 +3,14 @@ title: "3 - Explore & Find"
 sidebar_position: 3
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
+import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
+import OnePager from '@site/src/components/OnePager';
+
+<ViewToggle />
+
+<FullOnly>
 
 # 3 - Explore & Find
 
@@ -42,12 +46,12 @@ import CardGrid from '@site/src/components/CardGrid';
   />
 </CardGrid>
 
-<Tabs>
-<TabItem value="goals" label="Goals" default>
+## Goals
 
 ### Orienteering Goals
 - Explore a space and find checkpoints within the boundary
 - Return on the gathering signal
+- Describe what you found and where it was, using spatial language
 - Begin building spatial memory of checkpoint locations
 - Work with a partner
 
@@ -56,30 +60,69 @@ import CardGrid from '@site/src/components/CardGrid';
 - Engage actively in class (S3.E2)
 - Work cooperatively with others (S4.E5)
 
-</TabItem>
-<TabItem value="delivery" label="Delivery">
+## Delivery
 
 1. [**Boundary Run**](/activities/core/boundary-run): quick review of the boundary
 2. Pair up
-3. [**Explore & Find**](/activities/core/animal-o): explore within the boundary to find animal checkpoints; return on the gathering signal; report what you found and where
-4. Send out again. Can you find more this time?
-5. **Animal Relay**: take turns running to checkpoints
+3. [**Explore & Find**](/activities/core/animal-o): explore within the boundary to find animal checkpoints; return on the gathering signal
+4. Report back: which animals did you find? Where were they? ("The elephant was near the fence." "The giraffe was in the far corner.") Build a group picture of the space.
+5. Send out again. Can you find more this time? Can you remember where the ones you've already seen are?
+6. **Animal Relay**: take turns running to checkpoints
 
-</TabItem>
-<TabItem value="reflection" label="Reflection">
+## Reflection
 
 - How many animals did you find? Which was the hardest to find?
-- Did you stay within the boundary?
-- Do you remember where the animals are?
+- Where were the animals? Can you describe where each one was?
+- Did it help to know where they were from the first round?
 - Were some animals easier or harder to find? Why?
 - How did you work with your partner?
 
-</TabItem>
-<TabItem value="extensions" label="Extensions">
+## Extensions
 
 - Move the checkpoints to new locations and start over
 - Have students draw a map of the area and checkpoint locations
 - Visit every animal and move like that animal to the next one
 
-</TabItem>
-</Tabs>
+</FullOnly>
+
+<CompactOnly>
+
+<OnePager
+  variant="lesson"
+  title="3 - Explore & Find"
+  tagline="There are things out there; go find them and come back"
+  time="30-45 minutes"
+  space="Gym, schoolyard, or local park"
+  materials={['Checkpoints (cones with animal pictures)']}
+  setup="Place animal checkpoints around the space within the boundary"
+  vocabulary={['Boundary', 'Gathering signal', 'Checkpoint']}
+  goals={[
+    'Explore a space and find checkpoints within the boundary',
+    'Return on the gathering signal',
+    'Describe what you found and where it was',
+    'Begin building spatial memory of checkpoint locations',
+    'Work with a partner',
+  ]}
+  delivery={
+    <ol>
+      <li><strong>Boundary Run</strong>: quick review of the boundary</li>
+      <li>Pair up</li>
+      <li><strong>Explore & Find</strong>: explore to find animal checkpoints; return on the signal</li>
+      <li>Report back: describe what you found and where it was</li>
+      <li>Send out again. Can you find more? Can you remember where you've been?</li>
+      <li><strong>Animal Relay</strong>: take turns running to checkpoints</li>
+    </ol>
+  }
+  reflection={[
+    'Where were the animals? Can you describe where each one was?',
+    'Did knowing where they were from the first round help?',
+    'How did you work with your partner?',
+  ]}
+  extensions={[
+    'Move checkpoints to new locations and start over',
+    'Draw a map of the area and checkpoint locations',
+    'Visit every animal and move like that animal to the next one',
+  ]}
+/>
+
+</CompactOnly>

@@ -4,6 +4,7 @@ import styles from './styles.module.css';
 interface OnePagerProps {
   title: string;
   tagline: string;
+  variant?: 'activity' | 'lesson';
   epigraph?: string;
   description?: string;
   image?: string;
@@ -21,6 +22,7 @@ interface OnePagerProps {
 export default function OnePager({
   title,
   tagline,
+  variant = 'activity',
   epigraph,
   description,
   image,
@@ -35,13 +37,15 @@ export default function OnePager({
   extensions,
 }: OnePagerProps): React.ReactElement {
   const materialsList = Array.isArray(materials) ? materials : materials ? [materials] : [];
+  const variantClass = variant === 'lesson' ? styles.lesson : '';
+  const orgLabel = variant === 'lesson' ? 'Navigation Games Lesson Plan' : 'Navigation Games Activity';
 
   return (
     <div className={styles.page}>
-      <div className={styles.frame}>
+      <div className={`${styles.frame} ${variantClass}`}>
         <div className={styles.header}>
           <div className={styles.headerText}>
-            <div className={styles.orgName}>Navigation Games Activity</div>
+            <div className={styles.orgName}>{orgLabel}</div>
             <h1 className={styles.title}>{title}</h1>
             <p className={styles.tagline}>{tagline}</p>
           </div>

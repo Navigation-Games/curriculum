@@ -3,10 +3,14 @@ title: "5 - Map Readiness"
 sidebar_position: 5
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
+import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
+import OnePager from '@site/src/components/OnePager';
+
+<ViewToggle />
+
+<FullOnly>
 
 # 5 - Map Readiness
 
@@ -35,6 +39,11 @@ import CardGrid from '@site/src/components/CardGrid';
     tag="readiness"
   />
   <ActivityCard
+    title="Symbol-O"
+    description="Find checkpoints by map symbol type; a bridge to real orienteering maps."
+    tag="readiness"
+  />
+  <ActivityCard
     title="Word Bank Orienteering"
     description="Guide a partner using only approved spatial words."
     link="/activities/core/geometric-o"
@@ -42,8 +51,7 @@ import CardGrid from '@site/src/components/CardGrid';
   />
 </CardGrid>
 
-<Tabs>
-<TabItem value="goals" label="Goals" default>
+## Goals
 
 ### Orienteering Goals
 - Understand spatial relationship vocabulary (next to, closest, furthest, between)
@@ -57,8 +65,7 @@ import CardGrid from '@site/src/components/CardGrid';
 - Cooperate and learn with others (S4.E4)
 - Accept corrective feedback (S4.E3)
 
-</TabItem>
-<TabItem value="delivery" label="Delivery">
+## Delivery
 
 1. [**Animal-O**](/activities/core/animal-o) warm-up using the geometric layout
 2. **Geometric Readiness**: gather students facing the arrangement
@@ -70,17 +77,16 @@ import CardGrid from '@site/src/components/CardGrid';
    - Partner verifies with the animal clue sheet
    - Progress to 10-checkpoint maps
    - Repeat for speed, then from memory
+4. **Symbol-O**: introduce orienteering map symbols; students find checkpoints by symbol type (preview of Lesson 6)
 
-</TabItem>
-<TabItem value="reflection" label="Reflection">
+## Reflection
 
 - What was challenging about matching the map to the real space?
 - What sort of mistakes did you make? How did you fix them?
 - How did you know the map was oriented correctly?
 - Describe the mental map you built of the space
 
-</TabItem>
-<TabItem value="extensions" label="Extensions">
+## Extensions
 
 - Remove the colored landmark cones (harder orientation)
 - [**Napkin-O**](/activities/core/geometric-o): cover animal pictures with napkins; communicate with other pairs to finish
@@ -88,5 +94,46 @@ import CardGrid from '@site/src/components/CardGrid';
 - Have students draw their own map of the space
 - Have students design their own course on a map
 
-</TabItem>
-</Tabs>
+</FullOnly>
+
+<CompactOnly>
+
+<OnePager
+  variant="lesson"
+  title="5 - Map Readiness"
+  tagline="Spatial relationships, orienting, connecting a map to the space"
+  epigraph="We use a map to know where something is before we even find it"
+  time="30-60 minutes"
+  space="Gym, schoolyard, or local park"
+  materials={['Checkpoints with animals and numbers', '4 colored landmark cones', 'Pattern maps', 'Whiteboard and markers']}
+  setup="Arrange checkpoints in a geometric pattern with colored landmark cones at corners"
+  vocabulary={['Map', 'Orient the map', 'Landmark', 'Spatial relationship words']}
+  goals={[
+    'Understand spatial relationship vocabulary',
+    'Orient a map using landmarks',
+    'Read a simple map and connect it to the physical space',
+    'Identify and fix orientation mistakes',
+  ]}
+  delivery={
+    <ol>
+      <li><strong>Animal-O</strong> warm-up using the geometric layout</li>
+      <li><strong>Geometric Readiness</strong>: whiteboard map demo, spatial questions</li>
+      <li><strong>Geometric-O</strong>: pair up, progress through map levels</li>
+      <li>Repeat for speed, then from memory</li>
+      <li><strong>Symbol-O</strong>: find checkpoints by map symbol type</li>
+    </ol>
+  }
+  reflection={[
+    'What was challenging about matching the map to the real space?',
+    'How did you know the map was oriented correctly?',
+    'What sort of mistakes did you make? How did you fix them?',
+  ]}
+  extensions={[
+    'Remove colored landmark cones (harder orientation)',
+    'Napkin-O: communicate with other pairs to finish',
+    'Word Bank Orienteering: guide a partner using only approved words',
+    'Draw your own map of the space',
+  ]}
+/>
+
+</CompactOnly>

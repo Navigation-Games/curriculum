@@ -9,6 +9,10 @@
   padding: 1.25rem 1.5rem;
 }
 
+.frame.lesson {
+  border-color: #2e8555;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -63,6 +67,10 @@
   font-size: 0.9rem;
   margin: 0.25rem 0 0.6rem;
   font-weight: 600;
+}
+
+.lesson .epigraph {
+  color: #2e8555;
 }
 
 .body {
