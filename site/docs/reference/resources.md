@@ -33,7 +33,9 @@ import CardGrid from '@site/src/components/CardGrid';
   </div>
 </CardGrid>
 
-**Start Orienteering: A Newcomer's Guide** is a good general introduction to the sport.
+<YouTube id="26Zc5AVkFis" title="Start Orienteering: A Newcomer's Guide" />
+
+**[Start Orienteering: A Newcomer's Guide](https://www.youtube.com/watch?v=26Zc5AVkFis)** is a good general introduction to the sport.
 
 ## About Navigation Games Activities
 

@@ -4,6 +4,19 @@ Authors' guide for editing and maintaining the curriculum site.
 
 **Live site:** https://navigation-games.github.io/curriculum/
 
+## Why This Tech Stack
+
+The curriculum has lived in GitBook and then Google Sites. Both worked well for writing and sharing content, but as the curriculum grew we hit a consistency problem: each activity exists in multiple forms (one-pager, full description, script, lesson plan reference, vocabulary list) and keeping them in sync across formats and across activities was manual and error-prone.
+
+We moved to Docusaurus + GitHub so that:
+
+- **Content is structured and reusable.** Activity metadata (goals, vocabulary, materials, reflection questions) is stored once and rendered into multiple views: full activity page, printable one-pager, lesson plan card, etc. A change to vocabulary propagates everywhere.
+- **Consistency can be checked programmatically.** The build script and tests scan the structured content to flag missing sections, inconsistent terminology, or activities that have drifted out of sync.
+- **Multiple views from one source.** The same content file produces both the full interactive page and the compact one-pager. No separate documents to reconcile.
+- **Version history and collaboration.** Git tracks every change, who made it, and why. Multiple editors can work in parallel without overwriting each other.
+
+The tradeoff is that editing requires working with text files and git instead of a WYSIWYG editor. To make this easier, authors edit clean Markdown files in the `content/` folder (no markup or code), and a build script generates the formatted site pages.
+
 ## How Editing Works
 
 You edit clean Markdown files in the `content/` folder. A build script turns them into the formatted pages on the site. You never need to touch the generated files in `site/docs/`.
@@ -213,6 +226,20 @@ You can edit content files directly on GitHub.com without any local setup:
 The site auto-publishes when you push to `main`. A GitHub Actions workflow builds and deploys to GitHub Pages (takes 1-2 minutes).
 
 Note: editing on GitHub skips the content build step. For the generated site pages to update, someone needs to run `node scripts/build-content.js` and commit the result. (We plan to automate this with a GitHub Action.)
+
+### Working with multiple editors
+
+If someone edits a file on GitHub while you are editing locally, your next `git push` will be rejected because the remote has changes you do not have. This is normal and safe. To resolve it:
+
+```bash
+git pull --rebase
+```
+
+This downloads the remote changes and replays your local commits on top. If you and the other person edited different files, it just works. If you both edited the same file, git will ask you to resolve the conflict (pick which version to keep for the overlapping lines).
+
+**Good habit:** run `git pull` before you start editing and before you push. This keeps conflicts small and easy to resolve.
+
+If you are not comfortable with git, the simplest workflow is: edit on GitHub.com (one file at a time, commit each change), and let the other person do the same. GitHub handles the merging automatically when you edit through the web interface.
 
 ## Repo Structure
 
