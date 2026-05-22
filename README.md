@@ -8,7 +8,7 @@ Authors' guide for editing and maintaining the curriculum site.
 
 The curriculum has lived in GitBook and then Google Sites. Both worked well for writing and sharing content, but as the curriculum grew we hit a consistency problem: each activity exists in multiple forms (one-pager, full description, script, lesson plan reference, vocabulary list) and keeping them in sync across formats and across activities was manual and error-prone.
 
-We moved to Docusaurus + GitHub so that:
+We moved to Docusaurus + GitHub because we are at a stage of curriculum development where we need to edit across the entire curriculum for consistency, overall pedagogical flow, and getting all the details right prior to final publication. Specifically, this solution gives us:
 
 - **Content is structured and reusable.** Activity metadata (goals, vocabulary, materials, reflection questions) is stored once and rendered into multiple views: full activity page, printable one-pager, lesson plan card, etc. A change to vocabulary propagates everywhere.
 - **Consistency can be checked programmatically.** The build script and tests scan the structured content to flag missing sections, inconsistent terminology, or activities that have drifted out of sync.
