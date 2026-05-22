@@ -10,12 +10,6 @@ setup: If using artificial boundaries, place cones ahead of time
 vocabulary:
   - term: Boundary
     definition: The edge of the space to stay inside. Sometimes there are places you cannot go within a larger boundary (for example, a garden inside a larger park).
-  - term: Inside/outside
-    definition: Whether something is within or beyond the boundary.
-  - term: Safety
-    definition: By staying within the boundary, you are safe from dangers outside (like cars), and the teacher will know where you are.
-  - term: Communication
-    definition: Giving and receiving clear directions about where to go.
 ---
 
 import Tabs from '@theme/Tabs';

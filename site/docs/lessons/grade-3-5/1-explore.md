@@ -66,11 +66,11 @@ import CardGrid from '@site/src/components/CardGrid';
 </TabItem>
 <TabItem value="delivery" label="Delivery">
 
-1. Run the boundary; discuss what is inside and outside
-2. Practice gathering on the teacher's signal
+1. [**Boundary Run**](/activities/core/boundary-run): run the boundary; discuss what is inside and outside
+2. [**Gathering**](/activities/core/gathering): practice gathering on the teacher's signal
 3. Pair up
-4. Explore to find animal checkpoints; return on a signal
-5. Animal relay: take turns running to checkpoints
+4. [**Explore & Find**](/activities/core/animal-o): explore to find animal checkpoints; return on a signal
+5. **Animal Relay**: take turns running to checkpoints
 
 </TabItem>
 <TabItem value="reflection" label="Reflection">

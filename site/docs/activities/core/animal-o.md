@@ -117,24 +117,6 @@ Start simple and add challenge as students succeed:
 </TabItem>
 <TabItem value="script" label="Script">
 
-### Boundaries
-
-"Welcome! Today we're going to play some orienteering games."
-
-"First, let's explore our boundaries. What does 'boundaries' mean?"
-*(Students respond)*
-"Right, boundaries are the limits of our playing area. We stay safe and know where we can play."
-
-*(Point to landmarks around the space)*
-"Is this inside our boundaries?"
-*(Repeat with 2-3 examples)*
-
-*(Check red zones)*
-"Can I go past the fence?" *(Wait for "No!")*
-"Can I go into the parking lot?" *(Wait for "No!")*
-
-"So are we staying inside or outside the boundaries?" *(Students: "Inside!")*
-
 ### Visiting Cones Together
 
 "Now we're playing Animal-O. First we'll visit the animal cones together as a group."
@@ -256,7 +238,6 @@ See [Using SI Equipment](/equipment/si-timing) for setup instructions.
     'Track course completion or times on a whiteboard',
     'Move the checkpoints to new locations and start over',
     'Have students draw a map of the area and checkpoint locations',
-    'Cover up animals with napkins, students must communicate to finish course',
   ]}
 />
 

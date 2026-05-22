@@ -62,10 +62,10 @@ import CardGrid from '@site/src/components/CardGrid';
 </TabItem>
 <TabItem value="delivery" label="Delivery">
 
-1. **Boundary Run**: run the boundary; discuss what is inside and outside
+1. [**Boundary Run**](/activities/core/boundary-run): run the boundary; discuss what is inside and outside
 2. Pair up
-3. **Explore & Find**: explore to find animal checkpoints; return on a signal
-4. **Animal-O**: use clue sheets to find checkpoints in order. Progression:
+3. [**Explore & Find**](/activities/core/animal-o): explore to find animal checkpoints; return on a signal
+4. [**Animal-O**](/activities/core/animal-o): use clue sheets to find checkpoints in order. Progression:
    - Start with a short clue sheet (2-3 animals)
    - Advance to clue sheets with more animals
    - Try a different clue sheet

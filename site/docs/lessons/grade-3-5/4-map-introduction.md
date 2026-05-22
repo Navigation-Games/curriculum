@@ -63,8 +63,8 @@ import CardGrid from '@site/src/components/CardGrid';
 </TabItem>
 <TabItem value="delivery" label="Delivery">
 
-1. **Boundary Run**: run the boundary
-2. Explore within the boundary to find checkpoints (or **Animal-O** as warmup)
+1. [**Boundary Run**](/activities/core/boundary-run): run the boundary
+2. Explore within the boundary to find checkpoints (or [**Animal-O**](/activities/core/animal-o) as warmup)
 3. **Map Discussion**: introduce the orienteering map
    - Compare it to the pattern maps from lesson 3
    - Tell the teacher how to orient it

@@ -58,7 +58,7 @@ import CardGrid from '@site/src/components/CardGrid';
 </TabItem>
 <TabItem value="delivery" label="Delivery">
 
-1. **Boundary Run**: run the boundary and warm up
+1. [**Boundary Run**](/activities/core/boundary-run): run the boundary and warm up
 2. **Map Walk**: walk a route together, matching symbols to features
 3. **Partner Orienteering**: pair up, orient the map, agree on a route, visit each checkpoint in order; compare the code to confirm the correct checkpoint
 4. **Solo Orienteering**: do the course individually several times to increase speed

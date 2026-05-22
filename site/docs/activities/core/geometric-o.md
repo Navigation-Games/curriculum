@@ -16,7 +16,7 @@ vocabulary:
     definition: A picture or image used to represent the environment.
   - term: Spatial relationship
     definition: Where something is based on other features in the space. Vocabulary includes next to, closest, furthest, between.
-  - term: Orientation
+  - term: Orient the map
     definition: Turn the map until it matches the space. "Orient" is just a fancy word for "turn things."
   - term: Landmark
     definition: A distinct object or location in the space. In Geometric-O, the colored cones in the corners are the landmarks.
@@ -81,13 +81,7 @@ See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits i
 
 ### Steps
 
-**1. Animal-O warm-up.** Do as much as you have time for. Students can work individually:
-   - Find all 10 animals in any order
-   - 5-animal clue sheet
-   - 10-animal clue sheet
-   - 5-animal clue sheet from memory
-
-**2. Whiteboard introduction.** Have students gather facing the arrangement:
+**1. Whiteboard introduction.** Have students gather facing the arrangement:
    - Hold up the whiteboard map upside down (not oriented to the cones)
    - Quiz students on what the dots represent (orange dots = animal cones, colored dots = colored landmark cones)
    - Ask students what is wrong with the map (it is upside down)
@@ -95,12 +89,12 @@ See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits i
    - When oriented, show how colored cones on the map match real life, and how animal cone groupings match too
    - Point to checkpoints on the map and ask which animal is there. Then point to animals in real life and ask where they are on the map
 
-**3. Spatial descriptions.** Ask students to find checkpoints based on descriptions of increasing difficulty:
+**2. Spatial descriptions.** Ask students to find checkpoints based on descriptions of increasing difficulty:
    - Easy: "Find the animal closest to the red cone"
    - Medium: "Find the animal furthest from the blue cone"
    - Hard: "Find all the animals between the yellow and green cone"
 
-**4. Geometric courses.** Students may work in pairs, sharing one map and switching who holds it after each course:
+**3. Geometric courses.** Students may work in pairs, sharing one map and switching who holds it after each course:
    - Pass out 5-checkpoint maps. Each course has an animal name on it. Visit checkpoints in order, starting with the triangle
    - The partner with the animal clue sheet can verify correctness
    - Progress to 10-checkpoint maps

@@ -19,7 +19,7 @@ A location marked with a cone, flag, or streamer in the field. On a map, checkpo
 
 #### Clue sheet
 
-A list showing the order to visit checkpoints. In Animal-O, the clue sheet shows pictures of animals. In standard orienteering, the clue sheet uses numbers and describes the feature at each checkpoint. Also called "control descriptions."
+A list showing the order to visit checkpoints. In Animal-O, the clue sheet shows pictures of animals. In standard orienteering, the clue sheet uses numbers and describes the feature at each checkpoint.
 
 #### Course
 

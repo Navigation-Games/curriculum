@@ -59,9 +59,9 @@ import CardGrid from '@site/src/components/CardGrid';
 </TabItem>
 <TabItem value="delivery" label="Delivery">
 
-1. **Boundary Run**: run the boundary of the court and warm up
+1. [**Boundary Run**](/activities/core/boundary-run): run the boundary of the court and warm up
 2. **Find the Cone**: pair up, orient the map using the court lines, stand next to the cone shown on the map
-3. **Basketball-O**: agree on the route, visit each checkpoint in order; compare the code to confirm the correct checkpoint
+3. [**Basketball-O**](/activities/core/geometric-o): agree on the route, visit each checkpoint in order; compare the code to confirm the correct checkpoint
 4. Do the course individually several times to increase speed
 5. Do the course in reverse order and without a map
 6. Help fellow students by giving hints and teaching them how to read the map

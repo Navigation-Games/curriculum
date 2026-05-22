@@ -64,7 +64,7 @@ import CardGrid from '@site/src/components/CardGrid';
 </TabItem>
 <TabItem value="delivery" label="Delivery">
 
-1. **Boundary Run**: run the boundary and warm up
+1. [**Boundary Run**](/activities/core/boundary-run): run the boundary and warm up
 2. Review map orientation from lesson 4
 3. **Score-O**: each student or pair gets a map with checkpoint circles. Visit as many as you can in the time limit, in any order
 4. Regroup and discuss: what strategies did you use? Did you plan a route or just run to the nearest one?

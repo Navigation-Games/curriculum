@@ -62,10 +62,10 @@ import CardGrid from '@site/src/components/CardGrid';
 </TabItem>
 <TabItem value="delivery" label="Delivery">
 
-1. **Animal-O** warm-up using the geometric layout
+1. [**Animal-O**](/activities/core/animal-o) warm-up using the geometric layout
 2. **Geometric Readiness**: answer spatial questions ("Which cone is closest to the red landmark?") and orient the demonstration map
 3. Pair up; receive a Level 1 map; stand by the circled checkpoint
-4. **Geometric-O**: progress through levels, visiting checkpoints in order starting with the triangle, ending with the double circle
+4. [**Geometric-O**](/activities/core/geometric-o): progress through levels, visiting checkpoints in order starting with the triangle, ending with the double circle
 5. Navigate full courses (5+ checkpoints)
    - Repeat for speed
    - Repeat from memory
