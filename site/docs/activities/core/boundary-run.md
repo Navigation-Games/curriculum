@@ -9,7 +9,7 @@ materials:
 setup: If using artificial boundaries, place cones ahead of time
 vocabulary:
   - term: Boundary
-    definition: The edge of the space to stay inside. Sometimes there are places you cannot go within a larger boundary (for example, a garden inside a larger park).
+    definition: The perimeter of the play area. All checkpoints are inside the boundary.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -179,11 +179,10 @@ Reinforces boundary awareness while adding physical challenge and fun.
   setup={frontMatter.setup}
   vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
   goals={[
-    'Listening to instructions',
-    'Safety',
-    'Boundaries',
-    'Respectfulness',
-    'Speed and agility',
+    'Identify the boundary of the play area after following the leader',
+    'Tell whether landmarks and locations are inside or outside the boundary',
+    'Recognize areas within the boundary that are still off limits',
+    'Explain why boundaries matter for safety and respect',
   ]}
   delivery={
     <>

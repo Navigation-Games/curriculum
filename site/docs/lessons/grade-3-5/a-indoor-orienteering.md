@@ -18,7 +18,7 @@ import CardGrid from '@site/src/components/CardGrid';
 | **Space** | Gym with basketball court |
 | **Materials** | Checkpoints, basketball court maps (half-court and full-court versions) |
 | **Setup** | Place checkpoints according to the master map |
-| **Vocabulary** | Orient the map, route choice |
+| **Vocabulary** | Orient the map, landmark, route choice |
 
 ## Activities
 

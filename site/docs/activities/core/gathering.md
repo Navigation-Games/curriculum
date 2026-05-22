@@ -9,13 +9,9 @@ materials:
 setup: Define a clear boundary and establish a central gathering location
 vocabulary:
   - term: Boundary
-    definition: The defined area in which participants must remain.
-  - term: Gathering
-    definition: Returning to a central location when signaled.
-  - term: Awareness
-    definition: Being alert and present in your surroundings.
-  - term: Signal
-    definition: A sound or visual cue that tells participants to stop and respond.
+    definition: The perimeter of the play area. All checkpoints are inside the boundary.
+  - term: Gathering signal
+    definition: A signal from the leader (such as a whistle blast or raised hand) telling everyone to stop and gather at a designated spot.
 ---
 
 import Tabs from '@theme/Tabs';
