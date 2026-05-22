@@ -3,6 +3,8 @@ title: "6 - Maps"
 sidebar_position: 6
 ---
 
+{/* AUTO-GENERATED from content/lessons/grade-3-5/6-maps.md — do not edit directly */}
+
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
@@ -20,9 +22,9 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-60 minutes (can extend across multiple sessions) |
 | **Space** | Schoolyard or local park (needs real features for map symbols) |
-| **Materials** | Orienteering maps, checkpoint markers (cones or flags), master map |
+| **Materials** | Orienteering maps, Checkpoint markers (cones or flags), Master map |
 | **Setup** | Place checkpoints according to the master map |
-| **Vocabulary** | Orient the map, symbol, feature, route choice |
+| **Vocabulary** | Orient the map, Symbol, Feature, Route choice |
 
 ## Activities
 
@@ -38,13 +40,6 @@ import OnePager from '@site/src/components/OnePager';
     tag="core"
   />
 </CardGrid>
-
-Students move from guided map reading to independent navigation:
-
-1. **Map Walk**: walk together, matching symbols to features
-2. **Symbol-O**: find checkpoints by symbol type
-3. **Score-O**: choose your own route and visit checkpoints in any order
-4. **Partner/Solo Orienteering**: complete full courses independently
 
 ## Goals
 
@@ -100,35 +95,42 @@ Students move from guided map reading to independent navigation:
   tagline="Use a picture of the space to navigate"
   epigraph="Today we will navigate using a real orienteering map"
   time="30-60 minutes (can extend across multiple sessions)"
-  space="Schoolyard or local park"
+  space="Schoolyard or local park (needs real features for map symbols)"
   materials={['Orienteering maps', 'Checkpoint markers (cones or flags)', 'Master map']}
   setup="Place checkpoints according to the master map"
   vocabulary={['Orient the map', 'Symbol', 'Feature', 'Route choice']}
   goals={[
-    'Read an orienteering map and connect it to the space',
+    'Understand what an orienteering map is and how it differs from a pattern map',
     'Learn map symbols and match them to real features',
+    'Walk a route while reading the map',
     'Make route choices based on the map',
     'Complete courses independently',
   ]}
   delivery={
-    <ol>
-      <li><strong>Boundary Run</strong>: run the boundary</li>
-      <li><strong>Map Discussion</strong>: introduce the orienteering map; compare to pattern maps</li>
-      <li><strong>Map Walk</strong>: walk a route, matching symbols to features</li>
-      <li><strong>Score-O</strong>: visit as many checkpoints as possible in any order</li>
-      <li><strong>Partner/Solo Orienteering</strong>: complete full courses</li>
-    </ol>
+    <>
+      <ol>
+        <li><strong>Boundary Run</strong>: run the boundary</li>
+        <li><strong>Map Discussion</strong>: introduce the orienteering map; compare to pattern maps</li>
+        <li><strong>Map Walk</strong>: walk a route, matching symbols to features</li>
+        <li><strong>Score-O</strong>: visit as many checkpoints as possible in any order</li>
+        <li><strong>Partner/Solo Orienteering</strong>: complete full courses</li>
+      </ol>
+    </>
   }
   reflection={[
-    'How is the orienteering map different from pattern maps?',
-    'What strategy did you use in Score-O?',
-    'How did you determine which way to go?',
+    'How is the orienteering map different from the pattern maps we used before?',
+    'Which symbols were easier or harder to remember? Why?',
+    'What strategy did you use to visit the most checkpoints in Score-O?',
+    'How did you determine which way to go for each checkpoint?',
+    'What shortcuts between checkpoints did you find?',
   ]}
   extensions={[
-    'Symbol Relay: team competition to learn map symbols',
-    'Poker-O: collect poker hands at checkpoints',
-    'Poison-O: wrong checkpoints cost points',
-    'Place Your Own Checkpoints: students design courses for each other',
+    '**Symbol Relay**: team competition to learn map symbols',
+    '**Poker-O**: each checkpoint has a playing card; collect the best poker hand',
+    '**Poison-O**: wrong checkpoints cost points; rewards careful map reading',
+    '**Place Your Own Checkpoints**: students place markers using the map, then others find them',
+    'Relay race: teams take turns completing the course',
+    'Challenge students to complete three checkpoints from memory',
   ]}
 />
 

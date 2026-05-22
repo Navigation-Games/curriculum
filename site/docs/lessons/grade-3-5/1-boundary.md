@@ -3,6 +3,8 @@ title: "1 - Boundary"
 sidebar_position: 1
 ---
 
+{/* AUTO-GENERATED from content/lessons/grade-3-5/1-boundary.md — do not edit directly */}
+
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
@@ -22,7 +24,7 @@ import OnePager from '@site/src/components/OnePager';
 | **Space** | Gym, schoolyard, or local park |
 | **Materials** | Cones (optional, for marking boundaries) |
 | **Setup** | Walk the space and identify the boundary; place cones if edges are unclear |
-| **Vocabulary** | Boundary, checkpoint |
+| **Vocabulary** | Boundary, Checkpoint |
 
 ## Activities
 
@@ -89,28 +91,30 @@ import OnePager from '@site/src/components/OnePager';
   vocabulary={['Boundary', 'Checkpoint']}
   goals={[
     'Identify the boundary of the play area',
-    'Tell whether landmarks are inside or outside the boundary',
-    'Recognize off-limits areas within the boundary',
+    'Tell whether landmarks and locations are inside or outside the boundary',
+    'Recognize areas within the boundary that are still off limits',
     'Explain why boundaries matter for safety and respect',
   ]}
   delivery={
-    <ol>
-      <li><strong>Boundary Run</strong>: run the boundary together; point out key landmarks</li>
-      <li>Quiz: point to landmarks and ask "inside or outside?"</li>
-      <li>Discuss off-limits areas within the boundary</li>
-      <li>Discuss why boundaries matter (safety, respect)</li>
-    </ol>
+    <>
+      <ol>
+        <li><strong>Boundary Run</strong>: run the boundary together; point out key landmarks</li>
+        <li>Quiz: point to landmarks and ask "inside or outside?"</li>
+        <li>Discuss off-limits areas within the boundary</li>
+        <li>Discuss why boundaries matter (safety, respect)</li>
+      </ol>
+    </>
   }
   reflection={[
     'What does boundary mean?',
     'How can crossing the boundary be dangerous?',
-    'What are some things we see every day that mark boundaries?',
+    'What are some things we see every day that mark boundaries? (Fences, curbs, signs)',
   ]}
   extensions={[
     'Repeat the boundary at a faster pace',
-    'Travel with different movements (skipping, galloping)',
-    'Hot or Cold: direct a partner to a secret cone',
-    'Shrinking Boundary Tag: play tag while the boundary gets smaller',
+    'Travel the boundary with different movements (skipping, galloping)',
+    '**Hot or Cold**: direct a partner to a secret cone using temperature clues',
+    '**Shrinking Boundary Tag**: play tag while the boundary gets smaller',
   ]}
 />
 

@@ -3,6 +3,8 @@ title: "3 - Explore & Find"
 sidebar_position: 3
 ---
 
+{/* AUTO-GENERATED from content/lessons/grade-3-5/3-explore-and-find.md — do not edit directly */}
+
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
@@ -14,15 +16,13 @@ import OnePager from '@site/src/components/OnePager';
 
 # 3 - Explore & Find
 
-> "There are things out there; go find them and come back"
-
 | | |
 |---|---|
 | **Time** | 30-45 minutes |
 | **Space** | Gym, schoolyard, or local park |
 | **Materials** | Checkpoints (cones with animal pictures) |
 | **Setup** | Place animal checkpoints around the space within the boundary |
-| **Vocabulary** | Boundary, gathering signal, checkpoint |
+| **Vocabulary** | Boundary, Gathering signal, Checkpoint |
 
 ## Activities
 
@@ -99,28 +99,32 @@ import OnePager from '@site/src/components/OnePager';
   goals={[
     'Explore a space and find checkpoints within the boundary',
     'Return on the gathering signal',
-    'Describe what you found and where it was',
+    'Describe what you found and where it was, using spatial language',
     'Begin building spatial memory of checkpoint locations',
     'Work with a partner',
   ]}
   delivery={
-    <ol>
-      <li><strong>Boundary Run</strong>: quick review of the boundary</li>
-      <li>Pair up</li>
-      <li><strong>Explore & Find</strong>: explore to find animal checkpoints; return on the signal</li>
-      <li>Report back: describe what you found and where it was</li>
-      <li>Send out again. Can you find more? Can you remember where you've been?</li>
-      <li><strong>Animal Relay</strong>: take turns running to checkpoints</li>
-    </ol>
+    <>
+      <ol>
+        <li><strong>Boundary Run</strong>: quick review of the boundary</li>
+        <li>Pair up</li>
+        <li><strong>Explore & Find</strong>: explore to find animal checkpoints; return on the signal</li>
+        <li>Report back: describe what you found and where it was</li>
+        <li>Send out again. Can you find more? Can you remember where you've been?</li>
+        <li><strong>Animal Relay</strong>: take turns running to checkpoints</li>
+      </ol>
+    </>
   }
   reflection={[
+    'How many animals did you find? Which was the hardest to find?',
     'Where were the animals? Can you describe where each one was?',
-    'Did knowing where they were from the first round help?',
+    'Did it help to know where they were from the first round?',
+    'Were some animals easier or harder to find? Why?',
     'How did you work with your partner?',
   ]}
   extensions={[
-    'Move checkpoints to new locations and start over',
-    'Draw a map of the area and checkpoint locations',
+    'Move the checkpoints to new locations and start over',
+    'Have students draw a map of the area and checkpoint locations',
     'Visit every animal and move like that animal to the next one',
   ]}
 />

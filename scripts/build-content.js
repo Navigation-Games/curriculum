@@ -5,64 +5,89 @@ const path = require('path');
 const yaml = require(require.resolve('js-yaml', { paths: [path.join(__dirname, '..', 'site')] }));
 
 const REPO_ROOT = path.join(__dirname, '..');
-const CONTENT_DIR = path.join(REPO_ROOT, 'content', 'activities');
-const OUTPUT_DIR = path.join(REPO_ROOT, 'site', 'docs', 'activities', 'core');
+const DIRS = {
+  activitiesContent: path.join(REPO_ROOT, 'content', 'activities'),
+  activitiesOutput:  path.join(REPO_ROOT, 'site', 'docs', 'activities', 'core'),
+  lessonsContent:    path.join(REPO_ROOT, 'content', 'lessons', 'grade-3-5'),
+  lessonsOutput:     path.join(REPO_ROOT, 'site', 'docs', 'lessons', 'grade-3-5'),
+};
+
+
+// ===========================================================================
+// Main
+// ===========================================================================
 
 function main() {
-  if (!fs.existsSync(CONTENT_DIR)) {
-    console.error(`Content directory not found: ${CONTENT_DIR}`);
+  const errors = [];
+  const warnings = [];
+
+  buildDir(DIRS.activitiesContent, DIRS.activitiesOutput, 'activity', errors, warnings);
+  buildDir(DIRS.lessonsContent, DIRS.lessonsOutput, 'lesson', errors, warnings);
+
+  if (warnings.length) {
+    console.log(`\n  ${warnings.length} warning(s):`);
+    for (const w of warnings) console.log(`    ${w}`);
+  }
+
+  if (errors.length) {
+    console.error(`\n  ${errors.length} error(s):`);
+    for (const e of errors) console.error(`    ${e}`);
     process.exit(1);
   }
+}
 
-  const files = fs.readdirSync(CONTENT_DIR).filter(f => f.endsWith('.md'));
+function buildDir(contentDir, outputDir, type, errors, warnings) {
+  if (!fs.existsSync(contentDir)) return;
 
-  if (files.length === 0) {
-    console.log('No content files found.');
-    return;
-  }
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md'));
+  if (files.length === 0) return;
 
   for (const file of files) {
     const slug = path.basename(file, '.md');
-    const raw = fs.readFileSync(path.join(CONTENT_DIR, file), 'utf8');
+    const raw = fs.readFileSync(path.join(contentDir, file), 'utf8');
 
     try {
-      const parsed = parseContentFile(raw);
-      const mdx = generateMDX(slug, parsed);
-      const outputPath = path.join(OUTPUT_DIR, `${slug}.md`);
+      const parsed = parseContentFile(raw, type);
+      validate(slug, parsed, type, errors, warnings);
+
+      const mdx = type === 'activity'
+        ? generateActivityMDX(slug, parsed)
+        : generateLessonMDX(slug, parsed);
+
+      const outputPath = path.join(outputDir, `${slug}.md`);
       fs.writeFileSync(outputPath, mdx, 'utf8');
       console.log(`  ${slug} -> ${path.relative(REPO_ROOT, outputPath)}`);
     } catch (err) {
-      console.error(`  ERROR in ${file}: ${err.message}`);
+      errors.push(`${file}: ${err.message}`);
     }
   }
 }
 
 
-// ---------------------------------------------------------------------------
-// Parsing
-// ---------------------------------------------------------------------------
+// ===========================================================================
+// Parsing (shared)
+// ===========================================================================
 
-function parseContentFile(raw) {
+function parseContentFile(raw, type) {
   const text = raw.replace(/\r\n/g, '\n');
 
-  // Extract title from leading # heading
   const titleMatch = text.match(/^# (.+)\n/);
   const titleFromHeading = titleMatch ? titleMatch[1].trim() : null;
 
-  // Extract frontmatter
   const fmMatch = text.match(/---\n([\s\S]*?)\n---/);
-  if (!fmMatch) throw new Error('No frontmatter found');
+  if (!fmMatch) throw new Error('No frontmatter block found (need --- delimiters)');
   const fm = yaml.load(fmMatch[1]);
 
   if (titleFromHeading) fm.title = titleFromHeading;
 
-  // Body is everything after the closing ---
   const bodyStart = text.indexOf(fmMatch[0]) + fmMatch[0].length;
   const body = text.slice(bodyStart).trim();
 
   const sections = parseSections(body);
-  const goals = parseGoals(sections.goals || '');
-  const vocabulary = parseVocabulary(sections.vocabulary || '');
+  const goals = parseGoals(sections.goals || '', type);
+  const vocabulary = type === 'activity'
+    ? parseVocabulary(sections.vocabulary || '')
+    : [];
 
   return { fm, sections, goals, vocabulary };
 }
@@ -82,24 +107,36 @@ function parseSections(body) {
   return sections;
 }
 
-function parseGoals(text) {
-  if (!text) return { items: [], notes: '' };
+function parseGoals(text, type) {
+  if (!text) return { items: [], peStandards: '', notes: '' };
+
+  // For lessons, split off PE Standards and orienteering goals subsections
+  let goalsText = text;
+  let peStandards = '';
+
+  const peMatch = text.match(/### PE Standards[^\n]*\n([\s\S]*?)(?=###|$)/i);
+  if (peMatch) {
+    peStandards = peMatch[1].trim();
+  }
+
+  const oriMatch = text.match(/### Orienteering Goals\n([\s\S]*?)(?=###|$)/i);
+  if (oriMatch) {
+    goalsText = oriMatch[1].trim();
+  }
 
   const items = [];
-  const lines = text.split('\n');
-  let notes = [];
-  let inGoal = false;
+  const lines = goalsText.split('\n');
+  const notes = [];
   let i = 0;
 
   while (i < lines.length) {
     const line = lines[i];
 
+    // Short/Long format
     const shortMatch = line.match(/^-\s*Short:\s*(.+)$/);
     if (shortMatch) {
-      inGoal = true;
       const shortText = shortMatch[1].trim();
       i++;
-      // Look for Long: on the next non-empty line
       while (i < lines.length && lines[i].trim() === '') i++;
       const longMatch = lines[i]?.match(/^\s*Long:\s*(.+)$/);
       if (longMatch) {
@@ -111,24 +148,29 @@ function parseGoals(text) {
       continue;
     }
 
-    if (line.trim() === '') {
-      i++;
-      continue;
+    // Plain bullet (used in lessons)
+    const plainMatch = line.match(/^-\s+(.+)$/);
+    if (plainMatch && items.length === 0 || (plainMatch && !shortMatch)) {
+      if (plainMatch) {
+        items.push({ short: plainMatch[1].trim(), long: plainMatch[1].trim() });
+        i++;
+        continue;
+      }
     }
 
-    // Non-goal line after we've seen goals = notes
+    if (line.trim() === '') { i++; continue; }
+
     if (items.length > 0) {
       notes.push(line);
     }
     i++;
   }
 
-  return { items, notes: notes.join('\n').trim() };
+  return { items, peStandards, notes: notes.join('\n').trim() };
 }
 
 function parseVocabulary(text) {
   if (!text) return [];
-
   const terms = [];
   const blocks = text.split(/\n\n+/).filter(b => b.trim());
 
@@ -145,9 +187,60 @@ function parseVocabulary(text) {
 }
 
 
-// ---------------------------------------------------------------------------
+// ===========================================================================
+// Validation
+// ===========================================================================
+
+function validate(slug, { fm, sections, goals, vocabulary }, type, errors, warnings) {
+  const file = `${slug}.md`;
+
+  function err(msg) { errors.push(`${file}: ${msg}`); }
+  function warn(msg) { warnings.push(`${file}: ${msg}`); }
+
+  // Required frontmatter
+  if (!fm.title) err("Missing 'title' (add a # heading at the top of the file)");
+  if (!fm.tagline) err("Missing 'tagline' in frontmatter");
+  if (fm.sidebar_position == null) warn("No 'sidebar_position' in frontmatter");
+
+  if (type === 'activity') {
+    if (!fm.time) warn("No 'time' in frontmatter");
+    if (!fm.space) warn("No 'space' in frontmatter");
+    if (!sections.description) err("Missing required section: ## Description");
+    if (!sections.goals) err("Missing required section: ## Goals");
+    if (!sections.steps) warn("No '## Steps' section");
+    if (!sections.delivery) warn("No '## Delivery' section (needed for one-pager)");
+    if (goals.items.length === 0) err("No goals found in ## Goals section");
+    if (vocabulary.length === 0) warn("No vocabulary terms found in ## Vocabulary");
+  }
+
+  if (type === 'lesson') {
+    if (!fm.time) warn("No 'time' in frontmatter");
+    if (!sections.goals) err("Missing required section: ## Goals");
+    if (!sections.delivery) err("Missing required section: ## Delivery");
+    if (goals.items.length === 0) err("No goals found in ## Goals section");
+  }
+
+  // Check goals format
+  for (let i = 0; i < goals.items.length; i++) {
+    const g = goals.items[i];
+    if (!g.short || !g.long) {
+      err(`Goal ${i + 1} is missing Short: or Long: text`);
+    }
+  }
+}
+
+
+// ===========================================================================
 // Delivery markdown -> JSX conversion
-// ---------------------------------------------------------------------------
+// ===========================================================================
+
+function mdToJsx(text) {
+  // Strip markdown links, keep text: [text](url) -> text
+  let result = text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+  // Convert bold: **text** -> <strong>text</strong>
+  result = result.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  return result;
+}
 
 function deliveryToJsx(text) {
   if (!text) return '';
@@ -167,26 +260,23 @@ function deliveryToJsx(text) {
 
     if (line.trim() === '') { i++; continue; }
 
-    // Numbered list (1. 2. 3.) with possible lettered sub-items
+    // Numbered list with possible lettered sub-items
     if (/^\d+\.\s/.test(line)) {
       chunks.push('<ol>');
       while (i < lines.length) {
-        // Skip blanks between items
         if (lines[i] && lines[i].trim() === '') { i++; continue; }
         if (!/^\d+\.\s/.test(lines[i])) break;
 
-        const itemText = lines[i].replace(/^\d+\.\s*/, '');
+        const itemText = mdToJsx(lines[i].replace(/^\d+\.\s*/, ''));
         i++;
 
-        // Check if lettered sub-items follow
         const next = peekNextNonBlank();
         if (next && /^[a-z]\.\s/.test(next)) {
           chunks.push(`  <li>${itemText}`);
-          // Skip blanks to reach the lettered items
           while (i < lines.length && lines[i].trim() === '') i++;
           chunks.push('    <ol type="a">');
           while (i < lines.length && /^[a-z]\.\s/.test(lines[i])) {
-            chunks.push(`      <li>${lines[i].replace(/^[a-z]\.\s*/, '')}</li>`);
+            chunks.push(`      <li>${mdToJsx(lines[i].replace(/^[a-z]\.\s*/, ''))}</li>`);
             i++;
           }
           chunks.push('    </ol>');
@@ -199,11 +289,11 @@ function deliveryToJsx(text) {
       continue;
     }
 
-    // Standalone lettered list (not preceded by a numbered item)
+    // Standalone lettered list
     if (/^[a-z]\.\s/.test(line)) {
       chunks.push('<ol type="a">');
       while (i < lines.length && /^[a-z]\.\s/.test(lines[i])) {
-        chunks.push(`  <li>${lines[i].replace(/^[a-z]\.\s*/, '')}</li>`);
+        chunks.push(`  <li>${mdToJsx(lines[i].replace(/^[a-z]\.\s*/, ''))}</li>`);
         i++;
       }
       chunks.push('</ol>');
@@ -221,16 +311,16 @@ function deliveryToJsx(text) {
       paraLines.push(lines[i]);
       i++;
     }
-    chunks.push(`<p>${paraLines.join(' ')}</p>`);
+    chunks.push(`<p>${mdToJsx(paraLines.join(' '))}</p>`);
   }
 
   return chunks.join('\n');
 }
 
 
-// ---------------------------------------------------------------------------
-// MDX generation
-// ---------------------------------------------------------------------------
+// ===========================================================================
+// String helpers
+// ===========================================================================
 
 function esc(s) {
   return s.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$/g, '\\$');
@@ -240,10 +330,19 @@ function escSingleQuote(s) {
   return s.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 }
 
-function generateMDX(slug, { fm, sections, goals, vocabulary }) {
+function escAttr(s) {
+  return s.replace(/"/g, '&quot;');
+}
+
+
+// ===========================================================================
+// Activity MDX generation
+// ===========================================================================
+
+function generateActivityMDX(slug, { fm, sections, goals, vocabulary }) {
   const L = [];
 
-  // ---- Docusaurus frontmatter ----
+  // Frontmatter
   L.push('---');
   L.push(`title: ${fm.title}`);
   if (fm.sidebar_position != null) L.push(`sidebar_position: ${fm.sidebar_position}`);
@@ -265,11 +364,10 @@ function generateMDX(slug, { fm, sections, goals, vocabulary }) {
   L.push('---');
   L.push('');
 
-  // ---- Auto-generated notice ----
   L.push(`{/* AUTO-GENERATED from content/activities/${slug}.md — do not edit directly */}`);
   L.push('');
 
-  // ---- Imports ----
+  // Imports
   L.push("import Tabs from '@theme/Tabs';");
   L.push("import TabItem from '@theme/TabItem';");
   L.push("import ActivityMeta from '@site/src/components/ActivityMeta';");
@@ -283,16 +381,11 @@ function generateMDX(slug, { fm, sections, goals, vocabulary }) {
   }
   L.push('');
 
-  // ---- Description export ----
   const desc = sections.description || '';
   L.push(`export const description = \`${esc(desc)}\`;`);
   L.push('');
-
-  // ---- ViewToggle ----
   L.push('<ViewToggle />');
   L.push('');
-
-  // ---- FullOnly ----
   L.push('<FullOnly>');
   L.push('');
 
@@ -301,7 +394,7 @@ function generateMDX(slug, { fm, sections, goals, vocabulary }) {
     L.push("<div style={{float:'right', margin:'0 0 1rem 1.5rem', maxWidth:'25%'}}>");
     for (const img of fm.images) {
       L.push("  <figure style={{margin:'0 0 0.75rem'}}>");
-      L.push(`    <img src="${img.src}" alt="${img.alt}" style={{width:'100%', borderRadius:'6px'}} />`);
+      L.push(`    <img src="${img.src}" alt="${escAttr(img.alt)}" style={{width:'100%', borderRadius:'6px'}} />`);
       if (img.caption) {
         L.push(`    <figcaption style={{fontSize:'0.85rem', color:'#666', marginTop:'0.25rem'}}>${img.caption}</figcaption>`);
       }
@@ -311,14 +404,12 @@ function generateMDX(slug, { fm, sections, goals, vocabulary }) {
     L.push('');
   }
 
-  // Title
   const subtitle = fm.subtitle ? ` (${fm.subtitle})` : '';
   L.push(`# ${fm.title}${subtitle}`);
   L.push('');
   L.push(`**${fm.tagline}**`);
   L.push('');
 
-  // ActivityMeta
   L.push('<ActivityMeta');
   L.push('  time={frontMatter.time}');
   L.push('  space={frontMatter.space}');
@@ -327,64 +418,34 @@ function generateMDX(slug, { fm, sections, goals, vocabulary }) {
   L.push('/>');
   L.push('');
 
-  // Epigraph
   if (fm.epigraph) {
-    L.push(`> "${fm.epigraph}"`);
+    L.push(`> "${escAttr(fm.epigraph)}"`);
     L.push('');
   }
 
-  // Description
   L.push('<Description>{description}</Description>');
   L.push('');
 
-  // ---- Tabs ----
+  // Tabs
   L.push('<Tabs>');
 
-  // Goals tab
   L.push('<TabItem value="goals" label="Learning Goals">');
   L.push('');
   L.push('Students completing this activity will be able to:');
   L.push('');
-  for (const g of goals.items) {
-    L.push(`- ${g.long}`);
-  }
-  if (goals.notes) {
-    L.push('');
-    L.push(goals.notes);
-  }
+  for (const g of goals.items) L.push(`- ${g.long}`);
+  if (goals.notes) { L.push(''); L.push(goals.notes); }
   L.push('');
   L.push('</TabItem>');
 
-  // How to Run It tab
   L.push('<TabItem value="run" label="How to Run It" default>');
   L.push('');
-  if (sections.setup) {
-    L.push('### Setup');
-    L.push('');
-    L.push(sections.setup);
-    L.push('');
-  }
-  if (sections.steps) {
-    L.push('### Steps');
-    L.push('');
-    L.push(sections.steps);
-    L.push('');
-  }
-  if (sections.progression) {
-    L.push('### Progression');
-    L.push('');
-    L.push(sections.progression);
-    L.push('');
-  }
-  if (sections.tips) {
-    L.push('### Tips');
-    L.push('');
-    L.push(sections.tips);
-    L.push('');
-  }
+  if (sections.setup) { L.push('### Setup'); L.push(''); L.push(sections.setup); L.push(''); }
+  if (sections.steps) { L.push('### Steps'); L.push(''); L.push(sections.steps); L.push(''); }
+  if (sections.progression) { L.push('### Progression'); L.push(''); L.push(sections.progression); L.push(''); }
+  if (sections.tips) { L.push('### Tips'); L.push(''); L.push(sections.tips); L.push(''); }
   L.push('</TabItem>');
 
-  // Script tab
   if (sections.script) {
     L.push('<TabItem value="script" label="Script">');
     L.push('');
@@ -393,7 +454,6 @@ function generateMDX(slug, { fm, sections, goals, vocabulary }) {
     L.push('</TabItem>');
   }
 
-  // Vocabulary tab
   L.push('<TabItem value="vocabulary" label="Vocabulary">');
   L.push('');
   L.push('{frontMatter.vocabulary.map(v => (');
@@ -404,7 +464,6 @@ function generateMDX(slug, { fm, sections, goals, vocabulary }) {
   L.push('');
   L.push('</TabItem>');
 
-  // Companions tab
   if (sections.companions) {
     L.push('<TabItem value="companions" label="Companions">');
     L.push('');
@@ -416,7 +475,6 @@ function generateMDX(slug, { fm, sections, goals, vocabulary }) {
   L.push('</Tabs>');
   L.push('');
 
-  // SI timing tip
   if (fm.si_timing) {
     L.push(':::tip Electronic timing optional');
     L.push('See [Using SI Equipment](/equipment/si-timing) for setup instructions.');
@@ -424,21 +482,17 @@ function generateMDX(slug, { fm, sections, goals, vocabulary }) {
     L.push('');
   }
 
-  // Videos
   if (hasVideos) {
     L.push('## Videos');
     L.push('');
     if (fm.videos.length === 1) {
-      const v = fm.videos[0];
-      L.push(`<YouTube id="${v.id}" title="${v.title}" />`);
+      L.push(`<YouTube id="${fm.videos[0].id}" title="${escAttr(fm.videos[0].title)}" />`);
     } else {
       L.push('<CardGrid columns={3}>');
       for (const v of fm.videos) {
         L.push('  <div>');
-        L.push(`    <YouTube id="${v.id}" title="${v.title}" />`);
-        if (v.caption) {
-          L.push(`    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>${v.caption}</p>`);
-        }
+        L.push(`    <YouTube id="${v.id}" title="${escAttr(v.title)}" />`);
+        if (v.caption) L.push(`    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>${v.caption}</p>`);
         L.push('  </div>');
       }
       L.push('</CardGrid>');
@@ -449,16 +503,15 @@ function generateMDX(slug, { fm, sections, goals, vocabulary }) {
   L.push('</FullOnly>');
   L.push('');
 
-  // ---- CompactOnly ----
+  // Compact view
   L.push('<CompactOnly>');
   L.push('');
 
-  // OnePager component
   const onepagerImage = fm.images?.find(img => img.onepager);
   L.push('<OnePager');
-  L.push(`  title="${fm.title}"`);
-  L.push(`  tagline="${fm.tagline}"`);
-  if (fm.epigraph) L.push(`  epigraph="${fm.epigraph}"`);
+  L.push(`  title="${escAttr(fm.title)}"`);
+  L.push(`  tagline="${escAttr(fm.tagline)}"`);
+  if (fm.epigraph) L.push(`  epigraph="${escAttr(fm.epigraph)}"`);
   L.push('  description={description}');
   if (onepagerImage) L.push(`  image="${onepagerImage.src}"`);
   L.push('  time={frontMatter.time}');
@@ -467,54 +520,200 @@ function generateMDX(slug, { fm, sections, goals, vocabulary }) {
   L.push('  setup={frontMatter.setup}');
   L.push("  vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}");
 
-  // Goals (short versions)
   L.push('  goals={[');
-  for (const g of goals.items) {
-    L.push(`    '${escSingleQuote(g.short)}',`);
-  }
+  for (const g of goals.items) L.push(`    '${escSingleQuote(g.short)}',`);
   L.push('  ]}');
 
-  // Delivery
   if (sections.delivery) {
     const jsx = deliveryToJsx(sections.delivery);
     L.push('  delivery={');
     L.push('    <>');
-    for (const line of jsx.split('\n')) {
-      L.push('      ' + line);
-    }
+    for (const line of jsx.split('\n')) L.push('      ' + line);
     L.push('    </>');
     L.push('  }');
   }
 
-  // Reflection
-  if (sections.reflection) {
-    const items = sections.reflection.split('\n')
-      .filter(l => l.startsWith('- '))
-      .map(l => l.slice(2).trim());
-    if (items.length) {
-      L.push('  reflection={[');
-      for (const r of items) L.push(`    '${escSingleQuote(r)}',`);
-      L.push('  ]}');
-    }
-  }
-
-  // Extensions
-  if (sections.extensions) {
-    const items = sections.extensions.split('\n')
-      .filter(l => l.startsWith('- '))
-      .map(l => l.slice(2).trim());
-    if (items.length) {
-      L.push('  extensions={[');
-      for (const e of items) L.push(`    '${escSingleQuote(e)}',`);
-      L.push('  ]}');
-    }
-  }
+  emitStringArray(L, 'reflection', sections.reflection);
+  emitStringArray(L, 'extensions', sections.extensions);
 
   L.push('/>');
   L.push('');
   L.push('</CompactOnly>');
 
   return L.join('\n') + '\n';
+}
+
+
+// ===========================================================================
+// Lesson MDX generation
+// ===========================================================================
+
+function generateLessonMDX(slug, { fm, sections, goals }) {
+  const L = [];
+
+  // Frontmatter
+  L.push('---');
+  L.push(`title: "${escAttr(fm.title)}"`);
+  if (fm.sidebar_position != null) L.push(`sidebar_position: ${fm.sidebar_position}`);
+  L.push('---');
+  L.push('');
+
+  const contentPath = `content/lessons/grade-3-5/${slug}.md`;
+  L.push(`{/* AUTO-GENERATED from ${contentPath} — do not edit directly */}`);
+  L.push('');
+
+  // Imports
+  L.push("import ActivityCard from '@site/src/components/ActivityCard';");
+  L.push("import CardGrid from '@site/src/components/CardGrid';");
+  L.push("import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';");
+  L.push("import OnePager from '@site/src/components/OnePager';");
+  L.push('');
+
+  L.push('<ViewToggle />');
+  L.push('');
+
+  // ---- Full view ----
+  L.push('<FullOnly>');
+  L.push('');
+  L.push(`# ${fm.title}`);
+  L.push('');
+
+  if (fm.epigraph) {
+    L.push(`> "${escAttr(fm.epigraph)}"`);
+    L.push('');
+  }
+
+  // Meta table
+  L.push('| | |');
+  L.push('|---|---|');
+  if (fm.time) L.push(`| **Time** | ${fm.time} |`);
+  if (fm.space) L.push(`| **Space** | ${fm.space} |`);
+  if (fm.materials?.length) L.push(`| **Materials** | ${fm.materials.join(', ')} |`);
+  if (fm.setup) L.push(`| **Setup** | ${fm.setup} |`);
+  if (fm.vocabulary?.length) L.push(`| **Vocabulary** | ${fm.vocabulary.join(', ')} |`);
+  L.push('');
+
+  // Activities
+  if (fm.activities?.length) {
+    L.push('## Activities');
+    L.push('');
+    const cols = fm.activities.length >= 3 ? 3 : 2;
+    L.push(`<CardGrid columns={${cols}}>`);
+    for (const a of fm.activities) {
+      const parts = [`    title="${escAttr(a.title)}"`, `    description="${escAttr(a.description)}"`];
+      if (a.link) parts.push(`    link="${a.link}"`);
+      if (a.tag) parts.push(`    tag="${a.tag}"`);
+      L.push('  <ActivityCard');
+      for (const p of parts) L.push(p);
+      L.push('  />');
+    }
+    L.push('</CardGrid>');
+    L.push('');
+  }
+
+  // Extra content (appears between activities and goals in some lessons)
+  if (sections['activities note']) {
+    L.push(sections['activities note']);
+    L.push('');
+  }
+
+  // Goals
+  L.push('## Goals');
+  L.push('');
+  L.push('### Orienteering Goals');
+  for (const g of goals.items) L.push(`- ${g.long}`);
+  L.push('');
+  if (goals.peStandards) {
+    L.push('### PE Standards (SHAPE America)');
+    L.push(goals.peStandards);
+    L.push('');
+  }
+
+  // Delivery (markdown, passed through directly)
+  if (sections.delivery) {
+    L.push('## Delivery');
+    L.push('');
+    L.push(sections.delivery);
+    L.push('');
+  }
+
+  // Reflection
+  if (sections.reflection) {
+    L.push('## Reflection');
+    L.push('');
+    L.push(sections.reflection);
+    L.push('');
+  }
+
+  // Extensions
+  if (sections.extensions) {
+    L.push('## Extensions');
+    L.push('');
+    L.push(sections.extensions);
+    L.push('');
+  }
+
+  L.push('</FullOnly>');
+  L.push('');
+
+  // ---- Compact view ----
+  L.push('<CompactOnly>');
+  L.push('');
+  L.push('<OnePager');
+  L.push('  variant="lesson"');
+  L.push(`  title="${escAttr(fm.title)}"`);
+  L.push(`  tagline="${escAttr(fm.tagline)}"`);
+  if (fm.epigraph) L.push(`  epigraph="${escAttr(fm.epigraph)}"`);
+  if (fm.time) L.push(`  time="${fm.time}"`);
+  if (fm.space) L.push(`  space="${fm.space}"`);
+  if (fm.materials?.length) {
+    L.push(`  materials={[${fm.materials.map(m => `'${escSingleQuote(m)}'`).join(', ')}]}`);
+  }
+  if (fm.setup) L.push(`  setup="${escAttr(fm.setup)}"`);
+  if (fm.vocabulary?.length) {
+    L.push(`  vocabulary={[${fm.vocabulary.map(v => `'${escSingleQuote(v)}'`).join(', ')}]}`);
+  }
+
+  L.push('  goals={[');
+  for (const g of goals.items) L.push(`    '${escSingleQuote(g.short)}',`);
+  L.push('  ]}');
+
+  // Compact delivery
+  const compactDeliverySource = sections['compact delivery'] || sections.delivery;
+  if (compactDeliverySource) {
+    const jsx = deliveryToJsx(compactDeliverySource);
+    L.push('  delivery={');
+    L.push('    <>');
+    for (const line of jsx.split('\n')) L.push('      ' + line);
+    L.push('    </>');
+    L.push('  }');
+  }
+
+  emitStringArray(L, 'reflection', sections.reflection);
+  emitStringArray(L, 'extensions', sections.extensions);
+
+  L.push('/>');
+  L.push('');
+  L.push('</CompactOnly>');
+
+  return L.join('\n') + '\n';
+}
+
+
+// ===========================================================================
+// Shared helpers
+// ===========================================================================
+
+function emitStringArray(L, prop, sectionText) {
+  if (!sectionText) return;
+  const items = sectionText.split('\n')
+    .filter(l => l.startsWith('- '))
+    .map(l => l.slice(2).trim());
+  if (items.length) {
+    L.push(`  ${prop}={[`);
+    for (const item of items) L.push(`    '${escSingleQuote(item)}',`);
+    L.push('  ]}');
+  }
 }
 
 

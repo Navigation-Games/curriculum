@@ -4,223 +4,252 @@ Authors' guide for editing and maintaining the curriculum site.
 
 **Live site:** https://navigation-games.github.io/curriculum/
 
-## Why This Tech Stack
+## How Editing Works
 
-The curriculum has lived in GitBook and then Google Sites. Both worked well for writing and sharing content, but as the curriculum grew we hit a consistency problem: each activity exists in multiple forms (one-pager, full description, script, lesson plan reference, vocabulary list) and keeping them in sync across formats and across activities was manual and error-prone.
+You edit clean Markdown files in the `content/` folder. A build script turns them into the formatted pages on the site. You never need to touch the generated files in `site/docs/`.
 
-We moved to Docusaurus + GitHub so that:
+```
+content/                   <-- you edit these
+  activities/              Activity content (Animal-O, Boundary Run, etc.)
+  lessons/grade-3-5/       Lesson plans (6-lesson progression + indoor alt)
 
-- **Content is structured and reusable.** Activity metadata (goals, vocabulary, materials, reflection questions) is stored once and rendered into multiple views: full activity page, printable one-pager, lesson plan card, etc. A change to vocabulary propagates everywhere.
-- **Consistency can be checked programmatically.** Scripts and AI tools can scan the structured content to flag missing sections, inconsistent terminology, or activities that have drifted out of sync.
-- **Multiple views from one source.** The same activity file produces both the full interactive page and the compact one-pager. No separate documents to reconcile.
-- **Version history and collaboration.** Git tracks every change, who made it, and why. Multiple editors can work in parallel without overwriting each other.
+scripts/build-content.js   <-- converts content -> site pages
 
-The tradeoff is that editing requires working with text files and git instead of a WYSIWYG editor. For day-to-day content editing, authors can edit Markdown files directly on GitHub.com (no local setup needed) or draft in Google Docs and sync changes back into the repo.
+site/docs/                 <-- generated, don't edit
+  activities/core/         Generated activity pages
+  lessons/grade-3-5/       Generated lesson pages
+```
 
-## Tech Stack
+Each content file produces both views of the page automatically: the full interactive page and the printable one-pager. Edit once, both views stay in sync.
 
-- **[Docusaurus](https://docusaurus.io/)** (v3) - static site generator built on React. Turns Markdown files into a fast, searchable website with navigation, sidebar, and versioning built in.
-- **[MDX](https://mdxjs.com/)** - Markdown with support for React components inline. Activity cards, video embeds, and grid layouts are all MDX components.
-- **[React](https://react.dev/)** (v19) - powers custom components like `<ActivityCard>`, `<CardGrid>`, and `<YouTube>`.
-- **[GitHub Pages](https://pages.github.com/)** - free static hosting. The site deploys automatically when changes are pushed to main.
-- **[GitHub](https://github.com/Navigation-Games/curriculum)** - source control and collaboration. Content is edited as Markdown files in the repo.
-- **[Node.js](https://nodejs.org/)** (v20+) - runtime for the build toolchain. Required for local preview and deployment.
+## Editing Content
 
-Day-to-day editing is just Markdown. You don't need to know React or JavaScript to write content. The React layer only matters if you're building new components.
+### Activity files
 
-For build tooling details, WSL troubleshooting, and config notes, see [DEVELOPMENT.md](DEVELOPMENT.md).
+Activity files live in `content/activities/`. Here is the structure:
 
-## Prerequisites
+```markdown
+# Animal-O
+
+---
+subtitle: Clue Sheet Orienteering
+tagline: Use a clue sheet to find checkpoints in order
+epigraph: In orienteering, you find checkpoints in order using clue sheets
+sidebar_position: 3
+tags: [core, level-1]
+time: 15-30 minutes
+space: Gym, schoolyard, or local park
+materials:
+  - Checkpoints (pictures of animals)
+  - Clue sheets
+setup: Place animal checkpoints around the defined space
+---
+
+## Description
+
+One or two sentences describing what the activity is.
+
+## Goals
+
+- Short: Identifying landmarks
+  Long: Understand that landmarks are features in terrain that are easy to find
+- Short: Following clue sheets
+  Long: Use a clue sheet to visit checkpoints in the correct order
+
+## Vocabulary
+
+- Checkpoint
+  A marked location that you navigate to
+
+- Clue sheet
+  A list showing which checkpoints to visit, in order
+
+## Setup
+
+Detailed setup instructions here.
+
+## Steps
+
+1. Do the first thing
+2. Do the second thing
+
+## Delivery
+
+1. Run the boundary
+2. Find the animals in order
+
+## Reflection
+
+- What was hard about this activity?
+- How did you know you were at the right checkpoint?
+
+## Extensions
+
+- Try it without a clue sheet
+- Race against the clock
+```
+
+**Key conventions for activities:**
+
+- The `# Title` line at the top sets the page title
+- Frontmatter goes between `---` markers (YAML format)
+- Goals use the `Short:` / `Long:` format. The short version appears on the one-pager, the long version on the full page. Put the `Long:` line indented on the next line after `Short:`
+- Vocabulary terms are a word followed by an indented definition on the next line, separated by blank lines
+- Sections use `## Heading` (two hashes)
+
+### Lesson plan files
+
+Lesson files live in `content/lessons/grade-3-5/`. They are simpler than activities:
+
+```markdown
+# 3 - Explore & Find
+
+---
+tagline: There are things out there; go find them and come back
+sidebar_position: 3
+time: 30-45 minutes
+space: Gym, schoolyard, or local park
+materials:
+  - Checkpoints (cones with animal pictures)
+setup: Place animal checkpoints around the space within the boundary
+vocabulary:
+  - Boundary
+  - Gathering signal
+  - Checkpoint
+activities:
+  - title: Boundary Run
+    description: Review the boundary (quick refresher).
+    link: /activities/core/boundary-run
+    tag: core
+  - title: Explore & Find
+    description: In pairs, explore to find animal checkpoints.
+    link: /activities/core/animal-o
+    tag: core
+---
+
+## Goals
+
+### Orienteering Goals
+- Explore a space and find checkpoints within the boundary
+- Return on the gathering signal
+
+### PE Standards (SHAPE America)
+- Demonstrate locomotor skills (S1.E1, S1.E2)
+- Engage actively in class (S3.E2)
+
+## Delivery
+
+1. [**Boundary Run**](/activities/core/boundary-run): quick review of the boundary
+2. Pair up
+3. [**Explore & Find**](/activities/core/animal-o): explore to find animal checkpoints
+
+## Compact Delivery
+
+1. **Boundary Run**: quick review of the boundary
+2. Pair up
+3. **Explore & Find**: explore to find animal checkpoints
+
+## Reflection
+
+- How many animals did you find?
+- Where were the animals?
+
+## Extensions
+
+- Move the checkpoints to new locations and start over
+- Have students draw a map of the area
+```
+
+**Key conventions for lessons:**
+
+- The `activities:` list in frontmatter generates clickable cards on the lesson page
+- Goals are plain bullets (no Short:/Long: needed since lessons show the same text in both views)
+- `## Delivery` is the full version. It can include markdown links like `[**Boundary Run**](/activities/core/boundary-run)`. These links appear on the full page but are stripped in the one-pager.
+- `## Compact Delivery` is optional. If present, it replaces the delivery section on the one-pager. Use it when the full delivery has extra detail that doesn't belong on a one-pager. If omitted, the full delivery is used for both views.
+- Vocabulary in lessons is a simple list of terms (no definitions needed; those live on the activity pages)
+
+## Building the Site
+
+### Prerequisites
 
 - [Node.js](https://nodejs.org/) version 20 or later
 - [Git](https://git-scm.com/)
 
-## Running the Local Preview
-
-From the repo root:
+### Build and preview
 
 ```bash
+# Generate site pages from content files
+node scripts/build-content.js
+
+# Start local preview (from the site/ directory)
 cd site
-npm install      # first time only, or after pulling new dependencies
+npm install    # first time only
 npm start
 ```
 
-This starts a local dev server and opens your browser to http://localhost:3000/curriculum/. Changes you make to Markdown files show up immediately without restarting.
+The preview runs at http://localhost:3000/curriculum/. Changes to content files require re-running the build script, then the dev server will pick up the changes automatically.
 
-To stop the server, press `Ctrl+C` in the terminal.
+### What the build script checks
 
-## Editing and Publishing
+The build script validates your content files and reports problems:
 
-### Making changes
+- **Errors** (build fails): missing title, missing tagline, missing required sections (Description, Goals for activities; Goals, Delivery for lessons), goals section with no goals
+- **Warnings** (build succeeds but check these): missing time, space, vocabulary, sidebar_position
 
-1. Edit Markdown (`.md`) or MDX (`.mdx`) files under `site/docs/` or `site/src/pages/`.
-2. Preview your changes at http://localhost:3000/curriculum/ (start the local server if it isn't running).
-3. When you're happy with the changes, commit and push:
-
-```bash
-git add -A
-git commit -m "Describe what you changed"
-git push
+Error messages include the filename and what's wrong, for example:
+```
+  1 error(s):
+    animal-o.md: Missing required section: ## Description
 ```
 
-### Publishing to GitHub Pages
+### Editing on GitHub
 
-The site auto-publishes whenever you push to `main`. A GitHub Actions workflow builds the site and deploys it to https://navigation-games.github.io/curriculum/. This typically takes 1-2 minutes after pushing.
+You can edit content files directly on GitHub.com without any local setup:
 
-You can check the deploy status on the [Actions tab](https://github.com/Navigation-Games/curriculum/actions) of the repo.
+1. Navigate to the file in the `content/` folder
+2. Click the pencil icon to edit
+3. Make your changes and commit
 
-> **First-time setup:** A repo admin needs to go to Settings > Pages and set the source to "GitHub Actions" (not "Deploy from a branch"). This only needs to be done once.
+The site auto-publishes when you push to `main`. A GitHub Actions workflow builds and deploys to GitHub Pages (takes 1-2 minutes).
+
+Note: editing on GitHub skips the content build step. For the generated site pages to update, someone needs to run `node scripts/build-content.js` and commit the result. (We plan to automate this with a GitHub Action.)
 
 ## Repo Structure
 
 ```
-background/          Source materials, reference docs, context files
-notes/               Curriculum decisions, open questions, author notes
-site/                Docusaurus site
-  docs/
-    activities/      Activity pages (one per core activity)
-      core/          Core activities with companions inline
-    lessons/         Lesson plan sequences by grade band
-      grade-3-5/     Five-lesson progression + indoor alternative
-    equipment/       Setup guides, SI timing, kits
+content/                 Editable content (activities, lessons)
+scripts/                 Build script
+site/                    Docusaurus site
+  docs/                  Generated pages (don't edit directly)
+    activities/core/     Activity pages
+    lessons/grade-3-5/   Lesson plans
+    equipment/           Setup guides, SI timing
   src/
-    components/      Reusable React components (ActivityCard, CardGrid, YouTube)
-    pages/           Standalone landing pages (home, school, camp, quick-start)
+    components/          React components (ActivityCard, CardGrid, etc.)
+    pages/               Landing pages (home, school, camp, quick-start)
+background/              Source materials, reference docs
+notes/                   Curriculum decisions, open questions
 ```
 
 ## Content Types
 
-**Activities** describe one thing you do. They own setup, delivery, and vocabulary. They do NOT own sequencing, timing, or reflection questions (that's the lesson plan's job).
+**Activities** describe one thing you do. They own setup, delivery, vocabulary, and goals. They do NOT own sequencing or reflection (that's the lesson plan's job).
 
 **Lesson Plans** compose activities into sequences with transitions and reflection.
 
-**Landing Pages** (school, camp, quick-start) route audiences to the right lesson plans. They don't own content themselves.
-
-## Activity Frontmatter
-
-Every activity file uses frontmatter metadata to track its type and relationships:
-
-```yaml
----
-title: Animal-O
-sidebar_position: 3
-tags: [core, level-1]
----
-```
-
-Companion activities use additional fields:
-
-```yaml
----
-title: Explore & Find
-tags: [companion, readiness]
-parents: [animal-o]
----
-```
-
-The `parents` field is a list, supporting many-to-many relationships. A companion activity can be readiness for multiple core activities.
-
-### Tag values
-
-- **Type:** `core`, `companion`
-- **Companion flavor:** `readiness`, `variation`, `extension`
-- **Level:** `level-1`, `level-2`
-
-## Components
-
-Use these in any `.mdx` file. Add the imports at the top of the file, below the frontmatter.
-
-### CardGrid
-
-Responsive grid container. Cards reflow automatically on smaller screens (2 columns on tablet, 1 on phone).
-
-```mdx
-import CardGrid from '@site/src/components/CardGrid';
-
-<CardGrid columns={3}>
-  {/* cards go here */}
-</CardGrid>
-```
-
-| Prop | Values | Default | Description |
-|---|---|---|---|
-| `columns` | `2`, `3`, `4` | `3` | Number of columns on desktop |
-
-### ActivityCard
-
-Clickable card with optional image and colored tag. Use inside a `<CardGrid>`.
-
-```mdx
-import ActivityCard from '@site/src/components/ActivityCard';
-import CardGrid from '@site/src/components/CardGrid';
-
-<CardGrid columns={4}>
-  <ActivityCard
-    title="Animal-O"
-    description="Find animal checkpoints in order using a clue sheet."
-    link="/activities/core/animal-o"
-    image="/img/animal-o.jpg"
-    tag="core"
-  />
-  <ActivityCard
-    title="Geometric-O"
-    description="Use a simple map to find checkpoints in a pattern."
-    link="/activities/core/geometric-o"
-    tag="core"
-  />
-  <ActivityCard
-    title="Explore & Find"
-    description="In pairs, explore to find animal checkpoints."
-    tag="readiness"
-  />
-  <ActivityCard
-    title="Symbol Relay"
-    description="Team relay to learn map symbols."
-    tag="variation"
-  />
-</CardGrid>
-```
-
-| Prop | Required | Description |
-|---|---|---|
-| `title` | yes | Activity name |
-| `description` | yes | One-line summary |
-| `link` | no | URL to link to. Card is not clickable without this. |
-| `image` | no | Path to thumbnail image |
-| `tag` | no | Colored label: `core`, `readiness`, `variation`, or `extension` |
-
-### YouTube
-
-Responsive video embed. Maintains 16:9 aspect ratio at any width.
-
-```mdx
-import YouTube from '@site/src/components/YouTube';
-
-<YouTube id="lD0_AKjR_Ic" title="How to teach Boundary Run" />
-```
-
-| Prop | Required | Description |
-|---|---|---|
-| `id` | yes | YouTube video ID (the part after `v=` in the URL) |
-| `title` | no | Accessible title for the iframe. Defaults to "Video". |
+**Landing Pages** (school, camp, quick-start) route audiences to the right lesson plans.
 
 ## Conventions
 
 - Filenames: lowercase-kebab-case
-- No em-dashes in writing (they signal AI authorship). Split into separate sentences or use other connectors.
-- Companion activities live on the same page as their parent core activity, not as separate files
-- Deferred activities (Corridor-O, Line-O, Window-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O) are set aside for now
-
-## Next Steps
-
-- [ ] Review Animal-O activity page. Compare to Google Site version, GitBook version, narrow one-pager, and new script. Adjust the template based on what's missing or wrong.
-- [ ] Add other core activities (Boundary Run, Gathering, Geometric-O, Symbol-O, Map Discussion, Map Walk, Score-O) using the same tabbed template.
-- [ ] Reconcile the school landing page (`/school`) to the [Google Sites school page](https://sites.google.com/navigationgames.org/ngactivities/curricula/run-a-school-based-activity). Add links to activities and set up activity stubs for any that don't have pages yet.
-- [ ] In "Teach at a School", the Grade Bands cards should explain what is different in the progression for each band (not just list activities). Add detailed per-grade lesson plan summaries like the Google Sites version has, with links into individual activities.
+- No em-dashes in writing. Split into separate sentences or use other connectors.
+- Generated files in `site/docs/` have a comment at the top saying they are auto-generated. Do not edit them.
 
 ## Content Sources
 
-- [GitBook published site](https://navigation-games-2.gitbook.io/orienteering-curriculum-for-schools) (good reference for layout and card style)
-- [GitBook source repo](https://github.com/navgames/orienteering-lessons) (older but has good structure)
+- [GitBook published site](https://navigation-games-2.gitbook.io/orienteering-curriculum-for-schools)
+- [GitBook source repo](https://github.com/navgames/orienteering-lessons)
 - [Current school curriculum (Google Sites)](https://sites.google.com/navigationgames.org/ngactivities/curricula/run-a-school-based-activity)
 - [Current camp curriculum (Google Sites)](https://sites.google.com/navigationgames.org/ngactivities/curricula/orienteering-at-camp)
+
+For build tooling details, component documentation, and WSL troubleshooting, see [DEVELOPMENT.md](DEVELOPMENT.md).

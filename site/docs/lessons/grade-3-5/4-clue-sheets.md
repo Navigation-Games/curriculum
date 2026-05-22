@@ -3,6 +3,8 @@ title: "4 - Clue Sheets"
 sidebar_position: 4
 ---
 
+{/* AUTO-GENERATED from content/lessons/grade-3-5/4-clue-sheets.md — do not edit directly */}
+
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
@@ -20,9 +22,9 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-60 minutes |
 | **Space** | Gym, schoolyard, or local park |
-| **Materials** | Checkpoints (cones with animal pictures), clue sheets, start/finish markers |
+| **Materials** | Checkpoints (cones with animal pictures), Clue sheets, Start/finish markers |
 | **Setup** | Place animal checkpoints and start/finish markers around the space |
-| **Vocabulary** | Clue sheet, course, spatial memory |
+| **Vocabulary** | Clue sheet, Course, Spatial memory |
 
 ## Activities
 
@@ -97,9 +99,9 @@ import OnePager from '@site/src/components/OnePager';
   vocabulary={['Clue sheet', 'Course', 'Spatial memory']}
   goals={[
     'Use a clue sheet to complete a course in order',
-    'Check the animal picture at each checkpoint',
+    'Check the animal picture at each checkpoint to confirm the right one',
     'Build spatial memory by repeating courses',
-    'Complete the activity faster by remembering locations',
+    'Complete the activity faster by remembering checkpoint locations',
   ]}
   delivery={
     <>
@@ -119,15 +121,17 @@ import OnePager from '@site/src/components/OnePager';
     </>
   }
   reflection={[
+    'What do you like most about orienteering so far?',
     'What helped you get faster?',
-    'How do you check you are at the right place?',
+    'At each checkpoint, how do you check you are at the right place?',
     'How did you remember where the animals are?',
     'Were some courses easier or harder? Why?',
+    'How did you work together?',
   ]}
   extensions={[
-    'Track times on a whiteboard',
-    'Move checkpoints to new locations and start over',
-    'Draw a map of the area showing checkpoint locations',
+    'Track course completion or times on a whiteboard',
+    'Move the checkpoints to new locations and start over',
+    'Have students draw a map of the area showing checkpoint locations',
   ]}
 />
 

@@ -3,6 +3,8 @@ title: "A - Indoor Orienteering"
 sidebar_position: 7
 ---
 
+{/* AUTO-GENERATED from content/lessons/grade-3-5/a-indoor-orienteering.md — do not edit directly */}
+
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
@@ -20,9 +22,9 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-60 minutes |
 | **Space** | Gym with basketball court |
-| **Materials** | Checkpoints, basketball court maps (half-court and full-court versions) |
+| **Materials** | Checkpoints, Basketball court maps (half-court and full-court versions) |
 | **Setup** | Place checkpoints according to the master map |
-| **Vocabulary** | Orient the map, landmark, route choice |
+| **Vocabulary** | Orient the map, Landmark, Route choice |
 
 ## Activities
 
@@ -91,32 +93,34 @@ import OnePager from '@site/src/components/OnePager';
   epigraph="Today we will be finding our way on a basketball court"
   time="30-60 minutes"
   space="Gym with basketball court"
-  materials={['Checkpoints', 'Basketball court maps (half-court and full-court)']}
+  materials={['Checkpoints', 'Basketball court maps (half-court and full-court versions)']}
   setup="Place checkpoints according to the master map"
   vocabulary={['Orient the map', 'Landmark', 'Route choice']}
   goals={[
-    'Orient a map using the court line markings as landmarks',
+    'Orient a map using the court\'s line markings as landmarks',
     'Use the map to plan a route between checkpoints',
     'Navigate in a confined, structured space',
   ]}
   delivery={
-    <ol>
-      <li><strong>Boundary Run</strong>: run the boundary of the court</li>
-      <li><strong>Find the Cone</strong>: pair up, orient the map, stand next to the cone shown</li>
-      <li><strong>Basketball-O</strong>: visit checkpoints in order</li>
-      <li>Do the course individually for speed</li>
-      <li>Try in reverse order and without a map</li>
-    </ol>
+    <>
+      <ol>
+        <li><strong>Boundary Run</strong>: run the boundary of the court</li>
+        <li><strong>Find the Cone</strong>: pair up, orient the map, stand next to the cone shown</li>
+        <li><strong>Basketball-O</strong>: visit checkpoints in order</li>
+        <li>Do the course individually for speed</li>
+        <li>Try in reverse order and without a map</li>
+      </ol>
+    </>
   }
   reflection={[
     'How could you tell the difference between checkpoints?',
-    'What shortcuts did you find?',
-    'If you were at the wrong checkpoint, how did you figure out where to go?',
+    'What shortcuts between checkpoints did you find?',
+    'If you were at a wrong checkpoint, how did you figure out where you needed to go?',
   ]}
   extensions={[
-    'Travel only along the lines of the basketball court',
-    'Add obstacles: red X marks are blocked',
-    'Pacman-O: line tag while completing courses',
+    'Students may only travel along the lines of the basketball court',
+    'Add obstacles: students may not pass any place marked with a red "X"',
+    '**Pacman-O**: play line tag while completing courses',
   ]}
 />
 

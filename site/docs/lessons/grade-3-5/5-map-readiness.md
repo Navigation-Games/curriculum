@@ -3,6 +3,8 @@ title: "5 - Map Readiness"
 sidebar_position: 5
 ---
 
+{/* AUTO-GENERATED from content/lessons/grade-3-5/5-map-readiness.md — do not edit directly */}
+
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
@@ -20,9 +22,9 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-60 minutes |
 | **Space** | Gym, schoolyard, or local park |
-| **Materials** | Checkpoints with animals and numbers, 4 colored landmark cones, pattern maps, whiteboard and markers, master map |
+| **Materials** | Checkpoints with animals and numbers, 4 colored landmark cones, Pattern maps, Whiteboard and markers, Master map |
 | **Setup** | Arrange checkpoints in a geometric pattern with colored landmark cones at corners |
-| **Vocabulary** | Map, orient the map, landmark, spatial relationship words (next to, closest, furthest, between) |
+| **Vocabulary** | Map, Orient the map, Landmark, Spatial relationship words (next to, closest, furthest, between) |
 
 ## Activities
 
@@ -105,34 +107,39 @@ import OnePager from '@site/src/components/OnePager';
   epigraph="We use a map to know where something is before we even find it"
   time="30-60 minutes"
   space="Gym, schoolyard, or local park"
-  materials={['Checkpoints with animals and numbers', '4 colored landmark cones', 'Pattern maps', 'Whiteboard and markers']}
+  materials={['Checkpoints with animals and numbers', '4 colored landmark cones', 'Pattern maps', 'Whiteboard and markers', 'Master map']}
   setup="Arrange checkpoints in a geometric pattern with colored landmark cones at corners"
-  vocabulary={['Map', 'Orient the map', 'Landmark', 'Spatial relationship words']}
+  vocabulary={['Map', 'Orient the map', 'Landmark', 'Spatial relationship words (next to, closest, furthest, between)']}
   goals={[
-    'Understand spatial relationship vocabulary',
+    'Understand spatial relationship vocabulary (next to, closest, furthest, between)',
     'Orient a map using landmarks',
     'Read a simple map and connect it to the physical space',
     'Identify and fix orientation mistakes',
+    'Complete progressively harder courses using a map',
   ]}
   delivery={
-    <ol>
-      <li><strong>Animal-O</strong> warm-up using the geometric layout</li>
-      <li><strong>Geometric Readiness</strong>: whiteboard map demo, spatial questions</li>
-      <li><strong>Geometric-O</strong>: pair up, progress through map levels</li>
-      <li>Repeat for speed, then from memory</li>
-      <li><strong>Symbol-O</strong>: find checkpoints by map symbol type</li>
-    </ol>
+    <>
+      <ol>
+        <li><strong>Animal-O</strong> warm-up using the geometric layout</li>
+        <li><strong>Geometric Readiness</strong>: whiteboard map demo, spatial questions</li>
+        <li><strong>Geometric-O</strong>: pair up, progress through map levels</li>
+        <li>Repeat for speed, then from memory</li>
+        <li><strong>Symbol-O</strong>: find checkpoints by map symbol type</li>
+      </ol>
+    </>
   }
   reflection={[
     'What was challenging about matching the map to the real space?',
-    'How did you know the map was oriented correctly?',
     'What sort of mistakes did you make? How did you fix them?',
+    'How did you know the map was oriented correctly?',
+    'Describe the mental map you built of the space',
   ]}
   extensions={[
-    'Remove colored landmark cones (harder orientation)',
-    'Napkin-O: communicate with other pairs to finish',
-    'Word Bank Orienteering: guide a partner using only approved words',
-    'Draw your own map of the space',
+    'Remove the colored landmark cones (harder orientation)',
+    '[**Napkin-O**](/activities/core/geometric-o): cover animal pictures with napkins; communicate with other pairs to finish',
+    '[**Word Bank Orienteering**](/activities/core/geometric-o): one partner reads the map, the other runs using only approved words',
+    'Have students draw their own map of the space',
+    'Have students design their own course on a map',
   ]}
 />
 
