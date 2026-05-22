@@ -5,22 +5,22 @@ sidebar_position: 0
 
 # Grade 3-5 Orienteering Curriculum
 
-Grades 3-5 (ages 9-11). Six lessons that build from basic spatial awareness to independent navigation with maps. Each lesson adds one new concept on top of the last.
+Grades 3-5 (ages 9-11). Six topics that build from basic spatial awareness to independent navigation with maps. Each topic adds one new concept on top of the last.
 
 ## Learning Progression
 
-| Step | Theme | What it adds |
+| Topic | Main Activity | What it adds |
 |---|---|---|
-| 1 | **Boundary** | Here is where you can go |
-| 2 | **Gathering** | You can go anywhere, but you must come back |
-| 3 | **Explore & Find** | There are things out there; go find them |
-| 4 | **Clue Sheets** | Find them in this specific order |
-| 5 | **Map Readiness** | Spatial relationships, symbols, orienting |
-| 6 | **Maps** | Use a picture of the space to navigate |
+| 1. **Boundary** | Boundary Run | Here is where you can go |
+| 2. **Gathering** | Gathering | You can go anywhere, but you must come back |
+| 3. **Explore & Find** | Explore & Find | There are things out there; go find them |
+| 4. **Clue Sheets** | Animal-O | Find them in this specific order |
+| 5. **Map Readiness** | Geometric-O | Spatial relationships, orienting, connecting a map to the space |
+| 6. **Maps** | Map Walk, Score-O | Navigate using a real orienteering map |
 
-Each step can be extended based on grade level or readiness to go deeper. Younger students may spend a full session on each step. Older students may combine steps 1-3 in a single session and spend more time on maps.
+These are topics, not sessions. A teacher might spend three sessions on Map Readiness, or cover Boundary through Explore & Find in the first 20 minutes with older students. The progression is the same; the pacing depends on the group.
 
-**Indoor Orienteering** is an alternative that can substitute for or supplement Lessons 5-6 using a basketball court.
+**Indoor Orienteering** is an alternative that uses a basketball court, covering topics 5-6.
 
 ## Activities Referenced
 
@@ -28,14 +28,14 @@ Each step can be extended based on grade level or readiness to go deeper. Younge
 
 | Activity | First Appears | Description |
 |---|---|---|
-| Boundary Run | Lesson 1 | Travel the boundary of the play area |
-| Gathering | Lesson 2 | Return to the teacher on a signal |
-| Explore & Find | Lesson 3 | In pairs, explore to find animal checkpoints |
-| Animal-O | Lesson 4 | Find animal checkpoints in order using clue sheets |
-| Geometric-O | Lesson 6 | Use a simple map to do progressively harder courses |
-| Map Discussion | Lesson 6 | Introduce an orienteering map; connect symbols to real features |
-| Map Walk | Lesson 6 | Walk a route matching map symbols to real-world features |
-| Score-O | Lesson 6 | Visit as many checkpoints as possible in any order within a time limit |
+| Boundary Run | Topic 1 | Travel the boundary of the play area |
+| Gathering | Topic 2 | Return to the teacher on a signal |
+| Explore & Find | Topic 3 | In pairs, explore to find animal checkpoints |
+| Animal-O | Topic 4 | Find animal checkpoints in order using clue sheets |
+| Geometric-O | Topic 5 | Use a simple map to do progressively harder courses |
+| Map Discussion | Topic 6 | Introduce an orienteering map; connect symbols to real features |
+| Map Walk | Topic 6 | Walk a route matching map symbols to real-world features |
+| Score-O | Topic 6 | Visit as many checkpoints as possible in any order within a time limit |
 
 ### Companion Activities
 

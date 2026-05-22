@@ -10,27 +10,28 @@ import CardGrid from '@site/src/components/CardGrid';
 
 # 5 - Map Readiness
 
-> "We use a map to find things. We orient the map with landmarks"
+> "We use a map to know where something is before we even find it"
 
 | | |
 |---|---|
 | **Time** | 30-60 minutes |
 | **Space** | Gym, schoolyard, or local park |
-| **Materials** | Checkpoints, 4 colored landmark cones, whiteboard and markers, master map |
-| **Setup** | Set up checkpoints in a geometric pattern with colored landmark cones at corners |
+| **Materials** | Checkpoints with animals and numbers, 4 colored landmark cones, pattern maps, whiteboard and markers, master map |
+| **Setup** | Arrange checkpoints in a geometric pattern with colored landmark cones at corners |
 | **Vocabulary** | Map, orient the map, landmark, spatial relationship words (next to, closest, furthest, between) |
 
 ## Activities
 
 <CardGrid columns={3}>
   <ActivityCard
-    title="Geometric Readiness"
-    description="Use spatial vocabulary to describe cone locations; orient the map."
-    tag="readiness"
+    title="Geometric-O"
+    description="Orient a simple map and visit checkpoints in order."
+    link="/activities/core/geometric-o"
+    tag="core"
   />
   <ActivityCard
-    title="Symbol-O"
-    description="Learn map symbols by finding features."
+    title="Geometric Readiness"
+    description="Spatial vocabulary and map orientation exercises."
     tag="readiness"
   />
   <ActivityCard
@@ -46,9 +47,10 @@ import CardGrid from '@site/src/components/CardGrid';
 
 ### Orienteering Goals
 - Understand spatial relationship vocabulary (next to, closest, furthest, between)
-- Orient a map using landmarks at corners of the space
-- Understand that symbols on a map represent real things
-- Describe the location of checkpoints using spatial vocabulary
+- Orient a map using landmarks
+- Read a simple map and connect it to the physical space
+- Identify and fix orientation mistakes
+- Complete progressively harder courses using a map
 
 ### PE Standards (SHAPE America)
 - Combine movement concepts with skills (S2.E1)
@@ -61,25 +63,29 @@ import CardGrid from '@site/src/components/CardGrid';
 1. [**Animal-O**](/activities/core/animal-o) warm-up using the geometric layout
 2. **Geometric Readiness**: gather students facing the arrangement
    - Show the whiteboard map (upside down); ask what the dots represent
-   - Ask what's wrong with the map; slowly rotate it; students shout "Stop!" when it's oriented
-   - Answer spatial questions: "Which cone is closest to the red landmark?" "Which cones are between the yellow and green?"
-3. Introduce the idea that symbols stand for real things (colored dots = colored cones, orange dots = animal cones)
-4. Optional: **Symbol-O** if orienteering maps are available
-5. Optional: **Word Bank Orienteering** in pairs
+   - Ask what's wrong; slowly rotate; students shout "Stop!" when it's oriented
+   - Spatial questions: "Which cone is closest to the red landmark?" "Which cones are between the yellow and green?"
+3. [**Geometric-O**](/activities/core/geometric-o): pair up, receive maps, progress through levels
+   - Visit checkpoints in order, starting with the triangle
+   - Partner verifies with the animal clue sheet
+   - Progress to 10-checkpoint maps
+   - Repeat for speed, then from memory
 
 </TabItem>
 <TabItem value="reflection" label="Reflection">
 
+- What was challenging about matching the map to the real space?
+- What sort of mistakes did you make? How did you fix them?
 - How did you know the map was oriented correctly?
-- Which spatial words did you use to describe where checkpoints are?
-- What was hard about describing locations without pointing?
+- Describe the mental map you built of the space
 
 </TabItem>
 <TabItem value="extensions" label="Extensions">
 
-- **Symbol Relay**: team competition to learn map symbols
-- Remove the colored landmark cones and try orienting without them
-- Have students draw their own map of the space using symbols
+- Remove the colored landmark cones (harder orientation)
+- [**Napkin-O**](/activities/core/geometric-o): cover animal pictures with napkins; communicate with other pairs to finish
+- [**Word Bank Orienteering**](/activities/core/geometric-o): one partner reads the map, the other runs using only approved words
+- Have students draw their own map of the space
 - Have students design their own course on a map
 
 </TabItem>

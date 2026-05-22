@@ -10,28 +10,22 @@ import CardGrid from '@site/src/components/CardGrid';
 
 # 6 - Maps
 
-> "We use a map to know where something is before we even find it"
+> "Today we will navigate using a real orienteering map"
 
 | | |
 |---|---|
 | **Time** | 30-60 minutes (can extend across multiple sessions) |
-| **Space** | Gym, schoolyard, or local park |
-| **Materials** | Checkpoints, pattern maps (5 and 10 checkpoint versions), orienteering maps, master map |
-| **Setup** | Arrange checkpoints and colored landmark cones according to the master map |
-| **Vocabulary** | Orient the map, landmark, route choice, spatial memory |
+| **Space** | Schoolyard or local park (needs real features for map symbols) |
+| **Materials** | Orienteering maps, checkpoint markers (cones or flags), master map |
+| **Setup** | Place checkpoints according to the master map |
+| **Vocabulary** | Orient the map, symbol, feature, route choice |
 
 ## Activities
 
 <CardGrid columns={3}>
   <ActivityCard
-    title="Geometric-O"
-    description="Use a simple map to do progressively harder courses."
-    link="/activities/core/geometric-o"
-    tag="core"
-  />
-  <ActivityCard
     title="Map Walk"
-    description="Walk a route together, matching map to real features."
+    description="Walk a route together, matching map symbols to real features."
     tag="core"
   />
   <ActivityCard
@@ -39,62 +33,68 @@ import CardGrid from '@site/src/components/CardGrid';
     description="Visit as many checkpoints as possible in any order."
     tag="core"
   />
+  <ActivityCard
+    title="Symbol-O"
+    description="Use symbol clue sheets to find checkpoints by feature type."
+    tag="readiness"
+  />
 </CardGrid>
 
-This lesson has a rich sub-progression. Depending on the group, you may spread it across multiple sessions:
+Students move from guided map reading to independent navigation:
 
-1. **Pattern maps** (Geometric-O): simple dot maps with colored landmarks
-2. **Orienteering maps** (Map Walk, Map Discussion): real maps with symbols
-3. **Route choice** (Score-O): students decide where to go and in what order
-4. **Independent navigation** (Partner and Solo Orienteering): full courses
+1. **Map Walk**: walk together, matching symbols to features
+2. **Symbol-O**: find checkpoints by symbol type
+3. **Score-O**: choose your own route and visit checkpoints in any order
+4. **Partner/Solo Orienteering**: complete full courses independently
 
 <Tabs>
 <TabItem value="goals" label="Goals" default>
 
 ### Orienteering Goals
-- Read a simple map and connect it to the physical space
-- Orient a map using landmarks
-- Navigate a course shown on a map
+- Understand what an orienteering map is and how it differs from a pattern map
+- Learn map symbols and match them to real features
+- Walk a route while reading the map
 - Make route choices based on the map
 - Complete courses independently
 
 ### PE Standards (SHAPE America)
 - Combine movement concepts with skills (S2.E1)
 - Use simple strategies and tactics (S2.E5)
-- Cooperate and learn with others (S4.E4)
 - Move confidently and safely in open spaces (S2.E1, S4.E6)
+- Cooperate and learn with others (S4.E4)
 
 </TabItem>
 <TabItem value="delivery" label="Delivery">
 
-1. [**Animal-O**](/activities/core/animal-o) warm-up using the geometric layout
-2. [**Geometric-O**](/activities/core/geometric-o): pair up, receive maps, progress through levels
-   - Visit checkpoints in order, starting with the triangle
-   - Partner verifies with the animal clue sheet
-   - Progress to 10-checkpoint maps
-   - Repeat for speed, then from memory
-3. **Map Walk** *(if orienteering maps are available)*: walk a route as a group, matching symbols to real features
-4. **Score-O**: each student or pair gets a map with checkpoint circles; visit as many as you can in the time limit, in any order
-5. **Partner Orienteering**: plan and execute a full course together
-6. **Solo Orienteering**: do a course on your own
+1. [**Boundary Run**](/activities/core/boundary-run): run the boundary
+2. **Map Discussion**: introduce the orienteering map
+   - Compare it to the pattern maps from topic 5
+   - Orient the map using real features
+   - Point out symbols and what they represent
+3. **Map Walk**: walk a route as a group, matching symbols to real features
+4. **Symbol-O**: pair up; use symbol clue sheets to find checkpoints by feature type
+5. **Score-O**: each student or pair gets a map with checkpoint circles; visit as many as you can in the time limit, in any order
+6. **Partner Orienteering**: plan and execute a full course together
+7. **Solo Orienteering**: do a course on your own
 
 </TabItem>
 <TabItem value="reflection" label="Reflection">
 
-- What was challenging about matching the map to the real space?
-- What sort of mistakes did you make? How did you fix them?
+- How is the orienteering map different from the pattern maps we used before?
+- Which symbols were easier or harder to remember? Why?
 - What strategy did you use to visit the most checkpoints in Score-O?
 - How did you determine which way to go for each checkpoint?
-- Describe the mental map you built of the space
+- What shortcuts between checkpoints did you find?
 
 </TabItem>
 <TabItem value="extensions" label="Extensions">
 
-- [**Napkin-O**](/activities/core/geometric-o): cover animal pictures with napkins; communicate with other pairs to finish
+- **Symbol Relay**: team competition to learn map symbols
 - **Poker-O**: each checkpoint has a playing card; collect the best poker hand
 - **Poison-O**: wrong checkpoints cost points; rewards careful map reading
 - **Place Your Own Checkpoints**: students place markers using the map, then others find them
-- Have students design their own course on a map for another pair to run
+- Relay race: teams take turns completing the course
+- Challenge students to complete three checkpoints from memory
 
 </TabItem>
 </Tabs>
