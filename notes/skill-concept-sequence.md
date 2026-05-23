@@ -1,237 +1,349 @@
 # Skill / Concept Sequence
 
-Working document. Goal: define an ordered sequence of orienteering concepts and skills, each with a way to assess whether a student has developed that skill. Lesson plan progressions (PE K-2, PE 3-5, PE 6-8, Camp Intro, Camp Skill Dev) will each map onto a subset of this sequence.
+Working document. Goal: define an ordered sequence of orienteering concepts and skills, each with a way to assess whether a student has developed that concept or skill. Lesson plan progressions (PE K-2, PE 3-5, PE 6-8, Camp Intro, Camp Skill Dev) will each map onto a subset of this sequence.
 
 Informed by:
 - Current Nav Games lesson progression (Boundary through Maps)
-- OUSA Skill Level Recognition Program (Basic through Expert)
+- Navigation Games "Concepts and Authorship" document (May 2022) - pedagogical framework for roles, maps as communication, timing, observation, and mental maps
+- OUSA Orienteering Development Model (ODM) - five developmental stages with Individual, Physical, Technical, and Social dimensions
+- OUSA Skill Level Recognition Program (Basic through Expert) - specific technical skills and assessments
 - Nav Games activities and what they actually teach
 
 ## The Sequence
 
-Skills are roughly ordered from simplest to most advanced. Each entry has:
-- **Concept**: what the student understands
-- **Skill**: what the student can do (observable, assessable)
-- **OUSA level**: where this appears in the OUSA progression, if at all
+Each entry has:
+- **Concept**: what the student understands (assessable through discussion, explanation, or demonstration)
+- **Skill**: what the student can do (observable in action)
+- **OUSA references**: where this appears in the OUSA Skill Levels and/or the Orienteering Development Model
+
+The sequence covers four dimensions, following the ODM's framework:
+- **Technical**: navigation concepts and map skills
+- **Physical**: movement, terrain comfort, spatial awareness
+- **Individual**: confidence, independence, self-management, decision-making
+- **Social**: communication, collaboration, competition
+
+Most entries are primarily technical, but many develop individual and social skills simultaneously. The Individual and Social sections at the end call out concepts that are worth teaching intentionally, not just hoping they emerge.
 
 ---
 
 ### Pre-Map Skills
 
-These come before any map work. The OUSA progression skips them (assumes an older learner or club context), but they're essential for school PE and camp.
+These come before any map work. The OUSA Skill Levels skip them (they assume an older learner or club context), but the ODM Stage 1 (Experience, Explore, Play) is built around exactly these ideas: comfort with space, exploring bounded areas, naming features, spatial awareness through play.
 
 **1. Boundaries**
 - Concept: There is a defined area where you can go. Staying inside the boundary keeps you safe.
 - Skill: Student can travel the full boundary and return to the start. Student stays within bounds during activities.
-- OUSA: Not covered (assumed)
+- OUSA Skill Levels: Not covered (assumed)
+- ODM: Stage 1.2 (Physical: Discovery) - "New boundaries"
 
 **2. Return / Gathering**
 - Concept: You can go anywhere in the space, but you must be able to find your way back when called.
 - Skill: Student returns to home base within a reasonable time after the gathering signal, from anywhere in the space.
-- OUSA: Not covered (assumed)
+- OUSA Skill Levels: Not covered (assumed)
+- ODM: Stage 1.1 (Individual: Participant) - "Comfort and familiarity with space"
 
-**3. Spatial observation**
-- Concept: The space around you has features you can notice, name, and use as landmarks.
-- Skill: Student can describe their surroundings using spatial vocabulary (near, between, past, left/right of). Student can give directions to a location using landmarks.
-- OUSA: Not covered directly, but underlies map orientation
+**3. Observation and spatial awareness**
+- Concept: The space around you has features you can notice, name, and use as landmarks. Being observant of your surroundings is necessary for all movement sports, and orienteering adds an extra layer: interpreting what you see and making decisions about where to go. Students develop awareness of both the physical environment (trees, rocks, other people) and their own position within it.
+- Skill: Student can describe their surroundings using spatial vocabulary (near, between, past, left/right of). Student can give directions to a location using landmarks. Student moves safely through the space, aware of objects and other people.
+- OUSA Skill Levels: Not covered directly, but underlies map orientation
+- ODM: Stage 1.3 (Technical: Learning) - "To name features in the environment"; "To describe distance relationships in simple language"
 
 **4. Searching and finding**
 - Concept: There are things placed in the space. You can explore to find them.
 - Skill: Student can explore an area systematically and find placed objects. Student can remember and describe where they found things.
-- OUSA: Not covered
+- OUSA Skill Levels: Not covered
+- ODM: Stage 1.3 (Technical: Learning) - "To physically explore a bounded area and discover what is there"
+
+**5. Building a mental map (spatial memory)**
+- Concept: When you find something and remember where it is, you are building a mental map. Your brain stores information about relative positions, distances, and nearby objects. A mental map is not a picture you draw. It is a guide from one place to another based on spatial information you remember.
+- Skill: Student can remember and return to a location they visited previously. Student can complete a course faster on their second attempt because they remember where checkpoints are. Student can describe a location from memory.
+- OUSA Skill Levels: Not covered directly (underlies all navigation)
+- ODM: Stage 1.3 (Technical: Learning) - foundational to developing map understanding
+- Note: Animal-O explicitly develops this. The "repeat for speed" and "repeat from memory" progressions target spatial memory directly.
 
 ### Sequential Navigation
 
 Moving from free exploration to following a specific sequence.
 
-**5. Following a sequence (clue sheets)**
+**6. Following a sequence (clue sheets)**
 - Concept: You visit specific locations in a specific order, guided by picture clues or written descriptions.
 - Skill: Student can follow a clue sheet to visit checkpoints in order without skipping or going out of sequence.
-- OUSA: Not covered as a standalone skill, but control description reading is in Basic/Intermediate
+- OUSA Skill Levels: Not covered as a standalone skill, but control description reading is in Basic/Intermediate
+- ODM: Stage 1.3 (Technical: Learning) - "To use a variety of navigational perspectives"
 
-**6. Confirming location (control codes)**
+**7. Confirming location (control codes)**
 - Concept: When you arrive at a checkpoint, you verify you're at the right one by checking a code, letter, or symbol.
 - Skill: Student checks and records the control code at each checkpoint. Student can identify when they're at the wrong checkpoint.
-- OUSA: Basic ("Explain how to check control codes")
+- OUSA Skill Levels: Basic ("Explain how to check control codes")
 
 ### Map Introduction
 
-First use of a map as a representation of space.
+First use of a map as a representation of space. Maps are a way for one person to tell another person how to find things. Some children will understand maps easily, while others will struggle. We start with other ways of communicating location and direction (clue sheets, spatial descriptions, pointing) before introducing the map.
 
-**7. Map as picture of space**
-- Concept: A map is a picture of the area, seen from above. Things on the map correspond to things in the real space.
+**8. Map as picture of space**
+- Concept: A map is a picture of the area, seen from above. Things on the map correspond to things in the real space. Before we use a map, we practice other ways to communicate where things are: pointing, describing with words, drawing pictures.
 - Skill: Student can point to a feature on the map and then point to the corresponding real-world feature. Student can point to a real feature and find it on the map.
-- OUSA: Implicit in Basic
+- OUSA Skill Levels: Implicit in Basic
+- ODM: Stage 2.3 (Technical: Practice) - "Connecting map to terrain and terrain to map"
+- Note: Clothespin-O and Word Bank Orienteering bridge from verbal/spatial communication (#36) to map-based communication. They help students who struggle with maps by using familiar ways to describe location first.
 
-**8. Orienting the map (using features)**
-- Concept: The map works best when you hold it so the map matches the space around you. "Up" on the map should point the same direction as "forward in real life" would point toward the feature that's at the top of the map.
+**9. Pattern matching (map to terrain)**
+- Concept: The layout of objects in the space forms a pattern. The map shows the same pattern. Learning to see and match these patterns is the cornerstone of map orientation. Starting with something simple and distinctive (like the layout of cones in Geometric-O) builds this skill before students face the complexity of a full orienteering map.
+- Skill: Student can look at a simple map and match the pattern of dots to the arrangement of cones in the space. Student can identify which cone corresponds to which dot based on the spatial pattern.
+- OUSA Skill Levels: Implicit in map orientation
+- ODM: Stage 2.3 (Technical: Practice) - "Connecting map to terrain and terrain to map"
+- Note: Geometric-O's whiteboard introduction teaches this directly. The progression from simple patterns (5 cones) to complex ones (10 cones, then real orienteering maps) gives students a scaffolded path.
+
+**10. Orienting the map (using features)**
+- Concept: The map works best when you hold it so the map matches the space around you. "Up" on the map should point the same direction as "forward in real life" would point toward the feature that's at the top of the map. This is one of the most fundamental skills for navigation, and for many students one of the most challenging concepts to grasp.
 - Skill: Student can rotate the map so that known landmarks line up between map and terrain. Student can tell when the map is oriented wrong.
-- OUSA: Basic ("Orient your map using the features around you")
+- OUSA Skill Levels: Basic ("Orient your map using the features around you")
+- ODM: Stage 2.3 (Technical: Practice) - "Staying oriented"
+- Note: Using Student Helpers here is especially effective. Students who recently learned this skill are often better than the teacher at explaining the steps to a struggling classmate.
 
-**9. Tracking position (thumbing)**
+**11. Tracking position (thumbing)**
 - Concept: As you move through space, you keep track of where you are on the map, so you always know your location.
 - Skill: Student keeps their thumb on their current position and moves it as they travel. Student can point to their current location on the map at any time when asked.
-- OUSA: Basic ("Show that you can thumb your map to keep track of your position")
+- OUSA Skill Levels: Basic ("Show that you can thumb your map to keep track of your position")
+- ODM: Stage 2.3 (Technical: Practice) - "Staying connected to the map"
 
 ### Map Reading
 
 Understanding what the map communicates.
 
-**10. Basic map symbols**
+**12. Basic map symbols**
 - Concept: Maps use colors and symbols to represent different types of features. You can learn to read them like a language.
 - Skill: Student can identify trails, roads, buildings, rocks, and man-made point features on an orienteering map. Student can match symbols to the real features they represent.
-- OUSA: Basic ("Find the following on an orienteering map: trails, roads, buildings, rocks, man made point features, north lines, start, control, and finish")
+- OUSA Skill Levels: Basic ("Find the following on an orienteering map: trails, roads, buildings, rocks, man made point features, north lines, start, control, and finish")
+- ODM: Stage 2.3 (Technical: Practice) - "Reading a variety of types of maps"
 
-**11. Map legend**
+**13. Map legend**
 - Concept: The map legend explains what each symbol means. You can look up unfamiliar symbols.
 - Skill: Student can use the legend to identify an unfamiliar symbol. Student can explain what a given symbol represents.
-- OUSA: Basic ("Explain how to use the map legend")
+- OUSA Skill Levels: Basic ("Explain how to use the map legend")
 
-**12. Colors and vegetation**
+**14. Colors and vegetation**
 - Concept: Map colors communicate terrain type: white is open forest, green is thick vegetation, yellow is open ground, blue is water.
 - Skill: Student can explain what each map color means and predict what the terrain will look like from the map.
-- OUSA: Intermediate ("Explain what all of the different colors on the map represent, especially vegetation types")
+- OUSA Skill Levels: Intermediate ("Explain what all of the different colors on the map represent, especially vegetation types")
 
-**13. Map scale**
+**15. Map scale**
 - Concept: The map is smaller than reality by a fixed ratio. You can estimate real-world distances from map distances.
 - Skill: Student can explain what the scale means. Student can estimate how far apart two features are in reality by measuring on the map.
-- OUSA: Intermediate ("Explain what the scale on the map means")
+- OUSA Skill Levels: Intermediate ("Explain what the scale on the map means")
 
 ### Navigation with Maps
 
 Using the map to get from A to B.
 
-**14. Following linear features (handrails)**
+**16. Following linear features (handrails)**
 - Concept: Trails, fences, streams, and edges of fields are lines you can follow. Following a line feature is the simplest way to navigate with a map.
 - Skill: Student can identify linear features on the map and follow them in the terrain. Student can plan a route that stays on linear features.
-- OUSA: Intermediate ("Explain what is meant by Handrail")
+- OUSA Skill Levels: Intermediate ("Explain what is meant by Handrail")
 
-**15. Making navigation decisions at junctions**
+**17. Making navigation decisions at junctions**
 - Concept: When a trail splits or you reach an intersection, you use the map to decide which way to go.
 - Skill: Student can determine the correct direction at intersections by reading the map.
-- OUSA: Basic ("Determine the proper direction to travel in at intersections and when leaving controls")
+- OUSA Skill Levels: Basic ("Determine the proper direction to travel in at intersections and when leaving controls")
+- ODM: Stage 2.3 (Technical: Practice) - "Decision making in a variety of activities"
 
-**16. Estimating progress along a route**
+**18. Estimating progress along a route**
 - Concept: By noticing landmarks you pass, you can estimate how far along a leg you are.
 - Skill: Student can identify mapped features as they pass them and estimate what fraction of the leg is complete.
-- OUSA: Basic ("Determine what fraction of a leg is completed when passing mapped landmarks")
+- OUSA Skill Levels: Basic ("Determine what fraction of a leg is completed when passing mapped landmarks")
 
-**17. Route choice**
+**19. Route choice**
 - Concept: There is often more than one way to get from one checkpoint to the next. You choose based on distance, terrain, and your confidence.
 - Skill: Student can identify at least two different routes between the same two controls and explain the tradeoff.
-- OUSA: Intermediate ("Identify different route choices between the same controls")
+- OUSA Skill Levels: Intermediate ("Identify different route choices between the same controls")
+- ODM: Stage 3.3 (Technical: Train) - "Identifying route choices and selecting the best route for the individual"
 
-**18. Attack points**
+**20. Attack points**
 - Concept: An attack point is a nearby, easy-to-find feature that you navigate to first, then make a precise final approach to the control from there.
 - Skill: Student can identify a useful attack point near a control and navigate to it before approaching the control.
-- OUSA: Intermediate ("Explain what is meant by Attackpoint")
+- OUSA Skill Levels: Intermediate ("Explain what is meant by Attackpoint")
 
 ### Any-Order Navigation (Score-O skills)
 
 Visiting controls in any order adds strategy.
 
-**19. Planning under time pressure**
+**21. Planning under time pressure**
 - Concept: In a Score-O, you choose which checkpoints to visit and in what order, balancing point value against distance and time remaining.
 - Skill: Student can scan a Score-O map, plan a rough route, and adjust their plan as time runs out.
-- OUSA: Implicit in application requirements (score-O courses at all levels)
+- OUSA Skill Levels: Implicit in application requirements (score-O courses at all levels)
 
 ### Compass Skills
 
 These are separate from map-reading and introduce a new tool.
 
-**20. Cardinal directions**
+**22. Cardinal directions**
 - Concept: North, South, East, and West are fixed directions. North lines on the map point north.
 - Skill: Student can point north. Student can identify the cardinal direction from one feature to another.
-- OUSA: Intermediate ("Use your compass to find the cardinal directions")
+- OUSA Skill Levels: Intermediate ("Use your compass to find the cardinal directions")
 
-**21. Orienting the map with a compass**
+**23. Orienting the map with a compass**
 - Concept: You can use a compass to orient your map when you can't see enough landmarks.
 - Skill: Student can align the map's north lines with the compass needle.
-- OUSA: Basic ("Orient your map using your compass")
+- OUSA Skill Levels: Basic ("Orient your map using your compass")
 
-**22. Taking and following a bearing**
+**24. Taking and following a bearing**
 - Concept: A compass bearing is a precise direction expressed as a number. You can measure a bearing from the map and walk that direction.
 - Skill: Student can take a bearing from the map and follow it with the compass to reach a target.
-- OUSA: Advanced ("Take a bearing from the map and follow it with your compass")
+- OUSA Skill Levels: Advanced ("Take a bearing from the map and follow it with your compass")
 
-**23. Safety bearing**
+**25. Safety bearing**
 - Concept: Before you start, you learn a single compass direction that will always lead you back to safety (a road, a building, etc.).
 - Skill: Student can explain and use the safety bearing for their area.
-- OUSA: Intermediate ("How to find a safety bearing and how to use the safety bearing")
+- OUSA Skill Levels: Intermediate ("How to find a safety bearing and how to use the safety bearing")
 
 ### Distance Estimation
 
-**24. Pacing**
+**26. Pacing**
 - Concept: You can measure distance by counting your steps over a known distance, then using that count to estimate distances in the field.
 - Skill: Student knows their pace count for 100m and can use it to estimate distance on a leg.
-- OUSA: Intermediate ("Measure a distance on your map and then walk this distance by counting your paces")
+- OUSA Skill Levels: Intermediate ("Measure a distance on your map and then walk this distance by counting your paces")
 
 ### Relocation and Error Recovery
 
-**25. Backtracking**
+**27. Backtracking**
 - Concept: When you're lost or confused, you can retrace your steps to the last place you knew where you were.
 - Skill: Student can recognize when they're lost and retrace to a known location rather than wandering further.
-- OUSA: Intermediate ("How to back track when lost or confused")
+- OUSA Skill Levels: Intermediate ("How to back track when lost or confused")
 
-**26. Relocation (SOFA)**
+**28. Relocation (SOFA)**
 - Concept: When lost, use a systematic process: Stop, Orient the map, Find features around you, decide on an Action.
 - Skill: Student can apply the SOFA steps when they realize they're not where they expected.
-- OUSA: Advanced ("Explain the steps of relocation (SOFA) and when to use them")
+- OUSA Skill Levels: Advanced ("Explain the steps of relocation (SOFA) and when to use them")
 
 ### Terrain Reading (Contours)
 
-**27. Uphill, downhill, steep, flat**
+**29. Uphill, downhill, steep, flat**
 - Concept: Contour lines show elevation. Closely spaced lines mean steep; far apart means flat. You can tell which way is uphill.
 - Skill: Student can look at a map and predict whether a route will go uphill, downhill, or stay flat. Student can identify steep vs. gentle slopes.
-- OUSA: Advanced ("Show which direction is uphill and downhill"; "Show which areas are steeper or flatter")
+- OUSA Skill Levels: Advanced ("Show which direction is uphill and downhill"; "Show which areas are steeper or flatter")
 
-**28. Terrain features (hill, reentrant, spur, saddle, depression)**
+**30. Terrain features (hill, reentrant, spur, saddle, depression)**
 - Concept: Contour patterns form recognizable shapes that correspond to landforms.
 - Skill: Student can identify the five major terrain features on a map and in the field.
-- OUSA: Advanced
+- OUSA Skill Levels: Advanced
 
 ### Off-Trail Navigation
 
-**29. Leaving trails**
+**31. Leaving trails**
 - Concept: Not all controls are on trails. You can travel through open terrain using map and compass.
 - Skill: Student is comfortable moving through terrain without a trail, using the map to navigate.
-- OUSA: Intermediate ("Travel off-trail for short segments from one handrail to another"); Advanced ("Show you are comfortable running off-trail")
+- OUSA Skill Levels: Intermediate ("Travel off-trail for short segments from one handrail to another"); Advanced ("Show you are comfortable running off-trail")
+- ODM: Stage 2 (Challenge) - "trying an off-trail route, and generally pushing perceived limits"
 
-**30. Catching and collecting features**
+**32. Catching and collecting features**
 - Concept: A catching feature is a large feature beyond your target that tells you you've gone too far. Collecting features are things you expect to pass along the way that confirm you're on track.
 - Skill: Student can identify catching and collecting features for a leg and use them while navigating.
-- OUSA: Advanced ("Explain the terms Catching Feature, Collecting Features, and Aiming Off")
+- OUSA Skill Levels: Advanced ("Explain the terms Catching Feature, Collecting Features, and Aiming Off")
 
-**31. Aiming off**
+**33. Aiming off**
 - Concept: Deliberately aim to one side of your target so that when you hit a linear feature, you know which direction to turn.
 - Skill: Student can explain when to aim off and demonstrate it on a course.
-- OUSA: Advanced
+- OUSA Skill Levels: Advanced
 
 ### Safety
 
 Threaded through many levels but worth calling out as its own strand.
 
-**32. Personal safety basics**
+**34. Personal safety basics**
 - Concept: Whistle use, time limits, checking in at the finish, awareness of local hazards, what to do if lost.
 - Skill: Student can explain each safety procedure and follows them during activities.
-- OUSA: Basic (full list of safety procedures)
+- OUSA Skill Levels: Basic (full list of safety procedures)
+- ODM: Stage 1.3 (Technical: Learning) - "To move through a variety of environments safely"
 
-**33. First aid awareness**
+**35. First aid awareness**
 - Concept: Basic first aid for common outdoor situations.
 - Skill: Student can handle minor injuries and knows when to get help.
-- OUSA: Intermediate ("Know basic procedures and first aid")
+- OUSA Skill Levels: Intermediate ("Know basic procedures and first aid")
+
+### Communication and Collaboration
+
+These develop through orienteering activities and are worth teaching intentionally. The ODM tracks social development at every stage.
+
+**36. Spatial communication**
+- Concept: Giving directions requires precise spatial language. "Over there" does not help. "Past the big tree, between the two benches" does. Before students use maps, they practice communicating location and direction with words, gestures, and spatial descriptions. Efficient communication of "how to find things" is a skill in its own right.
+- Skill: Student can describe a location using spatial vocabulary so that a partner can find it. Student can follow spatial directions given by a partner. Student can reduce the number of instructions needed to guide someone to a location.
+- ODM: Stage 1.3 (Technical: Learning) - "To describe distance relationships in simple language"; Stage 2.1 (Individual: Learner) - "Associate word concepts with real landmarks"
+- Activities: Word Bank Orienteering, Napkin-O, Clothespin-O, any paired navigation
+- Note: Instead of (or in addition to) timing, try counting the number of instructions a Helper gives to guide a Finder, and challenge them to reduce that count.
+
+**37. Roles (Finder, Hider, Helper, Spectator)**
+- Concept: Activities use named roles that keep everyone engaged and distribute responsibility. The same roles appear across many activities, so once students learn them, new games are easier to explain. Roles also prepare students for team orienteering, where members specialize in different tasks (map reader, compass holder, timekeeper, facilitator).
+  - **Finder** (also: Runner, Orienteer, Participant) - completes the course
+  - **Hider** (also: Course Setter, Game Designer) - designs or places the course. Letting students design the game increases engagement.
+  - **Helper** (also: Coach, Instructor) - helps a Finder learn and succeed. The Helper gets consent before helping. The Helper does not do the task for the Finder. Give Helpers specific rules about what they can say: "warmer/colder," or questions like "Where are you on the map?" "Is your map oriented?" "What do you see around you that matches the map?"
+  - **Spectator** (also: Timer, Counter, Cheerer, Supporter) - pays attention to others, times courses, counts instructions, cheers.
+- Skill: Student can name and perform each role. Student acting as Helper asks questions rather than giving answers. Student acting as Hider places checkpoints at appropriate features. Student acting as Spectator stays engaged and supports others.
+- ODM: Stage 1.4 (Social: Play) - "Skill development through group activities"; all stages have social roles
+- Note: Both teacher and students should have an explicit goal of making sure everyone in the class understands the material and achieves success. Children are often better than the teacher at explaining things to a struggling classmate.
+
+**38. Partner navigation**
+- Concept: Working with a partner means sharing decisions, not one person leading and the other following. You take turns, divide tasks, and talk through choices.
+- Skill: Student can navigate a course with a partner, taking turns with the map and communicating decisions.
+- ODM: Stage 1.4 (Social: Play) - "Skill development through group activities"; Stage 2.4 (Social: Challenge) - "Team-based challenges that promote collaboration"
+- Activities: All pair activities, relay formats (Animal Relay, Symbol Relay)
+
+**39. Coaching and helping**
+- Concept: When you understand something well, you can help someone else learn it. Helping is not doing it for them. It is asking questions and giving hints. Students who recently acquired a skill are often better at communicating the steps needed than the teacher is.
+- Skill: Student can guide a less experienced partner through a course without taking over the map. Student can explain a concept to a peer.
+- ODM: Stage 3.4 (Social: Compete) - "Interact with teammates about experiences, goals, and plans"
+- Activities: Mixed-ability pairing, peer debrief after courses
+- Note: Connects directly to the Helper role (#37). Students who finish early should have the option to help or spectate, not just wait.
+
+**40. Group timing and teamwork**
+- Concept: Timing the whole class (not just individuals) unites the group and emphasizes cooperation. Every person's actions affect the group. When the whole class is timed, students naturally start helping each other learn.
+- Skill: Student contributes to group success. Student can identify how their actions affect the group's time. Student helps peers to improve the group's result.
+- ODM: Stage 1.4 (Social: Play) - group challenges; Stage 2.4 (Social: Challenge) - "Team-based challenges that promote collaboration"
+- Activities: Gathering (group gathering time), timed relay formats, any activity where the whole class is timed together
+
+**41. Debrief and reflection**
+- Concept: After a course, you can talk about what happened, what worked, and what you would do differently. Comparing routes with others helps you learn.
+- Skill: Student can describe their route choices and mistakes. Student can listen to someone else's route and identify differences.
+- ODM: Stage 3.3 (Technical: Train) - "Develop pre-race and post-race technical and reflection practices"
+- OUSA Skill Levels: Intermediate ("Complete a course review with another participant")
+
+### Individual Development
+
+Orienteering naturally builds personal qualities that are worth naming and reinforcing.
+
+**42. Independence**
+- Concept: You can make decisions and navigate on your own, without waiting to be told what to do.
+- Skill: Student can complete a course solo. Student makes their own navigation decisions rather than following others.
+- ODM: Stage 1.1 (Individual: Participant) - "relation to self"; Stage 2.1 (Individual: Learner) - "Push personal limits"
+
+**43. Managing frustration and mistakes**
+- Concept: Getting lost is part of orienteering. What matters is what you do next. Mistakes are information, not failure. When students make mistakes or have trouble finding a checkpoint, they have an opportunity to review why the mistake occurred and try things differently.
+- Skill: Student can recognize when they are lost without panicking. Student can describe what went wrong and what they would do differently.
+- ODM: Stage 2.2 (Physical: Development) - "Self awareness"; connects to backtracking (#27) and relocation (#28) as technical responses to the emotional experience of being lost
+
+**44. Self-assessment and self-awareness**
+- Concept: You can judge your own readiness to try something harder. You can identify what you are good at and what needs work. Students develop awareness of how their physical and emotional state affects their performance. This includes noticing when they are rushing, frustrated, or not paying attention.
+- Skill: Student can choose an appropriate difficulty level for themselves. Student can name one thing they did well and one thing to improve after an activity.
+- ODM: Stage 3.1 (Individual: Athlete) - "Identify personal strengths and areas to improve, with guidance"
+
+**45. Choosing challenge**
+- Concept: You can push yourself to try harder courses, faster times, or new strategies. Growth comes from choosing to be a little uncomfortable.
+- Skill: Student voluntarily moves to a harder course or sets a personal goal. Student can explain why they chose a particular challenge.
+- ODM: Stage 2.4 (Social: Challenge) - "Challenges based on personal improvement"
+- SHAPE America: Standard 4 (choosing to engage in physical activity)
+- Note: Individual timing encourages students to develop speed, improve skills, and practice memory. Not all students feel comfortable being timed, especially when learning something new. When timing is used, emphasize accuracy over raw speed: finding all the correct checkpoints matters more than finding them quickly.
 
 ### Course Design and Giving Back
 
-**34. Placing checkpoints**
+**46. Placing checkpoints**
 - Concept: You can use a map to choose good locations for checkpoints. Good placements are at distinct features, findable but not obvious.
 - Skill: Student can place checkpoints at appropriate features using a map.
-- OUSA: Expert ("Design and set a course")
+- OUSA Skill Levels: Expert ("Design and set a course")
+- Note: Connects to the Hider role (#37). Letting students design courses is a powerful way to deepen their understanding of map-terrain relationships.
 
-**35. Drawing maps**
+**47. Drawing maps**
 - Concept: You can create a simple map of a space using orienteering symbols.
 - Skill: Student can draw a map of a small area that another person could use to navigate.
-- OUSA: Expert ("Create a simple hand drawn map")
+- OUSA Skill Levels: Expert ("Create a simple hand drawn map")
 
 ---
 
@@ -241,17 +353,19 @@ Rough mapping (to be refined after we identify the key concepts):
 
 | Concept # | PE K-2 | PE 3-5 | PE 6-8 | Camp Intro | Camp Skill Dev |
 |---|---|---|---|---|---|
-| 1-4 (Pre-map) | Core focus | Quick intro | Quick intro | Core focus | Review |
-| 5-6 (Sequential) | Intro | Core focus | Quick intro | Core focus | Review |
-| 7-9 (Map intro) | Exposure | Core focus | Review | Core focus | Review |
-| 10-11 (Symbols) | | Core focus | Review | Core focus | Core focus |
-| 12-13 (Colors, scale) | | Stretch | Core focus | | Core focus |
-| 14-18 (Nav with maps) | | Intro to some | Core focus | Intro | Core focus |
-| 19 (Score-O strategy) | | Intro | Core focus | Intro | Core focus |
-| 20-23 (Compass) | | | Core focus | | Core focus |
-| 24 (Pacing) | | | Core focus | | Core focus |
-| 25-26 (Relocation) | | | Intro | | Core focus |
-| 27-28 (Contours) | | | Stretch | | Stretch |
-| 29-31 (Off-trail) | | | Stretch | | Core focus |
-| 32 (Safety) | Threaded | Threaded | Threaded | Threaded | Threaded |
-| 34-35 (Course design) | | Extension | Extension | | Extension |
+| 1-5 (Pre-map) | Core focus | Quick intro | Quick intro | Core focus | Review |
+| 6-7 (Sequential) | Intro | Core focus | Quick intro | Core focus | Review |
+| 8-11 (Map intro) | Exposure | Core focus | Review | Core focus | Review |
+| 12-13 (Symbols basics) | | Core focus | Review | Core focus | Core focus |
+| 14-15 (Colors, scale) | | Stretch | Core focus | | Core focus |
+| 16-20 (Nav with maps) | | Intro to some | Core focus | Intro | Core focus |
+| 21 (Score-O strategy) | | Intro | Core focus | Intro | Core focus |
+| 22-25 (Compass) | | | Core focus | | Core focus |
+| 26 (Pacing) | | | Core focus | | Core focus |
+| 27-28 (Relocation) | | | Intro | | Core focus |
+| 29-30 (Contours) | | | Stretch | | Stretch |
+| 31-33 (Off-trail) | | | Stretch | | Core focus |
+| 34-35 (Safety) | Threaded | Threaded | Threaded | Threaded | Threaded |
+| 36-41 (Communication) | Core focus | Core focus | Core focus | Core focus | Core focus |
+| 42-45 (Individual dev) | Intro | Core focus | Core focus | Core focus | Core focus |
+| 46-47 (Course design) | | Extension | Extension | | Extension |

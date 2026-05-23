@@ -3,7 +3,7 @@ title: "5 - Map Readiness"
 sidebar_position: 5
 ---
 
-{/* AUTO-GENERATED from content/lessons/grade-3-5/5-map-readiness.md — do not edit directly */}
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/5-map-readiness.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';

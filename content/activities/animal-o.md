@@ -58,7 +58,7 @@ Builds spatial memory, observation, and navigation skills.
 - Short: Agility
   Long: Manage quick changes of direction while moving through the space
 
-See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits into the lesson sequence.
+See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity fits into the lesson sequence.
 
 
 ## Vocabulary

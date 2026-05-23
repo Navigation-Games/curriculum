@@ -51,7 +51,7 @@ Builds divided attention, group responsibility, and awareness in terrain.
 - Short: Boundary respect
   Long: Understand and respect boundaries
 
-See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits into the lesson sequence.
+See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity fits into the lesson sequence.
 
 
 ## Vocabulary

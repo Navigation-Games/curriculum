@@ -3,7 +3,7 @@ title: "3 - Explore & Find"
 sidebar_position: 3
 ---
 
-{/* AUTO-GENERATED from content/lessons/grade-3-5/3-explore-and-find.md — do not edit directly */}
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/3-explore-and-find.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';

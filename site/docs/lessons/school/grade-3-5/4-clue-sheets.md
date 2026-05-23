@@ -3,7 +3,7 @@ title: "4 - Clue Sheets"
 sidebar_position: 4
 ---
 
-{/* AUTO-GENERATED from content/lessons/grade-3-5/4-clue-sheets.md — do not edit directly */}
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/4-clue-sheets.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';

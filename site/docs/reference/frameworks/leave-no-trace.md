@@ -5,7 +5,7 @@ sidebar_position: 5
 
 # Leave No Trace and Orienteering
 
-The [Leave No Trace Center for Outdoor Ethics](https://lnt.org/) promotes seven principles for responsible outdoor recreation. Orienteering aligns with most of them naturally, but one requires honest discussion: going off trail.
+Many Navigation Games activities take place in schoolyards and parks that are already heavily trafficked. When orienteering in more remote areas, or at camp, be aware of and teach the following [Leave No Trace](https://lnt.org/) principles.
 
 ## The Seven Principles
 
@@ -15,15 +15,13 @@ Orienteering is fundamentally about planning. Before you leave the start, you st
 
 ### 2. Travel on Durable Surfaces
 
-This is where orienteering and Leave No Trace have a real tension. Traditional orienteering involves off-trail travel through natural terrain. Competitive orienteering courses are deliberately set to require leaving trails.
+Orienteering involves off-trail travel through natural terrain. However, orienteering is naturally low-impact because each person chooses a different route to the controls. Unlike a hiking trail where hundreds of people walk the same path, orienteers spread out across the terrain, so new trails are unlikely to form.
 
-**How we handle this in the Nav Games curriculum:**
+Research supports this. A 1972 study of three orienteering events in southern Sweden with up to 9,300 participants found that vegetation recovered quickly despite trampling. A biological survey of routes used during the 2001 World Orienteering Championships in Tampere, Finland showed no harm to any significant or valuable area. A UK study of an event with 1,200 competitors on a National Heritage site found that most vegetation recovered within three weeks. The International Orienteering Federation considers orienteering a sport of low ecological impact.
 
-- **Most school activities stay on trails and open ground.** Boundary Run, Gathering, Animal-O, Geometric-O, and Score-O in a schoolyard or park setting all use established surfaces. Students are running on grass, paths, and playing fields.
-- **Off-trail travel is introduced gradually, at higher levels.** Students learn on durable surfaces first. By the time they are navigating off-trail, they understand why it matters to tread lightly.
-- **Course designers choose checkpoint locations responsibly.** Controls should be placed at features that can handle foot traffic (a boulder, a trail junction, a fence corner), not in fragile areas. A good course invites travel on durable surfaces even when the route between controls crosses open terrain.
-- **Orienteering's impact is dispersed.** Unlike a hiking trail where hundreds of people walk the same path, orienteers spread out across the terrain. Each person takes a different route. The impact per square foot is low.
-- **Teach the principle explicitly.** When introducing off-trail navigation, name the tension. Tell students: "We are going off trail today. That means we need to be extra careful about where we step. Avoid stepping on plants, stay off wet ground, and spread out so we don't create a new trail."
+Orienteers also work with land managers to stay out of sensitive areas. Course designers mark out-of-bounds zones on the map to protect fragile habitat. Controls are placed at features that can handle foot traffic, not in fragile areas.
+
+When introducing off-trail navigation, teach the principle explicitly: "Choose where you step to minimize your impact."
 
 ### 3. Dispose of Waste Properly
 
@@ -50,7 +48,6 @@ Orienteering in public parks means sharing the space with walkers, joggers, dog 
 - Don't block trails. Step aside for other users.
 - Be aware that running through a park with a map can look unusual to other visitors. A friendly wave goes a long way.
 - Keep noise levels reasonable, especially near residential areas.
-- If you are using electronic timing equipment, make sure it does not obstruct paths or confuse other park users.
 
 ## The Bigger Picture
 
@@ -60,3 +57,6 @@ Orienteering builds a relationship with outdoor spaces. Students who spend time 
 
 - [Leave No Trace Center for Outdoor Ethics](https://lnt.org/)
 - [Leave No Trace Seven Principles](https://lnt.org/why/7-principles/)
+- [Orienteering and the Environment](https://orienteering.sport/orienteering-and-the-environment/) (International Orienteering Federation)
+- [Review of environmental impacts of outdoor events with a focus on orienteering](https://www.researchgate.net/publication/375039636_Review_of_environmental_impacts_of_outdoor_events_with_a_focus_on_orienteering) (ResearchGate)
+- [Orienteering: A Nature Sport With Low Ecological Impact](https://www.scribd.com/document/61060801/IOF-EnV-007-Orienteering-A-Nature-Sport-With-Low-Ecological-Impact) (IOF Environment Commission)

@@ -23,7 +23,7 @@ What's done, what's next, and what's deferred.
 
 - **Year-over-year progression within a grade band.** How do we teach kids who come back year after year? The current lessons assume a first encounter with orienteering. We need guidance on how to progress students who already did the sequence last year, so each year builds on the last rather than repeating.
 
-- **Single-setup, multi-grade teaching.** At many schools, a teacher sets up once for the day and runs multiple grades (or even multiple lessons) through the same setup. The curriculum should address how to use one physical arrangement to serve different classes at different levels, with guidance on which activities scale across grades and which need adjustment.
+- **Single-setup, multi-grade teaching.** At many schools, a teacher sets up once for the day and runs multiple grades (or even multiple lessons) through the same setup. The curriculum should address how to use one physical arrangement to serve different classes at different levels, with guidance on which activities scale across grades and which need adjustment. Real example: at a junior high, some classes are on Lesson 1 and others are on Lesson 2 in the same day. Switching between lessons with different setups is a real pain point. The curriculum should help teachers plan setups that work across multiple lessons.
 
 ### Content gaps
 
@@ -36,6 +36,8 @@ What's done, what's next, and what's deferred.
 - **Background PDFs.** No source PDFs exist yet for Score-O, Map Walk, or several companion activities. Existing PDFs cover Boundary Run, Gathering, Animal-O, Geometric-O, Napkin-O, and Pacman-O.
 
 - **Content alignment.** Goals, vocabulary, and delivery steps should be reviewed across activities and lessons to make sure they use consistent language and that short/long goal versions say the same thing.
+
+- **Leave No Trace page.** The current draft (`reference/frameworks/leave-no-trace.md`) reads a bit defensive. Revisit the tone so it feels natural and confident rather than justifying orienteering's existence. The core message is simple: orienteering is low-impact, and here is what to teach when you are in wilder areas.
 
 ### Build and tooling
 

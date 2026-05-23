@@ -8,8 +8,8 @@ const REPO_ROOT = path.join(__dirname, '..');
 const DIRS = {
   activitiesContent: path.join(REPO_ROOT, 'content', 'activities'),
   activitiesOutput:  path.join(REPO_ROOT, 'site', 'docs', 'activities', 'core'),
-  lessonsContent:    path.join(REPO_ROOT, 'content', 'lessons', 'grade-3-5'),
-  lessonsOutput:     path.join(REPO_ROOT, 'site', 'docs', 'lessons', 'grade-3-5'),
+  lessonsContent:    path.join(REPO_ROOT, 'content', 'lessons', 'school', 'grade-3-5'),
+  lessonsOutput:     path.join(REPO_ROOT, 'site', 'docs', 'lessons', 'school', 'grade-3-5'),
 };
 
 
@@ -558,7 +558,7 @@ function generateLessonMDX(slug, { fm, sections, goals }) {
   L.push('---');
   L.push('');
 
-  const contentPath = `content/lessons/grade-3-5/${slug}.md`;
+  const contentPath = `content/lessons/school/grade-3-5/${slug}.md`;
   L.push(`{/* AUTO-GENERATED from ${contentPath} — do not edit directly */}`);
   L.push('');
 

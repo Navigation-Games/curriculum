@@ -3,7 +3,7 @@ title: "A - Indoor Orienteering"
 sidebar_position: 7
 ---
 
-{/* AUTO-GENERATED from content/lessons/grade-3-5/a-indoor-orienteering.md — do not edit directly */}
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/a-indoor-orienteering.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';

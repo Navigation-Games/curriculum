@@ -34,3 +34,43 @@
   height: 100%;
   border: none;
 }
+
+/* Print-friendly video reference — hidden on screen */
+.printInfo {
+  display: none;
+}
+
+@media print {
+  .wrapper,
+  .placeholder {
+    display: none !important;
+  }
+
+  .printInfo {
+    display: block;
+    font-size: 9pt;
+    line-height: 1.4;
+    padding: 0.25rem 0;
+  }
+
+  .printIcon {
+    color: #999;
+    margin-right: 0.3rem;
+  }
+
+  .printTitle {
+    font-weight: 600;
+  }
+
+  .printDesc {
+    color: #444;
+  }
+
+  .printUrl {
+    display: block;
+    color: #666;
+    font-size: 8pt;
+    word-break: break-all;
+    margin-left: 1.1rem;
+  }
+}

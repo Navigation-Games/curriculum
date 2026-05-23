@@ -80,7 +80,7 @@ Students completing this activity will be able to:
 - Develop spatial memory by repeating courses and tracking where checkpoints are
 - Manage quick changes of direction while moving through the space
 
-See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits into the lesson sequence.
+See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity fits into the lesson sequence.
 
 </TabItem>
 <TabItem value="run" label="How to Run It" default>

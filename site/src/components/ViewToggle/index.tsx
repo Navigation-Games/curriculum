@@ -28,11 +28,9 @@ export function ViewToggle(): React.ReactElement {
       <a href={getToggleUrl()} className={styles.toggleButton}>
         {compact ? 'Full view' : 'One-pager'}
       </a>
-      {compact && (
-        <button onClick={() => window.print()} className={styles.printButton}>
-          Print
-        </button>
-      )}
+      <button onClick={() => window.print()} className={styles.printButton}>
+        Print
+      </button>
     </div>
   );
 }

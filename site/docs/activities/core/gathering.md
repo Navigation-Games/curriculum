@@ -71,7 +71,7 @@ Students completing this activity will be able to:
 - Move freely within a defined space with confidence
 - Understand and respect boundaries
 
-See the [Grade 3-5 curriculum](/lessons/grade-3-5/) for how this activity fits into the lesson sequence.
+See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity fits into the lesson sequence.
 
 </TabItem>
 <TabItem value="run" label="How to Run It" default>
