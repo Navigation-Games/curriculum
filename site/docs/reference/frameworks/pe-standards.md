@@ -1,6 +1,6 @@
 ---
 title: PE Standards
-sidebar_position: 3
+sidebar_position: 1
 ---
 
 # PE Standards Alignment
@@ -101,12 +101,12 @@ Student choice and autonomy increase through the progression. Early lessons are 
 
 | Lesson | Standard 1 | Standard 2 | Standard 3 | Standard 4 |
 |---|---|---|---|---|
-| 1. Explore | Locomotor skills | Spatial awareness | Following instructions | Boundary safety |
-| 2. Clue Sheets | Running, direction changes | Spatial memory | Pair work | Self-pacing |
-| 3. Patterns | Running with map | Map orientation, spatial vocabulary | Partner verification | Fixing mistakes |
-| 4. Map Introduction | Walking and running routes | Map symbols, orienting | Peer feedback | Map confidence |
-| 5. Map Checkpoints | Route choice movement | Strategy, planning | Cooperative placement | Independent navigation |
-| 6. Point-to-Point | Full course navigation | Route choice, relocation | Partner and solo work | Self-directed courses |
+| 1. Boundary | Locomotor skills: running, skipping along the boundary | Spatial awareness (inside, outside, boundary) | Following instructions | Understanding why boundaries exist |
+| 2. Return | Running at varied speeds; quick direction changes | Awareness of position; estimating distance | Group strategizing to improve gathering time | Responding to signals; self-regulation |
+| 3. Explore & Find | Running with direction changes between checkpoints | Spatial memory; exploring to locate checkpoints | Pair work: exploring together | Self-pacing; choosing to keep exploring |
+| 4. Clue Sheets | Running with rapid direction changes | Spatial memory; planning efficient routes | Pair work on clue sheets | Self-pacing; repeating for speed or from memory |
+| 5. Map Readiness | Running between checkpoints with map | Map orientation; spatial vocabulary; connecting 2D map to 3D space | Partner verification; sharing maps | Fixing orientation mistakes; choosing harder levels |
+| 6. Maps | Walking and running routes; route choice movement | Map symbols; strategy and route planning | Partner and solo work | Independent navigation; self-directed courses |
 
 ## Resources
 
