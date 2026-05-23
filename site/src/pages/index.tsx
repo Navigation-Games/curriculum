@@ -41,7 +41,7 @@ export default function Home(): React.ReactElement {
             emoji="🏫"
             title="Teach at a School"
             description="Structured lesson progressions by grade band, aligned to PE standards."
-            link="/school"
+            link="/lessons/school"
           />
           <PathCard
             emoji="⛺"

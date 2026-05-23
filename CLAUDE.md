@@ -68,7 +68,8 @@ Every core activity needs these, consistent with each other:
 - `background/` - source materials, reference docs, uploaded context files (site-tools-discussion.md, ng-curriculum-prep.html, etc.)
 - `notes/` - curriculum decisions, open questions, author notes
 - `site/docs/activities/core/` - core activity pages with companions inline
-- `site/docs/lessons/grade-3-5/` - five-lesson progression plus indoor alternative
+- `site/docs/lessons/school/` - lesson progressions by grade band (K-2, 3-5, 6+)
+- `site/docs/lessons/camp/` - camp lesson progressions
 - `site/docs/equipment/` - setup guides, SI timing
 - `site/src/components/` - reusable React components (ActivityCard, CardGrid, YouTube)
 - `site/src/pages/` - standalone landing pages (home, school, camp, quick-start)
@@ -82,3 +83,4 @@ Every core activity needs these, consistent with each other:
 - Companion-to-core relationships tracked in frontmatter `parents` field (supports many-to-many)
 - SI (electronic timing) instructions live on their own equipment page, not repeated in every activity
 - Deferred activities (Corridor-O, Line-O, Window-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O) are set aside. Don't include in main curriculum structure
+- Do not modify the Learning Progression table in `site/docs/lessons/school/grade-3-5/index.md` without explicit review from Barb. The 3-column format (Lesson / Main Activity / What it adds) is intentional
