@@ -17,6 +17,10 @@ vocabulary:
   - Feature
   - Route choice
 activities:
+  - title: Boundary Run
+    description: "Warm up: run the boundary together."
+    link: /activities/core/boundary-run
+    tag: warm-up
   - title: Map Walk
     description: Walk a route together, matching map symbols to real features.
     link: /activities/core/map-walk
@@ -25,8 +29,18 @@ activities:
     description: Visit as many checkpoints as possible in any order.
     link: /activities/core/score-o
     tag: core
+  - title: Symbol Relay
+    description: Team relay to learn map symbols competitively.
+    tag: extension
+  - title: Poison-O
+    description: Score-O where wrong checkpoints lose points.
+    tag: extension
+  - title: Poker-O
+    description: Collect poker hands at checkpoints.
+    tag: extension
 ---
 
+> **Draft video script:** [View script](../../../video-scripts/lessons/6-maps.md)
 
 ## Goals
 

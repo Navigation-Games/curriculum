@@ -1,5 +1,6 @@
 ---
-title: Gathering
+title: "Gathering — Activity"
+sidebar_label: Gathering
 sidebar_position: 2
 tags: [core, level-1]
 time: 30-45 minutes
@@ -44,14 +45,14 @@ Builds divided attention, group responsibility, and awareness in terrain.`;
   </figure>
 </div>
 
-# Gathering
+# Gathering — Activity
 
 **Return to the teacher on a signal**
 
 <ActivityMeta
   time={frontMatter.time}
   space={frontMatter.space}
-  materials={frontMatter.materials.join(', ')}
+  materials={frontMatter.materials}
   vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
 />
 
@@ -152,7 +153,7 @@ See the [Glossary](/reference/glossary) for all curriculum terms.
 <CompactOnly>
 
 <OnePager
-  title="Gathering"
+  title="Gathering — Activity"
   tagline="Return to the teacher on a signal"
   epigraph="In orienteering, it's important to stay aware and return on time"
   description={description}
@@ -169,6 +170,15 @@ See the [Glossary](/reference/glossary) for all curriculum terms.
     'Group communication',
     'Free movement with confidence',
     'Boundary respect',
+  ]}
+  steps={[
+    'Lead the group to the central location and have them gather around you',
+    'Review the boundary',
+    'Explain the activity: they will move freely within the boundary while waiting for a signal',
+    'Demonstrate the gathering signal clearly. When students hear it, they must return to the central location as quickly and safely as possible',
+    'Send the group into the space to move freely (walking, jogging, skipping). They can go individually, in pairs, or small groups',
+    'After 2-3 minutes, signal for the group to gather. Count how long it takes the whole group to assemble',
+    'Repeat, encouraging the group to come up with strategies to improve their gathering time',
   ]}
   delivery={
     <>

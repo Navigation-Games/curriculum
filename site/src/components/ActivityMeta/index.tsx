@@ -1,4 +1,5 @@
 import React from 'react';
+import MaterialLink from '@site/src/components/MaterialLink';
 import styles from './styles.module.css';
 
 interface VocabTerm {
@@ -9,7 +10,7 @@ interface VocabTerm {
 interface ActivityMetaProps {
   time?: string;
   space?: string;
-  materials?: string;
+  materials?: string | string[];
   vocabulary?: (string | VocabTerm)[];
   groupSize?: string;
   show?: string[];
@@ -25,6 +26,18 @@ const labels: Record<string, string> = {
   groupSize: 'Group Size',
 };
 
+function renderMaterials(value: string | string[]): React.ReactNode {
+  const items = Array.isArray(value)
+    ? value
+    : value.split(',').map((s) => s.trim());
+  return items.map((m, i) => (
+    <React.Fragment key={m}>
+      {i > 0 && ', '}
+      <MaterialLink name={m} />
+    </React.Fragment>
+  ));
+}
+
 export default function ActivityMeta(props: ActivityMetaProps): React.ReactElement | null {
   const {show, ...fields} = props;
   const visibleFields = show || defaultFields;
@@ -33,6 +46,11 @@ export default function ActivityMeta(props: ActivityMetaProps): React.ReactEleme
     .filter((field) => fields[field] != null)
     .map((field) => {
       const value = fields[field];
+
+      if (field === 'materials') {
+        return {label: labels[field], value: renderMaterials(value as string | string[])};
+      }
+
       let display: string;
       if (Array.isArray(value)) {
         display = value.map((v) =>

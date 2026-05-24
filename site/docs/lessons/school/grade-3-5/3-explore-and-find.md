@@ -1,5 +1,6 @@
 ---
-title: "3 - Explore & Find"
+title: "3 - Explore & Find — Lesson Plan"
+sidebar_label: "3 - Explore & Find"
 sidebar_position: 3
 ---
 
@@ -7,6 +8,7 @@ sidebar_position: 3
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
+import MaterialLink from '@site/src/components/MaterialLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -14,13 +16,13 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 3 - Explore & Find
+# 3 - Explore & Find — Lesson Plan
 
 | | |
 |---|---|
 | **Time** | 30-45 minutes |
 | **Space** | Gym, schoolyard, or local park |
-| **Materials** | Checkpoints (cones with animal pictures) |
+| **Materials** | <MaterialLink name="Checkpoints (cones with animal pictures)" />, <MaterialLink name="Cones (optional, for marking boundaries)" /> |
 | **Setup** | Place animal checkpoints around the space within the boundary |
 | **Vocabulary** | Boundary, Gathering signal, Checkpoint |
 
@@ -89,11 +91,11 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="3 - Explore & Find"
+  title="3 - Explore & Find — Lesson Plan"
   tagline="There are things out there; go find them and come back"
   time="30-45 minutes"
   space="Gym, schoolyard, or local park"
-  materials={['Checkpoints (cones with animal pictures)']}
+  materials={['Checkpoints (cones with animal pictures)', 'Cones (optional, for marking boundaries)']}
   setup="Place animal checkpoints around the space within the boundary"
   vocabulary={['Boundary', 'Gathering signal', 'Checkpoint']}
   goals={[

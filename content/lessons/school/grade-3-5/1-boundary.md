@@ -18,11 +18,20 @@ activities:
     link: /activities/core/boundary-run
     tag: core
   - title: Hot or Cold
-    description: Use temperature clues to direct a partner to a secret cone.
+    description: Use temperature clues to direct a partner to a secret location.
+    link: /activities/core/boundary-run
+    tag: extension
+  - title: Shrinking Boundary Tag
+    description: Play tag while the boundary gets smaller.
+    link: /activities/core/boundary-run
+    tag: extension
+  - title: Capture the Flag
+    description: Two teams, two territories. Cross the boundary to grab the flag.
     link: /activities/core/boundary-run
     tag: extension
 ---
 
+> **Draft video script:** [View script](../../../video-scripts/lessons/1-boundary.md)
 
 ## Goals
 
@@ -66,3 +75,4 @@ activities:
 - Travel the boundary with different movements (skipping, galloping)
 - **Hot or Cold**: direct a partner to a secret cone using temperature clues
 - **Shrinking Boundary Tag**: play tag while the boundary gets smaller
+- **Capture the Flag**: two teams with separate territories; cross the boundary to grab the flag

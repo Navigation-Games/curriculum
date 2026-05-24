@@ -1,5 +1,6 @@
 ---
-title: "5 - Map Readiness"
+title: "5 - Map Readiness — Lesson Plan"
+sidebar_label: "5 - Map Readiness"
 sidebar_position: 5
 ---
 
@@ -7,6 +8,7 @@ sidebar_position: 5
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
+import MaterialLink from '@site/src/components/MaterialLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -14,7 +16,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 5 - Map Readiness
+# 5 - Map Readiness — Lesson Plan
 
 > "We use a map to know where something is before we even find it"
 
@@ -22,13 +24,19 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-60 minutes |
 | **Space** | Gym, schoolyard, or local park |
-| **Materials** | Checkpoints with animals and numbers, 4 colored landmark cones, Pattern maps, Whiteboard and markers, Master map |
+| **Materials** | <MaterialLink name="Checkpoints with animals and numbers" />, <MaterialLink name="4 colored landmark cones" />, <MaterialLink name="Pattern maps" />, <MaterialLink name="Whiteboard and markers" />, <MaterialLink name="Master map" />, <MaterialLink name="Animal-picture checkpoints" />, <MaterialLink name="Clue sheets" /> |
 | **Setup** | Arrange checkpoints in a geometric pattern with colored landmark cones at corners |
 | **Vocabulary** | Map, Orient the map, Landmark, Spatial relationship words (next to, closest, furthest, between) |
 
 ## Activities
 
 <CardGrid columns={3}>
+  <ActivityCard
+    title="Animal-O"
+    description="Warm up: quick Animal-O course to review clue sheets."
+    link="/activities/core/animal-o"
+    tag="warm-up"
+  />
   <ActivityCard
     title="Geometric-O"
     description="Orient a simple map and visit checkpoints in order."
@@ -50,6 +58,12 @@ import OnePager from '@site/src/components/OnePager';
     description="Guide a partner using only approved spatial words."
     link="/activities/core/geometric-o"
     tag="variation"
+  />
+  <ActivityCard
+    title="Napkin-O"
+    description="Communication challenge with hidden animal pictures."
+    link="/activities/core/geometric-o"
+    tag="extension"
   />
 </CardGrid>
 
@@ -102,12 +116,12 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="5 - Map Readiness"
+  title="5 - Map Readiness — Lesson Plan"
   tagline="Spatial relationships, orienting, connecting a map to the space"
   epigraph="We use a map to know where something is before we even find it"
   time="30-60 minutes"
   space="Gym, schoolyard, or local park"
-  materials={['Checkpoints with animals and numbers', '4 colored landmark cones', 'Pattern maps', 'Whiteboard and markers', 'Master map']}
+  materials={['Checkpoints with animals and numbers', '4 colored landmark cones', 'Pattern maps', 'Whiteboard and markers', 'Master map', 'Animal-picture checkpoints', 'Clue sheets']}
   setup="Arrange checkpoints in a geometric pattern with colored landmark cones at corners"
   vocabulary={['Map', 'Orient the map', 'Landmark', 'Spatial relationship words (next to, closest, furthest, between)']}
   goals={[

@@ -19,6 +19,10 @@ vocabulary:
   - Landmark
   - Spatial relationship words (next to, closest, furthest, between)
 activities:
+  - title: Animal-O
+    description: "Warm up: quick Animal-O course to review clue sheets."
+    link: /activities/core/animal-o
+    tag: warm-up
   - title: Geometric-O
     description: Orient a simple map and visit checkpoints in order.
     link: /activities/core/geometric-o
@@ -33,8 +37,13 @@ activities:
     description: Guide a partner using only approved spatial words.
     link: /activities/core/geometric-o
     tag: variation
+  - title: Napkin-O
+    description: Communication challenge with hidden animal pictures.
+    link: /activities/core/geometric-o
+    tag: extension
 ---
 
+> **Draft video script:** [View script](../../../video-scripts/lessons/5-map-readiness.md)
 
 ## Goals
 

@@ -25,6 +25,7 @@ activities:
     tag: core
 ---
 
+> **Draft video script:** [View script](../../../video-scripts/lessons/2-return.md)
 
 ## Goals
 

@@ -5,7 +5,7 @@ tagline: Travel the boundary of the play area
 epigraph: In orienteering we stay inside a boundary
 sidebar_position: 1
 tags: [core, level-1]
-time: 15 minutes
+time: Walk the boundary + 5 min discussion
 space: Gym, schoolyard, or local park
 materials:
   - Cones (optional, for marking boundaries)
@@ -20,12 +20,13 @@ videos:
     title: Boundary Run
 ---
 
+> **Draft video script:** [View script](../video-scripts/activities/boundary-run.md)
 
 ## Description
 
 The leader runs around the boundary of the play area while participants follow. Then participants show what they learned by identifying which spots are inside or outside the boundary, including tricky areas they should not enter.
 
-Builds listening skills, safety awareness, and familiarity with the play space.
+Builds listening skills, safety awareness, and familiarity with the play space. Physically traversing the boundary reinforces it through sensory-motor experience, which sticks better than verbal description alone and works across language levels.
 
 
 ## Goals
@@ -58,12 +59,23 @@ Builds listening skills, safety awareness, and familiarity with the play space.
 
 ## Steps
 
-1. Gather participants together at a starting point
-2. Explain that you will all run around the boundary together, and they need to pay attention to where you go
-3. Everyone must stay behind the leader at all times, even if they can run faster. This ensures everyone sees the full boundary
-4. Run around the boundary. Make sure participants do not cross outside the play area
-5. After the run, quiz participants on the boundaries: point to landmarks and ask whether they are inside or outside
-6. If there are gardens or other off-limits areas within the boundary, ask whether participants should go there even though it is technically "inside"
+1. Short: Gather at a starting point
+   Long: Gather participants together at a starting point
+
+2. Short: Explain the boundary run
+   Long: Explain that you will all run around the boundary together, and they need to pay attention to where you go
+
+3. Short: Run together, stay behind the leader
+   Long: Everyone must stay behind the leader at all times, even if they can run faster. This ensures everyone sees the full boundary
+
+4. Short: Run the boundary
+   Long: Run around the boundary. Make sure participants do not cross outside the play area
+
+5. Short: Quiz inside vs. outside
+   Long: After the run, quiz participants on the boundaries: point to landmarks and ask whether they are inside or outside
+
+6. Short: Discuss off-limits areas
+   Long: If there are gardens or other off-limits areas within the boundary, ask whether participants should go there even though it is technically "inside"
 
 
 ## Progression
@@ -130,16 +142,16 @@ b. If there are off-limits areas within the boundary, ask if they should go ther
 
 - Repeat the boundary for speed
 - Travel the boundary with different locomotor movements (skipping, galloping, etc.)
-- Play Hot or Cold or Shrinking Boundary Tag (see Companions tab)
+- Play Hot or Cold, Shrinking Boundary Tag, or Capture the Flag (see Companions tab)
 
 
 ## Companions
 
 ### Hot or Cold *(extension)*
 
-**Use "hot or cold" clues to direct a partner to a secret cone.**
+**Use "hot or cold" clues to direct a partner to a secret location.**
 
-One partner secretly picks a cone. The other partner searches while the first gives temperature clues: "warmer" as they get closer, "colder" as they move away. Swap roles when the cone is found. Increase difficulty by choosing two or three secret cones.
+One partner secretly picks a location. The other partner searches while the first gives temperature clues: "warmer" as they get closer, "colder" as they move away. Both partners must stay inside the boundary at all times. Swap roles when the cone is found. Increase difficulty by choosing two or three secret cones.
 
 Reinforces communication, listening, and spatial awareness within the boundary.
 
@@ -147,7 +159,7 @@ Reinforces communication, listening, and spatial awareness within the boundary.
 |---|---|
 | **Time** | 10-15 minutes |
 | **Materials** | Cones placed in a regular pattern (rectangular or triangular grid) |
-| **How to run it** | Pair up. One partner secretly picks a cone. The other searches using "hot or cold" clues. Swap when found. Increase to 2-3 secret cones for more challenge. |
+| **How to run it** | Pair up. One partner secretly picks a location. The other searches using "hot or cold" clues. Both stay inside the boundary. Swap when found. Increase to 2-3 secret locations for more challenge. |
 
 ### Shrinking Boundary Tag *(extension)*
 
@@ -162,3 +174,17 @@ Reinforces boundary awareness while adding physical challenge and fun.
 | **Time** | 10-15 minutes |
 | **Materials** | Cones arranged in concentric circles or progressively smaller areas |
 | **How to run it** | Play tag within the boundary. Every few minutes, announce the boundary is shrinking and give a 10-second countdown. Anyone outside the new boundary gets the tag consequence. Continue until playing within the smallest area. |
+
+### Capture the Flag *(extension)*
+
+**Two teams, two territories, one flag each.**
+
+Divide the play area into two territories with a clear boundary line between them. Each team hides a flag in their territory. Teams try to cross into the other territory, grab the flag, and bring it back without getting tagged. Players tagged in the opposing territory go to a designated "jail" until freed by a teammate.
+
+Reinforces boundary awareness by giving boundaries a strategic purpose: crossing into the other team's territory means risk.
+
+| | |
+|---|---|
+| **Time** | 15-20 minutes |
+| **Materials** | Cones to mark the dividing line, 2 flags (or pinnies/bandanas) |
+| **How to run it** | Split the space in half. Each team hides their flag. Players cross into enemy territory to grab the flag and return it to their side. Tagged players go to jail. Freed by a teammate's tag. First team to capture the flag wins. |

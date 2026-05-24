@@ -39,6 +39,41 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+/* ===== LINK VISIBILITY ===== */
+
+article a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+article a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Don't underline card links, nav links, or heading anchor links */
+article a[class*="card"],
+article a[class*="Card"],
+article a[class*="hash-link"],
+nav a {
+  text-decoration: none;
+}
+
+/* ===== PAGE TYPE TINTS ===== */
+
+body.page-lesson-plan {
+  background-color: #fdf8f0;
+}
+
+body.page-activity {
+  background-color: #f0f5fa;
+}
+
+body.page-school-overview,
+body.page-camp-overview {
+  background-color: #f0faf0;
+}
+
 /* ===== PRINT STYLES ===== */
 
 @media print {

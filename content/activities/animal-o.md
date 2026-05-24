@@ -9,9 +9,9 @@ tags: [core, level-1]
 time: 15-30 minutes
 space: Gym, schoolyard, or local park
 materials:
-  - Checkpoints (pictures of animals)
+  - Animal-picture checkpoints
   - Clue sheets
-setup: Place animal checkpoints around the defined space
+setup: Place animal-picture checkpoints around the defined space
 images:
   - src: /curriculum/img/activities/animal-o-pig.jpg
     alt: Child in yellow raincoat finding the pig checkpoint
@@ -36,6 +36,7 @@ videos:
 si_timing: true
 ---
 
+> **Draft video script:** [View script](../video-scripts/activities/animal-o.md)
 
 ## Description
 
@@ -81,7 +82,7 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 
 ## Setup
 
-1. Place animal-picture cones around the play area, spread out within the boundary
+1. Place animal-picture checkpoints around the play area, spread out within the boundary
 2. Set up a start/finish area with a marker or cone
 3. Prepare clue sheets with different sequences of animals. Start with short sheets (2-3 animals) and have longer ones (5+) ready
 4. Optional: set up a whiteboard near start/finish to track times or completions

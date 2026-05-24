@@ -1,5 +1,6 @@
 ---
-title: Map Walk
+title: "Map Walk — Activity"
+sidebar_label: Map Walk
 sidebar_position: 5
 tags: [core, level-2]
 time: 15-20 minutes
@@ -34,14 +35,14 @@ Map Walk bridges the gap between simple pattern maps and independent navigation.
 
 <FullOnly>
 
-# Map Walk
+# Map Walk — Activity
 
 **Walk a route together, matching map symbols to real features**
 
 <ActivityMeta
   time={frontMatter.time}
   space={frontMatter.space}
-  materials={frontMatter.materials.join(', ')}
+  materials={frontMatter.materials}
   vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
 />
 
@@ -67,23 +68,6 @@ Students completing this activity will be able to:
 1. Study the orienteering map and plan a walking route that passes through a variety of features (paths, buildings, fences, vegetation boundaries, open areas)
 2. Choose 5-8 stops where a clear feature is visible and identifiable on the map
 3. At each stop, know which symbol corresponds to the feature so you can point it out
-
-### Steps
-
-**1. Hand out maps.** Give each student (or pair) a map. Orient it together at the start location.
-
-**2. Walk to the first stop.** Have students track their location on the map as they walk:
-   - "Keep your thumb on the map where you are right now"
-   - At the stop, ask: "What feature are we standing at?"
-   - Show the symbol on the map. Ask what else uses that same symbol nearby
-
-**3. Continue to each stop.** At each one:
-   - Students orient their maps
-   - Identify the feature and its symbol
-   - Look around for other features they can see on the map
-   - Ask: "If we were going to walk to that tree, which direction would we go?"
-
-**4. Return to the start.** Ask students to lead the group back, reading the map to retrace the route.
 
 ### Progression
 
@@ -139,7 +123,7 @@ See the [Glossary](/reference/glossary) for all curriculum terms.
 <CompactOnly>
 
 <OnePager
-  title="Map Walk"
+  title="Map Walk — Activity"
   tagline="Walk a route together, matching map symbols to real features"
   epigraph="Every symbol on the map is something you can see and touch"
   description={description}

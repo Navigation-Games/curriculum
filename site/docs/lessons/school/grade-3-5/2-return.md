@@ -1,5 +1,6 @@
 ---
-title: "2 - Return"
+title: "2 - Return — Lesson Plan"
+sidebar_label: "2 - Return"
 sidebar_position: 2
 ---
 
@@ -7,6 +8,7 @@ sidebar_position: 2
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
+import MaterialLink from '@site/src/components/MaterialLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -14,7 +16,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 2 - Return
+# 2 - Return — Lesson Plan
 
 > "In orienteering, you can go anywhere. The finish is always waiting."
 
@@ -22,7 +24,7 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 15-30 minutes |
 | **Space** | Gym, schoolyard, or local park |
-| **Materials** | Whistle or flag, Cone or marker for home base |
+| **Materials** | <MaterialLink name="Whistle or flag" />, <MaterialLink name="Cone or marker for home base" /> |
 | **Setup** | Establish a clear boundary and place a central home base marker |
 | **Vocabulary** | Boundary, Home base (start/finish), Gathering signal |
 
@@ -83,7 +85,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="2 - Return"
+  title="2 - Return — Lesson Plan"
   tagline="Find your way back from anywhere in the boundary"
   epigraph="In orienteering, you can go anywhere. The finish is always waiting."
   time="15-30 minutes"

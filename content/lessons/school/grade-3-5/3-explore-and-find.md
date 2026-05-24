@@ -26,6 +26,7 @@ activities:
     tag: variation
 ---
 
+> **Draft video script:** [View script](../../../video-scripts/lessons/3-explore-and-find.md)
 
 ## Goals
 

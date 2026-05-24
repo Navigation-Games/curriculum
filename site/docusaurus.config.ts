@@ -20,6 +20,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  clientModules: [
+    './src/clientModules/pageTypeClass.js',
+  ],
+
   presets: [
     [
       'classic',

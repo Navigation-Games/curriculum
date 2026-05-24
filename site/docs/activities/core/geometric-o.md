@@ -1,5 +1,6 @@
 ---
-title: Geometric-O
+title: "Geometric-O — Activity"
+sidebar_label: Geometric-O
 sidebar_position: 4
 tags: [core, level-1]
 time: 30-60 minutes
@@ -41,14 +42,14 @@ Builds map reading, orientation, spatial relationships, and the ability to conne
 
 <FullOnly>
 
-# Geometric-O
+# Geometric-O — Activity
 
 **Use a simple map to do progressively harder courses**
 
 <ActivityMeta
   time={frontMatter.time}
   space={frontMatter.space}
-  materials={frontMatter.materials.join(', ')}
+  materials={frontMatter.materials}
   vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
 />
 
@@ -79,26 +80,6 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 2. Place colored cones (red, blue, green, yellow) in the corners as landmarks. Exact distances do not need to be perfect as long as cones are in the correct positions relative to the colored landmarks
 3. Draw the arrangement on a whiteboard without indicating which animal is at each location
 4. Set geometric maps out where students can see them, ideally next to a self-serve station
-
-### Steps
-
-**1. Whiteboard introduction.** Have students gather facing the arrangement:
-   - Hold up the whiteboard map upside down (not oriented to the cones)
-   - Quiz students on what the dots represent (orange dots = animal cones, colored dots = colored landmark cones)
-   - Ask students what is wrong with the map (it is upside down)
-   - Have students shout "Stop!" as you slowly rotate the map to orient it
-   - When oriented, show how colored cones on the map match real life, and how animal cone groupings match too
-   - Point to checkpoints on the map and ask which animal is there. Then point to animals in real life and ask where they are on the map
-
-**2. Spatial descriptions.** Ask students to find checkpoints based on descriptions of increasing difficulty:
-   - Easy: "Find the animal closest to the red cone"
-   - Medium: "Find the animal furthest from the blue cone"
-   - Hard: "Find all the animals between the yellow and green cone"
-
-**3. Geometric courses.** Students may work in pairs, sharing one map and switching who holds it after each course:
-   - Pass out 5-checkpoint maps. Each course has an animal name on it. Visit checkpoints in order, starting with the triangle
-   - The partner with the animal clue sheet can verify correctness
-   - Progress to 10-checkpoint maps
 
 ### Progression
 
@@ -252,7 +233,7 @@ See [Using SI Equipment](/equipment/si-timing) for setup instructions.
 <CompactOnly>
 
 <OnePager
-  title="Geometric-O"
+  title="Geometric-O — Activity"
   tagline="Use a simple map to do progressively harder courses"
   epigraph="We use a map to know where something is before we even find it"
   description={description}

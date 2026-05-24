@@ -41,7 +41,7 @@ Plan for six class periods, one per lesson. Lessons 5 and 6 often extend across 
 
 | Parent | Activity | Type | Description |
 |---|---|---|---|
-| Boundary Run | Hot or Cold | Extension | Use temperature clues to direct a partner to a secret cone |
+| Boundary Run | Hot or Cold | Extension | Use temperature clues to direct a partner to a secret location |
 | Boundary Run | Shrinking Boundary Tag | Extension | Play tag while the boundary gets smaller |
 | Animal-O | Clothespin-O | Extension | Find hidden objects and describe their locations |
 | Animal-O | Animal Relay | Variation | Take turns running to animal checkpoints |

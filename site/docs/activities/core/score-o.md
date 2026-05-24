@@ -1,5 +1,6 @@
 ---
-title: Score-O
+title: "Score-O — Activity"
+sidebar_label: Score-O
 sidebar_position: 6
 tags: [core, level-2]
 time: 15-30 minutes
@@ -38,14 +39,14 @@ Score-O is a bridge between structured courses (where checkpoints are visited in
 
 <FullOnly>
 
-# Score-O (Map Treasure Hunt)
+# Score-O — Activity (Map Treasure Hunt)
 
 **Visit as many checkpoints as possible in any order**
 
 <ActivityMeta
   time={frontMatter.time}
   space={frontMatter.space}
-  materials={frontMatter.materials.join(', ')}
+  materials={frontMatter.materials}
   vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
 />
 
@@ -73,25 +74,6 @@ Students completing this activity will be able to:
 3. Spread checkpoints across the mapped area at varying distances from the start
 4. Mark a clear start/finish location
 5. Print maps with checkpoint circles already marked
-
-### Steps
-
-**1. Map review.** Gather students with their maps:
-   - Orient the map together
-   - Point out a few checkpoint circles and ask what feature each one is near
-   - Explain that they can visit checkpoints in any order
-
-**2. Strategy discussion.** Before starting:
-   - Ask: "If you want to visit the most checkpoints, what would your plan be?"
-   - Discuss: start with nearby ones? Group clusters? Save far ones for last?
-   - Emphasize that there is no single best strategy
-
-**3. First round.** Set a time limit (8-12 minutes for beginners):
-   - Students go individually or in pairs
-   - At each checkpoint, record the letter code on the scorecard
-   - Return to the start/finish before time runs out
-
-**4. Scoring.** Count correct codes. Only checkpoints with the right letter code count.
 
 ### Progression
 
@@ -173,7 +155,7 @@ Set up a Score-O course, but add extra "poison" checkpoints that are not on the 
 <CompactOnly>
 
 <OnePager
-  title="Score-O"
+  title="Score-O — Activity"
   tagline="Visit as many checkpoints as possible in any order"
   epigraph="You get to choose where to go and in what order"
   description={description}

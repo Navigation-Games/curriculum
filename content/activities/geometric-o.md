@@ -37,6 +37,7 @@ videos:
 si_timing: true
 ---
 
+> **Draft video script:** [View script](../video-scripts/activities/geometric-o.md)
 
 ## Description
 

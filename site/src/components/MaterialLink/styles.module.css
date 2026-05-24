@@ -1,0 +1,63 @@
+.materialLink {
+  cursor: pointer;
+  border-bottom: 1px dashed var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  position: relative;
+}
+
+.materialLink:hover {
+  border-bottom-style: solid;
+}
+
+.popover {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.popover::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--ifm-color-emphasis-300);
+}
+
+.popoverTitle {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.popoverDesc {
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.popoverDetail {
+  margin: 0.25rem 0;
+}
+
+.popoverDetail strong {
+  color: var(--ifm-color-emphasis-800);
+}
+
+.popoverLink {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  text-align: right;
+}

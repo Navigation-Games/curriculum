@@ -16,6 +16,10 @@ vocabulary:
   - Course
   - Spatial memory
 activities:
+  - title: Boundary Run
+    description: "Warm up: run the boundary together."
+    link: /activities/core/boundary-run
+    tag: warm-up
   - title: Animal-O
     description: Find the animals in order using clue sheets.
     link: /activities/core/animal-o
@@ -26,6 +30,7 @@ activities:
     tag: readiness
 ---
 
+> **Draft video script:** [View script](../../../video-scripts/lessons/4-clue-sheets.md)
 
 ## Goals
 

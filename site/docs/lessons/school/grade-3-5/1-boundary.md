@@ -1,5 +1,6 @@
 ---
-title: "1 - Boundary"
+title: "1 - Boundary — Lesson Plan"
+sidebar_label: "1 - Boundary"
 sidebar_position: 1
 ---
 
@@ -7,6 +8,7 @@ sidebar_position: 1
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
+import MaterialLink from '@site/src/components/MaterialLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -14,7 +16,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 1 - Boundary
+# 1 - Boundary — Lesson Plan
 
 > "In orienteering we stay inside a boundary"
 
@@ -22,13 +24,13 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 15-30 minutes |
 | **Space** | Gym, schoolyard, or local park |
-| **Materials** | Cones (optional, for marking boundaries) |
+| **Materials** | <MaterialLink name="Cones (optional, for marking boundaries)" /> |
 | **Setup** | Walk the space and identify the boundary; place cones if edges are unclear |
 | **Vocabulary** | Boundary, Checkpoint |
 
 ## Activities
 
-<CardGrid columns={2}>
+<CardGrid columns={3}>
   <ActivityCard
     title="Boundary Run"
     description="Run the boundary; discuss inside/outside."
@@ -37,7 +39,19 @@ import OnePager from '@site/src/components/OnePager';
   />
   <ActivityCard
     title="Hot or Cold"
-    description="Use temperature clues to direct a partner to a secret cone."
+    description="Use temperature clues to direct a partner to a secret location."
+    link="/activities/core/boundary-run"
+    tag="extension"
+  />
+  <ActivityCard
+    title="Shrinking Boundary Tag"
+    description="Play tag while the boundary gets smaller."
+    link="/activities/core/boundary-run"
+    tag="extension"
+  />
+  <ActivityCard
+    title="Capture the Flag"
+    description="Two teams, two territories. Cross the boundary to grab the flag."
     link="/activities/core/boundary-run"
     tag="extension"
   />
@@ -74,6 +88,7 @@ import OnePager from '@site/src/components/OnePager';
 - Travel the boundary with different movements (skipping, galloping)
 - **Hot or Cold**: direct a partner to a secret cone using temperature clues
 - **Shrinking Boundary Tag**: play tag while the boundary gets smaller
+- **Capture the Flag**: two teams with separate territories; cross the boundary to grab the flag
 
 </FullOnly>
 
@@ -81,7 +96,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="1 - Boundary"
+  title="1 - Boundary — Lesson Plan"
   tagline="Here is where you can go"
   epigraph="In orienteering we stay inside a boundary"
   time="15-30 minutes"
@@ -115,6 +130,7 @@ import OnePager from '@site/src/components/OnePager';
     'Travel the boundary with different movements (skipping, galloping)',
     '**Hot or Cold**: direct a partner to a secret cone using temperature clues',
     '**Shrinking Boundary Tag**: play tag while the boundary gets smaller',
+    '**Capture the Flag**: two teams with separate territories; cross the boundary to grab the flag',
   ]}
 />
 

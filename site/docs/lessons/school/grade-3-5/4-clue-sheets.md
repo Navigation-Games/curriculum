@@ -1,5 +1,6 @@
 ---
-title: "4 - Clue Sheets"
+title: "4 - Clue Sheets — Lesson Plan"
+sidebar_label: "4 - Clue Sheets"
 sidebar_position: 4
 ---
 
@@ -7,6 +8,7 @@ sidebar_position: 4
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
+import MaterialLink from '@site/src/components/MaterialLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -14,7 +16,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 4 - Clue Sheets
+# 4 - Clue Sheets — Lesson Plan
 
 > "In orienteering, you find checkpoints in order using clue sheets"
 
@@ -22,13 +24,19 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-60 minutes |
 | **Space** | Gym, schoolyard, or local park |
-| **Materials** | Checkpoints (cones with animal pictures), Clue sheets, Start/finish markers |
+| **Materials** | <MaterialLink name="Checkpoints (cones with animal pictures)" />, <MaterialLink name="Clue sheets" />, <MaterialLink name="Start/finish markers" />, <MaterialLink name="Cones (optional, for marking boundaries)" /> |
 | **Setup** | Place animal checkpoints and start/finish markers around the space |
 | **Vocabulary** | Clue sheet, Course, Spatial memory |
 
 ## Activities
 
-<CardGrid columns={2}>
+<CardGrid columns={3}>
+  <ActivityCard
+    title="Boundary Run"
+    description="Warm up: run the boundary together."
+    link="/activities/core/boundary-run"
+    tag="warm-up"
+  />
   <ActivityCard
     title="Animal-O"
     description="Find the animals in order using clue sheets."
@@ -89,12 +97,12 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="4 - Clue Sheets"
+  title="4 - Clue Sheets — Lesson Plan"
   tagline="Find them in this specific order"
   epigraph="In orienteering, you find checkpoints in order using clue sheets"
   time="30-60 minutes"
   space="Gym, schoolyard, or local park"
-  materials={['Checkpoints (cones with animal pictures)', 'Clue sheets', 'Start/finish markers']}
+  materials={['Checkpoints (cones with animal pictures)', 'Clue sheets', 'Start/finish markers', 'Cones (optional, for marking boundaries)']}
   setup="Place animal checkpoints and start/finish markers around the space"
   vocabulary={['Clue sheet', 'Course', 'Spatial memory']}
   goals={[

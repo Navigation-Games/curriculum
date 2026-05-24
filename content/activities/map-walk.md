@@ -15,6 +15,7 @@ images: []
 videos: []
 ---
 
+> **Draft video script:** [View script](../video-scripts/activities/map-walk.md)
 
 ## Description
 

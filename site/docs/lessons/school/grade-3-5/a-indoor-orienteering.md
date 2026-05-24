@@ -1,5 +1,6 @@
 ---
-title: "A - Indoor Orienteering"
+title: "A - Indoor Orienteering — Lesson Plan"
+sidebar_label: "A - Indoor Orienteering"
 sidebar_position: 7
 ---
 
@@ -7,6 +8,7 @@ sidebar_position: 7
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
+import MaterialLink from '@site/src/components/MaterialLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -14,7 +16,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# A - Indoor Orienteering
+# A - Indoor Orienteering — Lesson Plan
 
 > "Today we will be finding our way on a basketball court"
 
@@ -22,13 +24,19 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-60 minutes |
 | **Space** | Gym with basketball court |
-| **Materials** | Checkpoints, Basketball court maps (half-court and full-court versions) |
+| **Materials** | <MaterialLink name="Checkpoints" />, <MaterialLink name="Basketball court maps (half-court and full-court versions)" />, <MaterialLink name="Cones (optional, for marking boundaries)" /> |
 | **Setup** | Place checkpoints according to the master map |
 | **Vocabulary** | Orient the map, Landmark, Route choice |
 
 ## Activities
 
 <CardGrid columns={3}>
+  <ActivityCard
+    title="Boundary Run"
+    description="Warm up: run the boundary of the gym."
+    link="/activities/core/boundary-run"
+    tag="warm-up"
+  />
   <ActivityCard
     title="Basketball-O"
     description="Run orienteering courses on the basketball court map."
@@ -88,12 +96,12 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="A - Indoor Orienteering"
+  title="A - Indoor Orienteering — Lesson Plan"
   tagline="Navigate on a basketball court"
   epigraph="Today we will be finding our way on a basketball court"
   time="30-60 minutes"
   space="Gym with basketball court"
-  materials={['Checkpoints', 'Basketball court maps (half-court and full-court versions)']}
+  materials={['Checkpoints', 'Basketball court maps (half-court and full-court versions)', 'Cones (optional, for marking boundaries)']}
   setup="Place checkpoints according to the master map"
   vocabulary={['Orient the map', 'Landmark', 'Route choice']}
   goals={[

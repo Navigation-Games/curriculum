@@ -14,6 +14,7 @@ interface OnePagerProps {
   setup?: string;
   vocabulary?: string[];
   goals?: string[];
+  steps?: string[];
   delivery?: React.ReactNode;
   reflection?: string[];
   extensions?: string[];
@@ -32,6 +33,7 @@ export default function OnePager({
   setup,
   vocabulary,
   goals,
+  steps,
   delivery,
   reflection,
   extensions,
@@ -72,6 +74,15 @@ export default function OnePager({
                 <ul className={styles.list}>
                   {goals.map((g, i) => <li key={i}>{g}</li>)}
                 </ul>
+              </div>
+            )}
+
+            {steps && steps.length > 0 && (
+              <div className={styles.section}>
+                <h3 className={styles.sectionTitle}>Steps</h3>
+                <ol className={styles.list}>
+                  {steps.map((s, i) => <li key={i}>{s}</li>)}
+                </ol>
               </div>
             )}
 

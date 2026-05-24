@@ -18,6 +18,7 @@ images: []
 videos: []
 ---
 
+> **Draft video script:** [View script](../video-scripts/activities/score-o.md)
 
 ## Description
 

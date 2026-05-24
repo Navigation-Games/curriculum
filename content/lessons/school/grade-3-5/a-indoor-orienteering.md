@@ -15,6 +15,10 @@ vocabulary:
   - Landmark
   - Route choice
 activities:
+  - title: Boundary Run
+    description: "Warm up: run the boundary of the gym."
+    link: /activities/core/boundary-run
+    tag: warm-up
   - title: Basketball-O
     description: Run orienteering courses on the basketball court map.
     link: /activities/core/geometric-o
@@ -28,6 +32,7 @@ activities:
     tag: extension
 ---
 
+> **Draft video script:** [View script](../../../video-scripts/lessons/a-indoor-orienteering.md)
 
 ## Goals
 

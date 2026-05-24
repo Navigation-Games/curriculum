@@ -1,13 +1,14 @@
 ---
-title: Animal-O
+title: "Animal-O — Activity"
+sidebar_label: Animal-O
 sidebar_position: 3
 tags: [core, level-1]
 time: 15-30 minutes
 space: Gym, schoolyard, or local park
 materials:
-  - Checkpoints (pictures of animals)
+  - Animal-picture checkpoints
   - Clue sheets
-setup: Place animal checkpoints around the defined space
+setup: Place animal-picture checkpoints around the defined space
 vocabulary:
   - term: Clue sheet
     definition: A list showing the order to visit checkpoints. In Animal-O, the clue sheet shows animal pictures.
@@ -55,14 +56,14 @@ Builds spatial memory, observation, and navigation skills.`;
   </figure>
 </div>
 
-# Animal-O (Clue Sheet Orienteering)
+# Animal-O — Activity (Clue Sheet Orienteering)
 
 **Use a clue sheet to find checkpoints in order**
 
 <ActivityMeta
   time={frontMatter.time}
   space={frontMatter.space}
-  materials={frontMatter.materials.join(', ')}
+  materials={frontMatter.materials}
   vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}
 />
 
@@ -87,7 +88,7 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 
 ### Setup
 
-1. Place animal-picture cones around the play area, spread out within the boundary
+1. Place animal-picture checkpoints around the play area, spread out within the boundary
 2. Set up a start/finish area with a marker or cone
 3. Prepare clue sheets with different sequences of animals. Start with short sheets (2-3 animals) and have longer ones (5+) ready
 4. Optional: set up a whiteboard near start/finish to track times or completions
@@ -194,7 +195,7 @@ See [Using SI Equipment](/equipment/si-timing) for setup instructions.
 <CompactOnly>
 
 <OnePager
-  title="Animal-O"
+  title="Animal-O — Activity"
   tagline="Use a clue sheet to find checkpoints in order"
   epigraph="In orienteering, you find checkpoints in order using clue sheets"
   description={description}
@@ -209,6 +210,12 @@ See [Using SI Equipment](/equipment/si-timing) for setup instructions.
     'Confirming checkpoints',
     'Spatial memory',
     'Agility',
+  ]}
+  steps={[
+    'Each student or pair picks up a clue sheet at the start',
+    'Find the first animal on the clue sheet. Run to that checkpoint and confirm the animal matches',
+    'Continue to the next animal on the sheet, visiting each checkpoint in order',
+    'Return to the finish after the last checkpoint',
   ]}
   delivery={
     <>

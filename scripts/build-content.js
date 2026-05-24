@@ -21,8 +21,9 @@ function main() {
   const errors = [];
   const warnings = [];
 
-  buildDir(DIRS.activitiesContent, DIRS.activitiesOutput, 'activity', errors, warnings);
-  buildDir(DIRS.lessonsContent, DIRS.lessonsOutput, 'lesson', errors, warnings);
+  const activityMaterials = collectActivityMaterials(DIRS.activitiesContent);
+  buildDir(DIRS.activitiesContent, DIRS.activitiesOutput, 'activity', errors, warnings, activityMaterials);
+  buildDir(DIRS.lessonsContent, DIRS.lessonsOutput, 'lesson', errors, warnings, activityMaterials);
 
   if (warnings.length) {
     console.log(`\n  ${warnings.length} warning(s):`);
@@ -36,7 +37,26 @@ function main() {
   }
 }
 
-function buildDir(contentDir, outputDir, type, errors, warnings) {
+function collectActivityMaterials(contentDir) {
+  const map = {};
+  if (!fs.existsSync(contentDir)) return map;
+
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md'));
+  for (const file of files) {
+    const raw = fs.readFileSync(path.join(contentDir, file), 'utf8');
+    const titleMatch = raw.match(/^# (.+)\n/);
+    const fmMatch = raw.match(/---\n([\s\S]*?)\n---/);
+    if (!titleMatch || !fmMatch) continue;
+    const fm = yaml.load(fmMatch[1]);
+    const title = titleMatch[1].trim();
+    if (fm.materials?.length) {
+      map[title.toLowerCase()] = fm.materials;
+    }
+  }
+  return map;
+}
+
+function buildDir(contentDir, outputDir, type, errors, warnings, activityMaterials) {
   if (!fs.existsSync(contentDir)) return;
 
   const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md'));
@@ -52,7 +72,7 @@ function buildDir(contentDir, outputDir, type, errors, warnings) {
 
       const mdx = type === 'activity'
         ? generateActivityMDX(slug, parsed)
-        : generateLessonMDX(slug, parsed);
+        : generateLessonMDX(slug, parsed, activityMaterials);
 
       const outputPath = path.join(outputDir, `${slug}.md`);
       fs.writeFileSync(outputPath, mdx, 'utf8');
@@ -88,8 +108,11 @@ function parseContentFile(raw, type) {
   const vocabulary = type === 'activity'
     ? parseVocabulary(sections.vocabulary || '')
     : [];
+  const steps = type === 'activity'
+    ? parseSteps(sections.steps || '')
+    : [];
 
-  return { fm, sections, goals, vocabulary };
+  return { fm, sections, goals, vocabulary, steps };
 }
 
 function parseSections(body) {
@@ -184,6 +207,45 @@ function parseVocabulary(text) {
   }
 
   return terms;
+}
+
+function parseSteps(text) {
+  if (!text) return [];
+  const items = [];
+  const lines = text.split('\n');
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i];
+
+    // Numbered step with Short/Long format: "1. Short: ..."
+    const shortMatch = line.match(/^\d+\.\s*Short:\s*(.+)$/);
+    if (shortMatch) {
+      const shortText = shortMatch[1].trim();
+      i++;
+      while (i < lines.length && lines[i].trim() === '') i++;
+      const longMatch = lines[i]?.match(/^\s*Long:\s*(.+)$/);
+      if (longMatch) {
+        items.push({ short: shortText, long: longMatch[1].trim() });
+        i++;
+      } else {
+        items.push({ short: shortText, long: shortText });
+      }
+      continue;
+    }
+
+    // Plain numbered step: "1. Step text"
+    const plainMatch = line.match(/^\d+\.\s+(.+)$/);
+    if (plainMatch) {
+      items.push({ short: plainMatch[1].trim(), long: plainMatch[1].trim() });
+      i++;
+      continue;
+    }
+
+    i++;
+  }
+
+  return items;
 }
 
 
@@ -339,12 +401,14 @@ function escAttr(s) {
 // Activity MDX generation
 // ===========================================================================
 
-function generateActivityMDX(slug, { fm, sections, goals, vocabulary }) {
+function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   const L = [];
 
   // Frontmatter
+  const activityTitle = `${fm.title} — Activity`;
   L.push('---');
-  L.push(`title: ${fm.title}`);
+  L.push(`title: "${escAttr(activityTitle)}"`);
+  L.push(`sidebar_label: ${fm.title}`);
   if (fm.sidebar_position != null) L.push(`sidebar_position: ${fm.sidebar_position}`);
   if (fm.tags) L.push(`tags: [${fm.tags.join(', ')}]`);
   if (fm.time) L.push(`time: ${fm.time}`);
@@ -405,7 +469,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary }) {
   }
 
   const subtitle = fm.subtitle ? ` (${fm.subtitle})` : '';
-  L.push(`# ${fm.title}${subtitle}`);
+  L.push(`# ${activityTitle}${subtitle}`);
   L.push('');
   L.push(`**${fm.tagline}**`);
   L.push('');
@@ -413,7 +477,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary }) {
   L.push('<ActivityMeta');
   L.push('  time={frontMatter.time}');
   L.push('  space={frontMatter.space}');
-  L.push("  materials={frontMatter.materials.join(', ')}");
+  L.push("  materials={frontMatter.materials}");
   L.push("  vocabulary={frontMatter.vocabulary.map(v => typeof v === 'object' ? v.term : v)}");
   L.push('/>');
   L.push('');
@@ -441,7 +505,11 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary }) {
   L.push('<TabItem value="run" label="How to Run It" default>');
   L.push('');
   if (sections.setup) { L.push('### Setup'); L.push(''); L.push(sections.setup); L.push(''); }
-  if (sections.steps) { L.push('### Steps'); L.push(''); L.push(sections.steps); L.push(''); }
+  if (steps.length > 0) {
+    L.push('### Steps'); L.push('');
+    steps.forEach((s, i) => L.push(`${i + 1}. ${s.long}`));
+    L.push('');
+  }
   if (sections.progression) { L.push('### Progression'); L.push(''); L.push(sections.progression); L.push(''); }
   if (sections.tips) { L.push('### Tips'); L.push(''); L.push(sections.tips); L.push(''); }
   L.push('</TabItem>');
@@ -509,7 +577,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary }) {
 
   const onepagerImage = fm.images?.find(img => img.onepager);
   L.push('<OnePager');
-  L.push(`  title="${escAttr(fm.title)}"`);
+  L.push(`  title="${escAttr(activityTitle)}"`);
   L.push(`  tagline="${escAttr(fm.tagline)}"`);
   if (fm.epigraph) L.push(`  epigraph="${escAttr(fm.epigraph)}"`);
   L.push('  description={description}');
@@ -523,6 +591,12 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary }) {
   L.push('  goals={[');
   for (const g of goals.items) L.push(`    '${escSingleQuote(g.short)}',`);
   L.push('  ]}');
+
+  if (steps.length > 0) {
+    L.push('  steps={[');
+    for (const s of steps) L.push(`    '${escSingleQuote(s.short)}',`);
+    L.push('  ]}');
+  }
 
   if (sections.delivery) {
     const jsx = deliveryToJsx(sections.delivery);
@@ -548,12 +622,35 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary }) {
 // Lesson MDX generation
 // ===========================================================================
 
-function generateLessonMDX(slug, { fm, sections, goals }) {
+function generateLessonMDX(slug, { fm, sections, goals }, activityMaterials = {}) {
+  // Merge materials from referenced activities into the lesson's materials list.
+  // Deduplicate by canonical material type so "4 colored landmark cones" and
+  // "4 colored cones (red, blue, green, yellow)" aren't both listed.
+  const lessonMaterials = fm.materials ? [...fm.materials] : [];
+  if (fm.activities?.length) {
+    const existingKeys = new Set(lessonMaterials.map(m => materialKey(m)));
+    for (const a of fm.activities) {
+      const actMats = activityMaterials[a.title.toLowerCase()];
+      if (actMats) {
+        for (const m of actMats) {
+          const key = materialKey(m);
+          if (!existingKeys.has(key)) {
+            existingKeys.add(key);
+            lessonMaterials.push(m);
+          }
+        }
+      }
+    }
+  }
+  fm.materials = lessonMaterials;
+
   const L = [];
 
   // Frontmatter
+  const lessonTitle = `${fm.title} — Lesson Plan`;
   L.push('---');
-  L.push(`title: "${escAttr(fm.title)}"`);
+  L.push(`title: "${escAttr(lessonTitle)}"`);
+  L.push(`sidebar_label: "${escAttr(fm.title)}"`);
   if (fm.sidebar_position != null) L.push(`sidebar_position: ${fm.sidebar_position}`);
   L.push('---');
   L.push('');
@@ -565,6 +662,7 @@ function generateLessonMDX(slug, { fm, sections, goals }) {
   // Imports
   L.push("import ActivityCard from '@site/src/components/ActivityCard';");
   L.push("import CardGrid from '@site/src/components/CardGrid';");
+  L.push("import MaterialLink from '@site/src/components/MaterialLink';");
   L.push("import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';");
   L.push("import OnePager from '@site/src/components/OnePager';");
   L.push('');
@@ -575,7 +673,7 @@ function generateLessonMDX(slug, { fm, sections, goals }) {
   // ---- Full view ----
   L.push('<FullOnly>');
   L.push('');
-  L.push(`# ${fm.title}`);
+  L.push(`# ${lessonTitle}`);
   L.push('');
 
   if (fm.epigraph) {
@@ -588,7 +686,10 @@ function generateLessonMDX(slug, { fm, sections, goals }) {
   L.push('|---|---|');
   if (fm.time) L.push(`| **Time** | ${fm.time} |`);
   if (fm.space) L.push(`| **Space** | ${fm.space} |`);
-  if (fm.materials?.length) L.push(`| **Materials** | ${fm.materials.join(', ')} |`);
+  if (fm.materials?.length) {
+    const materialLinks = fm.materials.map(m => `<MaterialLink name="${escAttr(m)}" />`).join(', ');
+    L.push(`| **Materials** | ${materialLinks} |`);
+  }
   if (fm.setup) L.push(`| **Setup** | ${fm.setup} |`);
   if (fm.vocabulary?.length) L.push(`| **Vocabulary** | ${fm.vocabulary.join(', ')} |`);
   L.push('');
@@ -661,7 +762,7 @@ function generateLessonMDX(slug, { fm, sections, goals }) {
   L.push('');
   L.push('<OnePager');
   L.push('  variant="lesson"');
-  L.push(`  title="${escAttr(fm.title)}"`);
+  L.push(`  title="${escAttr(lessonTitle)}"`);
   L.push(`  tagline="${escAttr(fm.tagline)}"`);
   if (fm.epigraph) L.push(`  epigraph="${escAttr(fm.epigraph)}"`);
   if (fm.time) L.push(`  time="${fm.time}"`);
@@ -703,6 +804,32 @@ function generateLessonMDX(slug, { fm, sections, goals }) {
 // ===========================================================================
 // Shared helpers
 // ===========================================================================
+
+const materialKeywords = [
+  [/animal.*picture|animal.*checkpoint/i, 'animal-pictures'],
+  [/checkpoint/i, 'checkpoint'],
+  [/clue/i, 'clue-sheet'],
+  [/landmark|colored.*cone/i, 'landmark-cones'],
+  [/cone/i, 'cones'],
+  [/geometric.*map|pattern.*map/i, 'geometric-maps'],
+  [/master/i, 'master-map'],
+  [/orienteering.*map/i, 'orienteering-maps'],
+  [/scorecard/i, 'scorecards'],
+  [/whistle|gathering.*signal|flag.*signal/i, 'whistle'],
+  [/whiteboard/i, 'whiteboard'],
+  [/pinnie|flag.*pinnie/i, 'pinnies'],
+  [/basketball.*map|court.*map/i, 'basketball-maps'],
+  [/start.*finish/i, 'start-finish'],
+  [/route/i, 'route'],
+];
+
+function materialKey(name) {
+  const lower = name.toLowerCase();
+  for (const [pattern, key] of materialKeywords) {
+    if (pattern.test(lower)) return key;
+  }
+  return lower;
+}
 
 function emitStringArray(L, prop, sectionText) {
   if (!sectionText) return;

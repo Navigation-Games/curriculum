@@ -1,5 +1,6 @@
 ---
-title: "6 - Maps"
+title: "6 - Maps — Lesson Plan"
+sidebar_label: "6 - Maps"
 sidebar_position: 6
 ---
 
@@ -7,6 +8,7 @@ sidebar_position: 6
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
+import MaterialLink from '@site/src/components/MaterialLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -14,7 +16,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 6 - Maps
+# 6 - Maps — Lesson Plan
 
 > "Today we will navigate using a real orienteering map"
 
@@ -22,13 +24,19 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-60 minutes (can extend across multiple sessions) |
 | **Space** | Schoolyard or local park (needs real features for map symbols) |
-| **Materials** | Orienteering maps, Checkpoint markers (cones or flags), Master map |
+| **Materials** | <MaterialLink name="Orienteering maps" />, <MaterialLink name="Checkpoint markers (cones or flags)" />, <MaterialLink name="Master map" />, <MaterialLink name="Cones (optional, for marking boundaries)" />, <MaterialLink name="A planned route through varied features" />, <MaterialLink name="Scorecards and pencils" /> |
 | **Setup** | Place checkpoints according to the master map |
 | **Vocabulary** | Orient the map, Symbol, Feature, Route choice |
 
 ## Activities
 
-<CardGrid columns={2}>
+<CardGrid columns={3}>
+  <ActivityCard
+    title="Boundary Run"
+    description="Warm up: run the boundary together."
+    link="/activities/core/boundary-run"
+    tag="warm-up"
+  />
   <ActivityCard
     title="Map Walk"
     description="Walk a route together, matching map symbols to real features."
@@ -40,6 +48,21 @@ import OnePager from '@site/src/components/OnePager';
     description="Visit as many checkpoints as possible in any order."
     link="/activities/core/score-o"
     tag="core"
+  />
+  <ActivityCard
+    title="Symbol Relay"
+    description="Team relay to learn map symbols competitively."
+    tag="extension"
+  />
+  <ActivityCard
+    title="Poison-O"
+    description="Score-O where wrong checkpoints lose points."
+    tag="extension"
+  />
+  <ActivityCard
+    title="Poker-O"
+    description="Collect poker hands at checkpoints."
+    tag="extension"
   />
 </CardGrid>
 
@@ -93,12 +116,12 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="6 - Maps"
+  title="6 - Maps — Lesson Plan"
   tagline="Use a picture of the space to navigate"
   epigraph="Today we will navigate using a real orienteering map"
   time="30-60 minutes (can extend across multiple sessions)"
   space="Schoolyard or local park (needs real features for map symbols)"
-  materials={['Orienteering maps', 'Checkpoint markers (cones or flags)', 'Master map']}
+  materials={['Orienteering maps', 'Checkpoint markers (cones or flags)', 'Master map', 'Cones (optional, for marking boundaries)', 'A planned route through varied features', 'Scorecards and pencils']}
   setup="Place checkpoints according to the master map"
   vocabulary={['Orient the map', 'Symbol', 'Feature', 'Route choice']}
   goals={[
