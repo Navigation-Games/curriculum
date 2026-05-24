@@ -24,7 +24,7 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-60 minutes |
 | **Space** | Gym, schoolyard, or local park |
-| **Materials** | <MaterialLink name="Checkpoints with animals and numbers" />, <MaterialLink name="4 colored landmark cones" />, <MaterialLink name="Pattern maps" />, <MaterialLink name="Whiteboard and markers" />, <MaterialLink name="Master map" />, <MaterialLink name="Animal-picture checkpoints" />, <MaterialLink name="Clue sheets" /> |
+| **Materials** | <MaterialLink name="Checkpoints with animals and numbers" />, <MaterialLink name="4 colored landmark cones" />, <MaterialLink name="Pattern maps" />, <MaterialLink name="Small whiteboard and markers (or paper)" />, <MaterialLink name="Master map" />, <MaterialLink name="Animal-picture checkpoints" />, <MaterialLink name="Clue sheets" /> |
 | **Setup** | Arrange checkpoints in a geometric pattern with colored landmark cones at corners |
 | **Vocabulary** | Map, Orient the map, Landmark, Spatial relationship words (next to, closest, furthest, between) |
 
@@ -121,7 +121,7 @@ import OnePager from '@site/src/components/OnePager';
   epigraph="We use a map to know where something is before we even find it"
   time="30-60 minutes"
   space="Gym, schoolyard, or local park"
-  materials={['Checkpoints with animals and numbers', '4 colored landmark cones', 'Pattern maps', 'Whiteboard and markers', 'Master map', 'Animal-picture checkpoints', 'Clue sheets']}
+  materials={['Checkpoints with animals and numbers', '4 colored landmark cones', 'Pattern maps', 'Small whiteboard and markers (or paper)', 'Master map', 'Animal-picture checkpoints', 'Clue sheets']}
   setup="Arrange checkpoints in a geometric pattern with colored landmark cones at corners"
   vocabulary={['Map', 'Orient the map', 'Landmark', 'Spatial relationship words (next to, closest, furthest, between)']}
   goals={[

@@ -10,7 +10,7 @@ materials:
   - Checkpoints with animals and numbers
   - 4 colored landmark cones
   - Pattern maps
-  - Whiteboard and markers
+  - Small whiteboard and markers (or paper)
   - Master map
 setup: Arrange checkpoints in a geometric pattern with colored landmark cones at corners
 vocabulary:

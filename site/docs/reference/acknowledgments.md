@@ -25,9 +25,15 @@ In the summers, interns and high school students (most from the Cambridge, MA, M
 
 ## Inspiration and Sources
 
-Erin Schirm (Orienteering USA coach) developed and shared with us orienteering lesson plans for middle school. The boundary run and game, as well as the gathering in response to a signal, were based on his first lesson plan. Erin's approach of using games and emphasizing communication has been an inspiration.
+### Navigation Games Sources
+
+[Orienteering Program Delivery Scripts](https://docs.google.com/document/d/1V4uUA6z3CgzuH0ew_BcFNO-89fAsiC-SPdfCtZEj8Tg/edit?usp=sharing) by Erkan Sezgin and Mikayla Moss. Detailed scripts for teaching each activity and lesson, written for Navigation Games instructors. (Not publicly available; for NG staff editing the curriculum.)
 
 Andrea Schneider of Orienteering USA and David Yee of Navigation Games observed and reported to us the use of Animal Orienteering at a European orienteering event.
+
+### External Sources
+
+Erin Schirm (Orienteering USA coach) developed and shared with us orienteering lesson plans for middle school. The boundary run and game, as well as the gathering in response to a signal, were based on his first lesson plan. Erin's approach of using games and emphasizing communication has been an inspiration.
 
 **[Orienteering USA (OUSA)](https://orienteeringusa.org/)** for the Orienteering Development Model (based on the TeamUSA American Development Model) and the Skill Level Recognition Program, which informed our developmental stages and skill progression.
 

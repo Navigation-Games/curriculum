@@ -11,7 +11,7 @@ materials:
   - Checkpoints with animals and numbers (31-40)
   - 4 colored cones (red, blue, green, yellow)
   - Geometric-O maps (5 and 10 checkpoint versions)
-  - Whiteboard and markers
+  - Small whiteboard and markers (or paper)
   - Master map
 setup: Arrange checkpoints and colored cones according to the master map
 images: []
