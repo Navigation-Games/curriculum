@@ -33,7 +33,14 @@ With prompt caching (system prompt cached after first message), costs drop furth
 
 A paywall is not recommended. At these costs, payment infrastructure and friction would outweigh savings. Free access better serves the nonprofit mission of spreading orienteering curriculum.
 
-## Teacher feedback loop
+## Who uses it
+
+The advisor serves two audiences:
+
+- **Teachers and camp directors.** The primary audience. They use it to plan lessons tailored to their situation.
+- **Navigation Games staff.** Staff use the advisor for their own program planning (school visits, camp sessions, educator trainings). This gives the team early, hands-on experience with the tool before teachers see it. Staff conversations are the first source of feedback for refining prompts and identifying gaps in the AI's recommendations. Combined with structured testing, this internal use builds confidence that the advisor gives sound guidance before it goes public.
+
+## Feedback loop
 
 ### Intake form (required, before the conversation)
 
