@@ -76,6 +76,12 @@ const config: Config = {
           label: 'Reference',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'editorsSidebar',
+          position: 'left',
+          label: 'Editors',
+        },
+        {
           href: 'https://github.com/Navigation-Games/curriculum',
           label: 'GitHub',
           position: 'right',
