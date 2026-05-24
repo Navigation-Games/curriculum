@@ -9,6 +9,10 @@
   border-bottom-style: solid;
 }
 
+.kitMaterial {
+  font-weight: 600;
+}
+
 .popoverTitle {
   font-weight: 700;
   margin-bottom: 0.25rem;
@@ -16,17 +20,22 @@
 }
 
 .kitBadge {
-  display: inline-block;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  font-weight: 700;
   background: #e6f4ea;
   color: #1e7e34;
-  padding: 1px 6px;
+  padding: 2px 7px 2px 4px;
   border-radius: 3px;
   margin-left: 0.5rem;
   vertical-align: middle;
+}
+
+.kitLogo {
+  width: 14px;
+  height: 14px;
 }
 
 .popoverDesc {

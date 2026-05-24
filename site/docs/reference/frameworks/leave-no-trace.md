@@ -15,7 +15,7 @@ Orienteering is fundamentally about planning. Before you leave the start, you st
 
 ### 2. Travel on Durable Surfaces
 
-Orienteering involves off-trail travel through natural terrain. However, orienteering is naturally low-impact because each person chooses a different route to the controls. Unlike a hiking trail where hundreds of people walk the same path, orienteers spread out across the terrain, so new trails are unlikely to form.
+Orienteering involves off-trail travel through natural terrain. Orienteering is naturally low-impact because each person chooses a different route to the controls. Unlike a hiking trail where hundreds of people walk the same path, orienteers choose different routes to checkpoints, and new trails are unlikely to form.
 
 Research supports this. A 1972 study of three orienteering events in southern Sweden with up to 9,300 participants found that vegetation recovered quickly despite trampling. A biological survey of routes used during the 2001 World Orienteering Championships in Tampere, Finland showed no harm to any significant or valuable area. A UK study of an event with 1,200 competitors on a National Heritage site found that most vegetation recovered within three weeks. The International Orienteering Federation considers orienteering a sport of low ecological impact.
 

@@ -61,7 +61,7 @@ What's done, what's next, and what's deferred.
 - **Grade band expansion.** Currently only Grade 3-5 lesson plans exist. K-2 and 6-8 progressions are planned.
 - **Search.** Docusaurus has built-in search (Algolia or local). Not yet configured.
 - **Print styles.** The one-pager view works but could use CSS refinement for clean printing.
-- **AI lesson plan advisor.** An AI agent on the site that helps teachers build a tailored lesson plan based on their situation: number of classes available, class length, indoor vs. outdoor space, and how much orienteering experience the students already have. The structured content format makes this feasible since the agent can reason over activities, prerequisites, and progressions to suggest a sequence that fits.
+- **AI lesson plan advisor.** An embedded AI chat on the site that helps teachers build a tailored lesson plan based on their situation. Includes an intake form, conversation logging for curriculum improvement, and a follow-up survey. See [notes/ai-lesson-advisor-plan.md](notes/ai-lesson-advisor-plan.md) for the detailed plan.
 
 ## Deferred
 

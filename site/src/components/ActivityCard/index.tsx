@@ -77,17 +77,17 @@ export default function ActivityCard({
   );
 
   const card = (
-    <div className={styles.card}>
-      {image && (
-        <div className={styles.imageWrapper}>
-          <img src={image} alt={title} className={styles.image} />
-        </div>
-      )}
+    <div className={`${styles.card} ${image ? styles.cardWithImage : ''}`}>
       <div className={styles.body}>
         {tag && <span className={`${styles.tag} ${styles[`tag-${tag}`]}`}>{tag}</span>}
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
       </div>
+      {image && (
+        <div className={styles.imageWrapper}>
+          <img src={image} alt={title} className={styles.image} />
+        </div>
+      )}
     </div>
   );
 

@@ -8,7 +8,7 @@ sidebar_position: 2
 Equipment and supplies referenced across the curriculum. Click a material name in any activity to see details here. For each item: what it is, where to get it, alternatives, and which activities use it.
 
 :::tip Navigation Games Kit
-Items marked **NG Kit** are included in the Navigation Games activity kit, which contains materials for Animal Orienteering, Geometric Orienteering, Basketball Orienteering, and Clothespin Hunt. If your school has a kit, you already have these items.
+Items marked <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span> are included in the Navigation Games activity kit, which contains materials for Animal Orienteering, Geometric Orienteering, Basketball Orienteering, and Clothespin Hunt. If your school has a kit, you already have these items.
 :::
 
 ---
@@ -24,7 +24,7 @@ Cones, flags, or streamers placed in the field to mark checkpoint locations. Stu
 | **Used in** | Animal-O, Geometric-O, Score-O, Map Walk |
 | **Learning connection** | Checkpoints are the concrete targets students navigate to. Visible, consistent markers reduce confusion and let students focus on navigation rather than searching. |
 
-#### Clue sheets <small>NG Kit</small>
+#### Clue sheets <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span>
 
 Printed sheets showing the order to visit checkpoints. In Animal-O, clue sheets show animal pictures. In standard orienteering, they list checkpoint numbers and feature descriptions.
 
@@ -46,7 +46,7 @@ Plastic sport cones used to mark boundaries, checkpoints, or landmarks. Small (6
 | **Used in** | Boundary Run, Gathering, Animal-O, Geometric-O, Basketball-O |
 | **Learning connection** | Cones define the physical space. Colored cones as landmarks (red, blue, green, yellow) help students orient maps by matching cone colors to map markings. |
 
-#### Colored landmark cones <small>NG Kit</small>
+#### Colored landmark cones <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span>
 
 Four distinctly colored cones (red, blue, green, yellow) placed at corners or edges of the play area. They appear on the map and in the real space, giving students anchor points for orienting.
 
@@ -57,7 +57,7 @@ Four distinctly colored cones (red, blue, green, yellow) placed at corners or ed
 | **Used in** | Geometric-O, Find the Cone |
 | **Learning connection** | Landmark cones are the bridge between map and terrain. Students match the colored dots on their map to the colored cones in the field, which teaches map orientation without requiring symbol literacy. |
 
-#### Geometric-O maps <small>NG Kit</small>
+#### Geometric-O maps <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span>
 
 Simple pattern maps showing checkpoint positions relative to colored landmark cones. Available in 5-checkpoint and 10-checkpoint versions.
 
@@ -90,7 +90,7 @@ Detailed maps showing terrain features using standard orienteering symbols and c
 | **Used in** | Map Walk, Score-O, Point-to-Point |
 | **Learning connection** | Real orienteering maps are the end goal. Students progress from pattern maps (Geometric-O) to orienteering maps (Map Walk, Score-O). The detailed symbols connect classroom map-reading to real-world navigation. |
 
-#### Scorecards and pencils <small>NG Kit</small>
+#### Scorecards and pencils <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span>
 
 Cards where students record which checkpoints they visited during Score-O. Each card has spaces for checkpoint letter codes.
 
@@ -145,7 +145,7 @@ Colored cloth flags or mesh vests used for team identification in competitive ac
 | **Used in** | Capture the Flag, relay activities |
 | **Learning connection** | Team identification supports territory and boundary concepts. In Capture the Flag, the boundary between territories is the strategic focus. |
 
-#### Animal pictures <small>NG Kit</small>
+#### Animal pictures <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span>
 
 Laminated pictures of animals attached to checkpoint cones. Students match the animal they find to the animal on their clue sheet to confirm they visited the correct checkpoint.
 
@@ -156,7 +156,7 @@ Laminated pictures of animals attached to checkpoint cones. Students match the a
 | **Used in** | Animal-O, Explore & Find |
 | **Learning connection** | Animal pictures make checkpoint confirmation concrete and fun for younger students. The act of checking "is this the right animal?" is the foundation of the orienteering skill of control confirmation. |
 
-#### Basketball court maps <small>NG Kit</small>
+#### Basketball court maps <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span>
 
 Maps of a basketball court showing line markings, used for indoor orienteering. Available in half-court and full-court versions.
 
@@ -167,7 +167,7 @@ Maps of a basketball court showing line markings, used for indoor orienteering. 
 | **Used in** | Basketball-O, Pacman-O, Find the Cone |
 | **Learning connection** | The basketball court's painted lines serve as built-in landmarks. Students orient maps using the free-throw line, three-point arc, and center circle, just as outdoor orienteers use trails, fences, and buildings. |
 
-#### Clothespins <small>NG Kit</small>
+#### Clothespins <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span>
 
 Wooden or plastic clothespins used as checkpoint confirmation. Students clip a clothespin from each checkpoint onto their clue sheet or string.
 
@@ -178,7 +178,7 @@ Wooden or plastic clothespins used as checkpoint confirmation. Students clip a c
 | **Used in** | Clothespin Hunt |
 | **Learning connection** | Clothespins provide a tangible confirmation method. Collecting one at each checkpoint gives students physical proof of their visit. |
 
-#### Index cards <small>NG Kit</small>
+#### Index cards <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span>
 
 Blank cards used for drawing maps, making scorecards, or writing checkpoint descriptions.
 
@@ -189,7 +189,7 @@ Blank cards used for drawing maps, making scorecards, or writing checkpoint desc
 | **Used in** | Geometric-O, Score-O |
 | **Learning connection** | Index cards are a versatile tool for quick map sketches and student-created materials. |
 
-#### Pencils <small>NG Kit</small>
+#### Pencils <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span>
 
 Standard pencils for recording scores, marking maps, or writing descriptions.
 
@@ -200,7 +200,7 @@ Standard pencils for recording scores, marking maps, or writing descriptions.
 | **Used in** | Score-O, Geometric-O |
 | **Learning connection** | Writing tools let students record their navigation decisions and results. |
 
-#### Flagging tape <small>NG Kit</small>
+#### Flagging tape <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span>
 
 Brightly colored plastic tape tied to stakes or branches to mark checkpoint locations or boundaries.
 
@@ -211,7 +211,7 @@ Brightly colored plastic tape tied to stakes or branches to mark checkpoint loca
 | **Used in** | Animal-O, Geometric-O, Score-O |
 | **Learning connection** | Flagging tape makes checkpoints visible from a distance, helping students confirm they are heading the right direction. |
 
-#### Black marker <small>NG Kit</small>
+#### Black marker <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span>
 
 A permanent marker for labeling checkpoint codes, writing on cones, or marking maps.
 

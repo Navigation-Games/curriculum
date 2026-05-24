@@ -5,11 +5,11 @@ sidebar_position: 0
 
 # How to Use This Site
 
-This site contains orienteering curriculum for schools and camps. Here is how the content is organized and how to get the most out of it.
+This site contains orienteering curricula for schools and camps. Here is how the content is organized and how to get the most out of it.
 
 ## Two types of content
 
-The curriculum has two main types of pages. They look different on purpose.
+The curricula have two main types of pages.
 
 <div style={{background: '#fdf8f0', border: '1px solid #e8d8c4', borderRadius: '8px', padding: '1rem 1.25rem', marginBottom: '1rem'}}>
 
@@ -48,9 +48,9 @@ Each activity and lesson plan page has two views:
 - **Full view** (default): complete content with all sections, tabs, and details
 - **One-pager**: a compact, printable summary with just the essentials. Click the "One-pager" button at the top of any page to switch. Print it to take into the field.
 
-## Materials with popups
+## Materials
 
-Material names in the Materials row are clickable. Click any material name to see a popup with details: what it is, where to get it, alternatives, and which activities use it. For the full list, visit the [Materials Index](/reference/materials).
+Materials are hyperlinked. Click any material name to see a popup with details: what it is, where to get it, alternatives, and which activities use it. For the full list, visit the [Materials Index](/reference/materials).
 
 ## Navigation tips
 

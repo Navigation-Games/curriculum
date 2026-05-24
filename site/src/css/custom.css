@@ -71,7 +71,28 @@ body.page-activity {
 
 body.page-school-overview,
 body.page-camp-overview {
-  background-color: #f0faf0;
+  background-color: #fdf8f0;
+}
+
+/* ===== NG KIT BADGE ===== */
+
+.ng-kit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: #e6f4ea;
+  color: #1e7e34;
+  padding: 2px 7px 2px 4px;
+  border-radius: 3px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.ng-kit-badge img {
+  width: 14px;
+  height: 14px;
 }
 
 /* ===== PRINT STYLES ===== */

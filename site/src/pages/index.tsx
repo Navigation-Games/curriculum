@@ -50,6 +50,9 @@ export default function Home(): React.ReactElement {
             link="/camp"
           />
         </div>
+        <p style={{textAlign: 'center', marginTop: '1.5rem'}}>
+          <Link to="/reference/how-to-use-this-site">How to use this site</Link>
+        </p>
       </main>
     </Layout>
   );

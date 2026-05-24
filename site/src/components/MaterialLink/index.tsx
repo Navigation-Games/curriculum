@@ -20,13 +20,18 @@ export default function MaterialLink({name, children}: MaterialLinkProps): React
   }
 
   return (
-    <span className={styles.materialLink} ref={triggerRef}>
+    <span className={`${styles.materialLink} ${info.kit ? styles.kitMaterial : ''}`} ref={triggerRef}>
       <span onClick={() => setOpen(!open)}>{children || name}</span>
       {open && (
         <PopoverPortal anchorRef={triggerRef} onClose={close}>
           <div className={styles.popoverTitle}>
             {info.name}
-            {info.kit && <span className={styles.kitBadge}>In NG Kit</span>}
+            {info.kit && (
+              <span className={styles.kitBadge}>
+                <img src="/curriculum/img/ng-logo-icon.svg" alt="" className={styles.kitLogo} />
+                NG Kit
+              </span>
+            )}
           </div>
           <div className={styles.popoverDesc}>{info.description}</div>
           <div className={styles.popoverDetail}>

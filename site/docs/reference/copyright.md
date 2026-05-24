@@ -7,7 +7,7 @@ sidebar_position: 5
 
 Our animal pictures are copyrighted. Please do not use the animal pictures without our permission.
 
-Copyright (c) 2025 Navigation Games
+Copyright (c) 2026 Navigation Games
 
 **Notice.** These lesson plans were created and tested by Navigation Games ([NavigationGames.org](https://NavigationGames.org)) and are provided free of charge as a public service to encourage the teaching of orienteering.
 
