@@ -186,6 +186,30 @@ Responsive 16:9 video embed.
 
 Renders the time/space/materials/vocabulary summary bar on activity pages.
 
+### MaterialLink
+
+`site/src/components/MaterialLink/`
+
+Clickable material name that opens a popup with details (description, where to get, alternatives, learning connection). Links to the full materials index.
+
+Uses a **React Portal** (`createPortal` into `document.body`) so the popup is not clipped by ancestor elements with `overflow: hidden` (e.g. table cells). The popup is positioned using `getBoundingClientRect()` with viewport clamping to prevent edge overflow. This approach was chosen over Floating UI (would add a dependency) and the HTML Popover API (newer browser support, SSR complications).
+
+Material data lives in `materialsData.ts` with keyword-based fuzzy matching so variant names in content files ("4 colored landmark cones", "4 colored cones (red, blue, green, yellow)") resolve to the same entry.
+
+### VocabLink
+
+`site/src/components/VocabLink/`
+
+Clickable vocabulary term that opens a popup with the glossary definition. Links to the full glossary page. Uses the same `PopoverPortal` as MaterialLink.
+
+Glossary data lives in `glossaryData.ts`, mirroring the content of `site/docs/reference/glossary.md`. Lookup is case-insensitive with substring fallback for variant phrasings.
+
+### PopoverPortal
+
+`site/src/components/PopoverPortal/`
+
+Shared portal-based popup used by MaterialLink and VocabLink. Renders into `document.body` via `createPortal` so popups are never clipped by ancestor overflow. Positions using `getBoundingClientRect()` with above/below flipping and viewport edge clamping. Accepts a `width` prop (default 320px).
+
 ### Description
 
 `site/src/components/Description/index.tsx`

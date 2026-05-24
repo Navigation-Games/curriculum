@@ -5,6 +5,7 @@ export interface MaterialInfo {
   alternatives: string;
   usedIn: string;
   learningConnection: string;
+  kit?: boolean;
 }
 
 const materialEntries: MaterialInfo[] = [
@@ -23,6 +24,7 @@ const materialEntries: MaterialInfo[] = [
     alternatives: 'Hand-drawn sheets, laminated reusable sheets with dry-erase markers',
     usedIn: 'Animal-O, Geometric-O',
     learningConnection: 'Clue sheets introduce sequential navigation. Following a fixed order builds the discipline of confirming each checkpoint before moving on. The checkpoint descriptions on the clue sheet teach students to verify they are at the correct location.',
+    kit: true,
   },
   {
     name: 'Cones',
@@ -39,6 +41,7 @@ const materialEntries: MaterialInfo[] = [
     alternatives: 'Colored buckets, painted rocks, colored flags',
     usedIn: 'Geometric-O, Find the Cone',
     learningConnection: 'Landmark cones are the bridge between map and terrain. Students match colored dots on their map to colored cones in the field.',
+    kit: true,
   },
   {
     name: 'Geometric-O maps',
@@ -47,6 +50,7 @@ const materialEntries: MaterialInfo[] = [
     alternatives: 'Hand-drawn maps on whiteboards, then photographed and printed',
     usedIn: 'Geometric-O, Find the Cone',
     learningConnection: 'Pattern maps strip away symbol complexity and focus on spatial relationships.',
+    kit: true,
   },
   {
     name: 'Master map',
@@ -71,6 +75,7 @@ const materialEntries: MaterialInfo[] = [
     alternatives: 'Small clipboards with blank paper, checkpoint stamp/hole punch systems',
     usedIn: 'Score-O, Poker-O, Poison-O',
     learningConnection: 'Scorecards add accountability. Students must record evidence of each visit, which reinforces careful navigation over rushed movement.',
+    kit: true,
   },
   {
     name: 'Whistle or gathering signal',
@@ -111,6 +116,7 @@ const materialEntries: MaterialInfo[] = [
     alternatives: 'Stickers on cones, hand-drawn pictures, numbered cards (for older students)',
     usedIn: 'Animal-O, Explore & Find',
     learningConnection: 'Animal pictures make checkpoint confirmation concrete and fun. Checking "is this the right animal?" is the foundation of control confirmation.',
+    kit: true,
   },
   {
     name: 'Basketball court maps',
@@ -119,6 +125,7 @@ const materialEntries: MaterialInfo[] = [
     alternatives: 'Hand-drawn maps of the gym floor',
     usedIn: 'Basketball-O, Pacman-O, Find the Cone',
     learningConnection: 'The basketball court\'s painted lines serve as built-in landmarks for indoor map reading.',
+    kit: true,
   },
   {
     name: 'Start/finish markers',
@@ -127,6 +134,51 @@ const materialEntries: MaterialInfo[] = [
     alternatives: 'Chalk marks, natural features',
     usedIn: 'Animal-O, Score-O, Point-to-Point',
     learningConnection: 'Clear start and finish points help students understand the structure of a course.',
+  },
+  {
+    name: 'Clothespins',
+    description: 'Wooden or plastic clothespins used as checkpoint confirmation. Students clip a clothespin from each checkpoint onto their clue sheet or string.',
+    whereToGet: 'Dollar stores, craft supply stores',
+    alternatives: 'Hole punches, stamp markers, stickers',
+    usedIn: 'Clothespin Hunt',
+    learningConnection: 'Clothespins provide a tangible confirmation method. Collecting one at each checkpoint gives students physical proof of their visit.',
+    kit: true,
+  },
+  {
+    name: 'Index cards',
+    description: 'Blank cards used for drawing maps, making scorecards, or writing checkpoint descriptions.',
+    whereToGet: 'Office supply stores, dollar stores',
+    alternatives: 'Cut paper, sticky notes',
+    usedIn: 'Geometric-O, Score-O',
+    learningConnection: 'Index cards are a versatile tool for quick map sketches and student-created materials.',
+    kit: true,
+  },
+  {
+    name: 'Pencils',
+    description: 'Standard pencils for recording scores, marking maps, or writing descriptions.',
+    whereToGet: 'Classroom supplies',
+    alternatives: 'Pens, crayons',
+    usedIn: 'Score-O, Geometric-O',
+    learningConnection: 'Writing tools let students record their navigation decisions and results.',
+    kit: true,
+  },
+  {
+    name: 'Flagging tape',
+    description: 'Brightly colored plastic tape tied to stakes or branches to mark checkpoint locations or boundaries.',
+    whereToGet: 'Hardware stores, forestry supply',
+    alternatives: 'Ribbons, surveyor flags, bright fabric strips',
+    usedIn: 'Animal-O, Geometric-O, Score-O',
+    learningConnection: 'Flagging tape makes checkpoints visible from a distance, helping students confirm they are heading the right direction.',
+    kit: true,
+  },
+  {
+    name: 'Black marker',
+    description: 'A permanent marker for labeling checkpoint codes, writing on cones, or marking maps.',
+    whereToGet: 'Office supply stores',
+    alternatives: 'Any dark-colored permanent marker',
+    usedIn: 'Setup for all checkpoint-based activities',
+    learningConnection: 'Clear labeling is essential for checkpoint identification. Students need to read codes to confirm the correct checkpoint.',
+    kit: true,
   },
 ];
 
@@ -152,6 +204,11 @@ const keywordMap: Record<string, string> = {
   'animal-picture checkpoint': 'Animal pictures',
   basketball: 'Basketball court maps',
   'start/finish': 'Start/finish markers',
+  clothespin: 'Clothespins',
+  'index card': 'Index cards',
+  pencil: 'Pencils',
+  'flagging tape': 'Flagging tape',
+  'black marker': 'Black marker',
 };
 
 const byName = new Map<string, MaterialInfo>();

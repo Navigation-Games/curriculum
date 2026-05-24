@@ -11,21 +11,29 @@ This site contains orienteering curriculum for schools and camps. Here is how th
 
 The curriculum has two main types of pages. They look different on purpose.
 
-### Lesson Plans (warm background)
+<div style={{background: '#fdf8f0', border: '1px solid #e8d8c4', borderRadius: '8px', padding: '1rem 1.25rem', marginBottom: '1rem'}}>
+
+### Lesson Plans
 
 A **lesson plan** is a complete class period. It includes timing, a sequence of activities, reflection questions, and extensions. Lesson plans tell you *what to do and when*.
 
-Lesson plans reference activities by name. Click any activity card on a lesson plan page to jump to the full activity details.
+Lesson plans reference activities by name. Click any activity card on a lesson plan page to see a quick summary, or follow the link to the full activity details.
 
 Find lesson plans under **Lesson Plans** in the top navigation.
 
-### Activities (cool background)
+</div>
+
+<div style={{background: '#f0f5fa', border: '1px solid #c4d4e8', borderRadius: '8px', padding: '1rem 1.25rem', marginBottom: '1rem'}}>
+
+### Activities
 
 An **activity** is one reusable thing you do. It describes setup, steps, progression, vocabulary, and learning goals. Activities are building blocks that can appear in multiple lesson plans.
 
 Activities do NOT include timing, transitions between activities, or reflection questions. That context comes from the lesson plan.
 
 Find activities under **Activities** in the top navigation.
+
+</div>
 
 ### How they connect
 

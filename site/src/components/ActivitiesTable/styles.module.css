@@ -1,0 +1,42 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th,
+.table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ifm-table-border-color);
+  vertical-align: middle;
+}
+
+.table thead th {
+  background: var(--ifm-table-head-background);
+  font-weight: 600;
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.sortable:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.imageCell {
+  text-align: center;
+  width: 80px;
+}
+
+.thumb {
+  max-width: 64px;
+  max-height: 64px;
+  border-radius: 4px;
+}
+
+.noImage {
+  color: var(--ifm-color-emphasis-500);
+}

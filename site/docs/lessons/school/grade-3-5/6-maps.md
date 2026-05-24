@@ -9,6 +9,7 @@ sidebar_position: 6
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import MaterialLink from '@site/src/components/MaterialLink';
+import VocabLink from '@site/src/components/VocabLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -26,7 +27,7 @@ import OnePager from '@site/src/components/OnePager';
 | **Space** | Schoolyard or local park (needs real features for map symbols) |
 | **Materials** | <MaterialLink name="Orienteering maps" />, <MaterialLink name="Checkpoint markers (cones or flags)" />, <MaterialLink name="Master map" />, <MaterialLink name="Cones (optional, for marking boundaries)" />, <MaterialLink name="A planned route through varied features" />, <MaterialLink name="Scorecards and pencils" /> |
 | **Setup** | Place checkpoints according to the master map |
-| **Vocabulary** | Orient the map, Symbol, Feature, Route choice |
+| **Vocabulary** | <VocabLink term="Orient the map" />, <VocabLink term="Symbol" />, <VocabLink term="Feature" />, <VocabLink term="Route choice" /> |
 
 ## Activities
 

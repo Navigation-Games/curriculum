@@ -1,0 +1,29 @@
+.popover {
+  position: absolute;
+  z-index: 1000;
+  background: white;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.popoverArrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  transform: translateX(-50%);
+}
+
+.popoverAbove .popoverArrow {
+  bottom: -12px;
+  border-top-color: var(--ifm-color-emphasis-300);
+}
+
+.popoverBelow .popoverArrow {
+  top: -12px;
+  border-bottom-color: var(--ifm-color-emphasis-300);
+}

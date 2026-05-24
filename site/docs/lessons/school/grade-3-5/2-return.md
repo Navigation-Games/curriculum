@@ -9,6 +9,7 @@ sidebar_position: 2
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import MaterialLink from '@site/src/components/MaterialLink';
+import VocabLink from '@site/src/components/VocabLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -26,7 +27,7 @@ import OnePager from '@site/src/components/OnePager';
 | **Space** | Gym, schoolyard, or local park |
 | **Materials** | <MaterialLink name="Whistle or flag" />, <MaterialLink name="Cone or marker for home base" /> |
 | **Setup** | Establish a clear boundary and place a central home base marker |
-| **Vocabulary** | Boundary, Home base (start/finish), Gathering signal |
+| **Vocabulary** | <VocabLink term="Boundary" />, <VocabLink term="Home base (start/finish)" />, <VocabLink term="Gathering signal" /> |
 
 ## Activities
 

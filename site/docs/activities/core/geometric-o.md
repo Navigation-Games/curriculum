@@ -31,6 +31,7 @@ import ActivityMeta from '@site/src/components/ActivityMeta';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 import Description from '@site/src/components/Description';
+import VocabLink from '@site/src/components/VocabLink';
 import YouTube from '@site/src/components/YouTube';
 import CardGrid from '@site/src/components/CardGrid';
 
@@ -132,7 +133,7 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 <TabItem value="vocabulary" label="Vocabulary">
 
 {frontMatter.vocabulary.map(v => (
-  <p key={v.term}><strong>{v.term}</strong>: {v.definition}</p>
+  <p key={v.term}><VocabLink term={v.term}><strong>{v.term}</strong></VocabLink>: {v.definition}</p>
 ))}
 
 See the [Glossary](/reference/glossary) for all curriculum terms.

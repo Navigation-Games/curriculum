@@ -1,5 +1,6 @@
 import React from 'react';
 import MaterialLink from '@site/src/components/MaterialLink';
+import VocabLink from '@site/src/components/VocabLink';
 import styles from './styles.module.css';
 
 interface VocabTerm {
@@ -49,6 +50,21 @@ export default function ActivityMeta(props: ActivityMetaProps): React.ReactEleme
 
       if (field === 'materials') {
         return {label: labels[field], value: renderMaterials(value as string | string[])};
+      }
+
+      if (field === 'vocabulary' && Array.isArray(value)) {
+        const terms = value.map((v) =>
+          typeof v === 'object' && v !== null ? v.term : v
+        );
+        return {
+          label: labels[field],
+          value: terms.map((t, i) => (
+            <React.Fragment key={t}>
+              {i > 0 && ', '}
+              <VocabLink term={t} />
+            </React.Fragment>
+          )),
+        };
       }
 
       let display: string;

@@ -9,6 +9,7 @@ sidebar_position: 3
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import MaterialLink from '@site/src/components/MaterialLink';
+import VocabLink from '@site/src/components/VocabLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -24,7 +25,7 @@ import OnePager from '@site/src/components/OnePager';
 | **Space** | Gym, schoolyard, or local park |
 | **Materials** | <MaterialLink name="Checkpoints (cones with animal pictures)" />, <MaterialLink name="Cones (optional, for marking boundaries)" /> |
 | **Setup** | Place animal checkpoints around the space within the boundary |
-| **Vocabulary** | Boundary, Gathering signal, Checkpoint |
+| **Vocabulary** | <VocabLink term="Boundary" />, <VocabLink term="Gathering signal" />, <VocabLink term="Checkpoint" /> |
 
 ## Activities
 

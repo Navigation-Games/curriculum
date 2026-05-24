@@ -26,6 +26,7 @@ import ActivityMeta from '@site/src/components/ActivityMeta';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 import Description from '@site/src/components/Description';
+import VocabLink from '@site/src/components/VocabLink';
 
 export const description = `The teacher leads students along a planned route. At each stop, students find their location on the map, identify the feature they are standing at, and match it to the map symbol. This is the first time students use a real orienteering map (as opposed to pattern maps in earlier lessons).
 
@@ -110,7 +111,7 @@ Students completing this activity will be able to:
 <TabItem value="vocabulary" label="Vocabulary">
 
 {frontMatter.vocabulary.map(v => (
-  <p key={v.term}><strong>{v.term}</strong>: {v.definition}</p>
+  <p key={v.term}><VocabLink term={v.term}><strong>{v.term}</strong></VocabLink>: {v.definition}</p>
 ))}
 
 See the [Glossary](/reference/glossary) for all curriculum terms.

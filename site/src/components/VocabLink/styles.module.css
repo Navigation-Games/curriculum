@@ -1,0 +1,27 @@
+.vocabLink {
+  cursor: pointer;
+  border-bottom: 1px dotted var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.vocabLink:hover {
+  border-bottom-style: solid;
+}
+
+.popoverTerm {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.popoverDef {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.popoverLink {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  text-align: right;
+}

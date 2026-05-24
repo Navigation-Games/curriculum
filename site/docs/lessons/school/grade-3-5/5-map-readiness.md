@@ -9,6 +9,7 @@ sidebar_position: 5
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import MaterialLink from '@site/src/components/MaterialLink';
+import VocabLink from '@site/src/components/VocabLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -26,7 +27,7 @@ import OnePager from '@site/src/components/OnePager';
 | **Space** | Gym, schoolyard, or local park |
 | **Materials** | <MaterialLink name="Checkpoints with animals and numbers" />, <MaterialLink name="4 colored landmark cones" />, <MaterialLink name="Pattern maps" />, <MaterialLink name="Small whiteboard and markers (or paper)" />, <MaterialLink name="Master map" />, <MaterialLink name="Animal-picture checkpoints" />, <MaterialLink name="Clue sheets" /> |
 | **Setup** | Arrange checkpoints in a geometric pattern with colored landmark cones at corners |
-| **Vocabulary** | Map, Orient the map, Landmark, Spatial relationship words (next to, closest, furthest, between) |
+| **Vocabulary** | <VocabLink term="Map" />, <VocabLink term="Orient the map" />, <VocabLink term="Landmark" />, <VocabLink term="Spatial relationship words (next to, closest, furthest, between)" /> |
 
 ## Activities
 

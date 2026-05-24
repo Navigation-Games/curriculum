@@ -438,6 +438,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   L.push("import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';");
   L.push("import OnePager from '@site/src/components/OnePager';");
   L.push("import Description from '@site/src/components/Description';");
+  L.push("import VocabLink from '@site/src/components/VocabLink';");
   const hasVideos = fm.videos?.length > 0;
   if (hasVideos) {
     L.push("import YouTube from '@site/src/components/YouTube';");
@@ -525,7 +526,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   L.push('<TabItem value="vocabulary" label="Vocabulary">');
   L.push('');
   L.push('{frontMatter.vocabulary.map(v => (');
-  L.push('  <p key={v.term}><strong>{v.term}</strong>: {v.definition}</p>');
+  L.push('  <p key={v.term}><VocabLink term={v.term}><strong>{v.term}</strong></VocabLink>: {v.definition}</p>');
   L.push('))}');
   L.push('');
   L.push('See the [Glossary](/reference/glossary) for all curriculum terms.');
@@ -663,6 +664,7 @@ function generateLessonMDX(slug, { fm, sections, goals }, activityMaterials = {}
   L.push("import ActivityCard from '@site/src/components/ActivityCard';");
   L.push("import CardGrid from '@site/src/components/CardGrid';");
   L.push("import MaterialLink from '@site/src/components/MaterialLink';");
+  L.push("import VocabLink from '@site/src/components/VocabLink';");
   L.push("import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';");
   L.push("import OnePager from '@site/src/components/OnePager';");
   L.push('');
@@ -691,7 +693,10 @@ function generateLessonMDX(slug, { fm, sections, goals }, activityMaterials = {}
     L.push(`| **Materials** | ${materialLinks} |`);
   }
   if (fm.setup) L.push(`| **Setup** | ${fm.setup} |`);
-  if (fm.vocabulary?.length) L.push(`| **Vocabulary** | ${fm.vocabulary.join(', ')} |`);
+  if (fm.vocabulary?.length) {
+    const vocabLinks = fm.vocabulary.map(v => `<VocabLink term="${escAttr(v)}" />`).join(', ');
+    L.push(`| **Vocabulary** | ${vocabLinks} |`);
+  }
   L.push('');
 
   // Activities

@@ -30,6 +30,7 @@ import ActivityMeta from '@site/src/components/ActivityMeta';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 import Description from '@site/src/components/Description';
+import VocabLink from '@site/src/components/VocabLink';
 
 export const description = `Students receive a map showing checkpoint locations. They visit as many as they can within a time limit, in any order they choose. At each checkpoint, they record the letter code on their scorecard. This is the first activity where students have full autonomy over route choice.
 
@@ -115,7 +116,7 @@ Students completing this activity will be able to:
 <TabItem value="vocabulary" label="Vocabulary">
 
 {frontMatter.vocabulary.map(v => (
-  <p key={v.term}><strong>{v.term}</strong>: {v.definition}</p>
+  <p key={v.term}><VocabLink term={v.term}><strong>{v.term}</strong></VocabLink>: {v.definition}</p>
 ))}
 
 See the [Glossary](/reference/glossary) for all curriculum terms.

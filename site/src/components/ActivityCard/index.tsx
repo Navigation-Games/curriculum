@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useRef, useState, useCallback} from 'react';
 import Link from '@docusaurus/Link';
+import PopoverPortal from '@site/src/components/PopoverPortal';
+import activities from '@site/src/components/ActivitiesTable/activitiesData';
 import styles from './styles.module.css';
 
 interface ActivityCardProps {
@@ -10,6 +12,47 @@ interface ActivityCardProps {
   tag?: 'core' | 'readiness' | 'variation' | 'extension';
 }
 
+function ActivityPopover({
+  title,
+  link,
+  onClose,
+  anchorRef,
+}: {
+  title: string;
+  link?: string;
+  onClose: () => void;
+  anchorRef: React.RefObject<HTMLDivElement | null>;
+}) {
+  const data = activities.find(
+    (a) => a.name.toLowerCase() === title.toLowerCase(),
+  );
+
+  if (!data) return null;
+
+  return (
+    <PopoverPortal anchorRef={anchorRef as React.RefObject<HTMLSpanElement | null>} onClose={onClose} width={360}>
+      <div className={styles.popoverContent}>
+        {data.image && (
+          <img src={data.image} alt={data.name} className={styles.popoverImage} />
+        )}
+        <p className={styles.popoverDesc}>{data.description}</p>
+        {data.steps.length > 0 && (
+          <ol className={styles.popoverSteps}>
+            {data.steps.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        )}
+        {link && (
+          <Link to={link} className={styles.popoverLink} onClick={onClose}>
+            View full activity &rarr;
+          </Link>
+        )}
+      </div>
+    </PopoverPortal>
+  );
+}
+
 export default function ActivityCard({
   title,
   description,
@@ -17,7 +60,23 @@ export default function ActivityCard({
   image,
   tag,
 }: ActivityCardProps): React.ReactElement {
-  const content = (
+  const [showPopover, setShowPopover] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const hasPopoverData = activities.some(
+    (a) => a.name.toLowerCase() === title.toLowerCase(),
+  );
+
+  const handleClick = useCallback(
+    (e: React.MouseEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setShowPopover((v) => !v);
+    },
+    [],
+  );
+
+  const card = (
     <div className={styles.card}>
       {image && (
         <div className={styles.imageWrapper}>
@@ -32,8 +91,27 @@ export default function ActivityCard({
     </div>
   );
 
-  if (link) {
-    return <Link to={link} className={styles.link}>{content}</Link>;
-  }
-  return content;
+  const cardElement = hasPopoverData ? (
+    <div className={styles.link} onClick={handleClick} role="button" tabIndex={0}>
+      {card}
+    </div>
+  ) : link ? (
+    <Link to={link} className={styles.link}>{card}</Link>
+  ) : (
+    card
+  );
+
+  return (
+    <div ref={cardRef} className={styles.cardWrapper}>
+      {cardElement}
+      {showPopover && hasPopoverData && (
+        <ActivityPopover
+          title={title}
+          link={link}
+          onClose={() => setShowPopover(false)}
+          anchorRef={cardRef}
+        />
+      )}
+    </div>
+  );
 }

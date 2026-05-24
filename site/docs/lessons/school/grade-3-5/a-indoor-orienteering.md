@@ -9,6 +9,7 @@ sidebar_position: 7
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import MaterialLink from '@site/src/components/MaterialLink';
+import VocabLink from '@site/src/components/VocabLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -26,7 +27,7 @@ import OnePager from '@site/src/components/OnePager';
 | **Space** | Gym with basketball court |
 | **Materials** | <MaterialLink name="Checkpoints" />, <MaterialLink name="Basketball court maps (half-court and full-court versions)" />, <MaterialLink name="Cones (optional, for marking boundaries)" /> |
 | **Setup** | Place checkpoints according to the master map |
-| **Vocabulary** | Orient the map, Landmark, Route choice |
+| **Vocabulary** | <VocabLink term="Orient the map" />, <VocabLink term="Landmark" />, <VocabLink term="Route choice" /> |
 
 ## Activities
 

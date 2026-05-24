@@ -9,6 +9,7 @@ sidebar_position: 1
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import MaterialLink from '@site/src/components/MaterialLink';
+import VocabLink from '@site/src/components/VocabLink';
 import {ViewToggle, FullOnly, CompactOnly} from '@site/src/components/ViewToggle';
 import OnePager from '@site/src/components/OnePager';
 
@@ -26,7 +27,7 @@ import OnePager from '@site/src/components/OnePager';
 | **Space** | Gym, schoolyard, or local park |
 | **Materials** | <MaterialLink name="Cones (optional, for marking boundaries)" /> |
 | **Setup** | Walk the space and identify the boundary; place cones if edges are unclear |
-| **Vocabulary** | Boundary, Checkpoint |
+| **Vocabulary** | <VocabLink term="Boundary" />, <VocabLink term="Checkpoint" /> |
 
 ## Activities
 

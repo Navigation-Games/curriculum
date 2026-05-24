@@ -3,43 +3,30 @@
   border-bottom: 1px dashed var(--ifm-color-primary);
   color: var(--ifm-color-primary);
   text-decoration: none;
-  position: relative;
 }
 
 .materialLink:hover {
   border-bottom-style: solid;
 }
 
-.popover {
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  background: var(--ifm-background-color);
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  width: 320px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-
-.popover::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-top-color: var(--ifm-color-emphasis-300);
-}
-
 .popoverTitle {
   font-weight: 700;
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
+}
+
+.kitBadge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  background: #e6f4ea;
+  color: #1e7e34;
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
 }
 
 .popoverDesc {
