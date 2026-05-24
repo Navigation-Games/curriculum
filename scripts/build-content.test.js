@@ -357,6 +357,7 @@ describe('generateActivityMDX', () => {
       notes: '',
     },
     vocabulary: [{ term: 'Sprint', definition: 'Running at top speed' }],
+    steps: [{ short: 'Run', long: 'Run' }, { short: 'Jump', long: 'Jump' }],
   };
 
   it('includes auto-generated comment', () => {
