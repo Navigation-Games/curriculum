@@ -1,10 +1,8 @@
 ---
-title: "4 - Clue Sheets — Lesson Plan"
-sidebar_label: "4 - Clue Sheets"
-sidebar_position: 4
+title: "3 - Clue Sheets — Lesson Plan"
+sidebar_label: "3 - Clue Sheets"
+sidebar_position: 3
 ---
-
-{/* AUTO-GENERATED from content/lessons/school/grade-3-5/4-clue-sheets.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
@@ -17,7 +15,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 4 - Clue Sheets — Lesson Plan
+# 3 - Clue Sheets — Lesson Plan
 
 > "In orienteering, you find checkpoints in order using clue sheets"
 
@@ -46,7 +44,7 @@ import OnePager from '@site/src/components/OnePager';
   />
   <ActivityCard
     title="Explore & Find"
-    description="Warm up: explore to find checkpoints (if not done in Lesson 3)."
+    description="Warm up: explore to find checkpoints (if not done in Lesson 2)."
     link="/activities/core/animal-o"
     tag="readiness"
   />
@@ -98,7 +96,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="4 - Clue Sheets — Lesson Plan"
+  title="3 - Clue Sheets — Lesson Plan"
   tagline="Find them in this specific order"
   epigraph="In orienteering, you find checkpoints in order using clue sheets"
   time="30-60 minutes"

@@ -1,10 +1,8 @@
 ---
-title: "5 - Map Readiness — Lesson Plan"
-sidebar_label: "5 - Map Readiness"
-sidebar_position: 5
+title: "4 - Map Readiness — Lesson Plan"
+sidebar_label: "4 - Map Readiness"
+sidebar_position: 4
 ---
-
-{/* AUTO-GENERATED from content/lessons/school/grade-3-5/5-map-readiness.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
@@ -17,7 +15,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 5 - Map Readiness — Lesson Plan
+# 4 - Map Readiness — Lesson Plan
 
 > "We use a map to know where something is before we even find it"
 
@@ -45,13 +43,9 @@ import OnePager from '@site/src/components/OnePager';
     tag="core"
   />
   <ActivityCard
-    title="Geometric Readiness"
+    title="Geometric-O Readiness"
     description="Spatial vocabulary and map orientation exercises."
-    tag="readiness"
-  />
-  <ActivityCard
-    title="Symbol-O"
-    description="Find checkpoints by map symbol type; a bridge to real orienteering maps."
+    link="/activities/core/geometric-o"
     tag="readiness"
   />
   <ActivityCard
@@ -94,7 +88,6 @@ import OnePager from '@site/src/components/OnePager';
    - Partner verifies with the animal clue sheet
    - Progress to 10-checkpoint maps
    - Repeat for speed, then from memory
-4. **Symbol-O**: introduce orienteering map symbols; students find checkpoints by symbol type (preview of Lesson 6)
 
 ## Reflection
 
@@ -117,7 +110,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="5 - Map Readiness — Lesson Plan"
+  title="4 - Map Readiness — Lesson Plan"
   tagline="Spatial relationships, orienting, connecting a map to the space"
   epigraph="We use a map to know where something is before we even find it"
   time="30-60 minutes"
@@ -139,7 +132,6 @@ import OnePager from '@site/src/components/OnePager';
         <li><strong>Geometric Readiness</strong>: whiteboard map demo, spatial questions</li>
         <li><strong>Geometric-O</strong>: pair up, progress through map levels</li>
         <li>Repeat for speed, then from memory</li>
-        <li><strong>Symbol-O</strong>: find checkpoints by map symbol type</li>
       </ol>
     </>
   }

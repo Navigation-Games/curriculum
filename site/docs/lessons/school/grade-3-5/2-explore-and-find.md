@@ -1,10 +1,8 @@
 ---
-title: "3 - Explore & Find — Lesson Plan"
-sidebar_label: "3 - Explore & Find"
-sidebar_position: 3
+title: "2 - Explore & Find — Lesson Plan"
+sidebar_label: "2 - Explore & Find"
+sidebar_position: 2
 ---
-
-{/* AUTO-GENERATED from content/lessons/school/grade-3-5/3-explore-and-find.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
@@ -17,7 +15,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 3 - Explore & Find — Lesson Plan
+# 2 - Explore & Find — Lesson Plan
 
 | | |
 |---|---|
@@ -92,7 +90,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="3 - Explore & Find — Lesson Plan"
+  title="2 - Explore & Find — Lesson Plan"
   tagline="There are things out there; go find them and come back"
   time="30-45 minutes"
   space="Gym, schoolyard, or local park"
