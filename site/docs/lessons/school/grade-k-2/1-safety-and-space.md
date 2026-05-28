@@ -66,10 +66,16 @@ import OnePager from '@site/src/components/OnePager';
 - Explain why boundaries matter for safety
 
 ### PE Standards (SHAPE America)
-- Perform locomotor skills (S1.E1)
-- Move in general space safely (S1.E2)
-- Follow rules and instructions (S4.E1)
-- Engage actively in class (S3.E2)
+**Standard 1: Motor Skills**
+- Demonstrates a variety of locomotor skills with the concepts of space, effort, and relationship awareness (1.2.1)
+
+**Standard 2: Movement & Fitness Concepts**
+- Recognizes personal space and where to move in general space (2.2.1)
+
+**Standard 3: Social Skills**
+- Responds appropriately to directions and feedback from the teacher (3.2.4)
+- Describes why following rules are important for safety and fairness (3.2.6)
+- Makes safe choices with physical education equipment (3.2.7)
 
 ## Delivery
 

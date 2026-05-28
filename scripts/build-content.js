@@ -555,6 +555,14 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   L.push('');
   L.push('</TabItem>');
 
+  if (sections.context) {
+    L.push('<TabItem value="context" label="Context">');
+    L.push('');
+    L.push(sections.context);
+    L.push('');
+    L.push('</TabItem>');
+  }
+
   if (sections.companions) {
     L.push('<TabItem value="companions" label="Companions">');
     L.push('');

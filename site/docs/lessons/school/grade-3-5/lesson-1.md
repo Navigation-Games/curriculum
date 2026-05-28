@@ -1,10 +1,10 @@
 ---
-title: "1 - Boundary & Return — Lesson Plan"
-sidebar_label: "1 - Boundary & Return"
+title: "1 - Boundary & Explore — Lesson Plan"
+sidebar_label: "1 - Boundary & Explore"
 sidebar_position: 1
 ---
 
-{/* AUTO-GENERATED from content/lessons/school/grade-3-5/1-boundary-and-return.md — do not edit directly */}
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/lesson-1.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
@@ -17,7 +17,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 1 - Boundary & Return — Lesson Plan
+# 1 - Boundary & Explore — Lesson Plan
 
 > "In orienteering, you go out and you come back"
 
@@ -25,8 +25,8 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-45 minutes |
 | **Space** | Gym, schoolyard, or local park |
-| **Materials** | <MaterialLink name="Cones (optional, for marking boundaries)" />, <MaterialLink name="Whistle or flag" />, <MaterialLink name="Cone or marker for home base" /> |
-| **Setup** | Walk the space and identify the boundary; place cones if edges are unclear; place a central home base marker |
+| **Materials** | <MaterialLink name="Cones (optional, for marking boundaries)" />, <MaterialLink name="Whistle or flag" />, <MaterialLink name="Cone or marker for home base" />, <MaterialLink name="Checkpoints (cones with animal pictures)" /> |
+| **Setup** | Walk the space and identify the boundary; place cones if edges are unclear; place a central home base marker; place animal checkpoints around the space |
 | **Vocabulary** | <VocabLink term="Boundary" />, <VocabLink term="Checkpoint" />, <VocabLink term="Home base (start/finish)" />, <VocabLink term="Gathering signal" /> |
 
 ## Activities
@@ -42,6 +42,12 @@ import OnePager from '@site/src/components/OnePager';
     title="Gathering"
     description="Move freely; return to home base on the teacher's signal."
     link="/activities/core/gathering"
+    tag="core"
+  />
+  <ActivityCard
+    title="Explore & Find"
+    description="In pairs, explore to find animal checkpoints."
+    link="/activities/core/explore-and-find"
     tag="core"
   />
   <ActivityCard
@@ -67,11 +73,24 @@ import OnePager from '@site/src/components/OnePager';
 - Know where home base is from anywhere in the boundary
 - Respond quickly to the gathering signal
 - Explain why boundaries matter for safety and respect
+- Explore a space and find checkpoints within the boundary
+- Describe what you found and where it was, using spatial language
+- Begin building spatial memory of checkpoint locations
+- Work with a partner
 
 ### PE Standards (SHAPE America)
-- Demonstrate locomotor skills (S1.E1, S1.E2)
-- Follow rules and instructions (S4.E1)
-- Engage actively in class (S3.E2)
+**Standard 1: Motor Skills**
+- Combines varied locomotor skills in a variety of practice tasks (1.5.1)
+
+**Standard 2: Movement & Fitness Concepts**
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
+
+**Standard 3: Social Skills**
+- Demonstrates safe behaviors independently with limited reminders (3.5.4)
+- Solves problems independently, with partners, and in small groups (3.5.5)
+
+**Standard 4: Personal Skills**
+- Recognizes group challenges through movement (4.5.5)
 
 ## Delivery
 
@@ -81,6 +100,10 @@ import OnePager from '@site/src/components/OnePager';
 4. Establish home base with a flag or cone. Students walk to different spots. Can they point to home base from where they are?
 5. [**Gathering**](/activities/core/gathering): students move freely within the boundary; return to home base on the signal; count how many seconds it takes
 6. Repeat: spread out further each time. Can the whole class beat their previous time?
+7. Pair up
+8. [**Explore & Find**](/activities/core/explore-and-find): explore within the boundary to find animal checkpoints; return on the gathering signal
+9. Report back: which animals did you find? Where were they? ("The elephant was near the fence." "The giraffe was in the far corner.") Build a group picture of the space.
+10. Send out again. Can you find more this time? Can you remember where the ones you've already seen are?
 
 **Orienteering connection:** In competitive orienteering, every course has a time limit. If you're not back by the cutoff, you're disqualified. Orienteers also learn a safety bearing: a compass direction that will always bring you back to a road or known feature. Today, the gathering signal is your safety bearing.
 
@@ -91,7 +114,9 @@ import OnePager from '@site/src/components/OnePager';
 - What are some things we see every day that mark boundaries? (Fences, curbs, signs)
 - How did you know where home base was?
 - Was it harder to return from far away? What helped?
-- In orienteering, you use a map to get back to the finish. What did you use today?
+- How many animals did you find? Which was the hardest to find?
+- Where were the animals? Can you describe where each one was?
+- How did you work with your partner?
 
 ## Extensions
 
@@ -103,7 +128,8 @@ import OnePager from '@site/src/components/OnePager';
 - Use a different signal (visual only, varied sounds)
 - Time the group gathering; try to improve over several rounds
 - Move home base to a new location; reset and find it again
-- Students close eyes at home base, walk to a random spot, then find their way back
+- Move the checkpoints to new locations and explore again
+- Have students draw a map of the area and checkpoint locations
 
 </FullOnly>
 
@@ -111,13 +137,13 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="1 - Boundary & Return — Lesson Plan"
-  tagline="Here is where you can go; come back when you hear the signal"
+  title="1 - Boundary & Explore — Lesson Plan"
+  tagline="Here is where you can go; there are things to find"
   epigraph="In orienteering, you go out and you come back"
   time="30-45 minutes"
   space="Gym, schoolyard, or local park"
-  materials={['Cones (optional, for marking boundaries)', 'Whistle or flag', 'Cone or marker for home base']}
-  setup="Walk the space and identify the boundary; place cones if edges are unclear; place a central home base marker"
+  materials={['Cones (optional, for marking boundaries)', 'Whistle or flag', 'Cone or marker for home base', 'Checkpoints (cones with animal pictures)']}
+  setup="Walk the space and identify the boundary; place cones if edges are unclear; place a central home base marker; place animal checkpoints around the space"
   vocabulary={['Boundary', 'Checkpoint', 'Home base (start/finish)', 'Gathering signal']}
   goals={[
     'Identify the boundary of the play area',
@@ -126,6 +152,10 @@ import OnePager from '@site/src/components/OnePager';
     'Know where home base is from anywhere in the boundary',
     'Respond quickly to the gathering signal',
     'Explain why boundaries matter for safety and respect',
+    'Explore a space and find checkpoints within the boundary',
+    'Describe what you found and where it was, using spatial language',
+    'Begin building spatial memory of checkpoint locations',
+    'Work with a partner',
   ]}
   delivery={
     <>
@@ -136,6 +166,10 @@ import OnePager from '@site/src/components/OnePager';
         <li>Establish home base. Students walk to different spots; can they point to home base?</li>
         <li><strong>Gathering</strong>: move freely; return to home base on signal; time the group</li>
         <li>Repeat: spread out further each time; beat the previous time</li>
+        <li>Pair up</li>
+        <li><strong>Explore & Find</strong>: explore to find animal checkpoints; return on the signal</li>
+        <li>Report back: describe what you found and where it was</li>
+        <li>Send out again. Can you find more? Can you remember where you've been?</li>
       </ol>
     </>
   }
@@ -145,7 +179,9 @@ import OnePager from '@site/src/components/OnePager';
     'What are some things we see every day that mark boundaries? (Fences, curbs, signs)',
     'How did you know where home base was?',
     'Was it harder to return from far away? What helped?',
-    'In orienteering, you use a map to get back to the finish. What did you use today?',
+    'How many animals did you find? Which was the hardest to find?',
+    'Where were the animals? Can you describe where each one was?',
+    'How did you work with your partner?',
   ]}
   extensions={[
     'Repeat the boundary at a faster pace',
@@ -156,7 +192,8 @@ import OnePager from '@site/src/components/OnePager';
     'Use a different signal (visual only, varied sounds)',
     'Time the group gathering; try to improve over several rounds',
     'Move home base to a new location; reset and find it again',
-    'Students close eyes at home base, walk to a random spot, then find their way back',
+    'Move the checkpoints to new locations and explore again',
+    'Have students draw a map of the area and checkpoint locations',
   ]}
 />
 

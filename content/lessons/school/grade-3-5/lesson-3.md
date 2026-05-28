@@ -1,9 +1,9 @@
-# 4 - Map Readiness
+# 3 - Map Readiness
 
 ---
 tagline: Spatial relationships, orienting, connecting a map to the space
 epigraph: We use a map to know where something is before we even find it
-sidebar_position: 4
+sidebar_position: 3
 time: 30-60 minutes
 space: Gym, schoolyard, or local park
 materials:
@@ -40,7 +40,7 @@ activities:
     tag: extension
 ---
 
-> **Draft video script:** [View script](../../../video-scripts/lessons/4-map-readiness.md)
+> **Draft video script:** [View script](../../../video-scripts/lessons/5-map-readiness.md)
 
 ## Goals
 
@@ -51,10 +51,19 @@ activities:
 - Identify and fix orientation mistakes
 - Complete progressively harder courses using a map
 
-### PE Standards (SHAPE America)
-- Combine movement concepts with skills (S2.E1)
-- Cooperate and learn with others (S4.E4)
-- Accept corrective feedback (S4.E3)
+### PE Standards (SHAPE America, 2024)
+
+**Standard 2: Movement & Fitness Concepts**
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
+- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5)
+
+**Standard 3: Social Skills**
+- Uses communication skills to negotiate roles and responsibilities in a physical activity setting (3.5.2)
+- Demonstrates respectful behaviors that contribute to positive social interaction in group activities (3.5.3)
+- Solves problems independently, with partners, and in small groups (3.5.5)
+
+**Standard 4: Personal Skills**
+- Identifies movement strengths and opportunities for practice for individual improvement (4.5.7)
 
 
 ## Delivery

@@ -61,10 +61,16 @@ import OnePager from '@site/src/components/OnePager';
 - Use colored landmarks to keep the map oriented
 
 ### PE Standards (SHAPE America)
-- Perform locomotor skills (S1.E1)
-- Combine movement concepts with skills (S2.E1)
-- Engage actively in class (S3.E2)
-- Work cooperatively with others (S4.E5)
+**Standard 1: Motor Skills**
+- Demonstrates a variety of locomotor skills with the concepts of space, effort, and relationship awareness (1.2.1)
+
+**Standard 2: Movement & Fitness Concepts**
+- Recognizes personal space and where to move in general space (2.2.1)
+- Demonstrates knowledge of locomotor, non-locomotor, and manipulative skills in movement settings (2.2.4)
+
+**Standard 3: Social Skills**
+- Uses communication skills to share space and equipment (3.2.3)
+- Discusses problems and solutions with teacher support in a physical activity setting (3.2.8)
 
 ## Delivery
 

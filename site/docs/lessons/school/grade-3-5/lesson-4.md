@@ -1,10 +1,10 @@
 ---
-title: "5 - Map Symbols — Lesson Plan"
-sidebar_label: "5 - Map Symbols"
-sidebar_position: 5
+title: "4 - Map Symbols — Lesson Plan"
+sidebar_label: "4 - Map Symbols"
+sidebar_position: 4
 ---
 
-{/* AUTO-GENERATED from content/lessons/school/grade-3-5/5-map-symbols.md — do not edit directly */}
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/lesson-4.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
@@ -17,7 +17,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 5 - Map Symbols — Lesson Plan
+# 4 - Map Symbols — Lesson Plan
 
 > "Every color, shape, and line on the map means something you can see and touch"
 
@@ -60,15 +60,19 @@ import OnePager from '@site/src/components/OnePager';
 - Track your position on the map as you move
 
 ### PE Standards (SHAPE America)
-- Combine movement concepts with skills (S2.E1)
-- Use simple strategies and tactics (S2.E5)
-- Cooperate and learn with others (S4.E4)
+**Standard 2: Movement & Fitness Concepts**
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
+- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5)
+
+**Standard 3: Social Skills**
+- Uses communication skills to negotiate roles and responsibilities in a physical activity setting (3.5.2)
+- Solves problems independently, with partners, and in small groups (3.5.5)
 
 ## Delivery
 
 1. **Boundary Run**: quick warm-up
 2. **Symbol introduction**: gather students with maps
-   - Compare the orienteering map to the pattern maps from Lesson 4
+   - Compare the orienteering map to the pattern maps from Lesson 3
    - Point to a nearby feature (a path, a building, a tree) and find its symbol on the map
    - Orient the map so symbols line up with real features
    - Introduce the legend
@@ -101,7 +105,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="5 - Map Symbols — Lesson Plan"
+  title="4 - Map Symbols — Lesson Plan"
   tagline="Symbols tell you what features are on the ground"
   epigraph="Every color, shape, and line on the map means something you can see and touch"
   time="30-60 minutes"

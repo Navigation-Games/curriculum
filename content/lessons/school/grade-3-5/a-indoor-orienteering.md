@@ -41,11 +41,16 @@ activities:
 - Use the map to plan a route between checkpoints
 - Navigate in a confined, structured space
 
-### PE Standards (SHAPE America)
-- Use simple strategies and tactics (S2.E5)
-- Move confidently and safely in open spaces (S2.E1, S4.E6)
-- Work cooperatively and accept feedback from others (S4.E4, S4.E3)
-- Give feedback to peers (S4.E4)
+### PE Standards (SHAPE America, 2024)
+
+**Standard 2: Movement & Fitness Concepts**
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
+- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5)
+
+**Standard 3: Social Skills**
+- Uses communication skills to negotiate roles and responsibilities in a physical activity setting (3.5.2)
+- Demonstrates respectful behaviors that contribute to positive social interaction in group activities (3.5.3)
+- Demonstrates safe behaviors independently with limited reminders (3.5.4)
 
 
 ## Delivery

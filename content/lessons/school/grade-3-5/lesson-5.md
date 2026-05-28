@@ -1,15 +1,16 @@
-# 6 - Maps
+# 5 - Score-O
 
 ---
-tagline: Use a picture of the space to navigate
+tagline: Navigate using a map, visit checkpoints in any order
 epigraph: Today we will navigate using a real orienteering map
-sidebar_position: 6
-time: 30-60 minutes (can extend across multiple sessions)
+sidebar_position: 5
+time: 30-60 minutes
 space: Schoolyard or local park (needs real features for map symbols)
 materials:
   - Orienteering maps
   - Checkpoint markers (cones or flags)
   - Master map
+  - Scorecards and pencils
 setup: Place checkpoints according to the master map
 vocabulary:
   - Orient the map
@@ -29,13 +30,6 @@ activities:
     description: Visit as many checkpoints as possible in any order.
     link: /activities/core/score-o
     tag: core
-  - title: Point-to-Point
-    description: Complete a course visiting checkpoints in order using a map.
-    link: /activities/core/point-to-point
-    tag: core
-  - title: Symbol Relay
-    description: Team relay to learn map symbols competitively.
-    tag: extension
   - title: Poison-O
     description: Score-O where wrong checkpoints lose points.
     tag: extension
@@ -53,27 +47,34 @@ activities:
 - Learn map symbols and match them to real features
 - Walk a route while reading the map
 - Make route choices based on the map
-- Complete courses independently
+- Visit as many checkpoints as possible within a time limit
 
-### PE Standards (SHAPE America)
-- Combine movement concepts with skills (S2.E1)
-- Use simple strategies and tactics (S2.E5)
-- Move confidently and safely in open spaces (S2.E1, S4.E6)
-- Cooperate and learn with others (S4.E4)
+### PE Standards (SHAPE America, 2024)
+
+**Standard 2: Movement & Fitness Concepts**
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
+- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5)
+
+**Standard 3: Social Skills**
+- Uses communication skills to negotiate roles and responsibilities in a physical activity setting (3.5.2)
+- Demonstrates safe behaviors independently with limited reminders (3.5.4)
+- Solves problems independently, with partners, and in small groups (3.5.5)
+
+**Standard 4: Personal Skills**
+- Explains the rationale for one's choices related to physical activity based on personal interests (4.5.4)
+- Reflects on movement experiences to develop understanding of how movement is personally meaningful (4.5.10)
 
 
 ## Delivery
 
 1. [**Boundary Run**](/activities/core/boundary-run): run the boundary
 2. **Map Discussion**: introduce the orienteering map
-   - Compare it to the pattern maps from Lesson 4
+   - Compare it to the pattern maps from Lesson 3
    - Orient the map using real features
    - Point out symbols and what they represent
-3. **Map Walk**: walk a route as a group, matching symbols to real features
-4. **Score-O**: each student or pair gets a map with checkpoint circles; visit as many as you can in the time limit, in any order
-5. [**Point-to-Point**](/activities/core/point-to-point): follow a course from start to finish, visiting checkpoints in order
-6. **Partner Orienteering**: plan and execute a full course together
-7. **Solo Orienteering**: do a course on your own
+3. [**Map Walk**](/activities/core/map-walk): walk a route as a group, matching symbols to real features
+4. [**Score-O**](/activities/core/score-o): each student or pair gets a map with checkpoint circles; visit as many as you can in the time limit, in any order
+5. Repeat: try to beat your score
 
 
 ## Compact Delivery
@@ -82,24 +83,20 @@ activities:
 2. **Map Discussion**: introduce the orienteering map; compare to pattern maps
 3. **Map Walk**: walk a route, matching symbols to features
 4. **Score-O**: visit as many checkpoints as possible in any order
-5. **Point-to-Point**: follow a course visiting checkpoints in order
-6. **Partner/Solo Orienteering**: complete full courses
+5. Repeat: try to beat your score
 
 
 ## Reflection
 
 - How is the orienteering map different from the pattern maps we used before?
 - Which symbols were easier or harder to remember? Why?
-- What strategy did you use to visit the most checkpoints in Score-O?
-- How did you determine which way to go for each checkpoint?
+- What strategy did you use to visit the most checkpoints?
+- How did you decide which checkpoint to go to next?
 - What shortcuts between checkpoints did you find?
 
 
 ## Extensions
 
-- **Symbol Relay**: team competition to learn map symbols
-- **Poker-O**: each checkpoint has a playing card; collect the best poker hand
 - **Poison-O**: wrong checkpoints cost points; rewards careful map reading
-- **Place Your Own Checkpoints**: students place markers using the map, then others find them
-- Relay race: teams take turns completing the course
+- **Poker-O**: each checkpoint has a playing card; collect the best poker hand
 - Challenge students to complete three checkpoints from memory

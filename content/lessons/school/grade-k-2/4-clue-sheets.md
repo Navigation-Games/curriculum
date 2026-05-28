@@ -26,7 +26,7 @@ activities:
     tag: core
   - title: Explore & Find
     description: "Quick review: explore to find checkpoints (if students need a refresher)."
-    link: /activities/core/animal-o
+    link: /activities/core/explore-and-find
     tag: readiness
 ---
 
@@ -38,11 +38,17 @@ activities:
 - Begin building spatial memory by repeating courses
 - Work as a pair: one holds the clue sheet, the other looks
 
-### PE Standards (SHAPE America)
-- Perform locomotor skills (S1.E1)
-- Engage actively in class (S3.E2)
-- Accept corrective feedback from the teacher (S4.E3)
-- Work cooperatively with others (S4.E5)
+### PE Standards (SHAPE America, 2024)
+
+**Standard 1: Motor Skills**
+- Demonstrates a variety of locomotor skills with the concepts of space, effort, and relationship awareness (1.2.1)
+
+**Standard 3: Social Skills**
+- Responds appropriately to directions and feedback from the teacher (3.2.4)
+- Uses communication skills to share space and equipment (3.2.3)
+
+**Standard 4: Personal Skills**
+- Recognizes movement strengths and the need for practice for individual improvement (4.2.7)
 
 
 ## Delivery

@@ -1,10 +1,10 @@
 ---
-title: "4 - Map Readiness — Lesson Plan"
-sidebar_label: "4 - Map Readiness"
-sidebar_position: 4
+title: "3 - Map Readiness — Lesson Plan"
+sidebar_label: "3 - Map Readiness"
+sidebar_position: 3
 ---
 
-{/* AUTO-GENERATED from content/lessons/school/grade-3-5/4-map-readiness.md — do not edit directly */}
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/lesson-3.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
@@ -17,7 +17,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 4 - Map Readiness — Lesson Plan
+# 3 - Map Readiness — Lesson Plan
 
 > "We use a map to know where something is before we even find it"
 
@@ -73,9 +73,17 @@ import OnePager from '@site/src/components/OnePager';
 - Complete progressively harder courses using a map
 
 ### PE Standards (SHAPE America)
-- Combine movement concepts with skills (S2.E1)
-- Cooperate and learn with others (S4.E4)
-- Accept corrective feedback (S4.E3)
+**Standard 2: Movement & Fitness Concepts**
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
+- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5)
+
+**Standard 3: Social Skills**
+- Uses communication skills to negotiate roles and responsibilities in a physical activity setting (3.5.2)
+- Demonstrates respectful behaviors that contribute to positive social interaction in group activities (3.5.3)
+- Solves problems independently, with partners, and in small groups (3.5.5)
+
+**Standard 4: Personal Skills**
+- Identifies movement strengths and opportunities for practice for individual improvement (4.5.7)
 
 ## Delivery
 
@@ -111,7 +119,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="4 - Map Readiness — Lesson Plan"
+  title="3 - Map Readiness — Lesson Plan"
   tagline="Spatial relationships, orienting, connecting a map to the space"
   epigraph="We use a map to know where something is before we even find it"
   time="30-60 minutes"

@@ -39,7 +39,7 @@ import OnePager from '@site/src/components/OnePager';
   <ActivityCard
     title="Explore & Find"
     description="In pairs, explore to find animal checkpoints."
-    link="/activities/core/animal-o"
+    link="/activities/core/explore-and-find"
     tag="core"
   />
   <ActivityCard
@@ -59,16 +59,24 @@ import OnePager from '@site/src/components/OnePager';
 - Work with a partner
 
 ### PE Standards (SHAPE America)
-- Perform locomotor skills (S1.E1)
-- Move in general space safely (S1.E2)
-- Engage actively in class (S3.E2)
-- Work cooperatively with others (S4.E5)
+**Standard 1: Motor Skills**
+- Demonstrates a variety of locomotor skills with the concepts of space, effort, and relationship awareness (1.2.1)
+
+**Standard 2: Movement & Fitness Concepts**
+- Recognizes personal space and where to move in general space (2.2.1)
+
+**Standard 3: Social Skills**
+- Uses communication skills to share space and equipment (3.2.3)
+- Discusses problems and solutions with teacher support in a physical activity setting (3.2.8)
+
+**Standard 4: Personal Skills**
+- Recognizes individual challenges through movement (4.2.5)
 
 ## Delivery
 
 1. [**Boundary Run**](/activities/core/boundary-run): quick review of the boundary
 2. Pair up. One partner is the Finder, the other is the Helper. They stay together.
-3. [**Explore & Find**](/activities/core/animal-o): explore within the boundary to find animal checkpoints. No set order; just find as many as you can. Return on the gathering signal.
+3. [**Explore & Find**](/activities/core/explore-and-find): explore within the boundary to find animal checkpoints. No set order; just find as many as you can. Return on the gathering signal.
 4. Gather and report back: which animals did you find? Where were they? ("The elephant was near the fence." "The giraffe was by the big tree.") Build a group picture of the space together.
 5. Switch roles. Send out again. Can you find more this time? Can you remember where the ones you already saw are?
 6. Report back again. Did you find new ones?

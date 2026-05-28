@@ -38,10 +38,17 @@ activities:
 - Compare your map to a partner's map
 - Begin to understand how a map relates to the real space
 
-### PE Standards (SHAPE America)
-- Perform locomotor skills (S1.E1)
-- Engage actively in class (S3.E2)
-- Work cooperatively with others (S4.E5)
+### PE Standards (SHAPE America, 2024)
+
+**Standard 1: Motor Skills**
+- Demonstrates a variety of locomotor skills with the concepts of space, effort, and relationship awareness (1.2.1)
+
+**Standard 2: Movement & Fitness Concepts**
+- Recognizes personal space and where to move in general space (2.2.1)
+
+**Standard 3: Social Skills**
+- Uses communication skills to share space and equipment (3.2.3)
+- Demonstrates respectful behaviors that contribute to positive social interactions in movement (3.2.5)
 
 
 ## Delivery

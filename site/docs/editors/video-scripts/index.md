@@ -20,10 +20,9 @@ These are working documents for video production. They include visual direction 
 
 ## Lesson Scripts
 
-- [Lesson 1 - Boundary](lessons/boundary)
-- [Lesson 2 - Return](lessons/return)
-- [Lesson 3 - Explore & Find](lessons/explore-and-find)
-- [Lesson 4 - Clue Sheets](lessons/clue-sheets)
-- [Lesson 5 - Map Readiness](lessons/map-readiness)
-- [Lesson 6 - Maps](lessons/maps)
+- [Lesson 1 - Boundary & Explore](lessons/1-boundary) (boundary and return scripts)
+- [Lesson 1 - Explore & Find](lessons/3-explore-and-find)
+- [Lesson 2 - Clue Sheets](lessons/4-clue-sheets)
+- [Lesson 3 - Map Readiness](lessons/5-map-readiness)
+- [Lesson 5/6 - Maps](lessons/6-maps) (Score-O and Point-to-Point)
 - [Lesson A - Indoor Orienteering](lessons/a-indoor-orienteering)

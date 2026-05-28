@@ -1,10 +1,10 @@
 ---
-title: "6 - Maps — Lesson Plan"
-sidebar_label: "6 - Maps"
-sidebar_position: 6
+title: "5 - Score-O — Lesson Plan"
+sidebar_label: "5 - Score-O"
+sidebar_position: 5
 ---
 
-{/* AUTO-GENERATED from content/lessons/school/grade-3-5/6-maps.md — do not edit directly */}
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/lesson-5.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
@@ -17,15 +17,15 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 6 - Maps — Lesson Plan
+# 5 - Score-O — Lesson Plan
 
 > "Today we will navigate using a real orienteering map"
 
 | | |
 |---|---|
-| **Time** | 30-60 minutes (can extend across multiple sessions) |
+| **Time** | 30-60 minutes |
 | **Space** | Schoolyard or local park (needs real features for map symbols) |
-| **Materials** | <MaterialLink name="Orienteering maps" />, <MaterialLink name="Checkpoint markers (cones or flags)" />, <MaterialLink name="Master map" />, <MaterialLink name="Cones (optional, for marking boundaries)" />, <MaterialLink name="A planned route through varied features" />, <MaterialLink name="Scorecards and pencils" /> |
+| **Materials** | <MaterialLink name="Orienteering maps" />, <MaterialLink name="Checkpoint markers (cones or flags)" />, <MaterialLink name="Master map" />, <MaterialLink name="Scorecards and pencils" />, <MaterialLink name="Cones (optional, for marking boundaries)" />, <MaterialLink name="A planned route through varied features" /> |
 | **Setup** | Place checkpoints according to the master map |
 | **Vocabulary** | <VocabLink term="Orient the map" />, <VocabLink term="Symbol" />, <VocabLink term="Feature" />, <VocabLink term="Route choice" /> |
 
@@ -51,17 +51,6 @@ import OnePager from '@site/src/components/OnePager';
     tag="core"
   />
   <ActivityCard
-    title="Point-to-Point"
-    description="Complete a course visiting checkpoints in order using a map."
-    link="/activities/core/point-to-point"
-    tag="core"
-  />
-  <ActivityCard
-    title="Symbol Relay"
-    description="Team relay to learn map symbols competitively."
-    tag="extension"
-  />
-  <ActivityCard
     title="Poison-O"
     description="Score-O where wrong checkpoints lose points."
     tag="extension"
@@ -80,42 +69,45 @@ import OnePager from '@site/src/components/OnePager';
 - Learn map symbols and match them to real features
 - Walk a route while reading the map
 - Make route choices based on the map
-- Complete courses independently
+- Visit as many checkpoints as possible within a time limit
 
 ### PE Standards (SHAPE America)
-- Combine movement concepts with skills (S2.E1)
-- Use simple strategies and tactics (S2.E5)
-- Move confidently and safely in open spaces (S2.E1, S4.E6)
-- Cooperate and learn with others (S4.E4)
+**Standard 2: Movement & Fitness Concepts**
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
+- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5)
+
+**Standard 3: Social Skills**
+- Uses communication skills to negotiate roles and responsibilities in a physical activity setting (3.5.2)
+- Demonstrates safe behaviors independently with limited reminders (3.5.4)
+- Solves problems independently, with partners, and in small groups (3.5.5)
+
+**Standard 4: Personal Skills**
+- Explains the rationale for one's choices related to physical activity based on personal interests (4.5.4)
+- Reflects on movement experiences to develop understanding of how movement is personally meaningful (4.5.10)
 
 ## Delivery
 
 1. [**Boundary Run**](/activities/core/boundary-run): run the boundary
 2. **Map Discussion**: introduce the orienteering map
-   - Compare it to the pattern maps from Lesson 4
+   - Compare it to the pattern maps from Lesson 3
    - Orient the map using real features
    - Point out symbols and what they represent
-3. **Map Walk**: walk a route as a group, matching symbols to real features
-4. **Score-O**: each student or pair gets a map with checkpoint circles; visit as many as you can in the time limit, in any order
-5. [**Point-to-Point**](/activities/core/point-to-point): follow a course from start to finish, visiting checkpoints in order
-6. **Partner Orienteering**: plan and execute a full course together
-7. **Solo Orienteering**: do a course on your own
+3. [**Map Walk**](/activities/core/map-walk): walk a route as a group, matching symbols to real features
+4. [**Score-O**](/activities/core/score-o): each student or pair gets a map with checkpoint circles; visit as many as you can in the time limit, in any order
+5. Repeat: try to beat your score
 
 ## Reflection
 
 - How is the orienteering map different from the pattern maps we used before?
 - Which symbols were easier or harder to remember? Why?
-- What strategy did you use to visit the most checkpoints in Score-O?
-- How did you determine which way to go for each checkpoint?
+- What strategy did you use to visit the most checkpoints?
+- How did you decide which checkpoint to go to next?
 - What shortcuts between checkpoints did you find?
 
 ## Extensions
 
-- **Symbol Relay**: team competition to learn map symbols
-- **Poker-O**: each checkpoint has a playing card; collect the best poker hand
 - **Poison-O**: wrong checkpoints cost points; rewards careful map reading
-- **Place Your Own Checkpoints**: students place markers using the map, then others find them
-- Relay race: teams take turns completing the course
+- **Poker-O**: each checkpoint has a playing card; collect the best poker hand
 - Challenge students to complete three checkpoints from memory
 
 </FullOnly>
@@ -124,12 +116,12 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="6 - Maps — Lesson Plan"
-  tagline="Use a picture of the space to navigate"
+  title="5 - Score-O — Lesson Plan"
+  tagline="Navigate using a map, visit checkpoints in any order"
   epigraph="Today we will navigate using a real orienteering map"
-  time="30-60 minutes (can extend across multiple sessions)"
+  time="30-60 minutes"
   space="Schoolyard or local park (needs real features for map symbols)"
-  materials={['Orienteering maps', 'Checkpoint markers (cones or flags)', 'Master map', 'Cones (optional, for marking boundaries)', 'A planned route through varied features', 'Scorecards and pencils']}
+  materials={['Orienteering maps', 'Checkpoint markers (cones or flags)', 'Master map', 'Scorecards and pencils', 'Cones (optional, for marking boundaries)', 'A planned route through varied features']}
   setup="Place checkpoints according to the master map"
   vocabulary={['Orient the map', 'Symbol', 'Feature', 'Route choice']}
   goals={[
@@ -137,7 +129,7 @@ import OnePager from '@site/src/components/OnePager';
     'Learn map symbols and match them to real features',
     'Walk a route while reading the map',
     'Make route choices based on the map',
-    'Complete courses independently',
+    'Visit as many checkpoints as possible within a time limit',
   ]}
   delivery={
     <>
@@ -146,24 +138,20 @@ import OnePager from '@site/src/components/OnePager';
         <li><strong>Map Discussion</strong>: introduce the orienteering map; compare to pattern maps</li>
         <li><strong>Map Walk</strong>: walk a route, matching symbols to features</li>
         <li><strong>Score-O</strong>: visit as many checkpoints as possible in any order</li>
-        <li><strong>Point-to-Point</strong>: follow a course visiting checkpoints in order</li>
-        <li><strong>Partner/Solo Orienteering</strong>: complete full courses</li>
+        <li>Repeat: try to beat your score</li>
       </ol>
     </>
   }
   reflection={[
     'How is the orienteering map different from the pattern maps we used before?',
     'Which symbols were easier or harder to remember? Why?',
-    'What strategy did you use to visit the most checkpoints in Score-O?',
-    'How did you determine which way to go for each checkpoint?',
+    'What strategy did you use to visit the most checkpoints?',
+    'How did you decide which checkpoint to go to next?',
     'What shortcuts between checkpoints did you find?',
   ]}
   extensions={[
-    '**Symbol Relay**: team competition to learn map symbols',
-    '**Poker-O**: each checkpoint has a playing card; collect the best poker hand',
     '**Poison-O**: wrong checkpoints cost points; rewards careful map reading',
-    '**Place Your Own Checkpoints**: students place markers using the map, then others find them',
-    'Relay race: teams take turns completing the course',
+    '**Poker-O**: each checkpoint has a playing card; collect the best poker hand',
     'Challenge students to complete three checkpoints from memory',
   ]}
 />

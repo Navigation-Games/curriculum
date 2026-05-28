@@ -1,10 +1,10 @@
 ---
-title: "3 - Clue Sheets — Lesson Plan"
-sidebar_label: "3 - Clue Sheets"
-sidebar_position: 3
+title: "2 - Clue Sheets — Lesson Plan"
+sidebar_label: "2 - Clue Sheets"
+sidebar_position: 2
 ---
 
-{/* AUTO-GENERATED from content/lessons/school/grade-3-5/3-clue-sheets.md — do not edit directly */}
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/lesson-2.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
@@ -17,7 +17,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 3 - Clue Sheets — Lesson Plan
+# 2 - Clue Sheets — Lesson Plan
 
 > "In orienteering, you find checkpoints in order using clue sheets"
 
@@ -33,9 +33,9 @@ import OnePager from '@site/src/components/OnePager';
 
 <CardGrid columns={3}>
   <ActivityCard
-    title="Boundary Run"
-    description="Warm up: run the boundary together."
-    link="/activities/core/boundary-run"
+    title="Explore & Find"
+    description="Warm up: explore to find checkpoints (refresher from Lesson 1)."
+    link="/activities/core/explore-and-find"
     tag="warm-up"
   />
   <ActivityCard
@@ -45,10 +45,9 @@ import OnePager from '@site/src/components/OnePager';
     tag="core"
   />
   <ActivityCard
-    title="Explore & Find"
-    description="Warm up: explore to find checkpoints (if not done in Lesson 2)."
-    link="/activities/core/animal-o"
-    tag="readiness"
+    title="Animal Relay"
+    description="Take turns running to animal checkpoints."
+    tag="variation"
   />
 </CardGrid>
 
@@ -61,21 +60,27 @@ import OnePager from '@site/src/components/OnePager';
 - Complete the activity faster by remembering checkpoint locations
 
 ### PE Standards (SHAPE America)
-- Demonstrate locomotor skills (S1.E1, S1.E2)
-- Engage actively in class (S3.E2)
-- Accept corrective feedback from the teacher (S4.E3)
-- Work cooperatively with others (S4.E5)
+**Standard 1: Motor Skills**
+- Combines varied locomotor skills in a variety of practice tasks (1.5.1)
+
+**Standard 3: Social Skills**
+- Demonstrates respectful behaviors that contribute to positive social interaction in group activities (3.5.3)
+- Solves problems independently, with partners, and in small groups (3.5.5)
+
+**Standard 4: Personal Skills**
+- Identifies movement strengths and opportunities for practice for individual improvement (4.5.7)
 
 ## Delivery
 
-1. [**Boundary Run**](/activities/core/boundary-run): quick review of the boundary
-2. Pair up
+1. Pair up
+2. [**Explore & Find**](/activities/core/explore-and-find): quick round of exploring to find animal checkpoints; return on the gathering signal. How many can you remember from last time?
 3. [**Animal-O**](/activities/core/animal-o): use clue sheets to find checkpoints in order. Progression:
    - Start with a short clue sheet (2-3 animals)
    - Advance to clue sheets with more animals
    - Try a different clue sheet
    - Repeat from memory
    - Repeat for a faster time
+4. **Animal Relay**: take turns running to checkpoints
 
 ## Reflection
 
@@ -98,7 +103,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="3 - Clue Sheets — Lesson Plan"
+  title="2 - Clue Sheets — Lesson Plan"
   tagline="Find them in this specific order"
   epigraph="In orienteering, you find checkpoints in order using clue sheets"
   time="30-60 minutes"
@@ -115,8 +120,8 @@ import OnePager from '@site/src/components/OnePager';
   delivery={
     <>
       <ol>
-        <li><strong>Boundary Run</strong>: quick review</li>
         <li>Pair up</li>
+        <li><strong>Explore & Find</strong>: quick round of exploring to find checkpoints</li>
         <li><strong>Animal-O</strong>: use clue sheets to find checkpoints in order</li>
       </ol>
       <p>Progression:</p>
@@ -126,6 +131,9 @@ import OnePager from '@site/src/components/OnePager';
         <li>Try a different clue sheet</li>
         <li>Repeat from memory</li>
         <li>Repeat for a faster time</li>
+      </ol>
+      <ol>
+        <li><strong>Animal Relay</strong>: take turns running to checkpoints</li>
       </ol>
     </>
   }

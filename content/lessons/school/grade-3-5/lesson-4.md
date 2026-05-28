@@ -1,9 +1,9 @@
-# 5 - Map Symbols
+# 4 - Map Symbols
 
 ---
 tagline: Symbols tell you what features are on the ground
 epigraph: Every color, shape, and line on the map means something you can see and touch
-sidebar_position: 5
+sidebar_position: 4
 time: 30-60 minutes
 space: Schoolyard or local park (needs real features for map symbols)
 materials:
@@ -38,17 +38,22 @@ activities:
 - Walk a route while keeping the map oriented
 - Track your position on the map as you move
 
-### PE Standards (SHAPE America)
-- Combine movement concepts with skills (S2.E1)
-- Use simple strategies and tactics (S2.E5)
-- Cooperate and learn with others (S4.E4)
+### PE Standards (SHAPE America, 2024)
+
+**Standard 2: Movement & Fitness Concepts**
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
+- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5)
+
+**Standard 3: Social Skills**
+- Uses communication skills to negotiate roles and responsibilities in a physical activity setting (3.5.2)
+- Solves problems independently, with partners, and in small groups (3.5.5)
 
 
 ## Delivery
 
 1. **Boundary Run**: quick warm-up
 2. **Symbol introduction**: gather students with maps
-   - Compare the orienteering map to the pattern maps from Lesson 4
+   - Compare the orienteering map to the pattern maps from Lesson 3
    - Point to a nearby feature (a path, a building, a tree) and find its symbol on the map
    - Orient the map so symbols line up with real features
    - Introduce the legend

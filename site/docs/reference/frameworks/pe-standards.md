@@ -22,10 +22,6 @@ Grade spans: **PreK-2**, **3-5**, **6-8**, **9-12**
 
 Indicator codes use the format `[Standard].[GradeSpanEnd].[Indicator]`. For example, `1.5.1` means Standard 1, grades 3-5, indicator 1.
 
-:::note
-The specific grade-span indicator codes below need to be updated to the 2024 format. The free [Educator Kit PDF](https://www.shapeamerica.org/Common/Uploaded%20files/Document_manager/standards/pe/2024_National_Physical_Education_Standards_Educator_Kit.pdf) from SHAPE America has the complete indicator list.
-:::
-
 ## Why Orienteering Fits These Standards
 
 Orienteering is unusually well-aligned with the 2024 standards because it is built around **decision-making, not drills**. Students are not standing in line waiting for a turn. They are moving with purpose, reading a map, choosing a route, and getting immediate feedback on whether they found the right checkpoint.
@@ -46,27 +42,27 @@ Student engagement in orienteering could be assessed numerically: time on task, 
 
 *Develops a variety of motor skills.*
 
-| Activity | How it addresses this standard |
-|---|---|
-| Boundary Run | Locomotor skills: running, skipping, galloping along the boundary |
-| Gathering | Locomotor skills at varied speeds; quick changes of direction |
-| Animal-O | Running with rapid direction changes between checkpoints |
-| Geometric-O | Running between checkpoints with map in hand |
-| Score-O | Route choice requires varied movement patterns |
+| Activity | Indicator | How it addresses this standard |
+|---|---|---|
+| Boundary Run | 1.5.1 | Locomotor skills: running, skipping, galloping along the boundary |
+| Gathering | 1.5.1 | Locomotor skills at varied speeds; quick changes of direction |
+| Animal-O | 1.5.1 | Running with rapid direction changes between checkpoints |
+| Geometric-O | 1.5.1 | Running between checkpoints with map in hand |
+| Score-O | 1.5.1 | Route choice requires varied movement patterns |
 
 ### Standard 2: Movement & Fitness Concepts
 
 *Applies knowledge related to movement and fitness concepts.*
 
-| Activity | How it addresses this standard |
-|---|---|
-| Geometric-O | Spatial relationships (closest, furthest, between); map orientation; connecting 2D map to 3D space |
-| Animal-O | Spatial memory; planning efficient routes between checkpoints |
-| Score-O | Strategy and route planning; deciding which checkpoints to visit and in what order |
-| Map Walk | Connecting map symbols to real-world features |
-| Symbol-O | Learning map symbols and applying them to navigation |
-| Boundary Run | Understanding spatial concepts (inside, outside, boundary) |
-| Gathering | Awareness of position in space; estimating distance |
+| Activity | Indicators | How it addresses this standard |
+|---|---|---|
+| Geometric-O | 2.5.1, 2.5.5 | Spatial relationships (closest, furthest, between); map orientation; connecting 2D map to 3D space |
+| Animal-O | 2.5.1 | Spatial memory; planning efficient routes between checkpoints |
+| Score-O | 2.5.1, 2.5.5 | Strategy and route planning; deciding which checkpoints to visit and in what order |
+| Map Walk | 2.5.1 | Connecting map symbols to real-world features |
+| Symbol-O | 2.5.1 | Learning map symbols and applying them to navigation |
+| Boundary Run | 2.5.1 | Understanding spatial concepts (inside, outside, boundary) |
+| Gathering | 2.5.1 | Awareness of position in space; estimating distance |
 
 ### Standard 3: Social Skills
 
@@ -74,14 +70,14 @@ Student engagement in orienteering could be assessed numerically: time on task, 
 
 Orienteering develops social skills naturally because pair work, communication, and mutual verification are built into the activity structure itself, not bolted on as a separate objective.
 
-| Activity | How it addresses this standard |
-|---|---|
-| Gathering | Group strategizing to improve gathering time |
-| Animal-O | Pair work on clue sheets; helping peers who are struggling |
-| Geometric-O | Partner work: sharing maps, verifying each other's answers |
-| Napkin-O | Communication between pairs to identify hidden checkpoints |
-| Word Bank Orienteering | Verbal communication using only spatial vocabulary to guide a partner |
-| Partner Orienteering | Negotiating route choices and executing a course together |
+| Activity | Indicators | How it addresses this standard |
+|---|---|---|
+| Gathering | 3.5.5 | Group strategizing to improve gathering time |
+| Animal-O | 3.5.2, 3.5.3 | Pair work on clue sheets; helping peers who are struggling |
+| Geometric-O | 3.5.2, 3.5.5 | Partner work: sharing maps, verifying each other's answers |
+| Napkin-O | 3.5.2 | Communication between pairs to identify hidden checkpoints |
+| Word Bank Orienteering | 3.5.2 | Verbal communication using only spatial vocabulary to guide a partner |
+| Partner Orienteering | 3.5.2, 3.5.5 | Negotiating route choices and executing a course together |
 
 ### Standard 4: Personal Skills & Choosing to Engage
 
@@ -89,24 +85,35 @@ Orienteering develops social skills naturally because pair work, communication, 
 
 Student choice and autonomy increase through the progression. Early lessons are structured (follow the leader, visit checkpoints in this order). Later lessons hand control to the student (choose your own route, run the course solo, try it from memory). By the end, students are self-directing their physical activity.
 
-| Activity | How it addresses this standard |
-|---|---|
-| Boundary Run | Understanding why boundaries exist (safety, respect) |
-| Gathering | Responding to signals; self-regulation |
-| Animal-O | Self-pacing; choosing to repeat for speed, from memory, or with a harder clue sheet |
-| Geometric-O | Identifying and fixing orientation mistakes; persistence through difficulty; choosing when to advance to harder levels |
-| Score-O | Full autonomy: students choose which checkpoints to visit, in what order, and how to plan their route |
+| Activity | Indicators | How it addresses this standard |
+|---|---|---|
+| Boundary Run | 4.5.5 | Understanding why boundaries exist (safety, respect) |
+| Gathering | 4.5.5 | Responding to signals; self-regulation |
+| Animal-O | 4.5.7 | Self-pacing; choosing to repeat for speed, from memory, or with a harder clue sheet |
+| Geometric-O | 4.5.7 | Identifying and fixing orientation mistakes; persistence through difficulty; choosing when to advance to harder levels |
+| Score-O | 4.5.4, 4.5.10 | Full autonomy: students choose which checkpoints to visit, in what order, and how to plan their route |
 
-## Standards by Lesson
+## Standards by Lesson (Grades 3-5)
 
 | Lesson | Standard 1 | Standard 2 | Standard 3 | Standard 4 |
 |---|---|---|---|---|
-| 1. Boundary | Locomotor skills: running, skipping along the boundary | Spatial awareness (inside, outside, boundary) | Following instructions | Understanding why boundaries exist |
-| 2. Return | Running at varied speeds; quick direction changes | Awareness of position; estimating distance | Group strategizing to improve gathering time | Responding to signals; self-regulation |
-| 3. Explore & Find | Running with direction changes between checkpoints | Spatial memory; exploring to locate checkpoints | Pair work: exploring together | Self-pacing; choosing to keep exploring |
-| 4. Clue Sheets | Running with rapid direction changes | Spatial memory; planning efficient routes | Pair work on clue sheets | Self-pacing; repeating for speed or from memory |
-| 5. Map Readiness | Running between checkpoints with map | Map orientation; spatial vocabulary; connecting 2D map to 3D space | Partner verification; sharing maps | Fixing orientation mistakes; choosing harder levels |
-| 6. Maps | Walking and running routes; route choice movement | Map symbols; strategy and route planning | Partner and solo work | Independent navigation; self-directed courses |
+| 1. Boundary & Explore | Locomotor skills in varied practice (1.5.1) | Movement concepts for safe movement (2.5.1) | Safe behaviors independently (3.5.4); solves problems with partners (3.5.5) | Recognizes group challenges (4.5.5) |
+| 2. Clue Sheets | Locomotor skills in varied practice (1.5.1) | | Respectful behaviors in group activities (3.5.3); solves problems with partners (3.5.5) | Identifies strengths and opportunities for practice (4.5.7) |
+| 3. Map Readiness | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); respectful behaviors (3.5.3); solves problems (3.5.5) | Identifies strengths and opportunities for practice (4.5.7) |
+| 4. Map Symbols | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); solves problems (3.5.5) | |
+| 5. Score-O | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); safe behaviors (3.5.4); solves problems (3.5.5) | Explains rationale for choices (4.5.4); reflects on movement (4.5.10) |
+| 6. Point-to-Point | Locomotor skills in varied practice (1.5.1) | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Safe behaviors (3.5.4); solves problems (3.5.5) | Explains rationale for choices (4.5.4); identifies strengths (4.5.7) |
+
+## Standards by Lesson (Grades K-2)
+
+| Lesson | Standard 1 | Standard 2 | Standard 3 | Standard 4 |
+|---|---|---|---|---|
+| 1. Safety & Space | Locomotor skills with space awareness (1.2.1) | Recognizes personal space and general space (2.2.1) | Responds to directions (3.2.4); follows rules for safety (3.2.6); safe choices with equipment (3.2.7) | |
+| 2. Explore & Find | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1) | Communicates to share space (3.2.3); discusses problems with teacher support (3.2.8) | Recognizes individual challenges (4.2.5) |
+| 3. Treasure Hunt | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1); identifies movement concepts (2.2.3) | Communicates to share space (3.2.3); discusses problems with teacher support (3.2.8) | |
+| 4. Clue Sheets | Locomotor skills with space awareness (1.2.1) | | Responds to directions (3.2.4); communicates to share space (3.2.3) | Recognizes strengths and need for practice (4.2.7) |
+| 5. Draw a Map | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1) | Communicates to share space (3.2.3); respectful behaviors in movement (3.2.5) | |
+| 6. Read a Map | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1); knowledge of locomotor skills in movement settings (2.2.4) | Communicates to share space (3.2.3); discusses problems with teacher support (3.2.8) | |
 
 ## Resources
 
