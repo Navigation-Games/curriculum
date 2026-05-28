@@ -13,12 +13,12 @@ These lessons align with the concept sequence entries 1-5 (Pre-Map Skills) and 6
 
 | Lesson | Theme | Key Activities | Concepts Introduced |
 |---|---|---|---|
-| 1. **Safety and Space** | Know the boundary, return on signal | Boundary Run, Gathering, tag extension | Boundaries, Return, Safety |
-| 2. **Explore and Find** | Discover the space and what's in it | Explore & Find, Animal-O (free: meet the animals) | Searching, Spatial observation, Spatial memory |
-| 3. **Treasure Hunt** | Find things and describe where they are | Clothespin-O (find hidden objects, describe where) | Spatial communication, Observation |
-| 4. **Clue Sheets** | Follow a sequence | Animal-O (in order) | Following a sequence, Confirming location |
-| 5. **Draw a Map** | Create a picture of the space | Obstacle course mapping, draw where animals are | Map as picture of space, Spatial relations |
-| 6. **Read a Map** | Use a map to find things | Simple Geometric-O or Map Maker | Orienting the map, Pattern matching |
+| [1. **Safety and Space**](lesson-1) | Know the boundary, return on signal | [Boundary Run](/activities/core/boundary-run), [Gathering](/activities/core/gathering), tag extension | Boundaries, Return, Safety |
+| [2. **Explore and Find**](lesson-2) | Discover the space and what's in it | [Explore & Find](/activities/core/explore-and-find), [Animal-O](/activities/core/animal-o) (free: meet the animals) | Searching, Spatial observation, Spatial memory |
+| [3. **Treasure Hunt**](lesson-3) | Find things and describe where they are | [Clothespin-O](/activities/core/clothespin-o) (find hidden objects, describe where) | Spatial communication, Observation |
+| [4. **Clue Sheets**](lesson-4) | Follow a sequence | [Animal-O](/activities/core/animal-o) (in order) | Following a sequence, Confirming location |
+| [5. **Draw a Map**](lesson-5) | Create a picture of the space | Obstacle course mapping, draw where animals are | Map as picture of space, Spatial relations |
+| [6. **Read a Map**](lesson-6) | Use a map to find things | Simple [Geometric-O](/activities/core/geometric-o) or Map Maker | Orienting the map, Pattern matching |
 
 Plan for six class periods, one per lesson. Lessons 1 and 2 can often be combined for groups that settle in quickly. Lessons 5 and 6 may extend across two sessions.
 
@@ -34,9 +34,9 @@ Plan for six class periods, one per lesson. Lessons 1 and 2 can often be combine
 
 | Activity | First Appears | Description |
 |---|---|---|
-| Boundary Run | Lesson 1 | Travel the boundary of the play area |
-| Gathering | Lesson 1 | Return to home base on the gathering signal |
-| Explore & Find | Lesson 2 | In pairs, explore to find animal checkpoints (no set order) |
-| Animal-O | Lessons 2, 4 | Find animal checkpoints using clue sheets |
+| [Boundary Run](/activities/core/boundary-run) | Lesson 1 | Travel the boundary of the play area |
+| [Gathering](/activities/core/gathering) | Lesson 1 | Return to home base on the gathering signal |
+| [Explore & Find](/activities/core/explore-and-find) | Lesson 2 | In pairs, explore to find animal checkpoints (no set order) |
+| [Animal-O](/activities/core/animal-o) | Lessons 2, 4 | Find animal checkpoints using clue sheets |
 | [Clothespin-O](/activities/core/clothespin-o) | Lesson 3 | Find hidden objects and describe their locations |
-| Geometric-O | Lesson 6 | Use a simple map to find checkpoints |
+| [Geometric-O](/activities/core/geometric-o) | Lesson 6 | Use a simple map to find checkpoints |
