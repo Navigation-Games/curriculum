@@ -1,3 +1,6 @@
+# Source materials (kept locally, not tracked)
+background/
+
 # Node / Docusaurus
 node_modules/
 site/build/
