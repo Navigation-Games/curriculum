@@ -20,9 +20,9 @@ images:
     alt: Animal-O setup diagram
     caption: "Setup: checkpoints within a boundary"
     onepager: true
-  - src: /curriculum/img/activities/animal-o-clue-sheet.png
-    alt: Two clue sheet strips showing animal sequences
-    caption: "Clue sheets: each strip is a course"
+  - src: /curriculum/img/activities/animal-o-clue-sheet.jpg
+    alt: Seven laminated clue sheet strips fanned out, each showing a start triangle, a sequence of animal pictures, and a finish circle
+    caption: "Clue sheets: each strip is a different course"
 videos:
   - id: rok2Ghx3fq4
     title: Animal Orienteering for Instructors
