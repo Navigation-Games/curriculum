@@ -88,6 +88,25 @@ Score-O is a bridge between structured courses (where checkpoints are visited in
 
 ## Progression
 
+### Setup ladder
+
+The teacher can choose how much of the setup students own. Starting earlier in the ladder deepens map understanding because students have to read the map and connect it to the terrain. Even younger students benefit from choosing their own checkpoint locations.
+
+1. **Students choose locations.** Working from a poster-sized map (with a plastic cover so circles can be erased), students choose where to place 10 checkpoints. This forces them to read the map and match it to terrain.
+2. **Students place markers.** In groups, students take the checkpoint markers out and place them at the locations on the map.
+3. **Students copy the map.** Students copy the checkpoint circles from the master map onto their own maps.
+4. **Students navigate.** Score-O as usual.
+5. **Students clean up.** Students pick up the checkpoint markers so the space is ready for the next class.
+
+The teacher can enter at any step:
+
+- Start at step 1 for full student ownership (recommended for experienced students or 6+)
+- Start at step 2 if the teacher prepares the master map with checkpoint locations in advance
+- Start at step 3 if the teacher also places the markers
+- Start at step 4 if the teacher prepares everything including printed maps
+
+### Difficulty
+
 - **First time**: pairs, short time limit (8 minutes), fewer checkpoints
 - **Experienced**: individual, longer time limit, more checkpoints spread further apart
 - **Advanced**: assign different point values to harder-to-find checkpoints (further away or harder to navigate to)
