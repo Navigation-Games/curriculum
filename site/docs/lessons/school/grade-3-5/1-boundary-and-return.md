@@ -4,6 +4,8 @@ sidebar_label: "1 - Boundary & Return"
 sidebar_position: 1
 ---
 
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/1-boundary-and-return.md — do not edit directly */}
+
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import MaterialLink from '@site/src/components/MaterialLink';
@@ -120,6 +122,7 @@ import OnePager from '@site/src/components/OnePager';
   goals={[
     'Identify the boundary of the play area',
     'Tell whether landmarks and locations are inside or outside the boundary',
+    'Recognize areas within the boundary that are still off limits',
     'Know where home base is from anywhere in the boundary',
     'Respond quickly to the gathering signal',
     'Explain why boundaries matter for safety and respect',

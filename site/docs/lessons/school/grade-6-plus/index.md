@@ -1,5 +1,5 @@
 ---
-title: Grade 6+ Curriculum
+title: "Introduction: 6+"
 sidebar_position: 3
 ---
 
@@ -42,7 +42,7 @@ Plan for six class periods, one per lesson. Lesson 1 covers material that takes 
 | Score-O | Lesson 3 | Visit as many checkpoints as possible in any order |
 | Poison-O | Lesson 3 | Score-O where only your checkpoints earn points |
 | Reverse Score-O | Lesson 4 | Find controls and mark their locations on the map |
-| Point-to-Point | Lesson 5 | Navigate a course visiting controls in order using a map |
+| [Point-to-Point](/activities/core/point-to-point) | Lesson 5 | Navigate a course visiting checkpoints in order using a map |
 | Relay Race | Lesson 6 | Teams compete in relay format |
 
 ## Open Questions

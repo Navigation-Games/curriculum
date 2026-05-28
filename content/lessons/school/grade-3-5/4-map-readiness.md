@@ -1,9 +1,9 @@
-# 5 - Map Readiness
+# 4 - Map Readiness
 
 ---
 tagline: Spatial relationships, orienting, connecting a map to the space
 epigraph: We use a map to know where something is before we even find it
-sidebar_position: 5
+sidebar_position: 4
 time: 30-60 minutes
 space: Gym, schoolyard, or local park
 materials:
@@ -30,9 +30,6 @@ activities:
   - title: Geometric Readiness
     description: Spatial vocabulary and map orientation exercises.
     tag: readiness
-  - title: Symbol-O
-    description: "Find checkpoints by map symbol type; a bridge to real orienteering maps."
-    tag: readiness
   - title: Word Bank Orienteering
     description: Guide a partner using only approved spatial words.
     link: /activities/core/geometric-o
@@ -43,7 +40,7 @@ activities:
     tag: extension
 ---
 
-> **Draft video script:** [View script](../../../video-scripts/lessons/5-map-readiness.md)
+> **Draft video script:** [View script](../../../video-scripts/lessons/4-map-readiness.md)
 
 ## Goals
 
@@ -72,7 +69,6 @@ activities:
    - Partner verifies with the animal clue sheet
    - Progress to 10-checkpoint maps
    - Repeat for speed, then from memory
-4. **Symbol-O**: introduce orienteering map symbols; students find checkpoints by symbol type (preview of Lesson 6)
 
 
 ## Compact Delivery
@@ -81,7 +77,6 @@ activities:
 2. **Geometric Readiness**: whiteboard map demo, spatial questions
 3. **Geometric-O**: pair up, progress through map levels
 4. Repeat for speed, then from memory
-5. **Symbol-O**: find checkpoints by map symbol type
 
 
 ## Reflection

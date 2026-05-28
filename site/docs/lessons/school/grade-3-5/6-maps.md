@@ -4,6 +4,8 @@ sidebar_label: "6 - Maps"
 sidebar_position: 6
 ---
 
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/6-maps.md — do not edit directly */}
+
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import MaterialLink from '@site/src/components/MaterialLink';
@@ -23,13 +25,25 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-60 minutes (can extend across multiple sessions) |
 | **Space** | Schoolyard or local park (needs real features for map symbols) |
-| **Materials** | <MaterialLink name="Orienteering maps" />, <MaterialLink name="Checkpoint markers (cones or flags)" />, <MaterialLink name="Master map" />, <MaterialLink name="Scorecards and pencils" /> |
+| **Materials** | <MaterialLink name="Orienteering maps" />, <MaterialLink name="Checkpoint markers (cones or flags)" />, <MaterialLink name="Master map" />, <MaterialLink name="Cones (optional, for marking boundaries)" />, <MaterialLink name="A planned route through varied features" />, <MaterialLink name="Scorecards and pencils" /> |
 | **Setup** | Place checkpoints according to the master map |
-| **Vocabulary** | <VocabLink term="Orient the map" />, <VocabLink term="Route choice" />, <VocabLink term="Start triangle" />, <VocabLink term="Finish circle" /> |
+| **Vocabulary** | <VocabLink term="Orient the map" />, <VocabLink term="Symbol" />, <VocabLink term="Feature" />, <VocabLink term="Route choice" /> |
 
 ## Activities
 
 <CardGrid columns={3}>
+  <ActivityCard
+    title="Boundary Run"
+    description="Warm up: run the boundary together."
+    link="/activities/core/boundary-run"
+    tag="warm-up"
+  />
+  <ActivityCard
+    title="Map Walk"
+    description="Walk a route together, matching map symbols to real features."
+    link="/activities/core/map-walk"
+    tag="core"
+  />
   <ActivityCard
     title="Score-O"
     description="Visit as many checkpoints as possible in any order."
@@ -38,8 +52,14 @@ import OnePager from '@site/src/components/OnePager';
   />
   <ActivityCard
     title="Point-to-Point"
-    description="Navigate a course visiting controls in order from start to finish."
+    description="Complete a course visiting checkpoints in order using a map."
+    link="/activities/core/point-to-point"
     tag="core"
+  />
+  <ActivityCard
+    title="Symbol Relay"
+    description="Team relay to learn map symbols competitively."
+    tag="extension"
   />
   <ActivityCard
     title="Poison-O"
@@ -57,8 +77,9 @@ import OnePager from '@site/src/components/OnePager';
 
 ### Orienteering Goals
 - Understand what an orienteering map is and how it differs from a pattern map
+- Learn map symbols and match them to real features
+- Walk a route while reading the map
 - Make route choices based on the map
-- Complete a Point-to-Point course from start to finish
 - Complete courses independently
 
 ### PE Standards (SHAPE America)
@@ -70,22 +91,27 @@ import OnePager from '@site/src/components/OnePager';
 ## Delivery
 
 1. [**Boundary Run**](/activities/core/boundary-run): run the boundary
-2. **Map review**: orient the map together using real features; briefly review symbols from Lesson 5
-3. [**Score-O**](/activities/core/score-o): each student or pair gets a map with checkpoint circles; visit as many as you can in the time limit, in any order
-4. **Point-to-Point**: follow a course from start to finish, visiting controls in order
-5. **Partner orienteering**: plan and execute a full course together
-6. **Solo orienteering**: do a course on your own
+2. **Map Discussion**: introduce the orienteering map
+   - Compare it to the pattern maps from Lesson 4
+   - Orient the map using real features
+   - Point out symbols and what they represent
+3. **Map Walk**: walk a route as a group, matching symbols to real features
+4. **Score-O**: each student or pair gets a map with checkpoint circles; visit as many as you can in the time limit, in any order
+5. [**Point-to-Point**](/activities/core/point-to-point): follow a course from start to finish, visiting checkpoints in order
+6. **Partner Orienteering**: plan and execute a full course together
+7. **Solo Orienteering**: do a course on your own
 
 ## Reflection
 
 - How is the orienteering map different from the pattern maps we used before?
+- Which symbols were easier or harder to remember? Why?
 - What strategy did you use to visit the most checkpoints in Score-O?
-- How is Point-to-Point different from Score-O? Which did you prefer?
 - How did you determine which way to go for each checkpoint?
 - What shortcuts between checkpoints did you find?
 
 ## Extensions
 
+- **Symbol Relay**: team competition to learn map symbols
 - **Poker-O**: each checkpoint has a playing card; collect the best poker hand
 - **Poison-O**: wrong checkpoints cost points; rewards careful map reading
 - **Place Your Own Checkpoints**: students place markers using the map, then others find them
@@ -99,38 +125,41 @@ import OnePager from '@site/src/components/OnePager';
 <OnePager
   variant="lesson"
   title="6 - Maps — Lesson Plan"
-  tagline="Navigate using a real orienteering map"
+  tagline="Use a picture of the space to navigate"
   epigraph="Today we will navigate using a real orienteering map"
   time="30-60 minutes (can extend across multiple sessions)"
   space="Schoolyard or local park (needs real features for map symbols)"
-  materials={['Orienteering maps', 'Checkpoint markers (cones or flags)', 'Master map', 'Scorecards and pencils']}
+  materials={['Orienteering maps', 'Checkpoint markers (cones or flags)', 'Master map', 'Cones (optional, for marking boundaries)', 'A planned route through varied features', 'Scorecards and pencils']}
   setup="Place checkpoints according to the master map"
-  vocabulary={['Orient the map', 'Route choice', 'Start triangle', 'Finish circle']}
+  vocabulary={['Orient the map', 'Symbol', 'Feature', 'Route choice']}
   goals={[
     'Understand what an orienteering map is and how it differs from a pattern map',
+    'Learn map symbols and match them to real features',
+    'Walk a route while reading the map',
     'Make route choices based on the map',
-    'Complete a Point-to-Point course from start to finish',
     'Complete courses independently',
   ]}
   delivery={
     <>
       <ol>
         <li><strong>Boundary Run</strong>: run the boundary</li>
-        <li><strong>Map review</strong>: orient the map; review symbols from Lesson 5</li>
+        <li><strong>Map Discussion</strong>: introduce the orienteering map; compare to pattern maps</li>
+        <li><strong>Map Walk</strong>: walk a route, matching symbols to features</li>
         <li><strong>Score-O</strong>: visit as many checkpoints as possible in any order</li>
-        <li><strong>Point-to-Point</strong>: follow a course from start to finish</li>
+        <li><strong>Point-to-Point</strong>: follow a course visiting checkpoints in order</li>
         <li><strong>Partner/Solo Orienteering</strong>: complete full courses</li>
       </ol>
     </>
   }
   reflection={[
     'How is the orienteering map different from the pattern maps we used before?',
+    'Which symbols were easier or harder to remember? Why?',
     'What strategy did you use to visit the most checkpoints in Score-O?',
-    'How is Point-to-Point different from Score-O? Which did you prefer?',
     'How did you determine which way to go for each checkpoint?',
     'What shortcuts between checkpoints did you find?',
   ]}
   extensions={[
+    '**Symbol Relay**: team competition to learn map symbols',
     '**Poker-O**: each checkpoint has a playing card; collect the best poker hand',
     '**Poison-O**: wrong checkpoints cost points; rewards careful map reading',
     '**Place Your Own Checkpoints**: students place markers using the map, then others find them',

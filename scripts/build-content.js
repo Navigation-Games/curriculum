@@ -8,8 +8,8 @@ const REPO_ROOT = path.join(__dirname, '..');
 const DIRS = {
   activitiesContent: path.join(REPO_ROOT, 'content', 'activities'),
   activitiesOutput:  path.join(REPO_ROOT, 'site', 'docs', 'activities', 'core'),
-  lessonsContent:    path.join(REPO_ROOT, 'content', 'lessons', 'school', 'grade-3-5'),
-  lessonsOutput:     path.join(REPO_ROOT, 'site', 'docs', 'lessons', 'school', 'grade-3-5'),
+  lessonsBase:       path.join(REPO_ROOT, 'content', 'lessons', 'school'),
+  lessonsOutputBase: path.join(REPO_ROOT, 'site', 'docs', 'lessons', 'school'),
 };
 
 
@@ -22,8 +22,19 @@ function main() {
   const warnings = [];
 
   const activityMaterials = collectActivityMaterials(DIRS.activitiesContent);
+  cleanGeneratedFiles(DIRS.activitiesOutput);
   buildDir(DIRS.activitiesContent, DIRS.activitiesOutput, 'activity', errors, warnings, activityMaterials);
-  buildDir(DIRS.lessonsContent, DIRS.lessonsOutput, 'lesson', errors, warnings, activityMaterials);
+
+  if (fs.existsSync(DIRS.lessonsBase)) {
+    for (const band of fs.readdirSync(DIRS.lessonsBase)) {
+      const contentDir = path.join(DIRS.lessonsBase, band);
+      if (!fs.statSync(contentDir).isDirectory()) continue;
+      const outputDir = path.join(DIRS.lessonsOutputBase, band);
+      if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
+      cleanGeneratedFiles(outputDir);
+      buildDir(contentDir, outputDir, 'lesson', errors, warnings, activityMaterials, band);
+    }
+  }
 
   if (warnings.length) {
     console.log(`\n  ${warnings.length} warning(s):`);
@@ -56,7 +67,18 @@ function collectActivityMaterials(contentDir) {
   return map;
 }
 
-function buildDir(contentDir, outputDir, type, errors, warnings, activityMaterials) {
+function cleanGeneratedFiles(outputDir) {
+  if (!fs.existsSync(outputDir)) return;
+  for (const file of fs.readdirSync(outputDir).filter(f => f.endsWith('.md'))) {
+    const filePath = path.join(outputDir, file);
+    const content = fs.readFileSync(filePath, 'utf8');
+    if (content.includes('AUTO-GENERATED from content/')) {
+      fs.unlinkSync(filePath);
+    }
+  }
+}
+
+function buildDir(contentDir, outputDir, type, errors, warnings, activityMaterials, band) {
   if (!fs.existsSync(contentDir)) return;
 
   const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md'));
@@ -72,7 +94,7 @@ function buildDir(contentDir, outputDir, type, errors, warnings, activityMateria
 
       const mdx = type === 'activity'
         ? generateActivityMDX(slug, parsed)
-        : generateLessonMDX(slug, parsed, activityMaterials);
+        : generateLessonMDX(slug, parsed, activityMaterials, band);
 
       const outputPath = path.join(outputDir, `${slug}.md`);
       fs.writeFileSync(outputPath, mdx, 'utf8');
@@ -623,7 +645,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
 // Lesson MDX generation
 // ===========================================================================
 
-function generateLessonMDX(slug, { fm, sections, goals }, activityMaterials = {}) {
+function generateLessonMDX(slug, { fm, sections, goals }, activityMaterials = {}, band = 'grade-3-5') {
   // Merge materials from referenced activities into the lesson's materials list.
   // Deduplicate by canonical material type so "4 colored landmark cones" and
   // "4 colored cones (red, blue, green, yellow)" aren't both listed.
@@ -656,7 +678,7 @@ function generateLessonMDX(slug, { fm, sections, goals }, activityMaterials = {}
   L.push('---');
   L.push('');
 
-  const contentPath = `content/lessons/school/grade-3-5/${slug}.md`;
+  const contentPath = `content/lessons/school/${band}/${slug}.md`;
   L.push(`{/* AUTO-GENERATED from ${contentPath} — do not edit directly */}`);
   L.push('');
 

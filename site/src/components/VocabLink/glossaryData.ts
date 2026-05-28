@@ -10,7 +10,7 @@ const glossaryEntries: GlossaryEntry[] = [
   },
   {
     term: 'Checkpoint',
-    definition: 'A location marked with a cone, flag, or streamer in the field. On a map, checkpoints are shown with a circle. In Animal-O, each checkpoint has an animal picture attached to the cone.',
+    definition: 'A location marked with a cone, flag, or streamer in the field. On a map, checkpoints are shown with a circle. In Animal-O, each checkpoint has an animal picture attached to the cone. In the sport of orienteering, a checkpoint is called a "control."',
   },
   {
     term: 'Clue sheet',

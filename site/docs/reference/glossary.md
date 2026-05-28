@@ -15,7 +15,7 @@ The perimeter of the play area. All checkpoints are inside the boundary.
 
 #### Checkpoint
 
-A location marked with a cone, flag, or streamer in the field. On a map, checkpoints are shown with a circle. In Animal-O, each checkpoint has an animal picture attached to the cone.
+A location marked with a cone, flag, or streamer in the field. On a map, checkpoints are shown with a circle. In Animal-O, each checkpoint has an animal picture attached to the cone. In the sport of orienteering, a checkpoint is called a "control."
 
 #### Clue sheet
 

@@ -1,0 +1,77 @@
+# 3 - Treasure Hunt
+
+---
+tagline: Find hidden things and tell someone where they are
+sidebar_position: 3
+time: 30-45 minutes
+space: Gym, schoolyard, or local park
+materials:
+  - Small hidden objects (clothespins, colored cards, or small toys)
+  - Cones (optional, for marking boundaries)
+setup: Hide objects around the space before students arrive; some easy to spot, some harder
+vocabulary:
+  - Boundary
+  - Gathering signal
+  - Clue
+activities:
+  - title: Boundary Run
+    description: Quick review of the boundary.
+    link: /activities/core/boundary-run
+    tag: warm-up
+  - title: Clothespin-O
+    description: Find hidden objects and describe their locations.
+    link: /activities/core/clothespin-o
+    tag: core
+  - title: Hide and Describe
+    description: Students hide objects for each other and give spatial clues.
+    tag: extension
+---
+
+## Goals
+
+### Orienteering Goals
+- Find hidden objects within the boundary
+- Describe where objects are using spatial language (near, far, between, next to, behind, under)
+- Listen to a clue and use it to find something
+- Work with a partner
+
+### PE Standards (SHAPE America)
+- Perform locomotor skills (S1.E1)
+- Move in general space safely (S1.E2)
+- Engage actively in class (S3.E2)
+- Work cooperatively with others (S4.E5)
+
+
+## Delivery
+
+1. [**Boundary Run**](/activities/core/boundary-run): quick review
+2. "I've hidden treasures around the space. Your job is to find them, but don't touch them! When you find one, remember where it is."
+3. Pair up. Explore to find hidden objects. Return on the gathering signal.
+4. Report back: where did you find treasures? Practice spatial language: "It was behind the cone." "It was next to the door." "It was between the two trees."
+5. Teacher models a clue: "There is a treasure near something red." Pairs go find it.
+6. Send out again with a new clue each round.
+7. After several rounds, pairs collect the treasures they found and bring them back.
+
+## Compact Delivery
+
+1. **Boundary Run**: quick review
+2. "I've hidden treasures. Find them but don't touch them!"
+3. Pair up and explore; return on the signal
+4. Report back: where did you find them? Use spatial words.
+5. Teacher gives clues: "near something red"; pairs find the treasure
+6. Repeat with new clues
+7. Collect the treasures
+
+## Reflection
+
+- Which treasures were easiest to find? Which were hardest?
+- What words did you use to describe where things were?
+- When someone gave you a clue, did it help you find the treasure?
+- What made a clue helpful? What made it confusing?
+
+## Extensions
+
+- **Hide and Describe**: students hide objects for another pair, then give spatial clues to help them find the treasures
+- Limit the clues to spatial words only (no pointing!)
+- Use "hotter/colder" clues instead of words
+- Teacher describes a location; everyone runs there ("Go stand next to the tallest tree inside the boundary!")

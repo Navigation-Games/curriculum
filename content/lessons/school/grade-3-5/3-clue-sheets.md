@@ -1,9 +1,9 @@
-# 4 - Clue Sheets
+# 3 - Clue Sheets
 
 ---
 tagline: Find them in this specific order
 epigraph: In orienteering, you find checkpoints in order using clue sheets
-sidebar_position: 4
+sidebar_position: 3
 time: 30-60 minutes
 space: Gym, schoolyard, or local park
 materials:
@@ -25,12 +25,12 @@ activities:
     link: /activities/core/animal-o
     tag: core
   - title: Explore & Find
-    description: "Warm up: explore to find checkpoints (if not done in Lesson 3)."
+    description: "Warm up: explore to find checkpoints (if not done in Lesson 2)."
     link: /activities/core/animal-o
     tag: readiness
 ---
 
-> **Draft video script:** [View script](../../../video-scripts/lessons/4-clue-sheets.md)
+> **Draft video script:** [View script](../../../video-scripts/lessons/3-clue-sheets.md)
 
 ## Goals
 

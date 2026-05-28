@@ -29,6 +29,10 @@ activities:
     description: Visit as many checkpoints as possible in any order.
     link: /activities/core/score-o
     tag: core
+  - title: Point-to-Point
+    description: Complete a course visiting checkpoints in order using a map.
+    link: /activities/core/point-to-point
+    tag: core
   - title: Symbol Relay
     description: Team relay to learn map symbols competitively.
     tag: extension
@@ -62,13 +66,14 @@ activities:
 
 1. [**Boundary Run**](/activities/core/boundary-run): run the boundary
 2. **Map Discussion**: introduce the orienteering map
-   - Compare it to the pattern maps from Lesson 5
+   - Compare it to the pattern maps from Lesson 4
    - Orient the map using real features
    - Point out symbols and what they represent
 3. **Map Walk**: walk a route as a group, matching symbols to real features
 4. **Score-O**: each student or pair gets a map with checkpoint circles; visit as many as you can in the time limit, in any order
-5. **Partner Orienteering**: plan and execute a full course together
-6. **Solo Orienteering**: do a course on your own
+5. [**Point-to-Point**](/activities/core/point-to-point): follow a course from start to finish, visiting checkpoints in order
+6. **Partner Orienteering**: plan and execute a full course together
+7. **Solo Orienteering**: do a course on your own
 
 
 ## Compact Delivery
@@ -77,7 +82,8 @@ activities:
 2. **Map Discussion**: introduce the orienteering map; compare to pattern maps
 3. **Map Walk**: walk a route, matching symbols to features
 4. **Score-O**: visit as many checkpoints as possible in any order
-5. **Partner/Solo Orienteering**: complete full courses
+5. **Point-to-Point**: follow a course visiting checkpoints in order
+6. **Partner/Solo Orienteering**: complete full courses
 
 
 ## Reflection

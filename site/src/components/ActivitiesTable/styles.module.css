@@ -40,3 +40,15 @@
 .noImage {
   color: var(--ifm-color-emphasis-500);
 }
+
+.done {
+  color: var(--ifm-color-success-darkest);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.tbd {
+  color: var(--ifm-color-warning-darkest);
+  font-weight: 600;
+  font-size: 0.85rem;
+}

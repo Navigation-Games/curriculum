@@ -1,10 +1,10 @@
 ---
-title: "2 - Explore & Find — Lesson Plan"
-sidebar_label: "2 - Explore & Find"
+title: "2 - Explore and Find — Lesson Plan"
+sidebar_label: "2 - Explore and Find"
 sidebar_position: 2
 ---
 
-{/* AUTO-GENERATED from content/lessons/school/grade-3-5/2-explore-and-find.md — do not edit directly */}
+{/* AUTO-GENERATED from content/lessons/school/grade-k-2/2-explore-and-find.md — do not edit directly */}
 
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
@@ -17,7 +17,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <FullOnly>
 
-# 2 - Explore & Find — Lesson Plan
+# 2 - Explore and Find — Lesson Plan
 
 | | |
 |---|---|
@@ -34,7 +34,7 @@ import OnePager from '@site/src/components/OnePager';
     title="Boundary Run"
     description="Review the boundary (quick refresher)."
     link="/activities/core/boundary-run"
-    tag="core"
+    tag="warm-up"
   />
   <ActivityCard
     title="Explore & Find"
@@ -43,9 +43,9 @@ import OnePager from '@site/src/components/OnePager';
     tag="core"
   />
   <ActivityCard
-    title="Animal Relay"
-    description="Take turns running to animal checkpoints."
-    tag="variation"
+    title="Animal Parade"
+    description="Visit every animal and move like that animal to the next one."
+    tag="extension"
   />
 </CardGrid>
 
@@ -54,37 +54,38 @@ import OnePager from '@site/src/components/OnePager';
 ### Orienteering Goals
 - Explore a space and find checkpoints within the boundary
 - Return on the gathering signal
-- Describe what you found and where it was, using spatial language
+- Describe what you found and where it was
 - Begin building spatial memory of checkpoint locations
 - Work with a partner
 
 ### PE Standards (SHAPE America)
-- Demonstrate locomotor skills (S1.E1, S1.E2)
+- Perform locomotor skills (S1.E1)
+- Move in general space safely (S1.E2)
 - Engage actively in class (S3.E2)
 - Work cooperatively with others (S4.E5)
 
 ## Delivery
 
 1. [**Boundary Run**](/activities/core/boundary-run): quick review of the boundary
-2. Pair up
-3. [**Explore & Find**](/activities/core/animal-o): explore within the boundary to find animal checkpoints; return on the gathering signal
-4. Report back: which animals did you find? Where were they? ("The elephant was near the fence." "The giraffe was in the far corner.") Build a group picture of the space.
-5. Send out again. Can you find more this time? Can you remember where the ones you've already seen are?
-6. **Animal Relay**: take turns running to checkpoints
+2. Pair up. One partner is the Finder, the other is the Helper. They stay together.
+3. [**Explore & Find**](/activities/core/animal-o): explore within the boundary to find animal checkpoints. No set order; just find as many as you can. Return on the gathering signal.
+4. Gather and report back: which animals did you find? Where were they? ("The elephant was near the fence." "The giraffe was by the big tree.") Build a group picture of the space together.
+5. Switch roles. Send out again. Can you find more this time? Can you remember where the ones you already saw are?
+6. Report back again. Did you find new ones?
 
 ## Reflection
 
 - How many animals did you find? Which was the hardest to find?
 - Where were the animals? Can you describe where each one was?
 - Did it help to know where they were from the first round?
-- Were some animals easier or harder to find? Why?
-- How did you work with your partner?
+- How did you work with your partner? What did the Helper do?
 
 ## Extensions
 
+- **Animal Parade**: visit every animal and move like that animal to the next one (stomp like an elephant, stretch like a giraffe)
 - Move the checkpoints to new locations and start over
-- Have students draw a map of the area and checkpoint locations
-- Visit every animal and move like that animal to the next one
+- Add more animals and try again
+- Can you find all the animals without your partner's help?
 
 </FullOnly>
 
@@ -92,7 +93,7 @@ import OnePager from '@site/src/components/OnePager';
 
 <OnePager
   variant="lesson"
-  title="2 - Explore & Find — Lesson Plan"
+  title="2 - Explore and Find — Lesson Plan"
   tagline="There are things out there; go find them and come back"
   time="30-45 minutes"
   space="Gym, schoolyard, or local park"
@@ -102,7 +103,7 @@ import OnePager from '@site/src/components/OnePager';
   goals={[
     'Explore a space and find checkpoints within the boundary',
     'Return on the gathering signal',
-    'Describe what you found and where it was, using spatial language',
+    'Describe what you found and where it was',
     'Begin building spatial memory of checkpoint locations',
     'Work with a partner',
   ]}
@@ -110,11 +111,11 @@ import OnePager from '@site/src/components/OnePager';
     <>
       <ol>
         <li><strong>Boundary Run</strong>: quick review of the boundary</li>
-        <li>Pair up</li>
-        <li><strong>Explore & Find</strong>: explore to find animal checkpoints; return on the signal</li>
-        <li>Report back: describe what you found and where it was</li>
-        <li>Send out again. Can you find more? Can you remember where you've been?</li>
-        <li><strong>Animal Relay</strong>: take turns running to checkpoints</li>
+        <li>Pair up (Finder and Helper)</li>
+        <li><strong>Explore & Find</strong>: find animal checkpoints; no set order; return on the signal</li>
+        <li>Report back: which animals? Where were they?</li>
+        <li>Switch roles and go again; find more this time</li>
+        <li>Report back: did you find new ones?</li>
       </ol>
     </>
   }
@@ -122,13 +123,13 @@ import OnePager from '@site/src/components/OnePager';
     'How many animals did you find? Which was the hardest to find?',
     'Where were the animals? Can you describe where each one was?',
     'Did it help to know where they were from the first round?',
-    'Were some animals easier or harder to find? Why?',
-    'How did you work with your partner?',
+    'How did you work with your partner? What did the Helper do?',
   ]}
   extensions={[
+    '**Animal Parade**: visit every animal and move like that animal to the next one (stomp like an elephant, stretch like a giraffe)',
     'Move the checkpoints to new locations and start over',
-    'Have students draw a map of the area and checkpoint locations',
-    'Visit every animal and move like that animal to the next one',
+    'Add more animals and try again',
+    'Can you find all the animals without your partner\'s help?',
   ]}
 />
 

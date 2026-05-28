@@ -1,8 +1,8 @@
-# 3 - Explore & Find
+# 2 - Explore & Find
 
 ---
 tagline: There are things out there; go find them and come back
-sidebar_position: 3
+sidebar_position: 2
 time: 30-45 minutes
 space: Gym, schoolyard, or local park
 materials:
@@ -26,7 +26,7 @@ activities:
     tag: variation
 ---
 
-> **Draft video script:** [View script](../../../video-scripts/lessons/3-explore-and-find.md)
+> **Draft video script:** [View script](../../../video-scripts/lessons/2-explore-and-find.md)
 
 ## Goals
 

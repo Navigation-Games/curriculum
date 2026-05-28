@@ -4,6 +4,8 @@ sidebar_label: "5 - Map Symbols"
 sidebar_position: 5
 ---
 
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/5-map-symbols.md — do not edit directly */}
+
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import MaterialLink from '@site/src/components/MaterialLink';
@@ -23,7 +25,7 @@ import OnePager from '@site/src/components/OnePager';
 |---|---|
 | **Time** | 30-60 minutes |
 | **Space** | Schoolyard or local park (needs real features for map symbols) |
-| **Materials** | <MaterialLink name="Orienteering maps" />, <MaterialLink name="Symbol reference cards or legend handouts" />, <MaterialLink name="Checkpoint markers" />, <MaterialLink name="Cones (optional, for marking boundaries)" /> |
+| **Materials** | <MaterialLink name="Orienteering maps" />, <MaterialLink name="Symbol reference cards or legend handouts" />, <MaterialLink name="Checkpoint markers" />, <MaterialLink name="A planned route through varied features" /> |
 | **Setup** | Choose a route through the space with varied features (paths, trees, fences, buildings, open ground); place checkpoints at features that correspond to distinct symbols |
 | **Vocabulary** | <VocabLink term="Symbol" />, <VocabLink term="Legend" />, <VocabLink term="Feature" />, <VocabLink term="Orient the map" /> |
 
@@ -104,8 +106,8 @@ import OnePager from '@site/src/components/OnePager';
   epigraph="Every color, shape, and line on the map means something you can see and touch"
   time="30-60 minutes"
   space="Schoolyard or local park (needs real features for map symbols)"
-  materials={['Orienteering maps', 'Symbol reference cards or legend handouts', 'Checkpoint markers', 'Cones (optional, for marking boundaries)']}
-  setup="Choose a route with varied features; place checkpoints at features that correspond to distinct symbols"
+  materials={['Orienteering maps', 'Symbol reference cards or legend handouts', 'Checkpoint markers', 'A planned route through varied features']}
+  setup="Choose a route through the space with varied features (paths, trees, fences, buildings, open ground); place checkpoints at features that correspond to distinct symbols"
   vocabulary={['Symbol', 'Legend', 'Feature', 'Orient the map']}
   goals={[
     'Identify basic orienteering map symbols (path, building, fence, tree, open ground, water)',

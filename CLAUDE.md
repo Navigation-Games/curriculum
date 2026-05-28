@@ -74,8 +74,15 @@ Every core activity needs these, consistent with each other:
 - `site/src/components/` - reusable React components (ActivityCard, CardGrid, YouTube)
 - `site/src/pages/` - standalone landing pages (home, school, camp, quick-start)
 
+## Key References
+
+- **Editing guide:** `site/docs/editors/editing-guide.md` — how content files are structured, where to edit, how the build system works. Read this at the start of any content-editing session.
+- **Roadmap:** `site/docs/editors/roadmap.md` — what's done, what's next. Update the roadmap when we identify work that should happen next.
+- **Activities & Lessons table:** `site/src/components/ActivitiesTable/activitiesData.ts` — master list of activities with metadata. Keep this in sync when adding or changing activities.
+
 ## Working Conventions
 
+- Prefer having Barb check the results of changes, when she is available, rather than spending tokens on automated verification. It is often easier and faster for her to look at the result than for Claude to verify programmatically.
 - Write content in Markdown
 - Keep filenames lowercase-kebab-case
 - Avoid em-dashes in all writing. They signal AI authorship. Split into separate sentences or use other connectors.

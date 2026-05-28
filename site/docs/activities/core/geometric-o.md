@@ -79,8 +79,8 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 
 1. Arrange checkpoints (cones with animal pictures and numbers 31-40) to match the master map
 2. Place colored cones (red, blue, green, yellow) in the corners as landmarks. Exact distances do not need to be perfect as long as cones are in the correct positions relative to the colored landmarks
-3. Set geometric maps out where students can see them, ideally next to a self-serve station
-4. If this is students' first time, do the **Geometric-O Readiness** activity (see Companions tab) before starting courses
+3. Draw the arrangement on a whiteboard without indicating which animal is at each location
+4. Set geometric maps out where students can see them, ideally next to a self-serve station
 
 ### Progression
 
@@ -99,13 +99,31 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 </TabItem>
 <TabItem value="script" label="Script">
 
-### Quick Intro
+### Introducing the Map
 
-*(If students have already done the Geometric-O Readiness activity, skip to Starting the Courses.)*
+*(Hold up the whiteboard map upside down, facing students)*
 
-"Remember how we oriented the map using the colored cones? Today you will use maps like that to find checkpoints on your own."
+"The challenge in this activity is to find checkpoints using a simple map. In order to do this, we first have to learn how the map works."
 
-*(Hold up a Geometric-O map. Point to the colored corners and confirm students can match them to the real cones. One quick check is enough.)*
+"Looking at this map, what do you think the orange dots are?" *(Orange cones.)* "What about the colored dots?" *(Colored cones.)*
+
+### Orienting the Map
+
+"Now, according to the map, the red cone should be in... this corner!" *(Point to the corner opposite of the red cone, since the map is upside down.)* "Is the red cone in that corner? Of course not!"
+
+"Even though this map has all the objects, there is still something wrong with it. Can anyone tell me what that is?" *(It's not turned right.)*
+
+"I'm going to turn the map now, and all of you shout 'Stop!' when the colored dots match up with where they are in real life."
+
+*(Turn the map slowly. Stop when students say "Stop" regardless of whether they are correct. Check the colored cones. If not right, acknowledge they are closer and keep turning.)*
+
+### Using the Map
+
+"Now that our map is oriented, we can see all the colored cones are in the same places in real life as they are on the map. These colored cones are your landmarks, and you can use them to help find the other checkpoints."
+
+"Next I'm going to point to a specific checkpoint on this map, and I want you to point to where that cone is in real life."
+
+*(Point to a checkpoint. When they point correctly, explain how they know using spatial vocabulary: "It's the checkpoint closest to the red landmark cone." Repeat 2-3 times.)*
 
 ### Starting the Courses
 
@@ -122,24 +140,6 @@ See the [Glossary](/reference/glossary) for all curriculum terms.
 
 </TabItem>
 <TabItem value="companions" label="Companions">
-
-### Geometric-O Readiness *(readiness)*
-
-**Use spatial vocabulary and a simple map to find checkpoints.**
-
-> "In orienteering, we use words like beside, between, close and far"
-
-Introduces the whiteboard map, spatial vocabulary, and map orientation before students do Geometric-O courses on their own. Run this before the first Geometric-O session.
-
-| | |
-|---|---|
-| **Time** | 15-30 minutes |
-| **Materials** | Whiteboard and markers, animal checkpoints, red/blue/green/yellow cones, maps with one checkpoint circled |
-| **Setup** | Place animal checkpoints in the geometric pattern. Sketch a map of the cone locations on a whiteboard. |
-| **How to run it** | 1. **Whiteboard**: Hold up the whiteboard (upside down) with the drawn map for participants to see. Ask what the colored dots represent (the colored corner cones). Can they figure out what the problem with the map is? (It's upside down.) Turn the map until participants think it's oriented. Indicate a cone on the map and ask which cone it is in real life. How can they tell? Have a student run to it and back. 2. **Spatial descriptions**: Provide a spatial description of one or more checkpoints for participants to tag. Easy: "Find the animal closest to the Red cone." Medium: "Find the animal farthest from the Blue cone." Hard: "Find all the cones between the Yellow and Green cone." 3. **Find the Cone**: Hand out maps with one checkpoint circled and have students stand next to that cone with their map oriented. Repeat. |
-| **Vocabulary** | Spatial vocabulary (closest, farthest, between, next to), orienting a map |
-| **Reflection** | What was challenging about matching up the animals? What was easy? |
-| **Extensions** | Remove the colored cones to emphasize orienting the map based on the pattern of other checkpoints. |
 
 ### Napkin-O *(extension)*
 
@@ -254,7 +254,7 @@ See [Using SI Equipment](/equipment/si-timing) for setup instructions.
     <>
       <p>We recommend that younger students do this in pairs.</p>
       <ol>
-        <li>Do Geometric-O Readiness first (see Companions tab), or do a quick map orientation check</li>
+        <li>Show the map and demonstrate how it matches the layout of cones and vice versa</li>
         <li>Hand out maps for each level and have students repeat until they have had 2 or 3 successes
           <ol type="a">
             <li>Participants visit the checkpoint marked by the triangle first and double circle last</li>

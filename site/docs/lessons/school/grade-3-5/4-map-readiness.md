@@ -4,6 +4,8 @@ sidebar_label: "4 - Map Readiness"
 sidebar_position: 4
 ---
 
+{/* AUTO-GENERATED from content/lessons/school/grade-3-5/4-map-readiness.md — do not edit directly */}
+
 import ActivityCard from '@site/src/components/ActivityCard';
 import CardGrid from '@site/src/components/CardGrid';
 import MaterialLink from '@site/src/components/MaterialLink';
@@ -43,9 +45,8 @@ import OnePager from '@site/src/components/OnePager';
     tag="core"
   />
   <ActivityCard
-    title="Geometric-O Readiness"
+    title="Geometric Readiness"
     description="Spatial vocabulary and map orientation exercises."
-    link="/activities/core/geometric-o"
     tag="readiness"
   />
   <ActivityCard

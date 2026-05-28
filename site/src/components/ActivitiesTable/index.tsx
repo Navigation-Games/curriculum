@@ -9,9 +9,8 @@ const columns: {field: SortField; label: string}[] = [
   {field: 'name', label: 'Name'},
   {field: 'image', label: 'Image'},
   {field: 'tagline', label: 'Tagline'},
-  {field: 'time', label: 'Time'},
-  {field: 'space', label: 'Space'},
-  {field: 'level', label: 'Level'},
+  {field: 'lessons', label: 'Lessons'},
+  {field: 'status', label: 'Status'},
 ];
 
 function compare(a: string, b: string): number {
@@ -65,7 +64,11 @@ export default function ActivitiesTable(): React.ReactElement {
         {sorted.map((act) => (
           <tr key={act.name}>
             <td>
-              <a href={act.link}>{act.name}</a>
+              {act.link ? (
+                <a href={act.link}>{act.name}</a>
+              ) : (
+                <span>{act.name}</span>
+              )}
             </td>
             <td className={styles.imageCell}>
               {act.image ? (
@@ -75,9 +78,14 @@ export default function ActivitiesTable(): React.ReactElement {
               )}
             </td>
             <td>{act.tagline}</td>
-            <td>{act.time}</td>
-            <td>{act.space}</td>
-            <td>{act.level}</td>
+            <td>{act.lessons}</td>
+            <td>
+              {act.status === 'tbd' ? (
+                <span className={styles.tbd}>TBD</span>
+              ) : (
+                <span className={styles.done}>Done</span>
+              )}
+            </td>
           </tr>
         ))}
       </tbody>

@@ -1,6 +1,6 @@
 ---
-title: Grade K-2 Curriculum
-sidebar_position: 1
+title: "Introduction: K-2"
+sidebar_position: 0
 ---
 
 # Grade K-2 Orienteering Curriculum
@@ -38,5 +38,5 @@ Plan for six class periods, one per lesson. Lessons 1 and 2 can often be combine
 | Gathering | Lesson 1 | Return to home base on the gathering signal |
 | Explore & Find | Lesson 2 | In pairs, explore to find animal checkpoints (no set order) |
 | Animal-O | Lessons 2, 4 | Find animal checkpoints using clue sheets |
-| Clothespin-O | Lesson 3 | Find hidden objects and describe their locations |
+| [Clothespin-O](/activities/core/clothespin-o) | Lesson 3 | Find hidden objects and describe their locations |
 | Geometric-O | Lesson 6 | Use a simple map to find checkpoints |

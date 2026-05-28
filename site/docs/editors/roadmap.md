@@ -10,7 +10,9 @@ What's done, what's next, and what's deferred.
 ## Done
 
 - Content build system: clean Markdown content files generate MDX site pages
-- 6 core activity pages: Boundary Run, Gathering, Animal-O, Geometric-O, Map Walk, Score-O
+- 8 core activity pages: Boundary Run, Gathering, Animal-O, Clothespin-O, Geometric-O, Map Walk, Score-O, Point-to-Point
+- Symbol-O (7th core page, already existed)
+- Vocabulary decision: use "checkpoints" consistently; glossary notes the orienteering term "control"
 - 7 lesson plans (Grade 3-5): Boundary, Return, Explore & Find, Clue Sheets, Map Readiness, Maps, Indoor Orienteering
 - Dual-view rendering: full page and printable one-pager from the same content file
 - Test suite (80 tests) covering parser, validator, and MDX generation
@@ -22,7 +24,7 @@ What's done, what's next, and what's deferred.
 
 ### Editing workflow
 
-- **Set up Google Docs editing for Kieran.** Figure out a workflow where Kieran edits content in Google Docs instead of directly in GitHub. Needs a process for syncing Google Docs changes back into the repo's content files. Options to explore: manual copy-paste, a script that pulls from Google Docs, or a shared folder with export conventions.
+- **Incorporate Kieran's feedback.** Kieran makes notes separately (not editing in GitHub or Google Docs). Barb works with Claude to incorporate his feedback into the content files.
 
 ### Curriculum design
 
