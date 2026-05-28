@@ -78,10 +78,9 @@ activities:
 4. Establish home base with a flag or cone. Students walk to different spots. Can they point to home base from where they are?
 5. [**Gathering**](/activities/core/gathering): students move freely within the boundary; return to home base on the signal; count how many seconds it takes
 6. Repeat: spread out further each time. Can the whole class beat their previous time?
-7. Pair up
-8. [**Explore & Find**](/activities/core/explore-and-find): explore within the boundary to find animal checkpoints; return on the gathering signal
-9. Report back: which animals did you find? Where were they? ("The elephant was near the fence." "The giraffe was in the far corner.") Build a group picture of the space.
-10. Send out again. Can you find more this time? Can you remember where the ones you've already seen are?
+7. [**Explore & Find**](/activities/core/explore-and-find): explore within the boundary to find animal checkpoints; return on the gathering signal
+8. Report back: which animals did you find? Where were they? ("The elephant was near the fence." "The giraffe was in the far corner.") Build a group picture of the space. Optionally, have a student run out, touch an animal marker, and run back. Extend by naming two animals and having them visit those two in order and back. This previews the sequencing in Animal-O.
+9. Send out again. Can you find more this time? Can you remember where the ones you've already seen are?
 
 **Orienteering connection:** In competitive orienteering, every course has a time limit. If you're not back by the cutoff, you're disqualified. Orienteers also learn a safety bearing: a compass direction that will always bring you back to a road or known feature. Today, the gathering signal is your safety bearing.
 
@@ -94,10 +93,9 @@ activities:
 4. Establish home base. Students walk to different spots; can they point to home base?
 5. **Gathering**: move freely; return to home base on signal; time the group
 6. Repeat: spread out further each time; beat the previous time
-7. Pair up
-8. **Explore & Find**: explore to find animal checkpoints; return on the signal
-9. Report back: describe what you found and where it was
-10. Send out again. Can you find more? Can you remember where you've been?
+7. **Explore & Find**: explore to find animal checkpoints; return on the signal
+8. Report back: describe what you found and where it was. Optionally, have students run to a named animal and back; extend to two animals in order.
+9. Send out again. Can you find more? Can you remember where you've been?
 
 
 ## Reflection

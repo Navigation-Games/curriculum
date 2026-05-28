@@ -1,6 +1,6 @@
 ---
 title: Copyright and License
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # Copyright and License

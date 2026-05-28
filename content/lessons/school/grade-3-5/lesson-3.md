@@ -77,7 +77,7 @@ activities:
    - Visit checkpoints in order, starting with the triangle
    - Partner verifies with the animal clue sheet
    - Progress to 10-checkpoint maps
-   - Repeat for speed, then from memory
+   - Repeat for speed, then from memory. When repeating solo, students self-check: confirm each checkpoint before moving on. 🧭 [Checking](/about/concepts#checking)
 
 
 ## Compact Delivery
@@ -85,7 +85,7 @@ activities:
 1. **Animal-O** warm-up using the geometric layout
 2. **Geometric Readiness**: whiteboard map demo, spatial questions
 3. **Geometric-O**: pair up, progress through map levels
-4. Repeat for speed, then from memory
+4. Repeat for speed, then from memory (self-check)
 
 
 ## Reflection

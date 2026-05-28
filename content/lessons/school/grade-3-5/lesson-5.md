@@ -1,4 +1,4 @@
-# 5 - Score-O
+# 5 - Map Checkpoints
 
 ---
 tagline: Navigate using a map, visit checkpoints in any order

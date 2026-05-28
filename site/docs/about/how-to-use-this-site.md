@@ -1,6 +1,6 @@
 ---
 title: How to Use This Site
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 # How to Use This Site

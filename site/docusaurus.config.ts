@@ -71,6 +71,12 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
+          sidebarId: 'aboutSidebar',
+          position: 'left',
+          label: 'About',
+        },
+        {
+          type: 'docSidebar',
           sidebarId: 'referenceSidebar',
           position: 'left',
           label: 'Reference',
