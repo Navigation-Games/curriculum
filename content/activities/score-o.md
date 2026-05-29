@@ -41,6 +41,9 @@ Score-O is a bridge between structured courses (where checkpoints are visited in
 - Short: Strategy
   Long: Develop strategies for visiting the most checkpoints in the time allowed
 
+- Short: Time management
+  Long: Estimate how much time is needed and adjust plans to finish within the time limit
+
 
 ## Vocabulary
 
@@ -56,47 +59,49 @@ Score-O is a bridge between structured courses (where checkpoints are visited in
 - Scorecard
   A card where you record the letter code at each checkpoint to prove you visited it.
 
+- Mass start
+  Everyone begins at the same time. Makes it easy to track who found the most checkpoints and whether teams finished within the time limit.
+
 
 ## Setup
 
-1. Place checkpoint markers at locations shown on the master map
-2. Each checkpoint should have a visible letter code
-3. Spread checkpoints across the mapped area at varying distances from the start
-4. Mark a clear start/finish location
-5. Print maps with checkpoint circles already marked
+1. Design course: choose checkpoint locations at distinct features visible both on the map and in terrain. Place Start triangle and Finish double circle on the map.
+2. Print course maps
+3. Place checkpoint markers at locations shown on the master map; each should have a visible letter or animal code.
 
 
 ## Steps
 
-**1. Map review.** Gather students with their maps:
-   - Orient the map together
-   - Point out a few checkpoint circles and ask what feature each one is near
-   - Explain that they can visit checkpoints in any order
+**1. Review the boundary.** Gather students with their maps. Describe the boundary of the course area verbally. Have students orient their maps and identify the boundary on the map.
 
-**2. Strategy discussion.** Before starting:
+**2. Map warm-up.** Teacher describes a checkpoint location (e.g., "near the big tree by the fence"). Students orient their maps and point to the feature. Students raise their hand if it is a circle on their map. Repeat for several checkpoints. This builds the connection between the verbal description and the map before students head out.
+
+**3. Strategy discussion.** Before starting:
    - Ask: "If you want to visit the most checkpoints, what would your plan be?"
    - Discuss: start with nearby ones? Group clusters? Save far ones for last?
    - Emphasize that there is no single best strategy
+   - It's okay to build in a brief planning period before the start where teams can look at the map but may not yet leave the starting area.
 
-**3. First round.** Set a time limit (8-12 minutes for beginners):
+**4. Hand out scorecards.** Give each pair or individual a scorecard and pencil.
+
+**5. Go!** Mass start (everyone begins at the same time). Set a time limit (8-12 minutes for beginners):
    - Students go individually or in pairs
    - At each checkpoint, record the letter code on the scorecard
+   - Checkpoints do not have to be visited in order
    - Return to the start/finish before time runs out
 
-**4. Scoring.** Count correct codes. Only checkpoints with the right letter code count.
+**6. Scoring.** Count correct codes. Only checkpoints with the right letter code count. The winner is whoever finds the most checkpoints. Ties are broken by whoever finished fastest.
 
 
 ## Progression
 
 ### Setup ladder
 
-The teacher can choose how much of the setup students own. Starting earlier in the ladder deepens map understanding because students have to read the map and connect it to the terrain. Even younger students benefit from choosing their own checkpoint locations.
+The teacher can choose how much of the setup students own. Starting earlier in the ladder deepens map understanding because students have to read the map and connect it to the terrain, and is strongly recommended. Even younger students benefit from choosing their own checkpoint locations.
 
 1. **Students choose locations.** Working from a poster-sized map (with a plastic cover so circles can be erased), students choose where to place 10 checkpoints. This forces them to read the map and match it to terrain.
 2. **Students place markers.** In groups, students take the checkpoint markers out and place them at the locations on the map.
 3. **Students copy the map.** Students copy the checkpoint circles from the master map onto their own maps.
-4. **Students navigate.** Score-O as usual.
-5. **Students clean up.** Students pick up the checkpoint markers so the space is ready for the next class.
 
 The teacher can enter at any step:
 
@@ -117,7 +122,7 @@ The teacher can enter at any step:
 
 - Keep the first Score-O short (8 minutes). Students can always do a second round
 - Remind students to orient their map before leaving the start
-- Late penalties (1 point per minute late) discourage students from ignoring the time limit
+- Late penalties discourage students from ignoring the time limit. Options: lose 1 point per minute late, or use a doubling penalty (1 point for 1 minute late, 2 for 2 minutes, 4 for 3 minutes, etc.) when you need teams back on a tight schedule
 - Place a few "easy" checkpoints near the start so every student finds at least one
 - Watch for students who run without reading their map. Redirect them to stop and orient
 
@@ -169,8 +174,11 @@ The teacher can enter at any step:
 - Late penalty: lose 1 point per minute past the time limit
 - Do a second round with the same map to see if scores improve
 - Have students design their own Score-O course for classmates
+- Leave the map at the start and return to check it as needed (navigation by memory)
+- Pairs races: one team finds odds, the other team finds evens
 - Poker-O: each checkpoint has a playing card; collect the best poker hand
 - Poison-O: some checkpoints are "poison" and cost points; rewards careful map reading
+- Vampire-O: one team are "vampires" who chase the other teams; if tagged, you lose a checkpoint
 
 
 ## Companions

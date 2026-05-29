@@ -13,12 +13,12 @@ These lessons cover concept sequence entries 6-21 (Sequential Navigation through
 
 | Lesson | Theme | Key Activities | Concepts Introduced |
 |---|---|---|---|
-| 1. **Clue Sheets and Maps** | Quick intro, then maps | Animal-O (quick), Geometric-O | Following a sequence, Confirming, Map as picture, Orienting, Pattern matching |
-| 2. **Map Reading** | Symbols, colors, thumbing | Map Walk, Symbol-O, map orienting relay | Basic symbols, Legend, Colors, Tracking position |
-| 3. **Strategic Navigation** | Plan and choose your route | Score-O, Poison-O | Route choice, Planning under time pressure |
-| 4. **Reverse Mapping** | From terrain back to map | Reverse Score-O (mark on map where controls are) | Map-terrain connection (bidirectional), Spatial relations, Distance |
-| 5. **Orienteering Courses** | Point-to-point courses | Point-to-Point courses, course review and debrief | Handrails, Junctions, Attack points, Debrief |
-| 6. **Racing** | Competition and independence | Relay Race, finish chute | Independence, Managing pressure, Choosing challenge |
+| [1. **Clue Sheets and Maps**](lesson-1) | Quick intro, then maps | [Animal-O](/activities/core/animal-o) (quick), [Geometric-O](/activities/core/geometric-o) | Following a sequence, Confirming, Map as picture, Orienting, Pattern matching |
+| [2. **Map Reading**](lesson-2) | Symbols, colors, thumbing | [Map Walk](/activities/core/map-walk), [Symbol-O](/activities/core/symbol-o), Symbol Relay | Basic symbols, Legend, Colors, Tracking position |
+| [3. **Strategic Navigation**](lesson-3) | Plan and choose your route | [Score-O](/activities/core/score-o), Poison-O | Route choice, Planning under time pressure |
+| [4. **Reverse Mapping**](lesson-4) | From terrain back to map | Reverse Score-O (mark on map where controls are) | Map-terrain connection (bidirectional), Spatial relations, Distance |
+| [5. **Orienteering Courses**](lesson-5) | Point-to-point courses | [Point-to-Point](/activities/core/point-to-point), course review and debrief | Handrails, Attack points, Debrief |
+| [6. **Racing**](lesson-6) | Competition and independence | Relay Race, finish chute | Independence, Managing pressure, Choosing challenge |
 
 Plan for six class periods, one per lesson. Lesson 1 covers material that takes K-2 students several weeks. The pace is fast because older students can handle multiple concepts in a single session.
 
@@ -35,12 +35,12 @@ Plan for six class periods, one per lesson. Lesson 1 covers material that takes 
 
 | Activity | First Appears | Description |
 |---|---|---|
-| Animal-O | Lesson 1 | Find animal checkpoints using clue sheets (brief intro) |
-| Geometric-O | Lesson 1 | Use a simple map to find checkpoints |
-| Map Walk | Lesson 2 | Walk a route matching map symbols to real-world features |
-| Symbol-O | Lesson 2 | Learn orienteering map symbols by finding features |
-| Score-O | Lesson 3 | Visit as many checkpoints as possible in any order |
-| Poison-O | Lesson 3 | Score-O where only your checkpoints earn points |
+| [Animal-O](/activities/core/animal-o) | Lesson 1 | Find animal checkpoints using clue sheets (brief intro) |
+| [Geometric-O](/activities/core/geometric-o) | Lesson 1 | Use a simple map to find checkpoints |
+| [Map Walk](/activities/core/map-walk) | Lesson 2 | Walk a route matching map symbols to real-world features |
+| [Symbol-O](/activities/core/symbol-o) | Lesson 2 | Learn orienteering map symbols by finding features |
+| [Score-O](/activities/core/score-o) | Lesson 3 | Visit as many checkpoints as possible in any order |
+| Poison-O | Lesson 3 | Score-O where wrong checkpoints lose points |
 | Reverse Score-O | Lesson 4 | Find controls and mark their locations on the map |
 | [Point-to-Point](/activities/core/point-to-point) | Lesson 5 | Navigate a course visiting checkpoints in order using a map |
 | Relay Race | Lesson 6 | Teams compete in relay format |

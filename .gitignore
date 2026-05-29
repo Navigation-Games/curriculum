@@ -17,6 +17,8 @@ site/docs/lessons/school/grade-3-5/*.md
 !site/docs/lessons/school/grade-3-5/index.md
 site/docs/lessons/school/grade-k-2/*.md
 !site/docs/lessons/school/grade-k-2/index.md
+site/docs/lessons/school/grade-6-plus/*.md
+!site/docs/lessons/school/grade-6-plus/index.md
 
 # Data
 *.csv
