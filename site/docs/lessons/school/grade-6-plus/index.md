@@ -1,6 +1,6 @@
 ---
 title: "Introduction: 6+"
-sidebar_position: 3
+sidebar_position: 0
 ---
 
 # Grade 6+ Orienteering Curriculum
@@ -49,4 +49,4 @@ Plan for six class periods, one per lesson. Lesson 1 covers material that takes 
 
 - **Reverse Score-O:** Do we have scripts and materials for this, or does it need to be developed as a new activity?
 - **Compass integration:** Should compass skills be a 7th lesson, or woven into Lessons 2-4 as extensions?
-- **Electronic timing:** The Cambridge progression includes electronic timing as its own lesson. For 6+, is SI timing a lesson or just an equipment option available from Lesson 1 onward?
+- **Checking without electronics:** All lesson plans should work without electronic timing. Teachers need ways to verify students visit checkpoints in the right order, have students check each other, and teach self-checking. A dedicated page on this topic is planned.

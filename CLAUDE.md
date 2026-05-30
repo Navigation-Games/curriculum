@@ -92,9 +92,11 @@ Every core activity needs these, consistent with each other:
 - Avoid em-dashes in all writing. They signal AI authorship. Split into separate sentences or use other connectors.
 - Companion activities live with their parent core activity, not as separate top-level items
 - Companion-to-core relationships tracked in frontmatter `parents` field (supports many-to-many)
-- SI (electronic timing) instructions live on their own equipment page, not repeated in every activity
+- All lesson plans must work without electronic timing. SI (electronic timing) is a separate equipment topic for teachers, not a prerequisite for any lesson
+- Lesson plans for grades 3-5 and 6+ include SHAPE America 2024 (4th edition) PE standards. Indicator codes use the format `[Standard].[GradeSpanEnd].[Indicator]` (e.g., 2.8.7 = Standard 2, grades 6-8, indicator 7). Grade spans: PreK-2, 3-5, 6-8, 9-12
 - Deferred activities (Corridor-O, Line-O, Window-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O) are set aside. Don't include in main curriculum structure
 - Do not modify the Learning Progression table in `site/docs/lessons/school/grade-3-5/index.md` without explicit review from Barb. The 3-column format (Lesson / Main Activity / What it adds) is intentional
+- NEVER use colons inside YAML frontmatter list items. A colon followed by a space is YAML's key-value separator, so `- Optional: foo` silently becomes `{Optional: "foo"}` instead of a string, breaking the build. Rephrase instead (e.g., `- Poster-sized map (optional)` not `- Optional: poster-sized map`)
 
 ## Generated vs Hand-Maintained Files (CRITICAL)
 
@@ -107,4 +109,4 @@ Every core activity needs these, consistent with each other:
 
 Generated files in `site/docs/` are gitignored and rebuilt by GitHub Actions on every push. They should not be committed.
 
-The only hand-maintained files inside generated directories are `index.md` landing pages. If you ever add a new hand-maintained file to a directory that also contains generated files (`site/docs/activities/core/`, `site/docs/lessons/school/grade-3-5/`, `site/docs/lessons/school/grade-k-2/`), you MUST add a negation rule (`!` pattern) to `.gitignore` so git tracks it. Check `.gitignore` for the existing patterns and comments.
+The only hand-maintained files inside generated directories are `index.md` landing pages. If you ever add a new hand-maintained file to a directory that also contains generated files (`site/docs/activities/core/`, `site/docs/lessons/school/grade-3-5/`, `site/docs/lessons/school/grade-k-2/`, `site/docs/lessons/school/grade-6-plus/`), you MUST add a negation rule (`!` pattern) to `.gitignore` so git tracks it. Check `.gitignore` for the existing patterns and comments.
