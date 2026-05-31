@@ -3,7 +3,7 @@
 ---
 tagline: Find hidden objects and describe their locations
 epigraph: Let's play orienteering games with clothespins!
-sidebar_position: 8
+sidebar_position: 40
 tags: [core, level-1]
 time: 30-45 minutes
 space: Any space (gym, schoolyard, or local park)

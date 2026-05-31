@@ -4,7 +4,7 @@
 subtitle: Orienteering Course
 tagline: Complete a course using an orienteering map
 epigraph: Today we will be doing a regular orienteering course using a map
-sidebar_position: 7
+sidebar_position: 100
 tags: [core, level-2]
 time: 30-60 minutes
 space: Schoolyard or local park

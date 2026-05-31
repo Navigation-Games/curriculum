@@ -93,17 +93,6 @@ Student choice and autonomy increase through the progression. Early lessons are 
 | Geometric-O | 4.5.7 | Identifying and fixing orientation mistakes; persistence through difficulty; choosing when to advance to harder levels |
 | Score-O | 4.5.4, 4.5.10 | Full autonomy: students choose which checkpoints to visit, in what order, and how to plan their route |
 
-## Standards by Lesson (Grades 3-5)
-
-| Lesson | Standard 1 | Standard 2 | Standard 3 | Standard 4 |
-|---|---|---|---|---|
-| 1. Boundary & Explore | Locomotor skills in varied practice (1.5.1) | Movement concepts for safe movement (2.5.1) | Safe behaviors independently (3.5.4); solves problems with partners (3.5.5) | Recognizes group challenges (4.5.5) |
-| 2. Clue Sheets | Locomotor skills in varied practice (1.5.1) | | Respectful behaviors in group activities (3.5.3); solves problems with partners (3.5.5) | Identifies strengths and opportunities for practice (4.5.7) |
-| 3. Map Readiness | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); respectful behaviors (3.5.3); solves problems (3.5.5) | Identifies strengths and opportunities for practice (4.5.7) |
-| 4. Map Symbols | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); solves problems (3.5.5) | |
-| 5. Score-O | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); safe behaviors (3.5.4); solves problems (3.5.5) | Explains rationale for choices (4.5.4); reflects on movement (4.5.10) |
-| 6. Point-to-Point | Locomotor skills in varied practice (1.5.1) | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Safe behaviors (3.5.4); solves problems (3.5.5) | Explains rationale for choices (4.5.4); identifies strengths (4.5.7) |
-
 ## Standards by Lesson (Grades K-2)
 
 | Lesson | Standard 1 | Standard 2 | Standard 3 | Standard 4 |
@@ -114,6 +103,83 @@ Student choice and autonomy increase through the progression. Early lessons are 
 | 4. Clue Sheets | Locomotor skills with space awareness (1.2.1) | | Responds to directions (3.2.4); communicates to share space (3.2.3) | Recognizes strengths and need for practice (4.2.7) |
 | 5. Draw a Map | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1) | Communicates to share space (3.2.3); respectful behaviors in movement (3.2.5) | |
 | 6. Read a Map | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1); knowledge of locomotor skills in movement settings (2.2.4) | Communicates to share space (3.2.3); discusses problems with teacher support (3.2.8) | |
+
+## Standards by Lesson (Grades 3-5)
+
+| Lesson | Standard 1 | Standard 2 | Standard 3 | Standard 4 |
+|---|---|---|---|---|
+| 1. Boundary & Explore | Locomotor skills in varied practice (1.5.1) | Movement concepts for safe movement (2.5.1) | Safe behaviors independently (3.5.4); solves problems with partners (3.5.5) | Recognizes group challenges (4.5.5) |
+| 2. Clue Sheets | Locomotor skills in varied practice (1.5.1) | | Respectful behaviors in group activities (3.5.3); solves problems with partners (3.5.5) | Identifies strengths and opportunities for practice (4.5.7) |
+| 3. Map Readiness | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); respectful behaviors (3.5.3); solves problems (3.5.5) | Identifies strengths and opportunities for practice (4.5.7) |
+| 4. Map Symbols | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); solves problems (3.5.5) | |
+| 5. Map Checkpoints | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); safe behaviors (3.5.4); solves problems (3.5.5) | Explains rationale for choices (4.5.4); reflects on movement (4.5.10) |
+| 6. Point-to-Point | Locomotor skills in varied practice (1.5.1) | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Safe behaviors (3.5.4); solves problems (3.5.5) | Explains rationale for choices (4.5.4); identifies strengths (4.5.7) |
+
+## Standards by Lesson (Grades 6+)
+
+| Lesson | Standard 1 | Standard 2 | Standard 3 | Standard 4 |
+|---|---|---|---|---|
+| 1. Clue Sheets & Maps | Correct technique in outdoor activities (1.8.1) | Movement concepts in dynamic environments (2.8.1); problem-solving (2.8.7) | Negotiates strategies and tactics (3.8.3); safe behaviors (3.8.7) | |
+| 2. Map Reading | Correct technique in outdoor activities (1.8.1) | Movement concepts (2.8.1); problem-solving (2.8.7); safety protocols in outdoor activities (2.8.21) | Negotiates strategies and tactics (3.8.3); constructive feedback (3.8.4) | |
+| 3. Strategic Navigation | | Movement concepts (2.8.1); problem-solving (2.8.7) | Negotiates strategies and tactics (3.8.3); follows game rules (3.8.6); safe behaviors (3.8.7) | Choice and interests impact engagement (4.8.4); individual and group challenges (4.8.5) |
+| 4. Reverse Mapping | | Movement concepts (2.8.1); problem-solving (2.8.7) | Negotiates strategies and tactics (3.8.3); solves problems with teammates (3.8.8) | Individual and group challenges (4.8.5); reflects on movement (4.8.9) |
+| 5. Orienteering Courses | Correct technique in outdoor activities (1.8.1) | Movement concepts (2.8.1); problem-solving (2.8.7) | Constructive feedback (3.8.4); safe behaviors (3.8.7); solves problems with teammates (3.8.8) | Choice and interests impact engagement (4.8.4); reflects on movement (4.8.9) |
+| 6. Racing | Correct technique in outdoor activities (1.8.1) | Movement concepts (2.8.1); problem-solving (2.8.7) | Consideration for others (3.8.2); follows game rules (3.8.6); solves problems with teammates (3.8.8) | Choice and interests impact engagement (4.8.4); individual and group challenges (4.8.5); reflects on movement (4.8.9) |
+
+## Indicators by Grade Span
+
+Which lessons address each indicator? Use this to find coverage for a specific standard.
+
+### Grades K-2
+
+| Indicator | Short description | Lessons |
+|---|---|---|
+| 1.2.1 | Locomotor skills with space, effort, and relationship awareness | All (1-6) |
+| 2.2.1 | Recognizes personal and general space | 1, 2, 3, 5, 6 |
+| 2.2.3 | Identifies movement concepts for locomotor and non-locomotor skills | 3 |
+| 2.2.4 | Knowledge of locomotor and non-locomotor skills in movement settings | 6 |
+| 3.2.3 | Communicates to share space and equipment | 2, 3, 4, 5, 6 |
+| 3.2.4 | Responds to directions and feedback from the teacher | 1, 4 |
+| 3.2.5 | Respectful behaviors in positive social interactions | 5 |
+| 3.2.6 | Describes why rules matter for safety and fairness | 1 |
+| 3.2.7 | Safe choices with PE equipment | 1 |
+| 3.2.8 | Discusses problems and solutions with teacher support | 2, 3, 6 |
+| 4.2.5 | Recognizes individual challenges through movement | 2 |
+| 4.2.7 | Recognizes movement strengths and need for practice | 4 |
+
+### Grades 3-5
+
+| Indicator | Short description | Lessons |
+|---|---|---|
+| 1.5.1 | Combines varied locomotor skills in practice tasks | 1, 2, 6 |
+| 2.5.1 | Applies movement concepts and strategies for safe movement | 1, 3, 4, 5, 6 |
+| 2.5.5 | Problem-solving strategies in games and activities | 3, 4, 5, 6 |
+| 3.5.2 | Negotiates roles and responsibilities | 3, 4, 5 |
+| 3.5.3 | Respectful behaviors in group activities | 2, 3 |
+| 3.5.4 | Safe behaviors independently | 1, 5, 6 |
+| 3.5.5 | Solves problems independently, with partners, and in small groups | 1, 2, 3, 4, 5, 6 |
+| 4.5.4 | Explains rationale for choices based on personal interests | 5, 6 |
+| 4.5.5 | Recognizes group challenges through movement | 1 |
+| 4.5.7 | Identifies movement strengths and opportunities for practice | 2, 3, 6 |
+| 4.5.10 | Reflects on movement experiences | 5 |
+
+### Grades 6+
+
+| Indicator | Short description | Lessons |
+|---|---|---|
+| 1.8.1 | Correct technique in outdoor activities | 1, 2, 5, 6 |
+| 2.8.1 | Movement concepts within dynamic environments | 1, 2, 3, 4, 5, 6 |
+| 2.8.7 | Problem-solving in games and activities | 1, 2, 3, 4, 5, 6 |
+| 2.8.21 | Safety protocols in outdoor activities | 2 |
+| 3.8.2 | Consideration for others; contributes positively to the group | 6 |
+| 3.8.3 | Negotiates strategies and tactics | 1, 2, 3, 4 |
+| 3.8.4 | Constructive feedback to and from others | 2, 5 |
+| 3.8.6 | Follows game rules | 3, 6 |
+| 3.8.7 | Safe and appropriate behaviors during physical activity | 1, 3, 5 |
+| 3.8.8 | Solves problems with teammates and opponents | 4, 5, 6 |
+| 4.8.4 | Choice and interests impact engagement | 3, 5, 6 |
+| 4.8.5 | Examines individual and group challenges through movement | 3, 4, 6 |
+| 4.8.9 | Reflects on movement experiences | 4, 5, 6 |
 
 ## Resources
 

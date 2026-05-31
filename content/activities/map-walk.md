@@ -3,7 +3,7 @@
 ---
 tagline: Walk a route together, matching map symbols to real features
 epigraph: Every symbol on the map is something you can see and touch
-sidebar_position: 5
+sidebar_position: 70
 tags: [core, level-2]
 time: 15-20 minutes
 space: Schoolyard or local park with an orienteering map

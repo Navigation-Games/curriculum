@@ -4,7 +4,7 @@
 subtitle: Map Symbol Orienteering
 tagline: Understand map symbols and the features they represent
 epigraph: Today we will learn about orienteering maps and symbols
-sidebar_position: 5
+sidebar_position: 80
 tags: [core, level-2]
 time: 30-60 minutes
 space: Gym, schoolyard, or local park

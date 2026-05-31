@@ -3,7 +3,7 @@
 ---
 tagline: Return to the teacher on a signal
 epigraph: "In orienteering, it's important to stay aware and return on time"
-sidebar_position: 2
+sidebar_position: 20
 tags: [core, level-1]
 time: 30-45 minutes
 space: Gym, schoolyard, or local park

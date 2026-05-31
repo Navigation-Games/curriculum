@@ -9,7 +9,7 @@ interface ActivityCardProps {
   description: string;
   link?: string;
   image?: string;
-  tag?: 'core' | 'readiness' | 'variation' | 'extension';
+  tag?: 'core' | 'readiness' | 'variation' | 'extension' | 'warm-up';
 }
 
 function ActivityPopover({

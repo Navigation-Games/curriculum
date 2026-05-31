@@ -97,6 +97,37 @@ Every core activity needs these, consistent with each other:
 - Deferred activities (Corridor-O, Line-O, Window-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O) are set aside. Don't include in main curriculum structure
 - Do not modify the Learning Progression table in `site/docs/lessons/school/grade-3-5/index.md` without explicit review from Barb. The 3-column format (Lesson / Main Activity / What it adds) is intentional
 - NEVER use colons inside YAML frontmatter list items. A colon followed by a space is YAML's key-value separator, so `- Optional: foo` silently becomes `{Optional: "foo"}` instead of a string, breaking the build. Rephrase instead (e.g., `- Poster-sized map (optional)` not `- Optional: poster-sized map`)
+- When adding or defining a vocabulary term, always add it to all three places: (1) the glossary page (`site/docs/reference/glossary.md`), (2) the glossary data file (`site/src/components/VocabLink/glossaryData.ts`), and (3) the activity's `## Vocabulary` section. All three must stay in sync for VocabLink hyperlinks to work.
+
+## Lesson Plan Writing Practices
+
+These practices were established during the K-2 editing pass and should be applied across all grade bands.
+
+### Delivery should be self-contained
+A teacher should be able to read the Delivery section and know what to do without clicking through to the activity pages. The lesson tells you what to do today. Activity pages provide depth for those who want it (full scripts, photos, detailed progressions). Include a link to each activity in the delivery or extensions so teachers can click through, but don't require it.
+
+### Every activity card needs a link in the body
+If an activity appears as a card in the Activities section, it should also have at least one link in Delivery or Extensions. The cards are a visual overview; the body text is where teachers actually read.
+
+### Fold extensions into delivery for younger grades
+For K-2, extension activities (like "Run to the Animal" or "Animal Friends") become part of the delivery steps rather than separate cards. Young children need more structure and the lesson is stretching one core activity across more time.
+
+### Weave reflection into delivery
+Don't save all reflection for the end. Embed natural reflection moments in the delivery steps where they fit ("Was it easier the second time? Why?"). Keep a small number of focused questions for end-of-activity reflection, targeting the lesson's most important orienteering goals (e.g., spatial language, spatial memory) as well as metacognition (e.g., "Are you surprised that you can remember that many animal places?").
+
+### Compact delivery
+Include a Compact Delivery section that gives the same lesson in shorthand, for teachers who already know the activities and just need a quick reference.
+
+### Goals presentation
+- Orienteering goals: collapsible, open by default
+- PE standards: collapsible, collapsed by default, with an italic sentence after each standard explaining how it appears in the lesson
+- This keeps the page scannable while making standards available for administrators and PE departments
+
+### Partner roles
+Use **Navigator** (the person doing the orienteering) and **Checker** (the person confirming correct location by comparing to a clue sheet). Don't force pairing into activities that don't need it. Introduce the vocabulary when it fits naturally, even if students aren't formally in those roles yet.
+
+### Don't add what the activity doesn't call for
+If the activity's core steps don't mention pairing, don't add pairing to the lesson plan. Let the activity's design speak. Add lesson-level guidance for tailoring to the age group, but don't invent new mechanics.
 
 ## Generated vs Hand-Maintained Files (CRITICAL)
 

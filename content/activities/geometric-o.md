@@ -3,7 +3,7 @@
 ---
 tagline: Use a simple map to do progressively harder courses
 epigraph: We use a map to know where something is before we even find it
-sidebar_position: 4
+sidebar_position: 60
 tags: [core, level-1]
 time: 30-60 minutes
 space: Any space (gym, schoolyard, or local park)

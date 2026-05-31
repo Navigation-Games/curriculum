@@ -4,7 +4,7 @@
 subtitle: Clue Sheet Orienteering
 tagline: Use a clue sheet to find checkpoints in order
 epigraph: In orienteering, you find checkpoints in order using clue sheets
-sidebar_position: 3
+sidebar_position: 50
 tags: [core, level-1]
 time: 15-30 minutes
 space: Gym, schoolyard, or local park
@@ -84,7 +84,7 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 
 1. Place animal-picture checkpoints around the play area, spread out within the boundary
 2. Set up a start/finish area with a marker or cone
-3. Prepare clue sheets with different sequences of animals. Start with short sheets (2-3 animals) and have longer ones (5+) ready
+3. Prepare clue sheets. The [Navigation Games teaching kit](/reference/materials) includes six 5-animal clue sheets (each a different course) and 10-animal clue sheets for a challenge
 4. Optional: set up a whiteboard near start/finish to track times or completions
 
 
@@ -100,11 +100,11 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 
 Start simple and add challenge as students succeed:
 
-- **2-3 animals**: short clue sheet, learn the format
-- **5+ animals**: longer courses covering more of the space
-- **Different sheet**: a new sequence so memorized routes don't help
-- **From memory**: put the clue sheet away and try to complete the course
+- **5-animal clue sheet**: learn the format with a standard course
 - **For speed**: repeat the same course and beat your previous time
+- **From memory**: put the clue sheet away and try to complete the course
+- **Different sheet**: try a new 5-animal sequence so memorized routes don't help. There are six different 5-animal courses in the kit
+- **10-animal clue sheet**: for pairs who finish all six 5-animal courses
 - **Solo**: if students started in pairs, try it individually
 
 
@@ -148,11 +148,11 @@ We recommend that younger students do this in pairs.
 
 Progression:
 
-a. Complete a course using a clue sheet
-b. Repeat a clue sheet to get a faster time
-c. Repeat a clue sheet from memory
-d. Try a different clue sheet
-e. Advance to clue sheets with more animals
+a. Complete a 5-animal course using a clue sheet
+b. Repeat the same course for a faster time
+c. Repeat the same course from memory
+d. Try a different 5-animal clue sheet
+e. Pairs who finish all six 5-animal sheets get a 10-animal sheet
 
 
 ## Reflection

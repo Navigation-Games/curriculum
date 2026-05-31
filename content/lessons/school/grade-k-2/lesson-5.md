@@ -9,9 +9,8 @@ space: Gym, schoolyard, or local park
 materials:
   - Paper and crayons or markers
   - Clipboards (or books to write on)
-  - Checkpoints (cones with animal pictures)
   - Cones (optional, for marking boundaries)
-setup: Place a few animal checkpoints in the space before the lesson
+setup: No special setup needed. The space should have visible landmarks (trees, fences, doors, playground equipment). Place a few cones if the space lacks obvious features.
 vocabulary:
   - Map
   - Boundary
@@ -22,11 +21,9 @@ activities:
     link: /activities/core/boundary-run
     tag: warm-up
   - title: Draw the Space
-    description: Walk around, then draw a map of what you see.
+    description: Draw a map of the space from above.
+    link: /activities/core/draw-the-space
     tag: core
-  - title: Map Trade
-    description: Trade maps with another pair and find their landmarks.
-    tag: extension
 ---
 
 ## Goals
@@ -34,51 +31,49 @@ activities:
 ### Orienteering Goals
 - Understand that a map is a picture of a place seen from above
 - Draw the boundary of the play area
-- Add landmarks and checkpoints to a drawn map
-- Compare your map to a partner's map
-- Begin to understand how a map relates to the real space
+- Add landmarks to a drawn map
+- Compare your map to others' maps
+- Connect the drawn map to the real space
 
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 1: Motor Skills**
-- Demonstrates a variety of locomotor skills with the concepts of space, effort, and relationship awareness (1.2.1)
+- Demonstrates a variety of locomotor skills with the concepts of space, effort, and relationship awareness (1.2.1). *Students walk and run through the space during Boundary Run and Run and Touch.*
 
 **Standard 2: Movement & Fitness Concepts**
-- Recognizes personal space and where to move in general space (2.2.1)
+- Recognizes personal space and where to move in general space (2.2.1). *Students observe and represent spatial relationships between landmarks, connecting physical space to their drawn maps.*
 
 **Standard 3: Social Skills**
-- Uses communication skills to share space and equipment (3.2.3)
-- Demonstrates respectful behaviors that contribute to positive social interactions in movement (3.2.5)
+- Uses communication skills to share space and equipment (3.2.3). *Students share drawing materials and discuss where to place landmarks on their maps.*
+- Demonstrates respectful behaviors that contribute to positive social interactions in movement (3.2.5). *Students compare maps respectfully, noticing differences without judgment.*
 
 
 ## Delivery
 
 1. [**Boundary Run**](/activities/core/boundary-run): walk the boundary together, pointing out landmarks
 2. Sit down together. "If a bird flew over our space and looked down, what would it see?" Talk about it as a group.
-3. Teacher draws the boundary on a big piece of paper (or whiteboard). "Here is the edge of our space." Add one or two landmarks: "Here is the big tree. Here is the door."
-4. Pair up. Give each pair paper and crayons. Walk the space together one more time, looking for landmarks.
-5. Each pair draws their own map: boundary first, then landmarks (trees, fences, cones, doors), then the animal checkpoints.
-6. Gather. Compare maps. "Did you all put the tree in the same place? Where did you put the elephant?"
+3. Give each student (or pair) paper and crayons. Teacher draws the boundary on a big piece of paper (or whiteboard). "Here is the boundary. Draw it with me." Add one or two landmarks: "Here is the big tree. Here is the door." Use the names for areas and landmarks the class developed in earlier lessons. Students keep adding landmarks to their maps (trees, fences, doors, playground equipment).
+4. Gather and share maps. Look at what features different students included. "Raise your hand if you have trees on your map. How many trees? I see that several of you drew the fence!" Point out interesting choices: did anyone use the same symbol for all trees? Did anyone include something no one else noticed? Ask distance questions: "Is it farther from the tree to the bench, or from the tree to the school? Can you tell from your map?"
+5. **Run and touch.** Pick a type of object depicted by several students on their maps. If this were trees, for example, you might say, "When I say go, run and touch as many trees as you can. Come back when you hear the signal!" Gather. Repeat with another feature from the maps.
+6. After running, students can add anything they noticed to their maps.
 
 ## Compact Delivery
 
 1. **Boundary Run**: walk the boundary; point out landmarks
 2. "If a bird looked down, what would it see?"
-3. Teacher draws the boundary and a few landmarks on a whiteboard
-4. Pair up; walk the space together
-5. Each pair draws their own map: boundary, landmarks, checkpoints
-6. Compare maps as a group
+3. Hand out paper and crayons; teacher draws boundary and landmarks, students follow along
+4. Share maps; notice what features people included; ask distance questions
+5. **Run and touch**: pick a feature from the maps; run and touch as many as you can
+6. Add anything new to your maps
 
 ## Reflection
 
-- Was it hard to draw the space? What was tricky?
-- Did your map look like your partner's map? What was different?
-- How did you decide where to put things on your map?
+- What was the hardest part about drawing the space?
+- Did you notice things you missed when you ran out to touch them?
 - How is a map different from a photo?
 
 ## Extensions
 
-- **Map Trade**: trade maps with another pair; can you find the landmarks on their map?
 - Add color to the maps (green for grass, brown for paths, blue for water)
 - Teacher places a new object in the space; students add it to their maps
 - Draw the map of a familiar place (your bedroom, the classroom)

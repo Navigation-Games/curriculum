@@ -305,3 +305,11 @@ body.page-camp-overview {
     margin-bottom: 0.2rem;
   }
 }
+
+/* --- Neutral details/summary (PE standards collapsible) --- */
+.theme-doc-markdown details {
+  --docusaurus-details-summary-arrow-size: 0.38rem;
+  --docusaurus-details-decoration-color: var(--ifm-color-emphasis-500);
+  background-color: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}

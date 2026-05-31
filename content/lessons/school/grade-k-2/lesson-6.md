@@ -42,15 +42,15 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 1: Motor Skills**
-- Demonstrates a variety of locomotor skills with the concepts of space, effort, and relationship awareness (1.2.1)
+- Demonstrates a variety of locomotor skills with the concepts of space, effort, and relationship awareness (1.2.1). *Students walk and run between checkpoints while navigating with a map.*
 
 **Standard 2: Movement & Fitness Concepts**
-- Recognizes personal space and where to move in general space (2.2.1)
-- Demonstrates knowledge of locomotor, non-locomotor, and manipulative skills in movement settings (2.2.4)
+- Recognizes personal space and where to move in general space (2.2.1). *Students connect dots on a map to cones on the ground, translating 2D spatial relationships into movement through 3D space.*
+- Demonstrates knowledge of locomotor, non-locomotor, and manipulative skills in movement settings (2.2.4). *Students apply locomotor skills purposefully, choosing speed and direction based on map reading.*
 
 **Standard 3: Social Skills**
-- Uses communication skills to share space and equipment (3.2.3)
-- Discusses problems and solutions with teacher support in a physical activity setting (3.2.8)
+- Uses communication skills to share space and equipment (3.2.3). *Pairs share the map and discuss which cone to visit next.*
+- Discusses problems and solutions with teacher support in a physical activity setting (3.2.8). *When a pair goes to the wrong cone, they talk through what went wrong and re-orient the map.*
 
 
 ## Delivery
@@ -60,7 +60,7 @@ activities:
 3. Hold the map upside down. "Something is wrong. Can you tell?" Slowly rotate until students shout "Stop!" when it matches.
 4. **Find the Cone**: teacher circles one dot on the map. "Go stand by that cone." Students orient the map and walk to the right cone. Check the animal picture to confirm.
 5. Pair up. Give each pair a simple map with 2-3 circled checkpoints.
-6. [**Geometric-O**](/activities/core/geometric-o): visit the circled checkpoints in order. The animal picture at each cone confirms the right one. Return to the start when finished.
+6. [**Geometric-O**](/activities/core/geometric-o): visit the circled checkpoints in order. The animal picture at each cone confirms the right one. Return to the start when finished. Did you get them all right? What happened when the map didn't seem to match?
 7. Pairs who finish get a new map with more checkpoints.
 
 ## Compact Delivery
@@ -75,10 +75,9 @@ activities:
 
 ## Reflection
 
-- How did you know the map was right-side up?
-- Was it hard to match dots on the map to cones on the ground?
-- What helped you find the right cone?
-- How was this different from using a clue sheet?
+- How did you know the map was right-side up? What helped you keep it that way?
+- How was using a map different from using a clue sheet?
+- What would you tell someone who has never used a map before?
 
 ## Extensions
 

@@ -3,7 +3,7 @@
 ---
 tagline: Travel the boundary of the play area
 epigraph: In orienteering we stay inside a boundary
-sidebar_position: 1
+sidebar_position: 10
 tags: [core, level-1]
 time: Walk the boundary + 5 min discussion
 space: Gym, schoolyard, or local park

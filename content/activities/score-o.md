@@ -4,7 +4,7 @@
 subtitle: Map Treasure Hunt
 tagline: Visit as many checkpoints as possible in any order
 epigraph: You get to choose where to go and in what order
-sidebar_position: 6
+sidebar_position: 90
 tags: [core, level-2]
 time: 15-30 minutes
 space: Schoolyard or local park with an orienteering map

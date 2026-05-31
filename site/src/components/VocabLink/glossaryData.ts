@@ -21,6 +21,10 @@ const glossaryEntries: GlossaryEntry[] = [
     definition: 'A sequence of checkpoints from start to finish. To complete a course, start at the Start marker, visit each checkpoint in order, and finish at the Finish marker.',
   },
   {
+    term: 'Explore',
+    definition: 'Travel through an unfamiliar area to learn what\'s there. Students may already know the space, but they can still look for what\'s new, different, or something they haven\'t noticed before.',
+  },
+  {
     term: 'Feature',
     definition: 'A distinct object in the real world, such as a tree, bench, fence, or boulder. Features are used as landmarks and as checkpoint locations.',
   },

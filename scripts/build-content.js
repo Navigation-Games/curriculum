@@ -756,12 +756,20 @@ function generateLessonMDX(slug, { fm, sections, goals }, activityMaterials = {}
   // Goals
   L.push('## Goals');
   L.push('');
-  L.push('### Orienteering Goals');
+  L.push('<details open>');
+  L.push('<summary><strong>Orienteering Goals</strong></summary>');
+  L.push('');
   for (const g of goals.items) L.push(`- ${g.long}`);
   L.push('');
+  L.push('</details>');
+  L.push('');
   if (goals.peStandards) {
-    L.push('### PE Standards (SHAPE America)');
+    L.push('<details>');
+    L.push('<summary><strong>PE Standards (SHAPE America)</strong></summary>');
+    L.push('');
     L.push(goals.peStandards);
+    L.push('');
+    L.push('</details>');
     L.push('');
   }
 

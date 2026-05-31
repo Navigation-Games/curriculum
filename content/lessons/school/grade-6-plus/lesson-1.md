@@ -18,7 +18,7 @@ vocabulary:
   - Boundary
   - Checkpoint
   - Gathering signal
-  - Home base
+  - Start
   - Clue sheet
   - Orient the map
   - Landmark
@@ -28,7 +28,7 @@ activities:
     link: /activities/core/boundary-run
     tag: warm-up
   - title: Gathering
-    description: Return to home base on the teacher's signal.
+    description: Return to the Start on the teacher's signal.
     link: /activities/core/gathering
     tag: warm-up
   - title: Animal-O
@@ -44,7 +44,7 @@ activities:
 ## Goals
 
 ### Orienteering Goals
-- Identify the boundary, home base, and gathering signal
+- Identify the boundary, the Start, and the gathering signal
 - Use a clue sheet to find checkpoints in order
 - Confirm the correct checkpoint at each location
 - Orient a map using landmarks
@@ -67,8 +67,8 @@ activities:
 
 ## Delivery
 
-1. [**Boundary Run**](/activities/core/boundary-run): run the boundary together. Point out key landmarks, off-limits areas, home base. Older students move through this quickly.
-2. [**Gathering**](/activities/core/gathering): students spread out; return to home base on the signal. Do two rounds. Establish the expectation that everyone comes back.
+1. [**Boundary Run**](/activities/core/boundary-run): run the boundary together. Point out key landmarks, off-limits areas, the Start. Older students move through this quickly.
+2. [**Gathering**](/activities/core/gathering): students spread out; return to the Start on the signal. Do two rounds. Establish the expectation that everyone comes back.
 3. [**Animal-O**](/activities/core/animal-o): hand out clue sheets. Students find checkpoints in order, confirm the animal at each one. Start with a short sheet, advance to longer ones. Keep this brief (10-15 minutes). The point is to establish the format: clue sheet, sequence, confirm.
 4. Transition to maps: gather students facing the geometric layout. Show the whiteboard map. Ask what the dots represent. Rotate it until it's oriented. Spatial questions: "Which checkpoint is closest to the red cone?"
 5. [**Geometric-O**](/activities/core/geometric-o): pairs receive maps and progress through levels. Partner verifies with the animal clue sheet. Advance to 10-checkpoint maps. Repeat for speed, then from memory.
