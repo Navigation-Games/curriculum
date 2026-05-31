@@ -84,4 +84,4 @@ What's done, what's next, and what's deferred.
 
 These activities are set aside and not part of the current curriculum structure:
 
-Corridor-O, Line-O, Window-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O
+Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O

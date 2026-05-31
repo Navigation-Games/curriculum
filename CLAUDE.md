@@ -94,7 +94,7 @@ Every core activity needs these, consistent with each other:
 - Companion-to-core relationships tracked in frontmatter `parents` field (supports many-to-many)
 - All lesson plans must work without electronic timing. SI (electronic timing) is a separate equipment topic for teachers, not a prerequisite for any lesson
 - Lesson plans for grades 3-5 and 6+ include SHAPE America 2024 (4th edition) PE standards. Indicator codes use the format `[Standard].[GradeSpanEnd].[Indicator]` (e.g., 2.8.7 = Standard 2, grades 6-8, indicator 7). Grade spans: PreK-2, 3-5, 6-8, 9-12
-- Deferred activities (Corridor-O, Line-O, Window-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O) are set aside. Don't include in main curriculum structure
+- Deferred activities (Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O) are set aside. Don't include in main curriculum structure
 - Do not modify the Learning Progression table in `site/docs/lessons/school/grade-3-5/index.md` without explicit review from Barb. The 3-column format (Lesson / Main Activity / What it adds) is intentional
 - NEVER use colons inside YAML frontmatter list items. A colon followed by a space is YAML's key-value separator, so `- Optional: foo` silently becomes `{Optional: "foo"}` instead of a string, breaking the build. Rephrase instead (e.g., `- Poster-sized map (optional)` not `- Optional: poster-sized map`)
 - When adding or defining a vocabulary term, always add it to all three places: (1) the glossary page (`site/docs/reference/glossary.md`), (2) the glossary data file (`site/src/components/VocabLink/glossaryData.ts`), and (3) the activity's `## Vocabulary` section. All three must stay in sync for VocabLink hyperlinks to work.
@@ -143,3 +143,76 @@ Generated files in `site/docs/` are gitignored and rebuilt by GitHub Actions on 
 The only hand-maintained files inside generated directories are `index.md` landing pages. If you ever add a new hand-maintained file to a directory that also contains generated files (`site/docs/activities/core/`, `site/docs/lessons/school/grade-3-5/`, `site/docs/lessons/school/grade-k-2/`, `site/docs/lessons/school/grade-6-plus/`), you MUST add a negation rule (`!` pattern) to `.gitignore` so git tracks it. Check `.gitignore` for the existing patterns and comments.
 
 The "Edit this page" links use a custom `editUrl` function in `site/docusaurus.config.ts` that maps auto-generated pages back to their `content/` sources. When adding a new category of auto-generated files (e.g., camp lessons), update the `editUrl` function so the new pattern also points to `content/`.
+
+## Camp Curriculum Sources (TEMPORARY - remove when camp curricula are built)
+
+Tracking sources of information for building the two camp curricula.
+
+### Structure (from Google Site)
+
+**Introductory Curriculum** - Three activities for camps just getting started with orienteering:
+1. Animal-O (Clue Sheet Orienteering)
+2. Find Your Way Home
+3. Map Treasure Hunt
+
+**Skill Development Curriculum** - Fundamentals of orienteering map navigation in six 70-minute sessions over two weeks:
+
+Week 1 (Introduction):
+1. Safety; Animal-O; Symbol Relay; Description Relay; Map Discussion
+2. Safety; Map Walk; Score-O
+3. Safety; Compass Basics; Courses
+
+Week 2 (Development):
+4. Safety; Symbol Relay; Line-O; Star Relay
+5. Safety; Compass Segments; Poison-O
+6. Safety; Courses / Relays
+
+Culminating Activity: All-Camp Team Treasure Hunt (Score-O)
+
+Details: Camp Belknap - https://sites.google.com/navigationgames.org/orienteeringlessons/site-specific-materials/camp-belknap
+
+### Decision: use the Google Site 6-session plan as the camp structure
+The slide deck (Camp Belknap Design Meeting #3) has a more detailed 10-session plan, but we chose the Google Site's 6-session plan as the framework. The slide deck is still a source to mine for activity details, course design principles, and progressions.
+
+### Camp activity inventory
+
+Activities with pages (tagged `[camp]`):
+- Animal-O ✓ (core school activity, also used in camp)
+- Map Walk ✓ (core school activity, also used in camp; updated time to 15-40 min)
+- Score-O / Map Treasure Hunt ✓ (core school activity, also used in camp)
+- Symbol Relay ✓ (companion of Symbol-O, in symbol-o.md)
+- Poison-O ✓ (standalone page `content/activities/poison-o.md` + companion entry in score-o.md; needs reconciliation)
+- Map Discussion ✓ (`content/activities/map-discussion.md`)
+- Checkpoint Copy Relay ✓ (`content/activities/checkpoint-copy-relay.md`)
+- Compass Basics ✓ (`content/activities/compass-basics.md`)
+- Line-O ✓ (`content/activities/line-o.md`)
+- Star Relay ✓ (`content/activities/star-relay.md`)
+- Window-O ✓ (`content/activities/window-o.md`)
+
+Activities that still need pages or decisions:
+- Description Relay - clue sheet / control description interpretation. No write-up found yet.
+- Find Your Way Home - navigate from a starting point to a designated home base. Related to Gathering (return concept) and safety bearing. Not exactly the same as either. No material provided yet.
+- Compass Segments - from slide deck; navigating segments using compass bearings. No write-up yet.
+- Compass Spider - from slide deck; compass exercise. No write-up yet.
+- Vampire-O - from slide deck; appears in session 9. No write-up yet.
+- Courses - "put it all together and orienteer" (delivery format, not a single activity?)
+- Courses / Relays - orienteer in teams (delivery format?)
+
+Open question: activities that are not standalone enough for their own page could have their delivery steps included directly in the camp lesson plan instead.
+
+### Sources to mine
+
+| Source | Status | Notes |
+|---|---|---|
+| Google Site camp pages | Started | Structure above; more content to extract |
+| Camp Belknap videos (Evalin & Kieran) | Not started | Need transcripts first |
+| OUSA Orienteering Development Model | Available locally | `background/orienteering-development-model.md` |
+| Google Site activity descriptions | Captured | Listed in camp activity inventory above |
+| Google Site supporting info (equipment, maps, camp proposals) | Captured | Mostly marketing/sales; not curriculum content |
+| Map Discussion one-pager (PDF + MD in Downloads) | Have it | Keep exact words; no full lesson plan exists yet |
+| Maprunner school map symbols reference | Noted | https://www.maprunner.co.uk/resources/Maprunner-schools-map-symbols.jpg |
+| Map Discussion videos | Noted | youtube.com/watch?v=vug5kiA67N8 and H3TLmTNOb5E; general map symbol videos, belong in reference section not activity page |
+| Camp Belknap Design Meeting #3 slide deck | Mined | `background/camp-belknap-design-meeting-3.pdf`; 10-session plan (not using as structure), new activities (Compass Segments, Compass Spider, Vampire-O), course design principles (White/Yellow/Orange), tools (Purple Pen, OCAD Sketch) |
+| Camp Belknap other slide decks and videos | Not started | Referenced on Google Site camp page |
+| Existing site camp landing page | Not checked | `site/docs/lessons/camp/` |
+| Skill-concept-sequence forest/camp section | Available | Concepts 37-48 in the Nav Games Progression |
