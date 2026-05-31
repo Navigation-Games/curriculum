@@ -36,6 +36,8 @@ What's done, what's next, and what's deferred.
 
 ### Curriculum design
 
+- **Consistent role vocabulary.** The progression defines roles (Finder, Hider, Helper, Spectator) and the lesson plans use Navigator and Checker, but the terminology is not yet consistent across all activities and lessons. We need to decide on a single set of role names, grounded in what matters for orienteering, and use them everywhere.
+
 - **Year-over-year progression within a grade band.** How do we teach kids who come back year after year? The current lessons assume a first encounter with orienteering. We need guidance on how to progress students who already did the sequence last year, so each year builds on the last rather than repeating.
 
 - **Single-setup, multi-grade teaching.** At many schools, a teacher sets up once for the day and runs multiple grades (or even multiple lessons) through the same setup. The curriculum should address how to use one physical arrangement to serve different classes at different levels, with guidance on which activities scale across grades and which need adjustment.

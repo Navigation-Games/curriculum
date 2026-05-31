@@ -27,9 +27,15 @@ The sequence covers four dimensions, following the ODM's framework:
 - **Individual**: confidence, independence, self-management, decision-making
 - **Social**: communication, collaboration, competition
 
-The first half of the sequence (1-22) covers technical orienteering skills from pre-map foundations through map-based navigation. The middle section (23-36) covers safety, communication, individual development, and course design. These cross-cutting concepts show up across all grade levels and settings, not just at the end of a progression. The final section (37-48) covers compass skills, distance estimation, terrain reading, and off-trail navigation, which are primarily relevant in forest and camp settings.
+The sequence has three parts:
+
+1. **Technical Navigation Skills (1-22)** cover the school progression from pre-map foundations through map-based navigation and Score-O strategy.
+2. **Cross-Cutting Skills (23-36)** cover safety, communication, individual development, and course design. These show up across all grade levels and settings.
+3. **Forest and Camp Navigation (37-48)** covers compass skills, distance estimation, terrain reading, and off-trail navigation, which are primarily relevant in forest and camp settings.
 
 ---
+
+## Technical Navigation Skills
 
 ### Pre-Map Skills
 
@@ -183,6 +189,10 @@ Visiting controls in any order adds strategy.
 - Skill: Student can scan a Score-O map, plan a rough route, and adjust their plan as time runs out.
 - OUSA Skill Levels: Implicit in application requirements (score-O courses at all levels)
 
+## Cross-Cutting Skills
+
+These concepts develop alongside technical skills and show up across all grade levels and settings. Safety, communication, and individual development are not advanced topics that come after map reading. They are threaded through the curriculum from the first lesson.
+
 ### Safety
 
 Threaded through many levels but worth calling out as its own strand.
@@ -270,7 +280,7 @@ Orienteering naturally builds personal qualities that are worth naming and reinf
 - SHAPE America: Standard 4 (choosing to engage in physical activity)
 - Note: Individual timing encourages students to develop speed, improve skills, and practice memory. Not all students feel comfortable being timed, especially when learning something new. When timing is used, emphasize accuracy over raw speed: finding all the correct checkpoints matters more than finding them quickly.
 
-### Course Design and Giving Back
+### Map-Making and Course Design
 
 **35. Placing checkpoints**
 - Concept: You can use a map to choose good locations for checkpoints. Good placements are at distinct features, findable but not obvious.
@@ -283,7 +293,7 @@ Orienteering naturally builds personal qualities that are worth naming and reinf
 - Skill: Student can draw a map of a small area that another person could use to navigate.
 - OUSA Skill Levels: Expert ("Create a simple hand drawn map")
 
-### Forest and Camp Navigation
+## Forest and Camp Navigation
 
 The remaining concepts extend the progression into larger, more complex terrain. They are primarily relevant in forest settings and multi-day camp programs, and are less common in school PE. Some (like compass orientation and cardinal directions) may appear in school 6+ lessons, but the full set assumes access to wooded terrain with trails, contours, and off-trail travel.
 
@@ -379,7 +389,7 @@ Rough mapping of concepts to progressions:
 | 23-24 (Safety) | Threaded | Threaded | Threaded | Threaded | Threaded |
 | 25-30 (Communication) | Core focus | Core focus | Core focus | Core focus | Core focus |
 | 31-34 (Individual dev) | Intro | Core focus | Core focus | Core focus | Core focus |
-| 35-36 (Course design) | | Extension | Extension | | Extension |
+| 35-36 (Map-making, course design) | | Extension | Extension | | Extension |
 | 37-40 (Compass) | | | Core focus | | Core focus |
 | 41 (Pacing) | | | Core focus | | Core focus |
 | 42-43 (Relocation) | | | Intro | | Core focus |

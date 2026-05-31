@@ -338,7 +338,7 @@ Orienteering naturally builds personal qualities that are worth naming and reinf
 - SHAPE America: Standard 4 (choosing to engage in physical activity)
 - Note: Individual timing encourages students to develop speed, improve skills, and practice memory. Not all students feel comfortable being timed, especially when learning something new. When timing is used, emphasize accuracy over raw speed: finding all the correct checkpoints matters more than finding them quickly.
 
-### Course Design and Giving Back
+### Map-Making and Course Design
 
 **47. Placing checkpoints**
 - Concept: You can use a map to choose good locations for checkpoints. Good placements are at distinct features, findable but not obvious.
@@ -375,4 +375,4 @@ Rough mapping (to be refined after we identify the key concepts):
 | 35-36 (Safety) | Threaded | Threaded | Threaded | Threaded | Threaded |
 | 37-42 (Communication) | Core focus | Core focus | Core focus | Core focus | Core focus |
 | 43-46 (Individual dev) | Intro | Core focus | Core focus | Core focus | Core focus |
-| 47-48 (Course design) | | Extension | Extension | | Extension |
+| 47-48 (Map-making, course design) | | Extension | Extension | | Extension |
