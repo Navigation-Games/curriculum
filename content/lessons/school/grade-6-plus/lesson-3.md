@@ -47,17 +47,17 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 2: Movement & Fitness Concepts**
-- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1)
-- Demonstrates problem-solving skills in a variety of games and activities (2.8.7)
+- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1). *Students plan efficient routes between checkpoints during Score-O, considering distance and terrain.*
+- Demonstrates problem-solving skills in a variety of games and activities (2.8.7). *Students develop strategies for grouping nearby checkpoints and avoiding backtracking.*
 
 **Standard 3: Social Skills**
-- Uses communication skills to negotiate strategies and tactics in a physical activity setting (3.8.3)
-- Demonstrates the ability to follow game rules in a variety of physical activity situations (3.8.6)
-- Recognizes and implements safe and appropriate behaviors during physical activity (3.8.7)
+- Uses communication skills to negotiate strategies and tactics in a physical activity setting (3.8.3). *Partners discuss and negotiate which checkpoints to visit and in what order during Score-O.*
+- Demonstrates the ability to follow game rules in a variety of physical activity situations (3.8.6). *Students return on the time signal, self-check using letter codes, and stay within the boundary.*
+- Recognizes and implements safe and appropriate behaviors during physical activity (3.8.7). *Students navigate independently and stay aware of boundaries and other participants.*
 
 **Standard 4: Personal Skills**
-- Connects how choice and personal interests impact individual engagement in physical activity (4.8.4)
-- Examines individual and group challenges through movement (4.8.5)
+- Connects how choice and personal interests impact individual engagement in physical activity (4.8.4). *Students choose their own routes and strategies, discovering which approaches suit their strengths.*
+- Examines individual and group challenges through movement (4.8.5). *Students debrief strategies between rounds and compare approaches with classmates.*
 
 
 ## Delivery

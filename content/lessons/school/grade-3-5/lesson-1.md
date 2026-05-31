@@ -57,17 +57,17 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 1: Motor Skills**
-- Combines varied locomotor skills in a variety of practice tasks (1.5.1)
+- Combines varied locomotor skills in a variety of practice tasks (1.5.1). *Students walk, jog, and sprint during Boundary Run and Explore & Find.*
 
 **Standard 2: Movement & Fitness Concepts**
-- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1). *Students navigate within the boundary and adjust their movement to avoid collisions during Explore & Find.*
 
 **Standard 3: Social Skills**
-- Demonstrates safe behaviors independently with limited reminders (3.5.4)
-- Solves problems independently, with partners, and in small groups (3.5.5)
+- Demonstrates safe behaviors independently with limited reminders (3.5.4). *Students stay within the boundary and respond to the gathering signal independently.*
+- Solves problems independently, with partners, and in small groups (3.5.5). *Pairs work together during Explore & Find to locate animal checkpoints and report their findings.*
 
 **Standard 4: Personal Skills**
-- Recognizes group challenges through movement (4.5.5)
+- Recognizes group challenges through movement (4.5.5). *Students time their response to the gathering signal as a group and work to improve it.*
 
 
 ## Delivery

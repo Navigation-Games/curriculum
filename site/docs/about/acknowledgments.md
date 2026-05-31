@@ -9,7 +9,7 @@ sidebar_position: 3
 
 Navigation Games staff, including Barb Bryant and Ethan Childs, wrote the orienteering content of these lessons. Kieran Woods made huge contributions to the camp progression. Evalin Brautigam has been a key contributor across multiple phases of the curriculum. School teachers Katelyn Greene and Thomas Materazzo added the SHAPE America standards and feedback on an earlier version of these lesson plans. Artist Marina Carlson designed the animal pictures used in Animal-O and related activities. Liz McNerney, Maija Pratt, and Sheri Steinberg contributed to the one-page activity summaries. Many PE teachers have provided input that shaped the curriculum.
 
-Marius Okshalen provided project management for curriculum development in 2025-2026, with contributions from Maija Pratt, Mikayla Moss, Erkan Sezgin, and Liz McNerney.
+Marius Okshalen provided project management for curriculum development in 2025-2026, with writing and editing by Kieran Woods, Maija Pratt, Mikayla Moss, Erkan Sezgin, and Liz McNerney.
 
 The orienteering lessons are based on curricula developed by Navigation Games from 2015 to 2019 with the Cambridge Community Schools JK-5 after-school classes (led by Barb Bryant, Ethan Childs and Adam Miller), and with JK-5 Physical Education classes at Cambridge Public Schools in the spring of 2018 (led by Melanie Serguiev), and the school years 2019-2020 and 2020-2021. Cambridge Public Navigation Game staff Cristina Luis, Charlotte Marshall and Adam Miller were additional authors, with feedback from Anaka Landrigan and Conor Latimer-Ireland. Previous versions have been presented at MAHPERD and other conferences.
 

@@ -42,19 +42,19 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 1: Motor Skills**
-- Combines varied locomotor skills in a variety of practice tasks (1.5.1)
+- Combines varied locomotor skills in a variety of practice tasks (1.5.1). *Students run, walk, and change pace as they navigate point-to-point courses through varied terrain.*
 
 **Standard 2: Movement & Fitness Concepts**
-- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
-- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5)
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1). *Students plan routes between checkpoints using map features as guides.*
+- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5). *Students choose routes between checkpoints and adjust when they realize a route isn't working.*
 
 **Standard 3: Social Skills**
-- Demonstrates safe behaviors independently with limited reminders (3.5.4)
-- Solves problems independently, with partners, and in small groups (3.5.5)
+- Demonstrates safe behaviors independently with limited reminders (3.5.4). *Students navigate solo courses independently, staying within bounds and self-checking at each checkpoint.*
+- Solves problems independently, with partners, and in small groups (3.5.5). *Partners plan routes together during pair courses, then transition to solving navigation problems solo.*
 
 **Standard 4: Personal Skills**
-- Explains the rationale for one's choices related to physical activity based on personal interests (4.5.4)
-- Identifies movement strengths and opportunities for practice for individual improvement (4.5.7)
+- Explains the rationale for one's choices related to physical activity based on personal interests (4.5.4). *Students explain their route choices and compare approaches with classmates after completing courses.*
+- Identifies movement strengths and opportunities for practice for individual improvement (4.5.7). *Students choose between easy and harder courses based on their developing navigation skills.*
 
 
 ## Delivery

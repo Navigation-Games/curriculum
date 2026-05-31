@@ -44,14 +44,14 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 1: Motor Skills**
-- Combines varied locomotor skills in a variety of practice tasks (1.5.1)
+- Combines varied locomotor skills in a variety of practice tasks (1.5.1). *Students run and change direction while navigating between animal checkpoints.*
 
 **Standard 3: Social Skills**
-- Demonstrates respectful behaviors that contribute to positive social interaction in group activities (3.5.3)
-- Solves problems independently, with partners, and in small groups (3.5.5)
+- Demonstrates respectful behaviors that contribute to positive social interaction in group activities (3.5.3). *Partners take turns as Navigator and Checker, respecting each other's roles.*
+- Solves problems independently, with partners, and in small groups (3.5.5). *Pairs decide how to divide navigation tasks and work together to complete courses.*
 
 **Standard 4: Personal Skills**
-- Identifies movement strengths and opportunities for practice for individual improvement (4.5.7)
+- Identifies movement strengths and opportunities for practice for individual improvement (4.5.7). *Students repeat courses to improve their time, identifying what helped them get faster.*
 
 
 ## Delivery

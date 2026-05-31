@@ -8,8 +8,8 @@ tags: [core, level-1]
 time: 15-25 minutes
 space: Gym, schoolyard, or local park
 materials:
-  - Paper and crayons or markers
-  - Clipboards (or books to write on)
+  - Paper and pencils
+  - Clipboards (or hard surface to write on)
   - Whiteboard or large paper (for teacher demo)
 setup: No special setup needed. The space should have visible landmarks (trees, fences, doors, playground equipment). If the space lacks obvious features, place a few cones. Practice drawing the boundary shape before class.
 images: []
@@ -63,7 +63,7 @@ This is the first time students create a map rather than read one. It is harder 
    Long: Gather students. Ask what the space would look like from above, as if a bird were flying over. Talk about it as a group
 
 2. Short: Teacher models the boundary
-   Long: Hand out paper and crayons. Draw the boundary on a whiteboard or large paper. Students draw along with you
+   Long: Hand out paper and pencils. Draw the boundary on a whiteboard or large paper. Students draw along with you
 
 3. Short: Teacher adds landmarks
    Long: Add one or two landmarks to your map, naming them. Students add them to their maps too. Use names the class has developed in earlier lessons
@@ -99,7 +99,7 @@ Ways to increase challenge or adapt for different groups:
 ## Delivery
 
 1. Gather students. "If a bird flew over our space and looked down, what would it see?"
-2. Hand out paper and crayons. Teacher draws the boundary on a whiteboard. "Here is the boundary. Draw it with me." Add one or two landmarks
+2. Hand out paper and pencils. Teacher draws the boundary on a whiteboard. "Here is the boundary. Draw it with me." Add one or two landmarks
 3. Students keep adding landmarks to their maps
 4. Gather and share maps. Discuss features, symbols, and distances
 5. Run and touch (optional): pick a feature from the maps, run and touch as many as you can, then add anything new

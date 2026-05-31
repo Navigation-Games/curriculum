@@ -45,21 +45,21 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 1: Motor Skills**
-- Demonstrates correct technique in a variety of outdoor activities (1.8.1)
+- Demonstrates correct technique in a variety of outdoor activities (1.8.1). *Students run timed courses, balancing speed with accurate navigation.*
 
 **Standard 2: Movement & Fitness Concepts**
-- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1)
-- Demonstrates problem-solving skills in a variety of games and activities (2.8.7)
+- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1). *Students apply route choice and map-reading skills under time pressure during individual and relay races.*
+- Demonstrates problem-solving skills in a variety of games and activities (2.8.7). *Students manage the trade-off between speed and accuracy, adjusting their approach between runs.*
 
 **Standard 3: Social Skills**
-- Demonstrates consideration for others and contributes positively to the group or team (3.8.2)
-- Demonstrates the ability to follow game rules in a variety of physical activity situations (3.8.6)
-- Solves problems amongst teammates and opponents (3.8.8)
+- Demonstrates consideration for others and contributes positively to the group or team (3.8.2). *Students encourage teammates during relay races and respect staggered start procedures.*
+- Demonstrates the ability to follow game rules in a variety of physical activity situations (3.8.6). *Students follow staggered start timing, self-check at each checkpoint, and report through the finish chute.*
+- Solves problems amongst teammates and opponents (3.8.8). *Relay teams strategize about course assignments and support each other during transitions.*
 
 **Standard 4: Personal Skills**
-- Connects how choice and personal interests impact individual engagement in physical activity (4.8.4)
-- Examines individual and group challenges through movement (4.8.5)
-- Reflects on movement experiences to develop understanding of how movement is personally meaningful (4.8.9)
+- Connects how choice and personal interests impact individual engagement in physical activity (4.8.4). *Students choose their course difficulty level based on their confidence and goals.*
+- Examines individual and group challenges through movement (4.8.5). *Students reflect on the challenge of balancing speed with accuracy during timed races.*
+- Reflects on movement experiences to develop understanding of how movement is personally meaningful (4.8.9). *Students compare their runs and discuss how racing added a new dimension to their navigation experience.*
 
 
 ## Delivery

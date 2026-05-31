@@ -22,9 +22,17 @@ What's done, what's next, and what's deferred.
 
 ## Next
 
-### Editing workflow
+### Completing Version 1 of the curriculum
 
 - **Incorporate Kieran's feedback.** Kieran makes notes separately (not editing in GitHub or Google Docs). Barb works with Claude to incorporate his feedback into the content files.
+
+- **Review all scripts and circle back to Erkan and Mikayla's scripts.** Compare the current activity and lesson content against the delivery scripts written by Erkan Sezgin and Mikayla Moss to make sure nothing important was lost or contradicted.
+
+- **Compare all activities to edited one-pagers and full versions.** Where edited one-pagers or full activity write-ups exist (especially those developed by Kieran), compare them against the current activity pages and incorporate any missing content or corrections.
+
+- **Edit the video scripts.** The video scripts were drafted before the latest round of lesson and activity edits. They need to be updated to reflect current delivery, vocabulary, and structure.
+
+- **Update the Activities & Lessons Table, Equipment, and other supporting pages.** These pages may be out of date after the editing rounds. Review and sync them with the current state of activities and lessons.
 
 ### Curriculum design
 

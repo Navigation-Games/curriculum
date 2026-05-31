@@ -42,20 +42,20 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 1: Motor Skills**
-- Demonstrates correct technique in a variety of outdoor activities (1.8.1)
+- Demonstrates correct technique in a variety of outdoor activities (1.8.1). *Students run point-to-point courses, adjusting pace for terrain and maintaining map contact while moving.*
 
 **Standard 2: Movement & Fitness Concepts**
-- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1)
-- Demonstrates problem-solving skills in a variety of games and activities (2.8.7)
+- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1). *Students identify handrails and attack points to plan efficient routes between checkpoints.*
+- Demonstrates problem-solving skills in a variety of games and activities (2.8.7). *Students choose between route options and adjust their plans when a chosen route proves difficult.*
 
 **Standard 3: Social Skills**
-- Implements and provides constructive feedback to and from others (3.8.4)
-- Recognizes and implements safe and appropriate behaviors during physical activity (3.8.7)
-- Solves problems amongst teammates and opponents (3.8.8)
+- Implements and provides constructive feedback to and from others (3.8.4). *Partners compare marked maps after courses and discuss what route choices worked well or poorly.*
+- Recognizes and implements safe and appropriate behaviors during physical activity (3.8.7). *Students navigate independently on solo courses, staying within bounds and self-checking at each checkpoint.*
+- Solves problems amongst teammates and opponents (3.8.8). *Pairs discuss route choice trade-offs and learn from each other's navigation decisions.*
 
 **Standard 4: Personal Skills**
-- Connects how choice and personal interests impact individual engagement in physical activity (4.8.4)
-- Reflects on movement experiences to develop understanding of how movement is personally meaningful (4.8.9)
+- Connects how choice and personal interests impact individual engagement in physical activity (4.8.4). *Students select course difficulty based on their confidence and developing skills.*
+- Reflects on movement experiences to develop understanding of how movement is personally meaningful (4.8.9). *Students compare route choices with others and reflect on how different strategies led to different outcomes.*
 
 
 ## Delivery

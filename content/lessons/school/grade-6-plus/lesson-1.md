@@ -54,15 +54,15 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 1: Motor Skills**
-- Demonstrates correct technique in a variety of outdoor activities (1.8.1)
+- Demonstrates correct technique in a variety of outdoor activities (1.8.1). *Students run and change direction efficiently while navigating between checkpoints during Animal-O and Geometric-O.*
 
 **Standard 2: Movement & Fitness Concepts**
-- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1)
-- Demonstrates problem-solving skills in a variety of games and activities (2.8.7)
+- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1). *Students orient maps and use spatial reasoning to match pattern maps to checkpoint locations.*
+- Demonstrates problem-solving skills in a variety of games and activities (2.8.7). *Students solve spatial puzzles during Geometric-O, matching map patterns to real positions in the field.*
 
 **Standard 3: Social Skills**
-- Uses communication skills to negotiate strategies and tactics in a physical activity setting (3.8.3)
-- Recognizes and implements safe and appropriate behaviors during physical activity (3.8.7)
+- Uses communication skills to negotiate strategies and tactics in a physical activity setting (3.8.3). *Partners discuss map orientation and negotiate navigation strategies during Geometric-O.*
+- Recognizes and implements safe and appropriate behaviors during physical activity (3.8.7). *Students stay within the boundary and respond to the gathering signal during all activities.*
 
 
 ## Delivery

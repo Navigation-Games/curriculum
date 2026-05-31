@@ -7,9 +7,8 @@ sidebar_position: 5
 time: 30-45 minutes
 space: Gym, schoolyard, or local park
 materials:
-  - Paper and crayons or markers
-  - Clipboards (or books to write on)
-  - Cones (optional, for marking boundaries)
+  - Paper and pencils
+  - Clipboards (or hard surface to write on)
 setup: No special setup needed. The space should have visible landmarks (trees, fences, doors, playground equipment). Place a few cones if the space lacks obvious features.
 vocabulary:
   - Map
@@ -52,16 +51,16 @@ activities:
 
 1. [**Boundary Run**](/activities/core/boundary-run): walk the boundary together, pointing out landmarks
 2. Sit down together. "If a bird flew over our space and looked down, what would it see?" Talk about it as a group.
-3. Give each student (or pair) paper and crayons. Teacher draws the boundary on a big piece of paper (or whiteboard). "Here is the boundary. Draw it with me." Add one or two landmarks: "Here is the big tree. Here is the door." Use the names for areas and landmarks the class developed in earlier lessons. Students keep adding landmarks to their maps (trees, fences, doors, playground equipment).
+3. Give each student (or pair) paper and pencils. Teacher draws the boundary on a big piece of paper (or whiteboard). "Here is the boundary. Draw it with me." Add one or two landmarks: "Here is the big tree. Here is the door." Use the names for areas and landmarks the class developed in earlier lessons. Students keep adding landmarks to their maps (trees, fences, doors, playground equipment).
 4. Gather and share maps. Look at what features different students included. "Raise your hand if you have trees on your map. How many trees? I see that several of you drew the fence!" Point out interesting choices: did anyone use the same symbol for all trees? Did anyone include something no one else noticed? Ask distance questions: "Is it farther from the tree to the bench, or from the tree to the school? Can you tell from your map?"
-5. **Run and touch.** Pick a type of object depicted by several students on their maps. If this were trees, for example, you might say, "When I say go, run and touch as many trees as you can. Come back when you hear the signal!" Gather. Repeat with another feature from the maps.
+5. **Run and touch.** Pick a type of object depicted by several students on their maps. If this were trees, for example, you might say, "When I say go, run and touch as many trees as you can. Count them as you go. Come back when you hear the signal!" Gather. Repeat with another feature from the maps.
 6. After running, students can add anything they noticed to their maps.
 
 ## Compact Delivery
 
 1. **Boundary Run**: walk the boundary; point out landmarks
 2. "If a bird looked down, what would it see?"
-3. Hand out paper and crayons; teacher draws boundary and landmarks, students follow along
+3. Hand out paper and pencils; teacher draws boundary and landmarks, students follow along
 4. Share maps; notice what features people included; ask distance questions
 5. **Run and touch**: pick a feature from the maps; run and touch as many as you can
 6. Add anything new to your maps

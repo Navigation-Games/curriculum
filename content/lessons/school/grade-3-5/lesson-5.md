@@ -52,17 +52,17 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 2: Movement & Fitness Concepts**
-- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
-- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5)
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1). *Students orient maps and use features to navigate between checkpoints during Map Walk and Score-O.*
+- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5). *Students plan which checkpoints to visit and in what order to maximize their score during Score-O.*
 
 **Standard 3: Social Skills**
-- Uses communication skills to negotiate roles and responsibilities in a physical activity setting (3.5.2)
-- Demonstrates safe behaviors independently with limited reminders (3.5.4)
-- Solves problems independently, with partners, and in small groups (3.5.5)
+- Uses communication skills to negotiate roles and responsibilities in a physical activity setting (3.5.2). *Partners discuss strategy and negotiate which checkpoints to visit during Score-O.*
+- Demonstrates safe behaviors independently with limited reminders (3.5.4). *Students navigate independently within the boundary during Score-O, returning on the signal without reminders.*
+- Solves problems independently, with partners, and in small groups (3.5.5). *Pairs plan routes and adjust strategy between rounds to improve their score.*
 
 **Standard 4: Personal Skills**
-- Explains the rationale for one's choices related to physical activity based on personal interests (4.5.4)
-- Reflects on movement experiences to develop understanding of how movement is personally meaningful (4.5.10)
+- Explains the rationale for one's choices related to physical activity based on personal interests (4.5.4). *Students choose which checkpoints to visit based on their route strategy and discuss their reasoning.*
+- Reflects on movement experiences to develop understanding of how movement is personally meaningful (4.5.10). *Students compare first and second rounds and reflect on what strategies improved their navigation.*
 
 
 ## Delivery

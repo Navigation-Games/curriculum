@@ -48,16 +48,16 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 1: Motor Skills**
-- Demonstrates correct technique in a variety of outdoor activities (1.8.1)
+- Demonstrates correct technique in a variety of outdoor activities (1.8.1). *Students run between checkpoints and change direction while navigating Symbol-O courses.*
 
 **Standard 2: Movement & Fitness Concepts**
-- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1)
-- Demonstrates problem-solving skills in a variety of games and activities (2.8.7)
-- Demonstrates knowledge of safety protocols in teacher-selected outdoor activities (2.8.21)
+- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1). *Students orient maps, thumb their position, and use symbols to navigate during Map Walk and Symbol-O.*
+- Demonstrates problem-solving skills in a variety of games and activities (2.8.7). *Students match map symbols to terrain features and use the legend to decode unfamiliar symbols.*
+- Demonstrates knowledge of safety protocols in teacher-selected outdoor activities (2.8.21). *Students learn to stay within boundaries, keep maps oriented, and check in at the gathering signal.*
 
 **Standard 3: Social Skills**
-- Uses communication skills to negotiate strategies and tactics in a physical activity setting (3.8.3)
-- Implements and provides constructive feedback to and from others (3.8.4)
+- Uses communication skills to negotiate strategies and tactics in a physical activity setting (3.8.3). *Partners discuss symbol identification and negotiate route choices during Symbol-O.*
+- Implements and provides constructive feedback to and from others (3.8.4). *Partners verify each other's checkpoint visits and discuss whether map symbols matched the features.*
 
 
 ## Delivery

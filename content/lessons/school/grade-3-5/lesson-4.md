@@ -41,12 +41,12 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 2: Movement & Fitness Concepts**
-- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1)
-- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5)
+- Applies movement concepts and strategies for safe movement within dynamic environments (2.5.1). *Students orient their maps and use symbols to navigate to checkpoint locations during Symbol-O and Map Walk.*
+- Demonstrates problem-solving strategies in a variety of games/activities (2.5.5). *Students match map symbols to real features and use the legend to decode unfamiliar symbols.*
 
 **Standard 3: Social Skills**
-- Uses communication skills to negotiate roles and responsibilities in a physical activity setting (3.5.2)
-- Solves problems independently, with partners, and in small groups (3.5.5)
+- Uses communication skills to negotiate roles and responsibilities in a physical activity setting (3.5.2). *Partners discuss which symbol matches each feature and negotiate route choices.*
+- Solves problems independently, with partners, and in small groups (3.5.5). *Pairs work together to find checkpoints at features matching specific symbols.*
 
 
 ## Delivery

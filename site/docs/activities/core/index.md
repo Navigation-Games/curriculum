@@ -1,8 +1,9 @@
 ---
-title: Core Activities
+title: Introduction to Core Activities
+sidebar_position: 1
 ---
 
-# Core Activities
+# Introduction to Core Activities
 
 Each activity is a reusable component describing one thing you do. Activities own the what and the how. Lesson plans own the when, why, and sequencing.
 

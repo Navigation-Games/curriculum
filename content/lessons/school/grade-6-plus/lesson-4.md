@@ -39,16 +39,16 @@ activities:
 ### PE Standards (SHAPE America, 2024)
 
 **Standard 2: Movement & Fitness Concepts**
-- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1)
-- Demonstrates problem-solving skills in a variety of games and activities (2.8.7)
+- Identifies the effective use of movement concepts within multiple dynamic environments (2.8.1). *Students use terrain features and landmarks to pinpoint exact checkpoint positions on their blank maps.*
+- Demonstrates problem-solving skills in a variety of games and activities (2.8.7). *Students determine precise checkpoint locations by triangulating from nearby map features.*
 
 **Standard 3: Social Skills**
-- Uses communication skills to negotiate strategies and tactics in a physical activity setting (3.8.3)
-- Solves problems amongst teammates and opponents (3.8.8)
+- Uses communication skills to negotiate strategies and tactics in a physical activity setting (3.8.3). *Partners discuss where to place checkpoint marks on their maps and compare observations.*
+- Solves problems amongst teammates and opponents (3.8.8). *Pairs reconcile differing opinions about checkpoint placement and verify accuracy against the master map.*
 
 **Standard 4: Personal Skills**
-- Examines individual and group challenges through movement (4.8.5)
-- Reflects on movement experiences to develop understanding of how movement is personally meaningful (4.8.9)
+- Examines individual and group challenges through movement (4.8.5). *Students compare their marked maps to the master map and discuss what made some checkpoints harder to locate.*
+- Reflects on movement experiences to develop understanding of how movement is personally meaningful (4.8.9). *Students reflect on how mapping sharpened their observation of terrain features and spatial relationships.*
 
 
 ## Delivery
