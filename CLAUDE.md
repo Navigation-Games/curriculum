@@ -62,6 +62,7 @@ Every core activity needs these, consistent with each other:
 - Tabs component for structured sections within activity/lesson pages
 - Compact/one-pager view rendered from the same MDX source (URL parameter or print-friendly toggle)
 - Day-to-day editing is just Markdown files in the repo; GitHub Actions rebuilds on commit
+- `trailingSlash: true` is set in `docusaurus.config.ts`. This is required so that relative links in index pages (e.g., `./lesson-1` in `grade-3-5/index.md`) resolve correctly. Without it, the dev server serves `/grade-3-5` without a trailing slash, and the browser resolves `./lesson-1` relative to the parent (`/lessons/school/lesson-1` instead of `/lessons/school/grade-3-5/lesson-1`). GitHub Pages adds trailing slashes on its own, so the bug only appears locally. Do not remove `trailingSlash: true`.
 
 ## Repo Layout
 

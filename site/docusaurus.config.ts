@@ -14,6 +14,7 @@ const config: Config = {
   projectName: 'curriculum',
 
   onBrokenLinks: 'throw',
+  trailingSlash: true,
 
   i18n: {
     defaultLocale: 'en',
@@ -38,11 +39,17 @@ const config: Config = {
             if (activityMatch) {
               return `${repo}/content/activities/${activityMatch[1]}`;
             }
-            // Auto-generated lesson pages (not index.md)
+            // Auto-generated school lesson pages (not index.md)
             const lessonMatch = docPath.match(/^lessons\/school\/grade-[^/]+\/(?!index\.md)(.+)$/);
             if (lessonMatch) {
               const gradePath = docPath.replace(/^lessons\/school\//, '');
               return `${repo}/content/lessons/school/${gradePath}`;
+            }
+            // Auto-generated camp lesson pages (not index.md)
+            const campMatch = docPath.match(/^lessons\/camp\/[^/]+\/(?!index\.md)(.+)$/);
+            if (campMatch) {
+              const campPath = docPath.replace(/^lessons\/camp\//, '');
+              return `${repo}/content/lessons/camp/${campPath}`;
             }
             // Everything else: hand-maintained files in site/docs/
             return `${repo}/site/docs/${docPath}`;

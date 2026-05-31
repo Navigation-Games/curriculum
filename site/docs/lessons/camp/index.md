@@ -9,5 +9,5 @@ Orienteering progressions for camp settings. Camps typically have larger outdoor
 
 | Progression | Status | Description |
 |---|---|---|
-| [Camp Intro](intro) | Planned | First-time introduction to orienteering for campers |
-| [Camp Skill Development](full) | Planned | Multi-session progression for camps with returning participants |
+| [Camp Intro](intro) | 3 sessions | First-time introduction to orienteering for campers |
+| [Camp Skill Development](full) | 6 sessions | Multi-session progression building from map reading through compass and courses |
