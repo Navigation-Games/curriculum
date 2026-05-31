@@ -31,7 +31,22 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
-          editUrl: 'https://github.com/Navigation-Games/curriculum/tree/main/site/',
+          editUrl: ({docPath}) => {
+            const repo = 'https://github.com/Navigation-Games/curriculum/tree/main';
+            // Auto-generated activity pages (not index.md)
+            const activityMatch = docPath.match(/^activities\/core\/(?!index\.md)(.+\.md)$/);
+            if (activityMatch) {
+              return `${repo}/content/activities/${activityMatch[1]}`;
+            }
+            // Auto-generated lesson pages (not index.md)
+            const lessonMatch = docPath.match(/^lessons\/school\/grade-[^/]+\/(?!index\.md)(.+)$/);
+            if (lessonMatch) {
+              const gradePath = docPath.replace(/^lessons\/school\//, '');
+              return `${repo}/content/lessons/school/${gradePath}`;
+            }
+            // Everything else: hand-maintained files in site/docs/
+            return `${repo}/site/docs/${docPath}`;
+          },
         },
         blog: false,
         theme: {

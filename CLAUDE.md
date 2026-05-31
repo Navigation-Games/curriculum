@@ -141,3 +141,5 @@ If the activity's core steps don't mention pairing, don't add pairing to the les
 Generated files in `site/docs/` are gitignored and rebuilt by GitHub Actions on every push. They should not be committed.
 
 The only hand-maintained files inside generated directories are `index.md` landing pages. If you ever add a new hand-maintained file to a directory that also contains generated files (`site/docs/activities/core/`, `site/docs/lessons/school/grade-3-5/`, `site/docs/lessons/school/grade-k-2/`, `site/docs/lessons/school/grade-6-plus/`), you MUST add a negation rule (`!` pattern) to `.gitignore` so git tracks it. Check `.gitignore` for the existing patterns and comments.
+
+The "Edit this page" links use a custom `editUrl` function in `site/docusaurus.config.ts` that maps auto-generated pages back to their `content/` sources. When adding a new category of auto-generated files (e.g., camp lessons), update the `editUrl` function so the new pattern also points to `content/`.

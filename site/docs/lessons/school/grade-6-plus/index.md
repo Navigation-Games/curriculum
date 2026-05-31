@@ -13,12 +13,12 @@ These lessons cover concept sequence entries 6-21 (Sequential Navigation through
 
 | Lesson | Theme | Key Activities | Concepts Introduced |
 |---|---|---|---|
-| [1. **Clue Sheets and Maps**](lesson-1) | Quick intro, then maps | [Animal-O](/activities/core/animal-o) (quick), [Geometric-O](/activities/core/geometric-o) | Following a sequence, Confirming, Map as picture, Orienting, Pattern matching |
-| [2. **Map Reading**](lesson-2) | Symbols, colors, thumbing | [Map Walk](/activities/core/map-walk), [Symbol-O](/activities/core/symbol-o), Symbol Relay | Basic symbols, Legend, Colors, Tracking position |
-| [3. **Strategic Navigation**](lesson-3) | Plan and choose your route | [Score-O](/activities/core/score-o), Poison-O | Route choice, Planning under time pressure |
-| [4. **Reverse Mapping**](lesson-4) | From terrain back to map | Reverse Score-O (mark on map where controls are) | Map-terrain connection (bidirectional), Spatial relations, Distance |
-| [5. **Orienteering Courses**](lesson-5) | Point-to-point courses | [Point-to-Point](/activities/core/point-to-point), course review and debrief | Handrails, Attack points, Debrief |
-| [6. **Racing**](lesson-6) | Competition and independence | Relay Race, finish chute | Independence, Managing pressure, Choosing challenge |
+| [1. **Clue Sheets and Maps**](./lesson-1) | Quick intro, then maps | [Animal-O](/activities/core/animal-o) (quick), [Geometric-O](/activities/core/geometric-o) | Following a sequence, Confirming, Map as picture, Orienting, Pattern matching |
+| [2. **Map Reading**](./lesson-2) | Symbols, colors, thumbing | [Map Walk](/activities/core/map-walk), [Symbol-O](/activities/core/symbol-o), Symbol Relay | Basic symbols, Legend, Colors, Tracking position |
+| [3. **Strategic Navigation**](./lesson-3) | Plan and choose your route | [Score-O](/activities/core/score-o), Poison-O | Route choice, Planning under time pressure |
+| [4. **Reverse Mapping**](./lesson-4) | From terrain back to map | Reverse Score-O (mark on map where controls are) | Map-terrain connection (bidirectional), Spatial relations, Distance |
+| [5. **Orienteering Courses**](./lesson-5) | Point-to-point courses | [Point-to-Point](/activities/core/point-to-point), course review and debrief | Handrails, Attack points, Debrief |
+| [6. **Racing**](./lesson-6) | Competition and independence | Relay Race, finish chute | Independence, Managing pressure, Choosing challenge |
 
 Plan for six class periods, one per lesson. Lesson 1 covers material that takes K-2 students several weeks. The pace is fast because older students can handle multiple concepts in a single session.
 

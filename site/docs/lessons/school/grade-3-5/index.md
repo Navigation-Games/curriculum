@@ -11,16 +11,16 @@ Grades 3-5 (ages 9-11). Six lessons that build from basic spatial awareness to i
 
 | Lesson | What it adds | Activities |
 |---|---|---|
-| [1. **Boundary & Explore**](lesson-1) | Here is where you can go; there are things to find | [Boundary Run](/activities/core/boundary-run), [Gathering](/activities/core/gathering), [Explore & Find](/activities/core/explore-and-find) |
-| [2. **Clue Sheets**](lesson-2) | Find them in this specific order | [Explore & Find](/activities/core/explore-and-find) (warm-up), [Animal-O](/activities/core/animal-o) |
-| [3. **Map Readiness**](lesson-3) | Spatial relationships; orienting and relating a map to the space | [Geometric-O](/activities/core/geometric-o) |
-| [4. **Map Symbols**](lesson-4) | Symbols tell you what features are on the ground | [Symbol-O](/activities/core/symbol-o), [Map Walk](/activities/core/map-walk) |
-| [5. **Map Checkpoints**](lesson-5) | Navigate using a map, visit checkpoints in any order | [Map Walk](/activities/core/map-walk), [Score-O](/activities/core/score-o) |
-| [6. **Point-to-Point**](lesson-6) | Navigate a course visiting checkpoints in order | [Point-to-Point](/activities/core/point-to-point) |
+| [1. **Boundary & Explore**](./lesson-1) | Here is where you can go; there are things to find | [Boundary Run](/activities/core/boundary-run), [Gathering](/activities/core/gathering), [Explore & Find](/activities/core/explore-and-find) |
+| [2. **Clue Sheets**](./lesson-2) | Find them in this specific order | [Explore & Find](/activities/core/explore-and-find) (warm-up), [Animal-O](/activities/core/animal-o) |
+| [3. **Map Readiness**](./lesson-3) | Spatial relationships; orienting and relating a map to the space | [Geometric-O](/activities/core/geometric-o) |
+| [4. **Map Symbols**](./lesson-4) | Symbols tell you what features are on the ground | [Symbol-O](/activities/core/symbol-o), [Map Walk](/activities/core/map-walk) |
+| [5. **Map Checkpoints**](./lesson-5) | Navigate using a map, visit checkpoints in any order | [Map Walk](/activities/core/map-walk), [Score-O](/activities/core/score-o) |
+| [6. **Point-to-Point**](./lesson-6) | Navigate a course visiting checkpoints in order | [Point-to-Point](/activities/core/point-to-point) |
 
 Plan for six class periods, one per lesson. Lessons 3 through 6 often extend across two sessions. The sequence is the same regardless of pacing.
 
-[**Indoor Orienteering**](a-indoor-orienteering.md) is an alternative that uses a basketball court, covering lessons 3-6.
+[**Indoor Orienteering**](./a-indoor-orienteering) is an alternative that uses a basketball court, covering lessons 3-6.
 
 ## Activities Referenced
 
