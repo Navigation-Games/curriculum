@@ -11,11 +11,11 @@ Fundamentals of orienteering map navigation in six 70-minute sessions over two w
 
 ## Sessions
 
-| Session | Title | What it adds |
-|---|---|---|
-| [1](./lesson-1) | Getting Started | Clue sheets, map symbols, first navigation |
-| [2](./lesson-2) | Reading the Map | Map Walk, independent Score-O |
-| [3](./lesson-3) | Compass and Courses | Compass skills, point-to-point courses |
-| [4](./lesson-4) | Precision and Teamwork | Line-O, Star Relay, precision map reading |
-| [5](./lesson-5) | Compass Challenge | Compass segments, Poison-O |
-| [6](./lesson-6) | Courses and Relays | Full courses, Checkpoint Copy Relay |
+| Session | What it adds |
+|---|---|
+| [1. **Getting Started**](./lesson-1) | Meet the orienteering map; find checkpoints using clue sheets |
+| [2. **Reading the Map**](./lesson-2) | Walk with the map to learn symbols; navigate on your own |
+| [3. **Compass and Courses**](./lesson-3) | Learn the compass; run your first orienteering course |
+| [4. **Precision and Teamwork**](./lesson-4) | Follow a route precisely; relay with a partner |
+| [5. **Compass Challenge**](./lesson-5) | Apply compass skills; avoid the wrong checkpoints |
+| [6. **Courses and Relays**](./lesson-6) | Put it all together; race as a team |
