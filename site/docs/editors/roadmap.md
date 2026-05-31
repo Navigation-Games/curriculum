@@ -19,6 +19,11 @@ What's done, what's next, and what's deferred.
 - CI pipeline: GitHub Actions runs content build + tests before deploying
 - README rewritten for human editors
 - Component and build system docs in DEVELOPMENT.md
+- 7 camp activity pages: Map Discussion, Checkpoint Copy Relay, Poison-O, Compass Basics, Line-O, Star Relay, Window-O
+- Camp Intro curriculum (3 sessions): Animal-O, Find Your Way Home, Map Treasure Hunt
+- Camp Skill Development curriculum (6 sessions): Getting Started through Courses and Relays
+- Build system extended to process camp lessons from content/lessons/camp/
+- trailingSlash fix for local dev server (relative links in index pages)
 
 ## Next
 
@@ -60,6 +65,14 @@ What's done, what's next, and what's deferred.
 
 - **PE standards audit after editing rounds.** After each major round of curriculum editing, verify that the SHAPE America standards mapping is still valid. Check both the reference page (`site/docs/reference/frameworks/pe-standards.md`) and the PE Standards section within each individual lesson. Lesson delivery changes can invalidate a standard citation (e.g., removing pair work removes the basis for a social skills indicator).
 
+- **Camp activities still needing write-ups.** Several activities referenced in camp lesson plans have no activity page yet: Description Relay (session 1), Compass Segments (session 5), Compass Spider, Vampire-O. Find Your Way Home (Intro session 2) has a lesson plan with inline delivery but no standalone activity page.
+
+- **Symbol Relay needs a standalone activity page.** Currently lives only as a companion section in symbol-o.md. Used in camp sessions 1 and 4 and school lessons. A one-pager exists in background/ but no full write-up. Also needs a complete set of symbol relay cards (only a partial set exists).
+
+- **Reconcile Poison-O.** Poison-O exists as both a standalone page (`content/activities/poison-o.md`) and a companion entry in score-o.md. Decide which is canonical and remove the other.
+
+- **Review camp lesson plans against source materials.** The 9 camp lessons are first drafts. Compare against Google Site content, slide deck details, and Camp Belknap video transcripts (when available) to fill in delivery detail and catch anything missing.
+
 - **Leave No Trace page.** The current draft needs a tone revision so it feels natural and confident rather than justifying orienteering's existence. The core message is simple: orienteering is low-impact, and here is what to teach when you are in wilder areas.
 
 ### Design system
@@ -74,8 +87,7 @@ What's done, what's next, and what's deferred.
 
 ### Site features
 
-- **Camp curriculum.** The camp landing page exists but has no lesson plans yet.
-- **Grade band expansion.** Currently only Grade 3-5 lesson plans exist. K-2 and 6-8 progressions are planned.
+- **Grade band expansion.** K-2 and 6+ lesson plans exist but need further editing passes. Camp Intro and Skill Development curricula have first-draft lesson plans.
 - **Search.** Docusaurus has built-in search (Algolia or local). Not yet configured.
 - **Print styles.** The one-pager view works but could use CSS refinement for clean printing.
 - **AI lesson plan advisor.** An embedded AI chat on the site that helps teachers build a tailored lesson plan based on their situation. Includes an intake form, conversation logging for curriculum improvement, and a follow-up survey. See the [detailed plan](https://github.com/Navigation-Games/curriculum/blob/main/notes/ai-lesson-advisor-plan.md).
