@@ -1,6 +1,6 @@
 ---
 title: Social-Emotional Learning
-sidebar_position: 4
+sidebar_position: 6
 ---
 
 # Social-Emotional Learning

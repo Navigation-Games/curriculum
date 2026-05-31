@@ -1,6 +1,6 @@
 ---
 title: Leave No Trace
-sidebar_position: 5
+sidebar_position: 7
 ---
 
 # Leave No Trace and Orienteering

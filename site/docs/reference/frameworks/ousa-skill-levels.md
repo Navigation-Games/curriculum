@@ -1,6 +1,6 @@
 ---
 title: OUSA Skill Level Recognition Program
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # OUSA Skill Level Recognition Program
