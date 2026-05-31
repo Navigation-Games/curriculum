@@ -63,7 +63,7 @@ Builds map reading, orientation, spatial relationships, and the ability to conne
 - Short: Fixing mistakes
   Long: Complete progressively harder courses using a map
 
-This activity targets students who have already done [Animal-O](animal-o), have developed their sense of spatial awareness, and are ready to practice relative position between objects.
+This activity targets students who have already done [Animal-O](../animal-o), have developed their sense of spatial awareness, and are ready to practice relative position between objects.
 
 See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity fits into the lesson sequence.
 

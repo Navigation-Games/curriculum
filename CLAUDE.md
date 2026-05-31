@@ -63,6 +63,7 @@ Every core activity needs these, consistent with each other:
 - Compact/one-pager view rendered from the same MDX source (URL parameter or print-friendly toggle)
 - Day-to-day editing is just Markdown files in the repo; GitHub Actions rebuilds on commit
 - `trailingSlash: true` is set in `docusaurus.config.ts`. This is required so that relative links in index pages (e.g., `./lesson-1` in `grade-3-5/index.md`) resolve correctly. Without it, the dev server serves `/grade-3-5` without a trailing slash, and the browser resolves `./lesson-1` relative to the parent (`/lessons/school/lesson-1` instead of `/lessons/school/grade-3-5/lesson-1`). GitHub Pages adds trailing slashes on its own, so the bug only appears locally. Do not remove `trailingSlash: true`.
+- **Sibling page links need `../`** because of `trailingSlash: true`. A page at `/activities/core/gathering/` treats a bare relative link like `(boundary-run)` as a child path (`/activities/core/gathering/boundary-run/`), not a sibling. Always write `(../boundary-run)` to link between pages in the same directory. Index pages are the exception: since they represent the directory itself, their relative links correctly resolve to children. This applies everywhere: activity content files, framework pages, lesson plans.
 
 ## Repo Layout
 
@@ -99,6 +100,7 @@ Every core activity needs these, consistent with each other:
 - Do not modify the Learning Progression table in `site/docs/lessons/school/grade-3-5/index.md` without explicit review from Barb. The 3-column format (Lesson / Main Activity / What it adds) is intentional
 - NEVER use colons inside YAML frontmatter list items. A colon followed by a space is YAML's key-value separator, so `- Optional: foo` silently becomes `{Optional: "foo"}` instead of a string, breaking the build. Rephrase instead (e.g., `- Poster-sized map (optional)` not `- Optional: poster-sized map`)
 - When adding or defining a vocabulary term, always add it to all three places: (1) the glossary page (`site/docs/reference/glossary.md`), (2) the glossary data file (`site/src/components/VocabLink/glossaryData.ts`), and (3) the activity's `## Vocabulary` section. All three must stay in sync for VocabLink hyperlinks to work.
+- Map symbols use the **ISSprOM** (International Specification for Sprint Orienteering Maps) symbol set, not ISOM. ISSprOM is designed for sprint/urban maps at 1:4,000 scale, which matches schoolyard and park maps. Symbol Relay cards will have an ISSprOM base set plus a schoolyard-specific subset (paths, buildings, fences, etc.) that camps would not need.
 
 ## Lesson Plan Writing Practices
 

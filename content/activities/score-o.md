@@ -197,4 +197,4 @@ Each checkpoint has a playing card attached. Students visit checkpoints and reco
 
 ### Poison-O *(extension)*
 
-**Wrong checkpoints cost points. Rewards careful map reading.** See the full [Poison-O](poison-o) activity page.
+**Wrong checkpoints cost points. Rewards careful map reading.** See the full [Poison-O](../poison-o) activity page.

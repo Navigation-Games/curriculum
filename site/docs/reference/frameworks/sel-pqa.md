@@ -195,6 +195,6 @@ Social and Emotional Learning Program Quality Assessment (SEL PQA), Forum for Yo
 
 ## See Also
 
-- [Social-Emotional Learning (CASEL)](social-emotional-learning) for the five SEL competencies and how orienteering develops them
-- [PE Standards](pe-standards) for SHAPE America alignment (school settings)
-- [Experiential Learning](experiential-learning) for the learn-by-doing cycle that underpins the curriculum design
+- [Social-Emotional Learning (CASEL)](../social-emotional-learning) for the five SEL competencies and how orienteering develops them
+- [PE Standards](../pe-standards) for SHAPE America alignment (school settings)
+- [Experiential Learning](../experiential-learning) for the learn-by-doing cycle that underpins the curriculum design

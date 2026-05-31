@@ -125,7 +125,7 @@ Our curriculum covers most of the Basic level and parts of Intermediate. Student
 | **Advanced** | Lightly touched | Contour reading and terrain features are stretch goals. Full control description literacy and relocation (SOFA) are introduced conceptually. Compass bearings and off-trail running require more time than a typical PE unit allows. |
 | **Expert** | Beyond school curriculum | Course design is an extension activity. The competitive and physical training elements are beyond our scope but represent where orienteering can lead for motivated students. |
 
-The Skill Level Recognition Program and the [Orienteering Development Model](orienteering-development-model) complement each other. The ODM describes *how* people develop (stages and dimensions). The Skill Levels describe *what* they should be able to do (concrete, assessable requirements). Our [Navigation Games Progression](skill-concept-sequence) cross-references both.
+The Skill Level Recognition Program and the [Orienteering Development Model](../orienteering-development-model) complement each other. The ODM describes *how* people develop (stages and dimensions). The Skill Levels describe *what* they should be able to do (concrete, assessable requirements). Our [Navigation Games Progression](../skill-concept-sequence) cross-references both.
 
 ## Resources
 

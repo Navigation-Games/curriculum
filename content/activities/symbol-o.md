@@ -41,7 +41,7 @@ Builds map reading, symbol recognition, and the connection between map and terra
 - Short: Planning
   Long: Plan the order of features before starting
 
-This activity works best after students have completed [Geometric-O](geometric-o) and are ready to transition from simple pattern maps to orienteering maps with real symbols.
+This activity works best after students have completed [Geometric-O](../geometric-o) and are ready to transition from simple pattern maps to orienteering maps with real symbols.
 See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity fits into the lesson sequence.
 
 
@@ -138,4 +138,4 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 
 ### Symbol Relay *(variation)*
 
-**Team relay to learn map symbols competitively.** See the full [Symbol Relay](symbol-relay) activity page.
+**Team relay to learn map symbols competitively.** See the full [Symbol Relay](../symbol-relay) activity page.

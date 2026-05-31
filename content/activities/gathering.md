@@ -66,7 +66,7 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 
 ## Setup
 
-1. Define a clear boundary (or complete the [Boundary Run](boundary-run) first)
+1. Define a clear boundary (or complete the [Boundary Run](../boundary-run) first)
 2. Establish a central gathering location
 3. Make sure the space is free from hazards
 

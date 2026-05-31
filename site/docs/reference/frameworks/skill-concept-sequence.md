@@ -10,8 +10,8 @@ An ordered sequence of orienteering concepts and skills, each with a way to asse
 Informed by:
 - Current Nav Games lesson progression (Boundary through Maps)
 - Navigation Games "Concepts and Authorship" document (May 2022)
-- [OUSA Orienteering Development Model](orienteering-development-model) (ODM)
-- [OUSA Skill Level Recognition Program](ousa-skill-levels)
+- [OUSA Orienteering Development Model](../orienteering-development-model) (ODM)
+- [OUSA Skill Level Recognition Program](../ousa-skill-levels)
 - Nav Games activities and what they actually teach
 
 ## How to Read This

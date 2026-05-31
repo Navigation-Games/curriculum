@@ -71,7 +71,7 @@ What's done, what's next, and what's deferred.
 
 - **Camp activities still needing write-ups.** Several activities referenced in camp lesson plans have no activity page yet: Description Relay (session 1), Compass Segments (session 5), Compass Spider, Vampire-O.
 
-- **Symbol Relay cards.** Symbol Relay now has a standalone activity page, but still needs a complete set of symbol relay cards (only a partial set exists). Format and symbol set (ISOM vs ISSprOM) decision pending.
+- **Symbol Relay cards.** Symbol Relay now has a standalone activity page, but still needs a complete set of symbol relay cards (only a partial set exists). Decision: use **ISSprOM** symbols, with a schoolyard-specific subset for schools (paths, buildings, fences, etc.) that camps would not need. The existing partial set (`background/symbol-relay-cards.pdf`) has 8 ISOM terrain symbols only. Plan is to export clean vector images from OCAD (SVG or PDF export from a legend), then isolate individual symbols for card printing. Waiting on Kieran for an OCAD source file.
 
 - **Review camp lesson plans against source materials.** The 9 camp lessons are first drafts. Compare against Google Site content, slide deck details, and Camp Belknap video transcripts (when available) to fill in delivery detail and catch anything missing.
 
