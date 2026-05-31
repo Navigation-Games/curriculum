@@ -34,6 +34,10 @@ What's done, what's next, and what's deferred.
 
 - **Update the Activities & Lessons Table, Equipment, and other supporting pages.** These pages may be out of date after the editing rounds. Review and sync them with the current state of activities and lessons.
 
+- **Get transcripts from the Camp Belknap videos.** Evalin and Kieran recorded videos for the camp curriculum at Camp Belknap. Get the transcripts and mine them for delivery scripts, lesson plans, activity ideas, and improvements to the program.
+
+- **More visuals.** Activity pages and lesson plans need more photos, diagrams, and setup images throughout the curriculum.
+
 ### Curriculum design
 
 - **Consistent role vocabulary.** The progression defines roles (Finder, Hider, Helper, Spectator) and the lesson plans use Navigator and Checker, but the terminology is not yet consistent across all activities and lessons. We need to decide on a single set of role names, grounded in what matters for orienteering, and use them everywhere.
