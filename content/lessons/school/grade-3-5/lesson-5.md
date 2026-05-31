@@ -32,6 +32,7 @@ activities:
     tag: core
   - title: Poison-O
     description: Score-O where wrong checkpoints lose points.
+    link: /activities/core/poison-o
     tag: extension
   - title: Poker-O
     description: Collect poker hands at checkpoints.

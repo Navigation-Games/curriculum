@@ -33,6 +33,7 @@ activities:
     tag: core
   - title: Symbol Relay
     description: Team relay to learn map symbols competitively.
+    link: /activities/core/symbol-relay
     tag: variation
 ---
 

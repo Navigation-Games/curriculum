@@ -19,6 +19,7 @@ vocabulary:
 activities:
   - title: Symbol Relay
     description: Team relay to identify and locate map symbols.
+    link: /activities/core/symbol-relay
     tag: warm-up
   - title: Line-O
     description: Follow a line on the map and find unmarked checkpoints along the way.

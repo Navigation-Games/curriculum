@@ -24,6 +24,10 @@ What's done, what's next, and what's deferred.
 - Camp Skill Development curriculum (6 sessions): Getting Started through Courses and Relays
 - Build system extended to process camp lessons from content/lessons/camp/
 - trailingSlash fix for local dev server (relative links in index pages)
+- Poison-O reconciled: standalone page is canonical; score-o.md companion trimmed to cross-reference
+- Symbol Relay standalone activity page (was inline in symbol-o.md)
+- Find Your Way Home standalone activity page
+- Activities & Lessons table updated with all camp activities
 
 ## Next
 
@@ -65,11 +69,9 @@ What's done, what's next, and what's deferred.
 
 - **PE standards audit after editing rounds.** After each major round of curriculum editing, verify that the SHAPE America standards mapping is still valid. Check both the reference page (`site/docs/reference/frameworks/pe-standards.md`) and the PE Standards section within each individual lesson. Lesson delivery changes can invalidate a standard citation (e.g., removing pair work removes the basis for a social skills indicator).
 
-- **Camp activities still needing write-ups.** Several activities referenced in camp lesson plans have no activity page yet: Description Relay (session 1), Compass Segments (session 5), Compass Spider, Vampire-O. Find Your Way Home (Intro session 2) has a lesson plan with inline delivery but no standalone activity page.
+- **Camp activities still needing write-ups.** Several activities referenced in camp lesson plans have no activity page yet: Description Relay (session 1), Compass Segments (session 5), Compass Spider, Vampire-O.
 
-- **Symbol Relay needs a standalone activity page.** Currently lives only as a companion section in symbol-o.md. Used in camp sessions 1 and 4 and school lessons. A one-pager exists in background/ but no full write-up. Also needs a complete set of symbol relay cards (only a partial set exists).
-
-- **Reconcile Poison-O.** Poison-O exists as both a standalone page (`content/activities/poison-o.md`) and a companion entry in score-o.md. Decide which is canonical and remove the other.
+- **Symbol Relay cards.** Symbol Relay now has a standalone activity page, but still needs a complete set of symbol relay cards (only a partial set exists). Format and symbol set (ISOM vs ISSprOM) decision pending.
 
 - **Review camp lesson plans against source materials.** The 9 camp lessons are first drafts. Compare against Google Site content, slide deck details, and Camp Belknap video transcripts (when available) to fill in delivery detail and catch anything missing.
 

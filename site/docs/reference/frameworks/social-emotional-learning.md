@@ -67,3 +67,4 @@ The same activities develop the same SEL competencies. The difference is in whic
 
 - [CASEL Framework](https://casel.org/fundamentals-of-sel/what-is-the-casel-framework/)
 - American Camp Association research on [camp outcomes](https://www.acacamps.org/resource-library/research)
+- [SEL Program Quality Assessment](sel-pqa) - detailed mapping of the curriculum to the Forum for Youth Investment's SEL PQA observation rubric, used by ACA and other program evaluators

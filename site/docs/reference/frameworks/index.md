@@ -17,5 +17,6 @@ The Navigation Games curriculum draws on orienteering-specific frameworks from O
 
 - **[PE Standards](pe-standards)** - Alignment with the 2024 SHAPE America National Physical Education Standards
 - **[Experiential Learning](experiential-learning)** - Learning by doing: the cycle of experience, reflection, and application
-- **[Social-Emotional Learning](social-emotional-learning)** - How orienteering develops independence, resilience, collaboration, and other SEL competencies
+- **[Social-Emotional Learning](social-emotional-learning)** - How orienteering develops independence, resilience, collaboration, and other SEL competencies (CASEL framework)
+- **[SEL Program Quality Assessment](sel-pqa)** - Mapping the curriculum to the Forum for Youth Investment's SEL PQA observation rubric, used by ACA and other program evaluators
 - **[Leave No Trace](leave-no-trace)** - Outdoor ethics and orienteering's relationship to trail use

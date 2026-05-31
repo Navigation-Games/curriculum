@@ -138,12 +138,4 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 
 ### Symbol Relay *(variation)*
 
-**Team relay to learn map symbols competitively.**
-
-Teams race to match symbols to features. One team member runs at a time, finds the checkpoint at the feature matching their symbol, and returns before the next team member goes. Adds energy and competition while reinforcing symbol recognition.
-
-| | |
-|---|---|
-| **Time** | 15-20 minutes |
-| **Materials** | Same Symbol-O setup, plus relay markers at the start |
-| **How to run it** | Divide into teams of 3-4. Each team member gets one symbol. On "go," the first runner finds the feature matching their symbol, confirms with the animal picture, and runs back. Next runner goes. First team to finish wins. |
+**Team relay to learn map symbols competitively.** See the full [Symbol Relay](symbol-relay) activity page.

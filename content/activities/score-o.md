@@ -197,12 +197,4 @@ Each checkpoint has a playing card attached. Students visit checkpoints and reco
 
 ### Poison-O *(extension)*
 
-**Wrong checkpoints cost points. Rewards careful map reading.**
-
-Set up a Score-O course, but add extra "poison" checkpoints that are not on the student's map. If a student records a poison checkpoint, they lose points. Encourages students to read their map carefully before recording a code.
-
-| | |
-|---|---|
-| **Time** | 15-30 minutes |
-| **Materials** | Score-O setup, plus extra "poison" checkpoints not shown on student maps |
-| **How to run it** | Same as Score-O, but add 3-5 extra checkpoints. Correct checkpoints earn 1 point. Poison checkpoints cost 2 points. Students must match what they see to what is on their map. |
+**Wrong checkpoints cost points. Rewards careful map reading.** See the full [Poison-O](poison-o) activity page.

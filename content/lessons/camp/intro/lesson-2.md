@@ -15,7 +15,11 @@ vocabulary:
   - Orient the map
   - Feature
   - Home base
-activities: []
+activities:
+  - title: Find Your Way Home
+    description: Navigate back to home base from an unfamiliar starting point.
+    link: /activities/core/find-your-way-home
+    tag: core
 ---
 
 ## Goals

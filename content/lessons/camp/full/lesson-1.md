@@ -23,6 +23,7 @@ activities:
     tag: core
   - title: Symbol Relay
     description: Team relay to identify and locate map symbols.
+    link: /activities/core/symbol-relay
     tag: variation
   - title: Map Discussion
     description: Guided group discussion of map symbols and features.

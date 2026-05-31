@@ -181,8 +181,9 @@ Activities with pages (tagged `[camp]`):
 - Animal-O ✓ (core school activity, also used in camp)
 - Map Walk ✓ (core school activity, also used in camp; updated time to 15-40 min)
 - Score-O / Map Treasure Hunt ✓ (core school activity, also used in camp)
-- Symbol Relay ✓ (companion of Symbol-O, in symbol-o.md)
-- Poison-O ✓ (standalone page `content/activities/poison-o.md` + companion entry in score-o.md; needs reconciliation)
+- Symbol Relay ✓ (standalone page `content/activities/symbol-relay.md`; companion in symbol-o.md trimmed to cross-reference)
+- Poison-O ✓ (standalone page `content/activities/poison-o.md`; companion in score-o.md trimmed to cross-reference)
+- Find Your Way Home ✓ (`content/activities/find-your-way-home.md`)
 - Map Discussion ✓ (`content/activities/map-discussion.md`)
 - Checkpoint Copy Relay ✓ (`content/activities/checkpoint-copy-relay.md`)
 - Compass Basics ✓ (`content/activities/compass-basics.md`)
@@ -192,7 +193,6 @@ Activities with pages (tagged `[camp]`):
 
 Activities that still need pages or decisions:
 - Description Relay - clue sheet / control description interpretation. No write-up found yet.
-- Find Your Way Home - navigate from a starting point to a designated home base. Related to Gathering (return concept) and safety bearing. Not exactly the same as either. No material provided yet.
 - Compass Segments - from slide deck; navigating segments using compass bearings. No write-up yet.
 - Compass Spider - from slide deck; compass exercise. No write-up yet.
 - Vampire-O - from slide deck; appears in session 9. No write-up yet.
