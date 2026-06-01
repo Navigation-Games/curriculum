@@ -9,7 +9,7 @@ space: Schoolyard, local park, or forested area with an orienteering map
 materials:
   - Line-O maps (1 per student or pair)
   - Orienteering maps with course (1 per pair for Star Relay)
-  - Master map with checkpoint locations
+  - All-checkpoints map with checkpoint locations
   - Checkpoints (orienteering flags, streamers, or cones)
   - Pens or pencils
 setup: Place checkpoints for Line-O along the line route; place checkpoints for Star Relay according to the all controls map
@@ -45,7 +45,7 @@ activities:
 2. **Symbol Relay** (10 min): quick warm-up relay to review map symbols from Session 1. Teams race to match symbols to features.
 3. [**Line-O**](/activities/core/line-o) (25 min): pairs follow a line drawn on the map through the terrain. Keep the map oriented as you move. Watch for unmarked checkpoints placed at features along the line. After finishing, mark the checkpoint locations on your map.
 4. [**Star Relay**](/activities/core/star-relay) (25 min): partner relay. One partner runs to a checkpoint and returns to the start; the other partner runs to the next checkpoint. Partners confirm the correct checkpoint by checking the reported code. Progress to "Move the Object" variation if time allows.
-5. **Wrap-up** (5 min): compare Line-O maps against the master map. Discuss precision and teamwork.
+5. **Wrap-up** (5 min): compare Line-O maps against the all-checkpoints map. Discuss precision and teamwork.
 
 
 ## Compact Delivery

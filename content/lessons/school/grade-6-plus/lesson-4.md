@@ -10,7 +10,7 @@ materials:
   - Orienteering maps (blank, with landmarks but no checkpoint circles)
   - Checkpoint markers placed by teacher
   - Pencils
-  - Master map (for verification)
+  - All-checkpoints map (for verification)
 setup: Place checkpoint markers at locations around the mapped area. Students receive blank maps and must find and mark checkpoint locations.
 vocabulary:
   - Feature
@@ -44,10 +44,10 @@ activities:
 
 **Standard 3: Social Skills**
 - Uses communication skills to negotiate strategies and tactics in a physical activity setting (3.8.3). *Partners discuss where to place checkpoint marks on their maps and compare observations.*
-- Solves problems amongst teammates and opponents (3.8.8). *Pairs reconcile differing opinions about checkpoint placement and verify accuracy against the master map.*
+- Solves problems amongst teammates and opponents (3.8.8). *Pairs reconcile differing opinions about checkpoint placement and verify accuracy against the all-checkpoints map.*
 
 **Standard 4: Personal Skills**
-- Examines individual and group challenges through movement (4.8.5). *Students compare their marked maps to the master map and discuss what made some checkpoints harder to locate.*
+- Examines individual and group challenges through movement (4.8.5). *Students compare their marked maps to the all-checkpoints map and discuss what made some checkpoints harder to locate.*
 - Reflects on movement experiences to develop understanding of how movement is personally meaningful (4.8.9). *Students reflect on how mapping sharpened their observation of terrain features and spatial relationships.*
 
 
@@ -62,7 +62,7 @@ activities:
    - At each one, mark its location on the map as precisely as possible
    - Record the checkpoint code next to the circle
    - Time limit: 15-20 minutes
-5. **Verification**: gather and compare maps to the master map. How close were the marks? Discuss what made some harder to place accurately.
+5. **Verification**: gather and compare maps to the all-checkpoints map. How close were the marks? Discuss what made some harder to place accurately.
 6. **Second round** (if time): try individually, or with checkpoints moved to new locations
 
 
@@ -71,7 +71,7 @@ activities:
 1. **Score-O**: quick warm-up round
 2. **Introduce Reverse Score-O**: checkpoints are not on the map; find them and mark them
 3. **Reverse Score-O**: pairs find checkpoints and mark locations on blank maps
-4. **Verification**: compare to master map; discuss accuracy
+4. **Verification**: compare to all-checkpoints map; discuss accuracy
 
 
 ## Reflection
@@ -85,7 +85,7 @@ activities:
 
 ## Extensions
 
-- Students place their own checkpoints, mark them on a master map, then swap with another pair to find and map them
+- Students place their own checkpoints, mark them on an all-checkpoints map, then swap with another pair to find and map them
 - Increase precision: checkpoints placed close to each other, requiring careful map placement
 - Introduce distance estimation: how far is the checkpoint from the nearest path junction?
 - Try it solo

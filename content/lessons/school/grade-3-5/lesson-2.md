@@ -66,7 +66,7 @@ activities:
    - Repeat for a faster time. Students can now self-check: carry the clue sheet and confirm each animal yourself before moving on. 🧭 [Checking](/about/concepts#checking)
 4. **Animal Relay**: take turns running to checkpoints
 
-> **If you have electronic timing:** Electronic timing confirms correct checkpoints automatically. Without it, students need to learn to check each other (and eventually themselves). See [SI Timing](/equipment/si-timing) for how lessons change with electronics.
+> **If you have electronic timing:** Electronic timing confirms correct checkpoints automatically. Without it, students need to learn to check each other (and eventually themselves). See [Electronic Timing](/reference/equipment/electronic-timing) for how lessons change with electronics.
 
 
 ## Compact Delivery

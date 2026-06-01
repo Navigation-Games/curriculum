@@ -17,7 +17,7 @@ Geometric-O is where students use a real map for the first time. They orient a s
 - 4 colored cones for the corners: red, blue, green, yellow
 - Geometric-O maps: 5-checkpoint and 10-checkpoint versions
 - A whiteboard and markers
-- A master map showing the arrangement
+- A all-checkpoints map showing the arrangement
 
 [SHOW: close-up of numbered animal cones, colored corner cones, printed maps, and whiteboard with the pattern drawn on it]
 
@@ -31,8 +31,8 @@ Geometric-O is where students use a real map for the first time. They orient a s
 
 ## Setup (visual: aerial/wide shot of the space being set up)
 
-1. Arrange checkpoints (animal-picture cones numbered 31-40) to match the master map. Exact distances do not need to be perfect, but positions relative to the colored landmarks must be correct.
-[SHOW: teacher placing numbered cones according to the master map]
+1. Arrange checkpoints (animal-picture cones numbered 31-40) to match the all-checkpoints map. Exact distances do not need to be perfect, but positions relative to the colored landmarks must be correct.
+[SHOW: teacher placing numbered cones according to the all-checkpoints map]
 
 2. Place colored cones in the four corners: red, blue, green, yellow.
 [SHOW: teacher placing colored cones at corners, camera pulls back to show full layout]
@@ -106,8 +106,8 @@ Geometric-O is where students use a real map for the first time. They orient a s
 2. **Not orienting the map before each course.** Students pick up a new map and start running without turning it to match the space. Remind them: match the colored corners first, then navigate.
 [SHOW: left side, student running with unoriented map. Right side, student stopping to rotate map until colors match]
 
-3. **Placing colored cones in the wrong corners.** If the red cone is in the northeast but the map shows it in the northwest, every course will be wrong. Double-check the corner placement against the master map before students arrive.
-[SHOW: left side, colored cones not matching the master map. Right side, teacher verifying each corner]
+3. **Placing colored cones in the wrong corners.** If the red cone is in the northeast but the map shows it in the northwest, every course will be wrong. Double-check the corner placement against the all-checkpoints map before students arrive.
+[SHOW: left side, colored cones not matching the all-checkpoints map. Right side, teacher verifying each corner]
 
 ## Wrap-up (visual: return to presenter)
 

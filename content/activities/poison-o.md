@@ -10,7 +10,7 @@ space: Schoolyard or local park
 materials:
   - Checkpoints (orienteering flags, streamers, or cones)
   - Poison Score-O maps (1 per pair)
-  - Master map (all controls, for setup and answer key)
+  - All-checkpoints map (all controls, for setup and answer key)
   - Punch cards or index cards
   - Pencils
 setup: Place checkpoints according to the all controls map
@@ -53,9 +53,9 @@ The map shows only a portion of the checkpoints scattered throughout the space. 
 
 ## Setup
 
-1. Print Poison Score-O maps, master maps, and an answer key
+1. Print Poison Score-O maps, all-checkpoints maps, and an answer key
 2. When creating maps, place correct checkpoints and poison checkpoints on similar features near each other (e.g., if the correct checkpoint is on a park bench, set a poison checkpoint at another bench nearby)
-3. Set all checkpoints in their corresponding locations according to the master map
+3. Set all checkpoints in their corresponding locations according to the all-checkpoints map
 
 
 ## Steps

@@ -12,8 +12,8 @@ materials:
   - 4 colored cones (red, blue, green, yellow)
   - Geometric-O maps (5 and 10 checkpoint versions)
   - Small whiteboard and markers (or paper)
-  - Master map
-setup: Arrange checkpoints and colored cones according to the master map
+  - All-checkpoints map
+setup: Arrange checkpoints and colored cones according to the all-checkpoints map
 images: []
 videos:
   - id: 32D52UPa7Gw
@@ -85,7 +85,7 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 
 ## Setup
 
-1. Arrange checkpoints (cones with animal pictures and numbers 31-40) to match the master map
+1. Arrange checkpoints (cones with animal pictures and numbers 31-40) to match the all-checkpoints map
 2. Place colored cones (red, blue, green, yellow) in the corners as landmarks. Exact distances do not need to be perfect as long as cones are in the correct positions relative to the colored landmarks
 3. Draw the arrangement on a whiteboard without indicating which animal is at each location
 4. Set geometric maps out where students can see them, ideally next to a self-serve station

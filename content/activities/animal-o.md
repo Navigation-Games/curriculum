@@ -84,7 +84,7 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 
 1. Place animal-picture checkpoints around the play area, spread out within the boundary
 2. Set up a start/finish area with a marker or cone
-3. Prepare clue sheets. The [Navigation Games teaching kit](/reference/materials) includes six 5-animal clue sheets (each a different course) and 10-animal clue sheets for a challenge
+3. Prepare clue sheets. The [Navigation Games teaching kit](/reference/equipment/kits) includes six 5-animal clue sheets (each a different course) and 10-animal clue sheets for a challenge
 4. Optional: set up a whiteboard near start/finish to track times or completions
 
 

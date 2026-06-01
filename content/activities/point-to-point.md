@@ -11,8 +11,8 @@ space: Schoolyard or local park
 materials:
   - Orienteering maps with courses marked
   - Checkpoint markers (cones or flags) with codes
-  - Master map (all controls)
-setup: Place checkpoints at their corresponding locations according to the master map
+  - All-checkpoints map (all controls)
+setup: Place checkpoints at their corresponding locations according to the all-checkpoints map
 images: []
 videos: []
 ---
@@ -51,7 +51,7 @@ Students visit checkpoints in sequential order using a map. This is "real" orien
 
 ## Setup
 
-1. Place checkpoints (streamers, cones, or flags) at their corresponding locations on the master map
+1. Place checkpoints (streamers, cones, or flags) at their corresponding locations on the all-checkpoints map
 2. Make an answer key for each checkpoint and its code
 3. Print maps with courses marked. Have multiple courses of varying difficulty if possible
 

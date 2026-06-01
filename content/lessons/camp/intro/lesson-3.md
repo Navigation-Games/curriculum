@@ -9,9 +9,9 @@ space: Schoolyard, local park, or camp area with an orienteering map
 materials:
   - Orienteering maps with checkpoint circles marked (1 per pair)
   - Checkpoint markers (cones or flags) with letter codes
-  - Master map
+  - All-checkpoints map
   - Scorecards and pencils
-setup: Place checkpoints according to the master map; spread them out across the area
+setup: Place checkpoints according to the all-checkpoints map; spread them out across the area
 vocabulary:
   - Score-O
   - Route choice
@@ -36,9 +36,9 @@ activities:
 
 1. **Safety briefing** (5 min): review boundaries and gathering signal. Emphasize: when you hear the signal, return to the start immediately, even if you have not finished.
 2. **Map orientation** (5 min): hand out maps and orient them together. Point out the checkpoint circles on the map. Show how each circle marks a location where a checkpoint is placed. Review the thumb technique: keep your thumb on your current location.
-3. **Practice run** (10 min): do a short practice round with a small number of checkpoints (3-5) and a generous time limit. Pairs visit checkpoints, recording the letter code at each one. Return and check codes against the master map.
+3. **Practice run** (10 min): do a short practice round with a small number of checkpoints (3-5) and a generous time limit. Pairs visit checkpoints, recording the letter code at each one. Return and check codes against the all-checkpoints map.
 4. [**Map Treasure Hunt (Score-O)**](/activities/core/score-o) (25-30 min): full round with all checkpoints. Set a time limit (15-20 minutes). Pairs plan their route and navigate independently. At each checkpoint, record the letter code on the scorecard.
-5. **Scoring and wrap-up** (5-10 min): check scorecards against the master map. Celebrate the results. Which pair found the most? Which checkpoint was hardest to find?
+5. **Scoring and wrap-up** (5-10 min): check scorecards against the all-checkpoints map. Celebrate the results. Which pair found the most? Which checkpoint was hardest to find?
 
 
 ## Compact Delivery

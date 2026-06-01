@@ -9,10 +9,10 @@ time: 30-60 minutes
 space: Schoolyard, local park, or forested area
 materials:
   - Line-O maps (1 per student or pair)
-  - Master map with checkpoint locations
+  - All-checkpoints map with checkpoint locations
   - Checkpoints (control flags, flagging tape, or cones)
   - Pens or pencils
-setup: Put out checkpoints as per the master map
+setup: Put out checkpoints as per the all-checkpoints map
 images: []
 videos: []
 ---
@@ -48,7 +48,7 @@ Line-O develops precision in map reading. A line is drawn on the map, and partic
 
 ## Setup
 
-1. Put out checkpoints along the line route as per the master map
+1. Put out checkpoints along the line route as per the all-checkpoints map
 
 
 ## Steps

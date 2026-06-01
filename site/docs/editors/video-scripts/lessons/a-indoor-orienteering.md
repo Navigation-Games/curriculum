@@ -16,7 +16,7 @@ This is an alternative lesson that can be used on rainy days or in schools witho
 - Checkpoints (cones or small markers)
 - Basketball court maps (printed, both half-court and full-court versions)
 - A gym with a basketball court
-- Place checkpoints on the court according to the master map before class
+- Place checkpoints on the court according to the all-checkpoints map before class
 
 ## Learning Goals (visual: goals on screen)
 

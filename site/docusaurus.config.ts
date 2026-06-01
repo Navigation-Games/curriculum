@@ -85,13 +85,7 @@ const config: Config = {
           position: 'left',
           label: 'Lesson Plans',
         },
-        {
-          type: 'docSidebar',
-          sidebarId: 'equipmentSidebar',
-          position: 'left',
-          label: 'Equipment',
-        },
-        {
+{
           type: 'docSidebar',
           sidebarId: 'aboutSidebar',
           position: 'left',

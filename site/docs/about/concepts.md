@@ -18,6 +18,6 @@ Checking means confirming you are at the right place before moving on. It shows 
 1. **Partner checking** (Lesson 2): one student is the orienteer, the other keeps the clue sheet as the checker. At each checkpoint, the orienteer calls out the animal name. The checker says "correct" or "incorrect." Then they switch.
 2. **Self-checking** (Lessons 3+): the student carries their own clue sheet or control descriptions and confirms each checkpoint themselves before moving on.
 
-If you have electronic timing, the progression is simpler because the device does the checking. See [SI Timing](/equipment/si-timing) for how lessons change with electronics.
+If you have electronic timing, the progression is simpler because the device does the checking. See [Electronic Timing](/reference/equipment/electronic-timing) for how lessons change with electronics.
 
 **As a general skill.** Checking is really about staying on task: tracking where you are on a list, confirming each step, and not skipping ahead. Students who learn to check in orienteering are practicing a skill that transfers to following directions, completing multi-step assignments, and self-monitoring in general.

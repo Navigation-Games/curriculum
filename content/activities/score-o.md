@@ -11,9 +11,9 @@ space: Schoolyard or local park with an orienteering map
 materials:
   - Orienteering maps with checkpoint circles marked
   - Checkpoint markers (cones or flags) with letter codes
-  - Master map
+  - All-checkpoints map
   - Scorecards and pencils
-setup: Place checkpoints according to the master map; spread them out across the mapped area
+setup: Place checkpoints according to the all-checkpoints map; spread them out across the mapped area
 images: []
 videos: []
 ---
@@ -67,7 +67,7 @@ Score-O is a bridge between structured courses (where checkpoints are visited in
 
 1. Design course: choose checkpoint locations at distinct features visible both on the map and in terrain. Place Start triangle and Finish double circle on the map.
 2. Print course maps
-3. Place checkpoint markers at locations shown on the master map; each should have a visible letter or animal code.
+3. Place checkpoint markers at locations shown on the all-checkpoints map; each should have a visible letter or animal code.
 
 
 ## Steps
@@ -101,12 +101,12 @@ The teacher can choose how much of the setup students own. Starting earlier in t
 
 1. **Students choose locations.** Working from a poster-sized map (with a plastic cover so circles can be erased), students choose where to place 10 checkpoints. This forces them to read the map and match it to terrain.
 2. **Students place markers.** In groups, students take the checkpoint markers out and place them at the locations on the map.
-3. **Students copy the map.** Students copy the checkpoint circles from the master map onto their own maps.
+3. **Students copy the map.** Students copy the checkpoint circles from the all-checkpoints map onto their own maps.
 
 The teacher can enter at any step:
 
 - Start at step 1 for full student ownership (recommended for experienced students or 6+)
-- Start at step 2 if the teacher prepares the master map with checkpoint locations in advance
+- Start at step 2 if the teacher prepares the all-checkpoints map with checkpoint locations in advance
 - Start at step 3 if the teacher also places the markers
 - Start at step 4 if the teacher prepares everything including printed maps
 

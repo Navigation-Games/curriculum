@@ -75,8 +75,8 @@ Every core activity needs these, consistent with each other:
 - `site/docs/lessons/school/` - **AUTO-GENERATED** lesson pages (do not edit; do not create files here), plus hand-maintained index.md files
 - `site/docs/lessons/camp/` - camp lesson progressions (hand-maintained)
 - `site/docs/about/` - about pages: how-to-use, concepts, acknowledgments, copyright
-- `site/docs/equipment/` - setup guides, SI timing
-- `site/docs/reference/` - glossary, materials, frameworks
+- `site/docs/reference/` - glossary, frameworks, equipment & materials
+- `site/docs/reference/equipment/` - materials index, maps, controls, kits, setup guides, electronic timing
 - `site/src/components/` - reusable React components (ActivityCard, CardGrid, YouTube)
 - `site/src/pages/` - standalone landing pages (home, school, camp, quick-start)
 

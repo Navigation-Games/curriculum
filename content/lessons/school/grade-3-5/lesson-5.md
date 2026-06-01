@@ -9,9 +9,9 @@ space: Schoolyard or local park (needs real features for map symbols)
 materials:
   - Orienteering maps
   - Checkpoint markers (cones or flags)
-  - Master map
+  - All-checkpoints map
   - Scorecards and pencils
-setup: Place checkpoints according to the master map
+setup: Place checkpoints according to the all-checkpoints map
 vocabulary:
   - Orient the map
   - Symbol

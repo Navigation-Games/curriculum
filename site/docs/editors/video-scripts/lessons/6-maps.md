@@ -15,9 +15,9 @@ Lesson 6 is the culmination of the progression. Students navigate using real ori
 
 - Orienteering maps (printed, enough for each student or pair)
 - Checkpoint markers (cones or flags)
-- Master map (for teacher reference and checkpoint placement)
+- All-checkpoints map (for teacher reference and checkpoint placement)
 - A schoolyard or local park with real features for map symbols (this lesson needs more than just a gym)
-- Place checkpoints according to the master map before class
+- Place checkpoints according to the all-checkpoints map before class
 
 ## Learning Goals (visual: goals on screen)
 

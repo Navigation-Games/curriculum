@@ -50,7 +50,7 @@ Each activity and lesson plan page has two views:
 
 ## Materials
 
-Materials are hyperlinked. Click any material name to see a popup with details: what it is, where to get it, alternatives, and which activities use it. For the full list, visit the [Materials Index](/reference/materials).
+Materials are hyperlinked. Click any material name to see a popup with details: what it is, where to get it, alternatives, and which activities use it. For the full list, visit the [Materials Index](/reference/equipment/materials).
 
 ## Navigation tips
 

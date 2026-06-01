@@ -10,7 +10,7 @@ materials:
   - Orienteering maps with courses drawn (start triangle, numbered circles, finish double circle)
   - Checkpoint markers with letter codes
   - Scorecards and pencils
-  - Master map
+  - All-checkpoints map
 setup: Place checkpoints and prepare maps with courses of varying difficulty (3-4 checkpoints for short, 6-8 for long)
 vocabulary:
   - Control

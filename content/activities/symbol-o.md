@@ -12,7 +12,7 @@ materials:
   - Checkpoints (with animal pictures)
   - Large-scale orienteering map or picture map
   - Map key (legend) poster or handout
-  - Master map or list of symbols corresponding to the animals
+  - All-checkpoints map or list of symbols corresponding to the animals
   - Symbol-O clue sheets
 setup: Place checkpoints on features that match the symbols in the answer key
 ---
@@ -62,7 +62,7 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 1. Place checkpoints (with animal pictures) at features that match the symbols in the answer key. For example, place one checkpoint on a fence, one by a tree, one near a bench
 2. Prepare a map key poster showing the symbols used at your site
 3. Prepare Symbol-O clue sheets: strips of symbols (no text) that students must match to features in order, similar to Animal-O clue sheets but with map symbols instead of animal pictures
-4. Have a master map or answer key listing which animal is at which feature
+4. Have an all-checkpoints map or answer key listing which animal is at which feature
 
 
 ## Steps

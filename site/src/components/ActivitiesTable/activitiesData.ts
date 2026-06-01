@@ -185,7 +185,7 @@ const activities: ActivitySummary[] = [
       'Receive a blank map with landmarks only',
       'Find controls in the terrain',
       'Mark each control location on the map',
-      'Compare your map to the master',
+      'Compare your map to the all-checkpoints map',
     ],
   },
   {
@@ -324,7 +324,7 @@ const activities: ActivitySummary[] = [
     link: '/curriculum/activities/core/checkpoint-copy-relay',
     description: 'Teams race to copy checkpoint locations from one map to another. One runner at a time memorizes a checkpoint, runs to the blank map, draws it, and runs back. Score on both speed and accuracy.',
     steps: [
-      'Memorize one checkpoint location from the master map',
+      'Memorize one checkpoint location from the all-checkpoints map',
       'Run to the blank map and draw the checkpoint',
       'Run back and tag the next teammate',
       'Score for speed and accuracy',

@@ -17,7 +17,7 @@ Lesson 5 is where students start working with maps. They learn spatial vocabular
 - 4 colored landmark cones (e.g., red, yellow, green, blue)
 - Pattern maps (printed, multiple difficulty levels)
 - Whiteboard and markers
-- Master map (for teacher reference)
+- All-checkpoints map (for teacher reference)
 - A gym, schoolyard, or local park
 - Arrange checkpoints in a geometric pattern with colored landmark cones at the corners before class
 

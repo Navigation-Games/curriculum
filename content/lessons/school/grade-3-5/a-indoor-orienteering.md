@@ -9,7 +9,7 @@ space: Gym with basketball court
 materials:
   - Checkpoints
   - Basketball court maps (half-court and full-court versions)
-setup: Place checkpoints according to the master map
+setup: Place checkpoints according to the all-checkpoints map
 vocabulary:
   - Orient the map
   - Landmark

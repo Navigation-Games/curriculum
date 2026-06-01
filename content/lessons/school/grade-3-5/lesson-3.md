@@ -11,7 +11,7 @@ materials:
   - 4 colored landmark cones
   - Pattern maps
   - Small whiteboard and markers (or paper)
-  - Master map
+  - All-checkpoints map
 setup: Arrange checkpoints in a geometric pattern with colored landmark cones at corners
 vocabulary:
   - Map

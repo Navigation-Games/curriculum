@@ -591,7 +591,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
 
   if (fm.si_timing) {
     L.push(':::tip Electronic timing optional');
-    L.push('See [Using SI Equipment](/equipment/si-timing) for setup instructions.');
+    L.push('See [Electronic Timing](/reference/equipment/electronic-timing) for setup instructions.');
     L.push(':::');
     L.push('');
   }

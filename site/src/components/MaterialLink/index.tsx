@@ -46,7 +46,7 @@ export default function MaterialLink({name, children}: MaterialLinkProps): React
           <div className={styles.popoverDetail}>
             <strong>Learning connection:</strong> {info.learningConnection}
           </div>
-          <a className={styles.popoverLink} href="/curriculum/reference/materials">
+          <a className={styles.popoverLink} href="/curriculum/reference/equipment/materials">
             View full materials index
           </a>
         </PopoverPortal>

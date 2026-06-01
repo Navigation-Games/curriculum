@@ -11,7 +11,7 @@ Score-O is the first activity where students choose their own route. They get a 
 
 - Orienteering maps with checkpoint circles pre-printed (one per student or pair)
 - Checkpoint markers: cones or flags at each location, each with a visible letter code
-- A master map showing all checkpoint placements
+- A all-checkpoints map showing all checkpoint placements
 - Scorecards and pencils (one per student)
 - A whistle for the start and finish signal
 
@@ -26,7 +26,7 @@ Score-O is the first activity where students choose their own route. They get a 
 
 ## Setup (visual: aerial/wide shot of the space being set up)
 
-1. Place checkpoint markers at locations shown on the master map. Each checkpoint should have a visible letter code.
+1. Place checkpoint markers at locations shown on the all-checkpoints map. Each checkpoint should have a visible letter code.
 [SHOW: teacher placing a cone with a letter card at a feature on the map]
 
 2. Spread checkpoints across the mapped area at varying distances from the start. Place a few easy ones close to the start so every student finds at least one.

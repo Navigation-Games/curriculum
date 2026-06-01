@@ -9,10 +9,10 @@ space: Schoolyard or local park with an orienteering map
 materials:
   - Orienteering maps with checkpoint circles marked
   - Checkpoint markers (cones or flags) with letter codes
-  - Master map
+  - All-checkpoints map
   - Scorecards and pencils
   - Poster-sized map with plastic cover for student course design (optional)
-setup: Place checkpoints according to the master map; spread them out across the mapped area
+setup: Place checkpoints according to the all-checkpoints map; spread them out across the mapped area
 vocabulary:
   - Route choice
   - Score-O
@@ -71,7 +71,7 @@ activities:
    - At each checkpoint, record the code and self-check: does the location match what the map shows? 🧭 [Checking](/about/concepts#checking)
 5. **Debrief**: compare strategies. Who found the most? What worked?
 6. **Second round**: individual, try to beat your first score
-7. **Setup ladder** (if time and readiness): for a third round, have students choose checkpoint locations on the master map and place the markers themselves. See the [Score-O setup ladder](/activities/core/score-o#setup-ladder).
+7. **Setup ladder** (if time and readiness): for a third round, have students choose checkpoint locations on the all-checkpoints map and place the markers themselves. See the [Score-O setup ladder](/activities/core/score-o#setup-ladder).
 
 
 ## Compact Delivery
