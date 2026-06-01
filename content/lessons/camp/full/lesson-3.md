@@ -34,7 +34,7 @@ activities:
 
 ## Delivery
 
-1. **Safety review** (5 min): review boundaries. Emphasize that compasses are tools, not toys.
+1. **Safety review** (5 min): review boundaries. Introduce the **safety bearing**: a simple compass direction campers can follow if they ever get badly lost (e.g., "walk south until you hit the road, then follow the road back to camp"). This is the first time campers learn that the compass has a safety function, not just a navigation one. Emphasize that compasses are tools, not toys.
 2. [**Compass Basics**](/activities/core/compass-basics) (25 min): introduce the compass in three stages:
    a. Direction: the needle always points to magnetic north. Practice pointing in various directions (north, west, southeast).
    b. Map setting: hand out maps, demonstrate orienting the map using the north lines. Turn students various ways and have them re-orient the map.
@@ -45,7 +45,7 @@ activities:
 
 ## Compact Delivery
 
-1. **Safety**: boundaries, compass care
+1. **Safety**: boundaries, safety bearing introduction, compass care
 2. **Compass Basics**: direction, map setting, bearings (three stages)
 3. **Courses**: navigate a point-to-point course using map and compass
 4. **Wrap-up**: discuss strategies

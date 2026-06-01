@@ -38,20 +38,22 @@ activities:
 
 ## Delivery
 
-1. **Safety review** (5 min): review boundaries and gathering signal. Introduce the buddy system rule for Score-O: pairs stay within earshot.
-2. [**Map Walk**](/activities/core/map-walk) (25 min): walk a planned route together. At each stop, students orient their maps, identify the feature they are standing at, and find it on the map. Use the thumb technique: keep your thumb on your current location.
-3. Transition (5 min): hand out Score-O maps and punch cards. Explain the rules: visit as many checkpoints as you can before the time limit, recording codes at each one. You do not have to go in order.
-4. [**Score-O**](/activities/core/score-o) (25 min): pairs navigate independently, using what they learned on the Map Walk to read the map and find checkpoints. Remind them to orient the map and use the thumb technique.
-5. **Scoring and wrap-up** (10 min): score punch cards, discuss results, and celebrate. Who found the most? Which checkpoint was hardest to find?
+1. **Safety review** (5 min): quick reminder of boundaries and gathering signal. Introduce the buddy system rule for Score-O: pairs stay within earshot. Review time management: if you hear the signal, come back right away, even if you have not finished.
+2. **Symbol recap** (5 min): quick review of map symbols from Session 1. Hold up the map and quiz campers on a few symbols. Point to features around you and ask what symbol represents them.
+3. [**Map Walk**](/activities/core/map-walk) (20 min): walk a planned route together. At each stop, students orient their maps, identify the feature they are standing at, and find it on the map. Use the thumb technique: keep your thumb on your current location.
+4. Transition (5 min): hand out Score-O maps and punch cards. Explain the rules: visit as many checkpoints as you can before the time limit, recording codes at each one. You do not have to go in order. For this first Score-O, keep checkpoints relatively close to the starting area so campers build confidence before tackling a larger course.
+5. [**Score-O**](/activities/core/score-o) (25 min): pairs navigate independently, using what they learned on the Map Walk to read the map and find checkpoints. Remind them to orient the map and use the thumb technique.
+6. **Scoring and wrap-up** (10 min): score punch cards, discuss results, and celebrate. Who found the most? Which checkpoint was hardest to find?
 
 
 ## Compact Delivery
 
-1. **Safety**: boundaries, gathering signal, buddy system
-2. **Map Walk**: walk together, orient maps at each stop, match symbols to features
-3. **Transition**: hand out Score-O maps and punch cards, explain rules
-4. **Score-O**: pairs navigate independently to find checkpoints
-5. **Score and wrap-up**
+1. **Safety**: boundaries, gathering signal, buddy system, time management
+2. **Symbol recap**: quick quiz on map symbols from Session 1
+3. **Map Walk**: walk together, orient maps at each stop, match symbols to features
+4. **Transition**: hand out Score-O maps and punch cards, explain rules
+5. **Score-O**: pairs navigate independently; keep checkpoints close for first time
+6. **Score and wrap-up**
 
 
 ## Reflection
@@ -64,6 +66,7 @@ activities:
 
 ## Extensions
 
+- **Clothespin-O**: pairs take turns hiding a clothespin or streamer in the terrain, then giving verbal directions or drawing the location on a blank map for their partner to find. Builds spatial language (north/south, left of the building, near the fence) and bridges between the Map Discussion and independent navigation
 - Photo Map Walk: take photos of features and match them to symbols back at camp
 - Score-O with more checkpoints or a larger area
 - Individual Score-O instead of pairs

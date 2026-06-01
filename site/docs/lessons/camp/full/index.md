@@ -9,6 +9,20 @@ Fundamentals of orienteering map navigation in six 70-minute sessions over two w
 
 **Culminating activity:** All-Camp Team Treasure Hunt (Score-O)
 
+## Setup strategy
+
+**Two-week checkpoint rotation.** Keep the same checkpoint locations for all of Week 1 (Sessions 1-3). At the end of Week 1, move all checkpoints to new locations for Week 2 (Sessions 4-6), placing them in slightly harder spots (further from paths, closer to similar features). This serves two purposes: campers cannot simply memorize checkpoint locations from session to session, and Week 2 activities are genuinely more challenging because the checkpoints are harder to find.
+
+**Mixed-level groups.** Not every camper will attend every session. If new campers join in Week 2, the leader can fold them into the activities at a basic level: during Line-O, walk the route with them as a guided Map Walk; during Star Relay, pair them with experienced campers; during Symbol Relay, experienced campers help newcomers. The curriculum is designed so that each session's activities are accessible to beginners while still challenging experienced campers.
+
+**Safety progression.** Each session's safety talk covers a specific topic rather than repeating the same general reminders:
+- Session 1: Boundaries, gathering signal, checking back in
+- Session 2: Time management, buddy system
+- Session 3: Safety bearing (compass direction to follow if lost)
+- Session 4: "It's OK to get lost," asking for help
+- Session 5: Relocation strategies (how to figure out where you are)
+- Session 6: Recap of all safety skills
+
 ## Sessions
 
 | Session | What it adds |

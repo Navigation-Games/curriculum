@@ -21,6 +21,8 @@ Star Relay is a partner relay where runners alternate visiting checkpoints on a 
 
 A variation called "Move the Object" adds a physical relay element: instead of just visiting a checkpoint, the first runner leaves an object there, and the partner retrieves it and moves it to the next checkpoint.
 
+The underlying themes are teamwork, communication, and memory. Partners must strategize about which checkpoints to tackle, remember where they have been, and trust each other's navigation.
+
 
 ## Goals
 
@@ -65,6 +67,8 @@ A variation called "Move the Object" adds a physical relay element: instead of j
 
 **3. Move the Object (variation).** First person goes to the first checkpoint, leaves an object, and returns. Partner runs to that checkpoint, picks up the object and moves it to the next control, then returns to start to tag off. Repeat until the object is retrieved from the last checkpoint and brought back to the start.
 
+**4. Leave the Clothing (precision variation).** One partner runs out and leaves a piece of clothing (hoodie, hat) where they think the checkpoint is. The partner then runs out to collect it and move it to the next checkpoint. If the first runner was not precise, the partner will not be able to find the clothing. This tests precision and leads to fun discussions about who was actually in the right spot.
+
 
 ## Delivery
 
@@ -82,5 +86,18 @@ A variation called "Move the Object" adds a physical relay element: instead of j
 
 ## Extensions
 
-- Leave the map at the start; runners must memorize which checkpoint to visit. The runner reports back to their partner the checkpoint code or animal to check they went to the correct place.
+- Leave the map at the start; runners must memorize which checkpoint to visit. The runner reports back to their partner the checkpoint code or animal to check they went to the correct place
+- Have each pair visit two checkpoints per turn instead of one
+- Add timing for a competitive element
 - Use electronic timing
+
+
+## Companions
+
+### Compass Spider *(variation)*
+
+**Star Relay with compass navigation.** The setup is the same as Star Relay, but sections of the map between checkpoints are whited out (covered with paper or digitally removed before printing). Runners cannot see the terrain detail between the start and the checkpoint, so they must use a compass bearing to navigate there and back.
+
+You can combine Compass Spider with regular Star Relay in one session: some checkpoints have the whiteout and some do not. This lets participants practice both map-based and compass-based navigation in the same activity.
+
+Compass Spider works best after participants have practiced compass bearings (see [Compass Basics](../compass-basics)).

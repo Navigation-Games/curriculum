@@ -67,6 +67,12 @@ Compass Basics introduces students to using a compass for orienteering. Students
 - Did the compass work differently when held horizontally and vertically?
 
 
+## Tips
+
+- Introduce the concept of a **safety bearing** before participants head out on any course with a compass. A safety bearing is a simple direction they can follow if they get badly lost. For example: "If you are ever completely lost, walk south until you reach the road, then follow the road back to camp." Knowing there is a reliable bail-out builds confidence.
+- In orienteering, the compass is primarily used to orient the map, not to take precise degree bearings. Emphasize map-setting over angle-taking for beginners.
+
+
 ## Extensions
 
 - Show students how to take bearings using the compass swivel housing

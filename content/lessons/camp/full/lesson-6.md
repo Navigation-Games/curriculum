@@ -33,17 +33,21 @@ activities:
 
 ## Delivery
 
-1. **Safety review** (5 min): review boundaries. Emphasize staying within the mapped area.
+1. **Safety review** (5 min): review boundaries. Emphasize staying within the mapped area. Recap relocation strategies from Session 5: if lost, stop, look for a recognizable feature, use the safety bearing if needed.
 2. [**Checkpoint Copy Relay**](/activities/core/checkpoint-copy-relay) (20 min): warm-up relay. Teams of 2-4 race to copy checkpoint locations from one map to another. One runner at a time memorizes a checkpoint, runs to the blank map, draws it, and runs back. Score on both speed and accuracy. Discuss strategies after scoring.
-3. **Courses** (35 min): run orienteering courses. Offer courses at different difficulty levels so campers can choose an appropriate challenge. Simple courses have fewer checkpoints on clear features; harder courses have more checkpoints or require compass work. Pairs or individuals navigate the course, visiting checkpoints in order. Use compass bearings where needed.
+3. **Courses** (35 min): run orienteering courses at different difficulty levels. Campers choose an appropriate challenge:
+   - **White courses** (beginner): checkpoints are on or right next to paths, walls, or other linear features. Navigation decisions happen at junctions: left, right, or straight. Short and straightforward.
+   - **Yellow courses** (intermediate): checkpoints are slightly off trails. There is usually a safe route following paths, but cutting corners is faster. This introduces route choice and risk/reward.
+   - **Orange courses** (advanced): checkpoints are further off trail. Navigation relies on terrain features (boulders, vegetation boundaries, buildings) rather than paths. More map reading, more compass use.
+   Pairs or individuals navigate the course, visiting checkpoints in order. Campers who finish a White course can try a Yellow; those who finish Yellow can try Orange.
 4. **Wrap-up** (10 min): gather, share course times and strategies. Celebrate progress. Preview the culminating activity: the All-Camp Team Treasure Hunt.
 
 
 ## Compact Delivery
 
-1. **Safety**: boundaries, stay within the mapped area
+1. **Safety**: boundaries, recap relocation strategies
 2. **Checkpoint Copy Relay**: team relay copying checkpoints between maps (speed + accuracy)
-3. **Courses**: run courses at different difficulty levels, pairs or individuals
+3. **Courses**: White (on paths), Yellow (slightly off-trail, route choice), Orange (off-trail, terrain nav); campers self-select difficulty
 4. **Wrap-up**: share results, preview All-Camp Treasure Hunt
 
 

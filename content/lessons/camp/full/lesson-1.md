@@ -41,7 +41,7 @@ activities:
 
 ## Delivery
 
-1. **Safety briefing** (5 min): review boundaries, gathering signal, and the buddy system. Walk the boundary together if campers are new to the area.
+1. **Safety briefing** (5 min): walk the boundary together so campers know exactly where they can and cannot go. Introduce the gathering signal (whistle or call): when you hear it, return to the start immediately. Emphasize checking back in. Everyone must come through the finish area so leaders know nobody is still out.
 2. [**Animal-O**](/activities/core/animal-o) (25 min): use clue sheets to find animal checkpoints in order. Start with short clue sheets (2-3 animals), then progress to longer ones. Partners check each other.
 3. [**Map Discussion**](/activities/core/map-discussion) (10 min): gather the group and show them the poster-sized orienteering map. Point out how it differs from everyday maps. Ask campers to find real features on the map. Reinforce "relating the ground to the map."
 4. **Symbol Relay** (20 min): team relay to identify and match map symbols to real features. Keeps energy up while reinforcing the symbols introduced in Map Discussion.
@@ -50,7 +50,7 @@ activities:
 
 ## Compact Delivery
 
-1. **Safety**: boundaries, gathering signal, buddy system
+1. **Safety**: walk the boundary, gathering signal, checking back in
 2. **Animal-O**: clue sheets, short to long, partner checking
 3. **Map Discussion**: poster-sized map, connect symbols to real features
 4. **Symbol Relay**: team relay matching symbols
@@ -67,6 +67,6 @@ activities:
 
 ## Extensions
 
-- Description Relay: relay using control descriptions instead of animal pictures (activity write-up in progress)
+- **Description Relay**: same format as Symbol Relay, but campers match control description symbols (IOF pictograms for tree, cliff, fence, etc.) to their text names. This is a good complement to Symbol Relay and can be swapped in or run alongside it
 - Move checkpoints to new locations and run Animal-O again
 - Have campers draw their own simple map of the area using symbols

@@ -41,10 +41,10 @@ activities:
 
 ## Delivery
 
-1. **Safety review** (5 min): review boundaries and gathering signal.
-2. **Symbol Relay** (10 min): quick warm-up relay to review map symbols from Session 1. Teams race to match symbols to features.
-3. [**Line-O**](/activities/core/line-o) (25 min): pairs follow a line drawn on the map through the terrain. Keep the map oriented as you move. Watch for unmarked checkpoints placed at features along the line. After finishing, mark the checkpoint locations on your map.
-4. [**Star Relay**](/activities/core/star-relay) (25 min): partner relay. One partner runs to a checkpoint and returns to the start; the other partner runs to the next checkpoint. Partners confirm the correct checkpoint by checking the reported code. Progress to "Move the Object" variation if time allows.
+1. **Safety review** (5 min): review boundaries and gathering signal. Remind campers: it is OK to get lost. Everyone gets lost sometimes. If you are ever completely turned around, stop, look at your map, and try to identify a feature you can see. If that does not work, use your safety bearing or ask someone nearby for help.
+2. **Symbol Relay** (10 min): quick warm-up relay to review map symbols from Session 1. Teams race to match symbols to features. If any campers are attending for the first time, the relay doubles as a crash course on symbols while experienced campers help them along.
+3. [**Line-O**](/activities/core/line-o) (25 min): pairs follow a line drawn on the map through the terrain. Keep the map oriented as you move. Watch for unmarked checkpoints placed at features along the line. After finishing, mark the checkpoint locations on your map. For campers who need more support, a leader can walk the Line-O route with them as a guided Map Walk.
+4. [**Star Relay**](/activities/core/star-relay) (25 min): partner relay. One partner runs to a checkpoint and returns to the start; the other partner runs to the next checkpoint. Partners confirm the correct checkpoint by checking the reported code. Progress to "Move the Object" or "Leave the Clothing" variations if time allows (see the [Star Relay](/activities/core/star-relay) activity page for details).
 5. **Wrap-up** (5 min): compare Line-O maps against the all-checkpoints map. Discuss precision and teamwork.
 
 
@@ -69,4 +69,5 @@ activities:
 
 - Line-O solo instead of in pairs
 - Star Relay with the map left at the start (navigate from memory)
+- **Compass Spider**: same setup as Star Relay, but sections of the map between checkpoints are whited out. Runners must use a compass bearing to navigate there and back. You can mix whited-out and regular checkpoints in the same course
 - Add timing for a competitive Star Relay

@@ -78,6 +78,7 @@ The map shows only a portion of the checkpoints scattered throughout the space. 
 ## Tips
 
 - Place poison checkpoints on similar features near the correct ones. This is what makes the activity challenging: participants must read the map precisely, not just head to the general area.
+- If you start everyone at the same time, different pairs will have different maps. This forces independence: following another pair is not helpful because they are probably visiting different checkpoints. This is one of Poison-O's strengths as an activity. It reveals who has genuinely grasped the navigation concepts versus who has been following others.
 - This activity works well as a culminating activity or assessment to observe how well participants are developing their map-reading skills.
 
 
@@ -106,6 +107,7 @@ The map shows only a portion of the checkpoints scattered throughout the space. 
 
 ## Extensions
 
+- **Multiple variants in sequence.** Have four maps (A, B, C, D), each showing a different subset of the checkpoints. When a pair finishes map A, hand them map B, then C, then D. After all four, give them a full Score-O map with every checkpoint and challenge them to find the most efficient route to visit all of them, or to visit only the even-numbered ones
 - Leave the map at the Start and return to check it as needed (navigation by memory)
 - Do the course individually instead of in pairs
 - Use electronic timing

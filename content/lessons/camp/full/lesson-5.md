@@ -35,17 +35,17 @@ activities:
 
 ## Delivery
 
-1. **Safety review** (5 min): review boundaries. Remind campers about the buddy system.
+1. **Safety review** (5 min): review boundaries and buddy system. Introduce **relocation strategies**: what to do if you get lost. Stop. Look at your map. Can you see a feature you recognize? Walk to it and figure out where you are. If not, use your safety bearing to get back to a path or road. Reinforce: it is OK to get lost. Everyone gets lost. It is also OK to ask someone nearby for help.
 2. **Compass review** (15 min): quick refresher on compass skills from Session 3. Practice taking bearings from a map and walking in the direction of travel. Introduce compass segments if ready: navigate a series of short legs using compass bearings only, without visible checkpoints between them.
-3. [**Poison-O**](/activities/core/poison-o) (40 min): hand out Poison Score-O maps. Practice relating verbal descriptions to the map (point to features, raise your hand if it is circled on your map). Explain the rules: visit the safe checkpoints, avoid the poison ones. Hand out punch cards. Pairs navigate and record codes. Score the results and discuss errors. If time, challenge pairs to correct their mistakes.
+3. [**Poison-O**](/activities/core/poison-o) (40 min): hand out Poison Score-O maps. Practice relating verbal descriptions to the map (point to features, raise your hand if it is circled on your map). Explain the rules: visit the safe checkpoints, avoid the poison ones. Hand out punch cards. Pairs navigate and record codes. Because each pair has a different map, following another pair is not helpful. This forces genuine independent navigation. Score the results and discuss errors. If time, challenge pairs to correct their mistakes. If a pair finishes quickly, hand them a second Poison map variant with different checkpoints.
 4. **Wrap-up** (10 min): announce scores. Discuss how campers told the difference between safe and poison checkpoints. What map-reading strategies helped most?
 
 
 ## Compact Delivery
 
-1. **Safety**: boundaries, buddy system
+1. **Safety**: boundaries, buddy system, relocation strategies ("it's OK to get lost")
 2. **Compass review**: bearings practice; introduce compass segments if ready
-3. **Poison-O**: practice with map descriptions, then pairs navigate to safe checkpoints, avoiding poison ones
+3. **Poison-O**: practice with map descriptions, then pairs navigate to safe checkpoints, avoiding poison ones; hand out additional variants to fast finishers
 4. **Scoring and wrap-up**: check results, discuss strategies
 
 
@@ -59,6 +59,7 @@ activities:
 
 ## Extensions
 
+- **Poison-O to full Score-O progression**: after pairs finish all Poison map variants (A, B, C, D), give them a full Score-O map with every checkpoint and challenge them to find the most efficient route to visit all of them
 - Poison-O solo instead of in pairs
 - Leave the map at the start and navigate from memory
 - Window-O: navigate with sections of the map removed, using compass to cross the blank areas

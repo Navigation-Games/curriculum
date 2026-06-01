@@ -194,10 +194,11 @@ Activities with pages (tagged `[camp]`):
 - Window-O ✓ (`content/activities/window-o.md`)
 
 Activities that still need pages or decisions:
-- Description Relay - clue sheet / control description interpretation. No write-up found yet.
-- Compass Segments - from slide deck; navigating segments using compass bearings. No write-up yet.
-- Compass Spider - from slide deck; compass exercise. No write-up yet.
-- Vampire-O - from slide deck; appears in session 9. No write-up yet.
+- Description Relay - same format as Symbol Relay but with IOF control description pictograms instead of map symbols. No write-up yet. Could be a Symbol Relay variation rather than standalone.
+- Compass Segments - navigating segments using compass bearings with only partial map sections. No write-up yet.
+- Compass Spider - ✓ now documented as a Star Relay companion/variation in `content/activities/star-relay.md`. Same as Star Relay but with whited-out map sections forcing compass use.
+- Vampire-O - Score-O at night with tag mechanics, red flashlights, reflective tape checkpoints, punch card trading. No write-up yet. Details from Design Meeting #3 transcript.
+- Friendship Relay - groups of 3 split checkpoints by ability; all meet at a common point. From Design Meeting #3 transcript. No write-up yet.
 - Courses - "put it all together and orienteer" (delivery format, not a single activity?)
 - Courses / Relays - orienteer in teams (delivery format?)
 
@@ -208,7 +209,8 @@ Open question: activities that are not standalone enough for their own page coul
 | Source | Status | Notes |
 |---|---|---|
 | Google Site camp pages | Started | Structure above; more content to extract |
-| Camp Belknap videos (Evalin & Kieran) | Not started | Need transcripts first |
+| Camp Belknap video #3 transcript (Evalin & Kieran) | Mined | Design Meeting #3. Key finds: 10-session plan detail, safety progression, two-week checkpoint rotation, Compass Spider, Friendship Relay, Vampire-O detail, White/Yellow/Orange course levels, checkpoint placement principles. Applied to star-relay.md, poison-o.md, compass-basics.md, all 6 camp skill development lessons, and camp full index. |
+| Camp Belknap other videos (Evalin & Kieran) | Not started | Need transcripts for videos 1, 2, and any others |
 | OUSA Orienteering Development Model | Available locally | `background/orienteering-development-model.md` |
 | Google Site activity descriptions | Captured | Listed in camp activity inventory above |
 | Google Site supporting info (equipment, maps, camp proposals) | Captured | Mostly marketing/sales; not curriculum content |

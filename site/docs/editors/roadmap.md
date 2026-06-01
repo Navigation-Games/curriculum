@@ -36,6 +36,14 @@ What's done, what's next, and what's deferred.
 - Vocabulary rename: "master map" replaced with "all-checkpoints map" across the entire curriculum
 - ISSprOM chosen as the map symbol standard for the curriculum (sprint/urban maps match schoolyard and park settings)
 - Activities & Lessons reference page updated with all 20 activities and all lesson plans (K-2, 3-5, 6+, Camp Intro, Camp Skill Development)
+- Camp Belknap Design Meeting #3 video transcript mined for curriculum improvements
+- Star Relay: added Compass Spider variation (whited-out map forces compass use), clothing-item precision variation, and teamwork/communication themes
+- Compass Basics: added safety bearing concept and tip about compass role in orienteering
+- Poison-O: added multi-variant progression (A/B/C/D maps then full Score-O), tip about forcing independence
+- Camp Skill Development lessons: safety talks now have specific topics per session (boundaries, time management, safety bearing, relocation strategies, "it's OK to get lost")
+- Camp Skill Development index: added setup strategy section (two-week checkpoint rotation, mixed-level group guidance, safety progression)
+- Camp Lesson 2: added symbol recap step and note about keeping first Score-O checkpoints close
+- Camp Lesson 6: added White/Yellow/Orange course difficulty level guidance
 
 ## Next
 
@@ -75,11 +83,13 @@ What's done, what's next, and what's deferred.
 
 - **PE standards audit after editing rounds.** After each major round of curriculum editing, verify that the SHAPE America standards mapping is still valid. Check both the reference page (`site/docs/reference/frameworks/pe-standards.md`) and the PE Standards section within each individual lesson. Lesson delivery changes can invalidate a standard citation (e.g., removing pair work removes the basis for a social skills indicator).
 
-- **Camp activities still needing write-ups.** Several activities referenced in camp lesson plans have no activity page yet: Description Relay (session 1), Compass Segments (session 5), Compass Spider, Vampire-O.
+- **Camp activities still needing write-ups.** Several activities referenced in camp lesson plans have no activity page yet: Description Relay (session 1), Compass Segments (session 5), Vampire-O. Compass Spider is now documented as a Star Relay companion/variation. Friendship Relay (groups of 3 split checkpoints by ability, meet at a common point) was described in the Belknap video and could be a new all-camp activity.
 
 - **Symbol Relay cards.** Symbol Relay now has a standalone activity page, but still needs a complete set of symbol relay cards (only a partial set exists). Decision: use **ISSprOM** symbols, with a schoolyard-specific subset for schools (paths, buildings, fences, etc.) that camps would not need. The existing partial set (`background/symbol-relay-cards.pdf`) has 8 ISOM terrain symbols only. Plan is to export clean vector images from OCAD (SVG or PDF export from a legend), then isolate individual symbols for card printing. Waiting on Kieran for an OCAD source file.
 
-- **Review camp lesson plans against source materials.** The 9 camp lessons are first drafts. Compare against Google Site content, slide deck details, and Camp Belknap video transcripts (when available) to fill in delivery detail and catch anything missing.
+- **Review camp lesson plans against source materials.** The 9 camp lessons are first drafts. Design Meeting #3 video transcript has been mined; remaining sources to check: Google Site content, slide deck details, and other Camp Belknap video transcripts (when available).
+
+- **Course design reference content.** White/Yellow/Orange course difficulty levels are now described in Camp Lesson 6 delivery notes, but could become a standalone reference page or setup guide with diagrams showing checkpoint placement principles (controls must be on distinct features, progression from path junctions to off-trail locations).
 
 - **Leave No Trace page.** The current draft needs a tone revision so it feels natural and confident rather than justifying orienteering's existence. The core message is simple: orienteering is low-impact, and here is what to teach when you are in wilder areas.
 
