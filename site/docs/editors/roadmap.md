@@ -28,6 +28,14 @@ What's done, what's next, and what's deferred.
 - Symbol Relay standalone activity page (was inline in symbol-o.md)
 - Find Your Way Home standalone activity page
 - Activities & Lessons table updated with all camp activities
+- SEL PQA framework page: mapping curriculum to the Forum for Youth Investment's SEL PQA observation rubric
+- Broken sibling links fixed; sibling link rule (`../` required) documented in CLAUDE.md
+- Equipment merged into Reference: Materials Index, Maps, Controls and Punches, Navigation Games Kits, Geometric-O Setup, Electronic Timing pages created from Google Site content
+- Equipment navbar tab removed; all equipment content now lives under Reference > Equipment & Materials
+- Materials Index reorganized by category (Maps and Navigation Sheets, Checkpoint Supplies, Recording Tools, General Equipment) with right-side table of contents
+- Vocabulary rename: "master map" replaced with "all-checkpoints map" across the entire curriculum
+- ISSprOM chosen as the map symbol standard for the curriculum (sprint/urban maps match schoolyard and park settings)
+- Activities & Lessons reference page updated with all 20 activities and all lesson plans (K-2, 3-5, 6+, Camp Intro, Camp Skill Development)
 
 ## Next
 
@@ -40,8 +48,6 @@ What's done, what's next, and what's deferred.
 - **Compare all activities to edited one-pagers and full versions.** Where edited one-pagers or full activity write-ups exist (especially those developed by Kieran), compare them against the current activity pages and incorporate any missing content or corrections.
 
 - **Edit the video scripts.** The video scripts were drafted before the latest round of lesson and activity edits. They need to be updated to reflect current delivery, vocabulary, and structure.
-
-- **Update the Activities & Lessons Table, Equipment, and other supporting pages.** These pages may be out of date after the editing rounds. Review and sync them with the current state of activities and lessons.
 
 - **Get transcripts from the Camp Belknap videos.** Evalin and Kieran recorded videos for the camp curriculum at Camp Belknap. Get the transcripts and mine them for delivery scripts, lesson plans, activity ideas, and improvements to the program.
 
