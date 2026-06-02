@@ -2,7 +2,7 @@
 
 ---
 tagline: Navigate a course visiting checkpoints in order
-epigraph: Follow the map from start to finish, choosing your own route between controls
+epigraph: Follow the map from start to finish, choosing your own route between checkpoints
 sidebar_position: 5
 time: 45-60 minutes
 space: Schoolyard or local park with an orienteering map
@@ -13,7 +13,7 @@ materials:
   - All-checkpoints map
 setup: Place checkpoints and prepare maps with courses of varying difficulty (3-4 checkpoints for short, 6-8 for long)
 vocabulary:
-  - Control
+  - Checkpoint
   - Control description
   - Start triangle
   - Finish (double circle)
@@ -73,13 +73,13 @@ activities:
    - **Short course in pairs** (3-4 checkpoints): navigate together, discuss route choices
    - **Longer course in pairs** (6-8 checkpoints): more independence
    - **Solo course**: do a course on your own. Self-check at every checkpoint.
-5. **Route comparison debrief**: after the solo course, pairs compare maps. "Show me the route you took between controls 2 and 3. Why did you go that way? What would you try next time?"
+5. **Route comparison debrief**: after the solo course, pairs compare maps. "Show me the route you took between checkpoints 2 and 3. Why did you go that way? What would you try next time?"
 
 
 ## Compact Delivery
 
 1. **Score-O**: quick warm-up round
-2. **Introduce point-to-point**: start triangle, numbered circles, finish. Self-check at each control.
+2. **Introduce point-to-point**: start triangle, numbered circles, finish. Self-check at each checkpoint.
 3. **Route choice vocabulary**: handrails and attack points
 4. **Point-to-Point**: short course in pairs, longer course, then solo
 5. **Route comparison debrief**: pairs compare maps and discuss choices
@@ -101,4 +101,4 @@ activities:
 - Students design their own courses for classmates
 - Challenge students to complete a course from memory
 - Introduce control descriptions with feature codes (e.g., "boulder, north side")
-- Add compass bearings between controls
+- Add compass bearings between checkpoints

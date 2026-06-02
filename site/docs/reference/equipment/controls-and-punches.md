@@ -1,11 +1,11 @@
 ---
-title: Controls and Punches
+title: Checkpoints and Punches
 sidebar_position: 3
 ---
 
-# Controls and Punches
+# Checkpoints and Punches
 
-In orienteering, control markers serve as checkpoints that participants locate using their maps. Students need a way to prove they visited each checkpoint. There are several options, from simple to high-tech.
+In orienteering, checkpoint markers are what participants locate using their maps. Students need a way to prove they visited each checkpoint. There are several options, from simple to high-tech.
 
 ## Checkpoint Markers
 

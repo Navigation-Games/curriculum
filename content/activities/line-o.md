@@ -10,7 +10,7 @@ space: Schoolyard, local park, or forested area
 materials:
   - Line-O maps (1 per student or pair)
   - All-checkpoints map with checkpoint locations
-  - Checkpoints (control flags, flagging tape, or cones)
+  - Checkpoints (flags, flagging tape, or cones)
   - Pens or pencils
 setup: Put out checkpoints as per the all-checkpoints map
 images: []
@@ -34,7 +34,7 @@ Line-O develops precision in map reading. A line is drawn on the map, and partic
   Long: Improve ability to relate terrain to the map
 
 - Short: Describe locations
-  Long: Learn to describe control locations accurately
+  Long: Learn to describe checkpoint locations accurately
 
 
 ## Vocabulary
@@ -76,7 +76,7 @@ Line-O develops precision in map reading. A line is drawn on the map, and partic
 
 - How did you make sure you stayed on the line?
 - Were there parts where you went off the line? How did you know?
-- Can you point to the control locations you found on the map?
+- Can you point to the checkpoint locations you found on the map?
 - What helped you navigate most accurately?
 
 

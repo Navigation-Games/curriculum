@@ -9,7 +9,7 @@ space: Schoolyard, local park, or forested area with an orienteering map
 materials:
   - Compasses (1 per student or pair)
   - Poison Score-O maps (1 per pair)
-  - All-checkpoints map (all controls, for setup and answer key)
+  - All-checkpoints map (for setup and answer key)
   - Punch cards or index cards
   - Pencils
   - Checkpoints (orienteering flags, streamers, or cones)

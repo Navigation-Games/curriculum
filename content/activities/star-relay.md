@@ -10,7 +10,7 @@ space: Schoolyard or local park
 materials:
   - Orienteering flags
   - Regular course maps (1 per pair)
-setup: Place checkpoints according to the all controls map
+setup: Place checkpoints according to the all-checkpoints map
 images: []
 videos: []
 ---
@@ -56,7 +56,7 @@ The underlying themes are teamwork, communication, and memory. Partners must str
 
 ## Setup
 
-1. Place checkpoints according to the all controls map
+1. Place checkpoints according to the all-checkpoints map
 
 
 ## Steps
@@ -65,7 +65,7 @@ The underlying themes are teamwork, communication, and memory. Partners must str
 
 **2. Star relay.** First person goes to the first checkpoint, returns to start, and hands off to their partner. Visit checkpoints in order, switching runners between each one. Partners watch and make sure their partner visits the correct checkpoint. Runners report the code or animal at the checkpoint they visited.
 
-**3. Move the Object (variation).** First person goes to the first checkpoint, leaves an object, and returns. Partner runs to that checkpoint, picks up the object and moves it to the next control, then returns to start to tag off. Repeat until the object is retrieved from the last checkpoint and brought back to the start.
+**3. Move the Object (variation).** First person goes to the first checkpoint, leaves an object, and returns. Partner runs to that checkpoint, picks up the object and moves it to the next checkpoint, then returns to start to tag off. Repeat until the object is retrieved from the last checkpoint and brought back to the start.
 
 **4. Leave the Clothing (precision variation).** One partner runs out and leaves a piece of clothing (hoodie, hat) where they think the checkpoint is. The partner then runs out to collect it and move it to the next checkpoint. If the first runner was not precise, the partner will not be able to find the clothing. This tests precision and leads to fun discussions about who was actually in the right spot.
 

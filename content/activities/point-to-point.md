@@ -11,7 +11,7 @@ space: Schoolyard or local park
 materials:
   - Orienteering maps with courses marked
   - Checkpoint markers (cones or flags) with codes
-  - All-checkpoints map (all controls)
+  - All-checkpoints map
 setup: Place checkpoints at their corresponding locations according to the all-checkpoints map
 images: []
 videos: []

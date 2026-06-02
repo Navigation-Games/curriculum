@@ -10,10 +10,10 @@ space: Schoolyard or local park
 materials:
   - Checkpoints (orienteering flags, streamers, or cones)
   - Poison Score-O maps (1 per pair)
-  - All-checkpoints map (all controls, for setup and answer key)
+  - All-checkpoints map (for setup and answer key)
   - Punch cards or index cards
   - Pencils
-setup: Place checkpoints according to the all controls map
+setup: Place checkpoints according to the all-checkpoints map
 images: []
 videos:
   - id: ctfJ6O-hkJI
@@ -22,7 +22,7 @@ videos:
 
 ## Description
 
-Poison-O is a variant of Score-O in which participants are given a map with control locations circled. The goal is to visit as many of those controls as possible in the allotted time. Do not punch any control that is not on the map. It is poison. You will lose points!
+Poison-O is a variant of Score-O in which participants are given a map with checkpoint locations circled. The goal is to visit as many of those checkpoints as possible in the allotted time. Do not punch any checkpoint that is not on the map. It is poison. You will lose points!
 
 The map shows only a portion of the checkpoints scattered throughout the space. Using the map, participants determine which checkpoints are safe and which are poison. There is no visible difference between safe and poison checkpoints in the field. Only the map indicates which is which. The more attention participants pay to the map and their surroundings, the more successful they will be.
 
@@ -64,7 +64,7 @@ The map shows only a portion of the checkpoints scattered throughout the space. 
 
 **2. Review the boundary.** Describe the boundary verbally so participants know the area.
 
-**3. Practice relating the map to the terrain.** Describe a control location out loud. Have students orient their maps and point to the feature. Ask them to raise their hand if it is circled on their map. Repeat with a few more locations.
+**3. Practice relating the map to the terrain.** Describe a checkpoint location out loud. Have students orient their maps and point to the feature. Ask them to raise their hand if it is circled on their map. Repeat with a few more locations.
 
 **4. Explain the rules.** The challenge is to visit all of the safe checkpoints marked on the map while avoiding the unmarked poison checkpoints. When participants reach a checkpoint they believe is safe, they record the checkpoint code on their punch card. Poison checkpoints cost points.
 

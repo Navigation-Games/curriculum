@@ -15,17 +15,17 @@ Orienteering is fundamentally about planning. Before you leave the start, you st
 
 ### 2. Travel on Durable Surfaces
 
-Orienteering involves off-trail travel through natural terrain. Orienteering is naturally low-impact because each person chooses a different route to the controls. Unlike a hiking trail where hundreds of people walk the same path, orienteers choose different routes to checkpoints, and new trails are unlikely to form.
+Orienteering involves off-trail travel through natural terrain. Orienteering is naturally low-impact because each person chooses a different route to the checkpoints. Unlike a hiking trail where hundreds of people walk the same path, orienteers spread across different routes, and new trails are unlikely to form.
 
 Research supports this. A 1972 study of three orienteering events in southern Sweden with up to 9,300 participants found that vegetation recovered quickly despite trampling. A biological survey of routes used during the 2001 World Orienteering Championships in Tampere, Finland showed no harm to any significant or valuable area. A UK study of an event with 1,200 competitors on a National Heritage site found that most vegetation recovered within three weeks. The International Orienteering Federation considers orienteering a sport of low ecological impact.
 
-Orienteers also work with land managers to stay out of sensitive areas. Course designers mark out-of-bounds zones on the map to protect fragile habitat. Controls are placed at features that can handle foot traffic, not in fragile areas.
+Orienteers also work with land managers to stay out of sensitive areas. Course designers mark out-of-bounds zones on the map to protect fragile habitat. Checkpoints are placed at features that can handle foot traffic, not in fragile areas.
 
 When introducing off-trail navigation, teach the principle explicitly: "Choose where you step to minimize your impact."
 
 ### 3. Dispose of Waste Properly
 
-Orienteering courses use control markers that are set up and taken down for each event. We do not leave permanent infrastructure in the environment. All equipment is removed after the activity.
+Orienteering courses use checkpoint markers that are set up and taken down for each event. We do not leave permanent infrastructure in the environment. All equipment is removed after the activity.
 
 Teachers should model this: pick up any litter you find during setup, and check that all markers and flags are collected at the end.
 

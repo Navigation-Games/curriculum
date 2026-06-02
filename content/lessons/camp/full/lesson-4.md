@@ -12,7 +12,7 @@ materials:
   - All-checkpoints map with checkpoint locations
   - Checkpoints (orienteering flags, streamers, or cones)
   - Pens or pencils
-setup: Place checkpoints for Line-O along the line route; place checkpoints for Star Relay according to the all controls map
+setup: Place checkpoints for Line-O along the line route; place checkpoints for Star Relay according to the all-checkpoints map
 vocabulary:
   - Precision
   - Leg

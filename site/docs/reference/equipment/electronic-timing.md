@@ -14,7 +14,7 @@ Electronic timing serves two purposes:
 2. **Recording** elapsed time
 
 Both can be accomplished without electronics:
-- **Verification**: letter codes on scorecards, stickers, clothespins, or manual punches (see [Controls and Punches](../controls-and-punches))
+- **Verification**: letter codes on scorecards, stickers, clothespins, or manual punches (see [Checkpoints and Punches](../controls-and-punches))
 - **Timing**: a stopwatch or class timer
 
 Electronic timing is most valuable when you want precise individual times (for repeat-and-improve activities like Animal-O) or when you are running many students through courses and want automatic results.

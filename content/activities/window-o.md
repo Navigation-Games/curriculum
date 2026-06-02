@@ -11,7 +11,7 @@ materials:
   - Compasses (1 per student or pair)
   - Window-O maps (map with sections removed, leaving "islands" of visible map)
   - Checkpoints
-setup: Place checkpoints according to the all controls map
+setup: Place checkpoints according to the all-checkpoints map
 images: []
 videos: []
 ---
@@ -56,7 +56,7 @@ In Window-O, much of the map has been removed, leaving only islands of visible m
 
 ## Setup
 
-1. Place checkpoints according to the all controls map
+1. Place checkpoints according to the all-checkpoints map
 
 
 ## Steps
@@ -77,7 +77,7 @@ In Window-O, much of the map has been removed, leaving only islands of visible m
 
 ## Reflection
 
-- How did you ensure you were facing the right direction when leaving each control?
+- How did you ensure you were facing the right direction when leaving each checkpoint?
 - How did you ensure you were staying on your bearing when visiting the checkpoints?
 - How does the terrain affect you staying on a bearing? How can you adjust for this?
 - What strategies did you use when approaching the hidden areas? What strategies did you use when exiting them?

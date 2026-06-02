@@ -82,7 +82,7 @@ Laminated pictures of animals attached to checkpoint cones. Students match the a
 | **Where to get** | Print and laminate from curriculum templates |
 | **Alternatives** | Stickers on cones, hand-drawn pictures, numbered cards (for older students) |
 | **Used in** | Animal-O, Explore & Find |
-| **Learning connection** | Animal pictures make checkpoint confirmation concrete and fun for younger students. The act of checking "is this the right animal?" is the foundation of the orienteering skill of control confirmation. |
+| **Learning connection** | Animal pictures make checkpoint confirmation concrete and fun for younger students. The act of checking "is this the right animal?" is the foundation of the orienteering skill of checkpoint confirmation. |
 
 #### Checkpoint markers
 

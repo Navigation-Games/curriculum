@@ -110,6 +110,6 @@ Adds energy and competition to symbol learning while building teamwork and commu
 
 ## Extensions
 
-- Use control description symbols instead of map symbols (for advanced groups)
+- Use IOF control description pictograms instead of map symbols (for advanced groups)
 - Time the relay and challenge teams to beat their own time in a second round
 - Have one team member be the "coach" who can shout hints but not run

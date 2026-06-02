@@ -49,7 +49,7 @@ Compass Basics introduces students to using a compass for orienteering. Students
 
 **2. Map setting.** Give out maps and demonstrate how to orient the map using the north lines. Turn the students various ways and get them to orient the map to north.
 
-**3. Bearings.** Ask the students to pretend they are standing at the start triangle and to take a bearing as if they are going to control 1. Ask them to point in the direction of travel. Check each student is pointing the correct way. Repeat for each control.
+**3. Bearings.** Ask the students to pretend they are standing at the start triangle and to take a bearing as if they are going to checkpoint 1. Ask them to point in the direction of travel. Check each student is pointing the correct way. Repeat for each checkpoint.
 
 
 ## Delivery

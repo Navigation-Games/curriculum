@@ -47,7 +47,7 @@ Orienteering pair work requires real communication. Saying "it's over there" doe
 
 *Making constructive choices about personal behavior and social interactions.*
 
-Orienteering is a sequence of decisions: Which way do I go? Is my map oriented? Am I at the right checkpoint? Should I check my control code? Do I have time for one more checkpoint? Each decision has consequences that the student experiences directly.
+Orienteering is a sequence of decisions: Which way do I go? Is my map oriented? Am I at the right checkpoint? Should I check the checkpoint code? Do I have time for one more checkpoint? Each decision has consequences that the student experiences directly.
 
 **Activities:** Score-O (strategic planning under time pressure), route choice in any course, deciding when to advance to a harder level
 

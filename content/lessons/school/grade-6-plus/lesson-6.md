@@ -70,10 +70,10 @@ activities:
    - Explain the start procedure: staggered starts (one student every 30-60 seconds) so everyone navigates independently
    - Explain the finish: run through the finish chute, time is recorded
    - Emphasize: accuracy matters more than speed. A missed checkpoint means a disqualification. Self-check every time.
-3. **Choose your course**: offer easy (3-4 controls), medium (5-6), and hard (7-8+). Students pick their level. Encourage trying the next level up from what feels comfortable.
+3. **Choose your course**: offer easy (3-4 checkpoints), medium (5-6), and hard (7-8+). Students pick their level. Encourage trying the next level up from what feels comfortable.
 4. **Individual timed runs**: staggered starts
    - Students pick up their map at the start (face down until their start time)
-   - Run the course, self-checking at each control
+   - Run the course, self-checking at each checkpoint
    - Finish through the chute
    - After finishing, students can review their route and wait for others
 5. **Second run** (if time): same course for a faster time, or try a harder course
