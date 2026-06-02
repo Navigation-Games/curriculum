@@ -7,6 +7,75 @@ sidebar_position: 2
 
 What's done, what's next, and what's deferred.
 
+## Next
+
+### Completing Version 1 of the curriculum
+
+- **Incorporate Kieran's feedback.** Kieran makes notes separately (not editing in GitHub or Google Docs). Barb works with Claude to incorporate his feedback into the content files.
+
+- **Review all scripts and circle back to Erkan and Mikayla's scripts.** Compare the current activity and lesson content against the delivery scripts written by Erkan Sezgin and Mikayla Moss to make sure nothing important was lost or contradicted.
+
+- **Compare all activities to edited one-pagers and full versions.** Where edited one-pagers or full activity write-ups exist (especially those developed by Kieran), compare them against the current activity pages and incorporate any missing content or corrections.
+
+- **Edit the video scripts.** The video scripts were drafted before the latest round of lesson and activity edits. They need to be updated to reflect current delivery, vocabulary, and structure.
+
+- **More visuals.** Activity pages and lesson plans need more photos, diagrams, and setup images throughout the curriculum.
+
+### Curriculum design
+
+- **Consistent role vocabulary.** The progression defines roles (Finder, Hider, Helper, Spectator) and the lesson plans use Navigator and Checker, but the terminology is not yet consistent across all activities and lessons. We need to decide on a single set of role names, grounded in what matters for orienteering, and use them everywhere.
+
+- **Year-over-year progression within a grade band.** How do we teach kids who come back year after year? The current lessons assume a first encounter with orienteering. We need guidance on how to progress students who already did the sequence last year, so each year builds on the last rather than repeating.
+
+- **Single-setup, multi-grade teaching.** At many schools, a teacher sets up once for the day and runs multiple grades (or even multiple lessons) through the same setup. The curriculum should address how to use one physical arrangement to serve different classes at different levels, with guidance on which activities scale across grades and which need adjustment.
+
+### Content gaps
+
+- **Companion activities without links.** Four companion activities are referenced in lesson plan cards but have no link because they live inline with their parent core activity, not as separate pages:
+  - Animal Relay (Lesson 3, companion of Animal-O)
+  - Geometric Readiness (Lesson 5, companion of Geometric-O)
+  - Symbol-O (Lesson 5, companion of Map Walk)
+  - Find the Cone (Lesson A, companion of Geometric-O)
+
+- **Background PDFs.** No source PDFs exist yet for Score-O, Map Walk, or several companion activities. Existing PDFs cover Boundary Run, Gathering, Animal-O, Geometric-O, Napkin-O, and Pacman-O.
+
+- **Content alignment.** Goals, vocabulary, and delivery steps should be reviewed across activities and lessons to make sure they use consistent language and that short/long goal versions say the same thing. In particular, each lesson's orienteering goals should be consistent with (and traceable to) the goals of the activities it references. Currently there is no programmatic check for this; consider adding a build-time validation that cross-references lesson goals against the goals of their component activities.
+
+- **PE standards audit after editing rounds.** After each major round of curriculum editing, verify that the SHAPE America standards mapping is still valid. Check both the reference page (`site/docs/reference/frameworks/pe-standards.md`) and the PE Standards section within each individual lesson. Lesson delivery changes can invalidate a standard citation (e.g., removing pair work removes the basis for a social skills indicator).
+
+- **Camp activities still needing write-ups.** Several activities referenced in camp lesson plans have no activity page yet: Description Relay (session 1), Compass Segments (session 5), Vampire-O, Memory-O (navigate by memory using short courses or sequential map snippets; two formats described in Design Meeting #2). Compass Spider is now documented as a Star Relay companion/variation. Friendship Relay (groups of 3 split checkpoints by ability, meet at a common point) was described in the Belknap video and could be a new all-camp activity.
+
+- **Symbol Relay cards.** Symbol Relay now has a standalone activity page, but still needs a complete set of symbol relay cards (only a partial set exists). Decision: use **ISSprOM** symbols, with a schoolyard-specific subset for schools (paths, buildings, fences, etc.) that camps would not need. The existing partial set (`background/symbol-relay-cards.pdf`) has 8 ISOM terrain symbols only. Plan is to export clean vector images from OCAD (SVG or PDF export from a legend), then isolate individual symbols for card printing. Waiting on Kieran for an OCAD source file.
+
+- **Review camp lesson plans against source materials.** The 9 camp lessons are first drafts. Design Meeting #3 video transcript has been mined; remaining sources to check: Google Site content, slide deck details, and other Camp Belknap video transcripts (when available).
+
+- **Course design reference content.** White/Yellow/Orange course difficulty levels are now described in Camp Lesson 6 delivery notes, but could become a standalone reference page or setup guide with diagrams showing checkpoint placement principles (controls must be on distinct features, progression from path junctions to off-trail locations).
+
+- **Leave No Trace page.** The current draft needs a tone revision so it feels natural and confident rather than justifying orienteering's existence. The core message is simple: orienteering is low-impact, and here is what to teach when you are in wilder areas.
+
+### Design system
+
+- **Extract shared CSS into reusable classes.** Button styles, popover styles, and other visual patterns are currently duplicated across component CSS modules. Pull shared styles into a single stylesheet so components reuse the same classes.
+
+### Build and tooling
+
+- **Automate content build on GitHub.** Right now, editing a content file on GitHub does not regenerate the site pages. The CI workflow runs the build, but the generated output is not committed back.
+
+- **Content spec document.** Extract the rules content files must follow (required sections, frontmatter fields, goals format) into a standalone document. Use it as a reference for editors and as the source of truth for test generation.
+
+### Site features
+
+- **Grade band expansion.** K-2 and 6+ lesson plans exist but need further editing passes. Camp Intro and Skill Development curricula have first-draft lesson plans.
+- **Search.** Docusaurus has built-in search (Algolia or local). Not yet configured.
+- **Print styles.** The one-pager view works but could use CSS refinement for clean printing.
+- **AI lesson plan advisor.** An embedded AI chat on the site that helps teachers build a tailored lesson plan based on their situation. Includes an intake form, conversation logging for curriculum improvement, and a follow-up survey. See the [detailed plan](https://github.com/Navigation-Games/curriculum/blob/main/notes/ai-lesson-advisor-plan.md).
+
+## Deferred
+
+These activities are set aside and not part of the current curriculum structure:
+
+Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O
+
 ## Done
 
 - Content build system: clean Markdown content files generate MDX site pages
@@ -50,74 +119,5 @@ What's done, what's next, and what's deferred.
 - Camp Skill Development index: added setup strategy section (two-week checkpoint rotation, mixed-level group guidance, safety progression)
 - Camp Lesson 2: added symbol recap step and note about keeping first Score-O checkpoints close
 - Camp Lesson 6: added White/Yellow/Orange course difficulty level guidance
-
-## Next
-
-### Completing Version 1 of the curriculum
-
-- **Incorporate Kieran's feedback.** Kieran makes notes separately (not editing in GitHub or Google Docs). Barb works with Claude to incorporate his feedback into the content files.
-
-- **Review all scripts and circle back to Erkan and Mikayla's scripts.** Compare the current activity and lesson content against the delivery scripts written by Erkan Sezgin and Mikayla Moss to make sure nothing important was lost or contradicted.
-
-- **Compare all activities to edited one-pagers and full versions.** Where edited one-pagers or full activity write-ups exist (especially those developed by Kieran), compare them against the current activity pages and incorporate any missing content or corrections.
-
-- **Edit the video scripts.** The video scripts were drafted before the latest round of lesson and activity edits. They need to be updated to reflect current delivery, vocabulary, and structure.
-
-- **Get transcripts from the Camp Belknap videos.** Evalin and Kieran recorded videos for the camp curriculum at Camp Belknap. Get the transcripts and mine them for delivery scripts, lesson plans, activity ideas, and improvements to the program.
-
-- **More visuals.** Activity pages and lesson plans need more photos, diagrams, and setup images throughout the curriculum.
-
-### Curriculum design
-
-- **Consistent role vocabulary.** The progression defines roles (Finder, Hider, Helper, Spectator) and the lesson plans use Navigator and Checker, but the terminology is not yet consistent across all activities and lessons. We need to decide on a single set of role names, grounded in what matters for orienteering, and use them everywhere.
-
-- **Year-over-year progression within a grade band.** How do we teach kids who come back year after year? The current lessons assume a first encounter with orienteering. We need guidance on how to progress students who already did the sequence last year, so each year builds on the last rather than repeating.
-
-- **Single-setup, multi-grade teaching.** At many schools, a teacher sets up once for the day and runs multiple grades (or even multiple lessons) through the same setup. The curriculum should address how to use one physical arrangement to serve different classes at different levels, with guidance on which activities scale across grades and which need adjustment.
-
-### Content gaps
-
-- **Companion activities without links.** Four companion activities are referenced in lesson plan cards but have no link because they live inline with their parent core activity, not as separate pages:
-  - Animal Relay (Lesson 3, companion of Animal-O)
-  - Geometric Readiness (Lesson 5, companion of Geometric-O)
-  - Symbol-O (Lesson 5, companion of Map Walk)
-  - Find the Cone (Lesson A, companion of Geometric-O)
-
-- **Background PDFs.** No source PDFs exist yet for Score-O, Map Walk, or several companion activities. Existing PDFs cover Boundary Run, Gathering, Animal-O, Geometric-O, Napkin-O, and Pacman-O.
-
-- **Content alignment.** Goals, vocabulary, and delivery steps should be reviewed across activities and lessons to make sure they use consistent language and that short/long goal versions say the same thing. In particular, each lesson's orienteering goals should be consistent with (and traceable to) the goals of the activities it references. Currently there is no programmatic check for this; consider adding a build-time validation that cross-references lesson goals against the goals of their component activities.
-
-- **PE standards audit after editing rounds.** After each major round of curriculum editing, verify that the SHAPE America standards mapping is still valid. Check both the reference page (`site/docs/reference/frameworks/pe-standards.md`) and the PE Standards section within each individual lesson. Lesson delivery changes can invalidate a standard citation (e.g., removing pair work removes the basis for a social skills indicator).
-
-- **Camp activities still needing write-ups.** Several activities referenced in camp lesson plans have no activity page yet: Description Relay (session 1), Compass Segments (session 5), Vampire-O. Compass Spider is now documented as a Star Relay companion/variation. Friendship Relay (groups of 3 split checkpoints by ability, meet at a common point) was described in the Belknap video and could be a new all-camp activity.
-
-- **Symbol Relay cards.** Symbol Relay now has a standalone activity page, but still needs a complete set of symbol relay cards (only a partial set exists). Decision: use **ISSprOM** symbols, with a schoolyard-specific subset for schools (paths, buildings, fences, etc.) that camps would not need. The existing partial set (`background/symbol-relay-cards.pdf`) has 8 ISOM terrain symbols only. Plan is to export clean vector images from OCAD (SVG or PDF export from a legend), then isolate individual symbols for card printing. Waiting on Kieran for an OCAD source file.
-
-- **Review camp lesson plans against source materials.** The 9 camp lessons are first drafts. Design Meeting #3 video transcript has been mined; remaining sources to check: Google Site content, slide deck details, and other Camp Belknap video transcripts (when available).
-
-- **Course design reference content.** White/Yellow/Orange course difficulty levels are now described in Camp Lesson 6 delivery notes, but could become a standalone reference page or setup guide with diagrams showing checkpoint placement principles (controls must be on distinct features, progression from path junctions to off-trail locations).
-
-- **Leave No Trace page.** The current draft needs a tone revision so it feels natural and confident rather than justifying orienteering's existence. The core message is simple: orienteering is low-impact, and here is what to teach when you are in wilder areas.
-
-### Design system
-
-- **Extract shared CSS into reusable classes.** Button styles, popover styles, and other visual patterns are currently duplicated across component CSS modules. Pull shared styles into a single stylesheet so components reuse the same classes.
-
-### Build and tooling
-
-- **Automate content build on GitHub.** Right now, editing a content file on GitHub does not regenerate the site pages. The CI workflow runs the build, but the generated output is not committed back.
-
-- **Content spec document.** Extract the rules content files must follow (required sections, frontmatter fields, goals format) into a standalone document. Use it as a reference for editors and as the source of truth for test generation.
-
-### Site features
-
-- **Grade band expansion.** K-2 and 6+ lesson plans exist but need further editing passes. Camp Intro and Skill Development curricula have first-draft lesson plans.
-- **Search.** Docusaurus has built-in search (Algolia or local). Not yet configured.
-- **Print styles.** The one-pager view works but could use CSS refinement for clean printing.
-- **AI lesson plan advisor.** An embedded AI chat on the site that helps teachers build a tailored lesson plan based on their situation. Includes an intake form, conversation logging for curriculum improvement, and a follow-up survey. See the [detailed plan](https://github.com/Navigation-Games/curriculum/blob/main/notes/ai-lesson-advisor-plan.md).
-
-## Deferred
-
-These activities are set aside and not part of the current curriculum structure:
-
-Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O
+- Camp Belknap Design Meeting #2 video transcript mined: OUSA alignment noted, Memory-O descriptions captured, recognition system discussion (two levels preferred), relay variation (three simultaneous similar courses)
+- All available Camp Belknap design meeting transcripts mined (Meetings #2, #3, #4; Meeting #1 recording not available)

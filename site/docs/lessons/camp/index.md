@@ -86,6 +86,10 @@ Camp counselors do not need orienteering experience, but they do need to experie
 
 A sticker or badge system can motivate campers and give them a reason to come back next summer. The idea: earn recognition for completing sessions or demonstrating skills, with levels designed so that a camper who attends four of six sessions can reach Level 1. Full completion requires returning the following year. Details are still being developed with Kieran and Evalin.
 
+### OUSA Skills Recognition
+
+The camp curriculum aligns with the [Orienteering USA Skills Recognition Program](https://orienteeringusa.org/). Campers who complete the introductory activities plus compass work meet all the requirements for the OUSA Level 1 badge. Completing all the skill development activities gets them 80-90% of the way through Level 2. This is not a prerequisite or something to push on campers, but it is a nice option for older campers who want to continue orienteering outside of camp. Leaders can mention it as a pathway for anyone who gets interested in the sport.
+
 ### Reference materials
 
 - [SEL Program Quality Assessment](/reference/frameworks/sel-pqa/) -- how the curriculum maps to the SEL PQA observation rubric used by the American Camp Association
