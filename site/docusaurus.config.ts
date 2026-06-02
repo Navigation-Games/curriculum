@@ -63,6 +63,17 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        indexBlog: false,
+        docsRouteBasePath: '/',
+      },
+    ],
+  ],
+
   themeConfig: {
     image: 'img/social-card.jpg',
     colorMode: {

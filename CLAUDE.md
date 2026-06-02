@@ -210,6 +210,7 @@ Open question: activities that are not standalone enough for their own page coul
 |---|---|---|
 | Google Site camp pages | Started | Structure above; more content to extract |
 | Camp Belknap video #3 transcript (Evalin & Kieran) | Mined | Design Meeting #3. Key finds: 10-session plan detail, safety progression, two-week checkpoint rotation, Compass Spider, Friendship Relay, Vampire-O detail, White/Yellow/Orange course levels, checkpoint placement principles. Applied to star-relay.md, poison-o.md, compass-basics.md, all 6 camp skill development lessons, and camp full index. |
+| Camp Belknap video #4 transcript (Evalin & Kieran) | Mined | Design Meeting #4 (final meeting). `background/camp-belknap-design-meeting-4.txt`. Key finds: leader training strategy (abridged run-throughs, practice facilitating), Animal-O trust framing (no recording needed at camp), Symbol Relay progression (local symbols first, expand in development week), accuracy-over-speed emphasis for first Score-O, answer key concept for pin punches, recognition/sticker system concept (multi-level, designed for multi-year return). Applied to camp full index (leader training section), camp lessons 1/2/4/6, controls-and-punches page. |
 | Camp Belknap other videos (Evalin & Kieran) | Not started | Need transcripts for videos 1, 2, and any others |
 | OUSA Orienteering Development Model | Available locally | `background/orienteering-development-model.md` |
 | Google Site activity descriptions | Captured | Listed in camp activity inventory above |

@@ -47,7 +47,7 @@ export default function Home(): React.ReactElement {
             emoji="⛺"
             title="Orienteering at Camp"
             description="Intro activities and multi-session skill development programs."
-            link="/camp"
+            link="/lessons/camp"
           />
         </div>
         <p style={{textAlign: 'center', marginTop: '1.5rem'}}>

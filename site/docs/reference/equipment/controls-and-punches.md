@@ -37,6 +37,10 @@ Students collect a clothespin from each checkpoint and clip it to their scorecar
 
 A small pin punch attached to each checkpoint flag. Students punch a hole in the correct box on their card. This is the traditional orienteering method and costs about $10 per checkpoint from orienteering supply retailers.
 
+### Answer Key (for Manual Punches)
+
+When using pin punches, prepare a master answer key before the session. The key is a punch card with the correct punch pattern already stamped in each box, in the correct order for each course. When participants finish, hold their card next to the key to check that the patterns match. This is especially important for point-to-point courses where the sequence matters.
+
 ### Electronic Timing
 
 Students carry a timing card (SI card) and tap it against an electronic box at each checkpoint. The system records the time and verifies the correct sequence automatically. See [Electronic Timing](../electronic-timing) for details.

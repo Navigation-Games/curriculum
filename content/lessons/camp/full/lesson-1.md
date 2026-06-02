@@ -42,9 +42,9 @@ activities:
 ## Delivery
 
 1. **Safety briefing** (5 min): walk the boundary together so campers know exactly where they can and cannot go. Introduce the gathering signal (whistle or call): when you hear it, return to the start immediately. Emphasize checking back in. Everyone must come through the finish area so leaders know nobody is still out.
-2. [**Animal-O**](/activities/core/animal-o) (25 min): use clue sheets to find animal checkpoints in order. Start with short clue sheets (2-3 animals), then progress to longer ones. Partners check each other.
+2. [**Animal-O**](/activities/core/animal-o) (25 min): use clue sheets to find animal checkpoints in order. Optionally, let campers explore within the boundary for 2 minutes before handing out the first clue sheet so they are not spending all their time on the first round. Start with short clue sheets (5 animals), then progress to longer ones (10 animals). No recording is needed for this activity. Frame it as a trust exercise: later activities will use pin punches to verify visits, so do it properly now. The focus here is exploring the space, following a sequence, and building spatial memory.
 3. [**Map Discussion**](/activities/core/map-discussion) (10 min): gather the group and show them the poster-sized orienteering map. Point out how it differs from everyday maps. Ask campers to find real features on the map. Reinforce "relating the ground to the map."
-4. **Symbol Relay** (20 min): team relay to identify and match map symbols to real features. Keeps energy up while reinforcing the symbols introduced in Map Discussion.
+4. **Symbol Relay** (20 min): team relay to identify and match map symbols to real features. For this first session, use only the symbols that appear on the camp's orienteering map. Keeps energy up while reinforcing the symbols introduced in Map Discussion. After the relay, connect the symbols back to the terrain: "Who can point to something that looks like this symbol?"
 5. **Wrap-up** (5 min): quick reflection and preview of next session.
 
 

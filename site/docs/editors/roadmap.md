@@ -37,6 +37,7 @@ What's done, what's next, and what's deferred.
 - ISSprOM chosen as the map symbol standard for the curriculum (sprint/urban maps match schoolyard and park settings)
 - Activities & Lessons reference page updated with all 20 activities and all lesson plans (K-2, 3-5, 6+, Camp Intro, Camp Skill Development)
 - Camp Belknap Design Meeting #3 video transcript mined for curriculum improvements
+- Camp Belknap Design Meeting #4 video transcript mined: leader training section added to camp index, delivery tips added to camp lessons 1/2/4/6, answer key concept added to controls-and-punches reference
 - Star Relay: added Compass Spider variation (whited-out map forces compass use), clothing-item precision variation, and teamwork/communication themes
 - Compass Basics: added safety bearing concept and tip about compass role in orienteering
 - Poison-O: added multi-variant progression (A/B/C/D maps then full Score-O), tip about forcing independence

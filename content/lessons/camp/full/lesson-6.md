@@ -39,7 +39,7 @@ activities:
    - **White courses** (beginner): checkpoints are on or right next to paths, walls, or other linear features. Navigation decisions happen at junctions: left, right, or straight. Short and straightforward.
    - **Yellow courses** (intermediate): checkpoints are slightly off trails. There is usually a safe route following paths, but cutting corners is faster. This introduces route choice and risk/reward.
    - **Orange courses** (advanced): checkpoints are further off trail. Navigation relies on terrain features (boulders, vegetation boundaries, buildings) rather than paths. More map reading, more compass use.
-   Pairs or individuals navigate the course, visiting checkpoints in order. Campers who finish a White course can try a Yellow; those who finish Yellow can try Orange.
+   Pairs or individuals navigate the course, visiting checkpoints in order. Campers who finish a White course can try a Yellow; those who finish Yellow can try Orange. Keep an answer key (master sheet) at the start/finish that shows the correct punch pattern for each checkpoint in order. When campers finish, check their punch card against the key to confirm they visited the right checkpoints in the right sequence.
 4. **Wrap-up** (10 min): gather, share course times and strategies. Celebrate progress. Preview the culminating activity: the All-Camp Team Treasure Hunt.
 
 

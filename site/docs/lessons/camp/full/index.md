@@ -23,6 +23,18 @@ Fundamentals of orienteering map navigation in six 70-minute sessions over two w
 - Session 5: Relocation strategies (how to figure out where you are)
 - Session 6: Recap of all safety skills
 
+## Leader training
+
+Train leaders by having them *do* the activities, not just read about them. We recommend this approach:
+
+1. **Pre-reading.** Every leader reads the one-page summaries for all 12 activities before training. Focus on the goals and delivery steps.
+2. **Abridged run-throughs.** Run a shortened version of each activity (10-15 minutes) with leaders as participants. For Animal-O, do one clue sheet instead of six. For Score-O, send them out for five checkpoints instead of ten. The point is to experience it, not finish it.
+3. **Practice facilitating.** If time allows, have leaders take turns running an activity for each other. This builds confidence and surfaces questions about setup, pacing, and transitions.
+4. **Focus on the "why."** For each activity, make sure leaders understand the goal and what success looks like. If the session does not go exactly as planned but campers are working toward the goal, that is still a success.
+5. **Predetermine routes.** For Map Walk and Line-O, leaders should walk the route themselves before the session. Draw the route in Purple Pen so every leader knows exactly where they are going and which features to point out.
+
+Leaders should also be comfortable with the physical setup (putting out checkpoints, flagging tape, preparing punch cards) and the safety talks. Walking through the setup together during training saves time on session day.
+
 ## Sessions
 
 | Session | What it adds |
