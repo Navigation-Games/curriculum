@@ -112,7 +112,9 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
    - Progress to 10-checkpoint maps
 
 
-## Progression
+## Differentiation
+
+Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
 
 - **Younger students**: use all levels (1 checkpoint, then 2 on corners, then 2 with one off-corner, etc.)
 - **Older students**: skip to 5-checkpoint maps, then move to 10-checkpoint maps

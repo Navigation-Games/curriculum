@@ -78,9 +78,9 @@ Builds listening skills, safety awareness, and familiarity with the play space. 
    Long: If there are gardens or other off-limits areas within the boundary, ask whether participants should go there even though it is technically "inside"
 
 
-## Progression
+## Differentiation
 
-Start with the basics and build:
+Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
 
 - **Follow the leader**: run the boundary together at the leader's pace
 - **For speed**: repeat the boundary at a faster pace

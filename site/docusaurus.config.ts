@@ -86,15 +86,15 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'activitiesSidebar',
-          position: 'left',
-          label: 'Activities',
-        },
-        {
-          type: 'docSidebar',
           sidebarId: 'lessonsSidebar',
           position: 'left',
           label: 'Lesson Plans',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'activitiesSidebar',
+          position: 'left',
+          label: 'Activities',
         },
 {
           type: 'docSidebar',

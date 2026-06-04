@@ -4,6 +4,12 @@ Authors' guide for editing and maintaining the curriculum site.
 
 **Live site:** https://navigation-games.github.io/curriculum/
 
+## How We Edit
+
+Most editors and reviewers should **not** edit the repo directly. Instead, make your own notes on needed changes, whether detailed wordsmithing or general issues, and share them with an editor who knows the repo structure (currently Barb). The editor makes the actual changes, sometimes with assistance from Claude, and verifies that the build and site are correct.
+
+This keeps the repo clean, avoids accidental edits to generated files, and lets the editor handle structural concerns (build scripts, cross-references, vocabulary sync) that a content reviewer shouldn't need to worry about.
+
 ## Why This Tech Stack
 
 The curriculum has lived in GitBook and then Google Sites. Both worked well for writing and sharing content, but as the curriculum grew we hit a consistency problem: each activity exists in multiple forms (one-pager, full description, script, lesson plan reference, vocabulary list) and keeping them in sync across formats and across activities was manual and error-prone.
@@ -284,6 +290,18 @@ The build script validates your content files and reports problems:
 
 - **Errors** (build fails): missing title, missing tagline, missing required sections (Description, Goals for activities; Goals, Delivery for lessons), goals section with no goals
 - **Warnings** (build succeeds but check these): missing time, space, vocabulary, sidebar_position
+
+### How lesson materials are determined
+
+The build script automatically merges materials from a lesson's referenced activities into the lesson's materials list. Here's how it works:
+
+1. The script reads the `materials:` list from every activity file in `content/activities/`
+2. For each lesson, it looks at the `activities:` list in frontmatter and finds matching activity materials by title
+3. It adds any activity materials that aren't already in the lesson's own `materials:` list (deduplicating by material type, so "4 colored landmark cones" and "4 colored cones" aren't both listed)
+
+This means you only need to list materials in the lesson's frontmatter that are **not** already listed in the referenced activities. Activity-specific materials are pulled in automatically. If you need to override or exclude an activity's material for a particular lesson, list your preferred version in the lesson's `materials:` field and the duplicate will be skipped.
+
+### What the build script checks
 
 Error messages include the filename and what's wrong, for example:
 ```

@@ -93,7 +93,7 @@ The camp curriculum aligns with the [Orienteering USA Skills Recognition Program
 ### Reference materials
 
 - [SEL Program Quality Assessment](/reference/frameworks/sel-pqa/) -- how the curriculum maps to the SEL PQA observation rubric used by the American Camp Association
-- [Checkpoints and Punches](/reference/equipment/controls-and-punches/) -- checkpoint markers, pin punches, punch cards, and answer keys
+- [Checkpoints](/reference/equipment/controls-and-punches/) -- checkpoint markers, pin punches, punch cards, and answer keys
 - [Navigation Games Kits](/reference/equipment/kits/) -- what is in the kit and how to use it
 - [Maps](/reference/equipment/maps/) -- orienteering maps for camp settings
 - [Glossary](/reference/glossary/) -- terms used in the curriculum

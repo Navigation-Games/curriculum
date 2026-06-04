@@ -5,7 +5,15 @@ sidebar_position: 1
 
 # Editing Guide
 
-How to edit content in this curriculum. The site is built from Markdown files stored in a GitHub repository. You can edit directly on GitHub or work locally.
+How to edit content in this curriculum. The site is built from Markdown files stored in a GitHub repository.
+
+## Who edits what
+
+Most people reviewing or suggesting changes to the curriculum should **not edit the repo directly**. Instead, write up your proposed changes in a separate document (a Google Doc, an email, handwritten notes) and share them with a curriculum manager (currently Barb). Your notes can be anything from detailed wordsmithing ("change X to Y in the Animal-O delivery section") to general issues ("the K-2 lessons need more scaffolding for spatial vocabulary").
+
+The curriculum manager makes the actual edits in the repo, sometimes with assistance from Claude, and verifies that the build, cross-references, and vocabulary stay consistent. This keeps the repo clean and avoids accidental edits to generated files or structural problems that are hard to spot without knowing the build system.
+
+If you are a curriculum manager making edits yourself, the rest of this guide explains where files live and how to work with them.
 
 ## Where to Edit
 

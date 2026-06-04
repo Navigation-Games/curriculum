@@ -59,8 +59,8 @@ activities:
 1. [**Explore & Find**](/activities/core/explore-and-find): quick round of exploring to find animal checkpoints; return on the gathering signal. How many can you remember from last time?
 2. Pair up
 3. [**Animal-O**](/activities/core/animal-o): use clue sheets to find checkpoints in order. Progression:
-   - Start with a short clue sheet (2-3 animals)
-   - Advance to clue sheets with more animals
+   - Start with a 5-animal clue sheet
+   - Try a different 5-animal clue sheet
    - Try a different clue sheet
    - Repeat from memory: one partner is the orienteer, the other keeps the clue sheet as the checker. At each checkpoint, the orienteer calls out the animal name. The checker says "correct" or "incorrect." Then switch roles.
    - Repeat for a faster time. Students can now self-check: carry the clue sheet and confirm each animal yourself before moving on. 🧭 [Checking](/about/concepts#checking)
@@ -76,8 +76,8 @@ activities:
 3. **Animal-O**: use clue sheets to find checkpoints in order
 
 Progression:
-a. Short clue sheet (2-3 animals)
-b. Advance to more animals
+a. 5-animal clue sheet
+b. Try a different 5-animal clue sheet
 c. Try a different clue sheet
 d. Repeat from memory (partner checks with the clue sheet)
 e. Repeat for a faster time (self-check)

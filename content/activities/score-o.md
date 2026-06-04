@@ -93,7 +93,9 @@ Score-O is a bridge between structured courses (where checkpoints are visited in
 **6. Scoring.** Count correct codes. Only checkpoints with the right letter code count. The winner is whoever finds the most checkpoints. Ties are broken by whoever finished fastest.
 
 
-## Progression
+## Differentiation
+
+Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
 
 ### Setup ladder
 

@@ -96,9 +96,9 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 4. Return to the finish after the last checkpoint
 
 
-## Progression
+## Differentiation
 
-Start simple and add challenge as students succeed:
+Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
 
 - **5-animal clue sheet**: learn the format with a standard course
 - **For speed**: repeat the same course and beat your previous time
@@ -106,6 +106,7 @@ Start simple and add challenge as students succeed:
 - **Different sheet**: try a new 5-animal sequence so memorized routes don't help. There are six different 5-animal courses in the kit
 - **10-animal clue sheet**: for pairs who finish all six 5-animal courses
 - **Solo**: if students started in pairs, try it individually
+- **Animal Relay**: in small teams, students take turns running to a named animal checkpoint and back. The caller says an animal name; the runner finds it and returns. Tests spatial memory and adds competitive energy. Good as a closer after students have learned the checkpoint locations.
 
 
 ## Tips
@@ -174,13 +175,13 @@ e. Pairs who finish all six 5-animal sheets get a 10-animal sheet
 
 ## Companions
 
-### Explore & Find *(readiness)*
+### [Explore & Find](/activities/core/explore-and-find) *(readiness)*
 
 **In pairs, explore to find animal checkpoints without a set order.**
 
 A less structured version of Animal-O. Students explore freely within the boundary to find animal checkpoints and report back what they found. No clue sheet, no required order.
 
-Use this before Animal-O if students need to get familiar with the space and the checkpoint format first.
+Use this before Animal-O if students need to get familiar with the space and the checkpoint format first. See the [full activity page](/activities/core/explore-and-find) for details.
 
 | | |
 |---|---|

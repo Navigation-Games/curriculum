@@ -79,7 +79,9 @@ Orienteering maps can be very complex, and learning how to simplify and extract 
 **5. Discuss.** Announce the results and discuss strategies teams used to be successful.
 
 
-## Progression
+## Differentiation
+
+Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
 
 - **Simplified maps**: Use a park map or simplified orienteering map instead of a full orienteering map. Adjust complexity to suit the participants.
 - **Full orienteering maps**: Use a detailed orienteering map with more features to read around.

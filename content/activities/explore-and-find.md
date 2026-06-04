@@ -82,7 +82,7 @@ Bridges the gap between learning the boundary (Boundary Run) and navigating a st
    Long: Test their memory with specific challenges. "Run to the Lion and back to the Finish!" "Run to the Octopus then the Dog and back!"
 
 
-## Progression
+## Differentiation
 
 Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
 

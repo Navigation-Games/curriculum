@@ -107,7 +107,7 @@ Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O
 - Activities & Lessons reference page updated with all 20 activities and all lesson plans (K-2, 3-5, 6+, Camp Intro, Camp Skill Development)
 - Camp Belknap Design Meeting #3 video transcript mined for curriculum improvements
 - Camp Belknap Design Meeting #4 video transcript mined: leader training section added to camp index, delivery tips added to camp lessons 1/2/4/6, answer key concept added to checkpoints-and-punches reference
-- "control" replaced with "checkpoint" throughout curriculum content; "Controls and Punches" page renamed to "Checkpoints and Punches"
+- "control" replaced with "checkpoint" throughout curriculum content; page renamed to "Checkpoints"
 - Camp landing page expanded with philosophy, growth mindset, and being-lost sections
 - Growth Mindset and Being Lost added to About > Concepts
 - Local search (docusaurus-search-local) added to site

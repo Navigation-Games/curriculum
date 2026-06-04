@@ -82,7 +82,9 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 7. Repeat, encouraging the group to come up with strategies to improve their gathering time
 
 
-## Progression
+## Differentiation
+
+Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
 
 - **Basic**: students explore and return on signal
 - **Timed**: count seconds and challenge the group to beat their time

@@ -78,7 +78,9 @@ Students visit checkpoints in sequential order using a map. This is "real" orien
 
 **6. Repeat or try new courses.** Students may repeat courses to improve their time, or try harder courses. Students who finish should help others by giving hints, not answers.
 
-## Progression
+## Differentiation
+
+Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
 
 - **Pairs first**: start with partner navigation so students can discuss map reading together
 - **Individual**: once students are comfortable, try the course alone

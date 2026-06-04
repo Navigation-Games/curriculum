@@ -1,9 +1,9 @@
 ---
-title: Checkpoints and Punches
+title: Checkpoints
 sidebar_position: 3
 ---
 
-# Checkpoints and Punches
+# Checkpoints
 
 In orienteering, checkpoint markers are what participants locate using their maps. Students need a way to prove they visited each checkpoint. There are several options, from simple to high-tech.
 

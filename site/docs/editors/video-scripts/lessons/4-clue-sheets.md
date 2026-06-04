@@ -61,17 +61,17 @@ Emphasize: checking the animal picture at each checkpoint is how you confirm you
 
 This is the core of the lesson, and it has a natural progression built in:
 
-**Level 1: Short course (2-3 animals)**
+**Level 1: 5-animal clue sheet**
 
-[SHOW: pair completing a short course, checking animals at each cone]
+[SHOW: pair completing a course, checking animals at each cone]
 
-Start everyone with a short clue sheet. Two or three animals. This builds confidence and teaches the process: read the clue, find the checkpoint, check the animal, move to the next.
+Start everyone with a 5-animal clue sheet. This builds confidence and teaches the process: read the clue, find the checkpoint, check the animal, move to the next. There are six different 5-animal courses in the kit, so pairs can try multiple sequences.
 
-**Level 2: Longer courses**
+**Level 2: 10-animal clue sheet**
 
-[SHOW: pair receiving a new clue sheet with more animals listed]
+[SHOW: pair receiving a 10-animal clue sheet]
 
-Once a pair finishes, give them a clue sheet with more animals. Students work at their own pace through progressively longer courses.
+Pairs who finish all six 5-animal courses get a 10-animal clue sheet. This covers more of the space and requires sustained focus.
 
 **Level 3: Different clue sheets**
 

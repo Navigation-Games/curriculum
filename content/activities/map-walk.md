@@ -76,7 +76,9 @@ Map Walk bridges the gap between simple pattern maps and independent navigation.
 **4. Return to the start.** Ask students to lead the group back, reading the map to retrace the route.
 
 
-## Progression
+## Differentiation
+
+Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
 
 - **First Map Walk**: teacher leads, frequent stops, basic symbols only (paths, buildings, open areas)
 - **Second Map Walk**: students take turns leading the group to the next stop

@@ -548,7 +548,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
     steps.forEach((s, i) => L.push(`${i + 1}. ${s.long}`));
     L.push('');
   }
-  if (sections.progression) { L.push('### Progression'); L.push(''); L.push(sections.progression); L.push(''); }
+  if (sections.differentiation) { L.push('### Differentiation'); L.push(''); L.push(sections.differentiation); L.push(''); }
   if (sections.tips) { L.push('### Tips'); L.push(''); L.push(sections.tips); L.push(''); }
   L.push('</TabItem>');
 
@@ -783,6 +783,8 @@ function generateLessonMDX(slug, { fm, sections, goals }, activityMaterials = {}
     L.push('<summary><strong>PE Standards (SHAPE America)</strong></summary>');
     L.push('');
     L.push(goals.peStandards);
+    L.push('');
+    L.push('See [PE Standards alignment](/reference/frameworks/pe-standards) for the full framework.');
     L.push('');
     L.push('</details>');
     L.push('');

@@ -32,8 +32,8 @@ Animal-O is the first real orienteering activity your students will do. They use
 2. Set up a start/finish marker.
 [SHOW: a cone or flag at the designated start area]
 
-3. Prepare clue sheets with different sequences. Start with short ones (2-3 animals) and have longer ones (5+ animals) ready.
-[SHOW: close-up of short clue sheet next to a longer one]
+3. Prepare clue sheets with different sequences. The kit includes six 5-animal clue sheets and 10-animal clue sheets for a challenge.
+[SHOW: close-up of 5-animal clue sheet next to a 10-animal one]
 
 4. Optional: set up a whiteboard near the start to track completions or times.
 [SHOW: whiteboard with columns for names and times]
@@ -60,10 +60,10 @@ Animal-O is the first real orienteering activity your students will do. They use
 
 ## Progression (visual: side-by-side comparison of basic vs advanced)
 
-- **2-3 animals**: short clue sheet to learn the format. Good for first-timers.
-[SHOW: student with a short strip, visiting just two cones]
+- **5-animal clue sheet**: learn the format with a standard course. Good for first-timers.
+[SHOW: student with a 5-animal strip, visiting cones in order]
 
-- **5+ animals**: longer courses covering more of the space.
+- **10-animal clue sheet**: longer courses covering more of the space, for pairs who finish all six 5-animal courses.
 [SHOW: student with a longer strip, moving across a wider area]
 
 - **Repeat for speed**: same course, beat your previous time. This is where spatial memory kicks in.
@@ -91,4 +91,4 @@ Animal-O is the first real orienteering activity your students will do. They use
 
 ## Wrap-up (visual: return to presenter)
 
-Animal-O is the activity students ask to repeat. The built-in progression, from short clue sheets to memory courses, means every student can work at their own level. Once they are succeeding with 5+ animals, they are ready for Geometric-O and their first real maps.
+Animal-O is the activity students ask to repeat. The built-in differentiation, from 5-animal clue sheets to memory courses, means every student can work at their own level. Once they are succeeding with all six 5-animal courses, they are ready for Geometric-O and their first real maps.

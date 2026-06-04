@@ -36,8 +36,8 @@ activities:
 1. **Safety briefing** (5 min): walk the boundary together. Point out what is in bounds and what is off limits. Establish the gathering signal: when you hear it, return to the start immediately.
 2. **Explore** (5 min): let campers explore the area freely. How many animal checkpoints can they find? Return on the gathering signal and report what they saw.
 3. [**Animal-O**](/activities/core/animal-o) (30-40 min): hand out clue sheets. Find the animal checkpoints in the order shown on the clue sheet. At each checkpoint, check the animal picture to confirm you are at the right one.
-   - Start with short clue sheets (2-3 animals)
-   - Progress to longer clue sheets
+   - Start with a 5-animal clue sheet
+   - Try a different 5-animal clue sheet
    - Try a different clue sheet with a different order
    - Repeat from memory: one partner navigates while the other holds the clue sheet and confirms each animal
    - Repeat for a faster time
