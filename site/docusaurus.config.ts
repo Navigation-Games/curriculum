@@ -16,6 +16,10 @@ const config: Config = {
   onBrokenLinks: 'throw',
   trailingSlash: true,
 
+  customFields: {
+    advisorApiUrl: process.env.ADVISOR_API_URL || 'https://lesson-advisor-523012695945.us-central1.run.app',
+  },
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],

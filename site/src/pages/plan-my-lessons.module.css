@@ -1,0 +1,16 @@
+.header {
+  padding: 2rem 0 1rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-600);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chatContainer {
+  max-width: 720px;
+  margin: 1.5rem auto 4rem;
+}
