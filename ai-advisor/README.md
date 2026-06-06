@@ -110,26 +110,31 @@ After creating the secret, grant the Cloud Run service account access to read it
 
 ### 4. Build and deploy
 
-From a terminal with `gcloud` installed and authenticated:
+These commands use PowerShell (the `backtick` line continuation character). Run from the `ai-advisor/` directory.
 
-```bash
-cd ai-advisor
+First, make sure gcloud is pointed at the right project:
 
-# Set your project
+```powershell
 gcloud config set project navigation-games-curriculum
+```
 
-# Build the container image (uses Cloud Build, no local Docker needed)
-gcloud builds submit \
+Build the container image. This uploads local files to Cloud Build (no local Docker needed):
+
+```powershell
+gcloud builds submit `
   --tag us-central1-docker.pkg.dev/navigation-games-curriculum/advisor/lesson-advisor
+```
 
-# Deploy to Cloud Run
-gcloud run deploy lesson-advisor \
-  --image us-central1-docker.pkg.dev/navigation-games-curriculum/advisor/lesson-advisor \
-  --region us-central1 \
-  --allow-unauthenticated \
-  --set-secrets ANTHROPIC_API_KEY=anthropic-api-key:latest \
-  --memory 256Mi \
-  --min-instances 0 \
+Deploy to Cloud Run:
+
+```powershell
+gcloud run deploy lesson-advisor `
+  --image us-central1-docker.pkg.dev/navigation-games-curriculum/advisor/lesson-advisor `
+  --region us-central1 `
+  --allow-unauthenticated `
+  --set-secrets ANTHROPIC_API_KEY=anthropic-api-key:latest `
+  --memory 256Mi `
+  --min-instances 0 `
   --max-instances 3
 ```
 
@@ -167,17 +172,22 @@ No setup needed. The frontend defaults to `http://localhost:8080`, which is wher
 
 ## Redeploying after changes
 
-To update the backend after changing `app.py` or `system-prompt.md`:
+Any time you change `app.py`, `system-prompt.md`, or `requirements.txt`, you need to rebuild the container image and redeploy. Both steps are required. Run from the `ai-advisor/` directory in PowerShell:
 
-```bash
-cd ai-advisor
-gcloud builds submit \
+```powershell
+# Step 1: Rebuild the container image
+gcloud builds submit `
   --tag us-central1-docker.pkg.dev/navigation-games-curriculum/advisor/lesson-advisor
 
-gcloud run deploy lesson-advisor \
-  --image us-central1-docker.pkg.dev/navigation-games-curriculum/advisor/lesson-advisor \
+# Step 2: Deploy the new image
+gcloud run deploy lesson-advisor `
+  --image us-central1-docker.pkg.dev/navigation-games-curriculum/advisor/lesson-advisor `
   --region us-central1
 ```
+
+If you only change frontend files (`site/src/components/AdvisorChat/`, `site/src/pages/plan-my-lessons.*`), you do NOT need to rebuild the backend. Those changes go out with the normal Docusaurus build via `git push` (GitHub Actions deploys automatically).
+
+If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub settings, you can trigger a rebuild from GitHub: **Actions > Deploy to GitHub Pages > Run workflow**.
 
 ## Configuration
 
@@ -194,7 +204,6 @@ At realistic usage (under 100 conversations/month), API costs are under $10/mont
 
 ## Future additions
 
-- Google Sheets logging for conversation review
 - Intake form before chat (name, email, school)
 - Follow-up survey link at end of conversations
 - Rate limiting with Redis (current in-memory store resets on deploy)

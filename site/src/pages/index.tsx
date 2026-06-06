@@ -22,11 +22,11 @@ function PathCard({title, description, link, emoji}: {
 
 export default function Home(): React.ReactElement {
   return (
-    <Layout title="Curricula" description="Orienteering curriculum for schools and camps">
+    <Layout title="Curricula" description="Orienteering curricula for schools and camps">
       <header className={styles.hero}>
         <div className="container">
           <Heading as="h1">Navigation Games</Heading>
-          <p className={styles.subtitle}>Orienteering curriculum for schools and camps</p>
+          <p className={styles.subtitle}>Orienteering curricula for schools and camps</p>
         </div>
       </header>
       <main className="container">
@@ -50,11 +50,18 @@ export default function Home(): React.ReactElement {
             link="/lessons/camp"
           />
         </div>
-        <p style={{textAlign: 'center', marginTop: '1.5rem'}}>
-          <Link to="/plan-my-lessons">Plan My Lessons</Link>
-          {' · '}
-          <Link to="/about/how-to-use-this-site">How to use this site</Link>
-        </p>
+        <div className={styles.secondaryLinks}>
+          <Link to="/plan-my-lessons" className={styles.secondaryLink}>
+            <span className={styles.secondaryEmoji}>💬</span>
+            <strong>Plan My Lessons</strong>
+            <span className={styles.secondaryDesc}>Get personalized recommendations from our AI advisor</span>
+          </Link>
+          <Link to="/about/how-to-use-this-site" className={styles.secondaryLink}>
+            <span className={styles.secondaryEmoji}>📖</span>
+            <strong>How to Use This Site</strong>
+            <span className={styles.secondaryDesc}>A guide to finding what you need</span>
+          </Link>
+        </div>
       </main>
     </Layout>
   );

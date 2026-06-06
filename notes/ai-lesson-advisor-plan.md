@@ -137,3 +137,50 @@ The system prompt / knowledge base should include:
 - Verify rate limiting works
 - Verify the feedback survey link appears at end of conversations
 - Check that curriculum page links in AI responses work correctly
+
+## Future: curriculum Q&A mode
+
+The advisor could also serve as a quick way to look up specific curriculum content without navigating the site. Examples:
+
+- "Give me the script for Animal-O"
+- "What materials do I need for Geometric-O?"
+- "What are the steps for setting up Score-O?"
+- "What vocabulary should I introduce in Lesson 3?"
+
+This turns the advisor into a search/reference tool in addition to a planning tool. Teachers who already know the curriculum could use it as a faster alternative to clicking through pages. The system prompt already has the curriculum content; this would just require encouraging the AI to surface specific details (setup steps, scripts, vocabulary) when asked directly, rather than always framing responses as lesson recommendations.
+
+This could also support on-the-fly questions during delivery: "I'm about to run Animal-O and I forget how to explain the clue sheets to kids."
+
+## Future: teacher feedback on lessons and activities
+
+Add a feedback mechanism to every lesson and activity page so teachers can share what worked well or didn't. This could be a simple form at the bottom of each page (thumbs up/down + optional comment) or a "Leave feedback" button that submits to a Google Sheet.
+
+Benefits:
+- Periodically review feedback to improve lessons and activity write-ups
+- Surface the best comments as a "From teachers" section on each page (curated, not automatic)
+- Builds a teacher community and shows that real people are using the curriculum
+- Gives Navigation Games data on which activities land well and which need work
+
+Implementation options:
+- Simple: Google Form embedded at the bottom of each page, one form per activity/lesson with the page name pre-filled
+- Better: Custom React component that submits to a Google Sheet via the Cloud Run backend (same infrastructure as the advisor)
+- The advisor conversation logs already capture some of this indirectly, but direct page-level feedback is more targeted
+
+Curation idea: rather than manually selecting which comments to feature, use AI to periodically review all feedback for a given activity or lesson and generate a "From teachers" summary section. The AI could pull out the most useful, specific observations (e.g., "The clue sheets worked better when I laminated them" or "My 3rd graders needed 10 extra minutes for this") and skip vague praise or complaints. This could run as a batch process that regenerates the comments sections across the site, with Barb reviewing before publishing.
+
+## Future: engagement/differentiation tips in the curriculum
+
+Add a section to the curriculum (possibly on lesson pages or as a standalone guide) covering strategies for engaging reluctant or disengaged students:
+
+- Gamify activities by adding tag elements (Vampire-O, Capture-the-Flag-O)
+- Let students design the activity (design courses, copy maps, draw maps, place checkpoints)
+- Step back to inherently game-like activities (Animal-O, Explore & Find) before building back up
+- Strategic pairing (reluctant + enthusiastic; navigator/checker roles)
+
+These tips surfaced from advisor testing and should be part of the curriculum content itself, not just the AI's knowledge.
+
+## Future: map access for teachers
+
+Navigation Games is building an application for teachers to get PDFs of orienteering maps. Beta: https://mapmap-1036566350109.us-east1.run.app/
+
+When this is ready, the advisor could link teachers directly to it when they need a map, instead of telling them to email Navigation Games. This would significantly reduce friction for the most common blocker (not having a map).

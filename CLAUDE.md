@@ -44,16 +44,17 @@ Every core activity needs these, consistent with each other:
 2. **Real-life imagery** — setup photos; drone shots for geometric activities
 3. **Consistent vocabulary** — no orienteering jargon without a plain-language definition
 
-## Vocabulary Decisions (pending)
+## Vocabulary Decisions
 
-- "Controls" vs "checkpoints" — decide and find-replace everywhere
-- "Punch" vs "beep" vs "visit" — pick one org-wide
+- "Controls" vs "checkpoints" — **decided: use "checkpoints"** throughout. Done. Glossary notes the orienteering term "control."
+- "Punch" vs "beep" vs "visit" — pick one org-wide (pending)
 - "OOB" — always spell out as "out of bounds"
 - "Score-O" → use "Map Treasure Hunt" for camp audiences
+- A person who orienteers is an **"orienteer"**, not "orienteerer"
 
 ## Site Stack
 
-**Docusaurus + GitHub + GitHub Pages + GitHub Actions**
+**Docusaurus + GitHub + GitHub Pages + GitHub Actions + Google Cloud Run (AI advisor)**
 
 - MDX (Markdown + JSX) for content. Supports custom React components
 - Custom `<ActivityCard>` component for lesson pages to link to activities
@@ -71,20 +72,24 @@ Every core activity needs these, consistent with each other:
 - `content/lessons/` - **source files for lesson plans** (edit here, never in site/docs/)
 - `background/` - source materials, reference docs, uploaded context files (site-tools-discussion.md, ng-curriculum-prep.html, etc.)
 - `notes/` - curriculum decisions, open questions, author notes
+- `ai-advisor/` - AI lesson plan advisor backend (Python/Flask, deployed on Google Cloud Run)
 - `site/docs/activities/core/` - **AUTO-GENERATED** activity pages (do not edit; do not create files here)
 - `site/docs/lessons/school/` - **AUTO-GENERATED** lesson pages (do not edit; do not create files here), plus hand-maintained index.md files
 - `site/docs/lessons/camp/` - camp lesson progressions (hand-maintained)
 - `site/docs/about/` - about pages: how-to-use, concepts, acknowledgments, copyright
 - `site/docs/reference/` - glossary, frameworks, equipment & materials
 - `site/docs/reference/equipment/` - materials index, maps, controls, kits, setup guides, electronic timing
-- `site/src/components/` - reusable React components (ActivityCard, CardGrid, YouTube)
-- `site/src/pages/` - standalone landing pages (home, school, camp, quick-start)
+- `site/src/components/` - reusable React components (ActivityCard, CardGrid, YouTube, AdvisorChat)
+- `site/src/pages/` - standalone landing pages (home, school, camp, quick-start, plan-my-lessons)
 
 ## Key References
 
 - **Editing guide:** `site/docs/editors/editing-guide.md` — how content files are structured, where to edit, how the build system works. Read this at the start of any content-editing session.
 - **Roadmap:** `site/docs/editors/roadmap.md` — what's done, what's next. Update the roadmap when we identify work that should happen next.
 - **Activities & Lessons table:** `site/src/components/ActivitiesTable/activitiesData.ts` — master list of activities with metadata. Keep this in sync when adding or changing activities.
+- **AI Advisor README:** `ai-advisor/README.md` — deployment, configuration, and rebuild instructions for the lesson plan advisor backend.
+- **AI Advisor plan:** `notes/ai-lesson-advisor-plan.md` — design decisions, future features, and test scenarios.
+- **Advisor conversation log:** Google Sheet `13P76_hPAVDDjnwJ9aazIdW-WAtGKNW5fBVD6TX1s5aY` — all advisor conversations are logged here for curriculum improvement.
 
 ## Working Conventions
 
@@ -131,6 +136,33 @@ Use **Navigator** (the person doing the orienteering) and **Checker** (the perso
 
 ### Don't add what the activity doesn't call for
 If the activity's core steps don't mention pairing, don't add pairing to the lesson plan. Let the activity's design speak. Add lesson-level guidance for tailoring to the age group, but don't invent new mechanics.
+
+## AI Lesson Plan Advisor
+
+An embedded AI chat at `/plan-my-lessons/` that helps teachers and anyone else plan orienteering lessons. Uses Claude (Sonnet) via the Anthropic API.
+
+### Architecture
+
+- **Backend:** Python/Flask on Google Cloud Run (`ai-advisor/`). Wraps the Claude API with curriculum knowledge baked into the system prompt.
+- **Frontend:** React chat component (`site/src/components/AdvisorChat/`) on the Docusaurus site.
+- **Logging:** Every conversation is logged to a Google Sheet for curriculum improvement.
+- **Cloud Run service URL:** `https://lesson-advisor-523012695945.us-central1.run.app`
+- **Google Cloud project:** `navigation-games-curriculum`
+
+### Updating the advisor
+
+The system prompt lives at `ai-advisor/system-prompt.md`. Changes to the system prompt, `app.py`, or `requirements.txt` require rebuilding the container and redeploying to Cloud Run. See `ai-advisor/README.md` for the PowerShell commands.
+
+Frontend changes (`AdvisorChat/`, `plan-my-lessons.*`) deploy automatically via the normal GitHub Actions workflow on `git push`.
+
+### Key lessons from testing
+
+- The advisor must not hallucinate facts about orienteering clubs, events, college programs, or map ownership. The system prompt explicitly forbids this and instructs the AI to provide URLs instead of guessing.
+- A person who does orienteering is an "orienteer," not an "orienteerer."
+- The advisor welcomes anyone (not just teachers): birthday parties, scout troops, community events.
+- For one-off events, point to Quick Start. For multi-session progressions, recommend existing curricula.
+- For grades 3-5+, prioritize getting students on a real map by the end of their time, even if it means skipping intermediate steps.
+- The advisor responds in whatever language the person writes in.
 
 ## Generated vs Hand-Maintained Files (CRITICAL)
 

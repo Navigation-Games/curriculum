@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 # CORS: allow the curriculum site and localhost for development
 ALLOWED_ORIGINS = [
-    "https://navgames.github.io",
+    "https://navigation-games.github.io",
     "http://localhost:3000",
     "http://localhost:3001",
 ]

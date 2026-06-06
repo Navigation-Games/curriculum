@@ -51,6 +51,8 @@ What's done, what's next, and what's deferred.
 
 - **Course design reference content.** White/Yellow/Orange course difficulty levels are now described in Camp Lesson 6 delivery notes, but could become a standalone reference page or setup guide with diagrams showing checkpoint placement principles (controls must be on distinct features, progression from path junctions to off-trail locations).
 
+- **Printable materials for Basketball-O and Geometric-O.** These activities appear in Quick Start as "easiest to set up," but teachers still need to make or find the maps/court diagrams. Provide downloadable PDFs (court layout for Basketball-O, pattern templates for Geometric-O) so teachers can print and go. Without these, "easiest to set up" is misleading.
+
 - **Leave No Trace page.** The current draft needs a tone revision so it feels natural and confident rather than justifying orienteering's existence. The core message is simple: orienteering is low-impact, and here is what to teach when you are in wilder areas.
 
 ### Design system
@@ -68,7 +70,7 @@ What's done, what's next, and what's deferred.
 - **Grade band expansion.** K-2 and 6+ lesson plans exist but need further editing passes. Camp Intro and Skill Development curricula have first-draft lesson plans.
 - **Search.** Docusaurus has built-in search (Algolia or local). Not yet configured.
 - **Print styles.** The one-pager view works but could use CSS refinement for clean printing.
-- **AI lesson plan advisor.** An embedded AI chat on the site that helps teachers build a tailored lesson plan based on their situation. Includes an intake form, conversation logging for curriculum improvement, and a follow-up survey. See the [detailed plan](https://github.com/Navigation-Games/curriculum/blob/main/notes/ai-lesson-advisor-plan.md).
+- **AI lesson plan advisor enhancements.** The advisor is live at `/plan-my-lessons/`. Remaining work: intake form (name, email, school), follow-up survey link at end of conversations, curriculum Q&A mode (answer specific questions like "give me the script for Animal-O"), teacher feedback on activity/lesson pages. See the [detailed plan](https://github.com/Navigation-Games/curriculum/blob/main/notes/ai-lesson-advisor-plan.md).
 
 ## Deferred
 
@@ -121,3 +123,4 @@ Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O
 - Camp Lesson 6: added White/Yellow/Orange course difficulty level guidance
 - Camp Belknap Design Meeting #2 video transcript mined: OUSA alignment noted, Memory-O descriptions captured, recognition system discussion (two levels preferred), relay variation (three simultaneous similar courses)
 - All available Camp Belknap design meeting transcripts mined (Meetings #2, #3, #4; Meeting #1 recording not available)
+- AI lesson plan advisor: live at `/plan-my-lessons/` with Claude Sonnet backend on Google Cloud Run, Google Sheets conversation logging, multi-language support, and community resource links (NEOC, OUSA, Navigation Games events)
