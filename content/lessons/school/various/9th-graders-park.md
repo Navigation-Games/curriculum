@@ -66,13 +66,13 @@ Erkan brings a rare combination of skills to program design: deep knowledge of o
 
 A 90-minute station rotation for ~75 ninth graders. Three groups of 25 rotate through three 30-minute stations, each led by a different instructor. Every student gets Animal-O/Geometric-O, Score-O, and a mapmaking exercise.
 
-### Staffing
+### Station Details
 
-| Station | Activity | NG Staff | Notes |
+| Station | Activity | NG Staff / BGA Staff | Notes |
 |---|---|---|---|
-| Station A | Animal-O and Geometric-O | Maija + BGA Staff and Chaperones | Set up the course with the first group. Collect all materials with the last group. |
-| Station B | Score-O (own your courses on the poster-sized map) | Mikayla / Marius + BGA Staff and Chaperones | |
-| Station C | Draw the Map | Izzy / Anlinn + BGA Staff and Chaperones | |
+| Station A | Animal-O and Geometric-O | Maija / BGA Staff and Chaperones | Set up the course with the first group. Collect all materials with the last group. |
+| Station B | Score-O (own your courses on the poster-sized map) | Mikayla / Marius / BGA Staff and Chaperones | |
+| Station C | Draw the Map | Izzy / Anlinn / BGA Staff and Chaperones | |
 
 ### Station A: Animal-O and Geometric-O
 
@@ -112,16 +112,16 @@ Have partially completed orienteering maps ready (one per student) with some fea
 3. **Compare to the orienteering map** (5 min): gather students and compare their hand-drawn maps to the real orienteering map of the same area. What did they notice? What did they miss? What surprised them?
 4. **Transition** (5 min): move to the next station.
 
-### Rotation Schedule
+### Activity Rotation Schedule
 
-| Time | Group 1 | Group 2 | Group 3 |
-|---|---|---|---|
-| 9:45 - 10:15 | Station A: Animal-O and Geo-O | Station B: Score-O | Station C: Draw the Map |
-| 10:15 - 10:20 | Transition | Transition | Transition |
-| 10:20 - 10:50 | Station B: Score-O | Station C: Draw the Map | Station A: Animal-O and Geo-O |
-| 10:50 - 10:55 | Transition | Transition | Transition |
-| 10:55 - 11:25 | Station C: Draw the Map | Station A: Animal-O and Geo-O | Station B: Score-O |
-| 11:25 - 11:30 | Wrap-up and Lunch Transition | | |
+| Time | Group 1 | Group 2 | Group 3 | Note |
+|---|---|---|---|---|
+| 9:45 - 10:15 | Station A: Animal-O and Geo-O | Station B: Score-O | Station C: Draw the Map | |
+| 10:15 - 10:20 | Transition | Transition | Transition | |
+| 10:20 - 10:50 | Station B: Score-O | Station C: Draw the Map | Station A: Animal-O and Geo-O | |
+| 10:50 - 10:55 | Transition | Transition | Transition | |
+| 10:55 - 11:25 | Station C: Draw the Map | Station A: Animal-O and Geo-O | Station B: Score-O | |
+| 11:25 - 11:30 | Wrap-up and Lunch Transition | | | |
 
 ### Notes
 
