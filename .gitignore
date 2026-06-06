@@ -23,6 +23,8 @@ site/docs/lessons/camp/intro/*.md
 !site/docs/lessons/camp/intro/index.md
 site/docs/lessons/camp/full/*.md
 !site/docs/lessons/camp/full/index.md
+site/docs/lessons/school/various/*.md
+!site/docs/lessons/school/various/index.md
 
 # Data
 *.csv

@@ -28,4 +28,9 @@ Structured lesson progressions for PE classes, organized by grade band. Each pro
     description="Score-O, Poison-O, compass work, relay races, and reverse mapping exercises."
     link="/lessons/school/grade-6-plus"
   />
+  <ActivityCard
+    title="Various"
+    description="Staff-designed programs and reviewed Advisor sessions for specific events, schools, and situations."
+    link="/lessons/school/various"
+  />
 </CardGrid>
