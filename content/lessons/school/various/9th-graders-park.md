@@ -114,6 +114,17 @@ Have partially completed orienteering maps ready (one per student) with some fea
 
 Total time: 90 minutes plus transitions between stations.
 
+### Notes
+
+- Each station splits 25 students into two smaller groups (A and B) for manageability
+- Station A's cone setup only happens with the first group; subsequent groups find it ready
+- Station B's streamer pickup only happens with the last group (or is done by instructors between rotations)
+- The mapmaking station (C) does not require prior orienteering experience, so rotation order is flexible
+
+### Original Design
+
+![Erkan Sezgin's whiteboard plan for the BCA 9th-grade station rotation](/img/lessons/bca-9th-grade-whiteboard.png)
+
 
 ## Compact Delivery
 
@@ -136,11 +147,3 @@ Total time: 90 minutes plus transitions between stations.
 2. **Draw the map**: complete a partially finished map by observing the terrain (20 min)
 3. Compare hand-drawn maps to the real orienteering map (5 min)
 4. Transition (5 min)
-
-
-## Notes
-
-- Each station splits 25 students into two smaller groups (A and B) for manageability
-- Station A's cone setup only happens with the first group; subsequent groups find it ready
-- Station B's streamer pickup only happens with the last group (or is done by instructors between rotations)
-- The mapmaking station (C) does not require prior orienteering experience, so rotation order is flexible
