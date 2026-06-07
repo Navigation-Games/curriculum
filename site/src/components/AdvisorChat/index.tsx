@@ -7,6 +7,50 @@ interface Message {
   content: string;
 }
 
+interface UserInfo {
+  name: string;
+  email: string;
+  organization: string;
+}
+
+const STORAGE_KEY = 'ng-advisor-session';
+
+interface StoredSession {
+  conversationId: string;
+  messages: Message[];
+  userInfo: UserInfo;
+}
+
+function loadSession(): StoredSession | null {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (parsed.conversationId && Array.isArray(parsed.messages)) {
+      return parsed;
+    }
+  } catch {
+    // Corrupted data, ignore
+  }
+  return null;
+}
+
+function saveSession(session: StoredSession): void {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(session));
+  } catch {
+    // Storage full or unavailable, ignore
+  }
+}
+
+function clearSession(): void {
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch {
+    // Ignore
+  }
+}
+
 /**
  * Render markdown-like text with basic formatting:
  * - **bold**
@@ -90,15 +134,29 @@ function formatMessage(text: string): React.ReactNode {
   return <>{elements}</>;
 }
 
+function generateId(): string {
+  return crypto.randomUUID?.() || Math.random().toString(36).slice(2) + Date.now().toString(36);
+}
+
 export default function AdvisorChat(): React.ReactElement {
   const {siteConfig} = useDocusaurusContext();
   const apiUrl = (siteConfig.customFields?.advisorApiUrl as string) || 'http://localhost:8080';
 
-  const [messages, setMessages] = useState<Message[]>([]);
+  // Try to restore a previous session
+  const restored = loadSession();
+
+  const [messages, setMessages] = useState<Message[]>(restored?.messages || []);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [conversationId, setConversationId] = useState<string | null>(null);
+  const [conversationId, setConversationId] = useState<string>(
+    restored?.conversationId || generateId()
+  );
+  const [userInfo, setUserInfo] = useState<UserInfo>(
+    restored?.userInfo || {name: '', email: '', organization: ''}
+  );
+  const [showIntro, setShowIntro] = useState(!restored);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -106,6 +164,13 @@ export default function AdvisorChat(): React.ReactElement {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({behavior: 'smooth'});
   }, [messages, isLoading]);
+
+  // Save session to localStorage whenever it changes
+  useEffect(() => {
+    if (!showIntro && messages.length > 0) {
+      saveSession({conversationId, messages, userInfo});
+    }
+  }, [messages, conversationId, userInfo, showIntro]);
 
   // Auto-resize textarea
   const handleInputChange = useCallback(
@@ -138,6 +203,7 @@ export default function AdvisorChat(): React.ReactElement {
         body: JSON.stringify({
           conversation_id: conversationId,
           messages: updatedMessages,
+          user_info: userInfo,
         }),
       });
 
@@ -148,17 +214,18 @@ export default function AdvisorChat(): React.ReactElement {
 
       const data = await response.json();
       setConversationId(data.conversation_id);
-      setMessages([
+      const newMessages: Message[] = [
         ...updatedMessages,
         {role: 'assistant', content: data.response},
-      ]);
+      ];
+      setMessages(newMessages);
     } catch (err) {
       setError('fallback');
     } finally {
       setIsLoading(false);
       inputRef.current?.focus();
     }
-  }, [input, isLoading, messages, conversationId]);
+  }, [input, isLoading, messages, conversationId, userInfo]);
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
@@ -170,16 +237,95 @@ export default function AdvisorChat(): React.ReactElement {
     [sendMessage],
   );
 
+  const handleStartChat = useCallback((e: React.FormEvent) => {
+    e.preventDefault();
+    setShowIntro(false);
+  }, []);
+
+  const handleNewConversation = useCallback(() => {
+    clearSession();
+    setMessages([]);
+    setConversationId(generateId());
+    setError(null);
+    // Keep userInfo so they don't have to re-enter it
+    setShowIntro(true);
+  }, []);
+
+  // Intro screen with optional user info
+  if (showIntro) {
+    return (
+      <div className={styles.chat}>
+        <div className={styles.intro}>
+          <h3>Navigation Games Lesson Plan Advisor</h3>
+          <p>
+            I can help you put together an orienteering unit that fits your
+            grade level, schedule, and space.
+          </p>
+          <p className={styles.introSubtext}>
+            Sharing your info is optional but helps us improve our curriculum.
+          </p>
+          <form onSubmit={handleStartChat} className={styles.introForm}>
+            <label className={styles.introLabel}>
+              Name
+              <input
+                type="text"
+                value={userInfo.name}
+                onChange={e => setUserInfo({...userInfo, name: e.target.value})}
+                placeholder="Optional"
+                className={styles.introInput}
+              />
+            </label>
+            <label className={styles.introLabel}>
+              Email
+              <input
+                type="email"
+                value={userInfo.email}
+                onChange={e => setUserInfo({...userInfo, email: e.target.value})}
+                placeholder="Optional"
+                className={styles.introInput}
+              />
+            </label>
+            <label className={styles.introLabel}>
+              School or organization
+              <input
+                type="text"
+                value={userInfo.organization}
+                onChange={e => setUserInfo({...userInfo, organization: e.target.value})}
+                placeholder="Optional"
+                className={styles.introInput}
+              />
+            </label>
+            <button type="submit" className={styles.startButton}>
+              Start chatting
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
   const greeting = messages.length === 0;
 
   return (
     <div className={styles.chat}>
+      <div className={styles.chatHeader}>
+        {userInfo.name && (
+          <span className={styles.userName}>{userInfo.name}</span>
+        )}
+        <button
+          className={styles.newChatButton}
+          onClick={handleNewConversation}
+          title="Start a new conversation"
+        >
+          New conversation
+        </button>
+      </div>
       <div className={styles.messages}>
         {greeting && (
           <div className={`${styles.message} ${styles.assistant}`}>
             <div className={styles.bubble}>
               <p>
-                Hi! I'm the Navigation Games lesson plan advisor. I can help you
+                Hi{userInfo.name ? ` ${userInfo.name}` : ''}! I'm the Navigation Games lesson plan advisor. I can help you
                 put together an orienteering unit that fits your grade level,
                 schedule, and space.
               </p>

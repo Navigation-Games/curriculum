@@ -129,6 +129,7 @@ def chat():
 
     messages = data["messages"]
     conversation_id = data.get("conversation_id", str(uuid.uuid4()))
+    user_info = data.get("user_info", {})
 
     # Validate messages format
     if not isinstance(messages, list) or len(messages) == 0:
@@ -162,7 +163,7 @@ def chat():
         assistant_message = response.content[0].text
 
         # Log conversation
-        _log_exchange(conversation_id, messages, assistant_message, response)
+        _log_exchange(conversation_id, messages, assistant_message, response, user_info)
 
         return jsonify(
             {
@@ -183,6 +184,7 @@ def _log_exchange(
     messages: list[dict],
     assistant_response: str,
     api_response,
+    user_info: dict | None = None,
 ):
     """
     Log a conversation exchange to Google Sheets and stdout.
@@ -191,6 +193,9 @@ def _log_exchange(
     The full conversation history is sent to Claude each time, but we only log
     the new messages (the last user message and the assistant response) to
     avoid duplicating earlier messages in the sheet.
+
+    Columns: timestamp, conversation_id, msg_number, role, content, model,
+             input_tokens, output_tokens, user_name, user_email, user_org
     """
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
     model = api_response.model
@@ -200,10 +205,16 @@ def _log_exchange(
     # Message number: how many messages deep we are in this conversation
     msg_number = len(messages)
 
+    # User info (only populated on first message, but included on all rows
+    # so each row is self-contained when filtering the sheet)
+    user_name = (user_info or {}).get("name", "")
+    user_email = (user_info or {}).get("email", "")
+    user_org = (user_info or {}).get("organization", "")
+
     # Rows to append: the latest user message + the assistant response
     rows = [
-        [now, conversation_id, msg_number, "user", messages[-1]["content"], "", "", ""],
-        [now, conversation_id, msg_number + 1, "assistant", assistant_response, model, str(input_tokens), str(output_tokens)],
+        [now, conversation_id, msg_number, "user", messages[-1]["content"], "", "", "", user_name, user_email, user_org],
+        [now, conversation_id, msg_number + 1, "assistant", assistant_response, model, str(input_tokens), str(output_tokens), user_name, user_email, user_org],
     ]
 
     # Log to Google Sheets
@@ -225,6 +236,9 @@ def _log_exchange(
         "model": model,
         "input_tokens": input_tokens,
         "output_tokens": output_tokens,
+        "user_name": user_name,
+        "user_email": user_email,
+        "user_org": user_org,
     }
     if hasattr(api_response.usage, "cache_creation_input_tokens"):
         log_entry["cache_creation_tokens"] = api_response.usage.cache_creation_input_tokens

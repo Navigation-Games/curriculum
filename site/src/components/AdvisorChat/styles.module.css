@@ -185,6 +185,121 @@
   cursor: not-allowed;
 }
 
+/* Intro screen */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  flex: 1;
+}
+
+.intro h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.intro > p {
+  margin: 0 0 0.25rem;
+  text-align: center;
+  max-width: 400px;
+}
+
+.introSubtext {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1rem;
+}
+
+.introForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 360px;
+  margin-top: 0.5rem;
+}
+
+.introLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ifm-font-color-base);
+}
+
+.introInput {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+.introInput:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lighter);
+}
+
+.introInput::placeholder {
+  color: var(--ifm-color-emphasis-400);
+}
+
+.startButton {
+  margin-top: 0.5rem;
+  padding: 0.7rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--ifm-color-primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.startButton:hover {
+  background: var(--ifm-color-primary-dark);
+}
+
+/* Chat header */
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-surface-color);
+  font-size: 0.85rem;
+}
+
+.userName {
+  color: var(--ifm-color-emphasis-600);
+  margin-right: auto;
+}
+
+.newChatButton {
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.newChatButton:hover {
+  background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .chat {
