@@ -17,6 +17,7 @@ materials:
   - Checkpoint streamers
   - Partially completed orienteering maps (one per student)
   - Colored pencils or markers
+  - Blank orienteering maps (one per student, for Score-O)
   - Orienteering maps of the park
 setup: >
   Set up three station areas in the park. Station A needs animal checkpoints in a geometric pattern with colored cones at corners. Station B needs checkpoint streamers placed for Score-O and a poster-sized orienteering map. Station C needs a flat area for mapmaking with orienteering maps for comparison.
@@ -95,10 +96,11 @@ Set up animal-picture checkpoints in a geometric pattern with colored landmark c
 Place checkpoint streamers around the Score-O area. Have the poster-sized orienteering map ready for the intro. Mikayla knows the checkpoint system. Split each group of 25 into two smaller groups (A and B).
 
 1. **Introduce the orienteering map** (5 min): explain map symbols and how to orient the map so it matches the terrain.
-2. **Set up checkpoint locations on the poster map** (10 min): using the poster-sized map, show where checkpoints are. Students match symbols on the map to features they can see.
-3. **Water break** (2 min)
-4. [**Score-O**](/activities/core/score-o) (10 min): students navigate to as many checkpoints as possible within the time limit, using their orienteering maps.
-5. **Clean up** (5 min): pick up the streamers.
+2. **Set up checkpoint locations on the poster map** (5 min): using the poster-sized map, show where checkpoints are. Students match symbols on the map to features they can see.
+3. **Copy the course onto blank maps** (5 min): students transfer the checkpoint locations from the poster map onto their own blank orienteering maps.
+4. **Water break** (2 min)
+5. [**Score-O**](/activities/core/score-o) (10 min): students navigate to as many checkpoints as possible within the time limit, using their maps.
+6. **Clean up** (5 min): pick up the streamers.
 
 ### Station C: Draw a Map
 
@@ -146,10 +148,11 @@ Have partially completed orienteering maps ready (one per student) with some fea
 
 ### Station B (Mikayla, Marius)
 1. Explain map symbols, orient the map (5 min)
-2. Show checkpoint locations on poster map (10 min)
-3. Water break (2 min)
-4. **Score-O**: navigate to checkpoints (10 min)
-5. Pick up streamers (5 min)
+2. Show checkpoint locations on poster map (5 min)
+3. Copy course onto blank maps (5 min)
+4. Water break (2 min)
+5. **Score-O**: navigate to checkpoints (10 min)
+6. Pick up streamers (5 min)
 
 ### Station C (Anlinn, Izzy)
 1. Explain map symbols, orient the map (5 min)
