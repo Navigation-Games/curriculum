@@ -153,7 +153,11 @@ An embedded AI chat at `/plan-my-lessons/` that helps teachers and anyone else p
 
 The system prompt lives at `ai-advisor/system-prompt.md`. Changes to the system prompt, `app.py`, or `requirements.txt` require rebuilding the container and redeploying to Cloud Run. See `ai-advisor/README.md` for the PowerShell commands.
 
-Frontend changes (`AdvisorChat/`, `plan-my-lessons.*`) deploy automatically via the normal GitHub Actions workflow on `git push`.
+Frontend changes (`AdvisorChat/`, `plan-my-lessons.*`, `ReviewConversations/`, `review-conversations.*`) deploy automatically via the normal GitHub Actions workflow on `git push`.
+
+### Conversation review (staff feedback tool)
+
+Built June 2026. NG staff review advisor conversations and leave feedback at `/review-conversations/` (not in the navbar). Sign-in is Google Identity Services restricted to @navigationgames.org accounts; the backend verifies the ID token's `hd` claim (never check the email domain string). Feedback lives in the "Feedback" tab of the conversation log sheet (auto-created): timestamp, conversation_id, reviewer_email, status (commented/dismissed), feedback. Default list shows only conversations the signed-in reviewer hasn't handled; "Show all" reveals everything. Backend endpoints are `/review/*` in `ai-advisor/app.py`, tested by `ai-advisor/test_review.py` (run with `pytest` from `ai-advisor/`). Periodic workflow: Barb reviews accumulated feedback with Claude and updates the system prompt. Requires `REVIEW_OAUTH_CLIENT_ID` env var on Cloud Run plus `reviewOauthClientId` in `docusaurus.config.ts`; setup steps in `ai-advisor/README.md`.
 
 ### Key lessons from testing
 

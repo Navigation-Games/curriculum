@@ -77,6 +77,17 @@ The AI's system prompt instructs it to end conversations with a feedback link. T
 - What would have made it more useful? (open text)
 - Can we follow up with you? (checkbox)
 
+### Staff conversation review (built June 2026)
+
+Navigation Games staff review logged conversations and leave feedback at `/review-conversations/` on the site. Staff sign in with their navigationgames.org Google account (Google Identity Services on the frontend; the backend verifies the ID token and requires the `hd` claim to be navigationgames.org).
+
+- By default the list shows only conversations the signed-in reviewer hasn't commented on or dismissed. A "Show all" toggle reveals everything, with status chips for ones they've handled.
+- A reviewer can read the full thread, see all reviewers' comments (so they don't repeat each other), add their own, or dismiss the conversation.
+- Feedback lives in a second tab ("Feedback") of the conversation log Google Sheet: timestamp, conversation_id, reviewer_email, status (commented/dismissed), feedback. The backend auto-creates the tab.
+- The workflow: staff comment over time, then Barb periodically sits down with Claude to review accumulated feedback and update the advisor system prompt.
+- Decided against an AI-generated summary of comments; reviewers just see each other's comments directly. Revisit if the reviewer pool grows.
+- Google Sheets is the data store for now; move to Firestore only if it gets slow.
+
 ### Privacy
 
 Intake form includes a disclosure: "Conversations with the lesson plan advisor are logged so we can improve the curriculum. Your name and email are kept confidential." Standard for a nonprofit tool.

@@ -13,3 +13,4 @@ Tools and reference material for curriculum editors. This section is not part of
 - **[Roadmap](roadmap)** - What's done, what's next, and what's deferred.
 - **[Activities & Lessons Table](content-table)** - Sortable table of all activities and lessons with images, taglines, and metadata. Use this to review content at a glance and spot gaps.
 - **[Video Scripts](video-scripts/)** - Draft scripts for explainer videos covering each activity and lesson plan. These are working documents for video production.
+- **[Review Advisor Conversations](/review-conversations/)** - Read conversations people have had with the lesson plan advisor and leave feedback. Requires signing in with a navigationgames.org Google account.

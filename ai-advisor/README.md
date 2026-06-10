@@ -15,7 +15,8 @@ The advisor recommends from the existing Navigation Games curriculum. It does no
 
 ```
 ai-advisor/
-  app.py              - Flask backend (chat endpoint, rate limiting, logging)
+  app.py              - Flask backend (chat endpoint, review endpoints, rate limiting, logging)
+  test_review.py      - Tests for the /review endpoints (run with pytest)
   system-prompt.md    - Curriculum knowledge baked into the AI's system prompt
   requirements.txt    - Python dependencies
   Dockerfile          - Cloud Run container
@@ -29,8 +30,26 @@ Frontend files (in the Docusaurus site):
 site/src/pages/plan-my-lessons.tsx         - Page at /plan-my-lessons/
 site/src/pages/plan-my-lessons.module.css  - Page styles
 site/src/components/AdvisorChat/index.tsx  - Chat component
+site/src/components/AdvisorChat/formatMessage.tsx - Shared markdown-ish renderer
 site/src/components/AdvisorChat/styles.module.css - Chat styles
+site/src/pages/review-conversations.tsx    - Staff review page at /review-conversations/
+site/src/pages/review-conversations.module.css - Page styles
+site/src/components/ReviewConversations/index.tsx - Review component
+site/src/components/ReviewConversations/styles.module.css - Review styles
 ```
+
+## Endpoints
+
+| Endpoint | Method | Auth | Purpose |
+|---|---|---|---|
+| `/health` | GET | none | Cloud Run health check |
+| `/chat` | POST | none (rate limited) | Advisor chat |
+| `/review/conversations` | GET | Google ID token | List conversations (`?all=true` to include reviewed/dismissed) |
+| `/review/conversations/<id>` | GET | Google ID token | Full thread plus all reviewers' feedback |
+| `/review/conversations/<id>/feedback` | POST | Google ID token | Add a feedback comment (`{"feedback": "..."}`) |
+| `/review/conversations/<id>/dismiss` | POST | Google ID token | Hide a conversation from the reviewer's default list |
+
+The `/review/*` endpoints are for Navigation Games staff. They require a Google ID token from a `navigationgames.org` account, sent as `Authorization: Bearer <token>`. The backend verifies the token signature, audience (our OAuth client ID), the `hd` claim, and `email_verified`. Feedback is stored in a **Feedback** tab of the logging spreadsheet, which the backend creates automatically if missing (columns: timestamp, conversation_id, reviewer_email, status, feedback).
 
 ## Local development
 
@@ -65,6 +84,20 @@ npm start
 Go to http://localhost:3000/plan-my-lessons/ to test the chat.
 
 The frontend defaults to http://localhost:8080 for the backend API during local development.
+
+### Run the tests
+
+The `/review/*` endpoints have a test suite that fakes Google Sheets and token
+verification, so it needs no credentials or network access:
+
+```bash
+cd ai-advisor
+pip install pytest
+python -m pytest test_review.py -q
+```
+
+Run it after any change to `app.py`. The chat endpoint and real OAuth/Sheets
+integration are not covered; those are checked manually after deployment.
 
 ## Google Cloud deployment
 
@@ -170,6 +203,37 @@ npm run build
 
 No setup needed. The frontend defaults to `http://localhost:8080`, which is where the local Python backend runs.
 
+## Conversation review setup (one time)
+
+The review page (`/review-conversations/`) lets Navigation Games staff sign in with Google and comment on advisor conversations. It needs an OAuth client ID.
+
+### 1. Configure the OAuth consent screen
+
+In the Google Cloud Console (project `navigation-games-curriculum`), go to **APIs & Services > OAuth consent screen**:
+
+- User type: **Internal** if the project belongs to the navigationgames.org Workspace organization. If Internal is not offered, choose **External** and publish the app to production (no Google verification is needed for the basic sign-in scopes; the backend's domain check enforces staff-only access either way).
+- App name: `Navigation Games Conversation Review`, plus a support email. Default scopes are fine.
+
+### 2. Create the OAuth client ID
+
+Go to **APIs & Services > Credentials > Create Credentials > OAuth client ID**:
+
+- Application type: **Web application**
+- Authorized JavaScript origins: `https://navigation-games.github.io`, `http://localhost:3000`, and `http://localhost`
+- No redirect URIs needed (the page uses the Google Identity Services button flow)
+
+### 3. Configure the backend and frontend
+
+Set the client ID on the Cloud Run service (persists across future deploys):
+
+```powershell
+gcloud run services update lesson-advisor `
+  --region us-central1 `
+  --set-env-vars REVIEW_OAUTH_CLIENT_ID=YOUR_CLIENT_ID.apps.googleusercontent.com
+```
+
+For the frontend, either paste the client ID as the fallback value of `reviewOauthClientId` in `site/docusaurus.config.ts` (client IDs are public, not secrets), or set a `REVIEW_OAUTH_CLIENT_ID` repository variable in GitHub Actions and pass it through the deploy workflow. For local dev, set `$env:REVIEW_OAUTH_CLIENT_ID` before `npm start`, and add `REVIEW_OAUTH_CLIENT_ID` to `ai-advisor/.env`.
+
 ## Redeploying after changes
 
 Any time you change `app.py`, `system-prompt.md`, or `requirements.txt`, you need to rebuild the container image and redeploy. Both steps are required. Run from the `ai-advisor/` directory in PowerShell:
@@ -185,7 +249,7 @@ gcloud run deploy lesson-advisor `
   --region us-central1
 ```
 
-If you only change frontend files (`site/src/components/AdvisorChat/`, `site/src/pages/plan-my-lessons.*`), you do NOT need to rebuild the backend. Those changes go out with the normal Docusaurus build via `git push` (GitHub Actions deploys automatically).
+If you only change frontend files (`site/src/components/AdvisorChat/`, `site/src/components/ReviewConversations/`, `site/src/pages/plan-my-lessons.*`, `site/src/pages/review-conversations.*`), you do NOT need to rebuild the backend. Those changes go out with the normal Docusaurus build via `git push` (GitHub Actions deploys automatically).
 
 If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub settings, you can trigger a rebuild from GitHub: **Actions > Deploy to GitHub Pages > Run workflow**.
 
@@ -196,6 +260,8 @@ If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub
 | `ANTHROPIC_API_KEY` | Backend (Cloud Run secret) | Authenticates with the Claude API |
 | `ADVISOR_MODEL` | Backend (optional) | Override the Claude model (default: claude-sonnet-4-20250514) |
 | `PORT` | Backend (set by Cloud Run) | Server port (default: 8080) |
+| `ADVISOR_SHEET_ID` | Backend (optional) | Google Sheet ID for conversation logging; also used by the review endpoints |
+| `REVIEW_OAUTH_CLIENT_ID` | Backend + frontend (build time) | OAuth client ID for staff sign-in on the review page |
 | `ADVISOR_API_URL` | Frontend (build time) | Backend URL for the chat component |
 
 ## Cost

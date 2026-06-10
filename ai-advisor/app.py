@@ -12,11 +12,14 @@ import json
 import time
 import uuid
 from datetime import datetime, timezone
+from functools import wraps
 from pathlib import Path
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import anthropic
+from google.auth.transport import requests as google_requests
+from google.oauth2 import id_token as google_id_token
 
 app = Flask(__name__)
 
@@ -42,6 +45,16 @@ MAX_TOKENS = 1024
 # Google Sheets logging
 SPREADSHEET_ID = os.environ.get("ADVISOR_SHEET_ID", "")
 _sheets_client = None
+
+# Conversation review (Navigation Games staff)
+REVIEW_OAUTH_CLIENT_ID = os.environ.get("REVIEW_OAUTH_CLIENT_ID", "")
+REVIEW_ALLOWED_DOMAIN = "navigationgames.org"
+FEEDBACK_SHEET_TITLE = "Feedback"
+FEEDBACK_HEADER = ["timestamp", "conversation_id", "reviewer_email", "status", "feedback"]
+FEEDBACK_MAX_CHARS = 5000
+
+# Reusable transport for verifying Google ID tokens (caches Google's certs)
+_google_token_request = google_requests.Request()
 
 
 def get_sheets_client():
@@ -246,6 +259,283 @@ def _log_exchange(
         log_entry["cache_read_tokens"] = api_response.usage.cache_read_input_tokens
 
     app.logger.info(f"ADVISOR_LOG: {json.dumps(log_entry)}")
+
+
+# ---------------------------------------------------------------------------
+# Conversation review endpoints (Navigation Games staff only)
+#
+# Staff sign in with their @navigationgames.org Google account on the site's
+# review page. The frontend sends the Google ID token on every request; we
+# verify it here. The Cloud Run service allows unauthenticated requests, so
+# this verification is the only gate protecting conversation contents.
+# ---------------------------------------------------------------------------
+
+
+def require_reviewer(f):
+    """Require a valid Google ID token from a navigationgames.org account."""
+
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        if not REVIEW_OAUTH_CLIENT_ID:
+            return jsonify({"error": "Review is not configured on this server."}), 503
+
+        auth = request.headers.get("Authorization", "")
+        if not auth.startswith("Bearer "):
+            return jsonify({"error": "Missing bearer token."}), 401
+
+        try:
+            # Verifies signature, expiry, issuer, and audience (our client ID).
+            claims = google_id_token.verify_oauth2_token(
+                auth[len("Bearer "):],
+                _google_token_request,
+                REVIEW_OAUTH_CLIENT_ID,
+                clock_skew_in_seconds=10,
+            )
+        except ValueError:
+            return jsonify({"error": "Invalid or expired token."}), 401
+
+        # The hd claim is the only spoof-proof Workspace-domain signal.
+        # It is absent for consumer accounts, so absence means reject.
+        # Never use email.endswith() as the domain check.
+        if claims.get("hd") != REVIEW_ALLOWED_DOMAIN:
+            return jsonify({"error": "Access restricted to Navigation Games staff."}), 403
+        if not claims.get("email_verified"):
+            return jsonify({"error": "Email not verified."}), 403
+
+        request.reviewer_email = claims["email"]
+        return f(*args, **kwargs)
+
+    return wrapper
+
+
+def _open_spreadsheet():
+    """Return the logging spreadsheet, or None if Sheets is not configured."""
+    gc = get_sheets_client()
+    if not gc:
+        return None
+    return gc.open_by_key(SPREADSHEET_ID)
+
+
+def get_feedback_worksheet(spreadsheet):
+    """Return the Feedback tab, creating it with a header row if missing."""
+    import gspread
+
+    try:
+        return spreadsheet.worksheet(FEEDBACK_SHEET_TITLE)
+    except gspread.WorksheetNotFound:
+        ws = spreadsheet.add_worksheet(FEEDBACK_SHEET_TITLE, rows=1000, cols=len(FEEDBACK_HEADER))
+        ws.append_row(FEEDBACK_HEADER)
+        return ws
+
+
+def load_conversations(spreadsheet):
+    """
+    Read the conversation log (sheet1) and group rows by conversation_id.
+
+    Returns a dict: conversation_id -> {
+        "started_at", "user_name", "user_org",
+        "messages": [{"msg_number", "role", "content", "timestamp"}],
+        "model",
+    }
+
+    Reads the whole sheet on every request. Fine at current volume; if it
+    ever gets slow, wrap this in a module-level cache with a 30-60s TTL.
+    """
+    rows = spreadsheet.sheet1.get_all_values()
+    conversations: dict[str, dict] = {}
+
+    for i, row in enumerate(rows):
+        if len(row) < 5:
+            continue
+        # _log_exchange never wrote a header row, so row 1 may be data or a
+        # hand-added header. Skip any row whose msg_number isn't numeric.
+        try:
+            msg_number = int(row[2])
+        except ValueError:
+            continue
+
+        conv_id = row[1]
+        if not conv_id:
+            continue
+
+        conv = conversations.setdefault(
+            conv_id,
+            {"started_at": row[0], "user_name": "", "user_org": "", "messages": [], "model": ""},
+        )
+        conv["messages"].append(
+            {
+                "msg_number": msg_number,
+                "role": row[3],
+                "content": row[4],
+                "timestamp": row[0],
+            }
+        )
+        if len(row) >= 6 and row[5] and not conv["model"]:
+            conv["model"] = row[5]
+        if len(row) >= 9 and row[8] and not conv["user_name"]:
+            conv["user_name"] = row[8]
+        if len(row) >= 11 and row[10] and not conv["user_org"]:
+            conv["user_org"] = row[10]
+
+    for conv in conversations.values():
+        conv["messages"].sort(key=lambda m: m["msg_number"])
+
+    return conversations
+
+
+def load_feedback(spreadsheet):
+    """
+    Read the Feedback tab.
+
+    Returns a dict: conversation_id -> list of
+    {"timestamp", "reviewer_email", "status", "feedback"}.
+    """
+    ws = get_feedback_worksheet(spreadsheet)
+    rows = ws.get_all_values()
+    feedback: dict[str, list[dict]] = {}
+
+    for row in rows[1:]:  # skip header
+        if len(row) < 4 or not row[1]:
+            continue
+        feedback.setdefault(row[1], []).append(
+            {
+                "timestamp": row[0],
+                "reviewer_email": row[2],
+                "status": row[3],
+                "feedback": row[4] if len(row) >= 5 else "",
+            }
+        )
+
+    return feedback
+
+
+def _my_status(feedback_entries: list[dict], reviewer_email: str):
+    """The reviewer's own status for a conversation: 'commented', 'dismissed', or None."""
+    statuses = {e["status"] for e in feedback_entries if e["reviewer_email"] == reviewer_email}
+    if "commented" in statuses:
+        return "commented"
+    if "dismissed" in statuses:
+        return "dismissed"
+    return None
+
+
+@app.route("/review/conversations", methods=["GET"])
+@require_reviewer
+def review_list_conversations():
+    """
+    List conversations for review, newest first.
+
+    By default only conversations the signed-in reviewer has not commented on
+    or dismissed. Pass ?all=true to include everything.
+    """
+    spreadsheet = _open_spreadsheet()
+    if not spreadsheet:
+        return jsonify({"error": "Conversation log is not available."}), 503
+
+    show_all = request.args.get("all", "false").lower() == "true"
+    conversations = load_conversations(spreadsheet)
+    feedback = load_feedback(spreadsheet)
+    reviewer_email = request.reviewer_email
+
+    items = []
+    for conv_id, conv in conversations.items():
+        entries = feedback.get(conv_id, [])
+        my_status = _my_status(entries, reviewer_email)
+        if not show_all and my_status is not None:
+            continue
+
+        first_user_message = next(
+            (m["content"] for m in conv["messages"] if m["role"] == "user"), ""
+        )
+        items.append(
+            {
+                "conversation_id": conv_id,
+                "started_at": conv["started_at"],
+                "user_name": conv["user_name"],
+                "user_org": conv["user_org"],
+                "first_user_message": first_user_message[:200],
+                "message_count": len(conv["messages"]),
+                "comment_count": sum(1 for e in entries if e["status"] == "commented"),
+                "my_status": my_status,
+            }
+        )
+
+    items.sort(key=lambda c: c["started_at"], reverse=True)
+    return jsonify({"reviewer_email": reviewer_email, "conversations": items})
+
+
+@app.route("/review/conversations/<conversation_id>", methods=["GET"])
+@require_reviewer
+def review_get_conversation(conversation_id):
+    """Full conversation thread plus all reviewers' feedback."""
+    spreadsheet = _open_spreadsheet()
+    if not spreadsheet:
+        return jsonify({"error": "Conversation log is not available."}), 503
+
+    conversations = load_conversations(spreadsheet)
+    conv = conversations.get(conversation_id)
+    if not conv:
+        return jsonify({"error": "Conversation not found."}), 404
+
+    entries = load_feedback(spreadsheet).get(conversation_id, [])
+    return jsonify(
+        {
+            "conversation_id": conversation_id,
+            "started_at": conv["started_at"],
+            "user_name": conv["user_name"],
+            "user_org": conv["user_org"],
+            "model": conv["model"],
+            "messages": conv["messages"],
+            "feedback": entries,
+            "my_status": _my_status(entries, request.reviewer_email),
+        }
+    )
+
+
+def _append_feedback_row(spreadsheet, conversation_id: str, status: str, text: str):
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    ws = get_feedback_worksheet(spreadsheet)
+    ws.append_row(
+        [now, conversation_id, request.reviewer_email, status, text],
+        value_input_option="RAW",
+    )
+
+
+@app.route("/review/conversations/<conversation_id>/feedback", methods=["POST"])
+@require_reviewer
+def review_submit_feedback(conversation_id):
+    """Add a feedback comment to a conversation."""
+    spreadsheet = _open_spreadsheet()
+    if not spreadsheet:
+        return jsonify({"error": "Conversation log is not available."}), 503
+
+    data = request.get_json(silent=True) or {}
+    text = (data.get("feedback") or "").strip()
+    if not text:
+        return jsonify({"error": "Feedback text is required."}), 400
+    if len(text) > FEEDBACK_MAX_CHARS:
+        return jsonify({"error": f"Feedback must be under {FEEDBACK_MAX_CHARS} characters."}), 400
+
+    if conversation_id not in load_conversations(spreadsheet):
+        return jsonify({"error": "Conversation not found."}), 404
+
+    _append_feedback_row(spreadsheet, conversation_id, "commented", text)
+    return jsonify({"ok": True}), 201
+
+
+@app.route("/review/conversations/<conversation_id>/dismiss", methods=["POST"])
+@require_reviewer
+def review_dismiss_conversation(conversation_id):
+    """Dismiss a conversation (hide it from the reviewer's default list)."""
+    spreadsheet = _open_spreadsheet()
+    if not spreadsheet:
+        return jsonify({"error": "Conversation log is not available."}), 503
+
+    if conversation_id not in load_conversations(spreadsheet):
+        return jsonify({"error": "Conversation not found."}), 404
+
+    _append_feedback_row(spreadsheet, conversation_id, "dismissed", "")
+    return jsonify({"ok": True})
 
 
 if __name__ == "__main__":

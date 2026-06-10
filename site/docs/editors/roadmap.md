@@ -29,6 +29,10 @@ What's done, what's next, and what's deferred.
 
 - **Single-setup, multi-grade teaching.** At many schools, a teacher sets up once for the day and runs multiple grades (or even multiple lessons) through the same setup. The curriculum should address how to use one physical arrangement to serve different classes at different levels, with guidance on which activities scale across grades and which need adjustment.
 
+- **Outside resources.** Once students can read an orienteering map and complete basic courses, there is a whole world beyond the curriculum: local clubs, OUSA events, Rogaine, adventure racing, community meets. The site should point teachers and students to these resources and explain when kids are ready for them.
+
+- **District-wide progression across grades.** What does a comprehensive orienteering program look like when a district commits to it across multiple years? Describe a vision: orienteering in PE across grade bands, community events that connect schools, and eventually a school team. Help administrators and PE coordinators see the long arc, not just a single unit.
+
 ### Content gaps
 
 - **Companion activities without links.** Four companion activities are referenced in lesson plan cards but have no link because they live inline with their parent core activity, not as separate pages:
@@ -71,6 +75,7 @@ What's done, what's next, and what's deferred.
 - **Search.** Docusaurus has built-in search (Algolia or local). Not yet configured.
 - **Print styles.** The one-pager view works but could use CSS refinement for clean printing.
 - **AI lesson plan advisor enhancements.** The advisor is live at `/plan-my-lessons/`. Remaining work: intake form (name, email, school), follow-up survey link at end of conversations, curriculum Q&A mode (answer specific questions like "give me the script for Animal-O"), teacher feedback on activity/lesson pages. See the [detailed plan](https://github.com/Navigation-Games/curriculum/blob/main/notes/ai-lesson-advisor-plan.md).
+- **Conversation review.** Live. Staff review advisor conversations and leave feedback at `/review-conversations/` (linked from For Editors). Periodically: review the accumulated feedback with Claude and update the advisor system prompt. Setup details in "Conversation review setup" in `ai-advisor/README.md`.
 
 ## Deferred
 
