@@ -74,8 +74,9 @@ What's done, what's next, and what's deferred.
 - **Grade band expansion.** K-2 and 6+ lesson plans exist but need further editing passes. Camp Intro and Skill Development curricula have first-draft lesson plans.
 - **Search.** Docusaurus has built-in search (Algolia or local). Not yet configured.
 - **Print styles.** The one-pager view works but could use CSS refinement for clean printing.
-- **AI lesson plan advisor enhancements.** The advisor is live at `/plan-my-lessons/`. Remaining work: intake form (name, email, school), follow-up survey link at end of conversations, curriculum Q&A mode (answer specific questions like "give me the script for Animal-O"), teacher feedback on activity/lesson pages. See the [detailed plan](https://github.com/Navigation-Games/curriculum/blob/main/notes/ai-lesson-advisor-plan.md).
+- **AI lesson plan advisor enhancements.** The advisor is live at `/plan-my-lessons/`. Remaining work: follow-up survey link at end of conversations, curriculum Q&A mode (answer specific questions like "give me the script for Animal-O"). See the [detailed plan](https://github.com/Navigation-Games/curriculum/blob/main/notes/ai-lesson-advisor-plan.md).
 - **Conversation review.** Live. Staff review advisor conversations and leave feedback at `/review-conversations/` (linked from For Editors). Periodically: review the accumulated feedback with Claude and update the advisor system prompt. Setup details in "Conversation review setup" in `ai-advisor/README.md`.
+- **Page feedback.** Live. Every docs page has a "Was this page helpful?" widget (thumbs + optional comment) below the footer. Results go to the PageFeedback tab of the advisor log sheet. Future: curate the best comments into "From teachers" sections (see the advisor plan notes).
 
 ## Deferred
 

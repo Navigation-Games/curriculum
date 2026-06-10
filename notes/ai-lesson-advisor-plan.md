@@ -162,7 +162,9 @@ This turns the advisor into a search/reference tool in addition to a planning to
 
 This could also support on-the-fly questions during delivery: "I'm about to run Animal-O and I forget how to explain the clue sheets to kids."
 
-## Future: teacher feedback on lessons and activities
+## Teacher feedback on lessons and activities (built June 2026)
+
+Built as the "Was this page helpful?" widget at the bottom of every docs page: thumbs up/down, optional comment, optional free-text name/email. Submissions go through the advisor backend (`POST /page-feedback`, no auth, rate limited) to a "PageFeedback" tab in the conversation log sheet. The original ideas below remain relevant for what to do with the data (curation, "From teachers" sections).
 
 Add a feedback mechanism to every lesson and activity page so teachers can share what worked well or didn't. This could be a simple form at the bottom of each page (thumbs up/down + optional comment) or a "Leave feedback" button that submits to a Google Sheet.
 

@@ -48,8 +48,11 @@ site/src/components/ReviewConversations/styles.module.css - Review styles
 | `/review/conversations/<id>` | GET | Google ID token | Full thread plus all reviewers' feedback |
 | `/review/conversations/<id>/feedback` | POST | Google ID token | Add a feedback comment (`{"feedback": "..."}`) |
 | `/review/conversations/<id>/dismiss` | POST | Google ID token | Hide a conversation from the reviewer's default list |
+| `/page-feedback` | POST | none (rate limited) | "Was this page helpful?" feedback from docs pages (`{"page", "title", "rating", "comment", "submitter"}`) |
 
 The `/review/*` endpoints are for Navigation Games staff. They require a Google ID token from a `navigationgames.org` account, sent as `Authorization: Bearer <token>`. The backend verifies the token signature, audience (our OAuth client ID), the `hd` claim, and `email_verified`. Feedback is stored in a **Feedback** tab of the logging spreadsheet, which the backend creates automatically if missing (columns: timestamp, conversation_id, reviewer_email, status, feedback).
+
+`/page-feedback` powers the "Was this page helpful?" widget at the bottom of every docs page. It needs no auth (10 submissions/day per IP) and writes to a **PageFeedback** tab, also auto-created (columns: timestamp, page, title, rating, comment, submitter). Rows are unverified public input; treat the tab accordingly.
 
 ## Local development
 

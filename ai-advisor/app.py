@@ -53,6 +53,13 @@ FEEDBACK_SHEET_TITLE = "Feedback"
 FEEDBACK_HEADER = ["timestamp", "conversation_id", "reviewer_email", "status", "feedback"]
 FEEDBACK_MAX_CHARS = 5000
 
+# Per-page feedback from site visitors ("Was this page helpful?")
+PAGE_FEEDBACK_SHEET_TITLE = "PageFeedback"
+PAGE_FEEDBACK_HEADER = ["timestamp", "page", "title", "rating", "comment", "submitter"]
+PAGE_FEEDBACK_COMMENT_MAX_CHARS = 5000
+PAGE_FEEDBACK_SUBMITTER_MAX_CHARS = 200
+PAGE_FEEDBACK_PAGE_MAX_CHARS = 500
+
 # Reusable transport for verifying Google ID tokens (caches Google's certs)
 _google_token_request = google_requests.Request()
 
@@ -78,29 +85,36 @@ def get_sheets_client():
         return None
 
 
-# Rate limiting: simple in-memory store (resets on deploy)
+# Rate limiting: simple in-memory stores (reset on deploy)
 # For production, use Redis or similar
 rate_limit_store: dict[str, list[float]] = {}
 RATE_LIMIT_MAX = 20  # conversations per day per IP
 RATE_LIMIT_WINDOW = 86400  # 24 hours in seconds
 
+# Separate bucket for page feedback so it never eats chat quota
+page_feedback_rate_store: dict[str, list[float]] = {}
+PAGE_FEEDBACK_RATE_MAX = 10  # submissions per day per IP
 
-def check_rate_limit(ip: str) -> bool:
-    """Return True if the request is within rate limits."""
+
+def _check_rate_limit(store: dict[str, list[float]], ip: str, max_per_window: int) -> bool:
+    """Return True if the request is within rate limits for the given store."""
     now = time.time()
-    if ip not in rate_limit_store:
-        rate_limit_store[ip] = []
+    if ip not in store:
+        store[ip] = []
 
     # Remove old entries outside the window
-    rate_limit_store[ip] = [
-        t for t in rate_limit_store[ip] if now - t < RATE_LIMIT_WINDOW
-    ]
+    store[ip] = [t for t in store[ip] if now - t < RATE_LIMIT_WINDOW]
 
-    if len(rate_limit_store[ip]) >= RATE_LIMIT_MAX:
+    if len(store[ip]) >= max_per_window:
         return False
 
-    rate_limit_store[ip].append(now)
+    store[ip].append(now)
     return True
+
+
+def check_rate_limit(ip: str) -> bool:
+    """Return True if the chat request is within rate limits."""
+    return _check_rate_limit(rate_limit_store, ip, RATE_LIMIT_MAX)
 
 
 @app.route("/health", methods=["GET"])
@@ -316,16 +330,21 @@ def _open_spreadsheet():
     return gc.open_by_key(SPREADSHEET_ID)
 
 
-def get_feedback_worksheet(spreadsheet):
-    """Return the Feedback tab, creating it with a header row if missing."""
+def _get_or_create_worksheet(spreadsheet, title: str, header: list[str]):
+    """Return the named tab, creating it with a header row if missing."""
     import gspread
 
     try:
-        return spreadsheet.worksheet(FEEDBACK_SHEET_TITLE)
+        return spreadsheet.worksheet(title)
     except gspread.WorksheetNotFound:
-        ws = spreadsheet.add_worksheet(FEEDBACK_SHEET_TITLE, rows=1000, cols=len(FEEDBACK_HEADER))
-        ws.append_row(FEEDBACK_HEADER)
+        ws = spreadsheet.add_worksheet(title, rows=1000, cols=len(header))
+        ws.append_row(header)
         return ws
+
+
+def get_feedback_worksheet(spreadsheet):
+    """Return the Feedback tab, creating it with a header row if missing."""
+    return _get_or_create_worksheet(spreadsheet, FEEDBACK_SHEET_TITLE, FEEDBACK_HEADER)
 
 
 def load_conversations(spreadsheet):
@@ -536,6 +555,67 @@ def review_dismiss_conversation(conversation_id):
 
     _append_feedback_row(spreadsheet, conversation_id, "dismissed", "")
     return jsonify({"ok": True})
+
+
+# ---------------------------------------------------------------------------
+# Page feedback ("Was this page helpful?" on every docs page)
+#
+# No auth: anyone can submit, anonymously or with an optional free-text
+# name/email. Rows are unverified public input; treat the sheet tab
+# accordingly. RAW value input prevents formula injection.
+# ---------------------------------------------------------------------------
+
+
+@app.route("/page-feedback", methods=["POST"])
+def page_feedback():
+    """
+    Accept thumbs up/down and/or a comment about a specific site page.
+
+    Request body:
+    {
+        "page": "/curriculum/activities/core/animal-o/",
+        "title": "Animal-O",
+        "rating": "up" | "down" | null,
+        "comment": "optional text",
+        "submitter": "optional name or email"
+    }
+    """
+    client_ip = request.headers.get("X-Forwarded-For", request.remote_addr)
+    if not _check_rate_limit(page_feedback_rate_store, client_ip, PAGE_FEEDBACK_RATE_MAX):
+        return jsonify({"error": "Feedback limit reached for today."}), 429
+
+    data = request.get_json(silent=True) or {}
+    page = (data.get("page") or "").strip()
+    title = (data.get("title") or "").strip()
+    rating = data.get("rating")
+    comment = (data.get("comment") or "").strip()
+    submitter = (data.get("submitter") or "").strip()
+
+    if not page or len(page) > PAGE_FEEDBACK_PAGE_MAX_CHARS:
+        return jsonify({"error": "Request must include 'page'."}), 400
+    if rating not in ("up", "down", None):
+        return jsonify({"error": "'rating' must be 'up' or 'down'."}), 400
+    if rating is None and not comment:
+        return jsonify({"error": "Provide a rating or a comment."}), 400
+    if len(comment) > PAGE_FEEDBACK_COMMENT_MAX_CHARS:
+        return jsonify({"error": f"Comment must be under {PAGE_FEEDBACK_COMMENT_MAX_CHARS} characters."}), 400
+    if len(submitter) > PAGE_FEEDBACK_SUBMITTER_MAX_CHARS:
+        return jsonify({"error": f"Name must be under {PAGE_FEEDBACK_SUBMITTER_MAX_CHARS} characters."}), 400
+    title = title[:PAGE_FEEDBACK_PAGE_MAX_CHARS]
+
+    spreadsheet = _open_spreadsheet()
+    if not spreadsheet:
+        return jsonify({"error": "Feedback storage is not available."}), 503
+
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    ws = _get_or_create_worksheet(
+        spreadsheet, PAGE_FEEDBACK_SHEET_TITLE, PAGE_FEEDBACK_HEADER
+    )
+    ws.append_row(
+        [now, page, title, rating or "", comment, submitter],
+        value_input_option="RAW",
+    )
+    return jsonify({"ok": True}), 201
 
 
 if __name__ == "__main__":

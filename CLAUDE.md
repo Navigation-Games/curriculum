@@ -159,6 +159,10 @@ Frontend changes (`AdvisorChat/`, `plan-my-lessons.*`, `ReviewConversations/`, `
 
 Built June 2026. NG staff review advisor conversations and leave feedback at `/review-conversations/` (not in the navbar). Sign-in is Google Identity Services restricted to @navigationgames.org accounts; the backend verifies the ID token's `hd` claim (never check the email domain string). Feedback lives in the "Feedback" tab of the conversation log sheet (auto-created): timestamp, conversation_id, reviewer_email, status (commented/dismissed), feedback. Default list shows only conversations the signed-in reviewer hasn't handled; "Show all" reveals everything. Backend endpoints are `/review/*` in `ai-advisor/app.py`, tested by `ai-advisor/test_review.py` (run with `pytest` from `ai-advisor/`). Periodic workflow: Barb reviews accumulated feedback with Claude and updates the system prompt. Requires `REVIEW_OAUTH_CLIENT_ID` env var on Cloud Run plus `reviewOauthClientId` in `docusaurus.config.ts`; setup steps in `ai-advisor/README.md`.
 
+### Page feedback widget
+
+Every docs page has a "Was this page helpful?" thumbs up/down + optional comment widget below the footer, rendered by the swizzled `site/src/theme/DocItem/Footer/index.tsx` wrapping the default footer and `site/src/components/PageFeedback/`. Submissions POST to `/page-feedback` on the advisor backend (no auth, rate limited, tests in `ai-advisor/test_page_feedback.py`) and land in the auto-created "PageFeedback" tab of the conversation log sheet. Identity is an optional free-text field; rows are unverified public input.
+
 ### Key lessons from testing
 
 - The advisor must not hallucinate facts about orienteering clubs, events, college programs, or map ownership. The system prompt explicitly forbids this and instructs the AI to provide URLs instead of guessing.
