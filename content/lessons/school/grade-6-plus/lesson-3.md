@@ -1,4 +1,4 @@
-# 3 - Strategic Navigation
+# 3 - Route Choice
 
 ---
 tagline: Plan your route, visit checkpoints in any order

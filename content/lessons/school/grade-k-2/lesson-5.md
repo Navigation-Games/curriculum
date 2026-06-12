@@ -1,4 +1,4 @@
-# 5 - Draw a Map
+# 5 - Picture the Space
 
 ---
 tagline: Draw a picture of the space to show where things are

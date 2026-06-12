@@ -19,13 +19,13 @@ activities:
     description: "Warm up: run the boundary of the gym."
     link: /activities/core/boundary-run
     tag: warm-up
+  - title: Find the Cone
+    description: "Stand next to the cone shown on your map; orient your map."
+    tag: readiness
   - title: Basketball-O
     description: Run orienteering courses on the basketball court map.
     link: /activities/core/geometric-o
     tag: core
-  - title: Find the Cone
-    description: "Stand next to the cone shown on your map; orient your map."
-    tag: readiness
   - title: Pacman-O
     description: Line tag played while completing courses.
     link: /activities/core/geometric-o

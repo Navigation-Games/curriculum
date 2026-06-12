@@ -1,4 +1,4 @@
-# 1 - Clue Sheets and Maps
+# 1 - From Clues to Maps
 
 ---
 tagline: Quick intro, then straight to maps

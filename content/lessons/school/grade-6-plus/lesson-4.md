@@ -1,4 +1,4 @@
-# 4 - Reverse Mapping
+# 4 - From Ground to Map
 
 ---
 tagline: From terrain back to map

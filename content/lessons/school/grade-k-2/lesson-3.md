@@ -1,4 +1,4 @@
-# 3 - Treasure Hunt
+# 3 - Say Where
 
 ---
 tagline: Find hidden things and tell someone where they are

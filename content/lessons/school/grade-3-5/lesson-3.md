@@ -23,13 +23,13 @@ activities:
     description: "Warm up: quick Animal-O course to review clue sheets."
     link: /activities/core/animal-o
     tag: warm-up
+  - title: Geometric Readiness
+    description: Spatial vocabulary and map orientation exercises.
+    tag: readiness
   - title: Geometric-O
     description: Orient a simple map and visit checkpoints in order.
     link: /activities/core/geometric-o
     tag: core
-  - title: Geometric Readiness
-    description: Spatial vocabulary and map orientation exercises.
-    tag: readiness
   - title: Word Bank Orienteering
     description: Guide a partner using only approved spatial words.
     link: /activities/core/geometric-o

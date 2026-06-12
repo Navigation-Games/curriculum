@@ -98,10 +98,10 @@ Student choice and autonomy increase through the progression. Early lessons are 
 | Lesson | Standard 1 | Standard 2 | Standard 3 | Standard 4 |
 |---|---|---|---|---|
 | 1. Safety & Space | Locomotor skills with space awareness (1.2.1) | Recognizes personal space and general space (2.2.1) | Responds to directions (3.2.4); follows rules for safety (3.2.6); safe choices with equipment (3.2.7) | |
-| 2. Explore & Find | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1) | Communicates to share space (3.2.3); discusses problems with teacher support (3.2.8) | Recognizes individual challenges (4.2.5) |
-| 3. Treasure Hunt | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1); identifies movement concepts (2.2.3) | Communicates to share space (3.2.3); discusses problems with teacher support (3.2.8) | |
-| 4. Clue Sheets | Locomotor skills with space awareness (1.2.1) | | Responds to directions (3.2.4); communicates to share space (3.2.3) | Recognizes strengths and need for practice (4.2.7) |
-| 5. Draw a Map | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1) | Communicates to share space (3.2.3); respectful behaviors in movement (3.2.5) | |
+| 2. Search and Remember | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1) | Communicates to share space (3.2.3); discusses problems with teacher support (3.2.8) | Recognizes individual challenges (4.2.5) |
+| 3. Say Where | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1); identifies movement concepts (2.2.3) | Communicates to share space (3.2.3); discusses problems with teacher support (3.2.8) | |
+| 4. Visit Checkpoints in Order | Locomotor skills with space awareness (1.2.1) | | Responds to directions (3.2.4); communicates to share space (3.2.3) | Recognizes strengths and need for practice (4.2.7) |
+| 5. Picture the Space | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1) | Communicates to share space (3.2.3); respectful behaviors in movement (3.2.5) | |
 | 6. Read a Map | Locomotor skills with space awareness (1.2.1) | Recognizes personal and general space (2.2.1); knowledge of locomotor skills in movement settings (2.2.4) | Communicates to share space (3.2.3); discusses problems with teacher support (3.2.8) | |
 
 ## Standards by Lesson (Grades 3-5)
@@ -119,12 +119,12 @@ Student choice and autonomy increase through the progression. Early lessons are 
 
 | Lesson | Standard 1 | Standard 2 | Standard 3 | Standard 4 |
 |---|---|---|---|---|
-| 1. Clue Sheets & Maps | Correct technique in outdoor activities (1.8.1) | Movement concepts in dynamic environments (2.8.1); problem-solving (2.8.7) | Negotiates strategies and tactics (3.8.3); safe behaviors (3.8.7) | |
+| 1. From Clues to Maps | Correct technique in outdoor activities (1.8.1) | Movement concepts in dynamic environments (2.8.1); problem-solving (2.8.7) | Negotiates strategies and tactics (3.8.3); safe behaviors (3.8.7) | |
 | 2. Map Reading | Correct technique in outdoor activities (1.8.1) | Movement concepts (2.8.1); problem-solving (2.8.7); safety protocols in outdoor activities (2.8.21) | Negotiates strategies and tactics (3.8.3); constructive feedback (3.8.4) | |
-| 3. Strategic Navigation | | Movement concepts (2.8.1); problem-solving (2.8.7) | Negotiates strategies and tactics (3.8.3); follows game rules (3.8.6); safe behaviors (3.8.7) | Choice and interests impact engagement (4.8.4); individual and group challenges (4.8.5) |
-| 4. Reverse Mapping | | Movement concepts (2.8.1); problem-solving (2.8.7) | Negotiates strategies and tactics (3.8.3); solves problems with teammates (3.8.8) | Individual and group challenges (4.8.5); reflects on movement (4.8.9) |
-| 5. Orienteering Courses | Correct technique in outdoor activities (1.8.1) | Movement concepts (2.8.1); problem-solving (2.8.7) | Constructive feedback (3.8.4); safe behaviors (3.8.7); solves problems with teammates (3.8.8) | Choice and interests impact engagement (4.8.4); reflects on movement (4.8.9) |
-| 6. Racing | Correct technique in outdoor activities (1.8.1) | Movement concepts (2.8.1); problem-solving (2.8.7) | Consideration for others (3.8.2); follows game rules (3.8.6); solves problems with teammates (3.8.8) | Choice and interests impact engagement (4.8.4); individual and group challenges (4.8.5); reflects on movement (4.8.9) |
+| 3. Route Choice | | Movement concepts (2.8.1); problem-solving (2.8.7) | Negotiates strategies and tactics (3.8.3); follows game rules (3.8.6); safe behaviors (3.8.7) | Choice and interests impact engagement (4.8.4); individual and group challenges (4.8.5) |
+| 4. From Ground to Map | | Movement concepts (2.8.1); problem-solving (2.8.7) | Negotiates strategies and tactics (3.8.3); solves problems with teammates (3.8.8) | Individual and group challenges (4.8.5); reflects on movement (4.8.9) |
+| 5. Course Navigation | Correct technique in outdoor activities (1.8.1) | Movement concepts (2.8.1); problem-solving (2.8.7) | Constructive feedback (3.8.4); safe behaviors (3.8.7); solves problems with teammates (3.8.8) | Choice and interests impact engagement (4.8.4); reflects on movement (4.8.9) |
+| 6. Race Day | Correct technique in outdoor activities (1.8.1) | Movement concepts (2.8.1); problem-solving (2.8.7) | Consideration for others (3.8.2); follows game rules (3.8.6); solves problems with teammates (3.8.8) | Choice and interests impact engagement (4.8.4); individual and group challenges (4.8.5); reflects on movement (4.8.9) |
 
 ## Indicators by Grade Span
 

@@ -1,4 +1,4 @@
-# 4 - Clue Sheets
+# 4 - Visit Checkpoints in Order
 
 ---
 tagline: Find them in this specific order
@@ -20,14 +20,14 @@ activities:
     description: "Warm up: run the boundary together."
     link: /activities/core/boundary-run
     tag: warm-up
-  - title: Animal-O
-    description: Find the animals in order using clue sheets.
-    link: /activities/core/animal-o
-    tag: core
   - title: Explore & Find
     description: "Quick review: explore to find checkpoints (if students need a refresher)."
     link: /activities/core/explore-and-find
     tag: readiness
+  - title: Animal-O
+    description: Find the animals in order using clue sheets.
+    link: /activities/core/animal-o
+    tag: core
 ---
 
 ## Goals

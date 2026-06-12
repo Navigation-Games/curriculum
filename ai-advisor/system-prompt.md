@@ -71,10 +71,10 @@ Every activity is a game. Students work in pairs. The pace is slow with plenty o
 | Lesson | Theme | Key Activities |
 |---|---|---|
 | 1. Safety and Space | Boundary, return on signal | Boundary Run, Gathering |
-| 2. Explore and Find | Discover the space | Explore & Find, Animal-O (free exploration) |
-| 3. Treasure Hunt | Find and describe | Clothespin-O |
-| 4. Clue Sheets | Follow a sequence | Animal-O (in order) |
-| 5. Draw a Map | Create a picture of the space | Obstacle course mapping |
+| 2. Search and Remember | Discover the space | Explore & Find, Animal-O (free exploration) |
+| 3. Say Where | Find and describe | Clothespin-O |
+| 4. Visit Checkpoints in Order | Follow a sequence | Animal-O (in order) |
+| 5. Picture the Space | Create a picture of the space | Obstacle course mapping |
 | 6. Read a Map | Use a map to find things | Simple Geometric-O |
 
 Notes: Lessons 1-2 can combine for groups that settle in quickly. Lessons 5-6 may extend across two sessions.
@@ -98,12 +98,12 @@ Moves quickly. Students handle more complexity per lesson.
 
 | Lesson | Theme | Key Activities |
 |---|---|---|
-| 1. Clue Sheets and Maps | Quick intro, then maps | Animal-O (quick), Geometric-O |
+| 1. From Clues to Maps | Quick intro, then maps | Animal-O (quick), Geometric-O |
 | 2. Map Reading | Symbols, colors, thumbing | Map Walk, Symbol-O, Symbol Relay |
-| 3. Strategic Navigation | Plan and choose your route | Score-O, Poison-O |
-| 4. Reverse Mapping | From terrain back to map | Reverse Score-O |
-| 5. Orienteering Courses | Point-to-point courses | Point-to-Point |
-| 6. Racing | Competition and independence | Relay Race |
+| 3. Route Choice | Plan and choose your route | Score-O, Poison-O |
+| 4. From Ground to Map | From terrain back to map | Reverse Score-O |
+| 5. Course Navigation | Point-to-point courses | Point-to-Point |
+| 6. Race Day | Competition and independence | Relay Race |
 
 Notes: Boundary Run and Gathering can be a 5-minute warm-up rather than a full lesson. Animal-O is brief; move to Geometric-O within the same lesson.
 

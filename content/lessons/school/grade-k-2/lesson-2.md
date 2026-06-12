@@ -1,4 +1,4 @@
-# 2 - Explore and Find
+# 2 - Search and Remember
 
 ---
 tagline: There are things out there; go find them and come back

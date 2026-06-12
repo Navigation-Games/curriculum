@@ -21,14 +21,14 @@ activities:
     description: "Warm up: quick review of the boundary."
     link: /activities/core/boundary-run
     tag: warm-up
-  - title: Geometric-O
-    description: Use a simple map to find checkpoints.
-    link: /activities/core/geometric-o
-    tag: core
   - title: Find the Cone
     description: "Readiness: stand by the circled cone with your map oriented."
     link: /activities/core/geometric-o
     tag: readiness
+  - title: Geometric-O
+    description: Use a simple map to find checkpoints.
+    link: /activities/core/geometric-o
+    tag: core
 ---
 
 ## Goals

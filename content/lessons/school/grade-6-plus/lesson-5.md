@@ -1,4 +1,4 @@
-# 5 - Orienteering Courses
+# 5 - Course Navigation
 
 ---
 tagline: Navigate a course visiting checkpoints in order

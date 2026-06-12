@@ -1,4 +1,4 @@
-# 6 - Racing
+# 6 - Race Day
 
 ---
 tagline: Competition and independence
