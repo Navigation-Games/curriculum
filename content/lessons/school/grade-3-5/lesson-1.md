@@ -1,4 +1,4 @@
-# 1 - Boundary & Explore
+# 1 - Know Your Space
 
 ---
 tagline: Here is where you can go; there are things to find

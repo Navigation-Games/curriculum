@@ -80,16 +80,16 @@ Every activity is a game. Students work in pairs. The pace is slow with plenty o
 Notes: Lessons 1-2 can combine for groups that settle in quickly. Lessons 5-6 may extend across two sessions.
 
 #### Grades 3-5 (ages 9-11)
-Six lessons, each adding one new concept on top of the last.
+Six lessons. Each lesson builds on the previous one.
 
 | Lesson | Theme | Key Activities |
 |---|---|---|
-| 1. Boundary & Explore | Here is where you can go | Boundary Run, Gathering, Explore & Find |
-| 2. Clue Sheets | Find them in order | Explore & Find (warm-up), Animal-O |
+| 1. Know Your Space | Here is where you can go | Boundary Run, Gathering, Explore & Find |
+| 2. Match the Code | Find them in order | Explore & Find (warm-up), Animal-O |
 | 3. Map Readiness | Orienting a map to the space | Geometric-O |
 | 4. Map Symbols | Symbols represent features | Symbol-O, Map Walk |
-| 5. Map Checkpoints | Navigate using a map | Map Walk, Score-O |
-| 6. Point-to-Point | Navigate a course in order | Point-to-Point |
+| 5. Visiting Checkpoints | Navigate using a map | Map Walk, Score-O |
+| 6. Orienteering Course | Navigate a course in order | Point-to-Point |
 
 Notes: Lessons 3-6 often extend across two sessions. Indoor Orienteering (Basketball-O) is an alternative for Lessons 3-6 if there is no outdoor space.
 

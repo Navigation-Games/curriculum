@@ -29,9 +29,9 @@ The kit materials align directly with the first four activities in the [Grade 3-
 
 | Kit Activity | Curriculum Lessons |
 |---|---|
-| Animal-O | Lessons 2-3 (Explore & Find, Clue Sheets) |
-| Geometric-O | Lesson 4 (Map Readiness) |
+| Animal-O | Lessons 1-2 (Know Your Space, Match the Code) |
+| Geometric-O | Lesson 3 (Map Readiness) |
 | Basketball-O | Lesson A (Indoor Orienteering) |
 | Clothespin-O | K-2 Lesson 3 |
 
-For Score-O, Map Walk, and Point-to-Point (Lessons 5-6), you will need orienteering maps of your site. See [Maps](../maps) for how to get one.
+For Score-O, Map Walk, and Point-to-Point (Lessons 4-6), you will need orienteering maps of your site. See [Maps](../maps) for how to get one.

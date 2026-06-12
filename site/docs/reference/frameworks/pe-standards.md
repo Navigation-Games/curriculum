@@ -108,12 +108,12 @@ Student choice and autonomy increase through the progression. Early lessons are 
 
 | Lesson | Standard 1 | Standard 2 | Standard 3 | Standard 4 |
 |---|---|---|---|---|
-| 1. Boundary & Explore | Locomotor skills in varied practice (1.5.1) | Movement concepts for safe movement (2.5.1) | Safe behaviors independently (3.5.4); solves problems with partners (3.5.5) | Recognizes group challenges (4.5.5) |
-| 2. Clue Sheets | Locomotor skills in varied practice (1.5.1) | | Respectful behaviors in group activities (3.5.3); solves problems with partners (3.5.5) | Identifies strengths and opportunities for practice (4.5.7) |
+| 1. Know Your Space | Locomotor skills in varied practice (1.5.1) | Movement concepts for safe movement (2.5.1) | Safe behaviors independently (3.5.4); solves problems with partners (3.5.5) | Recognizes group challenges (4.5.5) |
+| 2. Match the Code | Locomotor skills in varied practice (1.5.1) | | Respectful behaviors in group activities (3.5.3); solves problems with partners (3.5.5) | Identifies strengths and opportunities for practice (4.5.7) |
 | 3. Map Readiness | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); respectful behaviors (3.5.3); solves problems (3.5.5) | Identifies strengths and opportunities for practice (4.5.7) |
 | 4. Map Symbols | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); solves problems (3.5.5) | |
-| 5. Map Checkpoints | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); safe behaviors (3.5.4); solves problems (3.5.5) | Explains rationale for choices (4.5.4); reflects on movement (4.5.10) |
-| 6. Point-to-Point | Locomotor skills in varied practice (1.5.1) | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Safe behaviors (3.5.4); solves problems (3.5.5) | Explains rationale for choices (4.5.4); identifies strengths (4.5.7) |
+| 5. Visiting Checkpoints | | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Negotiates roles (3.5.2); safe behaviors (3.5.4); solves problems (3.5.5) | Explains rationale for choices (4.5.4); reflects on movement (4.5.10) |
+| 6. Orienteering Course | Locomotor skills in varied practice (1.5.1) | Movement concepts (2.5.1); problem-solving strategies (2.5.5) | Safe behaviors (3.5.4); solves problems (3.5.5) | Explains rationale for choices (4.5.4); identifies strengths (4.5.7) |
 
 ## Standards by Lesson (Grades 6+)
 

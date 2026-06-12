@@ -1,4 +1,4 @@
-# 2 - Clue Sheets
+# 2 - Match the Code
 
 ---
 tagline: Find them in this specific order
@@ -36,9 +36,9 @@ activities:
 
 ### Orienteering Goals
 - Use a clue sheet to complete a course in order
-- Check the animal picture at each checkpoint to confirm the right one
+- Confirm you are at the right checkpoint by checking its code, as orienteers always do (in Animal-O, the code is an animal picture)
 - Build spatial memory by repeating courses
-- Complete the activity faster by remembering checkpoint locations
+- Learn that orienteering is a timed activity, and try to beat your own time
 - Check a partner's work by confirming they visited the correct checkpoint
 
 ### PE Standards (SHAPE America, 2024)
@@ -63,7 +63,7 @@ activities:
    - Try a different 5-animal clue sheet
    - Try a different clue sheet
    - Repeat from memory: one partner is the orienteer, the other keeps the clue sheet as the checker. At each checkpoint, the orienteer calls out the animal name. The checker says "correct" or "incorrect." Then switch roles.
-   - Repeat for a faster time. Students can now self-check: carry the clue sheet and confirm each animal yourself before moving on. 🧭 [Checking](/about/concepts#checking)
+   - Repeat for a faster time. Students can now self-check: carry the clue sheet and confirm each animal yourself before moving on. ðŸ§­ [Checking](/about/concepts#checking)
 4. **Animal Relay**: take turns running to checkpoints
 
 > **If you have electronic timing:** Electronic timing confirms correct checkpoints automatically. Without it, students need to learn to check each other (and eventually themselves). See [Electronic Timing](/reference/equipment/electronic-timing) for how lessons change with electronics.

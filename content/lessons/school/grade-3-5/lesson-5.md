@@ -1,4 +1,4 @@
-# 5 - Map Checkpoints
+# 5 - Visiting Checkpoints
 
 ---
 tagline: Navigate using a map, visit checkpoints in any order
