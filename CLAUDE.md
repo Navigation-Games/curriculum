@@ -58,10 +58,13 @@ Every core activity needs these, consistent with each other:
 
 - MDX (Markdown + JSX) for content. Supports custom React components
 - Custom `<ActivityCard>` component for lesson pages to link to activities
+- `<ActivityLink>` popovers: activity links in lesson Delivery sections open an in-place summary (tagline, description, time, space) with a link on to the full activity page. The build script converts the markdown links and generates the data module (`site/src/components/ActivityLink/activitySummaries.ts`, gitignored) from `content/activities/`
 - `<CardGrid>` for responsive grid layouts (3 columns on desktop, 2 on tablet, 1 on phone)
 - `<YouTube>` for responsive video embeds
 - Tabs component for structured sections within activity/lesson pages
 - Compact/one-pager view rendered from the same MDX source (URL parameter or print-friendly toggle)
+- The right-side TOC is hidden on all generated activity and lesson pages (`hide_table_of_contents` added by the build script). On activity pages the content headings live inside Tabs panels, so TOC anchors can never scroll; lesson pages have a fixed section order that needs no TOC
+- The left nav sidebar is hideable and **starts collapsed** so lesson text gets the full width. Implemented by the swizzled components in `site/src/theme/DocRoot/Layout/` (the only changes from the Docusaurus originals are commented at the top of each file)
 - Day-to-day editing is just Markdown files in the repo; GitHub Actions rebuilds on commit
 - `trailingSlash: true` is set in `docusaurus.config.ts`. This is required so that relative links in index pages (e.g., `./lesson-1` in `grade-3-5/index.md`) resolve correctly. Without it, the dev server serves `/grade-3-5` without a trailing slash, and the browser resolves `./lesson-1` relative to the parent (`/lessons/school/lesson-1` instead of `/lessons/school/grade-3-5/lesson-1`). GitHub Pages adds trailing slashes on its own, so the bug only appears locally. Do not remove `trailingSlash: true`.
 - **Sibling page links need `../`** because of `trailingSlash: true`. A page at `/activities/core/gathering/` treats a bare relative link like `(boundary-run)` as a child path (`/activities/core/gathering/boundary-run/`), not a sibling. Always write `(../boundary-run)` to link between pages in the same directory. Index pages are the exception: since they represent the directory itself, their relative links correctly resolve to children. This applies everywhere: activity content files, framework pages, lesson plans.
@@ -102,9 +105,12 @@ Every core activity needs these, consistent with each other:
 - All lesson plans must work without electronic timing. SI (electronic timing) is a separate equipment topic for teachers, not a prerequisite for any lesson
 - Lesson plans for grades 3-5 and 6+ include SHAPE America 2024 (4th edition) PE standards. Indicator codes use the format `[Standard].[GradeSpanEnd].[Indicator]` (e.g., 2.8.7 = Standard 2, grades 6-8, indicator 7). Grade spans: PreK-2, 3-5, 6-8, 9-12
 - Deferred activities (Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O) are set aside. Don't include in main curriculum structure
-- Do not modify the Learning Progression table in `site/docs/lessons/school/grade-3-5/index.md` without explicit review from Barb. The 3-column format (Lesson / Main Activity / What it adds) is intentional
+- Do not restructure the lesson table in `site/docs/lessons/school/grade-3-5/index.md` without explicit review from Barb. The 3-column format (Lesson / What it adds / Activities) is intentional
+- **Lesson names describe the skill being learned, not the activity** (decided June 2026). Examples: "Match the Code" not "Clue Sheets", "Route Choice" not "Strategic Navigation". The content file H1 stays in the form `# 2 - Match the Code`; the build script renders page titles as "Lesson 2: Match the Code". When renaming a lesson, update all the places that reference it by name: the grade band index page, `site/docs/reference/activities-and-lessons.mdx`, the PE standards tables in `site/docs/reference/frameworks/pe-standards.md`, and the advisor system prompt (`ai-advisor/system-prompt.md`, requires Cloud Run redeploy)
+- When writing content files from PowerShell, never use `Set-Content -Encoding utf8`: Windows PowerShell 5.1 adds a UTF-8 BOM, which silently breaks the build script's title parsing (it matches `# ` at byte 0). Use `[System.IO.File]::WriteAllText($path, $text, (New-Object System.Text.UTF8Encoding $false))` instead
 - NEVER use colons inside YAML frontmatter list items. A colon followed by a space is YAML's key-value separator, so `- Optional: foo` silently becomes `{Optional: "foo"}` instead of a string, breaking the build. Rephrase instead (e.g., `- Poster-sized map (optional)` not `- Optional: poster-sized map`)
 - When adding or defining a vocabulary term, always add it to all three places: (1) the glossary page (`site/docs/reference/glossary.md`), (2) the glossary data file (`site/src/components/VocabLink/glossaryData.ts`), and (3) the activity's `## Vocabulary` section. All three must stay in sync for VocabLink hyperlinks to work.
+- When adding a material, keep `site/src/components/MaterialLink/materialsData.ts` and `site/docs/reference/equipment/materials.md` in sync, and give the materials.md heading an explicit anchor equal to the slugified canonical name (e.g., `#### Start/finish markers {#start-finish-markers}`). MaterialLink popovers deep-link to that anchor; without it, the auto-generated slug would include the NG Kit badge text.
 - Map symbols use the **ISSprOM** (International Specification for Sprint Orienteering Maps) symbol set, not ISOM. ISSprOM is designed for sprint/urban maps at 1:4,000 scale, which matches schoolyard and park maps. Symbol Relay cards will have an ISSprOM base set plus a schoolyard-specific subset (paths, buildings, fences, etc.) that camps would not need.
 
 ## Lesson Plan Writing Practices
@@ -113,6 +119,9 @@ These practices were established during the K-2 editing pass and should be appli
 
 ### Delivery should be self-contained
 A teacher should be able to read the Delivery section and know what to do without clicking through to the activity pages. The lesson tells you what to do today. Activity pages provide depth for those who want it (full scripts, photos, detailed progressions). Include a link to each activity in the delivery or extensions so teachers can click through, but don't require it.
+
+### Activity card order
+Cards render in frontmatter order. Use: warm-up, readiness, core, variation, extension. Readiness precedes core (decided June 2026) because that matches the order a teacher runs them.
 
 ### Every activity card needs a link in the body
 If an activity appears as a card in the Activities section, it should also have at least one link in Delivery or Extensions. The cards are a visual overview; the body text is where teachers actually read.
@@ -181,7 +190,7 @@ Every docs page has a "Was this page helpful?" thumbs up/down + optional comment
 - **To create a new activity or lesson:** create the file in `content/`, never in `site/docs/`
 - **To preview changes locally:** run `node scripts/build-content.js` to regenerate, then preview with `cd site && npm start`
 
-Generated files in `site/docs/` are gitignored and rebuilt by GitHub Actions on every push. They should not be committed.
+Generated files in `site/docs/` are gitignored and rebuilt by GitHub Actions on every push. They should not be committed. The same applies to `site/src/components/ActivityLink/activitySummaries.ts`, a generated data module (the component's `index.tsx` and `styles.module.css` in that directory ARE tracked).
 
 The only hand-maintained files inside generated directories are `index.md` landing pages. If you ever add a new hand-maintained file to a directory that also contains generated files (`site/docs/activities/core/`, `site/docs/lessons/school/grade-3-5/`, `site/docs/lessons/school/grade-k-2/`, `site/docs/lessons/school/grade-6-plus/`), you MUST add a negation rule (`!` pattern) to `.gitignore` so git tracks it. Check `.gitignore` for the existing patterns and comments.
 

@@ -100,7 +100,7 @@ Some content is stored in TypeScript data files that feed into interactive compo
 | Materials catalog | `site/src/components/MaterialLink/materialsData.ts` | Materials popups on activity and lesson pages |
 | Activities summary | `site/src/components/ActivitiesTable/activitiesData.ts` | Activities index table, activity card popups in lessons |
 
-When you add or change a glossary term, update both `glossaryData.ts` and `site/docs/reference/glossary.md` to keep them in sync. Similarly, update both `materialsData.ts` and `site/docs/reference/equipment/materials.md` for materials.
+When you add or change a glossary term, update both `glossaryData.ts` and `site/docs/reference/glossary.md` to keep them in sync. Similarly, update both `materialsData.ts` and `site/docs/reference/equipment/materials.md` for materials, and give the new materials.md heading an explicit anchor matching the slugified material name (e.g., `#### Clue sheets ... {#clue-sheets}`). The material popups link to that anchor.
 
 The activity popup summaries on lesson Delivery sections (`site/src/components/ActivityLink/activitySummaries.ts`) are auto-generated from `content/activities/` by the build script. Do not edit that file; edit the activity's frontmatter and Description section instead.
 

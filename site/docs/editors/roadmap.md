@@ -36,10 +36,10 @@ What's done, what's next, and what's deferred.
 ### Content gaps
 
 - **Companion activities without links.** Four companion activities are referenced in lesson plan cards but have no link because they live inline with their parent core activity, not as separate pages:
-  - Animal Relay (Lesson 3, companion of Animal-O)
-  - Geometric Readiness (Lesson 5, companion of Geometric-O)
-  - Symbol-O (Lesson 5, companion of Map Walk)
-  - Find the Cone (Lesson A, companion of Geometric-O)
+  - Animal Relay (3-5 Lesson 2, companion of Animal-O)
+  - Geometric Readiness (3-5 Lesson 3, companion of Geometric-O)
+  - Symbol-O (3-5 Lesson 4, companion of Map Walk)
+  - Find the Cone (3-5 Lesson A and K-2 Lesson 6, companion of Geometric-O)
 
 - **Background PDFs.** No source PDFs exist yet for Score-O, Map Walk, or several companion activities. Existing PDFs cover Boundary Run, Gathering, Animal-O, Geometric-O, Napkin-O, and Pacman-O.
 
@@ -130,3 +130,10 @@ Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O
 - Camp Belknap Design Meeting #2 video transcript mined: OUSA alignment noted, Memory-O descriptions captured, recognition system discussion (two levels preferred), relay variation (three simultaneous similar courses)
 - All available Camp Belknap design meeting transcripts mined (Meetings #2, #3, #4; Meeting #1 recording not available)
 - AI lesson plan advisor: live at `/plan-my-lessons/` with Claude Sonnet backend on Google Cloud Run, Google Sheets conversation logging, multi-language support, and community resource links (NEOC, OUSA, Navigation Games events)
+- Skill-based lesson names across all three grade bands (June 2026): names describe the skill being learned, not the activity (e.g., Match the Code, Route Choice, Say Where). Page titles render as "Lesson 2: Match the Code"
+- Grade 3-5 index page reframed around "ready to teach"; Activities Referenced section removed
+- Activity summary popovers (ActivityLink) on lesson Delivery links: click shows tagline, description, time, and space without leaving the lesson; data auto-generated from activity sources
+- Material popups deep-link to the matching section of the Materials Index (stable explicit heading anchors)
+- Right-side TOC removed from generated activity and lesson pages; left sidebar hideable and collapsed by default
+- Readiness activity cards now precede core cards in lessons (warm-up, readiness, core, variation, extension)
+- Advisor chat markdown rendering fixed for nested bold/links and `*` bullets

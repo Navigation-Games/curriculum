@@ -109,7 +109,9 @@ Some content is stored in TypeScript data files that feed into interactive compo
 | Materials catalog | `site/src/components/MaterialLink/materialsData.ts` | Materials popups on activity and lesson pages |
 | Activities summary | `site/src/components/ActivitiesTable/activitiesData.ts` | Activities index table, activity card popups in lessons |
 
-When you add or change a glossary term, update both `glossaryData.ts` and `site/docs/reference/glossary.md` to keep them in sync. Similarly, update both `materialsData.ts` and `site/docs/reference/materials.md` for materials.
+When you add or change a glossary term, update both `glossaryData.ts` and `site/docs/reference/glossary.md` to keep them in sync. Similarly, update both `materialsData.ts` and `site/docs/reference/equipment/materials.md` for materials.
+
+One data file is auto-generated and should never be edited by hand: `site/src/components/ActivityLink/activitySummaries.ts` (the activity popup summaries on lesson pages). The build script regenerates it from `content/activities/`, so edit the activity's Description and frontmatter instead.
 
 ### Images
 
