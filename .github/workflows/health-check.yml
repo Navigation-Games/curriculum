@@ -1,0 +1,21 @@
+name: Advisor Health Check
+
+on:
+  schedule:
+    - cron: '0 13 * * *'  # 9am ET daily
+  workflow_dispatch:       # allow manual trigger
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check advisor health endpoint
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            https://lesson-advisor-523012695945.us-central1.run.app/health)
+          echo "HTTP status: $STATUS"
+          if [ "$STATUS" != "200" ]; then
+            echo "Health check failed with status $STATUS"
+            exit 1
+          fi
+          echo "Advisor is healthy."
