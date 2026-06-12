@@ -12,6 +12,7 @@ const {
   validate,
   deliveryToJsx,
   mdToJsx,
+  activityLinkify,
   generateActivityMDX,
   generateLessonMDX,
 } = require('./build-content.js');
@@ -461,10 +462,17 @@ describe('generateLessonMDX', () => {
     assert.ok(compactSection.includes('run it'));
   });
 
-  it('passes delivery markdown through in full view', () => {
+  it('converts delivery activity links to ActivityLink popovers in full view', () => {
     const mdx = generateLessonMDX('1-boundary', parsed);
     const fullSection = mdx.split('<FullOnly>')[1].split('</FullOnly>')[0];
-    assert.ok(fullSection.includes('[**Boundary Run**](/activities/core/boundary-run)'));
+    assert.ok(fullSection.includes('<ActivityLink slug="boundary-run"><strong>Boundary Run</strong></ActivityLink>'));
+    assert.ok(mdx.includes("import ActivityLink from '@site/src/components/ActivityLink';"));
+  });
+
+  it('keeps compact (OnePager) delivery as plain markdown', () => {
+    const mdx = generateLessonMDX('1-boundary', parsed);
+    const compactSection = mdx.split('<CompactOnly>')[1];
+    assert.ok(!compactSection.includes('<ActivityLink'));
   });
 
   it('includes meta table', () => {
@@ -476,6 +484,37 @@ describe('generateLessonMDX', () => {
   it('includes OnePager with lesson variant', () => {
     const mdx = generateLessonMDX('1-boundary', parsed);
     assert.ok(mdx.includes('variant="lesson"'));
+  });
+});
+
+
+// =========================================================================
+// activityLinkify
+// =========================================================================
+
+describe('activityLinkify', () => {
+  it('converts a plain activity link', () => {
+    assert.equal(
+      activityLinkify('[Gathering](/activities/core/gathering)'),
+      '<ActivityLink slug="gathering">Gathering</ActivityLink>'
+    );
+  });
+
+  it('converts a bold activity link, emitting <strong>', () => {
+    assert.equal(
+      activityLinkify('[**Score-O**](/activities/core/score-o/)'),
+      '<ActivityLink slug="score-o"><strong>Score-O</strong></ActivityLink>'
+    );
+  });
+
+  it('leaves links with anchors untouched', () => {
+    const md = '[Hot or Cold](/activities/core/boundary-run#hot-or-cold)';
+    assert.equal(activityLinkify(md), md);
+  });
+
+  it('leaves non-activity links untouched', () => {
+    const md = '[Electronic Timing](/reference/equipment/electronic-timing)';
+    assert.equal(activityLinkify(md), md);
   });
 });
 

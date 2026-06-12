@@ -1,0 +1,42 @@
+.activityLink {
+  cursor: pointer;
+  border-bottom: 1px dashed var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.activityLink:hover {
+  border-bottom-style: solid;
+}
+
+.popoverTitle {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.popoverTagline {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.popoverDesc {
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.popoverDetail {
+  margin: 0.25rem 0;
+}
+
+.popoverDetail strong {
+  color: var(--ifm-color-emphasis-800);
+}
+
+.popoverLink {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  text-align: right;
+}

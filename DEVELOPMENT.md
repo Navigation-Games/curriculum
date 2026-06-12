@@ -196,6 +196,14 @@ Uses a **React Portal** (`createPortal` into `document.body`) so the popup is no
 
 Material data lives in `materialsData.ts` with keyword-based fuzzy matching so variant names in content files ("4 colored landmark cones", "4 colored cones (red, blue, green, yellow)") resolve to the same entry.
 
+### ActivityLink
+
+`site/src/components/ActivityLink/`
+
+Clickable activity name in a lesson's Delivery section that opens a popup summary (tagline, description, time, space) so the teacher can stay on the lesson page. The popup links to the full activity page. Uses the same `PopoverPortal` as MaterialLink.
+
+Activity data lives in `activitySummaries.ts`, which is **auto-generated** by `scripts/build-content.js` from `content/activities/` (gitignored, like the generated pages in `site/docs/`). The build script converts markdown activity links in lesson Delivery sections into `<ActivityLink>` elements; links with anchors and links outside Delivery are left as plain links.
+
 ### VocabLink
 
 `site/src/components/VocabLink/`

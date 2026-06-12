@@ -25,6 +25,8 @@ site/docs/lessons/camp/full/*.md
 !site/docs/lessons/camp/full/index.md
 site/docs/lessons/school/various/*.md
 !site/docs/lessons/school/various/index.md
+# Generated data module for the ActivityLink popovers (component files are tracked)
+site/src/components/ActivityLink/activitySummaries.ts
 
 # Data
 *.csv

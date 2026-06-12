@@ -102,6 +102,8 @@ Some content is stored in TypeScript data files that feed into interactive compo
 
 When you add or change a glossary term, update both `glossaryData.ts` and `site/docs/reference/glossary.md` to keep them in sync. Similarly, update both `materialsData.ts` and `site/docs/reference/equipment/materials.md` for materials.
 
+The activity popup summaries on lesson Delivery sections (`site/src/components/ActivityLink/activitySummaries.ts`) are auto-generated from `content/activities/` by the build script. Do not edit that file; edit the activity's frontmatter and Description section instead.
+
 ### Images
 
 Activity photos and diagrams go in `site/static/img/activities/`. Use lowercase-kebab-case filenames (e.g., `animal-o.png`, `boundary-run.png`). Images are referenced by path in content files and data files.
