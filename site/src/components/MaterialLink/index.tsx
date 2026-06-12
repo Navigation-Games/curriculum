@@ -8,6 +8,16 @@ interface MaterialLinkProps {
   children?: React.ReactNode;
 }
 
+// Must produce the explicit {#id} anchors on the headings in
+// site/docs/reference/equipment/materials.md (e.g. "Start/finish markers"
+// -> "start-finish-markers").
+function materialAnchor(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
 export default function MaterialLink({name, children}: MaterialLinkProps): React.ReactElement {
   const [open, setOpen] = useState(false);
   const triggerRef = useRef<HTMLSpanElement>(null);
@@ -46,7 +56,7 @@ export default function MaterialLink({name, children}: MaterialLinkProps): React
           <div className={styles.popoverDetail}>
             <strong>Learning connection:</strong> {info.learningConnection}
           </div>
-          <a className={styles.popoverLink} href="/curriculum/reference/equipment/materials">
+          <a className={styles.popoverLink} href={`/curriculum/reference/equipment/materials/#${materialAnchor(info.name)}`}>
             View full materials index
           </a>
         </PopoverPortal>

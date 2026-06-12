@@ -5,7 +5,7 @@ import React from 'react';
  * - **bold**
  * - [link text](url)
  * - Newlines become <br>
- * - Lines starting with "- " become list items
+ * - Lines starting with "- " or "* " become list items
  *
  * Shared by AdvisorChat (live chat) and ReviewConversations (staff review),
  * so advisor responses render identically in both places.
@@ -46,16 +46,15 @@ export default function formatMessage(text: string): React.ReactNode {
 
       if (boldIndex < linkIndex) {
         if (boldIndex > 0) parts.push(remaining.slice(0, boldIndex));
-        parts.push(<strong key={partKey++}>{boldMatch![1]}</strong>);
+        // Recurse so nested markdown (e.g. a link inside bold) still renders
+        parts.push(<strong key={partKey++}>{formatInline(boldMatch![1])}</strong>);
         remaining = remaining.slice(boldIndex + boldMatch![0].length);
       } else {
         if (linkIndex > 0) parts.push(remaining.slice(0, linkIndex));
-        const href = linkMatch![2].startsWith('/')
-          ? linkMatch![2]
-          : linkMatch![2];
+        const href = linkMatch![2];
         parts.push(
           <a key={partKey++} href={href} target={href.startsWith('/') ? undefined : '_blank'} rel="noopener noreferrer">
-            {linkMatch![1]}
+            {formatInline(linkMatch![1])}
           </a>,
         );
         remaining = remaining.slice(linkIndex + linkMatch![0].length);
@@ -66,8 +65,10 @@ export default function formatMessage(text: string): React.ReactNode {
   }
 
   for (const line of lines) {
-    if (line.startsWith('- ')) {
-      listItems.push(<li key={key++}>{formatInline(line.slice(2))}</li>);
+    // "- item", "* item", possibly indented (nested lists render flattened)
+    const bullet = line.match(/^\s*[-*]\s+(.*)$/);
+    if (bullet) {
+      listItems.push(<li key={key++}>{formatInline(bullet[1])}</li>);
     } else {
       flushList();
       if (line.trim() === '') {
