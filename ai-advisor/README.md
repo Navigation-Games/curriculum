@@ -252,6 +252,13 @@ gcloud run deploy lesson-advisor `
   --region us-central1
 ```
 
+If `gcloud builds submit` fails with `Dockerfile required when specifying --tag`, you are not in the `ai-advisor/` directory. Cloud Build uploads the current directory as the build source, and the Dockerfile lives here. Either `cd ai-advisor` first, or pass the directory explicitly from the repo root:
+
+```powershell
+gcloud builds submit ai-advisor `
+  --tag us-central1-docker.pkg.dev/navigation-games-curriculum/advisor/lesson-advisor
+```
+
 If you only change frontend files (`site/src/components/AdvisorChat/`, `site/src/components/ReviewConversations/`, `site/src/pages/plan-my-lessons.*`, `site/src/pages/review-conversations.*`), you do NOT need to rebuild the backend. Those changes go out with the normal Docusaurus build via `git push` (GitHub Actions deploys automatically).
 
 If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub settings, you can trigger a rebuild from GitHub: **Actions > Deploy to GitHub Pages > Run workflow**.
