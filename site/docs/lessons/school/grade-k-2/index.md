@@ -3,24 +3,24 @@ title: "Introduction: K-2"
 sidebar_position: 0
 ---
 
-# Grade K-2 Orienteering Curriculum
+import ActivityLink from '@site/src/components/ActivityLink';
 
-Grades K-2 (ages 5-7). Six lessons that build from safety and exploration through early map reading. At this age, every activity is a game. Students work in pairs and small groups. The pace is slow, with plenty of repetition and play.
+# Grade K-2: Six Progressive Lessons
 
-These lessons align with the concept sequence entries 1-5 (Pre-Map Skills) and 6-7 (Sequential Navigation), with early exposure to 8-10 (Map Introduction). Communication and collaboration (#36-41) are woven throughout.
+**These lessons are ready to teach.** Take them and use them with your class, one lesson per class period, in order. Designed for grades K-2 (ages 5-7), they build from safety and exploration through early map reading. At this age, every activity is a game. Students work in pairs and small groups. The pace is slow, with plenty of repetition and play.
 
-## Learning Progression
-
-| Lesson | Theme | Key Activities | Concepts Introduced |
-|---|---|---|---|
-| [1. **Safety and Space**](./lesson-1) | Know the boundary, return on signal | [Boundary Run](/activities/core/boundary-run), [Gathering](/activities/core/gathering), tag extension | Boundaries, Return, Safety |
-| [2. **Search and Remember**](./lesson-2) | Discover the space and what's in it | [Explore & Find](/activities/core/explore-and-find), [Animal-O](/activities/core/animal-o) (free: meet the animals) | Searching, Spatial observation, Spatial memory |
-| [3. **Say Where**](./lesson-3) | Find things and describe where they are | [Clothespin-O](/activities/core/clothespin-o) (find hidden objects, describe where) | Spatial communication, Observation |
-| [4. **Visit Checkpoints in Order**](./lesson-4) | Follow a sequence | [Animal-O](/activities/core/animal-o) (in order) | Following a sequence, Confirming location |
-| [5. **Picture the Space**](./lesson-5) | Create a picture of the space | Obstacle course mapping, draw where animals are | Map as picture of space, Spatial relations |
-| [6. **Read a Map**](./lesson-6) | Use a map to find things | Simple [Geometric-O](/activities/core/geometric-o) or Map Maker | Orienting the map, Pattern matching |
+| Lesson | Theme | Key Activities |
+|---|---|---|
+| [1. **Safety and Space**](./lesson-1) | Know the boundary, return on signal | <ActivityLink slug="boundary-run">Boundary Run</ActivityLink>, <ActivityLink slug="gathering">Gathering</ActivityLink>, tag extension |
+| [2. **Search and Remember**](./lesson-2) | Discover the space and what's in it | <ActivityLink slug="explore-and-find">Explore & Find</ActivityLink>, <ActivityLink slug="animal-o">Animal-O</ActivityLink> (free: meet the animals) |
+| [3. **Say Where**](./lesson-3) | Find things and describe where they are | <ActivityLink slug="clothespin-o">Clothespin-O</ActivityLink> (find hidden objects, describe where) |
+| [4. **Visit Checkpoints in Order**](./lesson-4) | Follow a sequence | <ActivityLink slug="animal-o">Animal-O</ActivityLink> (in order) |
+| [5. **Picture the Space**](./lesson-5) | Create a picture of the space | Obstacle course mapping, draw where animals are |
+| [6. **Read a Map**](./lesson-6) | Use a map to find things | Simple <ActivityLink slug="geometric-o">Geometric-O</ActivityLink> or Map Maker |
 
 Plan for six class periods, one per lesson. Lessons 1 and 2 can often be combined for groups that settle in quickly. Lessons 5 and 6 may extend across two sessions.
+
+These lessons align with entries 1-5 (Pre-Map Skills) and 6-7 (Sequential Navigation) of the [Navigation Games skill and concept sequence](https://navigation-games.github.io/curriculum/reference/frameworks/skill-concept-sequence/), with early exposure to 8-10 (Map Introduction). Communication and collaboration (#36-41) are woven throughout.
 
 ## Notes for K-2
 
@@ -29,14 +29,3 @@ Plan for six class periods, one per lesson. Lessons 1 and 2 can often be combine
 - **Spatial language:** Build vocabulary deliberately: near, far, between, next to, past, behind. These words matter more at this age than map symbols.
 - **Drawing before reading:** Lesson 5 asks students to draw maps before Lesson 6 asks them to read maps. Creating a map first helps students understand what a map is.
 - **Gathering time:** Time the whole class on how quickly they can gather. This becomes a group challenge that unites the class (concept #40).
-
-## Activities Referenced
-
-| Activity | First Appears | Description |
-|---|---|---|
-| [Boundary Run](/activities/core/boundary-run) | Lesson 1 | Travel the boundary of the play area |
-| [Gathering](/activities/core/gathering) | Lesson 1 | Return to home base on the gathering signal |
-| [Explore & Find](/activities/core/explore-and-find) | Lesson 2 | In pairs, explore to find animal checkpoints (no set order) |
-| [Animal-O](/activities/core/animal-o) | Lessons 2, 4 | Find animal checkpoints using clue sheets |
-| [Clothespin-O](/activities/core/clothespin-o) | Lesson 3 | Find hidden objects and describe their locations |
-| [Geometric-O](/activities/core/geometric-o) | Lesson 6 | Use a simple map to find checkpoints |
