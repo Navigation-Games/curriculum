@@ -755,6 +755,9 @@ function generateLessonMDX(slug, { fm, sections, goals }, activityMaterials = {}
   L.push('---');
   L.push(`title: "${escAttr(lessonTitle)}"`);
   L.push(`sidebar_label: "${escAttr(fm.title)}"`);
+  // Lesson pages have a fixed, predictable section order (Activities, Goals,
+  // Delivery, Reflection, Extensions); the right-side TOC adds noise, not value.
+  L.push('hide_table_of_contents: true');
   if (fm.sidebar_position != null) L.push(`sidebar_position: ${fm.sidebar_position}`);
   L.push('---');
   L.push('');
