@@ -49,4 +49,8 @@ Lesson Plans from the [Orienteering Service of Australia](https://www.orienteeri
 
 ## A Note on AI
 
-We used AI tools, primarily Claude (Anthropic), to assist with editing: checking consistency, improving clarity, and helping organize content. The concepts, activities, and teaching approach come from years of teaching orienteering and collaboration with educators.
+The orienteering concepts, activities, and teaching approach in this curriculum come from years of teaching and collaboration with educators.
+
+What AI changed is how well and how quickly we could share them. We used AI tools, primarily Claude (Anthropic), throughout this project: to edit for consistency and clarity, to organize years of scattered materials into a coherent site, to build the tools that run it, and to turn a decade of teaching experience into something other educators can pick up and use. As a small nonprofit, we could not have built a resource this complete, this fast, on our own. We are grateful for what it made possible.
+
+We also offer an AI lesson plan advisor to help you plan. If you would rather minimize your AI footprint, you can skip the advisor entirely: read the curricula and adapt them to your situation on your own, or with help from Navigation Games staff, who are available as consultants.
