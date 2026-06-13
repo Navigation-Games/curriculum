@@ -85,7 +85,7 @@ Recurring curriculum-design signal (not impact): students repeatedly asked to be
 
 ## 5. What research suggests (the literature — about the ingredients, mostly not about us)
 
-Honest framing for the page: there is real orienteering-specific research, but it is largely on adults/elite athletes, not on our specific programs or the children we serve. Most of the case rests on the well-studied *ingredients* of what we do.
+Honest framing for the page: there is real orienteering-specific research, including a cluster of studies with school-aged children (executive function, attention, inhibitory control, map literacy, academic achievement; see the GitBook library section below). The peer-reviewed studies listed immediately below happen to be adult/elite samples; the child-focused work is mostly the smaller/single-site studies catalogued in Barb's GitBook review. None of it is on our specific programs or the exact children we serve, so we still lean on the well-studied *ingredients* of what we do, but "largely adults" is an understatement. Do not undersell the child-focused evidence.
 
 **Orienteering and cognition (peer-reviewed):**
 - Waddington, E. E., Allison, D. J., Calabrese, E. M., Pekos, C., Lee, A., Walsh, J. J., & Heisz, J. J. (2024). Orienteering combines vigorous-intensity exercise with navigation to improve human cognition and increase brain-derived neurotrophic factor (BDNF). *PLoS ONE*, 19(5), e0303785.
