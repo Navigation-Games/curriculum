@@ -13,7 +13,7 @@ This page lays out each of those. It ends with an invitation: we want to measure
 
 We have been bringing orienteering to children since 2015, when Navigation Games was founded as a nonprofit in Cambridge, Massachusetts. Since then we have served **over 50,000 participants**. In 2024 alone, we supported **743 classes and events for 14,936 participants**.
 
-Part of our mission is to enable others to teach, so that orienteering outlasts our direct involvement. In 2024, 295 of those classes were run by teachers and partners without Navigation Games staff present. That number matters as much to us as the total: it means the teaching is taking root.
+Part of our mission is to enable others to teach, so that orienteering outlasts our direct involvement. In 2024, 295 of those classes were run by teachers and partners without Navigation Games staff present.
 
 Most of this work is in Greater Boston, with a focus on communities that have the least access to outdoor learning. This is the firmest thing we know: a count of programs delivered and people served.
 
@@ -54,7 +54,7 @@ This is anecdotal, but it is consistent and comes from the people who have been 
 
 ## What the research suggests
 
-We cannot point to a controlled study of Navigation Games and the children we serve. What we can do is name the ingredients of what we do and point to the research on each. Our programs combine physical activity, time outdoors, spatial reasoning, problem-solving, and collaboration, and each is well studied and linked to positive outcomes for children.
+Applying established research to our own work is not a shortcut. It is how science is meant to be used: a shared base of knowledge that practitioners can build on. We are fortunate that a large body of research strongly predicts the impact of programs like ours. Our programs combine physical activity, time outdoors, spatial reasoning, problem-solving, and collaboration, and each is well studied and linked to positive outcomes for children.
 
 There is also a growing body of research on orienteering and navigation specifically, including studies with school-aged children:
 
@@ -64,10 +64,10 @@ There is also a growing body of research on orienteering and navigation specific
 - Navigation and memory share the same brain systems, so building a mental map supports confidence, independence, and reduced stress (Bond, *From Here to There*, Harvard University Press, 2021).
 - Time outdoors and experiential learning support concentration, motivation, and children's wellbeing (Rickinson et al., 2004; Sheldrake & Reiss, The Wildlife Trusts).
 
-The inputs are well studied, and we deliver them. We maintain a fuller, sourced review of this literature in [Orienteering Education and Research Around the World](https://navigation-games-2.gitbook.io/orienteering-education-around-the-world/literature/introduction-to-the-literature).
+Because the evidence points so clearly, we can spend our limited resources where they do the most good: delivering programs and developing the curriculum, refined by our own experience and the feedback and ideas of the people we work with. We maintain a fuller, sourced review of this literature in [Orienteering Education and Research Around the World](https://navigation-games-2.gitbook.io/orienteering-education-around-the-world/literature/introduction-to-the-literature).
 
 ## Measuring Impact of Navigation Games Programs
 
-We would like stronger evidence about our own programs, not just the categories they belong to. We already track participation, assess whether students can complete navigation tasks, align to PE standards, and gather feedback from students, teachers, and partners. Graduate researchers at the Harvard Graduate School of Education have twice evaluated aspects of our work.
+We also gather evidence directly from our own programs: participation data, whether students can complete navigation tasks, alignment to PE standards, and feedback from students, teachers, and partners. Graduate researchers at the Harvard Graduate School of Education have twice evaluated aspects of our work.
 
-We want to go further: pre and post measures of spatial skills, confidence, and collaboration, designed well enough to trust. If you are a researcher, a school, or a camp interested in helping us measure outcomes rigorously, we would love to talk. Reach us at [admin@navigationgames.org](mailto:admin@navigationgames.org).
+More rigorous measurement of our own programs would still add to what the field knows, and we welcome it. If you are a researcher, a school, or a camp interested in measuring outcomes with us, we would love to talk. Reach us at [admin@navigationgames.org](mailto:admin@navigationgames.org).

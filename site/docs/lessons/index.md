@@ -41,3 +41,7 @@ import ActivityCard from '@site/src/components/ActivityCard';
     link="/lessons/camp"
   />
 </CardGrid>
+
+## Teaching from these plans
+
+We are prescriptive only to take the mystery out of teaching for newcomers, not to insist on the exact wording or sequence. Try the first activity or two and see how it feels. You are welcome to ask our [Lesson Plan Advisor](/plan-my-lessons/) to combine your reflections from each day of teaching with your original game plan, and work out together how to adapt the curriculum as you go.

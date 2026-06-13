@@ -4,7 +4,7 @@ A synthesis of the materials in `background/research_and_impact/`, plus the GitB
 
 ## 1. What we deliver (participation data — our firmest evidence)
 
-Delivery counts over the years. The year-end newsletters carry the authoritative final annual numbers; earlier docs (Impact Statement, Goals/Track Record) sometimes quote mid-year figures that are lower. Use the newsletter numbers.
+The year-end newsletters carry the authoritative final annual numbers; earlier docs (Impact Statement, Goals/Track Record) sometimes quote mid-year figures that are lower. Use the newsletter numbers.
 
 - Founded 2015 as a 501(c)(3) in Cambridge, MA (501(c)(3) effective June 3, 2015). EIN 47-3952861. Founder Barb Bryant began volunteering to bring orienteering into schools around 2004. 2025 is the 10th anniversary.
 - **2018:** 350 events, 4,998 participants (4,636 children). [2018 Annual Report]
