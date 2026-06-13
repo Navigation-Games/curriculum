@@ -19,7 +19,7 @@ Most of this work is in Greater Boston, with a focus on communities that have th
 
 ## Students learn to orienteer
 
-This we can see directly. By the end of a progression, students orient a map, match symbols to real features in the world, take a compass bearing, and navigate a course on their own. These are the real skills of the sport, not simplified stand-ins. Progress is visible at every checkpoint found and every course completed. PE teachers adopt the unit because they watch it work.
+This we can see directly. By the end of a progression, students orient a map, match symbols to real features in the world, and navigate a course on their own. These are the real skills of the sport, not simplified stand-ins. Progress is visible at every checkpoint found and every course completed. PE teachers adopt the unit because they watch it work.
 
 We also build our lessons to recognized learning standards. When a lesson is designed to meet a [SHAPE America PE standard](/reference/frameworks/pe-standards) and students meet it, that is a documented learning outcome, achieved. Meeting established standards is itself a form of measured impact.
 
