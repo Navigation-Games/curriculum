@@ -47,15 +47,15 @@ After programs, we ask participants what they thought. A few voices, in their wo
 
 > It builds skills such as graphical representation, memory, and communication with others.
 
-Teachers often tell us the biggest surprise is engagement. Students who rarely take part in physical education will spend the whole class running around, because orienteering is a game they can play at their own pace. One teacher described three students she had been warned would be difficult; by the end they were helping classmates improve their times and leading the group.
+Teachers often tell us the biggest surprise is engagement. Students who rarely take part in physical education will spend the whole class running around, because orienteering is a fun game they can play at their own pace. One teacher described three students she had been warned would be difficult; by the end they were helping classmates improve their times and leading the group.
 
-Students describe the very thing the curriculum is built around. After a woods field trip, one wrote that the high point was "when we started actually going out and orienteering, because I felt like I could actually do it." Another, on getting lost: "we backtracked our steps and found out where we went wrong." A third put the lesson simply: "the key was not to panic." Learning to recover from a wrong turn without falling apart is one of the most transferable things orienteering teaches.
+After a woods field trip, one student wrote that the high point was "when we started actually going out and orienteering, because I felt like I could actually do it." Another, after getting turned around, said simply, "the key was not to panic." That confidence and composure is among the most transferable things orienteering teaches.
 
-This is anecdotal, but it is consistent and comes directly from our program participants.
+These anecdotes from our program participants show a clear impact on individuals.
 
 ## What the research shows
 
-Science grows a shared base of knowledge that practitioners can build on. We are fortunate that a large body of research strongly predicts the impact of programs like ours. Our programs combine physical activity, time outdoors, spatial reasoning, problem-solving, and collaboration, and each is well studied and linked to positive outcomes for children.
+We are fortunate that a large body of research strongly predicts the impact of programs like ours. Our programs combine physical activity, time outdoors, spatial reasoning, problem-solving, and collaboration, and each is well studied and linked to positive outcomes for children.
 
 There is also a growing body of research on orienteering and navigation specifically, including studies with school-aged children:
 
@@ -63,7 +63,7 @@ There is also a growing body of research on orienteering and navigation specific
 - Spatial reasoning, which orienteering exercises directly, is linked to later success in mathematics, and instruction that builds spatial skill carries over into math understanding (Geer et al., 2019; Mitchell & Malone, 2024).
 - In adults, orienteering combined with vigorous exercise improved cognition and raised brain-derived neurotrophic factor more than exercise alone (Waddington et al., 2024), and experienced orienteers report stronger spatial processing and memory across adulthood (Waddington & Heisz, 2023).
 - Building and trusting a mental map of the world lets children explore with confidence and independence, and eases the stress of not knowing where they are (Bond, *From Here to There*, Harvard University Press, 2021).
-- Spatial awareness and navigation are based in the brain's hippocampus, a region vital to memory. In fact, many researchers believe that memory and navigation evolved together in the hippocampus. Evidence suggests that working on navigational skills strengthens the hippocampus and improves memory (Bond, 2021).
+- Researchers believe that memory and navigation evolved together in the hippocampus. Evidence suggests that working on navigational skills strengthens the hippocampus and improves memory (Bond, 2021).
 - Time outdoors and experiential learning support concentration, motivation, and children's wellbeing (Rickinson et al., 2004; Sheldrake & Reiss, The Wildlife Trusts).
 
 We put our resources into delivering programs and improving the curriculum, informed by this research, our own experience, and feedback from the people we work with. We keep a fuller, sourced review in [Orienteering Education and Research Around the World](https://navigation-games-2.gitbook.io/orienteering-education-around-the-world/literature/introduction-to-the-literature).
