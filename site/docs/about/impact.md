@@ -29,7 +29,7 @@ Navigating with a map is the visible skill. It is not the only goal. The progres
 
 - **Confidence, especially outdoors.** Each activity is a small, achievable step, so by the time a student navigates a course, they have proof they can orienteer. That confidence carries into unfamiliar places and unfamiliar problems.
 - **Setting a goal and working out how to reach it.** Orienteering is planning made physical: decide where you are going, choose a route, commit, and adjust when it does not work. Students run that loop repeatedly with each course they navigate.
-- **Problem-solving and resilience.** Route choice means weighing options with incomplete information and living with the result. Recovering from a wrong turn without panicking is a skill, and it transfers to any unfamiliar problem.
+- **Problem-solving and resilience.** Route choice means weighing options with incomplete information, making a good choice, and carrying it out. Recovering from a wrong turn without panicking is a skill, and it transfers to any unfamiliar problem.
 - **Collaboration and communication.** Partner roles and relays give every student a real job and a real reason to talk, agree, and work through disagreement together.
 - **Spatial reasoning.** Translating between a map and the world is sustained practice in spatial thinking, which research links to later success in mathematics and STEM.
 - **Connection with nature.** Students spend the session outside, paying close attention to the ground, the trees, and the terrain, often in green spaces near them that they had never really explored.
@@ -51,24 +51,23 @@ Teachers often tell us the biggest surprise is engagement. Students who rarely t
 
 Students describe the very thing the curriculum is built around. After a woods field trip, one wrote that the high point was "when we started actually going out and orienteering, because I felt like I could actually do it." Another, on getting lost: "we backtracked our steps and found out where we went wrong." A third put the lesson simply: "the key was not to panic." Learning to recover from a wrong turn without falling apart is one of the most transferable things orienteering teaches.
 
-This is anecdotal, but it is consistent and comes from the people who have been in our programs.
+This is anecdotal, but it is consistent and comes directly from our program participants.
 
-## What the research suggests
+## What the research shows
 
-Applying established research to our own work is not a shortcut. It is how science is meant to be used: a shared base of knowledge that practitioners can build on. We are fortunate that a large body of research strongly predicts the impact of programs like ours. Our programs combine physical activity, time outdoors, spatial reasoning, problem-solving, and collaboration, and each is well studied and linked to positive outcomes for children.
+Science grows a shared base of knowledge that practitioners can build on. We are fortunate that a large body of research strongly predicts the impact of programs like ours. Our programs combine physical activity, time outdoors, spatial reasoning, problem-solving, and collaboration, and each is well studied and linked to positive outcomes for children.
 
 There is also a growing body of research on orienteering and navigation specifically, including studies with school-aged children:
 
 - In children, orienteering programs have been associated with gains in executive function, attention, and inhibitory control, and with stronger map literacy and academic achievement (studies with students in grades 4 through 8, including children with ADHD and learning disabilities).
 - Spatial reasoning, which orienteering exercises directly, is linked to later success in mathematics, and instruction that builds spatial skill carries over into math understanding (Geer et al., 2019; Mitchell & Malone, 2024).
 - In adults, orienteering combined with vigorous exercise improved cognition and raised brain-derived neurotrophic factor more than exercise alone (Waddington et al., 2024), and experienced orienteers report stronger spatial processing and memory across adulthood (Waddington & Heisz, 2023).
-- Navigation and memory share the same brain systems, so building a mental map supports confidence, independence, and reduced stress (Bond, *From Here to There*, Harvard University Press, 2021).
+- Building and trusting a mental map of the world lets children explore with confidence and independence, and eases the stress of not knowing where they are (Bond, *From Here to There*, Harvard University Press, 2021).
+- Spatial awareness and navigation are based in the brain's hippocampus, a region vital to memory. In fact, many researchers believe that memory and navigation evolved together in the hippocampus. Evidence suggests that working on navigational skills strengthens the hippocampus and improves memory (Bond, 2021).
 - Time outdoors and experiential learning support concentration, motivation, and children's wellbeing (Rickinson et al., 2004; Sheldrake & Reiss, The Wildlife Trusts).
 
-Because the evidence points so clearly, we can spend our limited resources where they do the most good: delivering programs and developing the curriculum, refined by our own experience and the feedback and ideas of the people we work with. We maintain a fuller, sourced review of this literature in [Orienteering Education and Research Around the World](https://navigation-games-2.gitbook.io/orienteering-education-around-the-world/literature/introduction-to-the-literature).
+We put our resources into delivering programs and improving the curriculum, informed by this research, our own experience, and feedback from the people we work with. We keep a fuller, sourced review in [Orienteering Education and Research Around the World](https://navigation-games-2.gitbook.io/orienteering-education-around-the-world/literature/introduction-to-the-literature).
 
 ## Measuring Impact of Navigation Games Programs
 
-We also gather evidence directly from our own programs: participation data, whether students can complete navigation tasks, alignment to PE standards, and feedback from students, teachers, and partners. Graduate researchers at the Harvard Graduate School of Education have twice evaluated aspects of our work.
-
-More rigorous measurement of our own programs would still add to what the field knows, and we welcome it. If you are a researcher, a school, or a camp interested in measuring outcomes with us, we would love to talk. Reach us at [admin@navigationgames.org](mailto:admin@navigationgames.org).
+Graduate research students at the Harvard Graduate School of Education have twice evaluated aspects of our work. We welcome scientific measurement of our programs. If you are a researcher, a school, or a camp interested in measuring outcomes with us, we would love to talk. Reach us at [admin@navigationgames.org](mailto:admin@navigationgames.org).
