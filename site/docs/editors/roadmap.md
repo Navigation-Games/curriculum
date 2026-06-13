@@ -9,6 +9,20 @@ What's done, what's next, and what's deferred.
 
 ## Next
 
+### Site navigation redesign
+
+Design decisions in `notes/site-navigation-redesign.md`. The hub (#1 below) is done; remaining work:
+
+- **Enrich school landing page.** Bring `site/docs/lessons/school/index.md` up to the depth of the camp landing. Broaden audience from "PE teachers" to any teacher — PE standards alignment framed as a bonus. Add a summary of school realities that links to the new challenges page.
+
+- **New page: teaching orienteering at school.** Dedicated page covering typical school constraints (lesson time, space, class size, mixed abilities), working with different ages in the same day, building progressions year-to-year, and complementing with after-school and community activities. Future bridge to the Clubs audience.
+
+- **Quick Start: About Orienteering section.** Add a brief "what is orienteering?" section for visitors who arrive with no context. This content graduates to a Clubs/About page when that audience card is added to Home.
+
+- **How to Use This Site: site map and audience broadening.** Add a site map diagram (static labeled tree), rewrite "For PE teachers" to welcome classroom teachers, and lean into the breadcrumbs explanation.
+
+- **Optional: sidebar expanded on landing pages.** Keep sidebar collapsed on lesson content pages but expand it on index/landing pages. Resolves the original tension at its root. Change is in the swizzled `site/src/theme/DocRoot/Layout/` components.
+
 ### Completing Version 1 of the curriculum
 
 - **Incorporate Kieran's feedback.** Kieran makes notes separately (not editing in GitHub or Google Docs). Barb works with Claude to incorporate his feedback into the content files.
@@ -137,3 +151,4 @@ Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O
 - Right-side TOC removed from generated activity and lesson pages; left sidebar hideable and collapsed by default
 - Readiness activity cards now precede core cards in lessons (warm-up, readiness, core, variation, extension)
 - Advisor chat markdown rendering fixed for nested bold/links and `*` bullets
+- Lessons hub page (`site/docs/lessons/index.md`): explains school vs camp distinction, what's the same and different, cards to each program. Navbar "Lesson Plans" now lands here; hub is root breadcrumb on all lesson pages.

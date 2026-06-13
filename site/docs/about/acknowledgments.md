@@ -1,6 +1,6 @@
 ---
 title: Acknowledgments
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Acknowledgments
@@ -46,3 +46,7 @@ Erin Schirm (Orienteering USA coach) developed and shared with us orienteering l
 Lesson Plans from the [Orienteering Service of Australia](https://www.orienteering.asn.au/).
 
 **[SHAPE America](https://www.shapeamerica.org/)** for the National Standards and Grade-Level Outcomes for K-12 Physical Education, used in our PE standards alignment.
+
+## A Note on AI
+
+We used AI tools, primarily Claude (Anthropic), to assist with editing: checking consistency, improving clarity, and helping organize content. The concepts, activities, and teaching approach come from years of teaching orienteering and collaboration with educators.
