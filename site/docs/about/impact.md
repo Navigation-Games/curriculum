@@ -19,7 +19,7 @@ Most of this work is in Greater Boston, with a focus on communities that have th
 
 ## Students learn to orienteer
 
-This we can see directly. By the end of a progression, students orient a map, match symbols to real features in the world, and navigate a course on their own. These are the real skills of the sport, not simplified stand-ins. Progress is visible at every checkpoint found and every course completed. PE teachers adopt the unit because they watch it work.
+This we can see directly. By the end of a progression, students orient a map, match symbols to real features in the world, and navigate a course. These are the real skills of the sport, not simplified stand-ins. Progress is visible at every checkpoint found and every course completed. PE teachers adopt the unit because they watch it work.
 
 We also build our lessons to recognized learning standards. When a lesson is designed to meet a [SHAPE America PE standard](/reference/frameworks/pe-standards) and students meet it, that is a documented learning outcome, achieved. Meeting established standards is itself a form of measured impact.
 
@@ -27,7 +27,7 @@ We also build our lessons to recognized learning standards. When a lesson is des
 
 Reading a map is the visible skill. It is not the main point. The progression is designed so that, in the course of learning to navigate, students build capacities that matter far beyond the sport:
 
-- **Confidence, especially outdoors.** Many children are convinced they are "bad with directions." Each activity is a small, achievable step, so by the time a student navigates a course alone, they have proof they can do it. That confidence carries into unfamiliar places and unfamiliar problems.
+- **Confidence, especially outdoors.** Many children are convinced they are "bad with directions." Each activity is a small, achievable step, so by the time a student navigates a course, they have proof they can do it. That confidence carries into unfamiliar places and unfamiliar problems.
 - **Setting a goal and working out how to reach it.** Orienteering is planning made physical: decide where you are going, choose a route, commit, and adjust when it does not work. Students run that loop again and again.
 - **Problem-solving and resilience.** Route choice means weighing options with incomplete information and living with the result. Recovering from a wrong turn without panicking is a skill, and it transfers to any unfamiliar problem.
 - **Collaboration and communication.** Partner roles and relays give every student a real job and a real reason to talk, agree, and work through disagreement together.
