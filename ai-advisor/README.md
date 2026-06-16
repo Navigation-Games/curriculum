@@ -268,11 +268,45 @@ If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub
 | Environment variable | Where | Purpose |
 |---|---|---|
 | `ANTHROPIC_API_KEY` | Backend (Cloud Run secret) | Authenticates with the Claude API |
-| `ADVISOR_MODEL` | Backend (optional) | Override the Claude model (default: claude-sonnet-4-20250514) |
+| `ADVISOR_MODEL` | Backend (optional) | Pin the Claude model (default: claude-sonnet-4-6). If the pinned model is unavailable (e.g. retired), the app auto-selects a current one at startup, preferring Sonnet. |
 | `PORT` | Backend (set by Cloud Run) | Server port (default: 8080) |
 | `ADVISOR_SHEET_ID` | Backend (optional) | Google Sheet ID for conversation logging; also used by the review endpoints |
 | `REVIEW_OAUTH_CLIENT_ID` | Backend + frontend (build time) | OAuth client ID for staff sign-in on the review page |
 | `ADVISOR_API_URL` | Frontend (build time) | Backend URL for the chat component |
+
+## Troubleshooting
+
+### The advisor says "isn't available right now"
+
+That message comes from the frontend whenever the backend `/chat` endpoint fails. The backend can be healthy while `/chat` is broken, so check in this order:
+
+1. **Is the service up?** `curl https://lesson-advisor-523012695945.us-central1.run.app/health` should return `{"status":"ok"}`. If it does, the container is running and the problem is inside the chat call.
+2. **Does `/chat` actually work?** Test it directly (note: it needs a `messages` array, not a `message` string):
+   ```powershell
+   curl -s -X POST https://lesson-advisor-523012695945.us-central1.run.app/chat `
+     -H "Content-Type: application/json" `
+     -d '{\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}'
+   ```
+   A 500 with `{"error":"Something went wrong..."}` means the Claude API call failed.
+3. **Read the logs for the real error.** The handler logs the underlying Anthropic error before returning the generic 500. Authenticate with the **president@navigationgames.org** account first (`gcloud auth login`), then:
+   ```powershell
+   gcloud logging read "resource.type=cloud_run_revision AND resource.labels.service_name=lesson-advisor" `
+     --project navigation-games-curriculum --limit 15 --freshness 1d `
+     --format "value(timestamp,textPayload)"
+   ```
+   Look for `Anthropic API error: ...`. Common causes: `not_found_error` (bad/retired model ID), `authentication_error` (bad API key), `credit balance is too low` (billing).
+
+### Retired Claude model (the June 2026 outage)
+
+On 2026-06-16 the advisor went down because it was pinned to the dated model alias `claude-sonnet-4-20250514`, which Anthropic retired on June 15. The API returned `404 not_found_error` on every chat call.
+
+The app now defends against this automatically (see `resolve_model()` in `app.py`): at startup it lists available models and, if the pinned `ADVISOR_MODEL` is gone, falls back to the newest current model, preferring Sonnet. It also re-resolves once at request time if a model retires while an instance is running. So a retired model should no longer cause an outage.
+
+If you ever need to force a specific model, set `ADVISOR_MODEL` to a current bare alias (not a dated one): `claude-sonnet-4-6`, `claude-opus-4-8`, or `claude-haiku-4-5`. Either rebuild and redeploy, or update the live service without a rebuild:
+```powershell
+gcloud run services update lesson-advisor --region us-central1 `
+  --update-env-vars ADVISOR_MODEL=claude-sonnet-4-6
+```
 
 ## Cost
 

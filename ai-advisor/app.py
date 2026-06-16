@@ -39,8 +39,76 @@ SYSTEM_PROMPT = SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")
 client = anthropic.Anthropic()
 
 # Model configuration
-MODEL = os.environ.get("ADVISOR_MODEL", "claude-sonnet-4-20250514")
+# The advisor is tuned for Sonnet. ADVISOR_MODEL pins a specific model; if it is
+# ever retired, the app auto-selects a current one instead of returning errors.
+_CONFIGURED_MODEL = os.environ.get("ADVISOR_MODEL", "claude-sonnet-4-6")
+_MODEL_FAMILY_PREFERENCE = ("sonnet", "opus", "haiku")
 MAX_TOKENS = 1024
+
+
+def resolve_model(preferred=_CONFIGURED_MODEL):
+    """Choose a usable Claude model.
+
+    Returns `preferred` if the Anthropic API still serves it. If it has been
+    retired (or the model list can't be fetched), fall back to the newest
+    available model, preferring Sonnet, then Opus, then Haiku. This lets the
+    advisor self-heal when a pinned model ID is retired instead of returning
+    500s on every request.
+    """
+    try:
+        models = list(client.models.list())
+    except Exception as e:  # network/auth hiccup - trust the configured value
+        app.logger.warning(f"Could not list models ({e}); using '{preferred}'")
+        return preferred
+
+    if preferred in {m.id for m in models}:
+        return preferred
+
+    app.logger.error(
+        f"Configured model '{preferred}' is unavailable (likely retired); "
+        "auto-selecting a fallback"
+    )
+    newest_first = sorted(
+        models, key=lambda m: getattr(m, "created_at", ""), reverse=True
+    )
+    for family in _MODEL_FAMILY_PREFERENCE:
+        for m in newest_first:
+            if family in m.id:
+                app.logger.warning(f"Falling back to model '{m.id}'")
+                return m.id
+    if newest_first:
+        app.logger.warning(f"Falling back to model '{newest_first[0].id}'")
+        return newest_first[0].id
+    return preferred
+
+
+# Resolved once at startup; re-resolved on the fly if the model retires mid-run.
+MODEL = resolve_model()
+
+
+def _create_message(messages):
+    """Call the Claude API, self-healing if the active model was retired."""
+    global MODEL
+    kwargs = dict(
+        max_tokens=MAX_TOKENS,
+        system=[
+            {
+                "type": "text",
+                "text": SYSTEM_PROMPT,
+                "cache_control": {"type": "ephemeral"},
+            }
+        ],
+        messages=messages,
+    )
+    try:
+        return client.messages.create(model=MODEL, **kwargs)
+    except anthropic.NotFoundError:
+        new_model = resolve_model()
+        if new_model == MODEL:
+            raise
+        app.logger.warning(f"Model '{MODEL}' not found; switching to '{new_model}'")
+        MODEL = new_model
+        return client.messages.create(model=MODEL, **kwargs)
 
 # Google Sheets logging
 SPREADSHEET_ID = os.environ.get("ADVISOR_SHEET_ID", "")
@@ -174,18 +242,7 @@ def chat():
 
     try:
         # Call Claude API with prompt caching on the system prompt
-        response = client.messages.create(
-            model=MODEL,
-            max_tokens=MAX_TOKENS,
-            system=[
-                {
-                    "type": "text",
-                    "text": SYSTEM_PROMPT,
-                    "cache_control": {"type": "ephemeral"},
-                }
-            ],
-            messages=messages,
-        )
+        response = _create_message(messages)
 
         assistant_message = response.content[0].text
 
