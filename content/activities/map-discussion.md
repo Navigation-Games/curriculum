@@ -10,7 +10,11 @@ space: Schoolyard, local park, or forest
 materials:
   - Orienteering map of the area
 setup: Print a large poster sized map of the area
-images: []
+images:
+  - src: /curriculum/img/activities/map-discussion.png
+    alt: Illustration of a teacher pointing at a map on an easel while children gather around to look
+    caption: Examine an orienteering map together and talk about the symbols
+    onepager: true
 videos: []
 ---
 

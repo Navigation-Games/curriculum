@@ -13,7 +13,11 @@ materials:
   - Checkpoints (flags, flagging tape, or cones)
   - Pens or pencils
 setup: Put out checkpoints as per the all-checkpoints map
-images: []
+images:
+  - src: /curriculum/img/activities/line-o.jpg
+    alt: Orienteering map of Nahanton Park with a course line drawn for runners to follow
+    caption: "Follow the line and count the checkpoints along the route"
+    onepager: true
 videos: []
 ---
 

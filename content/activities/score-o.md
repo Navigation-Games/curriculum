@@ -187,6 +187,8 @@ The teacher can enter at any step:
 
 ### Poker-O *(extension)*
 
+<img src="/curriculum/img/activities/poker-o.png" alt="A royal flush of hearts: 10, jack, queen, king, ace" width="170" style={{float:'right', margin:'0 0 0.5rem 1rem'}} />
+
 **Collect the best poker hand by visiting checkpoints with playing cards.**
 
 Each checkpoint has a playing card attached. Students visit checkpoints and record the card. After the time limit, the best poker hand wins. Adds a layer of strategy since students must decide whether to visit more checkpoints (more cards) or be selective about which ones to visit.

@@ -11,7 +11,11 @@ materials:
   - Clothespins (numbered, lettered, or with colored streamers)
   - Small whiteboards and markers (optional, for map variations)
 setup: Hide clothespins throughout the play area within the boundary before students arrive, or have students hide them as part of the activity
-images: []
+images:
+  - src: /curriculum/img/activities/clothespin-o.jpg
+    alt: A small pile of wooden clothespins on a tabletop
+    caption: Numbered or colored clothespins make quick hidden checkpoints
+    onepager: true
 videos: []
 ---
 

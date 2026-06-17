@@ -14,7 +14,11 @@ materials:
   - Small whiteboard and markers (or paper)
   - All-checkpoints map
 setup: Arrange checkpoints and colored cones according to the all-checkpoints map
-images: []
+images:
+  - src: /curriculum/img/activities/geometric-o.png
+    alt: Geometric-O setup with animal checkpoints arranged in a rectangle and four colored corner cones (red, blue, green, yellow)
+    caption: "Setup: animal checkpoints with four colored corner cones"
+    onepager: true
 videos:
   - id: 32D52UPa7Gw
     title: How to Teach Geometric-O

@@ -15,6 +15,14 @@ materials:
   - All-checkpoints map or list of symbols corresponding to the animals
   - Symbol-O clue sheets
 setup: Place checkpoints on features that match the symbols in the answer key
+images:
+  - src: /curriculum/img/activities/symbol-o-1.png
+    alt: Three Symbol-O clue strips, each showing a start triangle, a sequence of map symbols, and a finish
+    caption: "Clue strips: find the feature that matches each map symbol"
+    onepager: true
+  - src: /curriculum/img/activities/symbol-o-2.png
+    alt: Schoolyard map legend matching colored symbols to features such as hill, boulder, water play area, drinking fountain, grass, bushes, tree, fence, canopy, light post, pavement, bench, and man-made landmark
+    caption: "Map legend: what each symbol means"
 ---
 
 ## Description

@@ -13,7 +13,11 @@ materials:
   - 2 sets of symbol cards (one per team)
   - 2 sets of text cards (one per team)
 setup: Place one set of symbol cards and one set of text cards at the far end of the playing area, separated by team
-images: []
+images:
+  - src: /curriculum/img/activities/symbol-relay.png
+    alt: Schoolyard map legend matching colored symbols to their feature names
+    caption: "The map legend players race to match symbols to their names"
+    onepager: true
 videos: []
 ---
 

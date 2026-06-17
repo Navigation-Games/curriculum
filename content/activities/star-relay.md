@@ -96,6 +96,8 @@ The underlying themes are teamwork, communication, and memory. Partners must str
 
 ### Compass Spider *(variation)*
 
+<img src="/curriculum/img/activities/compass-spider.jpg" alt="Spider diagram: a central start point with lines radiating out to numbered checkpoints" width="240" style={{float:'right', margin:'0 0 0.5rem 1rem'}} />
+
 **Star Relay with compass navigation.** The setup is the same as Star Relay, but sections of the map between checkpoints are whited out (covered with paper or digitally removed before printing). Runners cannot see the terrain detail between the start and the checkpoint, so they must use a compass bearing to navigate there and back.
 
 You can combine Compass Spider with regular Star Relay in one session: some checkpoints have the whiteout and some do not. This lets participants practice both map-based and compass-based navigation in the same activity.

@@ -13,7 +13,11 @@ materials:
   - Checkpoint markers (cones or flags) with codes
   - All-checkpoints map
 setup: Place checkpoints at their corresponding locations according to the all-checkpoints map
-images: []
+images:
+  - src: /curriculum/img/activities/point-to-point.png
+    alt: Schoolyard orienteering map with a numbered point-to-point course (checkpoints 1 to 5) and a legend
+    caption: "A point-to-point course: visit the checkpoints in order"
+    onepager: true
 videos: []
 ---
 
