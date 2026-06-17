@@ -27,7 +27,7 @@ We also build our lessons to recognized learning standards. When a lesson is des
 
 Navigating with a map is the visible skill. It is not the only goal. The progression is designed so that, in the course of learning to navigate, students build capacities that matter far beyond the sport:
 
-- **Confidence, especially outdoors.** Each activity is a small, achievable step, so by the time a student navigates a course, they have proof they can orienteer. That confidence carries into unfamiliar places and unfamiliar problems.
+- **Confidence, especially outdoors.** Each activity has small, achievable steps, so by the time a student navigates a course, they have proof they can orienteer. That confidence carries into unfamiliar places and unfamiliar problems.
 - **Setting a goal and working out how to reach it.** Orienteering is planning made physical: decide where you are going, choose a route, commit, and adjust when it does not work. Students run that loop repeatedly with each course they navigate.
 - **Problem-solving and resilience.** Route choice means weighing options with incomplete information, making a good choice, and carrying it out. Recovering from a wrong turn without panicking is a skill, and it transfers to any unfamiliar problem.
 - **Collaboration and communication.** Partner roles and relays give every student a real job and a real reason to talk, agree, and work through disagreement together.
