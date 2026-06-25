@@ -1,13 +1,14 @@
 /**
- * Swizzled (ejected) from @docusaurus/theme-classic so the left sidebar can
- * start collapsed by default (see the swizzled DocRoot/Layout/index.js).
- * Only change from the original: the inner hiddenSidebar state initializes
- * from the hiddenSidebarContainer prop instead of false, so the expand
- * button renders on first load when the sidebar starts collapsed. The
- * original relied on a collapse transition to set it, which never fires
- * when the sidebar is never open.
+ * Swizzled (ejected) from @docusaurus/theme-classic so the left sidebar
+ * responds to path-based expand/collapse (see the swizzled DocRoot/Layout/index.js).
+ * Changes from the original:
+ * - hiddenSidebar initializes from hiddenSidebarContainer (not false), so the
+ *   expand button renders on first load when the sidebar starts collapsed.
+ * - A useEffect syncs hiddenSidebar when hiddenSidebarContainer opens
+ *   reactively (path-based change rather than user toggle), so the sidebar
+ *   content becomes visible as the container expands.
  */
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import clsx from 'clsx';
 import {prefersReducedMotion, ThemeClassNames} from '@docusaurus/theme-common';
 import {useDocsSidebar} from '@docusaurus/plugin-content-docs/client';
@@ -33,6 +34,15 @@ export default function DocRootLayoutSidebar({
 }) {
   const {pathname} = useLocation();
   const [hiddenSidebar, setHiddenSidebar] = useState(hiddenSidebarContainer);
+
+  // When the container opens reactively (path change, not user toggle), make
+  // the sidebar content visible so it appears as the container expands.
+  useEffect(() => {
+    if (!hiddenSidebarContainer) {
+      setHiddenSidebar(false);
+    }
+  }, [hiddenSidebarContainer]);
+
   const toggleSidebar = useCallback(() => {
     if (hiddenSidebar) {
       setHiddenSidebar(false);
