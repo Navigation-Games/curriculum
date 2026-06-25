@@ -16,13 +16,10 @@ images:
   - src: /curriculum/img/activities/animal-o-pig.jpg
     alt: Child in yellow raincoat finding the pig checkpoint
     caption: Finding the pig checkpoint
-  - src: /curriculum/img/activities/animal-o.png
-    alt: Animal-O setup diagram
-    caption: "Setup: checkpoints within a boundary"
-    onepager: true
   - src: /curriculum/img/activities/animal-o-clue-sheet.jpg
     alt: Seven laminated clue sheet strips fanned out, each showing a start triangle, a sequence of animal pictures, and a finish circle
     caption: "Clue sheets: each strip is a different course"
+    onepager: true
 videos:
   - id: rok2Ghx3fq4
     title: Animal Orienteering for Instructors

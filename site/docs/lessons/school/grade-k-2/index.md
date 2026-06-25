@@ -18,12 +18,11 @@ import ActivityLink from '@site/src/components/ActivityLink';
 | [5. **Picture the Space**](./lesson-5) | Create a picture of the space | Obstacle course mapping, draw where animals are |
 | [6. **Read a Map**](./lesson-6) | Use a map to find things | Simple <ActivityLink slug="geometric-o">Geometric-O</ActivityLink> or Map Maker |
 
-Plan for six class periods, one per lesson. Lessons 1 and 2 can often be combined for groups that settle in quickly. Lessons 5 and 6 may extend across two sessions.
-
 These lessons align with entries 1-5 (Pre-Map Skills) and 6-7 (Sequential Navigation) of the [Navigation Games skill and concept sequence](https://navigation-games.github.io/curriculum/reference/frameworks/skill-concept-sequence/), with early exposure to 8-10 (Map Introduction). Communication and collaboration (#36-41) are woven throughout.
 
 ## Notes for K-2
 
+- **Pacing adjustments:** Plan for six class periods, one per lesson. Lessons 1 and 2 can often be combined for groups that settle in quickly. Lessons 5 and 6 may extend across two sessions.
 - **Pairs:** We recommend that K-2 students do almost everything in pairs. It keeps everyone safe, builds communication, and means one partner can hold the clue sheet while the other looks.
 - **Roles:** Introduce Finder and Helper early. By Lesson 3, students who finish can help others (with rules about what they can say). See concept #37 in the skill sequence.
 - **Spatial language:** Build vocabulary deliberately: near, far, between, next to, past, behind. These words matter more at this age than map symbols.

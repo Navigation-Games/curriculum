@@ -67,7 +67,7 @@ const activities: ActivitySummary[] = [
     time: '15-30 minutes',
     lessons: '3-5 L3, K-2 L2/L4, 6+ L1',
     status: 'done',
-    image: '/curriculum/img/activities/animal-o.png',
+    image: '/curriculum/img/activities/animal-o-pig.jpg',
     link: '/curriculum/activities/core/animal-o',
     description: 'Explore within the boundary to find animal checkpoints. Use a clue sheet to find checkpoints in order. Repeat for a faster time. Repeat from memory.',
     steps: [

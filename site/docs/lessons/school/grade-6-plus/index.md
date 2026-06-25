@@ -18,12 +18,11 @@ import ActivityLink from '@site/src/components/ActivityLink';
 | [5. **Course Navigation**](./lesson-5) | Point-to-point courses | <ActivityLink slug="point-to-point">Point-to-Point</ActivityLink>, course review and debrief | Handrails, Attack points, Debrief |
 | [6. **Race Day**](./lesson-6) | Competition and independence | Relay Race, finish chute | Independence, Managing pressure, Choosing challenge |
 
-Plan for six class periods, one per lesson. Lesson 1 covers material that takes K-2 students several weeks. The pace is fast because older students can handle multiple concepts in a single session.
-
 These lessons cover entries 6-21 (Sequential Navigation through Score-O) of the [Navigation Games skill and concept sequence](https://navigation-games.github.io/curriculum/reference/frameworks/skill-concept-sequence/), with emphasis on 16-20 (Navigation with Maps). Communication (#36-41) and Individual Development (#42-45) are woven throughout, especially debrief and self-assessment. Compass skills (#22-25) can be added as extensions or in follow-up sessions.
 
 ## Notes for 6+
 
+- **Pacing adjustments:** Plan for six class periods, one per lesson. Lesson 1 covers material that takes K-2 students several weeks. The pace is fast because older students can handle multiple concepts in a single session.
 - **Skip the basics if appropriate:** Boundary Run and Gathering can be done as a 5-minute warm-up in Lesson 1 rather than their own sessions. Most 6+ students already understand boundaries and signals. If students are new to orienteering, spend more time on Lesson 1.
 - **Animal-O is brief:** Use Animal-O only long enough to introduce the clue sheet format and checkpoint confirmation. Move to Geometric-O within the same lesson.
 - **Reverse Score-O (Lesson 4):** Students receive a blank map with only landmarks, navigate to find checkpoints in the terrain, and mark where they are on the map. This reverses the usual direction (map tells you where to go) and deepens the map-terrain connection. This activity may still need formal development.

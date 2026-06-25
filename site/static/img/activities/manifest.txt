@@ -1,0 +1,120 @@
+IMAGE HANDOVER MANIFEST — Navigation Games Activity Images
+Generated: 2026-06-16
+Source: Google Drive "Activities - Resources" folder (https://drive.google.com/drive/folders/1GifESm5jhDgVOxnpSe3PfQXrRTcG0qI8)
+Destination: site/static/img/activities/ (and /narrow-one-pagers/ subfolder)
+
+Each row: local_filename | activity_name | source_doc_title | source_doc_id (Google Drive)
+Use the source doc to see exactly where in the page layout the image appeared (these were extracted from each activity's "One Page Summary" Google Doc, which mirrors the activity description page).
+
+=== IMAGES EXTRACTED (ready to place) ===
+
+animal-o.png | Animal-O | Animal-O - One Page Summary | (see Activities-Resources/Animal-O folder)
+animal-o-clue-sheet.jpg | Animal-O | (pre-existing, clue sheet graphic) | N/A
+animal-o-pig.jpg | Animal-O | (pre-existing) | N/A
+animal-o-whiteboard.jpg | Animal-O | (pre-existing) | N/A
+boundary-run.png | Boundary Run | Boundary Run - One Page Summary | (Activities-Resources/Boundary Run folder)
+clothespin-o.jpg | Clothespin-O | Clothespin-O - One Page Summary | (Activities-Resources/Clothespin-O folder)
+geometric-o.png | Geometric-O | Geometric-O - One Page Summary | (Activities-Resources/Geometric-O folder)
+isometric-drawing-o.png | Isometric Drawing-O | Isometric Drawing-O - One Page Summary | (Activities-Resources/Isometric Drawing-O folder)
+maze-o.png | Maze-O | Maze-O - One Page Summary | (Activities-Resources/Maze-O folder)
+symbol-o-1.png | Symbol-O | Symbol-O - One Page Summary (image 1 of 2) | (Activities-Resources/Symbol-O folder)
+symbol-o-2.png | Symbol-O | Symbol-O - One Page Summary (image 2 of 2) | (Activities-Resources/Symbol-O folder)
+basketball-o.png | Basketball-O | Basketball-O - One Page Summary | 1lNF_QhtVl0msdC1GGq2emdTrgA2bqJcvfI8ogEh-7tY
+contours-topographic-map.jpg | Contours / Topographic Map | Contours - One Page Summary | 1XpcugA_55YnPVu1qcxP8t433V4cd5Tb8udtKgSfM3Uo
+contours.jpg | Contours / Topographic Map | duplicate of contours-topographic-map.jpg — safe to ignore/delete | 1XpcugA_55YnPVu1qcxP8t433V4cd5Tb8udtKgSfM3Uo
+symbol-relay.png | Symbol Relay | Symbol Relay - One Page Summary | 1SBi_rIyPcnnb6JmOtYtP_0TRnFubVOfzVG8IOXoMIqg
+map-walk.png | Map Walk | Map Walk - One Page Summary | 1thudkR-9tHqqzdx7KyUAlMnxAid0gO7HNk8NXhFOfbg
+line-o.jpg | Line-O | Line-O - One Page Summary | 1tnVCgOt6lAD0M056r7MLjcAqjyl5wk-lLRDW7CyhPKU
+compass-spider.jpg | Compass Spider | Compass Spider - One Page Summary | 1lGKMPkZim-VSLGR1-qcOzWARXtptYWWMNVu6wfOhyXA
+window-o.png | Window-O | Window-O - One Page Summary | 1ToodUTe4VG9a_P9_6vzcwMRjkcfU2S_kE-dQTkD5llI
+vampire-o.png | Vampire-O | Vampire-O - One Page Summary | 1qNP-X9MvAeYNBhOJjp1PDFyPKf2TmlHp5_PjYq_Mgjo
+poker-o.png | Poker-O | Poker-O - One Page Summary | 1YfpjXT-cx232LxON_DVv7ZXH9zjFzBM6L1Eab2pjQ84
+pacman-o.png | Pacman-O | Pacman-O - One Page Summary | 1-uNnD2_qLFuerwE4CM5xWnBSI3BVem1XyMAsh4YVkiM
+point-to-point.png | Point-to-Point Orienteering Course | Point-to-Point Orienteering Course - One Page Summary | 1G1jqyEr6kkClr23xQsNAMX9Z1mxBDorQByxZIlyGStc
+relay-race.jpg | Relay Race | Relay Race - One Page Summary | 1ojrRa41omcjMnQ4pBZHyWidVd121TR2sSo8oH72NihU
+map-discussion.png | Map Discussion | Map Discussion - One Page Summary | 1f6mQKQPr5E3phiwnAl6UjtQkwjxVWHOtHUBwIk_P2mI
+electronic-timing.png | Electronic Timing | Electronic Timing - One Page Summary | 1PPdk1lrLYGHjis5bk5ix9WZEAMrc661GGq_AlMs2oF4
+compass-basics.png | Compass Basics | Compass Basics - One Page Summary | 1OvtRK9ic-ERJ4lVRaO56WKfvXt1u4gTO2vwlwMjf2M0
+  NOTE: compass-basics.png is 8.4MB — likely needs resizing/compression before going on a web page.
+map-walk.png is 4.0MB — also a candidate for compression.
+
+=== narrow-one-pagers/ SUBFOLDER ===
+Extracted from Google Drive "Narrow One Pagers for Kits - Programs" folder
+(https://drive.google.com/drive/folders/1PXp4c5WtwcqggiE6Auax6x8XTpLTTphJ),
+doc "Narrow One Pager Contents and Info":
+
+narrow-one-pagers/contents-info-1.png through contents-info-7.png | Narrow One Pager Contents and Info (multi-image doc, order reflects doc image order — image 2 is large, ~1.1MB)
+
+narrow-one-pagers/narrow-animal-o-1.png through -6.png | Animal-O | Narrow One Pager 2 Animal-O Activity | 1yOGbvO8suQlCuNXdb_Q6q6x9EIdwvrXGifC97bg97vM
+narrow-one-pagers/narrow-geometric-o-1.png through -5.png | Geometric-O | Narrow One Pager 3 Geometric-O Activity | 1k6SZDNnIwREfMMgXDY2y3IMu9QHo1-51yoM_QD26gV0
+narrow-one-pagers/narrow-basketball-o-1.png through -4.png | Basketball-O | Narrow One Pager 4 Basketball-O Activity | 1CIPjl1n94LnNlSUOW05QTfvf7oZBAIJ7SzEB1eBGLi8
+narrow-one-pagers/narrow-clothespin-o-1.png, -2.png, -3.jpg | Clothespin-O | Narrow One Pager 5 Clothespin-O | 1X16vRMV_XxVKEbDpk__WDAH82kDU9oM0_MY8e2xgLOs
+narrow-one-pagers/narrow-map-orienteering-1.png through -3.png | Map Orienteering | Narrow One Pager 6 Map Orienteering | 1TeJUY3p684_xY0oGIQyq9ky7hBsyceu5uwMSM5TMBkA
+
+  NOTE: Within each narrow one-pager doc, some images repeat across docs at identical byte sizes (58,610B and 80,258B versions show up in nearly every doc). These are very likely a shared template header/footer/logo graphic, not unique per-activity art. Worth a visual check before using all of them — the logo/header ones probably only need to be placed once on the page (or in a shared layout), not duplicated per activity.
+
+Also unexplored subfolders in that Drive folder (not investigated, low priority): "preschool version", "PDFs - individual", "Archive", plus a combined "Narrow One Pager All Pages.pdf".
+
+=== ACTIVITIES CONFIRMED TO HAVE NO IMAGE (skip) ===
+grid-o | Grid-O | doc checked, no embedded images | 15AiXwtxXDRlRSYx3kzKY1ilJynexh7ftxMCWCGF4joU
+tabletop-o | Tabletop-O | doc checked, no embedded images | 17CXMYtFw87Eu48bBgEQIX9rmzfUzE5LYeREXdjoxhP4
+map-maker | Map Maker | doc checked, no embedded images | 1yOIhHS2hLxngVE2P4goKaoru13IuS7wiIGKNJokBeJo
+reverse-score-o | Reverse Score-O | doc checked (35.5KB, baseline template size), no embedded images | 10-s1PQ4PKGa_iwI1ClpnFz0YogHM-HzoOPQ8rHXLEWU
+
+=== ACTIVITIES LIKELY NO IMAGE (file size at/near baseline template ~32.8–37.9KB; NOT downloaded/confirmed) ===
+Score-O, Poison-O, Star-O, Memory-O, Capture the Flag-O, Scooter-O
+
+=== ACTIVITY FOLDERS WITH NO DOC FOUND AT ALL (empty placeholder folders) ===
+geometric-symbol-o | Geometric Symbol-O | folder 1AwXCqHNYkB6U_FhF6qlTiyr8scwxiHtZ contains no files
+string-o-tarzan-o | String-O / Tarzan-O | folder 124WyRAyUIfIS_DUZAsDx8GkGnMD6Wo-i contains no files
+
+=== SLIDES DECKS (Symbol Relay Drive folder) ===
+symbol-relay-cards/symbol-relay-card-1.png through -9.png | Symbol Relay | "Symbol Relay Cards" Google Slides deck (9 slides, one symbol image per slide) | (Symbol Relay subfolder 1yr-6ZFMFU9F4syjiFE3nS82Iw4t8NzC2)
+  NOTE: these are small symbol icons (1–11KB each), likely meant as printable/cuttable card graphics for the relay activity, not a single hero image for the page.
+
+"Description Relay Cards" Google Slides deck | checked, NO embedded images (single text-only slide layout, no ppt/media/ folder) | skip
+
+=== LESSON PAGES — REUSE ACTIVITY IMAGES (no new extraction needed) ===
+Resolved via the live Sites tree (Lesson Plans > Elementary PE, and the "Full descriptions of each lesson"
+Drive folder, id 1Gfq4Da8MbCpXnuLgTaC50YTWeinZL3l2): the 15-lesson-progression pages are text-only
+(Description/Objectives/Materials/Delivery/Reflection), and each lesson's "diagram" placeholders are the
+SAME diagrams already pulled into the activities/ images above. Rather than re-extracting, reuse:
+
+Lesson 1: Boundary, Animal-O   -> boundary-run.png, animal-o.png, animal-o-clue-sheet.jpg, animal-o-whiteboard.jpg
+Lesson 2: Geometric-O          -> geometric-o.png
+Lesson 3: Animal-O + Geometric-O w/ SI (blank template doc, no unique content) -> reuse animal-o.png + geometric-o.png
+Lesson 4: Isometric Courses    -> isometric-drawing-o.png
+Lesson 5: Symbol-O + ISSOM     -> symbol-o-1.png, symbol-o-2.png
+Lesson 6: Point-to-Point       -> point-to-point.png
+Extra Activity: Clothespin Scavenger Hunt -> clothespin-o.jpg
+Extra Activity: Basketball-O   -> basketball-o.png
+
+  NOTE for Claude Code: when building each lesson page, link/copy the matching activity image above
+  rather than searching for a separate "lesson" image — none exists. Source lesson docs (for text content
+  only) are in Drive folder 1Gfq4Da8MbCpXnuLgTaC50YTWeinZL3l2 ("Full descriptions of each lesson").
+
+=== ONE-PAGE LESSON SUMMARY PDFs (printable handouts, not page images) ===
+Drive folder 1_rCsBdoaDjU8zyixanztmFDNKDqzdyfb ("One-page summaries of each lesson"), linked from the
+Elementary PE Sites page. These are native PDFs (10 files) that are themselves print-ready one-page
+handouts — not a source of separate images to extract. If the site wants to offer a downloadable
+lesson summary, link the PDF directly rather than pulling images out of it. Includes
+CPSD_Orienteering_Grade3_PE_Combined_Summaries.pdf (4.3MB, all lessons combined) and individual files
+e.g. "One Pager 2 Geometric-O.pdf" (id 1HFfG6QPoBRVyjOWX0kiiObFbL4S1aqWf).
+
+=== OTHER SITE-SPECIFIC LESSON DOCS (checked, no unique images needed) ===
+- CRLS PE Lesson Plans page embeds "Version 5 - CRLS Orienteering Lesson Plans"
+  (id 1fsbxJLokw08dkH3FBkg0yxlgDR15Ciu1P1bhklD2mKE) — large doc, export attempts hit the 10MB zip-export
+  limit. Likely uses the same shared activity diagrams as above; not worth a special extraction pass.
+- SHAPE America standards overview doc (1X9B4qeUjt9sp8dpaT1cpE24xNcyXJs6oOU-w9nyHZBU) and
+  acknowledgments doc (1Ah5bObb23F14r7namopP58EryFFfd_kMQRfwBbLN0dQ) — text/reference docs, not checked
+  for images, low priority (not activity-specific content).
+- "Cambridge Grade 3 Orienteering Lesson Plans V4" (1t3dLzYC0qtboTIplXwRVNmUn3q-R5OGUXOVNg-BUFvE) — not
+  checked, likely same shared diagrams pattern as other lesson plan docs.
+
+=== NOT YET STARTED ===
+- Beyond CRLS and Elementary PE, the rest of the Sites "Specific Curricula" / "Site-Specific Materials"
+  tree (Middle School PE, High School PE, School Teams, Ideas for O Clubs, Brookline/Cambridge school
+  pages, Camp Belknap, Eliot Upper School, etc.) has not been crawled for embedded lesson docs/images.
+- Image placement context within actual site pages (this manifest gives source-doc names only; Claude
+  Code will need to match activity/lesson names to the corresponding docs/ pages in the Docusaurus site
+  source, which this session does not have access to)
