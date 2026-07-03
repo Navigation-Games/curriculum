@@ -30,9 +30,13 @@ The grade levels follow the same underlying sequence of skills, the [Navigation 
     description="Score-O, Poison-O, compass work, relay races, and reverse mapping exercises."
     link="/lessons/school/grade-6-plus"
   />
+  {/* "Various" card hidden July 2026 until there is enough content there.
+      Future cards for this page could include special programs, starting a
+      team, involving parents, and making a map.
   <ActivityCard
     title="Various"
     description="Staff-designed programs and reviewed Advisor sessions for specific events, schools, and situations."
     link="/lessons/school/various"
   />
+  */}
 </CardGrid>

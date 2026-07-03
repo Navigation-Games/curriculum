@@ -393,6 +393,10 @@ Generated files have a comment at the top: `{/* AUTO-GENERATED — do not edit d
 - Filenames: lowercase-kebab-case
 - No em-dashes in writing. Split into separate sentences or use other connectors.
 
+## Keep the Advisor Prompt in Sync
+
+The AI lesson plan advisor (`ai-advisor/system-prompt.md`) holds a condensed copy of the curriculum. It does not update itself. Periodically, and after any round of curriculum editing, revisit the prompt and check it against what changed: lesson tables, activity names and descriptions, links, and naming decisions. A detailed checklist is in the [editing guide](site/docs/editors/editing-guide.md) under "Keep the Advisor in Sync." Prompt changes take effect only after rebuilding and redeploying the Cloud Run container (see `ai-advisor/README.md`).
+
 ## Content Sources
 
 - [GitBook published site](https://navigation-games-2.gitbook.io/orienteering-curriculum-for-schools)
