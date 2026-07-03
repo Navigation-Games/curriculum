@@ -105,6 +105,7 @@ Ways to slow things down for younger groups, increase challenge for experienced 
 - **10-animal clue sheet**: for pairs who finish all six 5-animal courses
 - **Solo**: if students started in pairs, try it individually
 - **Animal Relay**: in small teams, students take turns running to a named animal checkpoint and back. The caller says an animal name; the runner finds it and returns. Tests spatial memory and adds competitive energy. Good as a closer after students have learned the checkpoint locations.
+- **Draw and guess**: as an optional deeper add-on after the courses, each student draws the space from memory and circles the location of one animal (without naming it). A partner reads the drawing and guesses which animal it is. Can a fellow student read your map well enough to know? A first taste of map making and map reading in one step.
 
 
 ## Tips
