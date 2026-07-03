@@ -331,6 +331,18 @@ Generated files are gitignored and not committed to the repository. They are reb
 
 Generated files have a comment near the top: `{/* AUTO-GENERATED — do not edit directly */}`. If you see that comment, find the corresponding source file in `content/` and edit there instead.
 
+## Keep the Advisor in Sync
+
+The AI lesson plan advisor's knowledge lives in `ai-advisor/system-prompt.md`, which is a condensed copy of the curriculum. It does not update itself. After any round of curriculum editing, check the prompt against what changed:
+
+- **Lesson renames or reordering**: the K-2, 3-5, 6+, and camp lesson tables in the prompt must match the grade index pages.
+- **Activities added, removed, or renamed**: the activity progression list in the prompt must match. Related activities (those living on a parent activity's page) need their parent page named so the advisor links to a real URL.
+- **Activity content changes**: the one-line descriptions in the prompt must not promise steps or mechanics the activity no longer has.
+- **Page moves or deletions**: any URL pattern in the prompt's Key Links section must still resolve.
+- **Naming decisions**: vocabulary rules (checkpoints not controls, Map Treasure Hunt for camps only, etc.) must match current usage.
+
+Changes to the system prompt only take effect after rebuilding and redeploying the Cloud Run container. See `ai-advisor/README.md` ("Redeploying after changes").
+
 ## Conventions
 
 - Filenames: lowercase-kebab-case
