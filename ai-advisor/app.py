@@ -35,6 +35,12 @@ CORS(app, origins=ALLOWED_ORIGINS)
 SYSTEM_PROMPT_PATH = Path(__file__).parent / "system-prompt.md"
 SYSTEM_PROMPT = SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")
 
+# Append the generated site map (written by scripts/build-content.js) so the
+# advisor knows every page on the site and can route people to real URLs.
+SITE_MAP_PATH = Path(__file__).parent / "site-map.md"
+if SITE_MAP_PATH.exists():
+    SYSTEM_PROMPT += "\n\n" + SITE_MAP_PATH.read_text(encoding="utf-8")
+
 # Anthropic client - uses ANTHROPIC_API_KEY env var automatically
 client = anthropic.Anthropic()
 

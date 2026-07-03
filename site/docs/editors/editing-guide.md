@@ -341,7 +341,9 @@ The AI lesson plan advisor's knowledge lives in `ai-advisor/system-prompt.md`, w
 - **Page moves or deletions**: any URL pattern in the prompt's Key Links section must still resolve.
 - **Naming decisions**: vocabulary rules (checkpoints not controls, Map Treasure Hunt for camps only, etc.) must match current usage.
 
-Changes to the system prompt only take effect after rebuilding and redeploying the Cloud Run container. See `ai-advisor/README.md` ("Redeploying after changes").
+The build script also generates `ai-advisor/site-map.md`, a list of every public page with a one-line description, which the advisor backend appends to the system prompt. It regenerates automatically when you run `node scripts/build-content.js`, so it stays current with the site. But the advisor only sees it (and any system prompt edits) after the container is redeployed.
+
+**The live advisor does not update on `git push`.** Changes to `system-prompt.md` or the generated site map only take effect after rebuilding and redeploying the Cloud Run container. After a round of curriculum editing, redeploy the advisor. See `ai-advisor/README.md` ("Redeploying after changes").
 
 ## Conventions
 

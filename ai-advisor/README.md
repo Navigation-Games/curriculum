@@ -239,7 +239,7 @@ For the frontend, either paste the client ID as the fallback value of `reviewOau
 
 ## Redeploying after changes
 
-Any time you change `app.py`, `system-prompt.md`, or `requirements.txt`, you need to rebuild the container image and redeploy. Both steps are required. Run from the `ai-advisor/` directory in PowerShell:
+Any time you change `app.py`, `system-prompt.md`, or `requirements.txt`, or want the advisor to pick up a regenerated `site-map.md` (rebuilt by `scripts/build-content.js` and appended to the system prompt at startup), you need to rebuild the container image and redeploy. The live advisor does not change on `git push`. Both steps are required. Run from the `ai-advisor/` directory in PowerShell:
 
 ```powershell
 # Step 1: Rebuild the container image
