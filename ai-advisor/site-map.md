@@ -3,7 +3,7 @@
 
 ## Site map
 
-Every page on the curriculum site, with a one-line summary. When routing someone to a page, use these URLs exactly; do not invent or guess URLs that are not in this list.
+Every page on the curriculum site, with a one-line summary. This is the complete, authoritative list of what the site contains. When someone asks whether the site covers a topic, check this list before saying it does not; if a page here answers their question, mention it and link to it. When routing someone to a page, use these URLs exactly; do not invent or guess URLs that are not in this list.
 
 - [Home](https://navigation-games.github.io/curriculum/) — Landing page with entry points for schools, camps, and quick start.
 - [Quick Start](https://navigation-games.github.io/curriculum/quick-start/) — Run a first orienteering activity today with minimal preparation.
@@ -37,7 +37,6 @@ Every page on the curriculum site, with a one-line summary. When routing someone
 - [Symbol Relay — Activity](https://navigation-games.github.io/curriculum/activities/core/symbol-relay/) — A team relay race that reinforces map symbol recognition. Teams compete to match text descriptions to their corresponding map symbols. One runner at a time sprints to the card…
 - [Vampire-O — Activity](https://navigation-games.github.io/curriculum/activities/core/vampire-o/) — Vampire-O is Score-O with a chase. Pairs visit the checkpoints shown on their map, but one or two pairs start as vampires. When a vampire tags a pair, it takes their punch card,…
 - [Window-O — Activity](https://navigation-games.github.io/curriculum/activities/core/window-o/) — In Window-O, much of the map has been removed, leaving only islands of visible map surrounded by blank white space. Students must use their compass to navigate through the blank…
-- [Tutorial Intro](https://navigation-games.github.io/curriculum/intro/) — Let's discover Docusaurus in less than 5 minutes.
 - [Lesson Plans](https://navigation-games.github.io/curriculum/lessons/) — Navigation Games has lesson plans for two settings: schools and camps. The activities are largely the same. What changes is the context.
 - [Orienteering at Camp](https://navigation-games.github.io/curriculum/lessons/camp/) — Orienteering teaches kids to read a map, make decisions, and find their way. At camp, you have the time, the space, and the relationships to go deep with it. The same activities…
 - [Camp Skill Development](https://navigation-games.github.io/curriculum/lessons/camp/full/) — Fundamentals of orienteering map navigation in six 70-minute sessions over two weeks. Builds from basic map navigation through compass work, route choice, and competitive formats.…

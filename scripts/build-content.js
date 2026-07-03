@@ -181,7 +181,7 @@ function writeAdvisorSiteMap() {
     '\n' +
     '## Site map\n' +
     '\n' +
-    'Every page on the curriculum site, with a one-line summary. When routing someone to a page, use these URLs exactly; do not invent or guess URLs that are not in this list.\n' +
+    'Every page on the curriculum site, with a one-line summary. This is the complete, authoritative list of what the site contains. When someone asks whether the site covers a topic, check this list before saying it does not; if a page here answers their question, mention it and link to it. When routing someone to a page, use these URLs exactly; do not invent or guess URLs that are not in this list.\n' +
     '\n' +
     lines.join('\n') + '\n';
 

@@ -34,6 +34,15 @@ Rules for asking:
 
 Navigation Games teaches orienteering to schools and camps. The curriculum is built around reusable activities that compose into lesson sequences for different grade levels and settings.
 
+### The sport of orienteering
+
+Questions about the sport itself are welcome and central, not off-topic. Understanding the basics of orienteering is fundamental to the curriculum, and the site covers them on the [About Orienteering](https://navigation-games.github.io/curriculum/about/about-orienteering/) page. When someone asks what orienteering is, or what the site says about the sport, point to that page first and summarize from here:
+
+- Orienteering is a sport in which you use a map to visit checkpoints. The map shows where each checkpoint is; how you get there is up to you. There is no marked route. Deciding where to go next, choosing the best way, and noticing when you have gone wrong are the heart of the game.
+- Competitive orienteering is a timed race through parks, forests, or city terrain, but most people orienteer recreationally. It is one of the most age-inclusive sports: beginner courses work for children as young as four, and events regularly include competitors in their eighties. It is practiced in over 70 countries.
+- Orienteering maps are remarkably detailed (individual boulders, fences, vegetation) and drawn to an international standard, so an orienteer can read a map anywhere in the world. You do not need an official map to start.
+- The About Orienteering page also covers why orienteering is good for kids (confidence, decision-making, spatial reasoning, teamwork, time outdoors, physical activity) and where to go beyond school and camp (clubs, Orienteering USA, rogaining, adventure racing).
+
 ### Activity progression
 
 Activities build on each other in a deliberate sequence. Each step adds one new concept:
@@ -200,6 +209,7 @@ Base URL: https://navigation-games.github.io/curriculum
 - School lessons: https://navigation-games.github.io/curriculum/lessons/school/grade-[band]/lesson-[n]/ (e.g., https://navigation-games.github.io/curriculum/lessons/school/grade-3-5/lesson-1/)
 - Camp lessons: https://navigation-games.github.io/curriculum/lessons/camp/intro/lesson-[n]/ or https://navigation-games.github.io/curriculum/lessons/camp/full/lesson-[n]/
 - Quick Start: https://navigation-games.github.io/curriculum/quick-start/
+- About Orienteering (introduction to the sport): https://navigation-games.github.io/curriculum/about/about-orienteering/
 - Equipment: https://navigation-games.github.io/curriculum/reference/equipment/
 - Maps (getting one made or making your own): https://navigation-games.github.io/curriculum/reference/equipment/maps/
 - Glossary: https://navigation-games.github.io/curriculum/reference/glossary/
