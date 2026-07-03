@@ -79,11 +79,11 @@ Every core activity needs these, consistent with each other:
 - `site/docs/activities/core/` - **AUTO-GENERATED** activity pages (do not edit; do not create files here)
 - `site/docs/lessons/school/` - **AUTO-GENERATED** lesson pages (do not edit; do not create files here), plus hand-maintained index.md files
 - `site/docs/lessons/camp/` - camp lesson progressions (hand-maintained)
-- `site/docs/about/` - about pages: how-to-use, concepts, acknowledgments, copyright
+- `site/docs/about/` - about pages: about-orienteering, how-to-use, impact, acknowledgments, copyright
 - `site/docs/reference/` - glossary, frameworks, equipment & materials
 - `site/docs/reference/equipment/` - materials index, maps, controls, kits, setup guides, electronic timing
 - `site/src/components/` - reusable React components (ActivityCard, CardGrid, YouTube, AdvisorChat)
-- `site/src/pages/` - standalone landing pages (home, school, camp, quick-start, plan-my-lessons)
+- `site/src/pages/` - standalone landing pages (home, quick-start, plan-my-lessons, review-conversations)
 
 ## Key References
 
@@ -96,7 +96,7 @@ Every core activity needs these, consistent with each other:
 
 ## Working Conventions
 
-- Prefer having Barb check the results of changes, when she is available, rather than spending tokens on automated verification. It is often easier and faster for her to look at the result than for Claude to verify programmatically.
+- Prefer having Barb check the results of changes, when she is available, rather than spending tokens on automated verification. It is often easier and faster for her to look at the result than for Claude to verify programmatically. This includes browser/UI verification (sidebar behavior, layout, popovers): tell Barb exactly what to look at and what to expect instead of driving the preview browser. Running builds and test suites is still Claude's job.
 - Write content in Markdown
 - Keep filenames lowercase-kebab-case
 - Avoid em-dashes in all writing. They signal AI authorship. Split into separate sentences or use other connectors.
@@ -153,14 +153,16 @@ An embedded AI chat at `/plan-my-lessons/` that helps teachers and anyone else p
 ### Architecture
 
 - **Backend:** Python/Flask on Google Cloud Run (`ai-advisor/`). Wraps the Claude API with curriculum knowledge baked into the system prompt.
+- **Site map in prompt:** `scripts/build-content.js` generates `ai-advisor/site-map.md` (every public page with title, URL, and one-line description; excludes `editors/`). `app.py` appends it to the system prompt at startup so the advisor routes people to real URLs instead of guessing. Lesson descriptions come from the content files' taglines. The file is committed (not gitignored) and regenerates on every content build.
 - **Frontend:** React chat component (`site/src/components/AdvisorChat/`) on the Docusaurus site.
+- **Rate limit:** 20 chat messages per day per IP, in-memory (resets on deploy). Future: sign-in for higher limits (MapMap has the auth model to borrow).
 - **Logging:** Every conversation is logged to a Google Sheet for curriculum improvement.
 - **Cloud Run service URL:** `https://lesson-advisor-523012695945.us-central1.run.app`
 - **Google Cloud project:** `navigation-games-curriculum`
 
 ### Updating the advisor
 
-The system prompt lives at `ai-advisor/system-prompt.md`. Changes to the system prompt, `app.py`, or `requirements.txt` require rebuilding the container and redeploying to Cloud Run. See `ai-advisor/README.md` for the PowerShell commands.
+The system prompt lives at `ai-advisor/system-prompt.md`. Changes to the system prompt, the generated `site-map.md`, `app.py`, or `requirements.txt` require rebuilding the container and redeploying to Cloud Run. See `ai-advisor/README.md` for the PowerShell commands. **The live advisor does not change on `git push`.** After a round of curriculum editing, remind Barb that a Cloud Run redeploy is needed for the advisor to see the updated prompt and site map.
 
 Frontend changes (`AdvisorChat/`, `plan-my-lessons.*`, `ReviewConversations/`, `review-conversations.*`) deploy automatically via the normal GitHub Actions workflow on `git push`.
 
@@ -239,14 +241,15 @@ Activities with pages (tagged `[camp]`):
 - Checkpoint Copy Relay ✓ (`content/activities/checkpoint-copy-relay.md`)
 - Compass Basics ✓ (`content/activities/compass-basics.md`)
 - Line-O ✓ (`content/activities/line-o.md`)
-- Star Relay ✓ (`content/activities/star-relay.md`)
+- Star Relay ✓ (`content/activities/star-relay.md`; also called Star-O, confirmed July 2026 from the Star-O one-pager, which matched the existing page)
 - Window-O ✓ (`content/activities/window-o.md`)
+- Vampire-O ✓ (`content/activities/vampire-o.md`, from the Vampire-O one-pager July 2026; night version noted as camp differentiation)
+- Capture the Flag-O ✓ (`content/activities/capture-the-flag-o.md`, from the Capture the Flag-O one-pager July 2026; plain Capture the Flag remains a Boundary Run companion with a cross-link)
 
 Activities that still need pages or decisions:
 - Description Relay - same format as Symbol Relay but with IOF control description pictograms instead of map symbols. No write-up yet. Could be a Symbol Relay variation rather than standalone.
 - Compass Segments - navigating segments using compass bearings with only partial map sections. No write-up yet.
 - Compass Spider - ✓ now documented as a Star Relay companion/variation in `content/activities/star-relay.md`. Same as Star Relay but with whited-out map sections forcing compass use.
-- Vampire-O - Score-O at night with tag mechanics, red flashlights, reflective tape checkpoints, punch card trading. No write-up yet. Details from Design Meeting #3 transcript.
 - Friendship Relay - groups of 3 split checkpoints by ability; all meet at a common point. From Design Meeting #3 transcript. No write-up yet.
 - Memory-O - navigate by memory using short courses or sequential map snippets. Two formats: (1) memorize a 3-checkpoint course at the start, run it, verify with codes at each checkpoint; (2) find one checkpoint at a time, where each checkpoint has a map snippet showing the next one. Format 1 works well with multiple short courses; format 2 works best with a single course. From Design Meeting #2 transcript. No write-up yet.
 - Courses - "put it all together and orienteer" (delivery format, not a single activity?)

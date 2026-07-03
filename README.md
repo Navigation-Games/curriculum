@@ -118,7 +118,7 @@ Activity photos and diagrams go in `site/static/img/activities/`. Use lowercase-
 
 ### Video scripts
 
-Video script drafts live in `content/video-scripts/`. These are reference material for video production, not published on the site.
+Video script drafts live in `site/docs/editors/video-scripts/` (hand-maintained; published under For Editors). One script per Grade 3-5 lesson plus one per major activity. They are working documents for video production and were aligned with the current lesson structure in July 2026.
 
 ## Editing Content
 
@@ -349,7 +349,7 @@ If you are not comfortable with git, the simplest workflow is: edit on GitHub.co
 content/                 Editable content sources
   activities/            Activity content (Animal-O, Boundary Run, etc.)
   lessons/school/        Lesson plans by grade band
-  video-scripts/         Video script drafts (not published)
+  lessons/camp/          Camp lesson plans (intro and skill development)
 
 scripts/                 Build script (content -> site pages)
 
@@ -395,7 +395,9 @@ Generated files have a comment at the top: `{/* AUTO-GENERATED — do not edit d
 
 ## Keep the Advisor Prompt in Sync
 
-The AI lesson plan advisor (`ai-advisor/system-prompt.md`) holds a condensed copy of the curriculum. It does not update itself. Periodically, and after any round of curriculum editing, revisit the prompt and check it against what changed: lesson tables, activity names and descriptions, links, and naming decisions. A detailed checklist is in the [editing guide](site/docs/editors/editing-guide.md) under "Keep the Advisor in Sync." Prompt changes take effect only after rebuilding and redeploying the Cloud Run container (see `ai-advisor/README.md`).
+The AI lesson plan advisor (`ai-advisor/system-prompt.md`) holds a condensed copy of the curriculum. It does not update itself. Periodically, and after any round of curriculum editing, revisit the prompt and check it against what changed: lesson tables, activity names and descriptions, links, and naming decisions. A detailed checklist is in the [editing guide](site/docs/editors/editing-guide.md) under "Keep the Advisor in Sync."
+
+The build script also regenerates `ai-advisor/site-map.md`, a list of every public page with a one-line description that the advisor appends to its prompt, so page-level routing stays current automatically. But none of it reaches the live advisor on `git push`: prompt and site map changes take effect only after rebuilding and redeploying the Cloud Run container (see `ai-advisor/README.md`).
 
 ## Content Sources
 
