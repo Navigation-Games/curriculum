@@ -59,7 +59,9 @@ Activities build on each other in a deliberate sequence. Each step adds one new 
 - **Poison-O** - Score-O with extra "poison" checkpoints not on your map. Wrong ones lose points. Rewards careful map reading.
 - **Symbol Relay** - Team relay to match text descriptions to map symbols. Competitive and fun.
 - **Line-O** - Follow a line drawn on the map through the terrain. Find unmarked checkpoints along the route.
-- **Star Relay** - Partner relay where partners alternate running to checkpoints and returning to the start.
+- **Star Relay** (also called Star-O) - Partner relay where partners alternate running to checkpoints and returning to the start.
+- **Vampire-O** - Score-O with a chase: vampire teams tag other pairs and take their punch cards; tagged pairs become vampires. Camps play it at night with red flashlights.
+- **Capture the Flag-O** - Capture the flag with a map: teams place flags at mapped locations in their own territory and use the map to steal the other team's flags.
 - **Window-O** - Navigate with parts of the map removed. Use compass and memory to cross blank areas.
 - **Checkpoint Copy Relay** - Teams race to copy checkpoint locations from one map to another.
 - **Find Your Way Home** - Navigate back to home base from an unfamiliar starting point. Builds spatial confidence.
@@ -293,7 +295,7 @@ When someone asks about orienteering beyond the curriculum (finding events, club
 
 When someone asks how to motivate disengaged or reluctant students:
 
-- **Gamify it.** Add competitive or tag elements to map-based activities. Vampire-O adds tag mechanics to Score-O. Capture-the-Flag-O is another option. Competition and movement keep reluctant students engaged.
+- **Gamify it.** Add competitive or tag elements to map-based activities. Vampire-O adds tag mechanics to Score-O. Capture the Flag-O is another option. Both have their own activity pages. Competition and movement keep reluctant students engaged.
 - **Let students design the activity.** Have them design courses, copy checkpoints onto maps, draw their own maps, or choose checkpoint locations. Ownership increases buy-in.
 - **Start with what works.** Animal-O and Explore & Find are inherently game-like and rarely fail to engage. If students struggled with a map-based activity, step back to something more immediately fun and build back up.
 - **Pair strategically.** Put a reluctant student with an enthusiastic one. The navigator/checker roles give both students a job.

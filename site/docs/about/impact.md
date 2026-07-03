@@ -1,6 +1,6 @@
 ---
 title: Our Impact
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Our Impact
@@ -62,6 +62,8 @@ There is also a growing body of research on orienteering and navigation specific
 - In children, orienteering programs have been associated with gains in executive function, attention, and inhibitory control, and with stronger map literacy and academic achievement (studies with students in grades 4 through 8, including children with ADHD and learning disabilities).
 - Spatial reasoning, which orienteering exercises directly, is linked to later success in mathematics, and instruction that builds spatial skill carries over into math understanding (Geer et al., 2019; Mitchell & Malone, 2024).
 - In adults, orienteering combined with vigorous exercise improved cognition and raised brain-derived neurotrophic factor more than exercise alone (Waddington et al., 2024), and experienced orienteers report stronger spatial processing and memory across adulthood (Waddington & Heisz, 2023).
+- A 2025 systematic review and meta-analysis found significant large effects of orienteering interventions on physical fitness and memory in non-athletes, with a medium effect on spatial skills, and recommended orienteering across age groups and settings including schools (Public Health, 2025).
+- Orienteers score above normative levels on tests of executive function, sustained attention, and recognition memory, and outperform road runners on visual fluency and spatial working memory, suggesting the sport develops specific executive function networks (Hohl et al., 2025).
 - Building and trusting a mental map of the world lets children explore with confidence and independence, and eases the stress of not knowing where they are (Bond, *From Here to There*, Harvard University Press, 2021).
 - Researchers believe that memory and navigation evolved together in the hippocampus. Evidence suggests that working on navigational skills strengthens the hippocampus and improves memory (Bond, 2021).
 - Time outdoors and experiential learning support concentration, motivation, and children's wellbeing (Rickinson et al., 2004; Sheldrake & Reiss, The Wildlife Trusts).

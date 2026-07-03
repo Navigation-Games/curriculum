@@ -19,7 +19,7 @@ images:
 videos: []
 ---
 
-> **Draft video script:** [View script](../video-scripts/activities/map-walk.md)
+> **Draft video script:** [View script](../../site/docs/editors/video-scripts/activities/map-walk.md)
 
 ## Description
 

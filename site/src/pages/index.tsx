@@ -51,6 +51,11 @@ export default function Home(): React.ReactElement {
           />
         </div>
         <div className={styles.secondaryLinks}>
+          <Link to="/about/about-orienteering" className={styles.secondaryLink}>
+            <span className={styles.secondaryEmoji}>🧭</span>
+            <strong>About Orienteering</strong>
+            <span className={styles.secondaryDesc}>What orienteering is and why it is good for kids</span>
+          </Link>
           <Link to="/plan-my-lessons" className={styles.secondaryLink}>
             <span className={styles.secondaryEmoji}>💬</span>
             <strong>Plan My Lessons</strong>

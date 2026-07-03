@@ -32,6 +32,8 @@ activities:
     tag: extension
 ---
 
+> **Draft video script:** [View script](../../../../site/docs/editors/video-scripts/lessons/6-orienteering-course.md)
+
 ## Goals
 
 ### Orienteering Goals

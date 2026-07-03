@@ -10,6 +10,7 @@
  */
 import React, {useState, useCallback, useEffect} from 'react';
 import {useLocation} from '@docusaurus/router';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import {useDocsSidebar} from '@docusaurus/plugin-content-docs/client';
 import BackToTopButton from '@theme/BackToTopButton';
 import DocRootLayoutSidebar from '@theme/DocRoot/Layout/Sidebar';
@@ -23,6 +24,7 @@ const INDEX_PATHS = new Set([
   '/lessons/school/grade-k-2/',
   '/lessons/school/grade-3-5/',
   '/lessons/school/grade-6-plus/',
+  '/lessons/school/various/',
   '/lessons/camp/',
   '/lessons/camp/intro/',
   '/lessons/camp/full/',
@@ -37,6 +39,16 @@ const INDEX_PATHS = new Set([
 export default function DocRootLayout({children}) {
   const sidebar = useDocsSidebar();
   const {pathname} = useLocation();
+  const baseUrl = useBaseUrl('/');
+
+  // pathname includes the site baseUrl (e.g. /curriculum/lessons/), but
+  // INDEX_PATHS is written without it. Strip the base and normalize the
+  // trailing slash before matching.
+  let relPath = pathname.startsWith(baseUrl)
+    ? '/' + pathname.slice(baseUrl.length)
+    : pathname;
+  if (!relPath.endsWith('/')) relPath += '/';
+  const isIndexPage = INDEX_PATHS.has(relPath);
 
   // null = use path-based default; true/false = user manually toggled this page
   const [userOverride, setUserOverride] = useState(null);
@@ -47,16 +59,16 @@ export default function DocRootLayout({children}) {
   }, [pathname]);
 
   const hiddenSidebarContainer =
-    userOverride !== null ? userOverride : !INDEX_PATHS.has(pathname);
+    userOverride !== null ? userOverride : !isIndexPage;
 
   const setHiddenSidebarContainer = useCallback(
     (valueOrFn) => {
       setUserOverride((prev) => {
-        const current = prev !== null ? prev : !INDEX_PATHS.has(pathname);
+        const current = prev !== null ? prev : !isIndexPage;
         return typeof valueOrFn === 'function' ? valueOrFn(current) : valueOrFn;
       });
     },
-    [pathname],
+    [isIndexPage],
   );
 
   return (

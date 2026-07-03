@@ -11,17 +11,9 @@ What's done, what's next, and what's deferred.
 
 ### Site navigation redesign
 
-Design decisions in `notes/site-navigation-redesign.md`. The hub (#1 below) is done; remaining work:
+Design decisions in `notes/site-navigation-redesign.md`. The hub is done. July 2026: school landing page enriched (constraints, standards, one-setup-many-classes, year-over-year, administrators section, broader teacher audience); How to Use This Site got a site map tree and a broadened "For teachers" section; Quick Start and Home link to About Orienteering; sidebar now actually expands on landing pages (fixed a baseUrl bug that had silently disabled the path matching). Remaining:
 
-- **Enrich school landing page.** Bring `site/docs/lessons/school/index.md` up to the depth of the camp landing. Broaden audience from "PE teachers" to any teacher — PE standards alignment framed as a bonus. Add a summary of school realities that links to the new challenges page.
-
-- **New page: teaching orienteering at school.** Dedicated page covering typical school constraints (lesson time, space, class size, mixed abilities), working with different ages in the same day, building progressions year-to-year, and complementing with after-school and community activities. Future bridge to the Clubs audience.
-
-- **Quick Start: About Orienteering section.** Add a brief "what is orienteering?" section for visitors who arrive with no context. This content graduates to a Clubs/About page when that audience card is added to Home.
-
-- **How to Use This Site: site map and audience broadening.** Add a site map diagram (static labeled tree), rewrite "For PE teachers" to welcome classroom teachers, and lean into the breadcrumbs explanation.
-
-- **Optional: sidebar expanded on landing pages.** Keep sidebar collapsed on lesson content pages but expand it on index/landing pages. Resolves the original tension at its root. Change is in the swizzled `site/src/theme/DocRoot/Layout/` components.
+- **Dedicated "teaching orienteering at school" page (maybe).** The school landing page now covers constraints, multi-grade days, and year-over-year progression at summary level. Decide whether a deeper standalone page is still needed, or whether the landing page treatment is enough. Future bridge to the Clubs audience.
 
 ### Completing Version 1 of the curriculum
 
@@ -31,7 +23,7 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub (#1 below) is d
 
 - **Compare all activities to edited one-pagers and full versions.** Where edited one-pagers or full activity write-ups exist (especially those developed by Kieran), compare them against the current activity pages and incorporate any missing content or corrections.
 
-- **Edit the video scripts.** The video scripts were drafted before the latest round of lesson and activity edits. They need to be updated to reflect current delivery, vocabulary, and structure.
+- **Review the updated video scripts.** The scripts were restructured in July 2026 to match the current Grade 3-5 lesson sequence (including new scripts for Map Symbols and Orienteering Course). They need a human read-through before video production. Scripts for K-2, 6+, and camp lessons do not exist yet.
 
 - **More visuals.** Activity pages and lesson plans need more photos, diagrams, and setup images throughout the curriculum.
 
@@ -39,13 +31,13 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub (#1 below) is d
 
 - **Consistent role vocabulary.** The progression defines roles (Finder, Hider, Helper, Spectator) and the lesson plans use Navigator and Checker, but the terminology is not yet consistent across all activities and lessons. We need to decide on a single set of role names, grounded in what matters for orienteering, and use them everywhere.
 
-- **Year-over-year progression within a grade band.** How do we teach kids who come back year after year? The current lessons assume a first encounter with orienteering. We need guidance on how to progress students who already did the sequence last year, so each year builds on the last rather than repeating.
+- **Year-over-year progression within a grade band.** Summary guidance now lives on the school landing page (July 2026): repeat the same lessons with harder variations; advance bands when ready. Still to do: per-lesson "second year" notes, or a returning-students page with concrete examples.
 
-- **Single-setup, multi-grade teaching.** At many schools, a teacher sets up once for the day and runs multiple grades (or even multiple lessons) through the same setup. The curriculum should address how to use one physical arrangement to serve different classes at different levels, with guidance on which activities scale across grades and which need adjustment.
+- **Single-setup, multi-grade teaching.** Summary guidance now lives on the school landing page (July 2026). Still to do: a concrete reference table of which activities share which setups (animal checkpoints + corner cones vs. Score-O markers), possibly on the equipment setup pages.
 
-- **Outside resources.** Once students can read an orienteering map and complete basic courses, there is a whole world beyond the curriculum: local clubs, OUSA events, Rogaine, adventure racing, community meets. The site should point teachers and students to these resources and explain when kids are ready for them.
+- **Outside resources.** Done at summary level (July 2026): "Beyond school and camp" section on About Orienteering and "Get Involved in Orienteering" links on Resources (clubs, OUSA, IOF, Rogaine, adventure racing; URLs verified July 2026). Could later add guidance on when students are ready for each.
 
-- **District-wide progression across grades.** What does a comprehensive orienteering program look like when a district commits to it across multiple years? Describe a vision: orienteering in PE across grade bands, community events that connect schools, and eventually a school team. Help administrators and PE coordinators see the long arc, not just a single unit.
+- **District-wide progression across grades.** An administrators section on the school landing page (July 2026) sketches the vision: align with district goals, champion, workshops, maps and materials, co-teaching, ongoing consultation, after-school teams, parent involvement. Could grow into a dedicated administrators page with case studies (e.g., Cambridge Public Schools partnership).
 
 ### Content gaps
 
@@ -60,7 +52,7 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub (#1 below) is d
 
 - **PE standards audit after editing rounds.** After each major round of curriculum editing, verify that the SHAPE America standards mapping is still valid. Check both the reference page (`site/docs/reference/frameworks/pe-standards.md`) and the PE Standards section within each individual lesson. Lesson delivery changes can invalidate a standard citation (e.g., removing pair work removes the basis for a social skills indicator).
 
-- **Camp activities still needing write-ups.** Description Relay is now documented as a Symbol Relay variation, and Memory-O as a Point-to-Point variation (both July 2026). Still without write-ups: Compass Segments (session 5) and Vampire-O. Compass Spider is documented as a Star Relay companion/variation. Friendship Relay (groups of 3 split checkpoints by ability, meet at a common point) was described in the Belknap video and could be a new all-camp activity. Also still unwritten from Marius's June 2026 audit: Capture-the-Flag-O, Poly-dot-O, Star-O (confirm whether this is Star Relay under another name).
+- **Camp activities still needing write-ups.** Written in July 2026: Vampire-O and Capture the Flag-O (standalone pages from the one-pager summaries), Description Relay (Symbol Relay variation), Memory-O (Point-to-Point variation), Compass Spider (Star Relay variation). Star-O confirmed as Star Relay under another name; the alias is noted on the page. Still without write-ups: Compass Segments (session 5), Friendship Relay (groups of 3 split checkpoints by ability, meet at a common point), and Poly-dot-O from Marius's June 2026 audit.
 
 - **Symbol Relay cards.** Symbol Relay now has a standalone activity page, but still needs a complete set of symbol relay cards (only a partial set exists). Decision: use **ISSprOM** symbols, with a schoolyard-specific subset for schools (paths, buildings, fences, etc.) that camps would not need. The existing partial set (`background/symbol-relay-cards.pdf`) has 8 ISOM terrain symbols only. Plan is to export clean vector images from OCAD (SVG or PDF export from a legend), then isolate individual symbols for card printing. Waiting on Kieran for an OCAD source file.
 
@@ -97,9 +89,17 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub (#1 below) is d
 - **Grade band expansion.** K-2 and 6+ lesson plans exist but need further editing passes. Camp Intro and Skill Development curricula have first-draft lesson plans.
 - **Search.** Docusaurus has built-in search (Algolia or local). Not yet configured.
 - **Print styles.** The one-pager view works but could use CSS refinement for clean printing.
-- **AI lesson plan advisor enhancements.** The advisor is live at `/plan-my-lessons/`. Remaining work: follow-up survey link at end of conversations, curriculum Q&A mode (answer specific questions like "give me the script for Animal-O"). See the [detailed plan](https://github.com/Navigation-Games/curriculum/blob/main/notes/ai-lesson-advisor-plan.md).
+- **AI lesson plan advisor enhancements.** The advisor is live at `/plan-my-lessons/`. Remaining work: follow-up survey link at end of conversations, curriculum Q&A mode (answer specific questions like "give me the script for Animal-O"). Done July 2026: generated site map (`ai-advisor/site-map.md`, rebuilt by the content build script) is appended to the system prompt so the advisor can route people to real pages; requires a Cloud Run redeploy to take effect. See the [detailed plan](https://github.com/Navigation-Games/curriculum/blob/main/notes/ai-lesson-advisor-plan.md).
 - **Conversation review.** Live. Staff review advisor conversations and leave feedback at `/review-conversations/` (linked from For Editors). Periodically: review the accumulated feedback with Claude and update the advisor system prompt. Setup details in "Conversation review setup" in `ai-advisor/README.md`.
 - **Page feedback.** Live. Every docs page has a "Was this page helpful?" widget (thumbs + optional comment) below the footer. Results go to the PageFeedback tab of the advisor log sheet. Future: curate the best comments into "From teachers" sections (see the advisor plan notes).
+
+- **Advisor interaction limits and sign-in.** Current limit: 20 chat messages per day per IP (in-memory, resets on deploy). Future: allow a base number of anonymous interactions, with a higher limit for signed-in users. MapMap (sister application, `../mapmap/` and on GitHub) has registration/login that could be reused as the model.
+
+- **Unlimited page feedback for signed-in staff.** The "Was this page helpful?" widget rate-limits per IP. Staff should be exempt: reuse the Google Identity Services sign-in from the conversation review tool, send the ID token with `/page-feedback` submissions, and have the backend skip the rate limit when the token verifies as @navigationgames.org (check the `hd` claim, as `/review/*` does). Frontend needs a small "staff sign-in" affordance on the widget.
+
+- **Mine the Cambridge Grade 3 V6 lesson plans** (`background/cambridge-grade-3-lesson-plans-v6.md`, 2019). Do NOT use its SHAPE standards (outdated) or substitute its lesson content for current material. Worth mining from "About these lessons": the Observation and Mindfulness essay and "Maps tell you how to find things" (start with non-map ways of communicating location) could join the Progression concept notes or About > Concepts. Its isometric map introduction (Where's Waldo-style pictorial maps as a bridge before real maps) is not in the current curriculum and could become a readiness note on Geometric-O or Map Walk. Roles content is already captured in Progression concept #26.
+
+- **Camp Belknap case study.** The one remaining item from the April 2026 ACA podcast prep (the safety checklist, ways-to-use list, budget guidance, three first steps, and Adapting for All Learners page were all written in July 2026). A short "how one camp built a program" story: YMP map, design meetings, tailored curriculum, staff training, multi-year progression. Could live on the camp landing page or as its own page.
 
 ## Deferred
 

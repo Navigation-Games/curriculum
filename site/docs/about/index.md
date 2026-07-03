@@ -7,8 +7,9 @@ sidebar_position: 0
 
 Navigation Games teaches orienteering to schools and camps. This section covers how the site works, key concepts behind the curriculum, and organizational information.
 
+- [About Orienteering](about-orienteering) - what orienteering is and why it is good for kids
 - [How to Use This Site](how-to-use-this-site) - how the content is organized and how to get the most out of it
-- [Our Impact](impact) - what we deliver, what students learn, and what the evidence shows
 - [Navigation Games Progression](/reference/frameworks/skill-concept-sequence) - the concept and skill sequence behind the curriculum, including ideas that run through everything (checking, growth mindset, being lost)
+- [Our Impact](impact) - what we deliver, what students learn, and what the evidence shows
 - [Acknowledgments](acknowledgments) - authors, contributors, and sources
 - [Copyright and License](copyright) - usage terms for these lesson plans

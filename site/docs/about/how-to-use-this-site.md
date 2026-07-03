@@ -1,11 +1,29 @@
 ---
 title: How to Use This Site
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # How to Use This Site
 
 This site contains orienteering curricula for schools and camps. Here is how the content is organized and how to get the most out of it.
+
+## The site at a glance
+
+- 🏠 [Home](/) — pick your path
+  - 🚀 [Quick Start](/quick-start) — try an activity today
+  - 💬 [Lesson Plan Advisor](/plan-my-lessons/) — AI help planning lessons for your group
+- 📋 [Lesson Plans](/lessons/) — complete class sessions, built from activities
+  - 🏫 [Teach at a School](/lessons/school) — [K-2](/lessons/school/grade-k-2), [3-5](/lessons/school/grade-3-5), [6+](/lessons/school/grade-6-plus)
+  - ⛺ [Orienteering at Camp](/lessons/camp) — [Intro (3 sessions)](/lessons/camp/intro), [Skill Development (6 sessions)](/lessons/camp/full)
+- 🎯 [Activities](/activities/core/) — the building blocks: one page per game, from Boundary Run to Point-to-Point
+- 📚 [Reference](/reference/)
+  - [Activities & Lesson Plans table](/reference/activities-and-lessons) — everything at a glance
+  - [Glossary](/reference/glossary) — every term defined
+  - [Equipment & Materials](/reference/equipment/) — maps, checkpoints, kits, setup guides
+  - [Frameworks](/reference/frameworks/) — the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence), [PE standards](/reference/frameworks/pe-standards), OUSA skill levels, SEL
+  - [Adapting for All Learners](/reference/adaptations) — inclusion adaptations
+  - [Resources](/reference/resources) — videos and outside links
+- ℹ️ [About](/about/) — [About Orienteering](/about/about-orienteering), [How to Use This Site](/about/how-to-use-this-site), [Our Impact](/about/impact), acknowledgments, copyright
 
 ## Two types of content
 
@@ -59,11 +77,11 @@ Materials are hyperlinked. Click any material name to see a popup with details: 
 - **Breadcrumbs**: see where you are and navigate back up
 - **"On this page" menu**: jump to sections within the current page (on mobile, tap the dropdown at the top)
 
-## For PE teachers
+## For teachers
 
-Start with the [grade band overview](/lessons/school) that matches your students. Each grade band has a learning progression table showing what each lesson adds and the main activity.
+Start with the [grade band overview](/lessons/school) that matches your students. Each grade band has a learning progression table showing what each lesson adds and the main activity. The lessons are written with PE classes in mind, but classroom, STEM, and geography teachers can run them as written; the map reading, spatial reasoning, and measurement connections are built in.
 
-Lesson plans include [SHAPE America PE standards](/reference/frameworks/pe-standards) alignment. Look in the Goals section of each lesson plan.
+For PE departments and administrators: lesson plans include [SHAPE America PE standards](/reference/frameworks/pe-standards) alignment. Look in the Goals section of each lesson plan.
 
 ## For camp directors
 

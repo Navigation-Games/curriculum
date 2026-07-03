@@ -30,6 +30,8 @@ activities:
     tag: variation
 ---
 
+> **Draft video script:** [View script](../../../../site/docs/editors/video-scripts/lessons/4-map-symbols.md)
+
 ## Goals
 
 ### Orienteering Goals

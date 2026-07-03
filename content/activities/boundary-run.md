@@ -20,7 +20,7 @@ videos:
     title: Boundary Run
 ---
 
-> **Draft video script:** [View script](../video-scripts/activities/boundary-run.md)
+> **Draft video script:** [View script](../../site/docs/editors/video-scripts/activities/boundary-run.md)
 
 ## Description
 
@@ -188,3 +188,5 @@ Reinforces boundary awareness by giving boundaries a strategic purpose: crossing
 | **Time** | 15-20 minutes |
 | **Materials** | Cones to mark the dividing line, 2 flags (or pinnies/bandanas) |
 | **How to run it** | Split the space in half. Each team hides their flag. Players cross into enemy territory to grab the flag and return it to their side. Tagged players go to jail. Freed by a teammate's tag. First team to capture the flag wins. |
+
+Once students can read a map, try [Capture the Flag-O](../capture-the-flag-o): the same game with flags at mapped locations.

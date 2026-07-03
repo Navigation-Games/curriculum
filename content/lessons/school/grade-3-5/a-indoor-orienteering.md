@@ -32,7 +32,7 @@ activities:
     tag: extension
 ---
 
-> **Draft video script:** [View script](../../../video-scripts/lessons/a-indoor-orienteering.md)
+> **Draft video script:** [View script](../../../../site/docs/editors/video-scripts/lessons/a-indoor-orienteering.md)
 
 ## Goals
 

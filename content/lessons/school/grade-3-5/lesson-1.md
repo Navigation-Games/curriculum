@@ -40,6 +40,8 @@ activities:
     tag: extension
 ---
 
+> **Draft video script:** [View script](../../../../site/docs/editors/video-scripts/lessons/1-know-your-space.md)
+
 ## Goals
 
 ### Orienteering Goals

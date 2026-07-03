@@ -22,6 +22,16 @@ Several things in the curriculum reinforce this:
 - **Normalizing struggle.** The safety progression includes "it is OK to get lost" as an explicit talking point (Session 4). See [Being Lost](#being-lost) below.
 - **Real skills, real transfer.** Orienteering is not a contrived exercise. Reading terrain, making route decisions under uncertainty, recovering from mistakes: these are genuine skills that transfer to hiking, travel, and everyday wayfinding.
 
+## What camp leaders say
+
+> "We absolutely loved having orienteering at camp this summer... Everyone loved it. It's a great outside activity and can be tailored to (almost) all ages."
+>
+> *Leslie, Camp Director at Camp Grossman*
+
+> "The games and activities we did with the kids really allowed them to gain confidence in themselves and a sense of community with each other. In the beginning they were very shy of each other and often their personalities butted heads. Over time, however, they learned how to navigate the kind of social challenges that come with working with a group of peers. I am very proud of the way they grew into themselves as orienteers and students."
+>
+> *Chanah, after-school program leader*
+
 ## Being lost {#being-lost}
 
 Getting lost is not just a navigation problem. It is an emotional experience. Confusion, frustration, sometimes a flash of panic. Most adults have felt this and developed coping strategies (or avoidance strategies). Kids are still building theirs.
@@ -51,6 +61,18 @@ Orienteering at camp is not just an outdoor activity. It is a progression that b
 
 **Orienteering as metaphor.** Being lost and finding your way. Reading your environment. Trusting your preparation. Recovering from a wrong turn without falling apart. These transfer far beyond the woods.
 
+## Ways camps can use orienteering
+
+Orienteering is flexible. Camps use it as:
+
+- **A standalone activity block.** A one-time session where campers learn the basics and do a simple course. Works as a special event or a rainy-day alternative if you have an indoor space.
+- **A recurring program.** Progressive skill-building across a camp session, from introductory games to map reading to independent navigation. That is what the [Skill Development curriculum](full) is for.
+- **A team challenge.** The Score-O format, where teams find as many checkpoints as possible in a set time, is built for teamwork and strategy. The All-Camp Team Treasure Hunt is the culminating version.
+- **A themed game.** Animal-O for younger campers, treasure hunts, and tag layers like Vampire-O keep the navigation core while changing the story.
+- **A cabin or unit competition.** A friendly tournament across the summer, with different courses for different age groups.
+- **A way to explore your property.** A well-designed course introduces campers to parts of camp they would never otherwise visit.
+- **A CIT and leadership activity.** Older campers can learn to set courses for younger ones. Course setting requires a much deeper level of map understanding, and it is a genuine leadership role: designing an experience for someone else and being responsible for it working.
+
 ## Curricula
 
 ### [Camp Intro](intro) (3 sessions)
@@ -78,6 +100,34 @@ A two-week program building from basic map navigation through compass work, rout
 
 ## Supporting your program
 
+### Three first steps
+
+1. **Get a map of your property.** Any map works to start, even a rough sketch of the camp grounds. When you are ready for a real orienteering map, [Orienteering USA's Youth Mapping Program](https://orienteeringusa.org) connects organizations with professional cartographers, and Navigation Games can help. See [Maps](/reference/equipment/maps/).
+2. **Plan activities from existing lesson plans.** You do not have to build a program from scratch. The [Camp Intro](intro) and [Skill Development](full) curricula on this site are free: lesson plans, progressions, and activity guides.
+3. **Find a champion and connect with the local orienteering community.** Pick a staff member to own the program, and have them attend a local club event before the summer. There is nothing like actually doing orienteering to understand how to teach it. Find the nearest club through the [OUSA club directory](https://orienteeringusa.org/events/clubs/). Local clubs are also a great source of volunteers, expertise, and borrowed equipment.
+
+### Safety checklist
+
+Safety in orienteering is very manageable, and courses for children are designed with it in mind: checkpoints in accessible, visible locations, kids on foot at walking or jogging pace. The essentials:
+
+- **Boundaries.** Every course has clearly defined boundaries: roads, fences, streams, or flagging tape. Walk or run the boundary together before anything else. This is the single most important safety rule.
+- **Safety bearing.** One direction that always leads back to a road or known feature. Teach it before sending campers into the more remote parts of camp (introduced in Session 3 of the Skill Development curriculum).
+- **Buddy system.** Beginners go out in pairs or small groups, never alone.
+- **Check-in system.** Know how many campers are out on a course and check them back in.
+- **Whistles.** In orienteering events, competitors carry a whistle: three short blasts means "I need help." A camper who is truly stuck stops, blows the whistle, and waits.
+- **Terrain walkthrough.** In forest or uneven terrain, walk the area first and note hazards: rocky slopes, water, slippery spots.
+- **Sun, heat, and hydration.** Standard camp practice, but worth naming in the orienteering context because campers are spread out.
+
+And remember that the skills themselves reduce risk: campers who know their way around camp, can read a map, and know what to do when confused are safer campers. See [Being lost](#being-lost) above for how the curriculum turns "getting lost" into a learning experience rather than an emergency.
+
+### What it costs
+
+The main upfront costs are the map and basic equipment.
+
+- **The map** is a one-time investment you will use for years. A professionally made orienteering map of a camp property may run a few thousand dollars depending on the area's size, and Orienteering USA has grants that can cover part of it. Updates every few years are much cheaper than the original. You can start free with a hand-drawn map.
+- **Equipment** is modest: a basic set of 20 checkpoint markers runs around $300, and compasses can wait until the compass sessions. The [Navigation Games kit](/reference/equipment/kits/) covers the introductory activities.
+- **Ongoing costs are mostly staff time**: someone to organize the program, set courses, run activities, and reset equipment between groups. Training existing staff folds this into your existing labor budget.
+
 ### Leader training
 
 Camp counselors do not need orienteering experience, but they do need to experience the activities before they run them. The Skill Development curriculum includes a [leader training guide](full/#leader-training) with a step-by-step approach: pre-reading, abridged run-throughs, and practice facilitating.
@@ -92,6 +142,7 @@ The camp curriculum aligns with the [Orienteering USA Skills Recognition Program
 
 ### Reference materials
 
+- [Adapting for All Learners](/reference/adaptations/) -- adaptations for developmental delays, autism, mobility challenges, hearing loss, vision impairment, and English language learners
 - [SEL Program Quality Assessment](/reference/frameworks/sel-pqa/) -- how the curriculum maps to the SEL PQA observation rubric used by the American Camp Association
 - [Checkpoints](/reference/equipment/controls-and-punches/) -- checkpoint markers, pin punches, punch cards, and answer keys
 - [Navigation Games Kits](/reference/equipment/kits/) -- what is in the kit and how to use it

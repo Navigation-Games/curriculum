@@ -37,6 +37,18 @@ import CardGrid from '@site/src/components/CardGrid';
 
 **[Start Orienteering: A Newcomer's Guide](https://www.youtube.com/watch?v=26Zc5AVkFis)** is a good general introduction to the sport.
 
+## Get Involved in Orienteering
+
+- [Orienteering USA club directory](https://orienteeringusa.org/events/clubs/) — find your local club; events always include beginner courses
+- [Navigation Games events](https://www.navigationgames.org/events) — public orienteering events for families and beginners in greater Boston
+- [New England Orienteering Club](https://www.neoc.org) — events across New England
+- [Orienteering USA](https://orienteeringusa.org) — the national governing body: training, junior programs, skills recognition, youth mapping
+- [International Orienteering Federation](https://orienteering.sport) — the sport worldwide
+- [Rogaining](https://www.rogaining.com) — long-format team orienteering
+- [Adventure racing (USARA)](https://usara.com) — navigation plus running, biking, and paddling
+
+See [About Orienteering](/about/about-orienteering) for what these are and when students are ready for them.
+
 ## About Navigation Games Activities
 
 <CardGrid columns={2}>

@@ -13,11 +13,15 @@ materials:
   - All-checkpoints map
   - Scorecards and pencils
 setup: Place checkpoints according to the all-checkpoints map; spread them out across the mapped area
-images: []
+images:
+  - src: /curriculum/img/activities/children-running-in-park.png
+    alt: Children running across a park field carrying maps at the start of a Score-O
+    caption: "Mass start: everyone heads out at once, each with their own route plan"
+    onepager: true
 videos: []
 ---
 
-> **Draft video script:** [View script](../video-scripts/activities/score-o.md)
+> **Draft video script:** [View script](../../site/docs/editors/video-scripts/activities/score-o.md)
 
 ## Description
 
@@ -181,7 +185,7 @@ You can choose how much of the setup students do themselves. The more they do, t
 - Pairs races: one team finds odds, the other team finds evens
 - Poker-O: each checkpoint has a playing card; collect the best poker hand
 - Poison-O: some checkpoints are "poison" and cost points; rewards careful map reading
-- Vampire-O: one team are "vampires" who chase the other teams; if tagged, you lose a checkpoint
+- Vampire-O: vampire teams chase the others; if tagged, you lose your punch card and become a vampire
 
 
 ## Companions
@@ -203,6 +207,10 @@ Each checkpoint has a playing card attached. Students visit checkpoints and reco
 ### Poison-O *(extension)*
 
 **Wrong checkpoints cost points. Rewards careful map reading.** See the full [Poison-O](../poison-o) activity page.
+
+### Vampire-O *(extension)*
+
+**Score-O with a chase: vampire teams tag others and take their punch cards.** See the full [Vampire-O](../vampire-o) activity page.
 
 ### Reverse Score-O *(variation)*
 

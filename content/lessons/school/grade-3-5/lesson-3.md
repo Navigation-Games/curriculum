@@ -40,7 +40,7 @@ activities:
     tag: extension
 ---
 
-> **Draft video script:** [View script](../../../video-scripts/lessons/5-map-readiness.md)
+> **Draft video script:** [View script](../../../../site/docs/editors/video-scripts/lessons/3-map-readiness.md)
 
 ## Goals
 

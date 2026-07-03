@@ -31,7 +31,7 @@ activities:
     tag: variation
 ---
 
-> **Draft video script:** [View script](../../../video-scripts/lessons/4-clue-sheets.md)
+> **Draft video script:** [View script](../../../../site/docs/editors/video-scripts/lessons/2-match-the-code.md)
 
 ## Goals
 

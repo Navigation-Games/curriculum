@@ -11,13 +11,17 @@ materials:
   - Orienteering flags
   - Regular course maps (1 per pair)
 setup: Place checkpoints according to the all-checkpoints map
-images: []
+images:
+  - src: /curriculum/img/activities/star-relay-diagram.png
+    alt: Star Relay diagram showing a central start triangle with out-and-back loops to five numbered checkpoints, alternating between two runners
+    caption: "The star pattern: partners alternate out-and-back legs from the start"
+    onepager: true
 videos: []
 ---
 
 ## Description
 
-Star Relay is a partner relay where runners alternate visiting checkpoints on a course, returning to the start between each one. One partner runs to a checkpoint while the other watches and waits. When the runner returns, they hand off to their partner for the next checkpoint. The star pattern (out and back, out and back) gives both partners repeated practice with map reading, route choice, and checkpoint confirmation. Partners watch each other and provide feedback.
+Star Relay (also called Star-O or Star Orienteering) is a partner relay where runners alternate visiting checkpoints on a course, returning to the start between each one. One partner runs to a checkpoint while the other watches and waits. When the runner returns, they hand off to their partner for the next checkpoint. The star pattern (out and back, out and back) gives both partners repeated practice with map reading, route choice, and checkpoint confirmation. Partners watch each other and provide feedback.
 
 A variation called "Move the Object" adds a physical relay element: instead of just visiting a checkpoint, the first runner leaves an object there, and the partner retrieves it and moves it to the next checkpoint.
 
