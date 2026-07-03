@@ -2,10 +2,10 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
   activitiesSidebar: [
+    {type: 'doc', id: 'activities/core/index', label: 'Activities'},
     {
       type: 'category',
       label: 'Core Activities',
-      link: {type: 'doc', id: 'activities/core/index'},
       items: [
         'activities/core/boundary-run',
         'activities/core/gathering',
@@ -22,7 +22,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Camp & Additional Activities',
+      label: 'Camp & Advanced Activities',
       items: [
         'activities/core/map-discussion',
         'activities/core/symbol-relay',
@@ -33,6 +33,8 @@ const sidebars: SidebarsConfig = {
         'activities/core/star-relay',
         'activities/core/checkpoint-copy-relay',
         'activities/core/window-o',
+        'activities/core/vampire-o',
+        'activities/core/capture-the-flag-o',
       ],
     },
   ],

@@ -58,18 +58,13 @@ Because the teams place their own flags using the map, setup itself is a map-rea
 
 ## Steps
 
-**1. Make two teams.** Each team gets maps and a set of flags. One team's flag locations are the even-numbered circles on the map; the other team's are the odd-numbered circles.
-
-**2. Teams place their flags.** Using the map, each team puts its flags at its mapped locations in its own territory. This is the first map-reading task of the game.
-
-**3. Explain the rules.**
-   - The goal is to bring all of the other team's flags to the teacher. The first team to do so wins.
-   - You can only be tagged while carrying a flag, and only by someone who is not carrying a flag.
-   - If tagged, you hand the flag to the tagger, who returns it to its mapped location. You go to the holding area until a teammate releases you.
-
-**4. Play.** Raiders use the map to find enemy flags; defenders use it to know what they are protecting.
-
-**5. Negotiate.** Rules can be changed or negotiated between rounds. Inventing a variation is half the fun.
+1. Assign students to two teams; each team gets maps and a set of flags. The map has even and odd flag locations. One team has the even numbers and defends them; the other has the odd numbers
+2. Teams put out their own flags at their mapped locations in their own territory. This is the first map-reading task of the game
+3. State the rules. The goal is to bring all of your opponent team's flags to the teacher. You win if you do that before the other team does
+4. You can only be tagged if you have a flag, by someone who does not have a flag
+5. If tagged, you give the flag to the tagger, who returns it to its mapped location. Then you go to a holding area and wait to be released by a team member
+6. Play the game. Raiders use the map to find enemy flags; defenders use it to know what they are protecting
+7. Rules can be changed or negotiated between rounds
 
 
 ## Differentiation

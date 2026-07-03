@@ -460,6 +460,17 @@ function parseSteps(text) {
       continue;
     }
 
+    // Bold-paragraph step: "**1. Title.** Detail text..."
+    // The title becomes a concise step for the one-pager; the full page
+    // renders the section's raw markdown (see generateActivityMDX).
+    const boldMatch = line.match(/^\*\*\d+\.\s*(.+?)\*\*/);
+    if (boldMatch) {
+      const title = boldMatch[1].trim().replace(/[.:]\s*$/, '');
+      items.push({ short: title, long: title });
+      i++;
+      continue;
+    }
+
     i++;
   }
 
@@ -729,7 +740,13 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   if (sections.setup) { L.push('### Setup'); L.push(''); L.push(sections.setup); L.push(''); }
   if (steps.length > 0) {
     L.push('### Steps'); L.push('');
-    steps.forEach((s, i) => L.push(`${i + 1}. ${s.long}`));
+    // Bold-paragraph steps carry detail and sub-bullets that a flat numbered
+    // list would lose, so render the section's markdown as written.
+    if (/^\*\*\d+\./m.test(sections.steps || '')) {
+      L.push(sections.steps);
+    } else {
+      steps.forEach((s, i) => L.push(`${i + 1}. ${s.long}`));
+    }
     L.push('');
   }
   if (sections.differentiation) { L.push('### Differentiation'); L.push(''); L.push('*Ways to adapt the activity to meet the needs of your students.*'); L.push(''); L.push(sections.differentiation); L.push(''); }
