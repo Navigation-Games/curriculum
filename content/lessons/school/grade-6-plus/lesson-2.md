@@ -77,7 +77,7 @@ activities:
 4. [**Symbol-O**](/activities/core/symbol-o): in pairs, find checkpoints placed at features that match specific symbols
    - Start with 3-4 easy symbols (path, building, fence)
    - Add harder symbols (vegetation boundaries, small features)
-   - Students self-check using the animal picture at each checkpoint. 🧭 [Checking](/about/concepts#checking)
+   - Students self-check using the animal picture at each checkpoint. 🧭 [Checking](/reference/frameworks/skill-concept-sequence#checking)
 5. **Symbol Relay** (if time): teams race to match symbols to features
 
 

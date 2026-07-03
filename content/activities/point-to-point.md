@@ -13,6 +13,7 @@ materials:
   - Checkpoint markers (cones or flags) with codes
   - All-checkpoints map
 setup: Place checkpoints at their corresponding locations according to the all-checkpoints map
+si_timing: true
 images:
   - src: /curriculum/img/activities/point-to-point.png
     alt: Schoolyard orienteering map with a numbered point-to-point course (checkpoints 1 to 5) and a legend
@@ -119,6 +120,16 @@ Ways to slow things down for younger groups, increase challenge for experienced 
 
 "Find a partner. Look at the map together. Where is the first checkpoint? Which way will you go to get there? Before we start, make a plan. Think first. Then move."
 
+### Finishing
+
+*(As students complete the course and return.)*
+
+"Nice work. Did every code match? If you ended up at a wrong checkpoint, how did you figure out where you were?"
+
+"Compare with your partner or another pair: where did you go between checkpoints 2 and 3? Did you take the same route? There is more than one good route. What made yours work?"
+
+"If you want another challenge, try a harder course, or try this one again and see if you can do it more smoothly."
+
 ## Delivery
 
 1. Hand out maps and orient the map together using landmarks
@@ -146,7 +157,37 @@ Ways to slow things down for younger groups, increase challenge for experienced 
 
 ## Extensions
 
-- Relay race: divide into teams, each member completes a course before tagging the next
-- Challenge students to run to three checkpoints in order without a map
+- Relay race: divide into teams, each member completes a course before tagging the next (see Relay Race below)
+- Challenge students to run to three checkpoints in order without a map (see Memory-O below)
 - Do the course in reverse order
 - Compare route choices with a partner after the course: "Where did you go? Why?"
+
+
+## Companions
+
+### Relay Race *(extension)*
+
+**Teams compete in relay format. Each runner completes a course, then tags the next.**
+
+Divide the group into teams of 3 or 4. Each team member runs a short point-to-point course; when one finishes, the next starts. First team to finish with all codes correct wins. Use several similar courses of equal length so waiting time stays short and no one can just follow the runner ahead.
+
+| | |
+|---|---|
+| **Time** | 20-40 minutes |
+| **Materials** | Point-to-Point setup, with several short courses of similar length |
+| **How to run it** | Teams line up at the start. Runner 1 completes a course and tags runner 2, and so on. A wrong code means the runner goes back to fix it. Emphasize encouraging teammates; the relay adds time pressure, so remind students that accuracy still wins races. |
+
+### Memory-O *(variation)*
+
+**Navigate from memory instead of carrying the map.**
+
+Two formats:
+
+1. **Memorize a course.** At the start, students study a short 3-checkpoint course, then run it without the map, verifying the code at each checkpoint. Works well with several short courses so students rotate through
+2. **Snippet to snippet.** Students find one checkpoint at a time. At each checkpoint, a posted map snippet shows the way to the next one. Works best as a single course
+
+| | |
+|---|---|
+| **Time** | 15-30 minutes |
+| **Materials** | Point-to-Point setup, plus a posted master map (format 1) or a map snippet at each checkpoint (format 2) |
+| **How to run it** | Same rules as Point-to-Point, but the map stays behind. Students who lose the thread return to the last map they saw. Builds spatial memory and rewards careful map study before moving. |

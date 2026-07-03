@@ -77,7 +77,7 @@ activities:
    - Visit checkpoints in order, starting with the triangle
    - Partner verifies with the animal clue sheet
    - Progress to 10-checkpoint maps
-   - Repeat for speed, then from memory. When repeating solo, students self-check: confirm each checkpoint before moving on. 🧭 [Checking](/about/concepts#checking)
+   - Repeat for speed, then from memory. When repeating solo, students self-check: confirm each checkpoint before moving on. 🧭 [Checking](/reference/frameworks/skill-concept-sequence#checking)
 
 
 ## Compact Delivery

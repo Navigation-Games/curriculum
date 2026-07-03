@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Our Impact
 
-We do not yet have controlled scientific studies of our own programs. What we have is a clear record of what we deliver, directly observable evidence that students learn to orienteer, what teachers and participants tell us, and a growing body of research on the value of the kind of learning our programs provide.
+Navigation Games does not yet have controlled scientific studies of our own programs. What we have is a clear record of what we deliver, directly observable evidence that students learn to orienteer, what teachers and participants tell us, and a growing body of research on the value of the kind of learning our programs provide.
 
 This page lays out each of those. It ends with an invitation: we want to measure our impact better, and we welcome help.
 
@@ -15,7 +15,7 @@ We have been bringing orienteering to children since 2015, when Navigation Games
 
 Part of our mission is to enable others to teach, so that orienteering outlasts our direct involvement. In 2024, 295 of those classes were run by teachers and partners without Navigation Games staff present.
 
-Most of this work is in Greater Boston, with a focus on communities that have the least access to outdoor learning. This is the firmest thing we know: a count of programs delivered and people served.
+Most of this work is in Greater Boston, with a focus on communities that have the least access to outdoor learning.
 
 ## Students learn to orienteer
 

@@ -8,9 +8,11 @@ import ActivityCard from '@site/src/components/ActivityCard';
 
 # Teach at a School
 
-Structured lesson progressions for PE classes, organized by grade band. Each progression builds skills over multiple sessions, moving from basic spatial awareness to independent map navigation.
+Structured lesson progressions organized by grade level. Each progression builds skills over multiple sessions, moving from basic spatial awareness to independent map navigation. Written for PE classes, but they work just as well for classroom teachers, after-school programs, and anyone else teaching kids at school.
 
-## Grade Bands
+The grade levels follow the same underlying sequence of skills, the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence), tuned to each age group's pacing and depth. If your students are new to orienteering, start at the beginning of your grade's progression regardless of age.
+
+## Grade Levels
 
 <CardGrid columns={3}>
   <ActivityCard

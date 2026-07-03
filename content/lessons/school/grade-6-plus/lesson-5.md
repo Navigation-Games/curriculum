@@ -36,7 +36,7 @@ activities:
 - Navigate a course visiting checkpoints in a specific order
 - Read a course on the map: start triangle, numbered circles, finish
 - Make route choices between checkpoints (handrails, attack points)
-- Self-check at every checkpoint: read the code and confirm it matches. 🧭 [Checking](/about/concepts#checking)
+- Self-check at every checkpoint: read the code and confirm it matches. 🧭 [Checking](/reference/frameworks/skill-concept-sequence#checking)
 - Compare route choices with others and learn from different approaches
 
 ### PE Standards (SHAPE America, 2024)

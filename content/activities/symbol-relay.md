@@ -114,6 +114,21 @@ Adds energy and competition to symbol learning while building teamwork and commu
 
 ## Extensions
 
-- Use IOF control description pictograms instead of map symbols (for advanced groups)
+- Use control description pictograms instead of map symbols (see Description Relay below)
 - Time the relay and challenge teams to beat their own time in a second round
 - Have one team member be the "coach" who can shout hints but not run
+
+
+## Companions
+
+### Description Relay *(variation)*
+
+**Same relay, but with control description pictograms instead of map symbols.**
+
+Run exactly like Symbol Relay, except the cards show control description pictograms: the standardized picture language of the International Orienteering Federation (IOF) that describes checkpoint locations at competitions (a boulder, a path junction, the north side of a fence). Good for groups that already know the basic map symbols and are ready for the next layer of orienteering literacy.
+
+| | |
+|---|---|
+| **Time** | Same as Symbol Relay |
+| **Materials** | Symbol Relay setup, with pictogram cards in place of map symbol cards |
+| **How to run it** | Same as Symbol Relay. Introduce a few pictograms before the first round so teams are not guessing blind. |

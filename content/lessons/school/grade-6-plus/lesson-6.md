@@ -40,7 +40,7 @@ activities:
 - Choose an appropriate challenge level
 - Manage the tension between speed and accuracy
 - Work as a team in relay format
-- Self-check at every checkpoint even under pressure. 🧭 [Checking](/about/concepts#checking)
+- Self-check at every checkpoint even under pressure. 🧭 [Checking](/reference/frameworks/skill-concept-sequence#checking)
 
 ### PE Standards (SHAPE America, 2024)
 

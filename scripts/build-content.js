@@ -603,7 +603,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
     steps.forEach((s, i) => L.push(`${i + 1}. ${s.long}`));
     L.push('');
   }
-  if (sections.differentiation) { L.push('### Differentiation'); L.push(''); L.push(sections.differentiation); L.push(''); }
+  if (sections.differentiation) { L.push('### Differentiation'); L.push(''); L.push('*Ways to adapt the activity to meet the needs of your students.*'); L.push(''); L.push(sections.differentiation); L.push(''); }
   if (sections.tips) { L.push('### Tips'); L.push(''); L.push(sections.tips); L.push(''); }
   L.push('</TabItem>');
 
@@ -634,7 +634,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   }
 
   if (sections.companions) {
-    L.push('<TabItem value="companions" label="Companions">');
+    L.push('<TabItem value="companions" label="Related Activities">');
     L.push('');
     L.push(sections.companions);
     L.push('');

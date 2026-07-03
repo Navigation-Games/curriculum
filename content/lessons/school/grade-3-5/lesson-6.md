@@ -65,7 +65,7 @@ activities:
    - Start with a short course (3-4 checkpoints)
    - Advance to longer courses
 3. **Partner Orienteering**: plan and execute a full course together
-4. **Solo Orienteering**: do a course on your own. Self-check at every checkpoint: read the code and confirm it matches before moving on. ðŸ§­ [Checking](/about/concepts#checking)
+4. **Solo Orienteering**: do a course on your own. Self-check at every checkpoint: read the code and confirm it matches before moving on. 🧭 [Checking](/reference/frameworks/skill-concept-sequence#checking)
 
 
 ## Compact Delivery

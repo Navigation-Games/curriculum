@@ -117,3 +117,23 @@ Ways to slow things down for younger groups, increase challenge for experienced 
 - Add color to the maps (green for grass, brown for paths, blue for water)
 - Teacher places a new object in the space; students add it to their maps
 - Draw the map of a familiar place (your bedroom, the classroom)
+
+
+## Companions
+
+### Guided Map Drawing *(variation)*
+
+A more structured version for groups that find a blank page daunting. The teacher draws the boundary and a few major features on the whiteboard, and students copy that starting map onto their own paper. Then students fill in the rest of the space themselves.
+
+Another way to run it: invite a student up to add one feature to the whiteboard map. Ask the class, "Do we agree that's where the slide goes?" If the class agrees, everyone copies it down, improving their own maps as they go. Rotate through several students so the class builds the map together.
+
+### Map Maker *(extension)*
+
+Students relate a teacher-drawn map to the real space, then keep the map correct as the space changes. Place 8 to 12 objects (3 or 4 different kinds) in the area and draw a map of them on a whiteboard, using a different symbol for each kind of object.
+
+1. **Build the key**: students look at the space and work out which symbol matches each kind of object. Record the matches in a map key
+2. **Match objects**: point to a symbol on the map; students run and touch the object they think it is. Repeat until they can locate objects from the map confidently
+3. **Move objects**: erase a symbol and redraw it somewhere else on the map; students move the real object to its new location
+4. **Draw the map**: students move objects themselves and mark the new locations on the map. The class checks the finished map together
+
+Takes 30 to 60 minutes. Reflection: "How could you tell if an object was in the correct place?"

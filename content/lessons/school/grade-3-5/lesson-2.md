@@ -27,6 +27,7 @@ activities:
     tag: core
   - title: Animal Relay
     description: Take turns running to animal checkpoints.
+    link: /activities/core/animal-o
     tag: variation
 ---
 
@@ -63,8 +64,8 @@ activities:
    - Try a different 5-animal clue sheet
    - Try a different clue sheet
    - Repeat from memory: one partner is the orienteer, the other keeps the clue sheet as the checker. At each checkpoint, the orienteer calls out the animal name. The checker says "correct" or "incorrect." Then switch roles.
-   - Repeat for a faster time. Students can now self-check: carry the clue sheet and confirm each animal yourself before moving on. ðŸ§­ [Checking](/about/concepts#checking)
-4. **Animal Relay**: take turns running to checkpoints
+   - Repeat for a faster time. Students can now self-check: carry the clue sheet and confirm each animal yourself before moving on. See [Checking](/reference/frameworks/skill-concept-sequence#checking)
+4. [**Animal Relay**](/activities/core/animal-o): take turns running to checkpoints (described on the Animal-O page under Differentiation)
 
 > **If you have electronic timing:** Electronic timing confirms correct checkpoints automatically. Without it, students need to learn to check each other (and eventually themselves). See [Electronic Timing](/reference/equipment/electronic-timing) for how lessons change with electronics.
 

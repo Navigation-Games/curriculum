@@ -49,8 +49,7 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub (#1 below) is d
 
 ### Content gaps
 
-- **Companion activities without links.** Four companion activities are referenced in lesson plan cards but have no link because they live inline with their parent core activity, not as separate pages:
-  - Animal Relay (3-5 Lesson 2, companion of Animal-O)
+- **Companion activities without links.** Companion activities referenced in lesson plan cards should link to the parent activity page where they are described (as Animal Relay in 3-5 Lesson 2 now does). Still to check:
   - Geometric Readiness (3-5 Lesson 3, companion of Geometric-O)
   - Symbol-O (3-5 Lesson 4, companion of Map Walk)
   - Find the Cone (3-5 Lesson A and K-2 Lesson 6, companion of Geometric-O)
@@ -61,7 +60,7 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub (#1 below) is d
 
 - **PE standards audit after editing rounds.** After each major round of curriculum editing, verify that the SHAPE America standards mapping is still valid. Check both the reference page (`site/docs/reference/frameworks/pe-standards.md`) and the PE Standards section within each individual lesson. Lesson delivery changes can invalidate a standard citation (e.g., removing pair work removes the basis for a social skills indicator).
 
-- **Camp activities still needing write-ups.** Several activities referenced in camp lesson plans have no activity page yet: Description Relay (session 1), Compass Segments (session 5), Vampire-O, Memory-O (navigate by memory using short courses or sequential map snippets; two formats described in Design Meeting #2). Compass Spider is now documented as a Star Relay companion/variation. Friendship Relay (groups of 3 split checkpoints by ability, meet at a common point) was described in the Belknap video and could be a new all-camp activity.
+- **Camp activities still needing write-ups.** Description Relay is now documented as a Symbol Relay variation, and Memory-O as a Point-to-Point variation (both July 2026). Still without write-ups: Compass Segments (session 5) and Vampire-O. Compass Spider is documented as a Star Relay companion/variation. Friendship Relay (groups of 3 split checkpoints by ability, meet at a common point) was described in the Belknap video and could be a new all-camp activity. Also still unwritten from Marius's June 2026 audit: Capture-the-Flag-O, Poly-dot-O, Star-O (confirm whether this is Star Relay under another name).
 
 - **Symbol Relay cards.** Symbol Relay now has a standalone activity page, but still needs a complete set of symbol relay cards (only a partial set exists). Decision: use **ISSprOM** symbols, with a schoolyard-specific subset for schools (paths, buildings, fences, etc.) that camps would not need. The existing partial set (`background/symbol-relay-cards.pdf`) has 8 ISOM terrain symbols only. Plan is to export clean vector images from OCAD (SVG or PDF export from a legend), then isolate individual symbols for card printing. Waiting on Kieran for an OCAD source file.
 
@@ -69,7 +68,17 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub (#1 below) is d
 
 - **Course design reference content.** White/Yellow/Orange course difficulty levels are now described in Camp Lesson 6 delivery notes, but could become a standalone reference page or setup guide with diagrams showing checkpoint placement principles (controls must be on distinct features, progression from path junctions to off-trail locations).
 
-- **Printable materials for Basketball-O and Geometric-O.** These activities appear in Quick Start as "easiest to set up," but teachers still need to make or find the maps/court diagrams. Provide downloadable PDFs (court layout for Basketball-O, pattern templates for Geometric-O) so teachers can print and go. Without these, "easiest to set up" is misleading.
+- **Printable materials for Basketball-O and Geometric-O.** Teachers still need to make or find the maps/court diagrams for these. Provide downloadable PDFs (court layout for Basketball-O, pattern templates for Geometric-O) so teachers can print and go. (Basketball-O was removed from the Quick Start "easy setup" list in July 2026 for exactly this reason; it can return once printables exist.) Same need for Animal-O clue sheet PDFs, so people can print their own.
+
+### From the June 2026 feedback round (see notes/2026-spring-summer-feedback-plan.md)
+
+- **Print/one-pager fixes.** The print view only captures the active tab's content ("How to run it"), and the one-pager prints at about 1.5 pages. Theme/CSS work.
+- **Activity card and popover polish.** Show duration on activity cards; make popover behavior consistent everywhere; add a visual cue that a link opens a popover; consider a larger popover. Add images to MaterialLink and VocabLink popovers.
+- **Feedback widget.** Allow a new submission immediately after submitting; disclose visibly that advisor conversations are logged.
+- **Bottom prev/next navigation.** From a grade index, "next" should go into Lesson 1, not the top of the same page.
+- **K-2 vs 3-5 clue-sheet lesson differentiation.** Make the two lessons visibly different (K-2 slows Animal-O down; 3-5 moves to checking and partner roles faster).
+- **Advisor frontend starter tips.** Show example prompts above the chat input ("Tell me your grade level, space, and how many sessions...").
+- **Deferred by Barb, revisit later:** sidebar-collapse discoverability, Level 1/2/3 framing for the curriculum, camp "session" vs "lesson" naming.
 
 - **Leave No Trace page.** The current draft needs a tone revision so it feels natural and confident rather than justifying orienteering's existence. The core message is simple: orienteering is low-impact, and here is what to teach when you are in wilder areas.
 

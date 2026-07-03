@@ -120,6 +120,14 @@ Ways to slow things down for younger groups, increase challenge for experienced 
 
 "Now it is your turn to lead us back. Who can read the map and take us back to where we started?"
 
+### Wrapping Up
+
+*(Back at the start.)*
+
+"What did you learn about the map today? What symbol will you remember?" *(Let a few students answer.)*
+
+"Next time, you will use a map like this to find checkpoints on your own. You already know how to read it."
+
 
 ## Delivery
 

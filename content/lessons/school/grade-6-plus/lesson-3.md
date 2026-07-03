@@ -68,10 +68,10 @@ activities:
 3. **Strategy discussion**: "If you want to visit the most checkpoints, what would your plan be?" Discuss grouping nearby checkpoints, avoiding backtracking, saving far ones for last.
 4. [**Score-O**](/activities/core/score-o): first round in pairs, 8-10 minutes
    - Students orient their maps, plan a route, then go
-   - At each checkpoint, record the code and self-check: does the location match what the map shows? 🧭 [Checking](/about/concepts#checking)
+   - At each checkpoint, record the code and self-check: does the location match what the map shows? 🧭 [Checking](/reference/frameworks/skill-concept-sequence#checking)
 5. **Debrief**: compare strategies. Who found the most? What worked?
 6. **Second round**: individual, try to beat your first score
-7. **Setup ladder** (if time and readiness): for a third round, have students choose checkpoint locations on the all-checkpoints map and place the markers themselves. See the [Score-O setup ladder](/activities/core/score-o#setup-ladder).
+7. **Students run the setup** (if time and readiness): for a third round, have students choose checkpoint locations on the all-checkpoints map and place the markers themselves. See [Who does the setup?](/activities/core/score-o#who-does-the-setup) on the Score-O page.
 
 
 ## Compact Delivery

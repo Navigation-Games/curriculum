@@ -11,6 +11,7 @@ space: Gym, schoolyard, or local park
 materials:
   - Animal-picture checkpoints
   - Clue sheets
+  - Cones to hold the animal pictures (optional)
 setup: Place animal-picture checkpoints around the defined space
 images:
   - src: /curriculum/img/activities/animal-o-pig.jpg

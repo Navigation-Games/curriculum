@@ -5,9 +5,9 @@ sidebar_position: 1
 
 # Introduction to Core Activities
 
-Each activity is a reusable component describing one thing you do. Activities own the what and the how. Lesson plans own the when, why, and sequencing.
+Each activity is one game you can run. The activity page tells you what it is and how to run it. Lesson plans tell you when, why, and in what order.
 
-Companion activities (readiness, variation, extension) live with their parent core activity.
+Related activities (readiness, variations, extensions) live with their parent core activity.
 
 | Activity | Level | Summary |
 |---|---|---|

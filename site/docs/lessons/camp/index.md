@@ -35,7 +35,7 @@ The curriculum treats being lost as something to prepare for, not something to p
 
 Leaders should make space for conversation about what it *feels like* to be confused about where you are. Name the emotion. Talk about what helps: stopping instead of running, looking around instead of staring at the map, asking for help instead of pretending you are fine. These are life skills disguised as orienteering skills.
 
-See also: [Growth Mindset](/about/concepts#growth-mindset) and [Being Lost](/about/concepts#being-lost) in the Concepts section for how these ideas show up across the full curriculum.
+See also: [Growth Mindset](/reference/frameworks/skill-concept-sequence#growth-mindset) and [Being Lost](/reference/frameworks/skill-concept-sequence#being-lost) in the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence) for how these ideas show up across the full curriculum.
 
 ## What the program builds
 

@@ -1,7 +1,6 @@
 # Score-O
 
 ---
-subtitle: Map Treasure Hunt
 tagline: Visit as many checkpoints as possible in any order
 epigraph: You get to choose where to go and in what order
 sidebar_position: 90
@@ -24,7 +23,7 @@ videos: []
 
 Students receive a map showing checkpoint locations. They visit as many as they can within a time limit, in any order they choose. At each checkpoint, they record the letter code on their scorecard. This is the first activity where students have full autonomy over route choice.
 
-Score-O is a bridge between structured courses (where checkpoints are visited in order) and real orienteering, where navigators plan their own routes through the terrain.
+Score-O is a bridge between structured courses (where checkpoints are visited in order) and real orienteering, where navigators plan their own routes through the terrain. At camps, this activity goes by the name Map Treasure Hunt.
 
 
 ## Goals
@@ -97,20 +96,14 @@ Score-O is a bridge between structured courses (where checkpoints are visited in
 
 Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
 
-### Setup ladder
+### Who does the setup?
 
-The teacher can choose how much of the setup students own. Starting earlier in the ladder deepens map understanding because students have to read the map and connect it to the terrain, and is strongly recommended. Even younger students benefit from choosing their own checkpoint locations.
+You can choose how much of the setup students do themselves. The more they do, the more map reading they practice, because each step forces them to connect the map to the terrain. Start as early in the list as your group can handle. Even younger students benefit from choosing their own checkpoint locations.
 
-1. **Students choose locations.** Working from a poster-sized map (with a plastic cover so circles can be erased), students choose where to place 10 checkpoints. This forces them to read the map and match it to terrain.
-2. **Students place markers.** In groups, students take the checkpoint markers out and place them at the locations on the map.
-3. **Students copy the map.** Students copy the checkpoint circles from the all-checkpoints map onto their own maps.
-
-The teacher can enter at any step:
-
-- Start at step 1 for full student ownership (recommended for experienced students or 6+)
-- Start at step 2 if the teacher prepares the all-checkpoints map with checkpoint locations in advance
-- Start at step 3 if the teacher also places the markers
-- Start at step 4 if the teacher prepares everything including printed maps
+1. **Students choose locations** (most student ownership, recommended for experienced students or 6+). Working from a poster-sized map (with a plastic cover so circles can be erased), students choose where to place 10 checkpoints, then do steps 2 and 3.
+2. **Students place markers.** The teacher marks checkpoint locations on the all-checkpoints map in advance. In groups, students take the markers out and place them at those locations, then do step 3.
+3. **Students copy the map.** The teacher places the markers. Students copy the checkpoint circles from the all-checkpoints map onto their own maps.
+4. **Teacher prepares everything**, including printed maps. Students just navigate.
 
 ### Difficulty
 
@@ -148,6 +141,14 @@ The teacher can enter at any step:
 ### Starting
 
 "You have [8/10/12] minutes. When you hear the whistle, come back to the start. Ready? Go!"
+
+### Finishing
+
+*(Whistle. Wait for everyone to return.)*
+
+"Bring me your scorecards. Let's see how many checkpoints you found. Remember, only checkpoints with the correct code count. Getting it right matters more than getting there fast."
+
+"Who went to a checkpoint that someone else skipped? Who changed their plan partway through? What would you do differently next time?"
 
 
 ## Delivery
@@ -202,3 +203,15 @@ Each checkpoint has a playing card attached. Students visit checkpoints and reco
 ### Poison-O *(extension)*
 
 **Wrong checkpoints cost points. Rewards careful map reading.** See the full [Poison-O](../poison-o) activity page.
+
+### Reverse Score-O *(variation)*
+
+**The map does not show the checkpoints. Find them on the ground and mark where they are on the map.**
+
+Students receive a blank map (features and landmarks shown, no checkpoint circles). They explore the area to find checkpoint markers, and at each one they mark its location on the map as precisely as possible, recording the checkpoint code next to the circle. Afterward, everyone compares their marked maps to the all-checkpoints map. This reverses the usual direction of navigation and deepens the connection between map and terrain.
+
+| | |
+|---|---|
+| **Time** | 15-20 minutes per round |
+| **Materials** | Blank orienteering maps (no circles), placed checkpoint markers, pencils, all-checkpoints map for verification |
+| **How to run it** | Demo one checkpoint together ("Where is this on the map? What feature is it near?"). Pairs find checkpoints and mark them. Gather and verify against the all-checkpoints map, then discuss which were hardest to place. |
