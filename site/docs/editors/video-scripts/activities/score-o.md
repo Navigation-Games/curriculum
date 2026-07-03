@@ -9,13 +9,13 @@ title: "Video Script: Score-O"
 
 ## Opening (visual: title card)
 
-Score-O is the first activity where students choose their own route. They get a map with checkpoint locations marked, and their job is to visit as many as they can within a time limit, in any order. It is the bridge between structured courses and real orienteering.
+Score-O is the first activity where students choose their own route. They get a map with checkpoint locations marked, and their job is to visit as many as they can within a time limit, in any order. It is the bridge between structured courses and real orienteering. At camps, this activity goes by the name Map Treasure Hunt.
 
 ## What You'll Need (visual: materials laid out)
 
 - Orienteering maps with checkpoint circles pre-printed (one per student or pair)
 - Checkpoint markers: cones or flags at each location, each with a visible letter code
-- A all-checkpoints map showing all checkpoint placements
+- An all-checkpoints map showing all checkpoint placements
 - Scorecards and pencils (one per student)
 - A whistle for the start and finish signal
 
@@ -44,10 +44,10 @@ Score-O is the first activity where students choose their own route. They get a 
 
 ## How to Run It (visual: demonstration with students)
 
-1. Gather students with their maps and scorecards. Orient the map together.
+1. Gather students with their maps and scorecards. Review the boundary of the course area, then orient the map together.
 [SHOW: group at start, teacher holding up the map and orienting it]
 
-2. Point out a few checkpoint circles on the map. Ask: "What feature is this checkpoint near?" Get students reading the map, not just looking at circles.
+2. Map warm-up: describe a checkpoint location out loud ("near the big tree by the fence") and have students orient their maps and point to the feature. Ask: "What feature is this checkpoint near?" Get students reading the map, not just looking at circles.
 [SHOW: teacher pointing to a circle on the map, student answering "the path junction"]
 
 3. Explain the rules: visit checkpoints in any order. At each one, find the letter code and write it on your scorecard next to the checkpoint number. Only checkpoints with the correct letter count.
@@ -59,7 +59,7 @@ Score-O is the first activity where students choose their own route. They get a 
 5. Set the time limit. Eight minutes for beginners. Announce it clearly.
 [SHOW: teacher announcing "You have 8 minutes. When you hear the whistle, come back to the start."]
 
-6. Start. Students go individually or in pairs.
+6. Mass start: everyone begins at the same time. Students go individually or in pairs.
 [SHOW: students running out from the start in different directions]
 
 7. At the time limit, blow the whistle. Students return to the start.

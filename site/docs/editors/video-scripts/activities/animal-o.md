@@ -67,27 +67,30 @@ Animal-O is the first real orienteering activity your students will do. They use
 - **5-animal clue sheet**: learn the format with a standard course. Good for first-timers.
 [SHOW: student with a 5-animal strip, visiting cones in order]
 
-- **10-animal clue sheet**: longer courses covering more of the space, for pairs who finish all six 5-animal courses.
-[SHOW: student with a longer strip, moving across a wider area]
-
 - **Repeat for speed**: same course, beat your previous time. This is where spatial memory kicks in.
 [SHOW: student running the same course confidently, faster]
 
 - **From memory**: put the clue sheet away and try to complete the course. Students who have done it twice can usually do this.
 [SHOW: student handing clue sheet to teacher, then running the course without it]
 
-- **Different sheet**: a new sequence so memorized routes do not help. Resets the challenge.
+- **Different sheet**: a new sequence so memorized routes do not help. Resets the challenge. There are six different 5-animal courses in the kit.
 [SHOW: student picking up a new clue sheet with different animals]
+
+- **10-animal clue sheet**: longer courses covering more of the space, for pairs who finish all six 5-animal courses.
+[SHOW: student with a longer strip, moving across a wider area]
 
 - **Solo**: if students started in pairs, try it individually.
 [SHOW: single student navigating independently]
+
+- **Animal Relay**: in small teams, students take turns running to a named animal checkpoint and back. A good closer once students know the checkpoint locations.
+[SHOW: teams lined up, a runner returning and tagging the next runner]
 
 ## Common Mistakes (visual: split screen correct vs incorrect)
 
 1. **Students running to the nearest cone without checking their clue sheet.** They need to find the right animal, not just the closest checkpoint. If this is happening, pause and remind them to check the picture at every cone.
 [SHOW: left side, student running to the nearest cone without looking at their sheet. Right side, student stopping at a cone and comparing the picture]
 
-2. **Skipping the "Explore and Find" step.** If students have never seen the checkpoints, jumping straight to clue sheets can be overwhelming. Walk the group to a few checkpoints first so they know what they are looking for.
+2. **Skipping Explore & Find.** If students have never seen the checkpoints, jumping straight to clue sheets can be overwhelming. Run the Explore & Find readiness activity first, or at least walk the group to a few checkpoints so they know what they are looking for.
 [SHOW: left side, confused students with clue sheets. Right side, teacher walking the group past a few cones first]
 
 3. **Never moving checkpoints.** If checkpoints stay in the same spots every class, students memorize locations instead of building navigation skills. Move them to new locations periodically to reset the challenge.
@@ -95,4 +98,4 @@ Animal-O is the first real orienteering activity your students will do. They use
 
 ## Wrap-up (visual: return to presenter)
 
-Animal-O is the activity students ask to repeat. The built-in differentiation, from 5-animal clue sheets to memory courses, means every student can work at their own level. Once they are succeeding with all six 5-animal courses, they are ready for Geometric-O and their first real maps.
+Animal-O is the activity students ask to repeat. The built-in differentiation, from 5-animal clue sheets to memory courses, means every student can work at their own level. Once they are succeeding with all six 5-animal courses, they are ready for Geometric-O and their first maps.

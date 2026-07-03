@@ -11,18 +11,19 @@ These are working documents for video production. They include visual direction 
 
 ## Activity Scripts
 
-- [Boundary Run](activities/boundary-run)
-- [Gathering](activities/gathering)
-- [Animal-O](activities/animal-o)
-- [Geometric-O](activities/geometric-o)
-- [Map Walk](activities/map-walk)
-- [Score-O](activities/score-o)
+- [Boundary Run](activities/boundary-run.md)
+- [Gathering](activities/gathering.md)
+- [Animal-O](activities/animal-o.md)
+- [Geometric-O](activities/geometric-o.md)
+- [Map Walk](activities/map-walk.md)
+- [Score-O](activities/score-o.md)
 
-## Lesson Scripts
+## Lesson Scripts (Grade 3-5)
 
-- [Lesson 1 - Boundary & Explore](lessons/boundary) (boundary and return scripts)
-- [Lesson 1 - Explore & Find](lessons/explore-and-find)
-- [Lesson 2 - Clue Sheets](lessons/clue-sheets)
-- [Lesson 3 - Map Readiness](lessons/map-readiness)
-- [Lesson 5/6 - Maps](lessons/maps) (Score-O and Point-to-Point)
-- [Lesson A - Indoor Orienteering](lessons/a-indoor-orienteering)
+- [Lesson 1 - Know Your Space](lessons/1-know-your-space.md)
+- [Lesson 2 - Match the Code](lessons/2-match-the-code.md)
+- [Lesson 3 - Map Readiness](lessons/3-map-readiness.md)
+- [Lesson 4 - Map Symbols](lessons/4-map-symbols.md)
+- [Lesson 5 - Visiting Checkpoints](lessons/5-visiting-checkpoints.md)
+- [Lesson 6 - Orienteering Course](lessons/6-orienteering-course.md)
+- [Lesson A - Indoor Orienteering](lessons/a-indoor-orienteering.md)

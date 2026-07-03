@@ -17,7 +17,7 @@ Geometric-O is where students use a real map for the first time. They orient a s
 - 4 colored cones for the corners: red, blue, green, yellow
 - Geometric-O maps: 5-checkpoint and 10-checkpoint versions
 - A whiteboard and markers
-- A all-checkpoints map showing the arrangement
+- An all-checkpoints map showing the arrangement
 
 [SHOW: close-up of numbered animal cones, colored corner cones, printed maps, and whiteboard with the pattern drawn on it]
 
