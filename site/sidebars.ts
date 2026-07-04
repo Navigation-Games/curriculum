@@ -105,7 +105,7 @@ aboutSidebar: [
     {type: 'doc', id: 'editors/index', label: 'For Editors'},
     {type: 'doc', id: 'editors/editing-guide', label: 'Editing Guide'},
     {type: 'doc', id: 'editors/roadmap', label: 'Roadmap'},
-    {type: 'doc', id: 'editors/content-table', label: 'Activities & Lessons Table'},
+    {type: 'doc', id: 'editors/content-table', label: 'Activities Table'},
     {
       type: 'category',
       label: 'Video Scripts',

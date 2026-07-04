@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Sheet of paper -->
+  <rect x="18" y="8" width="80" height="112" rx="4" fill="#ffffff" stroke="#b0bec5" stroke-width="2"/>
+  <!-- Map boundary, partly drawn: the line stops where the pencil tip is -->
+  <path d="M 66 90 H 34 Q 26 90 26 82 V 30 Q 26 22 34 22 H 82 Q 90 22 90 30 V 78"
+        fill="none" stroke="#455a64" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Tree landmark -->
+  <circle cx="44" cy="42" r="8" fill="#66bb6a"/>
+  <!-- Start triangle -->
+  <polygon points="64,50 72,64 56,64" fill="none" stroke="#d81b60" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Pencil, tip at the end of the boundary line -->
+  <g transform="rotate(45 66 90)">
+    <rect x="60" y="40" width="12" height="6" rx="2" fill="#ef9a9a"/>
+    <rect x="60" y="46" width="12" height="4" fill="#b0bec5"/>
+    <rect x="60" y="50" width="12" height="28" fill="#fbc02d"/>
+    <polygon points="60,78 72,78 66,90" fill="#e8b98a"/>
+    <polygon points="63.5,85 68.5,85 66,90" fill="#37474f"/>
+  </g>
+</svg>

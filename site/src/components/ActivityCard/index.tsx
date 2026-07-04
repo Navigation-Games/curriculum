@@ -63,9 +63,11 @@ export default function ActivityCard({
   const [showPopover, setShowPopover] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  const hasPopoverData = activities.some(
+  const data = activities.find(
     (a) => a.name.toLowerCase() === title.toLowerCase(),
   );
+  const hasPopoverData = data !== undefined;
+  const iconSrc = image || data?.icon;
 
   const handleClick = useCallback(
     (e: React.MouseEvent) => {
@@ -77,15 +79,15 @@ export default function ActivityCard({
   );
 
   const card = (
-    <div className={`${styles.card} ${image ? styles.cardWithImage : ''}`}>
+    <div className={`${styles.card} ${iconSrc ? styles.cardWithImage : ''}`}>
       <div className={styles.body}>
         {tag && <span className={`${styles.tag} ${styles[`tag-${tag}`]}`}>{tag}</span>}
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
       </div>
-      {image && (
+      {iconSrc && (
         <div className={styles.imageWrapper}>
-          <img src={image} alt={title} className={styles.image} />
+          <img src={iconSrc} alt={title} className={styles.image} />
         </div>
       )}
     </div>

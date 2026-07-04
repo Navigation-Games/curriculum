@@ -7,6 +7,7 @@ type SortDir = 'asc' | 'desc';
 
 const columns: {field: SortField; label: string}[] = [
   {field: 'name', label: 'Name'},
+  {field: 'icon', label: 'Icon'},
   {field: 'image', label: 'Image'},
   {field: 'tagline', label: 'Tagline'},
   {field: 'lessons', label: 'Lessons'},
@@ -68,6 +69,13 @@ export default function ActivitiesTable(): React.ReactElement {
                 <a href={act.link}>{act.name}</a>
               ) : (
                 <span>{act.name}</span>
+              )}
+            </td>
+            <td className={styles.imageCell}>
+              {act.icon ? (
+                <img src={act.icon} alt={`${act.name} icon`} className={styles.thumb} />
+              ) : (
+                <span className={styles.noImage}>--</span>
               )}
             </td>
             <td className={styles.imageCell}>

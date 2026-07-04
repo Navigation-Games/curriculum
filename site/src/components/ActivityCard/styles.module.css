@@ -36,11 +36,14 @@
 }
 
 .imageWrapper {
-  width: 64px;
-  height: 64px;
+  width: 96px;
+  height: 96px;
   flex-shrink: 0;
   margin: 0.5rem 0.75rem 0.5rem 0;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image {
