@@ -5,6 +5,9 @@
  *   go) and collapsed on content pages (where they're reading).
  * - Manual toggles are respected for the current page; navigating to a new
  *   page resets the sidebar to the path-based default.
+ * - For Editors pages (/editors/) show a sign-in gate unless the visitor is
+ *   signed in with a navigationgames.org Google account. Soft gate only: the
+ *   static content is still deployed; this just keeps it out of teachers' way.
  * The companion file DocRoot/Layout/Sidebar/index.js syncs its inner animation
  * state when hiddenSidebarContainer changes reactively.
  */
@@ -15,6 +18,8 @@ import {useDocsSidebar} from '@docusaurus/plugin-content-docs/client';
 import BackToTopButton from '@theme/BackToTopButton';
 import DocRootLayoutSidebar from '@theme/DocRoot/Layout/Sidebar';
 import DocRootLayoutMain from '@theme/DocRoot/Layout/Main';
+import EditorsGate from '@site/src/components/EditorsGate';
+import {useGoogleUser, isManager} from '@site/src/lib/googleAuth';
 import styles from './styles.module.css';
 
 // Hub/index pages where teachers are choosing where to go — sidebar starts open.
@@ -50,6 +55,12 @@ export default function DocRootLayout({children}) {
   if (!relPath.endsWith('/')) relPath += '/';
   const isIndexPage = INDEX_PATHS.has(relPath);
 
+  // For Editors soft gate. useGoogleUser is null on the first render (and
+  // during the static build), so gated pages render the sign-in prompt and
+  // hydrate cleanly; signed-in staff see the content one tick later.
+  const user = useGoogleUser();
+  const gated = relPath.startsWith('/editors/') && !isManager(user);
+
   // null = use path-based default; true/false = user manually toggled this page
   const [userOverride, setUserOverride] = useState(null);
 
@@ -83,7 +94,7 @@ export default function DocRootLayout({children}) {
           />
         )}
         <DocRootLayoutMain hiddenSidebarContainer={hiddenSidebarContainer}>
-          {children}
+          {gated ? <EditorsGate /> : children}
         </DocRootLayoutMain>
       </div>
     </div>

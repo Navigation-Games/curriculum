@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import GoogleSignInButton from '@site/src/components/GoogleSignInButton';
+import {useGoogleUser, signOut} from '@site/src/lib/googleAuth';
 import styles from './styles.module.css';
 
 interface Props {
@@ -21,10 +23,22 @@ export default function PageFeedback({page, title}: Props): React.ReactElement {
   const [comment, setComment] = useState('');
   const [submitter, setSubmitter] = useState('');
   const [error, setError] = useState<string | null>(null);
+  const [showSignIn, setShowSignIn] = useState(false);
+
+  // Signed-in submissions skip the rate limit and are tagged with the
+  // verified identity server-side, so the name field is hidden.
+  const user = useGoogleUser();
 
   const pickRating = (value: 'up' | 'down') => {
     setRating(prev => (prev === value ? null : value));
     setPhase('open');
+    setError(null);
+  };
+
+  const startOver = () => {
+    setPhase('open');
+    setRating(null);
+    setComment('');
     setError(null);
   };
 
@@ -36,7 +50,10 @@ export default function PageFeedback({page, title}: Props): React.ReactElement {
     try {
       const response = await fetch(`${apiUrl}/page-feedback`, {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+          'Content-Type': 'application/json',
+          ...(user ? {Authorization: `Bearer ${user.credential}`} : {}),
+        },
         body: JSON.stringify({
           page,
           title,
@@ -47,11 +64,14 @@ export default function PageFeedback({page, title}: Props): React.ReactElement {
       });
       if (!response.ok) {
         setPhase('open');
-        setError(
-          response.status === 429
-            ? 'Feedback limit reached for today.'
-            : 'Could not send feedback right now. Please try again later.',
-        );
+        if (response.status === 401) {
+          signOut();
+          setError('Your sign-in expired. Please sign in again or submit anonymously.');
+        } else if (response.status === 429) {
+          setError('Feedback limit reached for today.');
+        } else {
+          setError('Could not send feedback right now. Please try again later.');
+        }
         return;
       }
       setPhase('done');
@@ -64,7 +84,12 @@ export default function PageFeedback({page, title}: Props): React.ReactElement {
   if (phase === 'done') {
     return (
       <div className={styles.feedback}>
-        <p className={styles.thanks}>Thanks for your feedback!</p>
+        <p className={styles.thanks}>
+          Thanks for your feedback!{' '}
+          <button type="button" className={styles.commentLink} onClick={startOver}>
+            Send more feedback
+          </button>
+        </p>
       </div>
     );
   }
@@ -112,14 +137,38 @@ export default function PageFeedback({page, title}: Props): React.ReactElement {
             rows={3}
             disabled={phase === 'submitting'}
           />
-          <input
-            type="text"
-            className={styles.submitterInput}
-            value={submitter}
-            onChange={e => setSubmitter(e.target.value)}
-            placeholder="Your name or email (optional)"
-            disabled={phase === 'submitting'}
-          />
+          {user ? (
+            <p className={styles.signedInNote}>
+              Submitting as {user.name || user.email}{' '}
+              <button type="button" className={styles.commentLink} onClick={signOut}>
+                Sign out
+              </button>
+            </p>
+          ) : (
+            <>
+              <input
+                type="text"
+                className={styles.submitterInput}
+                value={submitter}
+                onChange={e => setSubmitter(e.target.value)}
+                placeholder="Your name or email (optional)"
+                disabled={phase === 'submitting'}
+              />
+              {showSignIn ? (
+                <div className={styles.signInButton}>
+                  <GoogleSignInButton size="small" />
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  className={styles.commentLink}
+                  onClick={() => setShowSignIn(true)}
+                >
+                  Give feedback often? Sign in with Google
+                </button>
+              )}
+            </>
+          )}
           {error && <p className={styles.error}>{error}</p>}
           <button
             type="button"

@@ -64,10 +64,8 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub is done. July 2
 
 ### From the June 2026 feedback round (see notes/2026-spring-summer-feedback-plan.md)
 
-- **Print/one-pager fixes.** The print view only captures the active tab's content ("How to run it"), and the one-pager prints at about 1.5 pages. Theme/CSS work.
-- **Activity card and popover polish.** Show duration on activity cards; make popover behavior consistent everywhere; add a visual cue that a link opens a popover; consider a larger popover. Add images to MaterialLink and VocabLink popovers.
-- **Feedback widget.** Allow a new submission immediately after submitting; disclose visibly that advisor conversations are logged.
-- **Bottom prev/next navigation.** From a grade index, "next" should go into Lesson 1, not the top of the same page.
+- **Print/one-pager fixes.** Done at CSS level July 2026 (print expands all tabs with print-only section headings; one-pager print styles tightened). Needs a real print test by Barb to confirm the one-pager now fits a page; further tightening if not.
+- **Activity card and popover polish.** Show duration on activity cards; make popover behavior consistent everywhere; add a visual cue that a link opens a popover; consider a larger popover. Add images to MaterialLink and VocabLink popovers. (Large activity icons on cards done July 2026.)
 - **K-2 vs 3-5 clue-sheet lesson differentiation.** Make the two lessons visibly different (K-2 slows Animal-O down; 3-5 moves to checking and partner roles faster).
 - **Advisor frontend starter tips.** Show example prompts above the chat input ("Tell me your grade level, space, and how many sessions...").
 - **Deferred by Barb, revisit later:** sidebar-collapse discoverability, Level 1/2/3 framing for the curriculum, camp "session" vs "lesson" naming.
@@ -93,9 +91,7 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub is done. July 2
 - **Conversation review.** Live. Staff review advisor conversations and leave feedback at `/review-conversations/` (linked from For Editors). Periodically: review the accumulated feedback with Claude and update the advisor system prompt. Setup details in "Conversation review setup" in `ai-advisor/README.md`.
 - **Page feedback.** Live. Every docs page has a "Was this page helpful?" widget (thumbs + optional comment) below the footer. Results go to the PageFeedback tab of the advisor log sheet. Future: curate the best comments into "From teachers" sections (see the advisor plan notes).
 
-- **Advisor interaction limits and sign-in.** Current limit: 20 chat messages per day per IP (in-memory, resets on deploy). Future: allow a base number of anonymous interactions, with a higher limit for signed-in users. MapMap (sister application, `../mapmap/` and on GitHub) has registration/login that could be reused as the model.
-
-- **Unlimited page feedback for signed-in staff.** The "Was this page helpful?" widget rate-limits per IP. Staff should be exempt: reuse the Google Identity Services sign-in from the conversation review tool, send the ID token with `/page-feedback` submissions, and have the backend skip the rate limit when the token verifies as @navigationgames.org (check the `hd` claim, as `/review/*` does). Frontend needs a small "staff sign-in" affordance on the widget.
+- **Site sign-in.** Done July 2026 (see CLAUDE.md "Site sign-in"): any Google account = viewer (100 advisor messages/day, unlimited verified feedback); navigationgames.org = manager (no advisor limit, For Editors visible). Remaining: verify the OAuth consent screen is External and published (required for non-staff sign-in), and redeploy the advisor backend.
 
 - **Mine the Cambridge Grade 3 V6 lesson plans** (`background/cambridge-grade-3-lesson-plans-v6.md`, 2019). Do NOT use its SHAPE standards (outdated) or substitute its lesson content for current material. Worth mining from "About these lessons": the Observation and Mindfulness essay and "Maps tell you how to find things" (start with non-map ways of communicating location) could join the Progression concept notes or About > Concepts. Its isometric map introduction (Where's Waldo-style pictorial maps as a bridge before real maps) is not in the current curriculum and could become a readiness note on Geometric-O or Map Walk. Roles content is already captured in Progression concept #26.
 
@@ -161,3 +157,9 @@ Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O
 - Readiness activity cards now precede core cards in lessons (warm-up, readiness, core, variation, extension)
 - Advisor chat markdown rendering fixed for nested bold/links and `*` bullets
 - Lessons hub page (`site/docs/lessons/index.md`): explains school vs camp distinction, what's the same and different, cards to each program. Navbar "Lesson Plans" now lands here; hub is root breadcrumb on all lesson pages.
+- Site sign-in (July 2026): Google sign-in for viewer/manager tiers; advisor limits per verified email, unlimited verified page feedback, For Editors soft gate with hidden navbar link
+- Feedback widget fixes (July 2026): new submission allowed right after submitting; advisor intro discloses that conversations are recorded and reviewed
+- Bottom prev/next navigation fixed (July 2026): grade and camp index pages set pagination_next to Lesson 1 instead of pointing at themselves
+- Activity icons (July 2026): large icons on activity cards and in the Activities Table, looked up from activitiesData by title
+- Print improvements (July 2026): all tabs print with print-only section headings; one-pager print styles tightened
+- Advisor site map descriptions: multi-line JSX tags no longer leak attribute text (Resources page had "allowFullScreen" as its description); Resources got a real intro paragraph

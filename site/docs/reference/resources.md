@@ -8,6 +8,8 @@ import CardGrid from '@site/src/components/CardGrid';
 
 # Resources
 
+Videos, organizations, and links for going deeper into orienteering: what the sport looks like, where to find clubs and events, and how students can get involved beyond school or camp.
+
 ## About Orienteering
 
 <CardGrid columns={2}>

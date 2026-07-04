@@ -19,6 +19,8 @@ const config: Config = {
   customFields: {
     advisorApiUrl: process.env.ADVISOR_API_URL || 'https://lesson-advisor-523012695945.us-central1.run.app',
     // OAuth client IDs are public by design; this is not a secret.
+    // Used for all Google sign-in on the site: advisor limits, page
+    // feedback, the For Editors gate, and the conversation review tool.
     reviewOauthClientId: process.env.REVIEW_OAUTH_CLIENT_ID || '523012695945-579cbdpvgl26689lnot37o9eu1imdjnu.apps.googleusercontent.com',
   },
 
@@ -29,6 +31,7 @@ const config: Config = {
 
   clientModules: [
     './src/clientModules/pageTypeClass.js',
+    './src/clientModules/managerClass.js',
   ],
 
   presets: [
@@ -103,6 +106,8 @@ const config: Config = {
           sidebarId: 'editorsSidebar',
           position: 'left',
           label: 'For Editors',
+          // Hidden unless signed in as staff; see clientModules/managerClass.js
+          className: 'navbar-editors-link',
         },
         {
           href: 'https://github.com/Navigation-Games/curriculum',

@@ -43,16 +43,28 @@ site/src/components/ReviewConversations/styles.module.css - Review styles
 | Endpoint | Method | Auth | Purpose |
 |---|---|---|---|
 | `/health` | GET | none | Cloud Run health check |
-| `/chat` | POST | none (rate limited) | Advisor chat |
-| `/review/conversations` | GET | Google ID token | List conversations (`?all=true` to include reviewed/dismissed) |
-| `/review/conversations/<id>` | GET | Google ID token | Full thread plus all reviewers' feedback |
-| `/review/conversations/<id>/feedback` | POST | Google ID token | Add a feedback comment (`{"feedback": "..."}`) |
-| `/review/conversations/<id>/dismiss` | POST | Google ID token | Hide a conversation from the reviewer's default list |
-| `/page-feedback` | POST | none (rate limited) | "Was this page helpful?" feedback from docs pages (`{"page", "title", "rating", "comment", "submitter"}`) |
+| `/chat` | POST | optional Google ID token (rate limited) | Advisor chat |
+| `/review/conversations` | GET | Google ID token (staff) | List conversations (`?all=true` to include reviewed/dismissed) |
+| `/review/conversations/<id>` | GET | Google ID token (staff) | Full thread plus all reviewers' feedback |
+| `/review/conversations/<id>/feedback` | POST | Google ID token (staff) | Add a feedback comment (`{"feedback": "..."}`) |
+| `/review/conversations/<id>/dismiss` | POST | Google ID token (staff) | Hide a conversation from the reviewer's default list |
+| `/page-feedback` | POST | optional Google ID token (rate limited when anonymous) | "Was this page helpful?" feedback from docs pages (`{"page", "title", "rating", "comment", "submitter"}`) |
 
 The `/review/*` endpoints are for Navigation Games staff. They require a Google ID token from a `navigationgames.org` account, sent as `Authorization: Bearer <token>`. The backend verifies the token signature, audience (our OAuth client ID), the `hd` claim, and `email_verified`. Feedback is stored in a **Feedback** tab of the logging spreadsheet, which the backend creates automatically if missing (columns: timestamp, conversation_id, reviewer_email, status, feedback).
 
-`/page-feedback` powers the "Was this page helpful?" widget at the bottom of every docs page. It needs no auth (10 submissions/day per IP) and writes to a **PageFeedback** tab, also auto-created (columns: timestamp, page, title, rating, comment, submitter). Rows are unverified public input; treat the tab accordingly.
+### Optional sign-in on public endpoints
+
+`/chat` and `/page-feedback` accept an optional Google ID token (same header, same OAuth client, any Google account). Tiers:
+
+- **Anonymous**: 20 chat messages/day per IP; 10 feedback submissions/day per IP.
+- **Signed in (any Google account)**: 100 chat messages/day keyed to the verified email; no feedback limit; feedback and conversation logs carry the verified identity (`Name <email> (verified)` in the feedback sheet; verified email overrides the self-reported one in the conversation log).
+- **Staff (`navigationgames.org` via the `hd` claim)**: no chat limit.
+
+A present-but-invalid/expired token returns 401 (the frontend then prompts to sign in again) rather than silently falling back to anonymous limits. If `REVIEW_OAUTH_CLIENT_ID` is unset, tokens are ignored and everyone is anonymous.
+
+**Consent screen requirement:** public viewer sign-in only works if the OAuth consent screen is **External** and published. If it is currently Internal (staff-only), outside Google accounts cannot sign in; staff sign-in keeps working either way.
+
+`/page-feedback` powers the "Was this page helpful?" widget at the bottom of every docs page. Anonymous rows are unverified public input; treat the tab accordingly. Rows marked `(verified)` carry a backend-verified identity.
 
 ## Local development
 
@@ -90,17 +102,19 @@ The frontend defaults to http://localhost:8080 for the backend API during local 
 
 ### Run the tests
 
-The `/review/*` endpoints have a test suite that fakes Google Sheets and token
-verification, so it needs no credentials or network access:
+The test suites fake Google Sheets, the Anthropic API, and token
+verification, so they need no credentials or network access:
 
 ```bash
 cd ai-advisor
 pip install pytest
-python -m pytest test_review.py -q
+python -m pytest -q
 ```
 
-Run it after any change to `app.py`. The chat endpoint and real OAuth/Sheets
-integration are not covered; those are checked manually after deployment.
+This covers `/review/*` (test_review.py), `/page-feedback`
+(test_page_feedback.py), and the optional sign-in behavior on `/chat` and
+`/page-feedback` (test_signed_in.py). Run it after any change to `app.py`.
+Real OAuth/Sheets/Anthropic integration is checked manually after deployment.
 
 ## Google Cloud deployment
 

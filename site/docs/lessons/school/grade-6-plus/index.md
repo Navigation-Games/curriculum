@@ -1,6 +1,9 @@
 ---
 title: "Introduction: 6+"
 sidebar_position: 0
+# Without this, "Next" resolves to this same page (the index is both the
+# category link and the first sidebar item)
+pagination_next: lessons/school/grade-6-plus/lesson-1
 ---
 
 import ActivityLink from '@site/src/components/ActivityLink';

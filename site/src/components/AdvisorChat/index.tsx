@@ -1,5 +1,7 @@
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import GoogleSignInButton from '@site/src/components/GoogleSignInButton';
+import {useGoogleUser, signOut} from '@site/src/lib/googleAuth';
 import formatMessage from './formatMessage';
 import styles from './styles.module.css';
 
@@ -78,6 +80,19 @@ export default function AdvisorChat(): React.ReactElement {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
+  // Optional Google sign-in: raises the daily message limit. The token is
+  // verified server-side; here it just fills the intro form and the header.
+  const googleUser = useGoogleUser();
+  useEffect(() => {
+    if (googleUser) {
+      setUserInfo(prev => ({
+        ...prev,
+        name: prev.name || googleUser.name,
+        email: prev.email || googleUser.email,
+      }));
+    }
+  }, [googleUser]);
+
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({behavior: 'smooth'});
@@ -117,7 +132,10 @@ export default function AdvisorChat(): React.ReactElement {
     try {
       const response = await fetch(`${apiUrl}/chat`, {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+          'Content-Type': 'application/json',
+          ...(googleUser ? {Authorization: `Bearer ${googleUser.credential}`} : {}),
+        },
         body: JSON.stringify({
           conversation_id: conversationId,
           messages: updatedMessages,
@@ -125,6 +143,21 @@ export default function AdvisorChat(): React.ReactElement {
         }),
       });
 
+      if (response.status === 401) {
+        // Google sign-in expired; drop it so the header offers sign-in again
+        signOut();
+        setError('Your sign-in expired. Sign in again above, then resend your message.');
+        setMessages(messages); // put the unsent message back in the box
+        setInput(text);
+        return;
+      }
+      if (response.status === 429) {
+        const data = await response.json().catch(() => ({}));
+        setError(data.error || 'Daily message limit reached.');
+        setMessages(messages);
+        setInput(text);
+        return;
+      }
       if (!response.ok) {
         const data = await response.json().catch(() => ({}));
         throw new Error(data.error || 'Something went wrong. Please try again.');
@@ -143,7 +176,7 @@ export default function AdvisorChat(): React.ReactElement {
       setIsLoading(false);
       inputRef.current?.focus();
     }
-  }, [input, isLoading, messages, conversationId, userInfo]);
+  }, [input, isLoading, messages, conversationId, userInfo, googleUser]);
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
@@ -183,6 +216,14 @@ export default function AdvisorChat(): React.ReactElement {
             Your name helps us follow up on your questions. Email and
             organization are optional but help us improve our curriculum.
           </p>
+          {!googleUser && (
+            <div className={styles.introSignIn}>
+              <GoogleSignInButton size="medium" />
+              <span className={styles.introSignInHint}>
+                Optional: sign in for a higher daily message limit
+              </span>
+            </div>
+          )}
           <form onSubmit={handleStartChat} className={styles.introForm}>
             <label className={styles.introLabel}>
               Name
@@ -218,6 +259,10 @@ export default function AdvisorChat(): React.ReactElement {
               Start chatting
             </button>
           </form>
+          <p className={styles.introDisclosure}>
+            Conversations are recorded and reviewed by Navigation Games staff
+            to improve the curriculum.
+          </p>
         </div>
       </div>
     );
@@ -228,8 +273,15 @@ export default function AdvisorChat(): React.ReactElement {
   return (
     <div className={styles.chat}>
       <div className={styles.chatHeader}>
-        {userInfo.name && (
-          <span className={styles.userName}>{userInfo.name}</span>
+        {googleUser ? (
+          <span className={styles.userName}>
+            {googleUser.name || googleUser.email}{' '}
+            <button className={styles.signOutButton} onClick={signOut}>
+              Sign out
+            </button>
+          </span>
+        ) : (
+          userInfo.name && <span className={styles.userName}>{userInfo.name}</span>
         )}
         <button
           className={styles.newChatButton}
@@ -276,7 +328,7 @@ export default function AdvisorChat(): React.ReactElement {
           </div>
         )}
 
-        {error && (
+        {error === 'fallback' && (
           <div className={styles.error}>
             <p>
               The lesson plan advisor isn't available right now. For help planning
@@ -284,6 +336,16 @@ export default function AdvisorChat(): React.ReactElement {
               at{' '}
               <a href="mailto:admin@navigationgames.org">admin@navigationgames.org</a>.
             </p>
+          </div>
+        )}
+        {error && error !== 'fallback' && (
+          <div className={styles.error}>
+            <p>{error}</p>
+            {!googleUser && (
+              <div className={styles.errorSignIn}>
+                <GoogleSignInButton size="medium" />
+              </div>
+            )}
           </div>
         )}
 

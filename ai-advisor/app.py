@@ -162,7 +162,8 @@ def get_sheets_client():
 # Rate limiting: simple in-memory stores (reset on deploy)
 # For production, use Redis or similar
 rate_limit_store: dict[str, list[float]] = {}
-RATE_LIMIT_MAX = 20  # conversations per day per IP
+RATE_LIMIT_MAX = 20  # chat messages per day per IP (anonymous)
+SIGNED_IN_RATE_LIMIT_MAX = 100  # chat messages per day per signed-in Google account
 RATE_LIMIT_WINDOW = 86400  # 24 hours in seconds
 
 # Separate bucket for page feedback so it never eats chat quota
@@ -191,6 +192,59 @@ def check_rate_limit(ip: str) -> bool:
     return _check_rate_limit(rate_limit_store, ip, RATE_LIMIT_MAX)
 
 
+# ---------------------------------------------------------------------------
+# Optional sign-in for public endpoints
+#
+# Visitors can sign in with any Google account on the site (the same OAuth
+# client the review tool uses). Signing in raises the chat limit, lifts the
+# page-feedback limit, and tags submissions with a verified identity.
+# Accounts on the Navigation Games Workspace domain count as staff.
+# ---------------------------------------------------------------------------
+
+
+class InvalidTokenError(Exception):
+    """An Authorization header was present but the token failed verification."""
+
+
+def get_optional_user():
+    """
+    Read an optional Google ID token from the Authorization header.
+
+    Returns {"email", "name", "is_staff"} for a valid token, or None when no
+    token was sent (anonymous request). Raises InvalidTokenError when a token
+    was sent but is invalid or expired, so endpoints can return 401 and the
+    frontend can prompt the visitor to sign in again instead of silently
+    falling back to anonymous limits.
+    """
+    auth = request.headers.get("Authorization", "")
+    if not auth.startswith("Bearer "):
+        return None
+    if not REVIEW_OAUTH_CLIENT_ID:
+        # Sign-in not configured on this server; treat everyone as anonymous
+        return None
+
+    try:
+        # Verifies signature, expiry, issuer, and audience (our client ID).
+        claims = google_id_token.verify_oauth2_token(
+            auth[len("Bearer "):],
+            _google_token_request,
+            REVIEW_OAUTH_CLIENT_ID,
+            clock_skew_in_seconds=10,
+        )
+    except ValueError:
+        raise InvalidTokenError()
+
+    if not claims.get("email_verified"):
+        raise InvalidTokenError()
+
+    return {
+        "email": claims.get("email", ""),
+        "name": claims.get("name", ""),
+        # hd is the only spoof-proof Workspace-domain signal (see require_reviewer)
+        "is_staff": claims.get("hd") == REVIEW_ALLOWED_DOMAIN,
+    }
+
+
 @app.route("/health", methods=["GET"])
 def health():
     """Health check endpoint for Cloud Run."""
@@ -217,11 +271,25 @@ def chat():
         "conversation_id": "uuid",
         "response": "Here's what I recommend..."
     }
+
+    An optional Google ID token in the Authorization header raises the daily
+    limit (per verified email instead of per IP); staff accounts have no limit.
     """
+    try:
+        user = get_optional_user()
+    except InvalidTokenError:
+        return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
+
     # Rate limiting
-    client_ip = request.headers.get("X-Forwarded-For", request.remote_addr)
-    if not check_rate_limit(client_ip):
-        return jsonify({"error": "Rate limit exceeded. Try again tomorrow."}), 429
+    if user is None:
+        client_ip = request.headers.get("X-Forwarded-For", request.remote_addr)
+        if not check_rate_limit(client_ip):
+            return jsonify({
+                "error": "Daily message limit reached. Sign in with Google for a higher limit, or come back tomorrow."
+            }), 429
+    elif not user["is_staff"]:
+        if not _check_rate_limit(rate_limit_store, "email:" + user["email"], SIGNED_IN_RATE_LIMIT_MAX):
+            return jsonify({"error": "Daily message limit reached. Come back tomorrow."}), 429
 
     # Parse request
     data = request.get_json()
@@ -231,6 +299,13 @@ def chat():
     messages = data["messages"]
     conversation_id = data.get("conversation_id", str(uuid.uuid4()))
     user_info = data.get("user_info", {})
+
+    # A verified identity beats the self-reported one in the log
+    if user:
+        user_info = dict(user_info or {})
+        user_info["email"] = user["email"]
+        if not user_info.get("name"):
+            user_info["name"] = user["name"]
 
     # Validate messages format
     if not isinstance(messages, list) or len(messages) == 0:
@@ -623,9 +698,10 @@ def review_dismiss_conversation(conversation_id):
 # ---------------------------------------------------------------------------
 # Page feedback ("Was this page helpful?" on every docs page)
 #
-# No auth: anyone can submit, anonymously or with an optional free-text
-# name/email. Rows are unverified public input; treat the sheet tab
-# accordingly. RAW value input prevents formula injection.
+# Auth optional: anonymous submissions are rate limited and their free-text
+# name/email is unverified public input. Signed-in submissions skip the rate
+# limit and are tagged with the verified Google identity instead.
+# RAW value input prevents formula injection.
 # ---------------------------------------------------------------------------
 
 
@@ -643,9 +719,15 @@ def page_feedback():
         "submitter": "optional name or email"
     }
     """
-    client_ip = request.headers.get("X-Forwarded-For", request.remote_addr)
-    if not _check_rate_limit(page_feedback_rate_store, client_ip, PAGE_FEEDBACK_RATE_MAX):
-        return jsonify({"error": "Feedback limit reached for today."}), 429
+    try:
+        user = get_optional_user()
+    except InvalidTokenError:
+        return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
+
+    if user is None:
+        client_ip = request.headers.get("X-Forwarded-For", request.remote_addr)
+        if not _check_rate_limit(page_feedback_rate_store, client_ip, PAGE_FEEDBACK_RATE_MAX):
+            return jsonify({"error": "Feedback limit reached for today."}), 429
 
     data = request.get_json(silent=True) or {}
     page = (data.get("page") or "").strip()
@@ -665,6 +747,10 @@ def page_feedback():
     if len(submitter) > PAGE_FEEDBACK_SUBMITTER_MAX_CHARS:
         return jsonify({"error": f"Name must be under {PAGE_FEEDBACK_SUBMITTER_MAX_CHARS} characters."}), 400
     title = title[:PAGE_FEEDBACK_PAGE_MAX_CHARS]
+
+    # Signed-in submissions carry a verified identity, replacing free text
+    if user:
+        submitter = f"{user['name']} <{user['email']}> (verified)".strip()
 
     spreadsheet = _open_spreadsheet()
     if not spreadsheet:

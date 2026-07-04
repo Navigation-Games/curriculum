@@ -1,6 +1,9 @@
 ---
 title: Camp Intro
 sidebar_position: 0
+# Without this, "Next" resolves to this same page (the index is both the
+# category link and the first sidebar item)
+pagination_next: lessons/camp/intro/lesson-1
 ---
 
 # Camp Intro Curriculum

@@ -131,6 +131,12 @@
   padding: 0.5rem;
 }
 
+.errorSignIn {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
 /* Input area */
 .inputArea {
   display: flex;
@@ -212,6 +218,26 @@
   margin-bottom: 1rem;
 }
 
+.introSignIn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.introSignInHint {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+  max-width: 180px;
+}
+
+.introDisclosure {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-500);
+  margin: 0.75rem 0 0;
+  text-align: center;
+}
+
 .introForm {
   display: flex;
   flex-direction: column;
@@ -282,6 +308,17 @@
 .userName {
   color: var(--ifm-color-emphasis-600);
   margin-right: auto;
+}
+
+.signOutButton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 0.35rem;
+  color: var(--ifm-color-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .newChatButton {

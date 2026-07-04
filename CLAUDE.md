@@ -155,7 +155,7 @@ An embedded AI chat at `/plan-my-lessons/` that helps teachers and anyone else p
 - **Backend:** Python/Flask on Google Cloud Run (`ai-advisor/`). Wraps the Claude API with curriculum knowledge baked into the system prompt.
 - **Site map in prompt:** `scripts/build-content.js` generates `ai-advisor/site-map.md` (every public page with title, URL, and one-line description; excludes `editors/`). `app.py` appends it to the system prompt at startup so the advisor routes people to real URLs instead of guessing. Lesson descriptions come from the content files' taglines. The file is committed (not gitignored) and regenerates on every content build.
 - **Frontend:** React chat component (`site/src/components/AdvisorChat/`) on the Docusaurus site.
-- **Rate limit:** 20 chat messages per day per IP, in-memory (resets on deploy). Future: sign-in for higher limits (MapMap has the auth model to borrow).
+- **Rate limit:** in-memory (resets on deploy). Anonymous: 20 chat messages/day per IP. Signed in with any Google account: 100/day per verified email. Staff (navigationgames.org): unlimited. See "Site sign-in" below.
 - **Logging:** Every conversation is logged to a Google Sheet for curriculum improvement.
 - **Cloud Run service URL:** `https://lesson-advisor-523012695945.us-central1.run.app`
 - **Google Cloud project:** `navigation-games-curriculum`
@@ -172,7 +172,23 @@ Built June 2026. NG staff review advisor conversations and leave feedback at `/r
 
 ### Page feedback widget
 
-Every docs page has a "Was this page helpful?" thumbs up/down + optional comment widget below the footer, rendered by the swizzled `site/src/theme/DocItem/Footer/index.tsx` wrapping the default footer and `site/src/components/PageFeedback/`. Submissions POST to `/page-feedback` on the advisor backend (no auth, rate limited, tests in `ai-advisor/test_page_feedback.py`) and land in the auto-created "PageFeedback" tab of the conversation log sheet. Identity is an optional free-text field; rows are unverified public input.
+Every docs page has a "Was this page helpful?" thumbs up/down + optional comment widget below the footer, rendered by the swizzled `site/src/theme/DocItem/Footer/index.tsx` wrapping the default footer and `site/src/components/PageFeedback/`. Submissions POST to `/page-feedback` on the advisor backend (auth optional; rate limited when anonymous; tests in `ai-advisor/test_page_feedback.py` and `test_signed_in.py`) and land in the auto-created "PageFeedback" tab of the conversation log sheet. Anonymous rows have an optional free-text identity (unverified public input); signed-in rows skip the rate limit and carry `Name <email> (verified)`.
+
+### Site sign-in (viewer/manager roles, July 2026)
+
+Optional Google sign-in site-wide, reusing the review-conversations OAuth client (`reviewOauthClientId` in `docusaurus.config.ts`, `REVIEW_OAUTH_CLIENT_ID` on Cloud Run). Tiers:
+
+- **Anonymous**: everything except For Editors; 20 advisor messages/day per IP; 10 feedback submissions/day per IP.
+- **Viewer** = any signed-in Google account: 100 advisor messages/day per verified email; unlimited page feedback, auto-tagged with the verified identity. No registration step or user store.
+- **Manager** = signed in with a navigationgames.org account (`hd` claim): viewer perks, no advisor limit, and the For Editors section (navbar link + pages).
+
+Pieces:
+- `site/src/lib/googleAuth.ts` — shared auth store (token in localStorage until expiry, about an hour; `useGoogleUser()` hook; `renderSignInButton`). `site/src/components/GoogleSignInButton/` renders the button.
+- Sign-in surfaces: advisor intro screen and chat header, page feedback form ("Give feedback often?" link), and the For Editors gate.
+- **For Editors soft gate**: the swizzled `site/src/theme/DocRoot/Layout/index.js` swaps `/editors/` page content for `site/src/components/EditorsGate/` unless manager; `site/src/clientModules/managerClass.js` toggles an `ng-manager` class on `<html>` that unhides the navbar link (CSS rule in `custom.css`). Client-side only: the static content is still deployed and indexed by local search. Never publish anything genuinely sensitive under `/editors/`.
+- Backend: `get_optional_user()` in `ai-advisor/app.py`. A present-but-invalid token returns 401 so the frontend re-prompts sign-in; with no client ID configured everyone is anonymous. Tests: `ai-advisor/test_signed_in.py`.
+- **Consent screen**: public viewer sign-in requires the OAuth consent screen (Google Cloud project `navigation-games-curriculum`) to be External and published. If it is Internal, only staff accounts can sign in anywhere.
+- Backend changes require a Cloud Run redeploy; frontend changes deploy on `git push` as usual.
 
 ### Key lessons from testing
 

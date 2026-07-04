@@ -235,9 +235,15 @@ function siteMapDescription(relPath, raw) {
     // First plain paragraph: skip frontmatter, imports, JSX, headings, tables
     const body = raw.replace(/^---\n[\s\S]*?\n---/, '');
     let blockquote = '';
+    let inJsxTag = false; // inside a multi-line JSX tag like <iframe ...\n  attr\n/>
     for (const line of body.split('\n')) {
       const t = line.trim();
       if (!t) continue;
+      if (inJsxTag) {
+        if (t.includes('>')) inJsxTag = false;
+        continue;
+      }
+      if (/^</.test(t) && !t.includes('>')) { inJsxTag = true; continue; }
       if (/^(import |export |#|<|\{|\||:::|---|\[|\/>)/.test(t)) continue;
       if (/^[A-Za-z][\w-]*=["{]/.test(t)) continue; // JSX attribute line
       if (/^\d+\. /.test(t)) continue;              // numbered step
@@ -723,11 +729,18 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   L.push('<Description>{description}</Description>');
   L.push('');
 
-  // Tabs
+  // Tabs. Each tab opens with a print-only heading: print CSS expands all
+  // panels and hides the tab bar, so without these the printed sections
+  // have no labels.
+  const pushTabOpen = (value, label, isDefault = false) => {
+    L.push(`<TabItem value="${value}" label="${label}"${isDefault ? ' default' : ''}>`);
+    L.push('');
+    L.push(`<h2 className="print-only">${label}</h2>`);
+    L.push('');
+  };
   L.push('<Tabs>');
 
-  L.push('<TabItem value="goals" label="Learning Goals">');
-  L.push('');
+  pushTabOpen('goals', 'Learning Goals');
   L.push('Students completing this activity will be able to:');
   L.push('');
   for (const g of goals.items) L.push(`- ${g.long}`);
@@ -735,8 +748,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   L.push('');
   L.push('</TabItem>');
 
-  L.push('<TabItem value="run" label="How to Run It" default>');
-  L.push('');
+  pushTabOpen('run', 'How to Run It', true);
   if (sections.setup) { L.push('### Setup'); L.push(''); L.push(sections.setup); L.push(''); }
   if (steps.length > 0) {
     L.push('### Steps'); L.push('');
@@ -754,15 +766,13 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   L.push('</TabItem>');
 
   if (sections.script) {
-    L.push('<TabItem value="script" label="Script">');
-    L.push('');
+    pushTabOpen('script', 'Script');
     L.push(sections.script);
     L.push('');
     L.push('</TabItem>');
   }
 
-  L.push('<TabItem value="vocabulary" label="Vocabulary">');
-  L.push('');
+  pushTabOpen('vocabulary', 'Vocabulary');
   L.push('{frontMatter.vocabulary.map(v => (');
   L.push('  <p key={v.term}><VocabLink term={v.term}><strong>{v.term}</strong></VocabLink>: {v.definition}</p>');
   L.push('))}');
@@ -772,16 +782,14 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   L.push('</TabItem>');
 
   if (sections.context) {
-    L.push('<TabItem value="context" label="Context">');
-    L.push('');
+    pushTabOpen('context', 'Context');
     L.push(sections.context);
     L.push('');
     L.push('</TabItem>');
   }
 
   if (sections.companions) {
-    L.push('<TabItem value="companions" label="Related Activities">');
-    L.push('');
+    pushTabOpen('companions', 'Related Activities');
     L.push(sections.companions);
     L.push('');
     L.push('</TabItem>');
