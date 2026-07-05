@@ -31,7 +31,6 @@ const config: Config = {
 
   clientModules: [
     './src/clientModules/pageTypeClass.js',
-    './src/clientModules/managerClass.js',
   ],
 
   presets: [
@@ -106,7 +105,6 @@ const config: Config = {
           sidebarId: 'editorsSidebar',
           position: 'left',
           label: 'For Editors',
-          // Hidden unless signed in as staff; see clientModules/managerClass.js
           className: 'navbar-editors-link',
         },
         {

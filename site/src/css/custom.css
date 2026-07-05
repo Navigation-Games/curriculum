@@ -17,14 +17,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* "For Editors" navbar link: hidden unless signed in with a
-   navigationgames.org account (clientModules/managerClass.js sets the
-   ng-manager class). Soft gate; the pages themselves show a sign-in
-   prompt via the DocRoot layout. */
-html:not(.ng-manager) .navbar-editors-link {
-  display: none;
-}
-
 /* Dark mode is not supported — override all dark variables to light values */
 [data-theme='dark'] {
   color-scheme: light;
