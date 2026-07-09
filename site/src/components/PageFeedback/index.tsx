@@ -83,7 +83,7 @@ export default function PageFeedback({page, title}: Props): React.ReactElement {
 
   if (phase === 'done') {
     return (
-      <div className={styles.feedback}>
+      <div className={`${styles.feedback} page-feedback-widget`}>
         <p className={styles.thanks}>
           Thanks for your feedback!{' '}
           <button type="button" className={styles.commentLink} onClick={startOver}>
@@ -95,7 +95,7 @@ export default function PageFeedback({page, title}: Props): React.ReactElement {
   }
 
   return (
-    <div className={styles.feedback}>
+    <div className={`${styles.feedback} page-feedback-widget`}>
       <div className={styles.promptRow}>
         <span className={styles.prompt}>Was this page helpful?</span>
         <button

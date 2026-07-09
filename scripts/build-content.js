@@ -853,14 +853,9 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
     L.push('  ]}');
   }
 
-  if (sections.delivery) {
-    const jsx = deliveryToJsx(sections.delivery);
-    L.push('  delivery={');
-    L.push('    <>');
-    for (const line of jsx.split('\n')) L.push('      ' + line);
-    L.push('    </>');
-    L.push('  }');
-  }
+  // Delivery is deliberately omitted here: it duplicates Steps (both are
+  // numbered walkthroughs of the same activity), and including both was
+  // the main reason activity one-pagers overflowed onto a second page.
 
   emitStringArray(L, 'reflection', sections.reflection);
   emitStringArray(L, 'extensions', sections.extensions);

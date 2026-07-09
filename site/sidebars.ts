@@ -6,6 +6,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Core Activities',
+      link: {type: 'generated-index'},
       items: [
         'activities/core/boundary-run',
         'activities/core/gathering',
@@ -23,6 +24,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Camp & Advanced Activities',
+      link: {type: 'generated-index'},
       items: [
         'activities/core/map-discussion',
         'activities/core/symbol-relay',

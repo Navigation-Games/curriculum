@@ -15,6 +15,9 @@ images:
   - src: /curriculum/img/activities/clothespin-o.jpg
     alt: A small pile of wooden clothespins on a tabletop
     caption: Numbered or colored clothespins make quick hidden checkpoints
+  - src: /curriculum/img/activities/explore-and-find.png
+    alt: Setup diagram showing checkpoints scattered within a boundary
+    caption: "Setup: checkpoints placed around the space"
     onepager: true
 videos: []
 ---

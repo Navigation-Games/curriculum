@@ -151,23 +151,23 @@
 
   .frame {
     border-width: 2px;
-    padding: 0.6rem 0.9rem;
+    padding: 0.5rem 0.8rem;
   }
 
   .frame img {
-    max-height: 2.4in;
+    max-height: 2in;
   }
 
   .header {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
   }
 
   .headerImage {
-    max-width: 140px;
+    max-width: 120px;
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .descriptionText,
@@ -176,24 +176,30 @@
   .deliveryContent ul,
   .list,
   .sideText {
-    font-size: 0.8rem;
-    line-height: 1.35;
+    font-size: 0.78rem;
+    line-height: 1.25;
   }
 
   .epigraph {
-    margin: 0.15rem 0 0.4rem;
+    margin: 0.1rem 0 0.3rem;
   }
 
   .section {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
   }
 
   .sectionTitle {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
+    margin: 0 0 0.15rem;
+  }
+
+  .list li,
+  .deliveryContent li {
+    margin-bottom: 0.05rem;
   }
 
   .bottomRow {
-    padding-top: 0.5rem;
-    margin-top: 0.35rem;
+    padding-top: 0.4rem;
+    margin-top: 0.25rem;
   }
 }

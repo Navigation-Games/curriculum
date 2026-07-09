@@ -5,13 +5,13 @@ sidebar_position: 5
 
 # Copyright and License
 
-Our animal pictures are copyrighted. Please do not use the animal pictures without our permission.
+Our animal pictures are copyrighted. Please do not use the animal pictures without our permission. The animal pictures are not covered by the license below.
 
 Copyright (c) 2026 Navigation Games
 
 **Notice.** These lesson plans were created and tested by Navigation Games ([NavigationGames.org](https://NavigationGames.org)) and are provided free of charge as a public service to encourage the teaching of orienteering.
 
-**License.** Permission is granted to copy, distribute and modify these lesson plans provided that existing copyright notices, the text of this license, and the text of the "Notice" section are not removed or modified, other than to add your own copyright notice for your modifications.
+**License.** Permission is granted to copy, distribute and modify these lesson plans provided that existing copyright notices, the text of this license, and the text of the "Notice" section are not removed or modified, other than to add your own copyright notice for your modifications. This license does not extend to the animal pictures; they may not be used without our permission.
 
 In plain language:
 

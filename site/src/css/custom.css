@@ -116,7 +116,8 @@ body.page-camp-overview {
   article > footer,
   .row .col:last-child > nav,
   .tag_src,
-  [class*="tags_"] {
+  [class*="tags_"],
+  .page-feedback-widget {
     display: none !important;
   }
 

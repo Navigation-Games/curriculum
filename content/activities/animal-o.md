@@ -20,6 +20,9 @@ images:
   - src: /curriculum/img/activities/animal-o-clue-sheet.jpg
     alt: Seven laminated clue sheet strips fanned out, each showing a start triangle, a sequence of animal pictures, and a finish circle
     caption: "Clue sheets: each strip is a different course"
+  - src: /curriculum/img/activities/explore-and-find.png
+    alt: Setup diagram showing animal checkpoints scattered within a boundary
+    caption: "Setup: animal checkpoints placed around the space"
     onepager: true
 videos:
   - id: rok2Ghx3fq4
