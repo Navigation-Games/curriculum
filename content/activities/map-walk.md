@@ -82,7 +82,7 @@ Map Walk bridges the gap between simple pattern maps and independent navigation.
 
 ## Differentiation
 
-Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 - **First Map Walk**: teacher leads, frequent stops, basic symbols only (paths, buildings, open areas)
 - **Second Map Walk**: students take turns leading the group to the next stop

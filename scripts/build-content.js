@@ -761,7 +761,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
     }
     L.push('');
   }
-  if (sections.differentiation) { L.push('### Differentiation'); L.push(''); L.push('*Ways to adapt the activity to meet the needs of your students.*'); L.push(''); L.push(sections.differentiation); L.push(''); }
+  if (sections.differentiation) { L.push('### Differentiation'); L.push(''); L.push(sections.differentiation); L.push(''); }
   if (sections.tips) { L.push('### Tips'); L.push(''); L.push(sections.tips); L.push(''); }
   L.push('</TabItem>');
 
@@ -808,13 +808,19 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   if (hasVideos) {
     L.push('## Videos');
     L.push('');
+    const videoProps = (v) => {
+      let props = `id="${v.id}" title="${escAttr(v.title)}"`;
+      if (v.start) props += ` start={${v.start}}`;
+      if (v.end) props += ` end={${v.end}}`;
+      return props;
+    };
     if (fm.videos.length === 1) {
-      L.push(`<YouTube id="${fm.videos[0].id}" title="${escAttr(fm.videos[0].title)}" />`);
+      L.push(`<YouTube ${videoProps(fm.videos[0])} />`);
     } else {
       L.push('<CardGrid columns={3}>');
       for (const v of fm.videos) {
         L.push('  <div>');
-        L.push(`    <YouTube id="${v.id}" title="${escAttr(v.title)}" />`);
+        L.push(`    <YouTube ${videoProps(v)} />`);
         if (v.caption) L.push(`    <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}>${v.caption}</p>`);
         L.push('  </div>');
       }

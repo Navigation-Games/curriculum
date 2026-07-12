@@ -30,8 +30,17 @@ export default function MaterialLink({name, children}: MaterialLinkProps): React
   }
 
   return (
-    <span className={`${styles.materialLink} ${info.kit ? styles.kitMaterial : ''}`} ref={triggerRef}>
-      <span onClick={() => setOpen(!open)}>{children || name}</span>
+    <span ref={triggerRef}>
+      <a
+        className={`${styles.materialLink} ${info.kit ? styles.kitMaterial : ''}`}
+        href={`/curriculum/reference/equipment/materials/#${materialAnchor(info.name)}`}
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen(!open);
+        }}
+      >
+        {children || name}
+      </a>
       {open && (
         <PopoverPortal anchorRef={triggerRef} onClose={close}>
           <div className={styles.popoverTitle}>

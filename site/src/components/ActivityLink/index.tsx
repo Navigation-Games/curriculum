@@ -25,8 +25,17 @@ export default function ActivityLink({slug, children}: ActivityLinkProps): React
   }
 
   return (
-    <span className={styles.activityLink} ref={triggerRef}>
-      <span onClick={() => setOpen(!open)}>{children || info.title}</span>
+    <span ref={triggerRef}>
+      <a
+        className={styles.activityLink}
+        href={href}
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen(!open);
+        }}
+      >
+        {children || info.title}
+      </a>
       {open && (
         <PopoverPortal anchorRef={triggerRef} onClose={close}>
           <div className={styles.popoverTitle}>{info.title}</div>

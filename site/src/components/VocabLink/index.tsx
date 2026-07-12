@@ -8,6 +8,17 @@ interface VocabLinkProps {
   children?: React.ReactNode;
 }
 
+// Must match Docusaurus's auto-generated heading id for each term in
+// site/docs/reference/glossary.md (e.g. "Clue sheet" -> "clue-sheet"), so a
+// printed/PDF page still has a working link even though the popover itself
+// only exists in the browser.
+function vocabAnchor(term: string): string {
+  return term
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
 export default function VocabLink({term, children}: VocabLinkProps): React.ReactElement {
   const [open, setOpen] = useState(false);
   const triggerRef = useRef<HTMLSpanElement>(null);
@@ -20,8 +31,17 @@ export default function VocabLink({term, children}: VocabLinkProps): React.React
   }
 
   return (
-    <span className={styles.vocabLink} ref={triggerRef}>
-      <span onClick={() => setOpen(!open)}>{children || term}</span>
+    <span ref={triggerRef}>
+      <a
+        className={styles.vocabLink}
+        href={`/curriculum/reference/glossary#${vocabAnchor(entry.term)}`}
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen(!open);
+        }}
+      >
+        {children || term}
+      </a>
       {open && (
         <PopoverPortal anchorRef={triggerRef} onClose={close} width={280}>
           <div className={styles.popoverTerm}>{entry.term}</div>

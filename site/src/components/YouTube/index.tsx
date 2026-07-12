@@ -5,10 +5,16 @@ interface YouTubeProps {
   id: string;
   title?: string;
   description?: string;
+  start?: number;
+  end?: number;
 }
 
-export default function YouTube({id, title = 'Video', description}: YouTubeProps): React.ReactElement {
-  const url = `https://www.youtube.com/watch?v=${id}`;
+export default function YouTube({id, title = 'Video', description, start, end}: YouTubeProps): React.ReactElement {
+  const params = new URLSearchParams();
+  if (start) params.set('start', String(start));
+  if (end) params.set('end', String(end));
+  const query = params.toString();
+  const url = `https://www.youtube.com/watch?v=${id}${query ? `&${query}` : ''}`;
 
   if (!id || id === 'TODO') {
     return (
@@ -22,7 +28,7 @@ export default function YouTube({id, title = 'Video', description}: YouTubeProps
       <div className={styles.wrapper}>
         <iframe
           className={styles.iframe}
-          src={`https://www.youtube.com/embed/${id}`}
+          src={`https://www.youtube.com/embed/${id}${query ? `?${query}` : ''}`}
           title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

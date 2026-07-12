@@ -98,7 +98,7 @@ Score-O is a bridge between structured courses (where checkpoints are visited in
 
 ## Differentiation
 
-Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 ### Who does the setup?
 

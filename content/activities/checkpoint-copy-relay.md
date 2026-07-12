@@ -81,7 +81,7 @@ Orienteering maps can be very complex, and learning how to simplify and extract 
 
 ## Differentiation
 
-Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 - **Simplified maps**: Use a park map or simplified orienteering map instead of a full orienteering map. Adjust complexity to suit the participants.
 - **Full orienteering maps**: Use a detailed orienteering map with more features to read around.

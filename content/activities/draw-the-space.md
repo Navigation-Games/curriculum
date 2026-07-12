@@ -77,7 +77,7 @@ This is the first time students create a map rather than read one. It is harder 
 
 ## Differentiation
 
-Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 - **Teacher-led only**: teacher draws, students copy each step. Best for the youngest students
 - **Independent drawing**: after the teacher models the boundary and a couple of landmarks, students explore and add features on their own

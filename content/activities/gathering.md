@@ -5,7 +5,7 @@ tagline: Return to the teacher on a signal
 epigraph: "In orienteering, it's important to stay aware and return on time"
 sidebar_position: 20
 tags: [core, level-1]
-time: 30-45 minutes
+time: 10-20 minutes
 space: Gym, schoolyard, or local park
 materials:
   - Whistle, flag, or other gathering signal
@@ -13,14 +13,12 @@ setup: Define a clear boundary and establish a central gathering location
 images:
   - src: /curriculum/img/activities/gathering-kids.jpg
     alt: Children running back to the teacher during a gathering activity
-    caption: Students returning on a signal
-  - src: /curriculum/img/activities/gathering.png
-    alt: Gathering setup diagram showing students returning to a central point
-    caption: Setup diagram
+    caption: Students return on a signal
     onepager: true
 videos:
   - id: lD0_AKjR_Ic
     title: Boundary and Gathering Lesson
+    start: 36
 ---
 
 > **Draft video script:** [View script](../../site/docs/editors/video-scripts/activities/gathering.md)
@@ -35,7 +33,7 @@ Builds divided attention, group responsibility, and awareness in terrain.
 ## Goals
 
 - Short: Signal awareness
-  Long: Maintain awareness of a signal while moving
+  Long: Listen or watch for a signal while moving
 
 - Short: Spatial awareness
   Long: Be aware of others in shared space
@@ -76,20 +74,17 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 1. Lead the group to the central location and have them gather around you
 2. Review the boundary
 3. Explain the activity: they will move freely within the boundary while waiting for a signal
-4. Demonstrate the gathering signal clearly. When students hear it, they must return to the central location as quickly and safely as possible
-5. Send the group into the space to move freely (walking, jogging, skipping). They can go individually, in pairs, or small groups
+4. Demonstrate the gathering signal clearly. When students hear it, they must return to their starting location as quickly and safely as possible
+5. Send the group into the space. They can go individually, in pairs, or small groups. Encourage them to go up to but not past the boundary.
 6. After 2-3 minutes, signal for the group to gather. Count how long it takes the whole group to assemble
 7. Repeat, encouraging the group to come up with strategies to improve their gathering time
 
 
 ## Differentiation
 
-Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
-- **Basic**: students explore and return on signal
-- **Timed**: count seconds and challenge the group to beat their time
-- **Strategy**: students discuss and plan how to gather faster
-- **Different signals**: use varied or visual-only signals to increase challenge
+- **Different signals**: Use a visual or other signal to increase challenge
 - **Movement constraints**: skip, gallop, or use animal movements while exploring
 - **With a game**: play tag between gathering signals
 

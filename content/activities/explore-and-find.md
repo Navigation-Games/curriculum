@@ -5,7 +5,7 @@ tagline: Find checkpoints within a defined boundary
 epigraph: In orienteering, we find checkpoints in a boundary
 sidebar_position: 30
 tags: [core, level-1]
-time: 20 minutes
+time: 10-20 minutes
 space: Any space
 materials:
   - Checkpoints (cones with animal pictures)
@@ -84,12 +84,14 @@ Bridges the gap between learning the boundary (Boundary Run) and navigating a st
 
 ## Differentiation
 
-Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
-- **Group visit**: visit each animal together as a class, moving like that animal to the next one (waddle like a penguin, stomp like an elephant). Builds familiarity with the space before free exploration.
-- **Quick find**: go find one or two animals and come back. Students return on their own instead of waiting for the signal. Good for younger groups or a first round.
+- **Animal Parade**: visit each animal together as a group, moving like that animal to the next one (waddle like a penguin, stomp like an elephant). Builds familiarity with the space before free exploration.
+- **Quick find**: go find one or two animals and come back. Students return on their own instead of waiting for a signal. Good for younger groups or a first round.
 - **Report and repeat**: kids come back after finding one or two animals, describe what they found to the teacher, then head back out at their own pace
+- **Memory Challenge**: challenge participants to run to specific animals in order, like "Run to the Lion and back to the Finish!" or "Run to the Octopus, then the Dog, then back!"
 - **Pair challenges**: partners give each other sequences of animals to visit and check each other
+- **Draw a map**: have participants draw a map of the area and checkpoint locations
 
 
 ## Tips
@@ -155,11 +157,12 @@ Ways to slow things down for younger groups, increase challenge for experienced 
 
 ## Extensions
 
-- **Animal Parade**: visit every animal as a group and move like that animal to the next one (waddle like a penguin, stomp like an elephant, stretch like a giraffe). Good as a warm-up before free exploration or as a cool-down.
-- Encourage participants to come up with strategies to get the whole class to gather more quickly
-- Use a different signal, such as raising your hand, to indicate it is time to gather
-- Have pairs give each other sequences of animals to visit, and check each other
-- Have participants draw a map of the area and checkpoint locations
+- Animal Parade: visit each animal together as a group, moving like that animal to the next one (waddle like a penguin, stomp like an elephant). Builds familiarity with the space before free exploration.
+- Quick find: go find one or two animals and come back. Students return on their own instead of waiting for a signal. Good for younger groups or a first round.
+- Report and repeat: kids come back after finding one or two animals, describe what they found to the teacher, then head back out at their own pace
+- Memory Challenge: challenge participants to run to specific animals in order, like "Run to the Lion and back to the Finish!" or "Run to the Octopus, then the Dog, then back!"
+- Pair challenges: partners give each other sequences of animals to visit and check each other
+- Draw a map: have participants draw a map of the area and checkpoint locations
 
 
 ## Context

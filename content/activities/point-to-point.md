@@ -85,7 +85,7 @@ Students visit checkpoints in sequential order using a map. This is "real" orien
 
 ## Differentiation
 
-Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 - **Pairs first**: start with partner navigation so students can discuss map reading together
 - **Individual**: once students are comfortable, try the course alone

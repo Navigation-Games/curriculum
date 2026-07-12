@@ -18,15 +18,16 @@ images:
 videos:
   - id: lD0_AKjR_Ic
     title: Boundary Run
+    end: 36
 ---
 
 > **Draft video script:** [View script](../../site/docs/editors/video-scripts/activities/boundary-run.md)
 
 ## Description
 
-The leader runs around the boundary of the play area while participants follow. Then participants show what they learned by identifying which spots are inside or outside the boundary, including tricky areas they should not enter.
+The leader runs around the boundary of the play area while participants follow. Then participants show what they learned by saying whether given locations are inside or outside the boundary, including interior areas they should not enter.
 
-Builds listening skills, safety awareness, and familiarity with the play space. Physically traversing the boundary reinforces it through sensory-motor experience, which sticks better than verbal description alone and works across language levels.
+Builds listening skills, safety awareness, and familiarity with the play space. Physically following the boundary reinforces it through sensory-motor experience, which sticks better than verbal description alone and works across language levels.
 
 
 ## Goals
@@ -54,7 +55,7 @@ Builds listening skills, safety awareness, and familiarity with the play space. 
 
 1. Walk the space and identify the boundary you want to use
 2. If any edges are unclear, place cones to mark them
-3. Note any areas inside the boundary that should still be off limits (gardens, equipment, etc.)
+3. Note any areas inside the boundary that should still be off limits (gardens, playground equipment, pond, etc.)
 
 
 ## Steps
@@ -66,13 +67,13 @@ Builds listening skills, safety awareness, and familiarity with the play space. 
    Long: Explain that you will all run around the boundary together, and they need to pay attention to where you go
 
 3. Short: Run together, stay behind the leader
-   Long: Everyone must stay behind the leader at all times, even if they can run faster. This ensures everyone sees the full boundary
+   Long: Everyone must stay in single file behind the leader. This is an opportunity to practice spatial awareness and following instructions.
 
 4. Short: Run the boundary
-   Long: Run around the boundary. Make sure participants do not cross outside the play area
+   Long: Run around the boundary.
 
 5. Short: Quiz inside vs. outside
-   Long: After the run, quiz participants on the boundaries: point to landmarks and ask whether they are inside or outside
+   Long: After the run, quiz participants on the boundaries: point to or name landmarks and ask whether they are inside or outside the boundary
 
 6. Short: Discuss off-limits areas
    Long: If there are gardens or other off-limits areas within the boundary, ask whether participants should go there even though it is technically "inside"
@@ -80,12 +81,12 @@ Builds listening skills, safety awareness, and familiarity with the play space. 
 
 ## Differentiation
 
-Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 - **Follow the leader**: run the boundary together at the leader's pace
+- **Follow new leaders**: have students trade off who is leading, once you've shown or explained where the boundary is
 - **For speed**: repeat the boundary at a faster pace
 - **Different movements**: skip, gallop, or hop along the boundary instead of running
-- **Inside/outside quiz**: point to spots and have students call out "inside" or "outside"
 - **Why it matters**: discuss why boundaries are important (safety, respect)
 
 
@@ -102,7 +103,7 @@ Ways to slow things down for younger groups, increase challenge for experienced 
 
 "Our challenge now is to follow me around the boundary of our space today. Everything we do will be inside the boundary, and I'm going to quiz you afterward about where we go, so be sure to pay attention!"
 
-"There are only two rules for this game: you must follow me, and you can't go in front of me at any time. It's like follow-the-leader!"
+"There are only two rules for this game: you must follow me in single file, and you can't go in front of me at any time. It's like follow-the-leader!"
 
 *(Run the boundary. Point out key landmarks as you go.)*
 

@@ -73,7 +73,7 @@ Participants search for small objects hidden throughout the space. This activity
 
 ## Differentiation
 
-Ways to slow things down for younger groups, increase challenge for experienced ones, or adapt for different learners:
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 - **Teacher hides (simplest)**: teacher hides clothespins before the session. Students search and report where they found them
 - **Traveling Pairs**: one partner hides, then travels with the finder giving only "warmer/colder" or "north/south/east/west" clues
