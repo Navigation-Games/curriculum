@@ -172,6 +172,14 @@ const materialEntries: MaterialInfo[] = [
     kit: true,
   },
   {
+    name: 'Obstacle-building equipment',
+    description: 'Gym mats, tables, chairs, jump ropes, or other equipment on hand, used to build walls, rivers, and other obstacles indoors.',
+    whereToGet: 'PE equipment closet, gym storage, classroom furniture',
+    alternatives: 'Cardboard boxes, hula hoops, exercise mats, painter\'s tape lines on the floor',
+    usedIn: 'Build the World',
+    learningConnection: 'Building the obstacles first, before mapping them, reverses the usual order of orienteering and makes the map-to-world connection concrete.',
+  },
+  {
     name: 'Black marker',
     description: 'A permanent marker for labeling checkpoint codes, writing on cones, or marking maps.',
     whereToGet: 'Office supply stores',
@@ -211,6 +219,9 @@ const keywordMap: Record<string, string> = {
   pencil: 'Pencils',
   'flagging tape': 'Flagging tape',
   'black marker': 'Black marker',
+  'gym mat': 'Obstacle-building equipment',
+  'jump rope': 'Obstacle-building equipment',
+  'obstacle-building': 'Obstacle-building equipment',
 };
 
 const byName = new Map<string, MaterialInfo>();

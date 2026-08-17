@@ -15,10 +15,13 @@ materials:
   - All-checkpoints map
 setup: Arrange checkpoints and colored cones according to the all-checkpoints map
 images:
-  - src: /curriculum/img/activities/geometric-o.png
-    alt: Geometric-O setup with animal checkpoints arranged in a rectangle and four colored corner cones (red, blue, green, yellow)
+  - src: /curriculum/img/activities/geometric-o-setup-2.png
+    alt: Geometric-O setup diagram showing animal checkpoints arranged in a rectangle with four colored corner cones (red, blue, green, yellow)
     caption: "Setup: animal checkpoints with four colored corner cones"
     onepager: true
+  - src: /curriculum/img/activities/narrow-one-pagers/contents-info-4.png
+    alt: A Geometric-O course card for "Lion" showing a route connecting 5 numbered checkpoints, with four colored corner cones
+    caption: "A course card: a route between 5 checkpoints"
 videos:
   - id: 32D52UPa7Gw
     title: How to Teach Geometric-O
@@ -116,7 +119,7 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
    - Progress to 10-checkpoint maps
 
 
-## Differentiation
+## Adaptations
 
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
@@ -125,6 +128,9 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 - **For speed**: repeat the same course and beat your time
 - **From memory**: put the map away and try to complete the course
 - **Remove landmarks**: take away the colored corner cones for an extra challenge
+- **Track times**: log course completions or times on a whiteboard for friendly competition
+- **Napkin-O**: hide the animal pictures with napkins so students rely on spatial memory and communication (see Related Activities tab)
+- **Electronic timing**: use SPORTIdent or similar timing to track times automatically
 
 
 ## Tips
@@ -184,69 +190,26 @@ c. Help other students who need assistance
 ## Reflection
 
 - What was challenging about matching up the animals? What was easy?
+- How did the colored cones help you orient the map?
+- How did you describe where a checkpoint was using words like closest, furthest, or between?
 - What sort of mistakes did people make?
 - How did you figure out the correct answer?
-
-
-## Extensions
-
-- Remove the colored cones from the corners to further practice spatial relationships
-- Complete the course from memory
-- Track course completion or times on a whiteboard
-- Napkin-O (see Companions tab)
-- Use electronic timing
 
 
 ## Companions
 
 ### Napkin-O *(extension)*
 
-**Communicate with others to complete a course after the animal pictures are hidden.**
-
-After students are comfortable with Geometric-O, cover up the animal pictures with napkins. Give each pair a new clue sheet. Now students must rely on their spatial memory and communicate with other pairs to figure out which animal is at each checkpoint. The goal is for every pair to complete their course as quickly as possible.
-
-Builds teamwork, communication, and spatial memory.
-
-| | |
-|---|---|
-| **Time** | 15-30 minutes |
-| **Materials** | Same Geometric-O setup, plus napkins to hide animal pictures |
-| **How to run it** | 1. Each pair does a 5-animal course three times: first for learning, then for speed, then from memory. 2. Hide the animal pictures with napkins. 3. Give each pair a new clue sheet. 4. Give the group 2 minutes to strategize. 5. Start everyone at once. Encourage pairs to help others once they finish. |
+After students are comfortable with Geometric-O, hide the animal pictures under napkins and give each pair a new clue sheet. They must rely on spatial memory and communicate with other pairs to figure out which animal is at each checkpoint. Builds teamwork, communication, and spatial memory. Takes 15-30 minutes: each pair runs a 5-animal course three times (learning, then speed, then memory) before the napkins go on; give the group 2 minutes to strategize, then start everyone at once.
 
 ### Basketball-O *(extension)*
 
-**Use a map of a basketball court to visit checkpoints in order.**
-
-The same concept as Geometric-O, but using the lines of a basketball court as landmarks instead of colored cones. Students orient the map using the court lines, then visit checkpoints in order. Can be done on any basketball court, indoors or outdoors.
-
-Basketball-O works well as a next step after Geometric-O because the court provides more complex, real-world landmarks.
-
-| | |
-|---|---|
-| **Time** | 30-60 minutes |
-| **Materials** | Basketball court, checkpoints, Basketball-O maps |
-| **How to run it** | Same progression as Geometric-O: orient the map using court features, then complete courses of increasing difficulty. |
+The same concept as Geometric-O, but using the lines of a basketball court as landmarks instead of colored cones. Works well as a next step after Geometric-O because the court provides more complex, real-world landmarks. Takes 30-60 minutes with a basketball court and Basketball-O maps; same progression as Geometric-O, orienting to court features before completing courses of increasing difficulty.
 
 ### Pacman-O *(extension of Basketball-O)*
 
-**Navigate checkpoints on a basketball court while avoiding "ghosts" and staying on the lines.**
-
-A Pacman-themed version of Basketball-O. Students can only travel along the court lines and must avoid "ghosts" (taggers) while visiting checkpoints in order. Places marked with a red "X" are blocked. Adds route planning, strategy, and a competitive element.
-
-| | |
-|---|---|
-| **Time** | 30-60 minutes |
-| **Materials** | Basketball court with 3-point line, checkpoints, Basketball-O maps |
-| **How to run it** | 1. Pair up and orient the map. Assign ghosts. 2. Visit checkpoints in order while staying on lines and avoiding ghosts. 3. Repeat for speed or try new courses. Ghosts can't run. |
+A Pacman-themed version of Basketball-O: students can only travel along the court lines and must avoid "ghosts" (taggers) while visiting checkpoints in order. Adds route planning, strategy, and a competitive element. Takes 30-60 minutes; pair up, orient the map, and assign ghosts (who can't run) before playing, repeating for speed or new courses.
 
 ### Word Bank Orienteering *(variation)*
 
-**One partner reads the map; the other runs, guided only by approved words.**
-
-One participant has the map and the other is the runner. The map-holder must direct the runner to checkpoints using only words printed on a Word Bank sheet (left, right, next to, corner, middle, between, compass directions). Builds verbal communication and spatial vocabulary.
-
-| | |
-|---|---|
-| **Time** | 15-20 minutes |
-| **Materials** | Geometric-O setup, Word Bank sheets |
-| **How to run it** | Pair up. One partner has the map, the other runs. The map-holder can only use words from the Word Bank to direct their partner. Switch roles after each course. |
+One partner reads the map and directs the runner to checkpoints using only approved words (left, right, next to, corner, middle, between, compass directions). Builds verbal communication and spatial vocabulary alongside the map skills Geometric-O introduces. Takes 15-20 minutes; switch roles after each course.

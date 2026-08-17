@@ -80,7 +80,7 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 7. Repeat, encouraging the group to come up with strategies to improve their gathering time
 
 
-## Differentiation
+## Adaptations
 
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
@@ -134,12 +134,8 @@ a. Encourage students to strategize to help the group gather faster
 ## Reflection
 
 - What strategies helped the group gather quickly? How did you work together?
+- What helped you respond quickly and safely when you heard the signal?
 - How did you stay aware while moving? What was hard about it?
+- How did it feel to move freely in the space? Did you feel more confident by the end?
+- Why is it important to stay inside the boundary while you're moving around?
 - What are examples of times that you need to pay attention to more than one thing at school?
-
-
-## Extensions
-
-- Use different signals for gathering, such as raising an arm or counting down
-- Add movement constraints (skipping only, animal movements)
-- Play a tag-based game while waiting for the gathering signal

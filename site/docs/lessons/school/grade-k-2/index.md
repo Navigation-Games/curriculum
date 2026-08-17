@@ -23,6 +23,8 @@ import ActivityLink from '@site/src/components/ActivityLink';
 
 These lessons align with entries 1-5 (Pre-Map Skills) and 6-7 (Sequential Navigation) of the [Navigation Games skill and concept sequence](https://navigation-games.github.io/curriculum/reference/frameworks/skill-concept-sequence/), with early exposure to 8-10 (Map Introduction). Communication and collaboration (#36-41) are woven throughout.
 
+[**Indoor Orienteering: Build the World**](./b-indoor-orienteering) is an alternative: the teacher builds a world with gym equipment, and students explore it and play clue sheet courses through it.
+
 ## Notes for K-2
 
 - **Pacing adjustments:** Plan for six class periods, one per lesson. Lessons 1 and 2 can often be combined for groups that settle in quickly. Lessons 5 and 6 may extend across two sessions.

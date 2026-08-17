@@ -101,13 +101,17 @@ The map shows only a portion of the checkpoints scattered throughout the space. 
 ## Reflection
 
 - How many checkpoints did you identify correctly?
+- What words did you use to describe where a checkpoint was located?
 - What is a mistake that you made, and how could you avoid it next time?
 - How did you tell the difference between a safe checkpoint and a poison one?
+- How did you and your partner work together and check each other's thinking?
 
 
-## Extensions
+## Adaptations
 
-- **Multiple variants in sequence.** Have four maps (A, B, C, D), each showing a different subset of the checkpoints. When a pair finishes map A, hand them map B, then C, then D. After all four, give them a full Score-O map with every checkpoint and challenge them to find the most efficient route to visit all of them, or to visit only the even-numbered ones
-- Leave the map at the Start and return to check it as needed (navigation by memory)
-- Do the course individually instead of in pairs
-- Use electronic timing
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
+
+- **Multiple variants in sequence**: have four maps (A, B, C, D), each showing a different subset of the checkpoints. When a pair finishes map A, hand them map B, then C, then D. After all four, give them a full Score-O map with every checkpoint and challenge them to find the most efficient route to visit all of them, or to visit only the even-numbered ones
+- **Navigate by memory**: leave the map at the Start and return to check it as needed
+- **Solo**: do the course individually instead of in pairs
+- **Electronic timing**: use electronic timing to track completion times

@@ -109,16 +109,20 @@ The safety value is real: a camper who can find their way back to a known locati
 ## Reflection
 
 - What features helped you find your way back?
+- How did orienting the map help you figure out which way to go?
 - How did you know which direction to go?
 - Was it harder from farther away? What made it harder?
+- How did you feel finding your way back on your own? Did it get easier as you practiced?
 - Could you find your way back without a map? What would you use instead?
 - Think about how animals find their way home. What do they use that we do not?
 
 
-## Extensions
+## Adaptations
 
-- Do it without a map: participants navigate purely by observation and memory
-- Add checkpoints along the route that pairs must visit on their way home
-- Time each return trip and challenge pairs to improve
-- Have participants write directions for someone else to follow back from a starting point
-- Combine with a Map Walk: take a longer route on the walk-out, then challenge pairs to find a shorter way home
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
+
+- **No map**: participants navigate purely by observation and memory, without a map
+- **Route checkpoints**: add checkpoints along the route that pairs must visit on their way home
+- **Timed return**: time each return trip and challenge pairs to improve
+- **Write directions**: have participants write directions for someone else to follow back from a starting point
+- **Combine with Map Walk**: take a longer route on the walk-out, then challenge pairs to find a shorter way home

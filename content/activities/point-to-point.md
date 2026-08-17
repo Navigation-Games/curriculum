@@ -83,15 +83,17 @@ Students visit checkpoints in sequential order using a map. This is "real" orien
 
 **6. Repeat or try new courses.** Students may repeat courses to improve their time, or try harder courses. Students who finish should help others by giving hints, not answers.
 
-## Differentiation
+## Adaptations
 
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 - **Pairs first**: start with partner navigation so students can discuss map reading together
 - **Individual**: once students are comfortable, try the course alone
 - **Reverse order**: do the course backward for a new challenge
-- **From memory**: try to reach three checkpoints in order without looking at the map
+- **From memory**: try to reach three checkpoints in order without looking at the map, or try the full Memory-O companion activity
 - **Harder courses**: courses that cross open areas or require more precise map reading
+- **Relay Race**: divide into teams and run a relay format, each runner completing a course before tagging the next (see Related Activities tab)
+- **Compare routes**: after the course, have partners compare route choices between checkpoints and discuss why
 
 ## Tips
 
@@ -152,42 +154,18 @@ Students visit checkpoints in sequential order using a map. This is "real" orien
 - How did you determine which way to go for each checkpoint?
 - What shortcuts between checkpoints did you find?
 - If you were at a wrong checkpoint, how did you figure out where you needed to go instead?
+- How did you feel moving through open areas of the course? Did it get easier?
+- How did you and your partner work together and give each other feedback?
 - How is Point-to-Point different from Score-O? Which did you prefer?
 - What would you do differently next time?
-
-## Extensions
-
-- Relay race: divide into teams, each member completes a course before tagging the next (see Relay Race below)
-- Challenge students to run to three checkpoints in order without a map (see Memory-O below)
-- Do the course in reverse order
-- Compare route choices with a partner after the course: "Where did you go? Why?"
 
 
 ## Companions
 
 ### Relay Race *(extension)*
 
-**Teams compete in relay format. Each runner completes a course, then tags the next.**
-
-Divide the group into teams of 3 or 4. Each team member runs a short point-to-point course; when one finishes, the next starts. First team to finish with all codes correct wins. Use several similar courses of equal length so waiting time stays short and no one can just follow the runner ahead.
-
-| | |
-|---|---|
-| **Time** | 20-40 minutes |
-| **Materials** | Point-to-Point setup, with several short courses of similar length |
-| **How to run it** | Teams line up at the start. Runner 1 completes a course and tags runner 2, and so on. A wrong code means the runner goes back to fix it. Emphasize encouraging teammates; the relay adds time pressure, so remind students that accuracy still wins races. |
+Teams of 3-4 each run a short point-to-point course in sequence, tagging the next runner when they finish. Adds time pressure and teamwork on top of the same navigation skills as Point-to-Point. Takes 20-40 minutes with several short courses of equal length; a wrong code sends the runner back to fix it, and accuracy still wins over raw speed.
 
 ### Memory-O *(variation)*
 
-**Navigate from memory instead of carrying the map.**
-
-Two formats:
-
-1. **Memorize a course.** At the start, students study a short 3-checkpoint course, then run it without the map, verifying the code at each checkpoint. Works well with several short courses so students rotate through
-2. **Snippet to snippet.** Students find one checkpoint at a time. At each checkpoint, a posted map snippet shows the way to the next one. Works best as a single course
-
-| | |
-|---|---|
-| **Time** | 15-30 minutes |
-| **Materials** | Point-to-Point setup, plus a posted master map (format 1) or a map snippet at each checkpoint (format 2) |
-| **How to run it** | Same rules as Point-to-Point, but the map stays behind. Students who lose the thread return to the last map they saw. Builds spatial memory and rewards careful map study before moving. |
+Students navigate from memory instead of carrying the map: either memorizing a short course upfront, or finding one checkpoint at a time from map snippets posted along the way. Builds spatial memory and rewards careful map study before moving. Takes 15-30 minutes; students who lose the thread return to the last map they saw.

@@ -133,13 +133,20 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 
 - How are the two maps different?
 - Which symbols were easier or harder to remember? Why?
+- How did you match a symbol on the map to the real feature it represents?
+- How did the clue sheet help you know which order to visit features?
+- How did you check you found the right feature at each checkpoint?
+- Did you plan your order before starting, or figure it out as you went?
 - How did you work together?
 
 
-## Extensions
+## Adaptations
 
-- Have students do the course from memory
-- Have students do the courses by themselves
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
+
+- **From memory**: have students do the course from memory
+- **Solo**: have students do the courses by themselves
+- **Try Symbol Relay**: a competitive team version of learning symbols (see Related Activities tab)
 
 
 ## Companions

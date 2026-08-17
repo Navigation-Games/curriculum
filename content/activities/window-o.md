@@ -83,13 +83,16 @@ In Window-O, much of the map has been removed, leaving only islands of visible m
 
 - How did you ensure you were facing the right direction when leaving each checkpoint?
 - How did you ensure you were staying on your bearing when visiting the checkpoints?
+- How did you estimate how far you had gone through a blank area?
 - How does the terrain affect you staying on a bearing? How can you adjust for this?
 - What strategies did you use when approaching the hidden areas? What strategies did you use when exiting them?
 - What features made useful attack points and catching features?
 
 
-## Extensions
+## Adaptations
 
-- Compass Pairs: have the partner follow along with a normal map to ensure no major mistakes occur
-- Change the areas which are hidden on the map
-- Use electronic timing
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
+
+- **Compass Pairs**: have the partner follow along with a normal map to ensure no major mistakes occur
+- **Change the windows**: change the areas which are hidden on the map to keep the challenge fresh
+- **Electronic timing**: use electronic timing to track completion times

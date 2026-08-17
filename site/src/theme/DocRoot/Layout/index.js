@@ -2,14 +2,17 @@
  * Swizzled (ejected) from @docusaurus/theme-classic.
  * Changes from the original:
  * - Sidebar starts expanded on index/hub pages (where visitors choose where to
- *   go) and collapsed on content pages (where they're reading).
- * - Manual toggles are respected for the current page; navigating to a new
- *   page resets the sidebar to the path-based default.
+ *   go) and collapsed on content pages (where they're reading). This is only
+ *   the default for a visitor who has never manually toggled the sidebar.
+ * - Once a visitor manually expands or collapses the sidebar, that choice is
+ *   stored in localStorage (site-wide, one key) and wins on every page,
+ *   overriding the path-based default, until they manually toggle it again.
  * - For Editors pages (/editors/) show a sign-in gate unless the visitor is
  *   signed in with a navigationgames.org Google account. Soft gate only: the
  *   static content is still deployed; this just keeps it out of teachers' way.
  * The companion file DocRoot/Layout/Sidebar/index.js syncs its inner animation
- * state when hiddenSidebarContainer changes reactively.
+ * state when hiddenSidebarContainer changes reactively (used both for the
+ * path-based default on first paint and for the localStorage read after mount).
  */
 import React, {useState, useCallback, useEffect} from 'react';
 import {useLocation} from '@docusaurus/router';
@@ -22,7 +25,12 @@ import EditorsGate from '@site/src/components/EditorsGate';
 import {useGoogleUser, isManager} from '@site/src/lib/googleAuth';
 import styles from './styles.module.css';
 
-// Hub/index pages where teachers are choosing where to go — sidebar starts open.
+// localStorage key for the visitor's manually-set sidebar preference.
+// Stores 'true' (hidden/collapsed) or 'false' (visible/expanded).
+const SIDEBAR_STORAGE_KEY = 'ng-sidebar-hidden';
+
+// Hub/index pages where teachers are choosing where to go — sidebar starts
+// open here by default, for visitors with no stored preference yet.
 const INDEX_PATHS = new Set([
   '/lessons/',
   '/lessons/school/',
@@ -61,26 +69,28 @@ export default function DocRootLayout({children}) {
   const user = useGoogleUser();
   const gated = relPath.startsWith('/editors/') && !isManager(user);
 
-  // null = use path-based default; true/false = user manually toggled this page
-  const [userOverride, setUserOverride] = useState(null);
+  // Initial render (and SSR) uses the path-based default so there's no
+  // hydration mismatch; the stored preference, if any, is applied client-side
+  // right after mount.
+  const [hiddenSidebarContainer, setHiddenSidebarContainerState] = useState(!isIndexPage);
 
-  // Clear the manual override on every navigation so the path default takes effect
   useEffect(() => {
-    setUserOverride(null);
-  }, [pathname]);
+    const stored = window.localStorage.getItem(SIDEBAR_STORAGE_KEY);
+    if (stored !== null) {
+      setHiddenSidebarContainerState(stored === 'true');
+    }
+    // Read the stored preference once, on mount, not on every navigation —
+    // that's what makes a manual toggle stick across pages.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const hiddenSidebarContainer =
-    userOverride !== null ? userOverride : !isIndexPage;
-
-  const setHiddenSidebarContainer = useCallback(
-    (valueOrFn) => {
-      setUserOverride((prev) => {
-        const current = prev !== null ? prev : !isIndexPage;
-        return typeof valueOrFn === 'function' ? valueOrFn(current) : valueOrFn;
-      });
-    },
-    [isIndexPage],
-  );
+  const setHiddenSidebarContainer = useCallback((valueOrFn) => {
+    setHiddenSidebarContainerState((prev) => {
+      const next = typeof valueOrFn === 'function' ? valueOrFn(prev) : valueOrFn;
+      window.localStorage.setItem(SIDEBAR_STORAGE_KEY, String(next));
+      return next;
+    });
+  }, []);
 
   return (
     <div className={styles.docsWrapper}>

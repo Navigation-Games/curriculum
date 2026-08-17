@@ -101,6 +101,14 @@ body.page-camp-overview {
   display: none;
 }
 
+/* Activity pages float setup images to the right of the intro content
+   (build-content.js). Admonitions (":::tip") establish their own block
+   formatting context and otherwise ignore that float, so their background
+   can render on top of a tall stack of images. Clear the float instead. */
+.theme-admonition {
+  clear: both;
+}
+
 /* ===== PRINT STYLES ===== */
 
 @media print {

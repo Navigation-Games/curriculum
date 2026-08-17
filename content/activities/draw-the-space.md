@@ -12,7 +12,11 @@ materials:
   - Clipboards (or hard surface to write on)
   - Whiteboard or large paper (for teacher demo)
 setup: No special setup needed. The space should have visible landmarks (trees, fences, doors, playground equipment). If the space lacks obvious features, place a few cones. Practice drawing the boundary shape before class.
-images: []
+images:
+  - src: /curriculum/img/activities/draw-the-space-whiteboard.jpg
+    alt: A hand-drawn whiteboard map showing a boundary, a "Big Pit" landmark, a treeline, and tree symbols
+    caption: "A student's map: boundary, landmarks, and a treeline"
+    onepager: true
 videos: []
 ---
 
@@ -75,7 +79,7 @@ This is the first time students create a map rather than read one. It is harder 
    Long: Gather and share maps. Notice what features different students included. Ask distance questions ("Is it farther from the tree to the bench, or from the tree to the school?")
 
 
-## Differentiation
+## Adaptations
 
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
@@ -84,6 +88,9 @@ This is the first time students create a map rather than read one. It is harder 
 - **Distance and position**: ask students to compare distances on their maps to distances in the real space. Are things in the right positions relative to each other?
 - **Symbols**: challenge students to use the same symbol for all objects of a given type (a triangle for every tree, a square for every bench)
 - **Run and touch**: after sharing maps, pick a feature and have students run to touch as many of that feature as they can, then add anything they missed to their maps
+- **Add color**: use color for different features (green for grass, brown for paths, blue for water)
+- **New object**: place a new object in the space; students add it to their maps
+- **Different space**: draw the map of a different familiar place (your bedroom, the classroom)
 
 
 ## Tips
@@ -109,31 +116,17 @@ This is the first time students create a map rather than read one. It is harder 
 
 - What was the hardest part about drawing the space?
 - How is a map different from a photo?
+- How did you decide where the boundary went on your map?
 - Did you notice things you missed when you looked at other people's maps?
-
-
-## Extensions
-
-- Add color to the maps (green for grass, brown for paths, blue for water)
-- Teacher places a new object in the space; students add it to their maps
-- Draw the map of a familiar place (your bedroom, the classroom)
+- How did you check that your map matched real distances and positions in the space?
 
 
 ## Companions
 
 ### Guided Map Drawing *(variation)*
 
-A more structured version for groups that find a blank page daunting. The teacher draws the boundary and a few major features on the whiteboard, and students copy that starting map onto their own paper. Then students fill in the rest of the space themselves.
-
-Another way to run it: invite a student up to add one feature to the whiteboard map. Ask the class, "Do we agree that's where the slide goes?" If the class agrees, everyone copies it down, improving their own maps as they go. Rotate through several students so the class builds the map together.
+The teacher draws the boundary and a few major features first, students copy that starting map, then fill in the rest of the space themselves. A more structured version for groups that find a blank page daunting. You can also build the map together: invite one student at a time to add a feature to the whiteboard map, and have the class copy it down once they agree it's right.
 
 ### Map Maker *(extension)*
 
-Students relate a teacher-drawn map to the real space, then keep the map correct as the space changes. Place 8 to 12 objects (3 or 4 different kinds) in the area and draw a map of them on a whiteboard, using a different symbol for each kind of object.
-
-1. **Build the key**: students look at the space and work out which symbol matches each kind of object. Record the matches in a map key
-2. **Match objects**: point to a symbol on the map; students run and touch the object they think it is. Repeat until they can locate objects from the map confidently
-3. **Move objects**: erase a symbol and redraw it somewhere else on the map; students move the real object to its new location
-4. **Draw the map**: students move objects themselves and mark the new locations on the map. The class checks the finished map together
-
-Takes 30 to 60 minutes. Reflection: "How could you tell if an object was in the correct place?"
+Students match symbols to objects placed around the space, then keep their map updated as the objects move: first building a map key, then finding objects from the map, then relocating objects to match a redrawn map, and finally moving objects and updating the map themselves. Takes 30-60 minutes. Deepens the connection between a drawn map and the real space; a natural next step after Draw the Space.

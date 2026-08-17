@@ -80,7 +80,7 @@ Map Walk bridges the gap between simple pattern maps and independent navigation.
 **4. Return to the start.** Ask students to lead the group back, reading the map to retrace the route.
 
 
-## Differentiation
+## Adaptations
 
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
@@ -88,6 +88,10 @@ Map Walk bridges the gap between simple pattern maps and independent navigation.
 - **Second Map Walk**: students take turns leading the group to the next stop
 - **Small groups**: groups of 3-4 follow a route independently, stopping to identify features
 - **Individual**: students walk a route on their own and list the features they passed
+- **List the features**: have students list all the features they can identify on the map
+- **Find the checkpoints**: give students a map with 3 checkpoint circles and ask them to find all three on their own
+- **Photo Map Walk**: take photos of features and match them to map symbols back in the classroom
+- **Try Symbol-O**: find checkpoints by reading map symbols instead of looking for cones (see Related Activities tab)
 
 
 ## Tips
@@ -143,11 +147,4 @@ Map Walk bridges the gap between simple pattern maps and independent navigation.
 - How is this map different from the simple maps we used before?
 - What surprised you about what the map shows?
 - How did you keep track of where you were on the map?
-
-
-## Extensions
-
-- Symbol-O: find checkpoints by reading map symbols, not by looking for cones (see Companions)
-- Have students list all the features they can identify on the map
-- Give students a map with 3 checkpoint circles and ask them to find all three on their own
-- Photo Map Walk: take photos of features and match them to map symbols back in the classroom
+- Do you trust that the map accurately shows what's really there? Why or why not?

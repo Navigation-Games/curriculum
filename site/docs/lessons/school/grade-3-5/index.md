@@ -25,6 +25,8 @@ These lessons cover entries 6-13 (Sequential Navigation through Map Symbols) of 
 
 [**Indoor Orienteering**](./a-indoor-orienteering) is an alternative that uses a basketball court, covering lessons 3-6.
 
+[**Indoor Orienteering: Build the World**](./b-indoor-orienteering) is another alternative: groups build an indoor world with gym equipment, map it, and design and trade their own courses.
+
 ## Notes for 3-5
 
 - **Pacing adjustments:** Plan for six class periods, one per lesson. Lessons 3 through 6 often extend across two sessions. The sequence is the same regardless of pacing.

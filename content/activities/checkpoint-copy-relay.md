@@ -79,7 +79,7 @@ Orienteering maps can be very complex, and learning how to simplify and extract 
 **5. Discuss.** Announce the results and discuss strategies teams used to be successful.
 
 
-## Differentiation
+## Adaptations
 
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
@@ -87,6 +87,8 @@ Orienteering maps can be very complex, and learning how to simplify and extract 
 - **Full orienteering maps**: Use a detailed orienteering map with more features to read around.
 - **More checkpoints**: Increase the number of checkpoints per map to make the task harder.
 - **Aerial photos**: Use an aerial photo instead of a map. Students must interpret a different representation of the same space.
+- **Non-map images**: Use a plain photo or other non-map image instead of a map, to practice spatial memory without any map conventions at all.
+- **Draw key features**: Add a bonus round where teams must also draw key features, not just checkpoints, onto the blank map.
 
 
 ## Tips
@@ -120,12 +122,8 @@ Orienteering maps can be very complex, and learning how to simplify and extract 
 
 ## Reflection
 
-- Did the team who finished first score the highest? Did another team score higher on accuracy?
+- What did you look for on the map, and what did you decide you could ignore?
+- How did you make sure your blank map lined up the same way as the checkpoint map?
 - How did teams decide which checkpoints each person would draw?
 - Can anyone describe their strategy for ensuring their checkpoint was drawn correctly?
-
-
-## Extensions
-
-- Use different map types: simplified orienteering map, park map, aerial photo, or even a non-map image to practice spatial memory
-- Add a bonus round where teams must also draw key features (not just checkpoints) onto the blank map
+- Did the team who finished first score the highest? Did another team score higher on accuracy?

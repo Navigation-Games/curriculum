@@ -49,6 +49,10 @@ A picture that represents an area. Maps use symbols to show real-world features.
 
 A map you build in your mind by moving through and observing a space. Spatial memory is the ability to hold and use a mental map.
 
+#### Obstacle
+
+A feature you cannot cross, like a wall, a river, or a fence. Built worlds use everyday equipment to stand in for real obstacles: a mat might be a wall, a rope might be a river.
+
 #### Orient the map
 
 Rotate the map so it aligns with the real world: features on the left of the map are to your left, features ahead on the map are ahead of you.

@@ -18,6 +18,7 @@ interface OnePagerProps {
   delivery?: React.ReactNode;
   reflection?: string[];
   extensions?: string[];
+  adaptations?: string[];
 }
 
 export default function OnePager({
@@ -37,6 +38,7 @@ export default function OnePager({
   delivery,
   reflection,
   extensions,
+  adaptations,
 }: OnePagerProps): React.ReactElement {
   const materialsList = Array.isArray(materials) ? materials : materials ? [materials] : [];
   const variantClass = variant === 'lesson' ? styles.lesson : '';
@@ -77,6 +79,13 @@ export default function OnePager({
               </div>
             )}
 
+            {setup && (
+              <div className={styles.section}>
+                <h3 className={styles.sectionTitle}>Set-up</h3>
+                <p className={styles.sideText}>{setup}</p>
+              </div>
+            )}
+
             {steps && steps.length > 0 && (
               <div className={styles.section}>
                 <h3 className={styles.sectionTitle}>Steps</h3>
@@ -111,13 +120,6 @@ export default function OnePager({
               </div>
             )}
 
-            {setup && (
-              <div className={styles.section}>
-                <h3 className={styles.sectionTitle}>Set-up</h3>
-                <p className={styles.sideText}>{setup}</p>
-              </div>
-            )}
-
             {vocabulary && vocabulary.length > 0 && (
               <div className={styles.section}>
                 <h3 className={styles.sectionTitle}>Vocabulary</h3>
@@ -129,13 +131,21 @@ export default function OnePager({
           </div>
         </div>
 
-        {(reflection || extensions) && (
+        {(reflection || extensions || adaptations) && (
           <div className={styles.bottomRow}>
             {reflection && reflection.length > 0 && (
               <div className={styles.bottomSection}>
                 <h3 className={styles.sectionTitle}>Reflection</h3>
                 <ul className={styles.list}>
                   {reflection.map((r, i) => <li key={i}>{r}</li>)}
+                </ul>
+              </div>
+            )}
+            {adaptations && adaptations.length > 0 && (
+              <div className={styles.bottomSection}>
+                <h3 className={styles.sectionTitle}>Adaptations</h3>
+                <ul className={styles.list}>
+                  {adaptations.map((a, i) => <li key={i}>{a}</li>)}
                 </ul>
               </div>
             )}

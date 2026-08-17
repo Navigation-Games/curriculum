@@ -66,6 +66,7 @@ Compass Basics introduces students to using a compass for orienteering. Students
 ## Reflection
 
 - How did you ensure you were facing the right direction?
+- How did you take a bearing to figure out which direction a checkpoint was from you?
 - What is special about the colors on the compass needle?
 - How could a compass be helpful when orienteering?
 - Did the compass work differently when held horizontally and vertically?
@@ -77,7 +78,9 @@ Compass Basics introduces students to using a compass for orienteering. Students
 - In orienteering, the compass is primarily used to orient the map, not to take precise degree bearings. Emphasize map-setting over angle-taking for beginners.
 
 
-## Extensions
+## Adaptations
 
-- Show students how to take bearings using the compass swivel housing
-- Practice walking, jogging, or running in a straight line while staying on the correct bearing
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
+
+- **Take bearings**: show students how to take bearings using the compass swivel housing
+- **Straight-line practice**: practice walking, jogging, or running in a straight line while staying on the correct bearing

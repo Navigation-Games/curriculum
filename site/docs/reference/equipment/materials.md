@@ -209,6 +209,17 @@ Colored cloth flags or mesh vests used for team identification in competitive ac
 | **Used in** | Capture the Flag, relay activities |
 | **Learning connection** | Team identification supports territory and boundary concepts. In Capture the Flag, the boundary between territories is the strategic focus. |
 
+#### Obstacle-building equipment {#obstacle-building-equipment}
+
+Gym mats, tables, chairs, jump ropes, or other equipment on hand, used to build walls, rivers, and other obstacles indoors.
+
+| | |
+|---|---|
+| **Where to get** | PE equipment closet, gym storage, classroom furniture |
+| **Alternatives** | Cardboard boxes, hula hoops, exercise mats, painter's tape lines on the floor |
+| **Used in** | Build the World |
+| **Learning connection** | Building the obstacles first, before mapping them, reverses the usual order of orienteering and makes the map-to-world connection concrete. |
+
 #### Results whiteboard {#results-whiteboard}
 
 A large whiteboard on an easel (or paper on a clipboard) placed near start/finish for students to record their times and track which courses they have completed.

@@ -202,4 +202,21 @@
     padding-top: 0.4rem;
     margin-top: 0.25rem;
   }
+
+  /* Flexbox containers can't fragment across a print page break in Chrome:
+     if a flex row doesn't fit in the remaining page height, the whole row
+     (and everything after it) gets pushed to the next page, leaving a big
+     blank gap. Grid fragments correctly, so switch to it for print only. */
+  .body,
+  .bottomRow {
+    display: grid;
+  }
+
+  .body {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .bottomRow {
+    grid-template-columns: 1fr 1fr;
+  }
 }

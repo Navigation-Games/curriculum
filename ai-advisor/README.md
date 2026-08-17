@@ -251,6 +251,32 @@ gcloud run services update lesson-advisor `
 
 For the frontend, either paste the client ID as the fallback value of `reviewOauthClientId` in `site/docusaurus.config.ts` (client IDs are public, not secrets), or set a `REVIEW_OAUTH_CLIENT_ID` repository variable in GitHub Actions and pass it through the deploy workflow. For local dev, set `$env:REVIEW_OAUTH_CLIENT_ID` before `npm start`, and add `REVIEW_OAUTH_CLIENT_ID` to `ai-advisor/.env`.
 
+## Daily activity email (one time)
+
+A Google Apps Script bound to the advisor conversation log spreadsheet emails `president@navigationgames.org` once a day when new rows have been added (conversations, feedback, or page feedback) — a count per tab plus a link to the sheet. It stays quiet on days with no new activity. The script source is `daily-summary-email.gs` in this directory; it lives in the Sheet's Apps Script project, not in the deployed backend.
+
+### 1. Open the script editor
+
+Open the [conversation log spreadsheet](https://docs.google.com/spreadsheets/d/13P76_hPAVDDjnwJ9aazIdW-WAtGKNW5fBVD6TX1s5aY) with an account that has edit access, then **Extensions > Apps Script**.
+
+### 2. Add the script
+
+Paste the contents of `daily-summary-email.gs` into `Code.gs`, replacing the placeholder content, and save.
+
+### 3. Authorize it
+
+Select the `checkForNewActivity` function in the toolbar dropdown and click **Run** once. Approve the permission prompt (it needs to read the sheet and send email as the account running the script). This first run also records the current row counts as the baseline, so it will not immediately count all existing history as "new."
+
+### 4. Add the daily trigger
+
+In the left sidebar, click the clock icon (**Triggers**) > **Add Trigger**:
+
+- Function: `checkForNewActivity`
+- Event source: **Time-driven**
+- Type: **Day timer**, pick any time window (e.g. 6am–7am)
+
+The email is sent from whichever Google account set up the trigger. To change the recipient, edit the `RECIPIENT` constant at the top of the script.
+
 ## Redeploying after changes
 
 Any time you change `app.py`, `system-prompt.md`, or `requirements.txt`, or want the advisor to pick up a regenerated `site-map.md` (rebuilt by `scripts/build-content.js` and appended to the system prompt at startup), you need to rebuild the container image and redeploy. The live advisor does not change on `git push`. Both steps are required. Run from the `ai-advisor/` directory in PowerShell:

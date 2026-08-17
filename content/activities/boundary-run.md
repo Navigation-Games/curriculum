@@ -79,7 +79,7 @@ Builds listening skills, safety awareness, and familiarity with the play space. 
    Long: If there are gardens or other off-limits areas within the boundary, ask whether participants should go there even though it is technically "inside"
 
 
-## Differentiation
+## Adaptations
 
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
@@ -88,6 +88,7 @@ Builds listening skills, safety awareness, and familiarity with the play space. 
 - **For speed**: repeat the boundary at a faster pace
 - **Different movements**: skip, gallop, or hop along the boundary instead of running
 - **Why it matters**: discuss why boundaries are important (safety, respect)
+- **Play a boundary game**: try Hot or Cold, Shrinking Boundary Tag, or Capture the Flag (see Related Activities tab)
 
 
 ## Tips
@@ -134,60 +135,23 @@ b. If there are off-limits areas within the boundary, ask if they should go ther
 ## Reflection
 
 - What does boundary mean?
+- How did you know whether something was inside or outside the boundary?
+- Why might an area be off-limits even though it's inside the boundary? (Example: a garden)
 - How can crossing the boundary be dangerous?
 - What are some things we see every day that mark boundaries? (Fences, curbs, signs, etc.)
 - What are some examples of non-physical boundaries? (Personal, emotional)
-
-
-## Extensions
-
-- Repeat the boundary for speed
-- Travel the boundary with different locomotor movements (skipping, galloping, etc.)
-- Play Hot or Cold, Shrinking Boundary Tag, or Capture the Flag (see Companions tab)
 
 
 ## Companions
 
 ### Hot or Cold *(extension)*
 
-**Use "hot or cold" clues to direct a partner to a secret location.**
-
-One partner secretly picks a location. The other partner searches while the first gives temperature clues: "warmer" as they get closer, "colder" as they move away. Both partners must stay inside the boundary at all times. Swap roles when the cone is found. Increase difficulty by choosing two or three secret cones.
-
-Reinforces communication, listening, and spatial awareness within the boundary.
-
-| | |
-|---|---|
-| **Time** | 10-15 minutes |
-| **Materials** | Cones placed in a regular pattern (rectangular or triangular grid) |
-| **How to run it** | Pair up. One partner secretly picks a location. The other searches using "hot or cold" clues. Both stay inside the boundary. Swap when found. Increase to 2-3 secret locations for more challenge. |
+One partner picks a secret spot and gives "warmer/colder" clues while the other searches for it, both staying inside the boundary. Reinforces communication and spatial awareness within the boundary. Takes 10-15 minutes with cones set out in a grid; pair up, swap roles when found, and add a second or third secret cone for more challenge.
 
 ### Shrinking Boundary Tag *(extension)*
 
-**Play tag while the boundary gets smaller.**
-
-Set up cones in concentric circles or use landmarks to define progressively smaller play areas. Play any tag variant (freeze tag, zombie tag, blob tag). Every few minutes, shrink the boundary. Participants who end up outside the new boundary face the tag consequence (frozen, become a zombie, etc.).
-
-Reinforces boundary awareness while adding physical challenge and fun.
-
-| | |
-|---|---|
-| **Time** | 10-15 minutes |
-| **Materials** | Cones arranged in concentric circles or progressively smaller areas |
-| **How to run it** | Play tag within the boundary. Every few minutes, announce the boundary is shrinking and give a 10-second countdown. Anyone outside the new boundary gets the tag consequence. Continue until playing within the smallest area. |
+Play any tag variant while the boundary shrinks every few minutes; anyone caught outside the new boundary faces the tag consequence. Reinforces boundary awareness with added physical challenge. Takes 10-15 minutes with cones arranged in concentric circles; announce a 10-second countdown each time the boundary shrinks, continuing until playing within the smallest area.
 
 ### Capture the Flag *(extension)*
 
-**Two teams, two territories, one flag each.**
-
-Divide the play area into two territories with a clear boundary line between them. Each team hides a flag in their territory. Teams try to cross into the other territory, grab the flag, and bring it back without getting tagged. Players tagged in the opposing territory go to a designated "jail" until freed by a teammate.
-
-Reinforces boundary awareness by giving boundaries a strategic purpose: crossing into the other team's territory means risk.
-
-| | |
-|---|---|
-| **Time** | 15-20 minutes |
-| **Materials** | Cones to mark the dividing line, 2 flags (or pinnies/bandanas) |
-| **How to run it** | Split the space in half. Each team hides their flag. Players cross into enemy territory to grab the flag and return it to their side. Tagged players go to jail. Freed by a teammate's tag. First team to capture the flag wins. |
-
-Once students can read a map, try [Capture the Flag-O](../capture-the-flag-o): the same game with flags at mapped locations.
+Two teams defend territories on either side of a boundary line and try to steal each other's flag without getting tagged. Reinforces boundary awareness by giving the boundary a strategic purpose. Takes 15-20 minutes with a dividing line and 2 flags; tagged players go to a "jail" until freed by a teammate. Once students can read a map, try [Capture the Flag-O](../capture-the-flag-o), the same game with flags at mapped locations.

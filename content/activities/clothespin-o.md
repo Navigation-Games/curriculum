@@ -71,16 +71,18 @@ Participants search for small objects hidden throughout the space. This activity
 
 **6. Variations.** Once all treasures are collected, move to partner or map variations.
 
-## Differentiation
+## Adaptations
 
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 - **Teacher hides (simplest)**: teacher hides clothespins before the session. Students search and report where they found them
 - **Traveling Pairs**: one partner hides, then travels with the finder giving only "warmer/colder" or "north/south/east/west" clues
 - **Limit the clues**: restrict what the hider can say (e.g., one feature word and one describing word: "under bench")
-- **Picture/Map Treasure Hunt**: draw a map of the space. Students mark where they found their treasure on the map
+- **Picture/Map Treasure Hunt**: draw a map of the space. Students mark where they found their treasure on the map. For a harder version, have students hide their own treasures and draw the locations for a partner to find
 - **Finders Keepers**: hide a single treasure. Narrow the search area over time. Whoever finds it gets to hide it next
-- **Treasure Collectors**: one student hides a treasure for every other student. The class must work together so each person collects exactly one piece
+- **Treasure Collectors**: one student hides one treasure per classmate. The class must work together so each person collects exactly one. Challenge: can they do it without talking?
+- **Personal Treasure Hunt**: write each student's name on a clothespin, hide them all. Students search for their own treasure. If they find someone else's, they help that person find it
+- **Team Treasure Hunt**: divide treasures into color-coded groups. Teams race to find all their treasures before the other team
 
 ## Tips
 
@@ -132,16 +134,10 @@ Participants search for small objects hidden throughout the space. This activity
 ## Reflection
 
 - What made a good hiding place?
+- Why is it important to follow the search rules carefully, like staying in the boundary and putting objects back where you found them?
 - What makes a picture or map easy to understand? What makes it hard?
 - What hints make the game more fun? What hints make the game less fun?
 - How did you communicate with your partner about where the clothespin was?
 - What strategies did you use to find the treasures?
 - What makes a good helper? What is the difference between doing something for someone and helping them do it themselves?
 - How do we share so that everyone gets a chance to have fun?
-
-## Extensions
-
-- Personal Treasure Hunt: write each student's name on a clothespin, hide them all. Students search for their own treasure. If they find someone else's, they help that person find it
-- Team Treasure Hunt: divide treasures into color-coded groups. Teams race to find all their treasures before the other team
-- Treasure Collectors: one student hides one treasure per classmate. The class must work together so each person collects exactly one. Challenge: can they do it without talking?
-- Increase the difficulty of the map version by having students hide their own treasures and draw the locations for a partner to find

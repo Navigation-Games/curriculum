@@ -107,28 +107,23 @@ Adds energy and competition to symbol learning while building teamwork and commu
 ## Reflection
 
 - How did you memorize the symbols?
+- Did your team make a plan before starting? What was it?
 - What was the hardest part about matching each symbol?
 - If you made any mistakes, how did your team work together to fix them?
 - Could you have worked better as a team? How?
 
 
-## Extensions
+## Adaptations
 
-- Use control description pictograms instead of map symbols (see Description Relay below)
-- Time the relay and challenge teams to beat their own time in a second round
-- Have one team member be the "coach" who can shout hints but not run
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
+
+- **Try Description Relay**: use control description pictograms instead of map symbols (see Related Activities tab)
+- **Timed**: time the relay and challenge teams to beat their own time in a second round
+- **Coach role**: have one team member be the "coach" who can shout hints but not run
 
 
 ## Companions
 
 ### Description Relay *(variation)*
 
-**Same relay, but with control description pictograms instead of map symbols.**
-
-Run exactly like Symbol Relay, except the cards show control description pictograms: the standardized picture language of the International Orienteering Federation (IOF) that describes checkpoint locations at competitions (a boulder, a path junction, the north side of a fence). Good for groups that already know the basic map symbols and are ready for the next layer of orienteering literacy.
-
-| | |
-|---|---|
-| **Time** | Same as Symbol Relay |
-| **Materials** | Symbol Relay setup, with pictogram cards in place of map symbol cards |
-| **How to run it** | Same as Symbol Relay. Introduce a few pictograms before the first round so teams are not guessing blind. |
+Run exactly like Symbol Relay, but the cards show control description pictograms (the IOF's standardized picture language for checkpoint locations) instead of map symbols. Good for groups that already know the basic map symbols and are ready for the next layer of orienteering literacy. Introduce a few pictograms before the first round so teams aren't guessing blind.

@@ -506,6 +506,8 @@ function validate(slug, { fm, sections, goals, vocabulary }, type, errors, warni
     if (!sections.goals) err("Missing required section: ## Goals");
     if (!sections.steps) warn("No '## Steps' section");
     if (!sections.delivery) warn("No '## Delivery' section (needed for one-pager)");
+    if (!sections.adaptations) warn("No '## Adaptations' section");
+    if (!sections.reflection) warn("No '## Reflection' section (needed for one-pager and Reflection tab)");
     if (goals.items.length === 0) err("No goals found in ## Goals section");
     if (vocabulary.length === 0) warn("No vocabulary terms found in ## Vocabulary");
   }
@@ -644,6 +646,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   L.push('---');
   L.push(`title: "${escAttr(activityTitle)}"`);
   L.push(`sidebar_label: ${fm.title}`);
+  L.push(`description: "${escAttr(fm.tagline)}"`);
   // Content headings live inside Tabs panels, so TOC anchors point at hidden
   // content and cannot scroll. The tabs themselves are the page navigation.
   L.push('hide_table_of_contents: true');
@@ -761,9 +764,16 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
     }
     L.push('');
   }
-  if (sections.differentiation) { L.push('### Differentiation'); L.push(''); L.push(sections.differentiation); L.push(''); }
+  if (sections.adaptations) { L.push('### Adaptations'); L.push(''); L.push(sections.adaptations); L.push(''); }
   if (sections.tips) { L.push('### Tips'); L.push(''); L.push(sections.tips); L.push(''); }
   L.push('</TabItem>');
+
+  if (sections.reflection) {
+    pushTabOpen('reflection', 'Reflection');
+    L.push(sections.reflection);
+    L.push('');
+    L.push('</TabItem>');
+  }
 
   if (sections.script) {
     pushTabOpen('script', 'Script');
@@ -781,17 +791,10 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   L.push('');
   L.push('</TabItem>');
 
-  if (sections.context) {
-    pushTabOpen('context', 'Context');
-    L.push(sections.context);
-    L.push('');
-    L.push('</TabItem>');
-  }
-
-  if (sections.companions) {
-    pushTabOpen('companions', 'Related Activities');
-    L.push(sections.companions);
-    L.push('');
+  if (sections.context || sections.companions) {
+    pushTabOpen('related', 'Related Activities');
+    if (sections.context) { L.push(sections.context); L.push(''); }
+    if (sections.companions) { L.push(sections.companions); L.push(''); }
     L.push('</TabItem>');
   }
 
@@ -864,7 +867,7 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
   // the main reason activity one-pagers overflowed onto a second page.
 
   emitStringArray(L, 'reflection', sections.reflection);
-  emitStringArray(L, 'extensions', sections.extensions);
+  emitStringArray(L, 'adaptations', sections.adaptations);
 
   L.push('/>');
   L.push('');
@@ -1132,9 +1135,12 @@ function materialKey(name) {
 
 function emitStringArray(L, prop, sectionText) {
   if (!sectionText) return;
+  // The one-pager renders each item as plain text (no markdown), so strip
+  // any inline **bold** markers carried over from the full-page version.
   const items = sectionText.split('\n')
     .filter(l => l.startsWith('- '))
-    .map(l => l.slice(2).trim());
+    .map(l => l.slice(2).trim())
+    .map(l => l.replace(/\*\*(.+?)\*\*/g, '$1'));
   if (items.length) {
     L.push(`  ${prop}={[`);
     for (const item of items) L.push(`    '${escSingleQuote(item)}',`);

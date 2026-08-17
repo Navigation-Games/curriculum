@@ -96,11 +96,11 @@ Score-O is a bridge between structured courses (where checkpoints are visited in
 **6. Scoring.** Count correct codes. Only checkpoints with the right letter code count. The winner is whoever finds the most checkpoints. Ties are broken by whoever finished fastest.
 
 
-## Differentiation
+## Adaptations
 
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
-### Who does the setup?
+#### Who does the setup?
 
 You can choose how much of the setup students do themselves. The more they do, the more map reading they practice, because each step forces them to connect the map to the terrain. Start as early in the list as your group can handle. Even younger students benefit from choosing their own checkpoint locations.
 
@@ -109,12 +109,23 @@ You can choose how much of the setup students do themselves. The more they do, t
 3. **Students copy the map.** The teacher places the markers. Students copy the checkpoint circles from the all-checkpoints map onto their own maps.
 4. **Teacher prepares everything**, including printed maps. Students just navigate.
 
-### Difficulty
+#### Difficulty
 
 - **First time**: pairs, short time limit (8 minutes), fewer checkpoints
 - **Experienced**: individual, longer time limit, more checkpoints spread further apart
 - **Advanced**: assign different point values to harder-to-find checkpoints (further away or harder to navigate to)
 - **Competitive**: compare scores; fastest time as tiebreaker
+
+#### More ways to play
+
+- **Second round**: do a second round with the same map to see if scores improve
+- **Design for a partner**: have students design their own Score-O course for classmates to run
+- **Navigate by memory**: leave the map at the start and return to check it as needed
+- **Pairs races**: one team finds odds, the other finds evens
+- **Late penalty**: dock points for finishing after the time limit (see Tips for options)
+- **Poker-O**: collect the best poker hand at checkpoints (see Related Activities tab)
+- **Poison-O**: some checkpoints are poison and cost points (see Related Activities tab)
+- **Vampire-O**: vampire teams chase and tag others (see Related Activities tab)
 
 
 ## Tips
@@ -172,20 +183,8 @@ You can choose how much of the setup students do themselves. The more they do, t
 - Did you change your plan once you started? Why?
 - Which checkpoints were hardest to find?
 - How did you use the map to navigate between checkpoints?
+- How did you manage your time to make sure you got back before time ran out?
 - If you did it again, what would you do differently?
-
-
-## Extensions
-
-- Assign point values (further checkpoints worth more)
-- Late penalty: lose 1 point per minute past the time limit
-- Do a second round with the same map to see if scores improve
-- Have students design their own Score-O course for classmates
-- Leave the map at the start and return to check it as needed (navigation by memory)
-- Pairs races: one team finds odds, the other team finds evens
-- Poker-O: each checkpoint has a playing card; collect the best poker hand
-- Poison-O: some checkpoints are "poison" and cost points; rewards careful map reading
-- Vampire-O: vampire teams chase the others; if tagged, you lose your punch card and become a vampire
 
 
 ## Companions
@@ -194,32 +193,16 @@ You can choose how much of the setup students do themselves. The more they do, t
 
 <img src="/curriculum/img/activities/poker-o.png" alt="A royal flush of hearts: 10, jack, queen, king, ace" width="170" style={{float:'right', margin:'0 0 0.5rem 1rem'}} />
 
-**Collect the best poker hand by visiting checkpoints with playing cards.**
-
-Each checkpoint has a playing card attached. Students visit checkpoints and record the card. After the time limit, the best poker hand wins. Adds a layer of strategy since students must decide whether to visit more checkpoints (more cards) or be selective about which ones to visit.
-
-| | |
-|---|---|
-| **Time** | 15-30 minutes |
-| **Materials** | Score-O setup, plus a playing card at each checkpoint |
-| **How to run it** | Same as Score-O, but students record the playing card instead of a letter code. Best poker hand wins. Ties broken by number of checkpoints visited. |
+Each checkpoint has a playing card instead of a letter code; the best poker hand wins. Adds a layer of strategy since students must decide whether to visit more checkpoints (more cards) or be selective. Takes 15-30 minutes with a playing card at each checkpoint; ties are broken by number of checkpoints visited.
 
 ### Poison-O *(extension)*
 
-**Wrong checkpoints cost points. Rewards careful map reading.** See the full [Poison-O](../poison-o) activity page.
+Wrong checkpoints cost points, rewarding careful map reading. See the full [Poison-O](../poison-o) activity page.
 
 ### Vampire-O *(extension)*
 
-**Score-O with a chase: vampire teams tag others and take their punch cards.** See the full [Vampire-O](../vampire-o) activity page.
+Score-O with a chase: vampire teams tag others and take their punch cards. See the full [Vampire-O](../vampire-o) activity page.
 
 ### Reverse Score-O *(variation)*
 
-**The map does not show the checkpoints. Find them on the ground and mark where they are on the map.**
-
-Students receive a blank map (features and landmarks shown, no checkpoint circles). They explore the area to find checkpoint markers, and at each one they mark its location on the map as precisely as possible, recording the checkpoint code next to the circle. Afterward, everyone compares their marked maps to the all-checkpoints map. This reverses the usual direction of navigation and deepens the connection between map and terrain.
-
-| | |
-|---|---|
-| **Time** | 15-20 minutes per round |
-| **Materials** | Blank orienteering maps (no circles), placed checkpoint markers, pencils, all-checkpoints map for verification |
-| **How to run it** | Demo one checkpoint together ("Where is this on the map? What feature is it near?"). Pairs find checkpoints and mark them. Gather and verify against the all-checkpoints map, then discuss which were hardest to place. |
+The map shows no checkpoints. Students find checkpoint markers on the ground and mark their locations on a blank map instead, then compare against the all-checkpoints map. Reverses the usual direction of navigation and deepens the connection between map and terrain. Takes 15-20 minutes per round; demo one checkpoint together first, then discuss which were hardest to place when gathering to verify.

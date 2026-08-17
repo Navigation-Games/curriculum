@@ -80,13 +80,15 @@ Line-O develops precision in map reading. A line is drawn on the map, and partic
 
 - How did you make sure you stayed on the line?
 - Were there parts where you went off the line? How did you know?
-- Can you point to the checkpoint locations you found on the map?
+- How would you describe where each checkpoint was located, using the terrain around it?
 - What helped you navigate most accurately?
 
 
-## Extensions
+## Adaptations
 
-- Add timing for a competitive version
-- Make the course harder with fewer obvious features
-- Use more or fewer checkpoint locations
-- Do it solo
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
+
+- **Timed**: add timing for a competitive version
+- **Fewer obvious features**: make the course harder with fewer obvious features
+- **Checkpoint count**: use more or fewer checkpoint locations
+- **Solo**: do it individually instead of in pairs

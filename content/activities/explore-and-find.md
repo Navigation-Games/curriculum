@@ -82,7 +82,7 @@ Bridges the gap between learning the boundary (Boundary Run) and navigating a st
    Long: Test their memory with specific challenges. "Run to the Lion and back to the Finish!" "Run to the Octopus then the Dog and back!"
 
 
-## Differentiation
+## Adaptations
 
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
@@ -151,18 +151,10 @@ Bridges the gap between learning the boundary (Boundary Run) and navigating a st
 - How did you remember where the boundary was when you were exploring?
 - Which animals did you find?
 - How did you remember where the animals were?
+- How did you describe where an animal was to the group?
+- What helped you get back to the Finish marker quickly when you heard the signal?
 - How did other students help you?
 - Give examples of other boundaries.
-
-
-## Extensions
-
-- Animal Parade: visit each animal together as a group, moving like that animal to the next one (waddle like a penguin, stomp like an elephant). Builds familiarity with the space before free exploration.
-- Quick find: go find one or two animals and come back. Students return on their own instead of waiting for a signal. Good for younger groups or a first round.
-- Report and repeat: kids come back after finding one or two animals, describe what they found to the teacher, then head back out at their own pace
-- Memory Challenge: challenge participants to run to specific animals in order, like "Run to the Lion and back to the Finish!" or "Run to the Octopus, then the Dog, then back!"
-- Pair challenges: partners give each other sequences of animals to visit and check each other
-- Draw a map: have participants draw a map of the area and checkpoint locations
 
 
 ## Context

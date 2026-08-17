@@ -97,24 +97,25 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 4. Return to the finish after the last checkpoint
 
 
-## Differentiation
+## Adaptations
 
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
-- **5-animal clue sheet**: learn the format with a standard course
 - **For speed**: repeat the same course and beat your previous time
 - **From memory**: put the clue sheet away and try to complete the course
-- **Different sheet**: try a new 5-animal sequence so memorized routes don't help. There are six different 5-animal courses in the kit
+- **Different sheet**: try a new 5-animal sequence. There are six different 5-animal courses in the kit
+- **New locations**: move the checkpoints to new spots and start over, so a memorized route stops helping
 - **10-animal clue sheet**: for pairs who finish all six 5-animal courses
 - **Solo**: if students started in pairs, try it individually
+- **Track times**: log course completions or times on a whiteboard for friendly competition and a sense of progress
 - **Animal Relay**: in small teams, students take turns running to a named animal checkpoint and back. The caller says an animal name; the runner finds it and returns. Tests spatial memory and adds competitive energy. Good as a closer after students have learned the checkpoint locations.
-- **Draw and guess**: as an optional deeper add-on after the courses, each student draws the space from memory and circles the location of one animal (without naming it). A partner reads the drawing and guesses which animal it is. Can a fellow student read your map well enough to know? A first taste of map making and map reading in one step.
+- **Draw and guess**: as an optional deeper add-on after the courses, each student draws the space and circles the location of one animal (without naming it). A partner reads the drawing and guesses which animal it is. Can a fellow student read your map well enough to know? A first taste of map making and map reading.
 
 
 ## Tips
 
 - Make sure students check the animal at each checkpoint, not just run to the nearest cone
-- If students are struggling, start with Explore & Find (see Companions tab)
+- If students are struggling, start with Explore & Find (see Related Activities tab)
 - Moving checkpoints to new locations resets the challenge and prevents memorizing a route
 
 
@@ -161,32 +162,21 @@ e. Pairs who finish all six 5-animal sheets get a 10-animal sheet
 ## Reflection
 
 - What do you like most about orienteering so far?
-- What helped you get faster?
+- How did the clue sheet help you know what order to visit checkpoints?
+- Why do you check the animal at each checkpoint instead of just running to the nearest cone?
 - What was the hardest part of this activity? Why?
 - How did you remember where the animals are?
-- Were some courses easier/harder? Why?
+- What helped you move quickly and safely as you changed direction between checkpoints?
 - How did you work together? What strategies did you use to be successful as a team?
-
-
-## Extensions
-
-- Track course completion or times on a whiteboard
-- Move the checkpoints to new locations and start over
-- Have students draw a map of the area and checkpoint locations
 
 
 ## Companions
 
-### [Explore & Find](/activities/core/explore-and-find) *(readiness)*
+### Before This Activity
 
-**In pairs, explore to find animal checkpoints without a set order.**
+- [Boundary Run](/activities/core/boundary-run): participants should know the boundary before playing Animal-O
+- [Explore & Find](/activities/core/explore-and-find) *(readiness)*: a less structured warm-up where pairs explore to find animal checkpoints without a set order or clue sheet. Use it if students need to get familiar with the space and checkpoint format first
 
-A less structured version of Animal-O. Students explore freely within the boundary to find animal checkpoints and report back what they found. No clue sheet, no required order.
+### Leads To
 
-Use this before Animal-O if students need to get familiar with the space and the checkpoint format first. See the [full activity page](/activities/core/explore-and-find) for details.
-
-| | |
-|---|---|
-| **Time** | 5-10 minutes |
-| **Materials** | Same setup as Animal-O |
-| **How to run it** | Pair up. Explore within the boundary to find animal checkpoints. Return on the gathering signal. Report what you found and where. |
+- [Geometric-O](/activities/core/geometric-o): the next step, reading a simple pattern map instead of following a clue sheet

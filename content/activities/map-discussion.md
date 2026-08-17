@@ -78,10 +78,13 @@ Map Discussion is a guided group activity where participants examine an orientee
 
 - What was one symbol you learned to recognise?
 - How was this map different from maps you've seen before?
+- How did you match something you saw in real life to a symbol on the map?
 - Could you figure out where you were just by using the map and the landmarks?
 
 
-## Extensions
+## Adaptations
 
-- Have them draw their own simple map using symbols for things they see.
-- If you haven't already, try the symbol relay activity.
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
+
+- **Draw your own map**: have them draw their own simple map using symbols for things they see
+- **Symbol Relay**: if you haven't already, try the [Symbol Relay](../symbol-relay) activity next

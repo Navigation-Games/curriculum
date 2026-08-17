@@ -84,16 +84,23 @@ The underlying themes are teamwork, communication, and memory. Partners must str
 
 ## Reflection
 
-- Did your partner visit the correct checkpoints?
+- How did you orient your map before heading to a checkpoint?
+- How did you plan your route to the checkpoint and back?
+- What strategy did you and your partner use to decide who ran which checkpoint?
+- How did you move safely and confidently through open areas?
+- Did your partner visit the correct checkpoints? What feedback did you give them?
 - How did you use the time while your partner was running?
 
 
-## Extensions
+## Adaptations
 
-- Leave the map at the start; runners must memorize which checkpoint to visit. The runner reports back to their partner the checkpoint code or animal to check they went to the correct place
-- Have each pair visit two checkpoints per turn instead of one
-- Add timing for a competitive element
-- Use electronic timing
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
+
+- **Navigate by memory**: leave the map at the start; runners must memorize which checkpoint to visit, then report the checkpoint code or animal to their partner to confirm they went to the right place
+- **Two checkpoints per turn**: have each pair visit two checkpoints per turn instead of one
+- **Timed**: add timing for a competitive element
+- **Electronic timing**: use electronic timing to track completion times
+- **Try Compass Spider**: add whited-out map sections that require compass navigation (see Related Activities tab)
 
 
 ## Companions

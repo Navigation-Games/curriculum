@@ -81,14 +81,15 @@ The tag layer adds urgency and drama to map navigation. Students must keep readi
 8. Reflect together
 
 
-## Differentiation
+## Adaptations
 
-Ways to adjust the challenge or keep the game fresh:
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 - **Fewer vampires and more protection items** (holy water jugs, wooden crosses, garlic necklaces) make the game gentler for younger or newer groups
 - **More vampires** raise the pressure for experienced groups
 - **Night Vampire-O** (a camp favorite): play after dark with red flashlights and reflective tape on the checkpoints. Navigation by flashlight transforms familiar terrain
 - **Rule negotiation**: let students propose rule changes between rounds and test them
+- **Electronic timing**: use electronic timing to track checkpoint visits
 
 
 ## Tips
@@ -110,14 +111,9 @@ Ways to adjust the challenge or keep the game fresh:
 
 ## Reflection
 
-- What did you learn from the game?
-- What did you like or dislike about the game?
-- Do you think we can make the game better?
-- What skills do you think you improved during this game?
-
-
-## Extensions
-
-- Adjust the rules between rounds to keep the activity fun and competitive
-- Play at night with red flashlights and reflective checkpoint markers (camps)
-- Use electronic timing
+- How did you use the map symbols to find checkpoints while avoiding vampires?
+- How did you confirm you were at the right checkpoint, even while distracted by the chase?
+- What words did you use to describe where a checkpoint or a vampire was?
+- How did you and your partner work together and help each other?
+- What feedback did you give your partner during the game?
+- What did you like or dislike about the game? Do you think we can make it better?

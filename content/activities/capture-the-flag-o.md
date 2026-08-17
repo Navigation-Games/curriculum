@@ -67,12 +67,15 @@ Because the teams place their own flags using the map, setup itself is a map-rea
 7. Rules can be changed or negotiated between rounds
 
 
-## Differentiation
+## Adaptations
+
+*Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 - **Fewer flags and a smaller field** shorten the game for younger groups
 - **More flags spread wider** reward map reading over raw speed
 - **No-tag zones** around flags give slower players a fair chance to grab one
 - **Let teams choose their own flag locations** and mark them on a blank map for the other team: a course-setting exercise inside the game
+- **Eliminate territories**: flag locations are intermingled across the whole field, and you are safe while standing at a checkpoint
 
 
 ## Tips
@@ -93,11 +96,6 @@ Because the teams place their own flags using the map, setup itself is a map-rea
 ## Reflection
 
 - What strategies helped you work together?
+- What movements helped you dodge, flee, or escape being tagged?
 - What rules could we change to make a fun variation?
 - What map features were your team's flags at?
-
-
-## Extensions
-
-- Eliminate territories: flag locations are intermingled across the whole field, and you are safe while standing at a checkpoint
-- Students make their own map or design their own flag locations for the next round

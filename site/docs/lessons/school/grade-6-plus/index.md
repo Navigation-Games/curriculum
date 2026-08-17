@@ -23,6 +23,8 @@ import ActivityLink from '@site/src/components/ActivityLink';
 
 These lessons cover entries 6-21 (Sequential Navigation through Score-O) of the [Navigation Games skill and concept sequence](https://navigation-games.github.io/curriculum/reference/frameworks/skill-concept-sequence/), with emphasis on 16-20 (Navigation with Maps). Communication (#36-41) and Individual Development (#42-45) are woven throughout, especially debrief and self-assessment. Compass skills (#22-25) can be added as extensions or in follow-up sessions.
 
+[**Indoor Orienteering: Build the World**](./b-indoor-orienteering) is an alternative: groups build a world with gym equipment and map it, or build a world from a peer's map, then compare which direction revealed more mistakes.
+
 ## Notes for 6+
 
 - **Pacing adjustments:** Plan for six class periods, one per lesson. Lesson 1 covers material that takes K-2 students several weeks. The pace is fast because older students can handle multiple concepts in a single session.
