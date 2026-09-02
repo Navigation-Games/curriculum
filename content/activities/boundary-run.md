@@ -9,7 +9,7 @@ time: Walk the boundary + 5 min discussion
 space: Gym, schoolyard, or local park
 materials:
   - Cones (optional, for marking boundaries)
-setup: If using artificial boundaries, place cones ahead of time
+setup: If using artificial boundaries, place cones on the boundary ahead of time
 images:
   - src: /curriculum/img/activities/boundary-run.png
     alt: Boundary Run setup diagram showing a play area with red arrows tracing the boundary
