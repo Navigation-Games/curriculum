@@ -465,7 +465,7 @@ describe('generateLessonMDX', () => {
   it('converts delivery activity links to ActivityLink popovers in full view', () => {
     const mdx = generateLessonMDX('1-boundary', parsed);
     const fullSection = mdx.split('<FullOnly>')[1].split('</FullOnly>')[0];
-    assert.ok(fullSection.includes('<ActivityLink slug="boundary-run"><strong>Boundary Run</strong></ActivityLink>'));
+    assert.ok(fullSection.includes('<ActivityLink slug="boundary-run" name="Boundary Run"><strong>Boundary Run</strong></ActivityLink>'));
     assert.ok(mdx.includes("import ActivityLink from '@site/src/components/ActivityLink';"));
   });
 
@@ -496,14 +496,14 @@ describe('activityLinkify', () => {
   it('converts a plain activity link', () => {
     assert.equal(
       activityLinkify('[Gathering](/activities/core/gathering)'),
-      '<ActivityLink slug="gathering">Gathering</ActivityLink>'
+      '<ActivityLink slug="gathering" name="Gathering">Gathering</ActivityLink>'
     );
   });
 
   it('converts a bold activity link, emitting <strong>', () => {
     assert.equal(
       activityLinkify('[**Score-O**](/activities/core/score-o/)'),
-      '<ActivityLink slug="score-o"><strong>Score-O</strong></ActivityLink>'
+      '<ActivityLink slug="score-o" name="Score-O"><strong>Score-O</strong></ActivityLink>'
     );
   });
 
