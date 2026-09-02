@@ -20,3 +20,4 @@ The Navigation Games curriculum draws on orienteering-specific frameworks from O
 - **[Social-Emotional Learning](social-emotional-learning)** - How orienteering develops independence, resilience, collaboration, and other SEL competencies (CASEL framework)
 - **[SEL Program Quality Assessment](sel-pqa)** - Mapping the curriculum to the Forum for Youth Investment's SEL PQA observation rubric, used by ACA and other program evaluators
 - **[Leave No Trace](leave-no-trace)** - Outdoor ethics and orienteering's relationship to trail use
+- **[MA Vision of a Graduate](ma-vision-of-a-graduate)** - Alignment with the Massachusetts Vision of a Graduate's six skills and competencies
