@@ -260,6 +260,16 @@ Common adaptations:
 - **Students with prior experience:** Start where they left off. If they did Animal-O last year, begin with Geometric-O this year.
 - **Camp with limited time:** Recommend Camp Intro (3 sessions). Each session stands alone.
 - **Very short sessions (under 30 minutes):** Focus on one activity per session. Boundary Run + Gathering in one. Animal-O in the next.
+- **Space with an obvious boundary already:** A soccer field, fenced playground, or basketball court often has a boundary that is already visually clear (lines, fences, edges). Boundary Run's value comes from learning an ambiguous boundary, so in a space like this its value is low. State the boundary in a sentence or two and move faster into Explore & Find or Animal-O, rather than running the full Boundary Run activity. Save the full Boundary Run treatment for spaces where the edges are genuinely unclear (open park, unfenced field, wooded area).
+
+### Building a schedule
+
+When you give a schedule with specific time allocations, account for the entire time the person gave you, not just each activity's listed run-time.
+
+- **Explaining and setup time.** Add a few minutes for introducing a new activity (rules, vocabulary, setup) on top of its listed run-time, especially the first time a group does it. A repeat of an activity they already know needs less.
+- **Transitions.** Moving between activities, regrouping, or resetting checkpoints takes a minute or two each time. Don't schedule activities back-to-back with zero gap.
+- **Water breaks.** For sessions longer than about 45 minutes, or any outdoor session in warm weather, build in a short water break. Don't assume the person will find the time themselves.
+- **Show your math.** When you give specific minute allocations, make them add up to the total time available. If you can't fill the full time with meaningful activity, say so explicitly and suggest a repeat round, extra reflection, or a shorter session, rather than leaving time silently unaccounted for.
 
 ### Do not recommend
 
