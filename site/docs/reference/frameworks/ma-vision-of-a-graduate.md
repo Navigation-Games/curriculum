@@ -19,7 +19,7 @@ Orienteering is applied spatial reasoning and geometry. Students read scale, mea
 
 *Examining information to draw connections, question assumptions, infer meaning, and shape solutions.*
 
-[Route Choice](/lessons/school/grade-6-plus/lesson-3), taught explicitly in the grade 6+ curriculum, asks students to compare paths and weigh tradeoffs. When a checkpoint does not match what a student expected, the curriculum treats that as information, not failure: the student has to re-check their map orientation, re-read the terrain, and revise their plan. [Score-O](/activities/core/score-o) adds a strategic layer, where students decide which checkpoints they have time to reach and choose the order in which they visit them.
+Students choose their own path between checkpoints from their very first activity, comparing options and weighing tradeoffs long before the skill has a name. The grade 6+ curriculum gives it one explicitly, in the [Route Choice](/lessons/school/grade-6-plus/lesson-3) lesson. When a checkpoint does not match what a student expected, the curriculum treats that as information, not failure: the student has to re-check their map orientation, re-read the terrain, and revise their plan. [Score-O](/activities/core/score-o) adds a strategic layer, where students decide which checkpoints they have time to reach and choose the order in which they visit them.
 
 ## Contributors
 
