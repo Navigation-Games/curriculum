@@ -55,3 +55,4 @@ Vague directions do not work in orienteering. Telling a partner "it's over there
 
 - [Vision of a Massachusetts Graduate](https://www.mass.gov/info-details/vision-of-a-massachusetts-graduate) - Mass.gov
 - [Healey-Driscoll Administration Releases Vision of a Massachusetts High School Graduate](https://www.mass.gov/news/healey-driscoll-administration-releases-vision-of-a-massachusetts-high-school-graduate)
+- [Governor Healey Releases Final Recommendations to Modernize High School Graduation Requirements](https://www.mass.gov/news/governor-healey-releases-final-recommendations-to-modernize-high-school-graduation-requirements)
