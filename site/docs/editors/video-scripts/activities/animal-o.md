@@ -34,7 +34,7 @@ A teacher how-to that complements the instructors video. Format follows the plan
 | Time | Section | Footage | Narration |
 |---|---|---|---|
 | 3-5 sec | Intro | Common intro used for all NG instructor videos | |
-| 0:00-0:12 | Objective | Instructors video: kids at checkpoints | "In Animal-O, kids use a clue sheet to visit checkpoints in order. The skills in this activity are going in the right sequence, checking codes, and building a mental map." |
+| 0:00-0:12 | Objective | Instructors video: kids at checkpoints | "In Animal-O, kids use a clue sheet to visit checkpoints in order. The skills in this activity are observation, sequencing, checking codes, and building a mental map." |
 | 0:12-0:27 | Set up | Slide diagram: animal checkpoints inside a boundary, start/finish. Photo: fanned clue sheets | "Place animal checkpoints inside your boundary, plus a start and finish. You'll need animal clue sheets." |
 | 0:27-0:55 | How to play | Slide: Boundary Run → Explore & Find → Animal-O. Cambridge Camping 0:08-0:27 ("everybody come and get a slip"). Instructors video for running kids | "Start with activities like Boundary Run, then Explore and Find, so kids know where they are allowed to go, and where some of the animals are. Then hand out clue sheets and instruct them to visit the animals in order. Younger kids go in pairs. At every checkpoint, they check that the picture matches the sheet." |
 | 0:55-1:17 | Variations | Instructors video: kids running courses. Slide: progression ladder | "When they finish, have them repeat the same course faster, then the same course from memory, then a different clue sheet. All six courses done? Try 10 animals, or go solo." |
