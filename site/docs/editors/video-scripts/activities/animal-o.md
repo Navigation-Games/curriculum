@@ -12,7 +12,7 @@ title: "Video Script: Animal-O"
 Existing videos (Navigation Games YouTube channel):
 
 - [Animal Orienteering for Instructors](https://www.youtube.com/watch?v=rok2Ghx3fq4): overview for teachers, all live footage with lots of kids. Excellent intro. The new video should complement it, not replace it. About 1 minute of narration (Jackson): ages 3 and up; cones or streamers with animal pictures; each child gets an animal sheet and finds the animals in order; different sheets give different orders; after doing the courses from memory, move on to 10-animal courses. Not covered: boundary, visiting checkpoints together first, checking the picture at every checkpoint, start and finish, pairs, how to tell a course was done right, moving checkpoints, reflection, what comes next.
-- [Animal-O with Cambridge Camping](https://www.youtube.com/watch?v=DhSJ-nxsQiI): 1:54, campers playing, mostly music with live sound. Videographer Tom Dagicour. Best clip (1:13-1:32): a camper explains her mental map ("the crab is over there, the elephants over there, the penguins over there too"). Spatial memory, in a kid's own words.
+- [Animal-O with Cambridge Camping](https://www.youtube.com/watch?v=DhSJ-nxsQiI): 1:54, campers playing, mostly music with live sound. Videographer Tom Dagicour. Clip 0:08-0:27 (instructor hands out clue sheets) is used in the 2-minute version. Clip 1:13-1:32 (a camper explains her mental map: "the crab is over there, the elephants over there, the penguins over there too") is reserved for the Explore & Find video.
 - [How to play Animal Orienteering](https://www.youtube.com/watch?v=HpDzuzA03X0): for participants. Uses electronic timing, so not suitable as the main how-to for teachers.
 - [Animal O Draft Video](https://www.youtube.com/watch?v=i6sBtF-MGGA): unfinished voiceover on slides. Good format. Uses electronic timing; its footage could be reused in a separate electronic-timing video.
 
@@ -33,31 +33,33 @@ A teacher how-to that complements the instructors video. Format follows the plan
 
 | Time | Section | Footage | Narration |
 |---|---|---|---|
-| 0:00-0:12 | Objective | Instructors video: kids at checkpoints | "In Animal-O, kids use a clue sheet to visit checkpoints in order. That's called a course, and it's the basic format of orienteering. It takes 15 to 30 minutes in a gym, schoolyard, or park." |
-| 0:12-0:27 | Set up | Slide diagram: animal checkpoints inside a boundary, start/finish. Photo: fanned clue sheets | "Place animal checkpoints inside your boundary, plus a start and finish. Each clue sheet is a different course. Start at the triangle, find the animals top to bottom, finish at the double circle." |
-| 0:27-0:55 | How to play | Slide: Boundary Run → Explore & Find → Animal-O. Cambridge Camping 0:08-0:27 ("everybody come and get a slip"). Instructors video for running kids | "Start with two prelude activities: a Boundary Run, then Explore and Find, where kids hunt for the animal checkpoints in any order. Ask: which animal is this? Little kids can move like that animal to the next one. Then hand out clue sheets. Younger kids go in pairs. At every checkpoint, check that the picture matches the sheet." |
-| 0:55-1:17 | Variations | Cambridge Camping 1:13-1:32 (camper describes where the animals are). Slide: progression ladder | "When they finish, they choose: same course faster, then from memory, then a new sheet. Six courses done? Try 10 animals, or go solo. Move the checkpoints to start fresh. Repeating builds spatial memory." |
+| 3-5 sec | Intro | Common intro used for all NG instructor videos | |
+| 0:00-0:12 | Objective | Instructors video: kids at checkpoints | "In Animal-O, kids use a clue sheet to visit checkpoints in order. The skills in this activity are going in the right sequence, checking codes, and building a mental map." |
+| 0:12-0:27 | Set up | Slide diagram: animal checkpoints inside a boundary, start/finish. Photo: fanned clue sheets | "Place animal checkpoints inside your boundary, plus a start and finish. You'll need animal clue sheets." |
+| 0:27-0:55 | How to play | Slide: Boundary Run → Explore & Find → Animal-O. Cambridge Camping 0:08-0:27 ("everybody come and get a slip"). Instructors video for running kids | "Start with activities like Boundary Run, then Explore and Find, so kids know where they are allowed to go, and where some of the animals are. Then hand out clue sheets and instruct them to visit the animals in order. Younger kids go in pairs. At every checkpoint, they check that the picture matches the sheet." |
+| 0:55-1:17 | Variations | Instructors video: kids running courses. Slide: progression ladder | "When they finish, they choose: same course faster, then from memory, then a new sheet. Six courses done? Try 10 animals, or go solo. Move the checkpoints to start fresh. Repeating builds spatial memory." |
 | 1:17-1:40 | Tips | Slide with two tips. Raw footage of a pair at a checkpoint if we have it | "Tip one: make sure kids are going in order. Demonstrate with volunteers. Have pairs wait at their first animal until you check. Watch the kids you're least sure of. Stickers, a hole punch, or a code at each checkpoint also works. Once you're sure they get it, trust them. Tip two: track times on a whiteboard." |
 | 1:40-1:52 | Reflection | Group circle (raw footage or slide) | "Ask: How did the clue sheet help? How did you remember where the animals were?" |
-| 1:52-2:00 | Key points + closer | Title card with site URL | "Next up: Geometric-O, their first map. More ideas on the activity page. Have fun navigating!" |
+| 1:52-2:00 | Key points + closer | Title card with site URL | "Next up: Geometric-O, their first map. More ideas on the activity page." |
+| 3-5 sec | Outro | Common outro used across all NG instructor videos, with links to the curriculum and website | "Have fun navigating!" |
 
-About 250 words of narration, which leaves room for pauses and live sound in 2 minutes.
+Barb's revision, October 2026. The Cambridge Camping clip of a camper describing where the animals are (1:13-1:32) moved to the Explore & Find video, where it fits better.
 
 ### Coverage check against the activity page
 
 | Activity page section | In the 2-minute video | Left to the activity page |
 |---|---|---|
-| Time, space, materials | Objective, Set up | Cones (optional) |
-| Goals: clue sheet navigation, confirming checkpoints, spatial memory | Objective, How to play, Variations | |
+| Time, space, materials | Set up | Time (15-30 min), space, cones (optional) |
+| Goals: clue sheet navigation, confirming checkpoints, spatial memory | Objective (named as skills), How to play, Variations | |
 | Goal: agility (quick changes of direction) | Shown in footage only | Named goal |
-| Vocabulary: clue sheet, checkpoint, course, boundary, spatial memory | All five spoken | Definitions |
+| Vocabulary: clue sheet, checkpoint, boundary, spatial memory | All four spoken ("course" is not) | Definitions |
 | Setup, including optional whiteboard | Set up, Tips | |
-| Steps | How to play | |
-| Delivery: boundary and gathering signal, explore, clue sheets, pairs | How to play | |
+| Steps | How to play | Clue sheet format (start triangle, finish double circle) |
+| Delivery: boundary, explore, clue sheets, pairs | How to play | Gathering signal |
 | Adaptations: faster, memory, new sheet, new locations, 10 animals, solo, track times | Variations, Tips | |
 | Adaptations: Animal Relay, draw and guess | "More ideas on the activity page" | Full description |
 | Tips: check at every checkpoint, Explore & Find, move checkpoints, checking without electronics | How to play, Variations, Tips | Full list of checking methods |
-| Script: visit cones together, move like the animal | How to play | Full script |
+| Script: visit cones together, move like the animal | Covered by Explore & Find | Full script, move like the animal |
 | Reflection (7 questions) | 2 questions | Other 5 |
 | Companions: Boundary Run, Explore & Find, Geometric-O | How to play (prelude activities), closer | |
 
