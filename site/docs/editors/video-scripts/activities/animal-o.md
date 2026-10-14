@@ -4,7 +4,7 @@ title: "Video Script: Animal-O"
 
 # Video Script: Animal-O
 
-**Duration target:** 2 minutes (short version), 5-6 minutes (long version)
+**Duration target:** 2 minutes (short version), 6-7 minutes (long version)
 **Audience:** PE teachers and program leaders
 
 ## Sources
@@ -64,7 +64,7 @@ About 250 words of narration, which leaves room for pauses and live sound in 2 m
 Open questions:
 - Which raw footage do we have, and where is it? Needed for the Tips and Reflection sections.
 
-The rest of this page is the long version (5-6 minutes).
+The rest of this page is the long version (6-7 minutes).
 
 ## Opening (visual: title card)
 
@@ -86,6 +86,28 @@ Animal-O is the first real orienteering activity your students will do. They use
 - Students check the animal picture at each checkpoint to confirm they have the right one
 - Students develop spatial memory by repeating courses and tracking where checkpoints are
 - Students manage quick changes of direction while moving through the space
+
+## Where Animal-O Fits (visual: progression diagram, then framework icons)
+
+About 60-90 seconds. Sources: the framework pages under Reference → Frameworks.
+
+**In the curriculum.** Animal-O is the first time students follow a course. It comes after Boundary Run and Explore & Find, and leads to Geometric-O, their first map. It appears in every program: Grades K-2 Lesson 4 (Visit Checkpoints in Order), Grades 3-5 Lesson 2 (Match the Code), Grades 6+ Lesson 1 (From Clues to Maps), and Lesson 1 of both camp curricula.
+[SHOW: slide with the progression Boundary Run → Explore & Find → Animal-O → Geometric-O → Symbol-O → Score-O, Animal-O highlighted]
+
+**Skill and concept sequence.** Animal-O teaches three building blocks of navigation: building a mental map (remembering where things are), following a sequence (visiting checkpoints in order), and checking (confirming you are at the right checkpoint before moving on). Checking is a habit orienteers use their whole lives, and it starts here with matching an animal picture. Partners can take the roles of Navigator and Checker.
+[SHOW: a pair at a checkpoint, the Checker comparing the clue sheet to the cone]
+
+**Orienteering Development Model.** Animal-O belongs to Stage 1, "Experience, Explore, Play." At this stage orienteering should feel like a game, not a lesson. Kids are running and finding animals before anyone says the word "orienteering."
+[SHOW: kids laughing, running between cones]
+
+**PE standards (SHAPE America).** Animal-O meets standards in four areas. Running with quick changes of direction (1.5.1). Spatial memory and planning routes between checkpoints (2.5.1). Working with a partner and helping peers (3.5.2, 3.5.3). Self-pacing: choosing to repeat for speed, from memory, or with a harder clue sheet (4.5.7).
+[SHOW: on-screen list of the four standards with the activity moment for each]
+
+**Social-emotional learning and growth mindset.** Students manage their own progress through the course and choose their next challenge. Six 5-animal courses and four 10-animal courses mean many chances to succeed. Times drop with each repeat, so students see effort turn into results. It is also a safe first taste of feeling unsure where something is, in a small space where no one can really get lost.
+[SHOW: whiteboard with a student's times getting faster]
+
+**Leave No Trace.** The animal pictures are a natural opening to talk about the real animals that live in your space, and why we give them room.
+[SHOW: animal picture on a cone, then a real bird or squirrel nearby]
 
 ## Setup (visual: aerial/wide shot of the space being set up)
 
