@@ -35,9 +35,9 @@ A teacher how-to that complements the instructors video. Format follows the plan
 |---|---|---|---|
 | 0:00-0:12 | Objective | Instructors video: kids at checkpoints | "In Animal-O, kids use a clue sheet to visit checkpoints in order. That's called a course, and it's the basic format of orienteering. It takes 15 to 30 minutes in a gym, schoolyard, or park." |
 | 0:12-0:27 | Set up | Slide diagram: animal checkpoints inside a boundary, start/finish. Photo: fanned clue sheets | "Place animal checkpoints inside your boundary, plus a start and finish. Each clue sheet is a different course. Start at the triangle, find the animals top to bottom, finish at the double circle." |
-| 0:27-0:52 | How to play | Cambridge Camping 0:08-0:27 ("everybody come and get a slip"). Instructors video for running kids | "Review the boundary and your gathering signal. Visit a few checkpoints together: which animal is this? Little kids can move like that animal to the next one. Then hand out clue sheets. Younger kids go in pairs. At every checkpoint, check that the picture matches the sheet." |
-| 0:52-1:15 | Variations | Cambridge Camping 1:13-1:32 (camper describes where the animals are). Slide: progression ladder | "When they finish, they choose: same course faster, then from memory, then a new sheet. Six courses done? Try 10 animals, or go solo. Move the checkpoints to start fresh. Repeating builds spatial memory." |
-| 1:15-1:40 | Tips | Slide with three tips. Raw footage of a pair at a checkpoint if we have it | "Tip one: make sure kids are going in order. Demonstrate with volunteers. Have pairs wait at their first animal until you check. Watch the kids you're least sure of. Stickers, a hole punch, or a code at each checkpoint also works. Once you're sure they get it, trust them. Tip two: track times on a whiteboard. Tip three: if kids struggle, start with Explore and Find." |
+| 0:27-0:55 | How to play | Slide: Boundary Run → Explore & Find → Animal-O. Cambridge Camping 0:08-0:27 ("everybody come and get a slip"). Instructors video for running kids | "Start with two prelude activities: a Boundary Run, then Explore and Find, where kids hunt for the animal checkpoints in any order. Ask: which animal is this? Little kids can move like that animal to the next one. Then hand out clue sheets. Younger kids go in pairs. At every checkpoint, check that the picture matches the sheet." |
+| 0:55-1:17 | Variations | Cambridge Camping 1:13-1:32 (camper describes where the animals are). Slide: progression ladder | "When they finish, they choose: same course faster, then from memory, then a new sheet. Six courses done? Try 10 animals, or go solo. Move the checkpoints to start fresh. Repeating builds spatial memory." |
+| 1:17-1:40 | Tips | Slide with two tips. Raw footage of a pair at a checkpoint if we have it | "Tip one: make sure kids are going in order. Demonstrate with volunteers. Have pairs wait at their first animal until you check. Watch the kids you're least sure of. Stickers, a hole punch, or a code at each checkpoint also works. Once you're sure they get it, trust them. Tip two: track times on a whiteboard." |
 | 1:40-1:52 | Reflection | Group circle (raw footage or slide) | "Ask: How did the clue sheet help? How did you remember where the animals were?" |
 | 1:52-2:00 | Key points + closer | Title card with site URL | "Next up: Geometric-O, their first map. More ideas on the activity page. Have fun navigating!" |
 
@@ -59,7 +59,7 @@ About 250 words of narration, which leaves room for pauses and live sound in 2 m
 | Tips: check at every checkpoint, Explore & Find, move checkpoints, checking without electronics | How to play, Variations, Tips | Full list of checking methods |
 | Script: visit cones together, move like the animal | How to play | Full script |
 | Reflection (7 questions) | 2 questions | Other 5 |
-| Companions: Boundary Run, Explore & Find, Geometric-O | How to play, Tips, closer | |
+| Companions: Boundary Run, Explore & Find, Geometric-O | How to play (prelude activities), closer | |
 
 Open questions:
 - Which raw footage do we have, and where is it? Needed for the Tips and Reflection sections.
