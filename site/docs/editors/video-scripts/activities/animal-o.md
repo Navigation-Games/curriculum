@@ -37,11 +37,11 @@ A teacher how-to that complements the instructors video. Format follows the plan
 | 0:00-0:12 | Objective | Instructors video: kids at checkpoints | "In Animal-O, kids use a clue sheet to visit checkpoints in order. The skills in this activity are going in the right sequence, checking codes, and building a mental map." |
 | 0:12-0:27 | Set up | Slide diagram: animal checkpoints inside a boundary, start/finish. Photo: fanned clue sheets | "Place animal checkpoints inside your boundary, plus a start and finish. You'll need animal clue sheets." |
 | 0:27-0:55 | How to play | Slide: Boundary Run → Explore & Find → Animal-O. Cambridge Camping 0:08-0:27 ("everybody come and get a slip"). Instructors video for running kids | "Start with activities like Boundary Run, then Explore and Find, so kids know where they are allowed to go, and where some of the animals are. Then hand out clue sheets and instruct them to visit the animals in order. Younger kids go in pairs. At every checkpoint, they check that the picture matches the sheet." |
-| 0:55-1:17 | Variations | Instructors video: kids running courses. Slide: progression ladder | "When they finish, they choose: same course faster, then from memory, then a new sheet. Six courses done? Try 10 animals, or go solo. Move the checkpoints to start fresh. Repeating builds spatial memory." |
+| 0:55-1:17 | Variations | Instructors video: kids running courses. Slide: progression ladder | "When they finish, have them repeat the same course faster, then the same course from memory, then a different clue sheet. All six courses done? Try 10 animals, or go solo." |
 | 1:17-1:40 | Tips | Slide with two tips. Raw footage of a pair at a checkpoint if we have it | "Tip one: make sure kids are going in order. Demonstrate with volunteers. Have pairs wait at their first animal until you check. Watch the kids you're least sure of. Stickers, a hole punch, or a code at each checkpoint also works. Once you're sure they get it, trust them. Tip two: track times on a whiteboard." |
 | 1:40-1:52 | Reflection | Group circle (raw footage or slide) | "Ask: How did the clue sheet help? How did you remember where the animals were?" |
-| 1:52-2:00 | Key points + closer | Title card with site URL | "Next up: Geometric-O, their first map. More ideas on the activity page." |
-| 3-5 sec | Outro | Common outro used across all NG instructor videos, with links to the curriculum and website | "Have fun navigating!" |
+| 1:52-2:00 | Key points + closer | Title card with site URL | "Next up: Geometric-O, their first map. Visit our online curriculum for the full description." |
+| 3-5 sec | Outro | Common outro used across all NG instructor videos, with links to the curriculum and website | "Navigation games teach useful life skills." |
 
 Barb's revision, October 2026. The Cambridge Camping clip of a camper describing where the animals are (1:13-1:32) moved to the Explore & Find video, where it fits better.
 
@@ -56,9 +56,9 @@ Barb's revision, October 2026. The Cambridge Camping clip of a camper describing
 | Setup, including optional whiteboard | Set up, Tips | |
 | Steps | How to play | Clue sheet format (start triangle, finish double circle) |
 | Delivery: boundary, explore, clue sheets, pairs | How to play | Gathering signal |
-| Adaptations: faster, memory, new sheet, new locations, 10 animals, solo, track times | Variations, Tips | |
-| Adaptations: Animal Relay, draw and guess | "More ideas on the activity page" | Full description |
-| Tips: check at every checkpoint, Explore & Find, move checkpoints, checking without electronics | How to play, Variations, Tips | Full list of checking methods |
+| Adaptations: faster, memory, new sheet, 10 animals, solo, track times | Variations, Tips | New locations (move the checkpoints) |
+| Adaptations: Animal Relay, draw and guess | "Visit our online curriculum" | Full description |
+| Tips: check at every checkpoint, Explore & Find, checking without electronics | How to play, Tips | Move checkpoints; full list of checking methods |
 | Script: visit cones together, move like the animal | Covered by Explore & Find | Full script, move like the animal |
 | Reflection (7 questions) | 2 questions | Other 5 |
 | Companions: Boundary Run, Explore & Find, Geometric-O | How to play (prelude activities), closer | |
