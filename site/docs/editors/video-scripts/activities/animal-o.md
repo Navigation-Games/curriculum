@@ -27,21 +27,42 @@ Video format reference: [Updated 2023 Third Grade Curriculum Videos](https://doc
 
 ## 2-Minute Version
 
-A teacher how-to that complements the instructors video. Format follows the planning doc and deck 3: Objective, Set up, How to play, Demo, Checking, Variations, Reflection, Key points, closer. Slides with voiceover, with live clips in place of still images where we have them. No electronic timing.
+A teacher how-to that complements the instructors video. Format follows the planning doc and deck 3: Objective, Set up, How to play, Variations, Tips, Reflection, Key points, closer. No electronic timing.
 
-| Time | Section | Picture | Narration |
+**Footage plan (decided Oct 2026):** reuse clips from existing videos and any raw footage we have. Where there is no footage yet, use a Google Slides diagram with voiceover. The Footage column below gives the first choice for each section.
+
+| Time | Section | Footage | Narration |
 |---|---|---|---|
-| 0:00-0:10 | Objective | A kid reaches a checkpoint, compares it to the clue sheet, runs on | "In Animal-O, kids visit checkpoints in order. This is the basic format of orienteering." |
-| 0:10-0:30 | Set up | Animal checkpoints inside the boundary. Close-up of clue sheets | "Place 8 to 12 animal checkpoints inside your boundary, plus a start and finish. Each clue sheet is a different course. Start at the triangle, find the animals top to bottom, finish at the double circle." |
-| 0:30-0:50 | How to play | Teacher and group at a checkpoint. Volunteers demonstrate | "First, visit a few checkpoints together. Which animal is this? Then demonstrate with a couple of volunteers. At every checkpoint, check that the picture matches your sheet." |
-| 0:50-1:10 | Checking | Pairs waiting at their first animal, teacher checking. Numbered card 1-2-3-4-5 | "Put kids in pairs. Ask each pair which animal they will visit first. Have them wait at their first animal until you check. Watch the kids you're least sure of. Once you're sure they get it, you can trust them." |
-| 1:10-1:35 | Variations | Kid returns, grabs a new strip. Clip: camper's mental map (Cambridge Camping 1:13-1:32) | "When they finish: same course faster, then from memory, then a new sheet. Six courses done? Try 10 animals. Move the checkpoints to start fresh." |
-| 1:35-1:50 | Reflection | Group circle | "Ask: Did you get faster? Why? How did you remember where the animals were?" |
-| 1:50-2:00 | Key points + closer | Title card | "Running a course in order. Building a mental map. Next up: Geometric-O. Have fun navigating!" |
+| 0:00-0:12 | Objective | Instructors video: kids at checkpoints | "In Animal-O, kids use a clue sheet to visit checkpoints in order. That's called a course, and it's the basic format of orienteering. It takes 15 to 30 minutes in a gym, schoolyard, or park." |
+| 0:12-0:27 | Set up | Slide diagram: animal checkpoints inside a boundary, start/finish. Photo: fanned clue sheets | "Place animal checkpoints inside your boundary, plus a start and finish. Each clue sheet is a different course. Start at the triangle, find the animals top to bottom, finish at the double circle." |
+| 0:27-0:52 | How to play | Cambridge Camping 0:08-0:27 ("everybody come and get a slip"). Instructors video for running kids | "Review the boundary and your gathering signal. Visit a few checkpoints together: which animal is this? Little kids can move like that animal to the next one. Then hand out clue sheets. Younger kids go in pairs. At every checkpoint, check that the picture matches the sheet." |
+| 0:52-1:15 | Variations | Cambridge Camping 1:13-1:32 (camper describes where the animals are). Slide: progression ladder | "When they finish, they choose: same course faster, then from memory, then a new sheet. Six courses done? Try 10 animals, or go solo. Move the checkpoints to start fresh. Repeating builds spatial memory." |
+| 1:15-1:40 | Tips | Slide with three tips. Raw footage of a pair at a checkpoint if we have it | "Tip one: make sure kids are going in order. Demonstrate with volunteers. Have pairs wait at their first animal until you check. Watch the kids you're least sure of. Stickers, a hole punch, or a code at each checkpoint also works. Once you're sure they get it, trust them. Tip two: track times on a whiteboard. Tip three: if kids struggle, start with Explore and Find." |
+| 1:40-1:52 | Reflection | Group circle (raw footage or slide) | "Ask: How did the clue sheet help? How did you remember where the animals were?" |
+| 1:52-2:00 | Key points + closer | Title card with site URL | "Next up: Geometric-O, their first map. More ideas on the activity page. Have fun navigating!" |
+
+About 250 words of narration, which leaves room for pauses and live sound in 2 minutes.
+
+### Coverage check against the activity page
+
+| Activity page section | In the 2-minute video | Left to the activity page |
+|---|---|---|
+| Time, space, materials | Objective, Set up | Cones (optional) |
+| Goals: clue sheet navigation, confirming checkpoints, spatial memory | Objective, How to play, Variations | |
+| Goal: agility (quick changes of direction) | Shown in footage only | Named goal |
+| Vocabulary: clue sheet, checkpoint, course, boundary, spatial memory | All five spoken | Definitions |
+| Setup, including optional whiteboard | Set up, Tips | |
+| Steps | How to play | |
+| Delivery: boundary and gathering signal, explore, clue sheets, pairs | How to play | |
+| Adaptations: faster, memory, new sheet, new locations, 10 animals, solo, track times | Variations, Tips | |
+| Adaptations: Animal Relay, draw and guess | "More ideas on the activity page" | Full description |
+| Tips: check at every checkpoint, Explore & Find, move checkpoints, checking without electronics | How to play, Variations, Tips | Full list of checking methods |
+| Script: visit cones together, move like the animal | How to play | Full script |
+| Reflection (7 questions) | 2 questions | Other 5 |
+| Companions: Boundary Run, Explore & Find, Geometric-O | How to play, Tips, closer | |
 
 Open questions:
-- Show an optional check-in method (stickers, hole punch, or number codes with a numbered card), or leave it to the activity page?
-- Footage: reuse clips from the instructors video and Cambridge Camping, or shoot new? The checking beat (pairs waiting at their first animal) probably needs new footage.
+- Which raw footage do we have, and where is it? Needed for the Tips and Reflection sections.
 
 The rest of this page is the long version (5-6 minutes).
 

@@ -25,6 +25,14 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub is done. July 2
 
 - **Review the updated video scripts.** The scripts were restructured in July 2026 to match the current Grade 3-5 lesson sequence (including new scripts for Map Symbols and Orienteering Course). They need a human read-through before video production. Scripts for K-2, 6+, and camp lessons do not exist yet.
 
+- **Animal-O 2-minute video.** Draft beat sheet is in the [Animal-O video script](video-scripts/activities/animal-o.md) (October 2026). It complements the existing "Animal Orienteering for Instructors" video. Next steps: write out the final narration; find raw footage for the Tips and Reflection sections; make Google Slides diagrams with voiceover where there is no footage; produce it.
+
+- **Short videos for other activities.** Use the same 2-minute format (Objective, Set up, How to play, Variations, Tips, Reflection, Key points, "Have fun navigating!") for the other core activities. The 2019/2023 planning doc ("Updated 2023 Third Grade Curriculum Videos", linked from the Animal-O video script) has outlines for Boundaries, Gathering, Score-O, and others.
+
+- **Animal-O with electronic timing video.** A separate video for teachers who have electronic timing. Reuse footage from the unfinished "Animal O Draft Video" and "How to play Animal Orienteering." Activity videos should otherwise not show electronic timing.
+
+- **Remove the stale `content/video-scripts/` copies.** The published scripts are in `site/docs/editors/video-scripts/`. The old copies in `content/` have drifted and are easy to edit by mistake.
+
 - **More visuals.** Activity pages and lesson plans need more photos, diagrams, and setup images throughout the curriculum.
 
 ### Curriculum design
@@ -105,6 +113,7 @@ Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O
 
 ## Done
 
+- Animal-O videos (October 2026): Cambridge Camping video added to the activity page; tips for checking students go in order without electronic timing; video sources (videos, slide decks, planning doc) recorded in the video script; 2-minute video draft with a coverage check against the activity page
 - Content build system: clean Markdown content files generate MDX site pages
 - 8 core activity pages: Boundary Run, Gathering, Animal-O, Clothespin-O, Geometric-O, Map Walk, Score-O, Point-to-Point
 - Symbol-O (7th core page, already existed)
