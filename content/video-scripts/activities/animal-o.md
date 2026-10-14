@@ -3,6 +3,24 @@
 **Duration target:** 5-6 minutes
 **Audience:** PE teachers and program leaders
 
+## Sources
+
+Existing videos (Navigation Games YouTube channel):
+
+- [Animal Orienteering for Instructors](https://www.youtube.com/watch?v=rok2Ghx3fq4): overview for teachers, all live footage with lots of kids. Excellent intro. The new video should complement it, not replace it. About 1 minute of narration (Jackson): ages 3 and up; cones or streamers with animal pictures; each child gets an animal sheet and finds the animals in order; different sheets give different orders; after doing the courses from memory, move on to 10-animal courses. Not covered: boundary, visiting checkpoints together first, checking the picture at every checkpoint, start and finish, pairs, how to tell a course was done right, moving checkpoints, reflection, what comes next.
+- [Animal-O with Cambridge Camping](https://www.youtube.com/watch?v=DhSJ-nxsQiI): 1:54, campers playing, mostly music with live sound. Videographer Tom Dagicour. Best clip (1:13-1:32): a camper explains her mental map ("the crab is over there, the elephants over there, the penguins over there too"). Spatial memory, in a kid's own words.
+- [How to play Animal Orienteering](https://www.youtube.com/watch?v=HpDzuzA03X0): for participants. Uses electronic timing, so not suitable as the main how-to for teachers.
+- [Animal O Draft Video](https://www.youtube.com/watch?v=i6sBtF-MGGA): unfinished voiceover on slides. Good format. Uses electronic timing; its footage could be reused in a separate electronic-timing video.
+
+Slide decks:
+
+1. [Teaching Animal Orienteering (Slides.pptx)](https://docs.google.com/presentation/d/1SPNfADt6vtb1jW6A5CznBJJ3-aGTjaz7/edit): time, ages 3-12, materials, warm-up, success criteria, tips, variations
+2. [Animal-O: visiting controls in sequence](https://docs.google.com/presentation/d/1UmPcMbXQugxjzJo53tb_KK_39jI3DiS423aLbA8vqFk/edit): materials, ages, location, typical goals, learning objectives
+3. [Activity: Animal-O (2023)](https://docs.google.com/presentation/d/1LViOIulG_fBwhydNkJWmhVTE18bOGnHbB1NWQFKYRLA/edit): objective, setup, how to play, context, assessment, variations, reflection, key points. Has an empty "Animal-O In Action (Put a video here)" slide
+4. [2022 Slides for Geometric Animal-O](https://docs.google.com/presentation/d/1YTg2gF_7764bdl9gkk0uUQou9hO_yGRkMcTvo8ER9OQ/edit): Animal-O as warm-up for Geometric-O; levels, courses, discussion
+
+Video format reference: [Updated 2023 Third Grade Curriculum Videos](https://docs.google.com/document/d/1qnC6LSrShDq2VMBQjezbMUJcltqDvYfOWE5HCq7vUAI/edit) (2019 planning doc with Peter Traver, updated Aug 2023). Each activity uses the same frame: Objectives, Purpose, Materials, How to play, Demo, Variations, Reflection, Key points, Closer ("Have fun navigating!"). The Boundaries and Gathering video is the model.
+
 ## Opening (visual: title card)
 
 Animal-O is the first real orienteering activity your students will do. They use a clue sheet to find animal checkpoints in order, building spatial memory and observation skills. It works in a gym, a schoolyard, or a park, and students love it.

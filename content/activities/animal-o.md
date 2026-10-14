@@ -28,9 +28,12 @@ videos:
   - id: rok2Ghx3fq4
     title: Animal Orienteering for Instructors
     caption: Overview for teachers
+  - id: DhSJ-nxsQiI
+    title: Animal-O with Cambridge Camping
+    caption: Campers playing Animal-O
   - id: HpDzuzA03X0
     title: How to play Animal-O
-    caption: How to play, for participants
+    caption: How to play, for participants (uses electronic timing)
   - id: i6sBtF-MGGA
     title: Electronic timing with Animal-O
     caption: Electronic timing and EasyGec with Animal-O
