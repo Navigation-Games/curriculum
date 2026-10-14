@@ -120,6 +120,13 @@ See the [Grade 3-5 curriculum](/lessons/school/grade-3-5/) for how this activity
 - Make sure students check the animal at each checkpoint, not just run to the nearest cone
 - If students are struggling, start with Explore & Find (see Related Activities tab)
 - Moving checkpoints to new locations resets the challenge and prevents memorizing a route
+- **Checking without electronic timing.** Your goal is to be sure every student understands going in order. Once you are sure, you can trust them.
+  - Pair students up. In a pair, one of them is more likely to understand what to do.
+  - Demonstrate with volunteers first.
+  - Ask each pair to tell you which animal they will visit first, and which one comes next.
+  - Have pairs go to their first animal and wait there until you check they are in the right place.
+  - Watch the students you are least sure of.
+  - Optional: put stickers, a hole punch, or a number code at each checkpoint. Students fill in a card numbered 1-2-3-4-5 as they go, and you check it when they finish.
 
 
 ## Script
@@ -151,7 +158,7 @@ We recommend that younger students do this in pairs.
 
 1. Review the boundary and gathering signal
 2. Explore to find animal checkpoints
-3. Use the clue sheets to find checkpoints in order
+3. Use the clue sheets to find checkpoints in order. Demonstrate with volunteers first. Have pairs go to their first animal and wait there until you check they are in the right place
 
 Progression:
 
