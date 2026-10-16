@@ -116,6 +116,19 @@ One data file is auto-generated and should never be edited by hand: `site/src/co
 
 Activity photos and diagrams go in `site/static/img/activities/`. Use lowercase-kebab-case filenames (e.g., `animal-o.png`, `boundary-run.png`). Images are referenced by path in content files and data files.
 
+### QR codes and short links
+
+Printed QR codes point to short forwarding addresses on this site, like `https://curriculum.navigationgames.org/go/signin/`, so we can change where a code goes without reprinting it. Each one is a folder in `site/static/go/` containing:
+
+- `index.html` - the forwarding page. To change where the code goes, edit the destination URL in it (it appears three times) and push.
+- `qr.png` and `qr.svg` - the QR code images to print.
+
+| Short link | Currently goes to |
+|---|---|
+| `/go/signin/` | This README (placeholder) |
+
+To add a new one, copy an existing folder, change the destination, generate new QR images for the new address, and add a row to the table above. Don't rename or delete a folder once its QR code has been printed.
+
 ### Video scripts
 
 Video script drafts live in `site/docs/editors/video-scripts/` (hand-maintained; published under For Editors). One script per Grade 3-5 lesson plus one per major activity. They are working documents for video production and were aligned with the current lesson structure in July 2026.
