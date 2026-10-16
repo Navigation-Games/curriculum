@@ -126,6 +126,9 @@ Printed QR codes point to short forwarding addresses on this site, like `https:/
 | Short link | Currently goes to |
 |---|---|
 | `/go/signin/` | This README (placeholder) |
+| `/go/website/` | https://www.navigationgames.org/ |
+| `/go/conference/` | https://www.navigationgames.org/ |
+| `/go/curriculum/` | https://curriculum.navigationgames.org/ |
 
 To add a new one, copy an existing folder, change the destination, generate new QR images for the new address, and add a row to the table above. Don't rename or delete a folder once its QR code has been printed.
 
