@@ -9,6 +9,10 @@ What's done, what's next, and what's deferred.
 
 ## Next
 
+### Kickstart Orienteering program (after the conference)
+
+- **Repoint go/signin after the conference.** For the conference, the sign-in link goes to the form with the "SHAPE CO" tag pre-filled: `https://docs.google.com/forms/d/e/1FAIpQLSesnDbhmGmeY_9CVtxSMMS3GCBWmD_FE1qYBR2YWi3NCXjz2A/viewform?usp=pp_url&entry.928175397=SHAPE+CO`. Afterwards, change it to the plain link without the tag: `https://docs.google.com/forms/d/e/1FAIpQLSesnDbhmGmeY_9CVtxSMMS3GCBWmD_FE1qYBR2YWi3NCXjz2A/viewform?usp=dialog`. The printed QR codes do not need to change, because they point at the go link and only its target changes. The redirect page is `site/static/go/signin/index.html`; change the URL in all three places listed in its comment.
+
 ### Site navigation redesign
 
 Design decisions in `notes/site-navigation-redesign.md`. The hub is done. July 2026: school landing page enriched (constraints, standards, one-setup-many-classes, year-over-year, administrators section, broader teacher audience); How to Use This Site got a site map tree and a broadened "For teachers" section; Quick Start and Home link to About Orienteering; sidebar now actually expands on landing pages (fixed a baseUrl bug that had silently disabled the path matching). Remaining:
