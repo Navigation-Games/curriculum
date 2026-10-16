@@ -34,7 +34,7 @@ export default function VocabLink({term, children}: VocabLinkProps): React.React
     <span ref={triggerRef}>
       <a
         className={styles.vocabLink}
-        href={`/curriculum/reference/glossary#${vocabAnchor(entry.term)}`}
+        href={`/reference/glossary#${vocabAnchor(entry.term)}`}
         onClick={(e) => {
           e.preventDefault();
           setOpen(!open);
@@ -46,7 +46,7 @@ export default function VocabLink({term, children}: VocabLinkProps): React.React
         <PopoverPortal anchorRef={triggerRef} onClose={close} width={280}>
           <div className={styles.popoverTerm}>{entry.term}</div>
           <div className={styles.popoverDef}>{entry.definition}</div>
-          <a className={styles.popoverLink} href="/curriculum/reference/glossary">
+          <a className={styles.popoverLink} href="/reference/glossary">
             View full glossary
           </a>
         </PopoverPortal>

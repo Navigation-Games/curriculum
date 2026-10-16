@@ -21,7 +21,7 @@ import ActivityLink from '@site/src/components/ActivityLink';
 | [5. **Visiting Checkpoints**](./lesson-5) | Navigate using a map, visit checkpoints in any order | <ActivityLink slug="map-walk">Map Walk</ActivityLink>, <ActivityLink slug="score-o">Score-O</ActivityLink> |
 | [6. **Orienteering Course**](./lesson-6) | Navigate a course visiting checkpoints in order | <ActivityLink slug="point-to-point">Point-to-Point</ActivityLink> |
 
-These lessons cover entries 6-13 (Sequential Navigation through Map Symbols) of the [Navigation Games skill and concept sequence](https://navigation-games.github.io/curriculum/reference/frameworks/skill-concept-sequence/), with introduction to 14-22 (Colors, Navigation with Maps, and Score-O strategy). Communication and Individual Development are woven throughout.
+These lessons cover entries 6-13 (Sequential Navigation through Map Symbols) of the [Navigation Games skill and concept sequence](https://curriculum.navigationgames.org/reference/frameworks/skill-concept-sequence/), with introduction to 14-22 (Colors, Navigation with Maps, and Score-O strategy). Communication and Individual Development are woven throughout.
 
 [**Indoor Orienteering**](./a-indoor-orienteering) is an alternative that uses a basketball court, covering lessons 3-6.
 

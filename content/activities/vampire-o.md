@@ -18,7 +18,7 @@ materials:
   - Garlic necklaces
 setup: Place checkpoints according to the all-checkpoints map; leave the protection items at a few checkpoints
 images:
-  - src: /curriculum/img/activities/vampire-o-map.png
+  - src: /img/activities/vampire-o-map.png
     alt: Sample Vampire-O map of Danehy Park with numbered checkpoint circles
     caption: "A sample Vampire-O map: a regular Score-O course, plus vampires"
     onepager: true

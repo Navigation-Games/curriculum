@@ -21,7 +21,7 @@ import ActivityLink from '@site/src/components/ActivityLink';
 | [5. **Picture the Space**](./lesson-5) | Create a picture of the space | <ActivityLink slug="draw-the-space">Draw the Space</ActivityLink> |
 | [6. **Read a Map**](./lesson-6) | Use a map to find things | Simple <ActivityLink slug="geometric-o">Geometric-O</ActivityLink> or [Map Maker](/activities/core/draw-the-space) |
 
-These lessons align with entries 1-5 (Pre-Map Skills) and 6-7 (Sequential Navigation) of the [Navigation Games skill and concept sequence](https://navigation-games.github.io/curriculum/reference/frameworks/skill-concept-sequence/), with early exposure to 8-10 (Map Introduction). Communication and collaboration (#36-41) are woven throughout.
+These lessons align with entries 1-5 (Pre-Map Skills) and 6-7 (Sequential Navigation) of the [Navigation Games skill and concept sequence](https://curriculum.navigationgames.org/reference/frameworks/skill-concept-sequence/), with early exposure to 8-10 (Map Introduction). Communication and collaboration (#36-41) are woven throughout.
 
 [**Indoor Orienteering: Build the World**](./b-indoor-orienteering) is an alternative: the teacher builds a world with gym equipment, and students explore it and play clue sheet courses through it.
 

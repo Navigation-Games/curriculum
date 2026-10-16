@@ -12,7 +12,7 @@ materials:
   - Maps of the area
 setup: None
 images:
-  - src: /curriculum/img/activities/compass-basics.jpg
+  - src: /img/activities/compass-basics.jpg
     alt: Hands holding a baseplate compass on top of an orienteering map
     caption: Using a baseplate compass with an orienteering map
     onepager: true

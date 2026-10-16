@@ -17,7 +17,7 @@ Each kit includes materials for:
 
 The kit also includes activity descriptions covering the progression from basic boundary and exploration exercises through map-based orienteering, plus background on orienteering pedagogy and connections to national PE standards.
 
-Items marked with the <span className="ng-kit-badge"><img src="/curriculum/img/ng-logo-icon.svg" alt="" />NG Kit</span> badge on the [Materials Index](../materials) page are included in the kit.
+Items marked with the <span className="ng-kit-badge"><img src="/img/ng-logo-icon.svg" alt="" />NG Kit</span> badge on the [Materials Index](../materials) page are included in the kit.
 
 ## Getting a Kit
 

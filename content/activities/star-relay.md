@@ -12,7 +12,7 @@ materials:
   - Regular course maps (1 per pair)
 setup: Place checkpoints according to the all-checkpoints map
 images:
-  - src: /curriculum/img/activities/star-relay-diagram.png
+  - src: /img/activities/star-relay-diagram.png
     alt: Star Relay diagram showing a central start triangle with out-and-back loops to five numbered checkpoints, alternating between two runners
     caption: "The star pattern: partners alternate out-and-back legs from the start"
     onepager: true
@@ -107,7 +107,7 @@ The underlying themes are teamwork, communication, and memory. Partners must str
 
 ### Compass Spider *(variation)*
 
-<img src="/curriculum/img/activities/compass-spider.jpg" alt="Spider diagram: a central start point with lines radiating out to numbered checkpoints" width="240" style={{float:'right', margin:'0 0 0.5rem 1rem'}} />
+<img src="/img/activities/compass-spider.jpg" alt="Spider diagram: a central start point with lines radiating out to numbered checkpoints" width="240" style={{float:'right', margin:'0 0 0.5rem 1rem'}} />
 
 **Star Relay with compass navigation.** The setup is the same as Star Relay, but sections of the map between checkpoints are whited out (covered with paper or digitally removed before printing). Runners cannot see the terrain detail between the start and the checkpoint, so they must use a compass bearing to navigate there and back.
 

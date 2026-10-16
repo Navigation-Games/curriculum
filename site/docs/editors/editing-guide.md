@@ -277,7 +277,7 @@ npm install    # first time only
 npm start
 ```
 
-The preview runs at http://localhost:3000/curriculum/. Changes to content files require re-running the build script, then the dev server will pick up the changes automatically. Changes to directly-edited pages and data files are picked up by the dev server automatically (no build step needed).
+The preview runs at http://localhost:3000/. Changes to content files require re-running the build script, then the dev server will pick up the changes automatically. Changes to directly-edited pages and data files are picked up by the dev server automatically (no build step needed).
 
 ### What the build script checks
 

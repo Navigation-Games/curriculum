@@ -5,7 +5,7 @@ import {useGoogleUser, signOut} from '@site/src/lib/googleAuth';
 import styles from './styles.module.css';
 
 interface Props {
-  /** The page's URL path, e.g. /curriculum/activities/core/animal-o/ */
+  /** The page's URL path, e.g. /activities/core/animal-o/ */
   page: string;
   /** The page title, for easier reading in the feedback sheet */
   title: string;

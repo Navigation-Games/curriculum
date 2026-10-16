@@ -12,7 +12,7 @@ materials:
   - Maps (1 per player or pair)
 setup: None in advance; teams place their own flags at the start of the game
 images:
-  - src: /curriculum/img/activities/capture-the-flag-o.png
+  - src: /img/activities/capture-the-flag-o.png
     alt: Capture the Flag-O setup diagram showing a field split by a dashed center line, with blue flag locations on one side and red on the other
     caption: "Setup: two territories, each with flag locations shown on the map"
     onepager: true

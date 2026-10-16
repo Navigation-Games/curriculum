@@ -33,7 +33,7 @@ export default function MaterialLink({name, children}: MaterialLinkProps): React
     <span ref={triggerRef}>
       <a
         className={`${styles.materialLink} ${info.kit ? styles.kitMaterial : ''}`}
-        href={`/curriculum/reference/equipment/materials/#${materialAnchor(info.name)}`}
+        href={`/reference/equipment/materials/#${materialAnchor(info.name)}`}
         onClick={(e) => {
           e.preventDefault();
           setOpen(!open);
@@ -47,7 +47,7 @@ export default function MaterialLink({name, children}: MaterialLinkProps): React
             {info.name}
             {info.kit && (
               <span className={styles.kitBadge}>
-                <img src="/curriculum/img/ng-logo-icon.svg" alt="" className={styles.kitLogo} />
+                <img src="/img/ng-logo-icon.svg" alt="" className={styles.kitLogo} />
                 NG Kit
               </span>
             )}
@@ -65,7 +65,7 @@ export default function MaterialLink({name, children}: MaterialLinkProps): React
           <div className={styles.popoverDetail}>
             <strong>Learning connection:</strong> {info.learningConnection}
           </div>
-          <a className={styles.popoverLink} href={`/curriculum/reference/equipment/materials/#${materialAnchor(info.name)}`}>
+          <a className={styles.popoverLink} href={`/reference/equipment/materials/#${materialAnchor(info.name)}`}>
             View full materials index
           </a>
         </PopoverPortal>

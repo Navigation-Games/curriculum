@@ -15,11 +15,11 @@ materials:
   - All-checkpoints map
 setup: Arrange checkpoints and colored cones according to the all-checkpoints map
 images:
-  - src: /curriculum/img/activities/geometric-o-setup-2.png
+  - src: /img/activities/geometric-o-setup-2.png
     alt: Geometric-O setup diagram showing animal checkpoints arranged in a rectangle with four colored corner cones (red, blue, green, yellow)
     caption: "Setup: animal checkpoints with four colored corner cones"
     onepager: true
-  - src: /curriculum/img/activities/narrow-one-pagers/contents-info-4.png
+  - src: /img/activities/narrow-one-pagers/contents-info-4.png
     alt: A Geometric-O course card for "Lion" showing a route connecting 5 numbered checkpoints, with four colored corner cones
     caption: "A course card: a route between 5 checkpoints"
 videos:

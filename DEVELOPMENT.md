@@ -34,7 +34,7 @@ npm install
 
 All commands run from the `site/` directory.
 
-- `npm start` - dev server with hot reload (http://localhost:3000/curriculum/)
+- `npm start` - dev server with hot reload (http://localhost:3000/)
 - `npm run build` - production build to `site/build/`
 - `npm run serve` - serve the production build locally (useful for testing the final output)
 
@@ -60,7 +60,7 @@ This falls back to the `docusaurus deploy` command, which pushes a build to a `g
 
 The GitHub org is `Navigation-Games` (with a hyphen, capital letters). Make sure URLs reference this consistently:
 - Repo: `https://github.com/Navigation-Games/curriculum`
-- Pages: `https://navigation-games.github.io/curriculum/`
+- Pages: `https://curriculum.navigationgames.org/`
 
 
 ## Content Build System

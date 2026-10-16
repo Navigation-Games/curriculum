@@ -11,7 +11,7 @@ materials:
   - Whistle, flag, or other gathering signal
 setup: Define a clear boundary and establish a central gathering location
 images:
-  - src: /curriculum/img/activities/gathering-kids.jpg
+  - src: /img/activities/gathering-kids.jpg
     alt: Children running back to the teacher during a gathering activity
     caption: Students return on a signal
     onepager: true

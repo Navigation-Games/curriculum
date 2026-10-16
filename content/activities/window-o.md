@@ -13,7 +13,7 @@ materials:
   - Checkpoints
 setup: Place checkpoints according to the all-checkpoints map
 images:
-  - src: /curriculum/img/activities/window-o.png
+  - src: /img/activities/window-o.png
     alt: Orienteering map with sections whited out, leaving visible map islands, and a numbered course alongside a compass exercise card
     caption: "Navigate using only the visible map windows"
     onepager: true

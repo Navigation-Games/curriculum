@@ -7,8 +7,8 @@ const config: Config = {
   tagline: 'Orienteering curriculum for schools and camps',
   favicon: 'img/favicon.ico',
 
-  url: 'https://navigation-games.github.io',
-  baseUrl: '/curriculum/',
+  url: 'https://curriculum.navigationgames.org',
+  baseUrl: '/',
 
   organizationName: 'Navigation-Games',
   projectName: 'curriculum',

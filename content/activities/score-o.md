@@ -14,7 +14,7 @@ materials:
   - Scorecards and pencils
 setup: Place checkpoints according to the all-checkpoints map; spread them out across the mapped area
 images:
-  - src: /curriculum/img/activities/children-running-in-park.png
+  - src: /img/activities/children-running-in-park.png
     alt: Children running across a park field carrying maps at the start of a Score-O
     caption: "Mass start: everyone heads out at once, each with their own route plan"
     onepager: true
@@ -191,7 +191,7 @@ You can choose how much of the setup students do themselves. The more they do, t
 
 ### Poker-O *(extension)*
 
-<img src="/curriculum/img/activities/poker-o.png" alt="A royal flush of hearts: 10, jack, queen, king, ace" width="170" style={{float:'right', margin:'0 0 0.5rem 1rem'}} />
+<img src="/img/activities/poker-o.png" alt="A royal flush of hearts: 10, jack, queen, king, ace" width="170" style={{float:'right', margin:'0 0 0.5rem 1rem'}} />
 
 Each checkpoint has a playing card instead of a letter code; the best poker hand wins. Adds a layer of strategy since students must decide whether to visit more checkpoints (more cards) or be selective. Takes 15-30 minutes with a playing card at each checkpoint; ties are broken by number of checkpoints visited.
 

@@ -15,7 +15,7 @@ materials:
 setup: Place checkpoints at their corresponding locations according to the all-checkpoints map
 si_timing: true
 images:
-  - src: /curriculum/img/activities/point-to-point.png
+  - src: /img/activities/point-to-point.png
     alt: Schoolyard orienteering map with a numbered point-to-point course (checkpoints 1 to 5) and a legend
     caption: "A point-to-point course: visit the checkpoints in order"
     onepager: true

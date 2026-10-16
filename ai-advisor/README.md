@@ -236,7 +236,7 @@ In the Google Cloud Console (project `navigation-games-curriculum`), go to **API
 Go to **APIs & Services > Credentials > Create Credentials > OAuth client ID**:
 
 - Application type: **Web application**
-- Authorized JavaScript origins: `https://navigation-games.github.io`, `http://localhost:3000`, and `http://localhost`
+- Authorized JavaScript origins: `https://curriculum.navigationgames.org`, `https://navigation-games.github.io`, `http://localhost:3000`, and `http://localhost`
 - No redirect URIs needed (the page uses the Google Identity Services button flow)
 
 ### 3. Configure the backend and frontend

@@ -68,7 +68,7 @@ def test_full_submission_appends_row(client, spreadsheet):
     r = post(
         client,
         {
-            "page": "/curriculum/activities/core/animal-o/",
+            "page": "/activities/core/animal-o/",
             "title": "Animal-O",
             "rating": "up",
             "comment": "Great with my 3rd graders",
@@ -80,7 +80,7 @@ def test_full_submission_appends_row(client, spreadsheet):
     # Row 0 is the header (tab was auto-created), row 1 the submission
     assert rows[0] == advisor.PAGE_FEEDBACK_HEADER
     assert rows[1][1:] == [
-        "/curriculum/activities/core/animal-o/",
+        "/activities/core/animal-o/",
         "Animal-O",
         "up",
         "Great with my 3rd graders",

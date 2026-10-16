@@ -14,7 +14,7 @@ materials:
   - Pens or pencils
 setup: Put out checkpoints as per the all-checkpoints map
 images:
-  - src: /curriculum/img/activities/line-o.jpg
+  - src: /img/activities/line-o.jpg
     alt: Orienteering map of Nahanton Park with a course line drawn for runners to follow
     caption: "Follow the line and count the checkpoints along the route"
     onepager: true

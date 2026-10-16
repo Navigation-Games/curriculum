@@ -12,7 +12,7 @@ materials:
   - A planned route through varied features
 setup: Plan a walking route that passes several distinct features shown on the map
 images:
-  - src: /curriculum/img/activities/map-walk.jpg
+  - src: /img/activities/map-walk.jpg
     alt: Illustration of a teacher leading a group of children across a field on a map walk, with the children holding maps
     caption: Walk a route together, matching map symbols to real features
     onepager: true

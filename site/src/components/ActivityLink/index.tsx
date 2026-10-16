@@ -26,7 +26,7 @@ export default function ActivityLink({slug, name, children}: ActivityLinkProps):
   const triggerRef = useRef<HTMLSpanElement>(null);
   const info = activitySummaries[slug];
   const close = useCallback(() => setOpen(false), []);
-  const href = `/curriculum/activities/core/${slug}/`;
+  const href = `/activities/core/${slug}/`;
 
   if (!info) {
     return <a href={href}>{children || slug}</a>;

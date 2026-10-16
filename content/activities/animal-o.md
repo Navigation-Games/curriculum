@@ -14,13 +14,13 @@ materials:
   - Cones to hold the animal pictures (optional)
 setup: Place animal-picture checkpoints around the defined space
 images:
-  - src: /curriculum/img/activities/animal-o-pig.jpg
+  - src: /img/activities/animal-o-pig.jpg
     alt: Child in yellow raincoat finding the pig checkpoint
     caption: Finding the pig checkpoint
-  - src: /curriculum/img/activities/animal-o-clue-sheet.jpg
+  - src: /img/activities/animal-o-clue-sheet.jpg
     alt: Seven laminated clue sheet strips fanned out, each showing a start triangle, a sequence of animal pictures, and a finish circle
     caption: "Clue sheets: each strip is a different course"
-  - src: /curriculum/img/activities/explore-and-find.png
+  - src: /img/activities/explore-and-find.png
     alt: Setup diagram showing animal checkpoints scattered within a boundary
     caption: "Setup: animal checkpoints placed around the space"
     onepager: true

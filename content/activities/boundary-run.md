@@ -11,7 +11,7 @@ materials:
   - Cones (optional, for marking boundaries)
 setup: If using artificial boundaries, place cones on the boundary ahead of time
 images:
-  - src: /curriculum/img/activities/boundary-run.png
+  - src: /img/activities/boundary-run.png
     alt: Boundary Run setup diagram showing a play area with red arrows tracing the boundary
     caption: "Setup: leader traces the boundary"
     onepager: true

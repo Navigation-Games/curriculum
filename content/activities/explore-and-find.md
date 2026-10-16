@@ -12,7 +12,7 @@ materials:
   - Cones (optional, for marking boundaries)
 setup: Place animal checkpoints around the space within the boundary
 images:
-  - src: /curriculum/img/activities/explore-and-find.png
+  - src: /img/activities/explore-and-find.png
     alt: Explore & Find setup diagram showing animal checkpoints scattered within a boundary
     caption: "Setup: animal checkpoints placed around the space"
     onepager: true

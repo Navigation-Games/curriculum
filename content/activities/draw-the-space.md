@@ -13,7 +13,7 @@ materials:
   - Whiteboard or large paper (for teacher demo)
 setup: No special setup needed. The space should have visible landmarks (trees, fences, doors, playground equipment). If the space lacks obvious features, place a few cones. Practice drawing the boundary shape before class.
 images:
-  - src: /curriculum/img/activities/draw-the-space-whiteboard.jpg
+  - src: /img/activities/draw-the-space-whiteboard.jpg
     alt: A hand-drawn whiteboard map showing a boundary, a "Big Pit" landmark, a treeline, and tree symbols
     caption: "A student's map: boundary, landmarks, and a treeline"
     onepager: true

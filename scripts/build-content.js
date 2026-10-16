@@ -203,7 +203,7 @@ function writeActivitySummaries(summaries) {
 // NOTE: changes only reach the live advisor after a Cloud Run redeploy
 // (see ai-advisor/README.md).
 
-const SITE_BASE_URL = 'https://navigation-games.github.io/curriculum';
+const SITE_BASE_URL = 'https://curriculum.navigationgames.org';
 
 // Standalone pages in site/src/pages that are not under site/docs.
 const STANDALONE_PAGES = [

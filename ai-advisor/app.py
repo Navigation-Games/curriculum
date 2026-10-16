@@ -25,6 +25,7 @@ app = Flask(__name__)
 
 # CORS: allow the curriculum site and localhost for development
 ALLOWED_ORIGINS = [
+    "https://curriculum.navigationgames.org",
     "https://navigation-games.github.io",
     "http://localhost:3000",
     "http://localhost:3001",
@@ -712,7 +713,7 @@ def page_feedback():
 
     Request body:
     {
-        "page": "/curriculum/activities/core/animal-o/",
+        "page": "/activities/core/animal-o/",
         "title": "Animal-O",
         "rating": "up" | "down" | null,
         "comment": "optional text",

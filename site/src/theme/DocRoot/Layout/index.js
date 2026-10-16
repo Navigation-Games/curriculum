@@ -54,7 +54,7 @@ export default function DocRootLayout({children}) {
   const {pathname} = useLocation();
   const baseUrl = useBaseUrl('/');
 
-  // pathname includes the site baseUrl (e.g. /curriculum/lessons/), but
+  // pathname includes the site baseUrl (currently just /), but
   // INDEX_PATHS is written without it. Strip the base and normalize the
   // trailing slash before matching.
   let relPath = pathname.startsWith(baseUrl)
