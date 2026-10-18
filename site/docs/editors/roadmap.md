@@ -11,7 +11,11 @@ What's done, what's next, and what's deferred.
 
 ### Kickstart Orienteering program (after the conference)
 
-- **Repoint go/signin after the conference.** For the conference, the sign-in link goes to the form with the "SHAPE CO" tag pre-filled: `https://docs.google.com/forms/d/e/1FAIpQLSesnDbhmGmeY_9CVtxSMMS3GCBWmD_FE1qYBR2YWi3NCXjz2A/viewform?usp=pp_url&entry.928175397=SHAPE+CO`. Afterwards, change it to the plain link without the tag: `https://docs.google.com/forms/d/e/1FAIpQLSesnDbhmGmeY_9CVtxSMMS3GCBWmD_FE1qYBR2YWi3NCXjz2A/viewform?usp=dialog`. The printed QR codes do not need to change, because they point at the go link and only its target changes. The redirect page is `site/static/go/signin/index.html`; change the URL in all three places listed in its comment.
+- **Kickstart action items live in the tracker.** The "To do" tab of the Kickstart Orienteering Tracker (Google Sheets, linked from CLAUDE.md) holds the current list, including what the first cohort needs (training, YMP guide, email templates, consultation agendas, kit contents) and the decisions deferred until later (pricing for remote schools, in-person add-ons, cohort size, funding plan). Keep it there rather than copying it here.
+
+- **Repointing go/signin (done October 2026).** The sign-in link used a "SHAPE CO" tag for the conference and now goes to the plain form link. For a future conference, put a new tag in `site/static/go/signin/index.html` (the file's comment explains the three places to change). The printed QR codes never need to change, because they point at the go link and only its target changes.
+
+- **Revisit Monday.com for local partner contacts.** For the first cohort, the Local partners and Contact log tabs in the Kickstart tracker (Google Sheets) hold the people who may help NG locally (RMOC and others) and our interactions with them. NG keeps its other contacts in Monday.com. Sheets is easier to work in for now, but once the partner list is stable, decide whether to move it to Monday. The Local partners columns mirror Monday's usual contact fields, so a CSV import should work. Note that the Contact log also feeds the applicant Tracker's Last contact and Minutes spent, so moving partner logging would mean keeping applicant logging in Sheets.
 
 ### Site navigation redesign
 

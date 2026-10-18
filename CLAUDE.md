@@ -214,6 +214,25 @@ The only hand-maintained files inside generated directories are `index.md` landi
 
 The "Edit this page" links use a custom `editUrl` function in `site/docusaurus.config.ts` that maps auto-generated pages back to their `content/` sources. When adding a new category of auto-generated files (e.g., camp lessons), update the `editUrl` function so the new pattern also points to `content/`.
 
+## Kickstart Orienteering (program, lives outside this repo)
+
+**Kickstart Orienteering: "Put your School on the Map"** is a free Navigation Games program (launched at the SHAPE Colorado conference, October 2026) that helps teachers and school leaders teach this curriculum. It is a program for *delivering* the curriculum, not part of the curriculum, so its working files live in Google Drive, not here. Keep it that way for now.
+
+Participating schools get a Beginning Orienteering Instruction Kit, an orienteering map made through OUSA's Youth Map Program (YMP), online training, two consultations with NG, and curriculum access. They commit to the training, a planning survey, teaching at least one activity, and a post-unit survey. The kit ships after the training and planning survey are done (lesson from the 2026 MOOR grant program, where kits went first and surveys never came back).
+
+**Where things are** (Drive folder `18aymaUA_7GEcTcQitVeHdVpqxaqBpeuN`, https://drive.google.com/drive/u/0/folders/18aymaUA_7GEcTcQitVeHdVpqxaqBpeuN):
+- **2026 Updated Kickstart Orienteering Program Description** (Google Doc). Public-facing draft text, the internal participant flow (11 steps), school verification via NCES, MOOR lessons, resources needed, budget, open decisions, and draft survey questions. Collaborators (Dave Yee) comment here.
+- **Kickstart Orienteering Tracker** (Google Sheet). Tabs: Tracker (one row per applicant, stage and flag columns calculate from the date columns), Contact log (one row per email, call or consultation; feeds the Tracker's Last contact and Minutes spent columns, so never type in those two; also used for partners), Applicant view, To do, Local partners (people who may help NG locally, IDs `LP-001`; columns mirror Monday.com so they can be imported if NG moves contacts there; staying in Sheets for the first cohort, with moving partners to Monday.com listed in the roadmap as a later decision), Summary (dashboard and checks), Applications (read-only form responses, ID formula in column Z), Planning survey (read-only responses), Settings (staff rate, due-soon and overdue days, cohort cap, column maps). Applicant IDs look like `KO-2026-001`. The Settings tab explains how the Tracker works; read it before changing formulas.
+- Three Google Forms: Application, Activity Planning Survey, Post Activity Reflection Survey. The post-unit survey does not yet feed a tracker tab.
+
+**In this repo:** only the conference QR forwarding pages in `site/static/go/` (`signin`, `website`, `conference`, `curriculum`). `go/signin` is the sign-in form; it carried a "SHAPE CO" tag during the conference and was repointed to the untagged link afterwards (see the file's comment for tagging a future conference).
+
+**Applicant IDs are fragile:** the `KO-YYYY-NNN` ID in the Applications tab is the rank of the response's timestamp among all responses. Deleting any response renumbers every later applicant. The October 2026 test response was removed before any IDs went out, and the typed IDs in the Tracker and Contact log were renumbered by hand. After IDs have been shared with applicants, never delete a response row; mark it closed in the Tracker instead.
+
+**Other tabs:** Applicant view (pick an applicant ID to see status, latest Contact log entries, progress, school details and their application answers), To do (current action list for the program, including deferred decisions on pricing, cohort size and funding).
+
+**Status (October 18, 2026):** 6 applicants from the SHAPE CO conference (IDs KO-2026-001 to 006), all in Colorado, all needing a map. The current action list is the To do tab. The biggest blockers are OUSA's answer on YMP for non-Massachusetts schools and building the online training.
+
 ## Camp Curriculum Sources (TEMPORARY - remove when camp curricula are built)
 
 Tracking sources of information for building the two camp curricula.
