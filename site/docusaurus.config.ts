@@ -57,6 +57,8 @@ const config: Config = {
         hashed: true,
         indexBlog: false,
         docsRouteBasePath: '/',
+        // The teacher course is an unlisted prototype; keep it out of search
+        ignoreFiles: [/^training\//],
       },
     ],
   ],

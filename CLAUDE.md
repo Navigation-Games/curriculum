@@ -73,6 +73,7 @@ Every core activity needs these, consistent with each other:
 
 - `content/activities/` - **source files for activities** (edit here, never in site/docs/)
 - `content/lessons/` - **source files for lesson plans** (edit here, never in site/docs/)
+- `content/training/` - **source files for the teacher course** (prototype, October 2026; edit here, never in site/docs/training/). Built by `scripts/build-training.js` into unlisted pages at `/training/` and `ai-advisor/training-units.json` (committed, like site-map.md). Format is in the editing guide. Design doc: Google Doc "2026 Curriculum Training" (`1A4aOEtHewDPJgtnA_OWd4zIVPRt1bpzn310wXnGkIYM`)
 - `background/` - source materials, reference docs, uploaded context files (site-tools-discussion.md, ng-curriculum-prep.html, etc.)
 - `notes/` - curriculum decisions, open questions, author notes
 - `ai-advisor/` - AI lesson plan advisor backend (Python/Flask, deployed on Google Cloud Run)
@@ -162,7 +163,7 @@ An embedded AI chat at `/plan-my-lessons/` that helps teachers and anyone else p
 
 ### Updating the advisor
 
-The system prompt lives at `ai-advisor/system-prompt.md`. Changes to the system prompt, the generated `site-map.md`, `app.py`, or `requirements.txt` require rebuilding the container and redeploying to Cloud Run. See `ai-advisor/README.md` for the PowerShell commands. **The live advisor does not change on `git push`.** After a round of curriculum editing, remind Barb that a Cloud Run redeploy is needed for the advisor to see the updated prompt and site map.
+The system prompt lives at `ai-advisor/system-prompt.md`. Changes to the system prompt, the generated `site-map.md`, the course tutor's `tutor-prompt.md` or generated `training-units.json`, `app.py`, or `requirements.txt` require rebuilding the container and redeploying to Cloud Run. See `ai-advisor/README.md` for the PowerShell commands. **The live advisor does not change on `git push`.** After a round of curriculum editing, remind Barb that a Cloud Run redeploy is needed for the advisor to see the updated prompt and site map.
 
 Frontend changes (`AdvisorChat/`, `plan-my-lessons.*`, `ReviewConversations/`, `review-conversations.*`) deploy automatically via the normal GitHub Actions workflow on `git push`.
 

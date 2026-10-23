@@ -1,0 +1,47 @@
+/* The tutor reuses the advisor chat's styles (AdvisorChat/styles.module.css);
+   these are the extras for the course. */
+
+.tutor {
+  margin: 1rem 0 2rem;
+}
+
+.savedBlock {
+  margin: 0.75rem 0;
+  border: 1px solid var(--ifm-color-primary-light);
+  border-radius: 8px;
+  background: var(--ifm-background-color);
+}
+
+.savedHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.copyButton {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background: none;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.savedText {
+  margin: 0;
+  padding: 0.75rem;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: none;
+}
+
+.disclosure {
+  margin: 0.5rem 0.75rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+}

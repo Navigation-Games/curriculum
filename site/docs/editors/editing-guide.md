@@ -34,6 +34,7 @@ Edit the source files in `content/`, then run the build to update the site pages
 |---|---|---|
 | Activities (Boundary Run, Animal-O, etc.) | `content/activities/*.md` | `site/docs/activities/core/*.md` |
 | Lesson plans (Grade 3-5) | `content/lessons/school/grade-3-5/*.md` | `site/docs/lessons/school/grade-3-5/*.md` (numbered files only) |
+| Teacher course units (prototype) | `content/training/*.md` | `site/docs/training/*.md` and `ai-advisor/training-units.json` |
 
 Generated files have a comment at the top: `{/* AUTO-GENERATED — do not edit directly */}`
 
@@ -257,6 +258,42 @@ activities:
 - `## Delivery` is the full version. It can include markdown links like `[**Boundary Run**](/activities/core/boundary-run)`. These links appear on the full page but are stripped in the one-pager.
 - `## Compact Delivery` is optional. If present, it replaces the delivery section on the one-pager. Use it when the full delivery has extra detail that does not belong on a one-pager. If omitted, the full delivery is used for both views.
 - Vocabulary in lessons is a simple list of terms (no definitions needed; those live on the activity pages)
+
+### Teacher course files (prototype)
+
+The Kickstart Orienteering Teacher Course lives in `content/training/`: `index.md` is the course home and `unit-0.md`, `unit-1.md` and so on are the units. `scripts/build-training.js` (run as part of the normal build) turns them into pages at `/training/` and writes `ai-advisor/training-units.json` for the course tutor. While the course is a prototype, the pages are unlisted: they work by URL but are not in the sidebar, site search or the advisor's site map.
+
+A unit file has a numbered title, a little frontmatter and six sections:
+
+```markdown
+# 0 - Welcome, Your Situation and Your Map
+
+---
+phase: 1
+minutes: 25
+deliverable: Learner profile, credit plan and map decision
+---
+
+## Page
+What the teacher reads, with links into the curriculum.
+
+## What you'll make
+The deliverable, in the teacher's terms.
+
+## What we look for
+The rubric, in plain words. Shown to the teacher.
+
+## Opening
+The tutor's first message, shown at the top of the chat.
+
+## Tutor
+Instructions for the AI tutor: what to ask, in what order, and the rubric to give feedback against. Not shown on the page.
+
+## Reviewer notes
+For Navigation Games reviewers: what to check and how long it takes. Not shown on the page, and not sent to the AI.
+```
+
+The tutor's general behavior (tone, vocabulary, accuracy rules) is in `ai-advisor/tutor-prompt.md`. When the tutor finishes a deliverable it writes it in a fenced block labeled `deliverable` (or `profile` in Unit 0), which the page saves in the teacher's browser. Like the advisor, the live tutor only picks up changes to unit files or `tutor-prompt.md` after a Cloud Run redeploy.
 
 ## Building the Site
 

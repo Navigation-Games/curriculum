@@ -18,6 +18,9 @@ ai-advisor/
   app.py              - Flask backend (chat endpoint, review endpoints, rate limiting, logging)
   test_review.py      - Tests for the /review endpoints (run with pytest)
   system-prompt.md    - Curriculum knowledge baked into the AI's system prompt
+  tutor-prompt.md     - General instructions for the teacher course tutor (/tutor)
+  training-units.json - Course unit material for the tutor (generated from content/training/)
+  test_tutor.py       - Tests for the /tutor endpoint
   requirements.txt    - Python dependencies
   Dockerfile          - Cloud Run container
   .env.example        - Template for local dev environment variables
@@ -36,6 +39,7 @@ site/src/pages/review-conversations.tsx    - Staff review page at /review-conver
 site/src/pages/review-conversations.module.css - Page styles
 site/src/components/ReviewConversations/index.tsx - Review component
 site/src/components/ReviewConversations/styles.module.css - Review styles
+site/src/components/TrainingTutor/index.tsx - Course tutor chat on /training/unit-N/ pages
 ```
 
 ## Endpoints
@@ -48,6 +52,7 @@ site/src/components/ReviewConversations/styles.module.css - Review styles
 | `/review/conversations/<id>` | GET | Google ID token (staff) | Full thread plus all reviewers' feedback |
 | `/review/conversations/<id>/feedback` | POST | Google ID token (staff) | Add a feedback comment (`{"feedback": "..."}`) |
 | `/review/conversations/<id>/dismiss` | POST | Google ID token (staff) | Hide a conversation from the reviewer's default list |
+| `/tutor` | POST | optional Google ID token (shares the `/chat` limit) | Teacher course tutor (`{"unit", "conversation_id", "messages", "profile"}`). Conversation IDs start with `tutor-<unit>-`, so tutor conversations show up in the log sheet and the review tool |
 | `/page-feedback` | POST | optional Google ID token (rate limited when anonymous) | "Was this page helpful?" feedback from docs pages (`{"page", "title", "rating", "comment", "submitter"}`) |
 
 The `/review/*` endpoints are for Navigation Games staff. They require a Google ID token from a `navigationgames.org` account, sent as `Authorization: Bearer <token>`. The backend verifies the token signature, audience (our OAuth client ID), the `hd` claim, and `email_verified`. Feedback is stored in a **Feedback** tab of the logging spreadsheet, which the backend creates automatically if missing (columns: timestamp, conversation_id, reviewer_email, status, feedback).
@@ -279,7 +284,7 @@ The email is sent from whichever Google account set up the trigger. To change th
 
 ## Redeploying after changes
 
-Any time you change `app.py`, `system-prompt.md`, or `requirements.txt`, or want the advisor to pick up a regenerated `site-map.md` (rebuilt by `scripts/build-content.js` and appended to the system prompt at startup), you need to rebuild the container image and redeploy. The live advisor does not change on `git push`. Both steps are required. Run from the `ai-advisor/` directory in PowerShell:
+Any time you change `app.py`, `system-prompt.md`, `tutor-prompt.md`, or `requirements.txt`, or want the advisor to pick up a regenerated `site-map.md` or `training-units.json` (rebuilt by `scripts/build-content.js` and appended to the system prompt at startup), you need to rebuild the container image and redeploy. The live advisor does not change on `git push`. Both steps are required. Run from the `ai-advisor/` directory in PowerShell:
 
 ```powershell
 # Step 1: Rebuild the container image

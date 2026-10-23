@@ -17,6 +17,16 @@ What's done, what's next, and what's deferred.
 
 - **Revisit Monday.com for local partner contacts.** For the first cohort, the Local partners and Contact log tabs in the Kickstart tracker (Google Sheets) hold the people who may help NG locally (RMOC and others) and our interactions with them. NG keeps its other contacts in Monday.com. Sheets is easier to work in for now, but once the partner list is stable, decide whether to move it to Monday. The Local partners columns mirror Monday's usual contact fields, so a CSV import should work. Note that the Contact log also feeds the applicant Tracker's Last contact and Minutes spent, so moving partner logging would mean keeping applicant logging in Sheets.
 
+### Teacher course (Kickstart Orienteering online training)
+
+The course design is in the Google Doc "2026 Curriculum Training" (syllabi, units, hours, certificates, accreditation options, staff time, platform options). October 2026: a prototype of the "app-like site" option is built. Units 0 to 4 are in `content/training/`, rendered as unlisted pages at `/training/`, with an AI tutor on each unit page (the `/tutor` endpoint in `ai-advisor/app.py`). Next:
+
+- **Try it.** Redeploy the advisor to Cloud Run so `/tutor` exists, then have staff work through Units 0 to 4 and note what feels wrong.
+- **Try the same Unit 0 on a course platform** (Thinkific or LearnWorlds free trial), embedding the tutor, and compare effort and feel. Decide on the platform before the first cohort.
+- **Write Units 5 to 7** (map and courses, teaching reflections, next year), and the In-depth course additions.
+- **Submitting deliverables.** Today a deliverable is saved in the teacher's browser and the whole conversation is logged for review. A real "send to reviewer" step, reviewer replies to the teacher, and progress tracking are still to build (or come from a platform).
+- **Content the course needs** is listed under the Phase 1 table in the course design doc (training videos, model opening briefing, printables, map-reading and course design guides, PD credit request handout).
+
 ### Site navigation redesign
 
 Design decisions in `notes/site-navigation-redesign.md`. The hub is done. July 2026: school landing page enriched (constraints, standards, one-setup-many-classes, year-over-year, administrators section, broader teacher audience); How to Use This Site got a site map tree and a broadened "For teachers" section; Quick Start and Home link to About Orienteering; sidebar now actually expands on landing pages (fixed a baseUrl bug that had silently disabled the path matching). Remaining:

@@ -34,7 +34,7 @@ jobs:
         run: node scripts/build-content.js
 
       - name: Run content tests
-        run: node --test scripts/build-content.test.js
+        run: node --test scripts/build-content.test.js scripts/build-training.test.js
 
       - name: Build site
         working-directory: site

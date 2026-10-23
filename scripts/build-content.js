@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require(require.resolve('js-yaml', { paths: [path.join(__dirname, '..', 'site')] }));
+const { buildTraining } = require('./build-training.js');
 
 const REPO_ROOT = path.join(__dirname, '..');
 const DIRS = {
@@ -51,6 +52,9 @@ function main() {
       buildDir(contentDir, outputDir, 'lesson', errors, warnings, activityMaterials, prog, 'camp');
     }
   }
+
+  // Teacher course (content/training/), built by its own script
+  errors.push(...buildTraining());
 
   writeAdvisorSiteMap();
 
