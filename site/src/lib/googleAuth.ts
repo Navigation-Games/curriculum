@@ -1,10 +1,12 @@
 /**
- * Shared Google sign-in state for the curriculum site.
+ * Shared sign-in state for the curriculum site.
  *
  * Visitors can sign in with any Google account (Google Identity Services,
- * same OAuth client as the review tool). The ID token is kept in
- * localStorage until it expires (about an hour) and is sent as a Bearer
- * token to the advisor backend, which verifies it server-side.
+ * same OAuth client as the review tool), or with an emailed sign-in link
+ * (see pages/sign-in.tsx). Either way the token is kept in localStorage
+ * until it expires (about an hour for Google, 30 days for an email link)
+ * and is sent as a Bearer token to the advisor backend, which verifies it
+ * server-side. Email-link users are always viewers, never managers.
  *
  * What signing in gives you:
  * - any Google account ("viewer"): higher advisor daily limit, unlimited
@@ -26,6 +28,8 @@ export interface AuthUser {
   hd?: string;
   /** Token expiry, unix seconds */
   exp: number;
+  /** How they signed in; absent on sessions stored before email links existed */
+  method?: 'google' | 'email';
 }
 
 const STORAGE_KEY = 'ng-google-auth';
@@ -74,7 +78,17 @@ export function setCredential(credential: string): void {
     picture: (payload.picture as string) || '',
     hd: payload.hd as string | undefined,
     exp: (payload.exp as number) || 0,
+    method: 'google',
   };
+  storeUser(user);
+}
+
+/** Store the session from an emailed sign-in link (verified by the backend). */
+export function setEmailSession(sessionToken: string, email: string, exp: number): void {
+  storeUser({credential: sessionToken, email, name: '', picture: '', exp, method: 'email'});
+}
+
+function storeUser(user: AuthUser): void {
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
   } catch {
@@ -93,7 +107,8 @@ export function signOut(): void {
 }
 
 export function isManager(user: AuthUser | null): boolean {
-  return user?.hd === MANAGER_DOMAIN;
+  // Only a Google token carries hd; email-link sessions never do
+  return user?.method !== 'email' && user?.hd === MANAGER_DOMAIN;
 }
 
 /** Subscribe to sign-in/sign-out changes (this tab and others). */
