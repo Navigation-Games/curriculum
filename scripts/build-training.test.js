@@ -81,7 +81,8 @@ describe('renderUnit', () => {
     const audioPage = renderUnit(withAudio, undefined, units[1]);
     assert.match(audioPage, /<figcaption>A welcome from Barb<\/figcaption>/);
     assert.match(audioPage, /<audio controls preload="metadata" src="\/audio\/training\/test.mp3"><\/audio>/);
-    assert.ok(!page.includes('<audio'));
+    const withoutAudio = renderUnit({ ...unit, meta: { ...unit.meta, audio: undefined } }, undefined, units[1]);
+    assert.ok(!withoutAudio.includes('<audio'));
   });
 });
 

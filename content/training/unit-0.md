@@ -4,6 +4,8 @@
 phase: 1
 minutes: 25
 deliverable: Learner profile, credit plan and map decision
+audio: training/welcome-unit-0.mp3
+audio_caption: Barb on what Unit 0 is for (about 45 seconds)
 ---
 
 ## Page
