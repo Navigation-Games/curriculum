@@ -2,7 +2,9 @@
 
 > **Changed something in this folder? Redeploy.** The live advisor and course tutor do not update on `git push`. After any change to `app.py`, `system-prompt.md`, `tutor-prompt.md`, `requirements.txt`, or the generated `site-map.md` or `training-units.json`, follow [Redeploying after changes](#redeploying-after-changes).
 
-A backend service that helps teachers plan orienteering lessons. Teachers chat with an AI advisor that recommends lesson sequences based on their grade level, schedule, space, and equipment.
+One backend service, deployed on Cloud Run as `lesson-advisor`, runs two things: the lesson plan advisor (`/chat`, at `/plan-my-lessons/` on the site) and the teacher course tutor (`/tutor`, on the `/training/` unit pages). The folder and service keep the advisor's name.
+
+The advisor helps teachers plan orienteering lessons. Teachers chat with an AI advisor that recommends lesson sequences based on their grade level, schedule, space, and equipment.
 
 The advisor recommends from the existing Navigation Games curriculum. It does not generate new content.
 

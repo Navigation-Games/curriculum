@@ -42,9 +42,10 @@ def sent():
 
 @pytest.fixture
 def client(monkeypatch, sent):
-    def fake_create_message(messages, system_prompt=None):
+    def fake_create_message(messages, system_prompt=None, max_tokens=None):
         sent["messages"] = messages
         sent["system_prompt"] = system_prompt
+        sent["max_tokens"] = max_tokens
         return FakeApiResponse()
 
     monkeypatch.setattr(advisor, "rate_limit_store", {})
@@ -131,3 +132,8 @@ def test_training_units_json_is_valid():
     for unit in data.values():
         for key in ("title", "minutes", "deliverable", "page", "make", "look_for", "opening", "instructions"):
             assert unit.get(key), key
+
+
+def test_tutor_gets_room_for_long_deliverables(client, sent):
+    ask(client)
+    assert sent["max_tokens"] == advisor.TUTOR_MAX_TOKENS > advisor.MAX_TOKENS
