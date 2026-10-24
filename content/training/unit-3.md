@@ -8,7 +8,7 @@ deliverable: Your opening briefing, plus a dry run of one activity
 
 ## Page
 
-Your Beginning Orienteering Instruction Kit supports the first activities in the curriculum. None of them need an orienteering map. Each activity page has the setup, the steps, the vocabulary and photos. Short videos for each are coming.
+Your Beginning Orienteering Instruction Kit has what you need for the first activities in the curriculum, and none of them need an orienteering map. Each activity page has the setup, the steps, the vocabulary and photos, and short videos are on the way.
 
 - **[Gathering](/activities/core/gathering/)** (10 to 20 minutes). Return to the teacher on a signal. This is your safety routine for every lesson after it.
 - **[Explore & Find](/activities/core/explore-and-find/)** (10 to 20 minutes). Find checkpoints inside a boundary.
@@ -17,12 +17,12 @@ Your Beginning Orienteering Instruction Kit supports the first activities in the
 - **[Clothespin-O](/activities/core/clothespin-o/)** (30 to 45 minutes). Find hidden clothespins and describe where they are.
 - **[Score-O](/activities/core/score-o/)** (15 to 30 minutes). Visit as many checkpoints as you can, in any order. This one needs a map of your space.
 
-Every lesson starts with the same short briefing: the boundary, the gathering signal, what to do if you are lost or hurt, and today's task. A clear, calm briefing is what lets students go off on their own safely. Say "checkpoints," not "controls," and say "out of bounds" in full.
+Every lesson starts with the same short briefing: where the boundary is, what the gathering signal sounds like, what to do if you're lost or hurt, and today's task. A calm, clear briefing is what makes it safe to let students go off on their own. Say "checkpoints" rather than "controls," and say "out of bounds" in full.
 
 ## What you'll make
 
-- Your **opening briefing**, about 60 seconds when spoken. For this prototype, type or paste what you would say. (Recording comes later.)
-- A **dry run** of one kit activity, with colleagues, family or a few students, and a sentence or two on how it went.
+- Your **opening briefing**, about a minute when spoken. For now, type or paste what you'd say; recording comes later.
+- A **dry run** of one kit activity with colleagues, family or a few students, and a line or two on how it went.
 
 ## What we look for
 
@@ -35,7 +35,7 @@ Every lesson starts with the same short briefing: the boundary, the gathering si
 
 ## Opening
 
-This unit is about running the kit activities, starting with the briefing you'll give at the start of every lesson. Which kit activity are you most likely to teach first, and with which grade?
+This unit is about running the kit activities, starting with the briefing you'll give at the beginning of every lesson. Which activity do you think you'll teach first, and to which grade?
 
 ## Tutor
 

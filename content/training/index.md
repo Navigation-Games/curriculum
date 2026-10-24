@@ -7,21 +7,18 @@ status: prototype
 
 ## Welcome
 
-This course gets you ready to teach orienteering with your own students. It is part of Kickstart Orienteering, Navigation Games' program for schools.
-
-- **About 4 hours before your kit ships**, spread over two to three weeks (Units 0 to 4 and one live Q&A)
-- **About 2 more hours while you teach** (Units 5 to 7, mostly short reflections)
-- **About 10 contact hours in all**, counting the two consultations and teaching at least one class
-
-Each unit is a short page, then a conversation with the course tutor. The tutor is an AI assistant. A person at Navigation Games reads everything you submit and replies.
+This course gets you ready to teach orienteering to your own students. It's part of Kickstart Orienteering, Navigation Games' program for schools. Plan on about 4 hours before your kit ships, spread over two or three weeks, then three more short units while you teach, mostly reflections on how your classes went. With the two consultations and the class you teach, that comes to about 10 contact hours.
 
 ## How a unit works
 
-1. Read the page and watch the short video, if there is one. Most units take 10 to 30 minutes.
-2. Talk it through with the tutor below the page. You can stop at any point and come back later.
-3. Make the unit's deliverable. The tutor gives feedback right away, and you can revise.
-4. Send it in. A Navigation Games reviewer replies, usually within 3 business days.
+Each unit is a short page followed by a conversation with the course tutor, an AI assistant. The tutor asks about your situation and helps you make something you'll actually use, like a pitch for your principal or the safety briefing you'll give your class. You can stop partway and pick up later in the same browser.
+
+When the tutor writes up your finished piece, Navigation Games staff read it and get back to you, usually within 3 business days.
+
+## Your cohort
+
+Teachers who start the course around the same time go through it together as a cohort. You'll post a short introduction, swap unit plans with a partner for feedback, and join one live Q&A on Google Meet. If nobody else is starting when you are, a Navigation Games staff member will be your partner instead, and you can join the next cohort's Q&A.
 
 ## Prototype notes
 
-This is a prototype of the course, for Navigation Games staff to try. Units 0 to 4 are drafted. Units 5 to 7 come later, along with progress tracking, reminders and certificates.
+This is a prototype for Navigation Games staff and a few test teachers. Units 0 to 4 are written. Units 5 to 7, progress tracking, reminders and certificates come later.

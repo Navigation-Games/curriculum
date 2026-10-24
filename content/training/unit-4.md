@@ -8,20 +8,18 @@ deliverable: Your unit plan, which becomes the basis of your planning survey and
 
 ## Page
 
-Now you put it together: a plan for your own orienteering unit, fitted to your students, your space and your schedule. It can be as short as one activity or as long as six lessons.
-
-Start from the lessons for your grade band:
+Now you'll plan your own unit, sized to your students, space and schedule. It can be a single activity or six lessons. Start from the lessons for your grade band:
 
 - [Lesson plans for schools](/lessons/school/), by grade band (K-2, 3-5, 6 and up)
 - [Indoor alternatives](/lessons/school/grade-3-5/a-indoor-orienteering/) if you only have a gym
 - [Adapting for all learners](/reference/adaptations/) for students with different needs
 - [PE standards](/reference/frameworks/pe-standards/) (SHAPE America), if you need to show which standards the unit meets
 
-Every lesson works without electronic timing. If you have more class time than a lesson needs, add repetitions and harder variations rather than jumping ahead.
+Every lesson works without electronic timing. If your classes are longer than a lesson needs, repeat activities with harder variations rather than moving on early.
 
 ## What you'll make
 
-A **unit plan**: for each class session, the date (or week), which lesson or activities, the space, and anything you need to prepare. The tutor helps you build it. A Navigation Games reviewer reads it before Consultation 1, so the consultation starts from your plan.
+A **unit plan** that lists, for each class, the date or week, the lesson or activities, the space and anything you need to prepare. The tutor builds it with you. Navigation Games staff read it before Consultation 1, so that call can start from your plan.
 
 ## What we look for
 
@@ -36,7 +34,7 @@ A **unit plan**: for each class session, the date (or week), which lesson or act
 
 ## Opening
 
-Let's build your unit plan. If I already have your profile from Unit 0, I'll use it, so tell me what's changed. How many class sessions do you have for orienteering, and how long is each one?
+Let's build your unit plan. I'll use your profile from Unit 0 if you have one, so just tell me what's changed. How many class sessions do you have for orienteering, and how long is each one?
 
 ## Tutor
 

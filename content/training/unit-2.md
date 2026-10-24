@@ -8,7 +8,7 @@ deliverable: The six lessons in order, with a reason for the order
 
 ## Page
 
-The curriculum builds skills in a set order. Students learn their space before they learn a map, and they find things in order before they choose their own order. The full sequence of 48 concepts is in the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence/). For teaching, the six lessons for grades 3 to 5 show the arc best:
+The lessons build in a set order. Students learn their space before they see a map, and they find checkpoints in a given order before they choose their own. The full sequence of 48 concepts is in the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence/), but the six lessons for grades 3 to 5 show the arc more clearly:
 
 1. **[Know Your Space](/lessons/school/grade-3-5/lesson-1/).** Here is where you can go, and there are things to find. Boundary Run, Gathering, Explore & Find.
 2. **[Match the Code](/lessons/school/grade-3-5/lesson-2/).** Find checkpoints in a specific order, and check each one. Animal-O.
@@ -17,22 +17,22 @@ The curriculum builds skills in a set order. Students learn their space before t
 5. **[Visiting Checkpoints](/lessons/school/grade-3-5/lesson-5/).** Navigate with a map, visiting checkpoints in any order. Map Walk, Score-O.
 6. **[Orienteering Course](/lessons/school/grade-3-5/lesson-6/).** Navigate a course, visiting checkpoints in order. Point-to-Point.
 
-The other grade bands follow the same idea. [Grades K-2](/lessons/school/grade-k-2/) go more slowly and stay longer before maps. [Grades 6 and up](/lessons/school/grade-6-plus/) move to maps quickly. Each step adds one new demand, so students keep succeeding while the challenge grows.
+The other grade bands follow the same path at a different speed: [grades K-2](/lessons/school/grade-k-2/) stay longer before maps, and [grades 6 and up](/lessons/school/grade-6-plus/) get to maps quickly. Each step adds one new thing to handle, so students keep succeeding as the challenge grows.
 
 ## What you'll make
 
-The six lessons put **in order**, with a sentence or two on **why that order works**.
+The six lessons **in order**, with a sentence or two on **why that order works**.
 
 ## What we look for
 
-- The lessons are in the right order
-- The reason mentions safety and the space coming before maps
-- The reason mentions that each step adds one new challenge
-- The teacher can say what students would struggle with if a step were skipped
+- The lessons are in order
+- Your reason explains why the space and safety come before maps
+- Your reason mentions adding one new challenge at a time
+- You can say what would go wrong if a step were skipped
 
 ## Opening
 
-This unit is about why the lessons come in the order they do. Here's a question to start: why do you think Boundary Run, which involves no map at all, comes before any lesson with a map?
+This unit is about why the lessons come in the order they do. To start: why do you think Boundary Run, which has no map at all, comes before every lesson that uses one?
 
 ## Tutor
 
