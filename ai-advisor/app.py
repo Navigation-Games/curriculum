@@ -9,6 +9,7 @@ Deployed on Google Cloud Run.
 
 import base64
 import os
+import re
 import json
 import re
 import time
@@ -570,6 +571,9 @@ def chat():
 # ---------------------------------------------------------------------------
 
 TUTOR_PROMPT = (Path(__file__).parent / "tutor-prompt.md").read_text(encoding="utf-8")
+# A short style checklist, put at the very end of the system prompt because
+# models follow what they read last most closely
+TUTOR_STYLE = (Path(__file__).parent / "tutor-style.md").read_text(encoding="utf-8")
 TRAINING_UNITS_PATH = Path(__file__).parent / "training-units.json"
 TRAINING_UNITS = (
     json.loads(TRAINING_UNITS_PATH.read_text(encoding="utf-8"))
@@ -580,7 +584,7 @@ TUTOR_PROFILE_MAX_CHARS = 3000
 
 
 def tutor_system_prompt(unit: dict, profile: str = "") -> str:
-    """The tutor's system prompt: general instructions, then this unit, then the site map."""
+    """The tutor's system prompt: general instructions, this unit, the site map, then the style checklist."""
     parts = [
         TUTOR_PROMPT,
         f"# This unit: {unit['title']}\n\nAbout {unit['minutes']} minutes. "
@@ -598,7 +602,20 @@ def tutor_system_prompt(unit: dict, profile: str = "") -> str:
         )
     if SITE_MAP_PATH.exists():
         parts.append(SITE_MAP_PATH.read_text(encoding="utf-8"))
+    parts.append(TUTOR_STYLE)
     return "\n\n".join(parts)
+
+
+def remove_em_dashes(text: str) -> str:
+    """
+    Replace em-dashes with commas. Navigation Games writing never uses them,
+    and the AI doesn't always follow that rule, so the tutor's replies are
+    cleaned in code. En dashes in number ranges ("grades 3–5") stay.
+    """
+    text = re.sub(r"\s*\u2014\s*", ", ", text)
+    # A spaced en dash is being used as an em-dash
+    text = re.sub(r" \u2013 ", ", ", text)
+    return text
 
 
 @app.route("/tutor", methods=["POST"])
@@ -660,7 +677,7 @@ def tutor():
 
     try:
         response = _create_message(messages, tutor_system_prompt(unit, profile), TUTOR_MAX_TOKENS)
-        assistant_message = response.content[0].text
+        assistant_message = remove_em_dashes(response.content[0].text)
         _log_exchange(conversation_id, messages, assistant_message, response, user_info)
         return jsonify({"conversation_id": conversation_id, "response": assistant_message})
     except anthropic.RateLimitError:

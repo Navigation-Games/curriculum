@@ -168,3 +168,15 @@ def test_training_units_json_is_valid():
 def test_tutor_gets_room_for_long_deliverables(client, sent):
     ask(client)
     assert sent["max_tokens"] == advisor.TUTOR_MAX_TOKENS > advisor.MAX_TOKENS
+
+
+def test_em_dashes_are_removed_but_ranges_stay():
+    assert advisor.remove_em_dashes("Map Walk — students find") == "Map Walk, students find"
+    assert advisor.remove_em_dashes("indoor—gym") == "indoor, gym"
+    assert advisor.remove_em_dashes("a – b") == "a, b"
+    assert advisor.remove_em_dashes("Grades 3–5") == "Grades 3–5"
+
+
+def test_style_checklist_comes_last(client, sent):
+    ask(client)
+    assert sent["system_prompt"].rstrip().endswith(advisor.TUTOR_STYLE.rstrip())

@@ -293,7 +293,7 @@ Instructions for the AI tutor: what to ask, in what order, and the rubric to giv
 For Navigation Games reviewers: what to check and how long it takes. Not shown on the page, and not sent to the AI.
 ```
 
-The tutor's general behavior (tone, vocabulary, accuracy rules) is in `ai-advisor/tutor-prompt.md`. When the tutor finishes a deliverable it writes it in a fenced block labeled `deliverable` (or `profile` in Unit 0), which the page saves in the teacher's browser. Like the advisor, the live tutor only picks up changes to unit files or `tutor-prompt.md` after a Cloud Run redeploy.
+The tutor's general behavior (tone, vocabulary, accuracy rules) is in `ai-advisor/tutor-prompt.md`, and a short style checklist that goes at the very end of its prompt is in `ai-advisor/tutor-style.md`. The backend also replaces any em-dashes in the tutor's replies with commas. When the tutor finishes a deliverable it writes it in a fenced block labeled `deliverable` (or `profile` in Unit 0), which the page saves in the teacher's browser. Like the advisor, the live tutor only picks up changes to unit files or `tutor-prompt.md` after a Cloud Run redeploy.
 
 ## Building the Site
 
