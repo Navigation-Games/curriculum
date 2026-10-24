@@ -303,7 +303,7 @@ If your Workspace blocks service account keys (some organizations do), tell Clau
 
 ## Tutor voice setup (one time)
 
-The course tutor can read its replies aloud in a voice made with ElevenLabs (set up October 2026 with a professional clone of Barb's voice, on the `eleven_v4` model). Teachers who are signed in get a **Listen** button under each tutor message, a **Read replies aloud** switch (off by default) that plays each new reply, and a note in the chat header like "Listening: 75% left today". The page says the voice is an AI voice, using `TUTOR_VOICE_LABEL`. Keep that label honest, so nobody thinks they're hearing the real person.
+The course tutor can read its replies aloud in a voice made with ElevenLabs (set up October 2026 with a professional clone of Barb's voice, on the `eleven_v4` model). Teachers who are signed in get a **Listen** button under each tutor message, a **Read the tutor's message out loud** switch (off by default) that plays each new reply, and a note in the chat header like "Read-aloud credits: 75% left today". The page says the voice is an AI voice, using `TUTOR_VOICE_LABEL`. Keep that label honest, so nobody thinks they're hearing the real person.
 
 **How it's protected.** The backend only reads the tutor's own replies (each comes with a signed `speech_token`) and unit openings, never text someone sends it, so nobody can use the endpoint to make the voice say something else. Saved boxes (profile, plan, map answers) and link addresses are not read out.
 
