@@ -114,6 +114,19 @@ Every core activity needs these, consistent with each other:
 - When adding a material, keep `site/src/components/MaterialLink/materialsData.ts` and `site/docs/reference/equipment/materials.md` in sync, and give the materials.md heading an explicit anchor equal to the slugified canonical name (e.g., `#### Start/finish markers {#start-finish-markers}`). MaterialLink popovers deep-link to that anchor; without it, the auto-generated slug would include the NG Kit badge text.
 - Map symbols use the **ISSprOM** (International Specification for Sprint Orienteering Maps) symbol set, not ISOM. ISSprOM is designed for sprint/urban maps at 1:4,000 scale, which matches schoolyard and park maps. Symbol Relay cards will have an ISSprOM base set plus a schoolyard-specific subset (paths, buildings, fences, etc.) that camps would not need.
 
+## Writing in Barb's Voice
+
+For anything written for Barb to publish or send (web copy, docs, emails, README text). Copied from her global CLAUDE.md so it applies in this repo too. Learned from her edits to the MapMap About page, which turned a draft from an organization covering itself into a person explaining something.
+
+- Say what's true and specific to this work. Prefer the real reason or example over a generic claim.
+- Don't pre-apologize or promise ("some info may be wrong," "we read everything," "things will change"). State it once, only if it matters.
+- Leave out completeness for its own sake. Include what the reader needs.
+- Add the practical advice and stakes an insider would give (permissions, access, a free tool to use meanwhile). Plain emphasis is fine ("That is super important").
+- Use precise domain terms (copyright owner, landowner, club map curator) instead of flattening them.
+- Be warm and direct when inviting people ("We'd love to...", "Please send..."). Use plain verbs.
+- Avoid: an even rhythm of short declarative sentences, "not X but Y", lists of three, institutional hedging, marketing wording.
+- Let sentence length vary. Draft short, and expect Barb to edit; her edits are the best guide to the voice.
+
 ## Lesson Plan Writing Practices
 
 These practices were established during the K-2 editing pass and should be applied across all grade bands.
@@ -227,6 +240,8 @@ Participating schools get a Beginning Orienteering Instruction Kit, an orienteer
 - Three Google Forms: Application, Activity Planning Survey, Post Activity Reflection Survey. The post-unit survey does not yet feed a tracker tab.
 
 **In this repo:** only the conference QR forwarding pages in `site/static/go/` (`signin`, `website`, `conference`, `curriculum`). `go/signin` is the sign-in form; it carried a "SHAPE CO" tag during the conference and was repointed to the untagged link afterwards (see the file's comment for tagging a future conference).
+
+**Applicant folders:** each applicant has a Drive folder named `KO-2026-NNN <state> <last name>` inside the "Applicants" folder (https://drive.google.com/drive/folders/1DEfmgj67t8ahrAIkNLaELHaFZ0yfIq6R), with a summary Google Doc (application answers, notes, open questions, a "Map research" section to fill in, and links to Google Maps and the county GIS and assessor viewers for getting a school map made). The Tracker's "Applicant folder" column (AE) links to each folder. The Tracker stays the source of truth; the docs are a snapshot. Folders also hold parcel/outline files (KML for Google Earth or My Maps, GeoJSON for QGIS) pulled from public county ArcGIS parcel layers (Chaffee, San Miguel), Denver's open data parcels, or OpenStreetMap. These are tax-parcel or mapped outlines, not survey-quality. The pull method: query the county's ArcGIS FeatureServer with `f=geojson&outSR=4326` and a `where` on address or owner. Douglas County's server and Pueblo County's site did not respond to automated requests in October 2026. The first email to applicants (with a spot for the boundary image) is the Google Doc "01 Email to applicants after application".
 
 **Applicant IDs are fragile:** the `KO-YYYY-NNN` ID in the Applications tab is the rank of the response's timestamp among all responses. Deleting any response renumbers every later applicant. The October 2026 test response was removed before any IDs went out, and the typed IDs in the Tracker and Contact log were renumbered by hand. After IDs have been shared with applicants, never delete a response row; mark it closed in the Tracker instead.
 
