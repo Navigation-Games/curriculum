@@ -303,7 +303,7 @@ If your Workspace blocks service account keys (some organizations do), tell Clau
 
 ## Tutor voice setup (one time)
 
-The course tutor can read its replies aloud in a voice made with ElevenLabs. Teachers get a "Listen" button under each tutor message and a "Read replies aloud" switch (off by default). The backend only reads the tutor's own replies and unit openings, never text someone sends it, so nobody can use the endpoint to make the voice say something else. ElevenLabs charges per character, so each teacher has a daily allowance (`TUTOR_SPEECH_DAILY_CHARS`), shown to them as minutes of listening left, the course has a monthly one (`TUTOR_SPEECH_MONTHLY_CHARS`), and each message's audio is kept in the browser, so replaying it costs nothing.
+The course tutor can read its replies aloud in a voice made with ElevenLabs. Teachers get a "Listen" button under each tutor message and a "Read replies aloud" switch (off by default). The backend only reads the tutor's own replies and unit openings, never text someone sends it, so nobody can use the endpoint to make the voice say something else. ElevenLabs charges per character, so each teacher has a daily allowance (`TUTOR_SPEECH_DAILY_CHARS`), shown to them as the percentage of listening left today, the course has a monthly one (`TUTOR_SPEECH_MONTHLY_CHARS`), and each message's audio is kept in the browser, so replaying it costs nothing.
 
 1. **Make the voice** in ElevenLabs (the ElevenCreative platform): Voices > Add a new voice > Instant Voice Clone, with a few minutes of natural speech. Try it in Text to Speech with a real tutor reply before going further.
 2. **Copy the voice ID** (on the voice's page, or in Voices > the voice > the ID button).
@@ -399,7 +399,7 @@ If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub
 | `ELEVENLABS_VOICE_ID` | Backend | The ElevenLabs voice the tutor speaks in |
 | `ELEVENLABS_MODEL` | Backend (optional) | ElevenLabs model, default `eleven_v4` (about 1 credit per character; speaks the teacher's language) |
 | `TUTOR_VOICE_LABEL` | Backend (optional) | Shown with the voice, default `AI voice`. For a cloned voice say whose, e.g. `AI voice based on Barb's` |
-| `TUTOR_SPEECH_DAILY_CHARS` | Backend (optional) | Characters each teacher can have read aloud per day, default 5000 (about 5 minutes). Teachers see how much listening they have left |
+| `TUTOR_SPEECH_DAILY_CHARS` | Backend (optional) | Characters each teacher can have read aloud per day, default 5000 (about 5 minutes of speech). Teachers see the percentage they have left today |
 | `TUTOR_SPEECH_MONTHLY_CHARS` | Backend (optional) | Characters the whole course can have read aloud per calendar month, default 100000. In memory, so it restarts on a redeploy: a safety net, not exact accounting |
 
 Without `SIGN_IN_SECRET` and a sender (or log-only mode), email sign-in is off: the course still works with Google sign-in, and the email form says email sign-in isn't set up yet.
