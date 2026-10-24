@@ -11,7 +11,7 @@ This course gets you ready to teach orienteering to your own students. It's part
 
 ## How a unit works
 
-Each unit is a short page followed by a conversation with the course tutor, an AI assistant. The tutor asks about your situation and helps you make something you'll actually use, like a pitch for your principal or the safety briefing you'll give your class. You can stop partway and pick up later in the same browser.
+Each unit is a short page followed by a conversation with the course tutor, an AI assistant. The tutor asks about your situation and helps you make something you'll actually use, like a pitch for your principal or the safety briefing you'll give your class. You sign in once, with Google or with a link we email you, and then you can stop partway and pick up later on any device.
 
 When the tutor writes up your finished piece, Navigation Games staff read it and get back to you, usually within 3 business days.
 
