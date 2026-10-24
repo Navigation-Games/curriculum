@@ -13,6 +13,8 @@ This course gets you ready to teach orienteering to your own students. It's part
 
 Each unit is a short page followed by a conversation with the course tutor, an AI assistant. The tutor asks about your situation and helps you make something you'll actually use, like a pitch for your principal or the safety briefing you'll give your class. You sign in once, with Google or with a link we email you, and then you can stop partway and pick up later on any device.
 
+You can talk instead of typing. Your computer or phone already has voice typing (Windows key + H on Windows, the Fn or Globe key twice on a Mac, the microphone on a phone keyboard), and it's often quicker, especially when the tutor asks about your school and students. You can also listen to the tutor: press Listen under any of its messages.
+
 When the tutor writes up your finished piece, Navigation Games staff read it and get back to you, usually within 3 business days.
 
 ## Your cohort

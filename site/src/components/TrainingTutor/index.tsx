@@ -129,6 +129,16 @@ function TutorMessage({content}: {content: string}) {
   );
 }
 
+// How to dictate an answer instead of typing it, for this device. Every
+// common system has voice typing built in, so the tutor needs no mic button.
+function dictationTip(): string {
+  const agent = navigator.userAgent;
+  if (/iPhone|iPad|Android/i.test(agent)) return 'tap the microphone on your keyboard';
+  if (/Mac/i.test(agent)) return 'press the Fn (Globe) key twice';
+  if (/Windows/i.test(agent)) return 'press the Windows key + H';
+  return 'use your computer\'s voice typing';
+}
+
 type SpeakState = 'idle' | 'loading' | 'playing';
 
 // Shown as a share of the daily allowance, since "characters" or "minutes of
@@ -175,6 +185,8 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const messagesBoxRef = useRef<HTMLDivElement>(null);
+  const [talkTip, setTalkTip] = useState(''); // set in the browser only
+  useEffect(() => setTalkTip(dictationTip()), []);
 
   // The tutor's voice, if the backend has one
   const [voice, setVoice] = useState<{enabled: boolean; label: string; chars_left?: number; daily_chars?: number} | null>(null);
@@ -455,6 +467,11 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
           Send
         </button>
       </div>
+      )}
+      {googleUser && talkTip && (
+        <p className={styles.talkTip}>
+          Talking is often quicker than typing: click in the box, {talkTip}, and say your answer.
+        </p>
       )}
 
       <p className={styles.disclosure}>
