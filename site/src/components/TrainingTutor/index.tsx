@@ -3,8 +3,10 @@
  * (/training/unit-N/). Pages are generated from content/training/ by
  * scripts/build-training.js, which passes in the unit and its opening message.
  *
- * Prototype behavior, all in this browser (localStorage):
- * - Each unit's conversation is saved, so a teacher can stop and come back.
+ * Teachers sign in first, with Google or an emailed link. Then:
+ * - Each unit's conversation is saved in this browser (localStorage), and on
+ *   the server through the conversation log, so a teacher can stop and pick
+ *   up later on any device (GET /tutor/progress).
  * - When the tutor writes a ```profile block (Unit 0), it is saved as the
  *   teacher's learner profile and sent with every later unit's messages.
  * - When the tutor writes a ```deliverable block, it is saved for that unit.
@@ -16,7 +18,8 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import GoogleSignInButton from '@site/src/components/GoogleSignInButton';
-import {useGoogleUser, signOut} from '@site/src/lib/googleAuth';
+import EmailSignInForm from '@site/src/components/EmailSignInForm';
+import {useGoogleUser, signOut, bearerToken, setGoogleSession} from '@site/src/lib/googleAuth';
 import formatMessage from '@site/src/components/AdvisorChat/formatMessage';
 import chatStyles from '@site/src/components/AdvisorChat/styles.module.css';
 import styles from './styles.module.css';
@@ -124,15 +127,26 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
   const apiUrl = (siteConfig.customFields?.advisorApiUrl as string) || 'http://localhost:8080';
   const googleUser = useGoogleUser();
 
+  // A Google sign-in lasts about an hour. Swap it for a 30-day session so a
+  // teacher isn't signed out partway through a unit. If the backend can't
+  // (not set up yet), the Google token keeps working until it expires.
+  useEffect(() => {
+    if (!googleUser || googleUser.method === 'email' || googleUser.session) return;
+    fetch(`${apiUrl}/auth/google-session`, {
+      method: 'POST',
+      headers: {Authorization: `Bearer ${googleUser.credential}`},
+    })
+      .then(r => (r.ok ? r.json() : null))
+      .then(data => data?.session_token && setGoogleSession(data.session_token, data.exp))
+      .catch(() => {});
+  }, [googleUser?.credential, apiUrl]);
+
   const [conversationId, setConversationId] = useState(() => newConversationId(unit));
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const messagesBoxRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLTextAreaElement>(null);
-  // Only follow new messages after the teacher sends one, never on page load
-  const followNewMessages = useRef(false);
 
   // Restore this unit's conversation (localStorage only exists in the browser)
   useEffect(() => {
@@ -143,17 +157,42 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
     }
   }, [unit]);
 
+  // Once signed in, pick up saved progress from the server (any device).
+  // The server copy wins unless this browser has more of the conversation.
+  const messagesRef = useRef(messages);
+  messagesRef.current = messages;
+  useEffect(() => {
+    if (!googleUser) return;
+    fetch(`${apiUrl}/tutor/progress`, {headers: {Authorization: `Bearer ${bearerToken(googleUser)}`}})
+      .then(response => (response.ok ? response.json() : null))
+      .then(progress => {
+        if (!progress) return;
+        if (progress.profile) save(PROFILE_KEY, progress.profile);
+        const saved = progress.units?.[unit];
+        if (saved?.messages?.length && saved.messages.length >= messagesRef.current.length) {
+          setConversationId(saved.conversation_id);
+          setMessages(saved.messages);
+        }
+      })
+      .catch(() => {
+        // Offline or an older backend: keep what this browser has
+      });
+  }, [googleUser?.credential, unit, apiUrl]);
+
   useEffect(() => {
     if (messages.length) save(conversationKey(unit), {id: conversationId, messages});
   }, [messages, conversationId, unit]);
 
-  // Scroll the messages box itself (so the page stays still), and put the
-  // cursor back in the answer box when a reply arrives
+  // Keep the newest message in view, but only after the teacher sends or a
+  // reply arrives, never on page load or when saved progress is restored.
+  // Scrolling the messages box itself (not scrollIntoView) keeps the page still.
+  const followNewMessages = useRef(false);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   useEffect(() => {
-    if (!followNewMessages.current) return;
     const box = messagesBoxRef.current;
-    if (box) box.scrollTop = box.scrollHeight;
-    if (!isLoading) inputRef.current?.focus({preventScroll: true});
+    if (followNewMessages.current && box) box.scrollTop = box.scrollHeight;
+    // When a reply has arrived, put the cursor back in the answer box
+    if (followNewMessages.current && !isLoading) inputRef.current?.focus({preventScroll: true});
   }, [messages, isLoading]);
 
   const keepSavedBlocks = (reply: string) => {
@@ -166,12 +205,12 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
 
   const send = useCallback(async () => {
     const text = input.trim();
-    if (!text || isLoading) return;
+    if (!text || isLoading || !googleUser) return;
     setError(null);
     setInput('');
     const updated: Message[] = [...messages, {role: 'user', content: text}];
-    setMessages(updated);
     followNewMessages.current = true;
+    setMessages(updated);
     setIsLoading(true);
 
     try {
@@ -179,7 +218,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          ...(googleUser ? {Authorization: `Bearer ${googleUser.credential}`} : {}),
+          Authorization: `Bearer ${bearerToken(googleUser)}`,
         },
         body: JSON.stringify({
           unit,
@@ -221,15 +260,13 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
   return (
     <div className={`${chatStyles.chat} ${styles.tutor}`}>
       <div className={chatStyles.chatHeader}>
-        {googleUser ? (
+        {googleUser && (
           <span className={chatStyles.userName}>
             {googleUser.name || googleUser.email}{' '}
             <button className={chatStyles.signOutButton} onClick={signOut}>Sign out</button>
           </span>
-        ) : (
-          <GoogleSignInButton size="small" />
         )}
-        {messages.length > 0 && (
+        {googleUser && messages.length > 0 && (
           <button className={chatStyles.newChatButton} onClick={startOver}>Start over</button>
         )}
       </div>
@@ -260,6 +297,20 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         {error && <div className={chatStyles.error}><p>{error}</p></div>}
       </div>
 
+      {!googleUser ? (
+        <div className={styles.signIn}>
+          <p className={styles.signInHeading}>Sign in to start</p>
+          <p>
+            Your conversations are saved to your account, so you can stop and pick up
+            again later, on any computer.
+          </p>
+          <GoogleSignInButton size="medium" />
+          <p className={styles.signInOr}>
+            No Google account? You can also use any email address:
+          </p>
+          <EmailSignInForm />
+        </div>
+      ) : (
       <div className={chatStyles.inputArea}>
         <textarea
           ref={inputRef}
@@ -280,10 +331,11 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
           Send
         </button>
       </div>
+      )}
 
       <p className={styles.disclosure}>
-        The tutor is an AI assistant. Your conversation is saved in this browser
-        and recorded for Navigation Games staff, who review it and reply.
+        The tutor is an AI assistant. Your conversations are saved with your sign-in
+        and recorded for Navigation Games staff, who review them and reply.
       </p>
     </div>
   );

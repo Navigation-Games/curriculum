@@ -7,11 +7,15 @@ curriculum recommendations to teachers and camp directors.
 Deployed on Google Cloud Run.
 """
 
+import base64
 import os
 import re
 import json
+import re
 import time
 import uuid
+from email.message import EmailMessage
+from urllib.parse import quote, urlparse
 from datetime import datetime, timezone
 from functools import wraps
 from pathlib import Path
@@ -21,6 +25,7 @@ from flask_cors import CORS
 import anthropic
 from google.auth.transport import requests as google_requests
 from google.oauth2 import id_token as google_id_token
+from itsdangerous import BadSignature, SignatureExpired, URLSafeTimedSerializer
 
 app = Flask(__name__)
 
@@ -223,7 +228,9 @@ class InvalidTokenError(Exception):
 
 def get_optional_user():
     """
-    Read an optional Google ID token from the Authorization header.
+    Read an optional sign-in token from the Authorization header: either a
+    Google ID token or one of our email-link session tokens (see "Email
+    sign-in links" below).
 
     Returns {"email", "name", "is_staff"} for a valid token, or None when no
     token was sent (anonymous request). Raises InvalidTokenError when a token
@@ -234,6 +241,13 @@ def get_optional_user():
     auth = request.headers.get("Authorization", "")
     if not auth.startswith("Bearer "):
         return None
+    if auth[len("Bearer "):].startswith(SESSION_TOKEN_PREFIX):
+        email = read_session_token(auth[len("Bearer "):])
+        if not email:
+            raise InvalidTokenError()
+        # Email-link users are always viewers. Staff status comes only from
+        # a Google token's hd claim.
+        return {"email": email, "name": "", "is_staff": False}
     if not REVIEW_OAUTH_CLIENT_ID:
         # Sign-in not configured on this server; treat everyone as anonymous
         return None
@@ -258,6 +272,213 @@ def get_optional_user():
         # hd is the only spoof-proof Workspace-domain signal (see require_reviewer)
         "is_staff": claims.get("hd") == REVIEW_ALLOWED_DOMAIN,
     }
+
+
+# ---------------------------------------------------------------------------
+# Email sign-in links ("Email me a sign-in link")
+#
+# For teachers without a Google account. They type their email address, we
+# send a link that is good for 15 minutes, and opening it gives the browser a
+# session token good for 30 days. Both tokens are signed with SIGN_IN_SECRET,
+# so no user store is needed. Email-link users are viewers, never staff.
+#
+# Email goes out through the Navigation Games Google Workspace (Gmail API,
+# service account with domain-wide delegation; setup in README.md). With
+# EMAIL_LINK_LOG_ONLY=true the link is only logged, for local development.
+# With neither configured, email sign-in is off and the endpoint says so.
+# ---------------------------------------------------------------------------
+
+SIGN_IN_SECRET = os.environ.get("SIGN_IN_SECRET", "")
+EMAIL_LINK_SENDER = os.environ.get("EMAIL_LINK_SENDER", "")  # e.g. course@navigationgames.org
+GMAIL_SERVICE_ACCOUNT_JSON = os.environ.get("GMAIL_SERVICE_ACCOUNT_JSON", "")
+EMAIL_LINK_LOG_ONLY = os.environ.get("EMAIL_LINK_LOG_ONLY", "").lower() == "true"
+
+LINK_TOKEN_MAX_AGE = 15 * 60  # seconds
+SESSION_TOKEN_MAX_AGE = 30 * 24 * 3600  # seconds
+SESSION_TOKEN_PREFIX = "ngs."
+
+email_link_rate_store: dict[str, list[float]] = {}
+EMAIL_LINKS_PER_IP = 10  # per day
+EMAIL_LINKS_PER_ADDRESS = 5  # per day
+
+EMAIL_PATTERN = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+EMAIL_MAX_CHARS = 254
+
+
+def _serializer(purpose: str) -> URLSafeTimedSerializer:
+    # A different salt per purpose, so a link token can't be used as a session token
+    return URLSafeTimedSerializer(SIGN_IN_SECRET, salt=f"ng-email-{purpose}")
+
+
+def make_link_token(email: str) -> str:
+    return _serializer("link").dumps(email)
+
+
+def make_session_token(email: str) -> str:
+    return SESSION_TOKEN_PREFIX + _serializer("session").dumps(email)
+
+
+def read_link_token(token: str) -> str | None:
+    """The email address in a valid, unexpired link token, else None."""
+    if not SIGN_IN_SECRET:
+        return None
+    try:
+        return _serializer("link").loads(token, max_age=LINK_TOKEN_MAX_AGE)
+    except (BadSignature, SignatureExpired):
+        return None
+
+
+def read_session_token(token: str) -> str | None:
+    """The email address in a valid, unexpired session token, else None."""
+    if not SIGN_IN_SECRET or not token.startswith(SESSION_TOKEN_PREFIX):
+        return None
+    try:
+        return _serializer("session").loads(token[len(SESSION_TOKEN_PREFIX):], max_age=SESSION_TOKEN_MAX_AGE)
+    except (BadSignature, SignatureExpired):
+        return None
+
+
+def email_sign_in_enabled() -> bool:
+    return bool(SIGN_IN_SECRET) and (
+        EMAIL_LINK_LOG_ONLY or bool(EMAIL_LINK_SENDER and GMAIL_SERVICE_ACCOUNT_JSON)
+    )
+
+
+def safe_return_to(return_to: str) -> tuple[str, str] | None:
+    """
+    Split a return_to URL into (site origin, path) if it points at our site.
+
+    Only the curriculum site and local development are allowed, so a sign-in
+    email can never send someone to another site.
+    """
+    parsed = urlparse(return_to or "")
+    origin = f"{parsed.scheme}://{parsed.netloc}"
+    if origin not in ALLOWED_ORIGINS:
+        return None
+    path = parsed.path or "/"
+    if parsed.query:
+        path += "?" + parsed.query
+    return origin, path
+
+
+def send_sign_in_email(to_address: str, link: str) -> None:
+    """Send the sign-in link, or just log it in EMAIL_LINK_LOG_ONLY mode."""
+    if EMAIL_LINK_LOG_ONLY:
+        app.logger.warning(f"[EMAIL_LINK_LOG_ONLY] sign-in link for {to_address}: {link}")
+        return
+
+    from google.auth.transport.requests import AuthorizedSession
+    from google.oauth2 import service_account
+
+    credentials = service_account.Credentials.from_service_account_info(
+        json.loads(GMAIL_SERVICE_ACCOUNT_JSON),
+        scopes=["https://www.googleapis.com/auth/gmail.send"],
+        subject=EMAIL_LINK_SENDER,  # domain-wide delegation: send as this address
+    )
+    message = EmailMessage()
+    message["To"] = to_address
+    message["From"] = f"Navigation Games <{EMAIL_LINK_SENDER}>"
+    message["Subject"] = "Your sign-in link for the Navigation Games course"
+    message.set_content(
+        "Here's your link to sign in to the Navigation Games teacher course:\n\n"
+        f"{link}\n\n"
+        "It works for 15 minutes. Once you're signed in, that browser stays "
+        "signed in for 30 days.\n\n"
+        "If you didn't ask for this, you can ignore this email.\n\n"
+        "Navigation Games"
+    )
+    raw = base64.urlsafe_b64encode(message.as_bytes()).decode()
+    response = AuthorizedSession(credentials).post(
+        "https://gmail.googleapis.com/gmail/v1/users/me/messages/send",
+        json={"raw": raw},
+        timeout=20,
+    )
+    response.raise_for_status()
+
+
+@app.route("/auth/email-link", methods=["POST"])
+def request_email_link():
+    """
+    Email a sign-in link.
+
+    Request body: {"email": "teacher@school.org", "return_to": "https://curriculum.navigationgames.org/training/unit-0/"}
+    Response: {"ok": true} whenever the request is well formed, so the
+    response never reveals anything about the address.
+    """
+    if not email_sign_in_enabled():
+        return jsonify({"error": "Email sign-in isn't set up yet. Please sign in with Google."}), 503
+
+    data = request.get_json(silent=True) or {}
+    email = str(data.get("email") or "").strip().lower()
+    if len(email) > EMAIL_MAX_CHARS or not EMAIL_PATTERN.match(email):
+        return jsonify({"error": "Please enter a valid email address."}), 400
+
+    destination = safe_return_to(str(data.get("return_to") or ""))
+    if not destination:
+        return jsonify({"error": "That page can't be used for sign-in."}), 400
+    origin, path = destination
+
+    client_ip = request.headers.get("X-Forwarded-For", request.remote_addr)
+    if not _check_rate_limit(email_link_rate_store, "ip:" + client_ip, EMAIL_LINKS_PER_IP) or \
+            not _check_rate_limit(email_link_rate_store, "email:" + email, EMAIL_LINKS_PER_ADDRESS):
+        return jsonify({"error": "Too many sign-in emails. Please try again tomorrow."}), 429
+
+    link = f"{origin}/sign-in/?token={quote(make_link_token(email))}&next={quote(path)}"
+    try:
+        send_sign_in_email(email, link)
+    except Exception as e:
+        app.logger.error(f"Sign-in email failed: {e}")
+        return jsonify({"error": "We couldn't send the email. Please try again later."}), 502
+
+    return jsonify({"ok": True})
+
+
+@app.route("/auth/google-session", methods=["POST"])
+def google_session():
+    """
+    Exchange a Google ID token (good for about an hour) for one of our 30-day
+    session tokens, so teachers signed in with Google aren't signed out in the
+    middle of a course unit. Like email-link sessions, these are never staff:
+    staff features (the review tool) keep using the Google token itself.
+
+    Request: Authorization: Bearer <Google ID token>
+    Response: {"session_token": "ngs....", "email": "...", "exp": unix_seconds}
+    """
+    if not SIGN_IN_SECRET:
+        return jsonify({"error": "Long sign-in sessions aren't set up on this server."}), 503
+    auth = request.headers.get("Authorization", "")
+    if auth[len("Bearer "):].startswith(SESSION_TOKEN_PREFIX):
+        return jsonify({"error": "Send a Google sign-in token."}), 400
+    try:
+        user = get_optional_user()
+    except InvalidTokenError:
+        return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
+    if user is None:
+        return jsonify({"error": "Please sign in with Google first."}), 401
+    return jsonify({
+        "session_token": make_session_token(user["email"]),
+        "email": user["email"],
+        "exp": int(time.time()) + SESSION_TOKEN_MAX_AGE,
+    })
+
+
+@app.route("/auth/email-link/verify", methods=["POST"])
+def verify_email_link():
+    """
+    Exchange the token from a sign-in link for a 30-day session token.
+
+    Request body: {"token": "..."}
+    Response: {"session_token": "ngs....", "email": "...", "exp": unix_seconds}
+    """
+    data = request.get_json(silent=True) or {}
+    email = read_link_token(str(data.get("token") or ""))
+    if not email:
+        return jsonify({"error": "This sign-in link has expired or isn't valid. Please ask for a new one."}), 401
+    return jsonify({
+        "session_token": make_session_token(email),
+        "email": email,
+        "exp": int(time.time()) + SESSION_TOKEN_MAX_AGE,
+    })
 
 
 def _chat_limit_error(user):
@@ -460,11 +681,16 @@ def tutor():
 
     Conversation IDs always start with "tutor-<unit>-" so tutor conversations
     are easy to find in the log sheet and the review tool.
+
+    Requires sign-in (Google or an email link), so every conversation is tied
+    to a teacher and can be picked up again from /tutor/progress.
     """
     try:
         user = get_optional_user()
     except InvalidTokenError:
         return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
+    if user is None:
+        return jsonify({"error": "Please sign in to use the course tutor."}), 401
 
     limit_error = _tutor_limit_error(user)
     if limit_error:
@@ -504,6 +730,89 @@ def tutor():
     except anthropic.APIError as e:
         app.logger.error(f"Anthropic API error: {e}")
         return jsonify({"error": "Something went wrong. Please try again."}), 500
+
+
+PROFILE_BLOCK = re.compile(r"```profile\n(.*?)```", re.S)
+
+
+def unit_for_conversation(conversation_id: str) -> str | None:
+    """The course unit a tutor conversation ID belongs to, e.g. "unit-0"."""
+    for slug in TRAINING_UNITS:
+        if conversation_id.startswith(f"tutor-{slug}-"):
+            return slug
+    return None
+
+
+def rebuild_progress(rows: list[list[str]], email: str) -> dict:
+    """
+    Rebuild one teacher's course progress from the conversation log rows.
+
+    For each unit, the most recently active tutor conversation; plus the
+    latest learner profile the tutor wrote. Each exchange is logged as the
+    new user message and the reply, numbered by position in the
+    conversation, so a retried message replaces the earlier row.
+    """
+    email = email.lower()
+    conversations: dict[str, dict] = {}
+    for row in rows:
+        if len(row) < 10 or row[9].strip().lower() != email:
+            continue
+        try:
+            msg_number = int(row[2])
+        except ValueError:
+            continue
+        unit = unit_for_conversation(row[1])
+        if not unit or row[3] not in ("user", "assistant"):
+            continue
+        conv = conversations.setdefault(row[1], {"unit": unit, "last": "", "messages": {}})
+        conv["messages"][msg_number] = {"role": row[3], "content": row[4], "timestamp": row[0]}
+        conv["last"] = max(conv["last"], row[0])
+
+    units: dict[str, dict] = {}
+    profile, profile_time = "", ""
+    for conv_id, conv in conversations.items():
+        messages = [conv["messages"][n] for n in sorted(conv["messages"])]
+        for m in messages:
+            found = PROFILE_BLOCK.findall(m["content"]) if m["role"] == "assistant" else []
+            if found and m["timestamp"] >= profile_time:
+                profile, profile_time = found[-1].strip(), m["timestamp"]
+        current = units.get(conv["unit"])
+        if current is None or conv["last"] > current["updated"]:
+            units[conv["unit"]] = {
+                "conversation_id": conv_id,
+                "updated": conv["last"],
+                "messages": [{"role": m["role"], "content": m["content"]} for m in messages],
+            }
+    return {"units": units, "profile": profile}
+
+
+@app.route("/tutor/progress", methods=["GET"])
+def tutor_progress():
+    """
+    The signed-in teacher's saved course progress, so they can pick up on
+    any device.
+
+    Response: {"units": {"unit-0": {"conversation_id", "updated", "messages"}}, "profile": "..."}
+
+    Rebuilt from the conversation log sheet on every request. Fine for a
+    prototype; move to a real datastore before the course is large.
+    """
+    try:
+        user = get_optional_user()
+    except InvalidTokenError:
+        return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
+    if user is None:
+        return jsonify({"error": "Please sign in to see your progress."}), 401
+
+    gc = get_sheets_client()
+    if not gc:
+        return jsonify({"units": {}, "profile": ""})
+    try:
+        rows = gc.open_by_key(SPREADSHEET_ID).sheet1.get_all_values()
+    except Exception as e:
+        app.logger.error(f"Could not read the log sheet for progress: {e}")
+        return jsonify({"units": {}, "profile": ""})
+    return jsonify(rebuild_progress(rows, user["email"]))
 
 
 def _log_exchange(

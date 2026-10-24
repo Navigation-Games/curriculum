@@ -1,10 +1,12 @@
 /**
- * Shared Google sign-in state for the curriculum site.
+ * Shared sign-in state for the curriculum site.
  *
  * Visitors can sign in with any Google account (Google Identity Services,
- * same OAuth client as the review tool). The ID token is kept in
- * localStorage until it expires (about an hour) and is sent as a Bearer
- * token to the advisor backend, which verifies it server-side.
+ * same OAuth client as the review tool), or with an emailed sign-in link
+ * (see pages/sign-in.tsx). Either way the token is kept in localStorage
+ * until it expires (about an hour for Google, 30 days for an email link)
+ * and is sent as a Bearer token to the advisor backend, which verifies it
+ * server-side. Email-link users are always viewers, never managers.
  *
  * What signing in gives you:
  * - any Google account ("viewer"): higher advisor daily limit, unlimited
@@ -26,6 +28,15 @@ export interface AuthUser {
   hd?: string;
   /** Token expiry, unix seconds */
   exp: number;
+  /** How they signed in; absent on sessions stored before email links existed */
+  method?: 'google' | 'email';
+  /**
+   * For Google sign-ins: a 30-day session token from the backend
+   * (/auth/google-session), so the course tutor keeps working after the
+   * one-hour Google token expires. Staff features still use `credential`.
+   */
+  session?: string;
+  sessionExp?: number;
 }
 
 const STORAGE_KEY = 'ng-google-auth';
@@ -50,7 +61,8 @@ export function getUser(): AuthUser | null {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (!raw) return null;
     const user: AuthUser = JSON.parse(raw);
-    if (!user.credential || !user.exp || user.exp * 1000 <= Date.now()) {
+    const sessionValid = !!user.session && (user.sessionExp || 0) * 1000 > Date.now();
+    if (!user.credential || ((!user.exp || user.exp * 1000 <= Date.now()) && !sessionValid)) {
       window.localStorage.removeItem(STORAGE_KEY);
       return null;
     }
@@ -74,7 +86,34 @@ export function setCredential(credential: string): void {
     picture: (payload.picture as string) || '',
     hd: payload.hd as string | undefined,
     exp: (payload.exp as number) || 0,
+    method: 'google',
   };
+  storeUser(user);
+}
+
+/** Attach a long-lived backend session to the current Google sign-in. */
+export function setGoogleSession(sessionToken: string, sessionExp: number): void {
+  const user = getUser();
+  if (!user || user.method === 'email') return;
+  storeUser({...user, session: sessionToken, sessionExp});
+}
+
+/**
+ * The token to send to the backend: the Google token while it's still good
+ * (it carries staff status), then the long session once it has expired.
+ */
+export function bearerToken(user: AuthUser): string {
+  const googleValid = user.method !== 'email' && user.exp * 1000 > Date.now() + 60_000;
+  if (googleValid || !user.session) return user.credential;
+  return user.session;
+}
+
+/** Store the session from an emailed sign-in link (verified by the backend). */
+export function setEmailSession(sessionToken: string, email: string, exp: number): void {
+  storeUser({credential: sessionToken, email, name: '', picture: '', exp, method: 'email'});
+}
+
+function storeUser(user: AuthUser): void {
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
   } catch {
@@ -93,7 +132,8 @@ export function signOut(): void {
 }
 
 export function isManager(user: AuthUser | null): boolean {
-  return user?.hd === MANAGER_DOMAIN;
+  // Only a Google token carries hd; email-link sessions never do
+  return user?.method !== 'email' && user?.hd === MANAGER_DOMAIN;
 }
 
 /** Subscribe to sign-in/sign-out changes (this tab and others). */

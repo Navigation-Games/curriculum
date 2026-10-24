@@ -48,6 +48,7 @@ def client(monkeypatch, sent):
         sent["max_tokens"] = max_tokens
         return FakeApiResponse()
 
+    monkeypatch.setattr(advisor, "SIGN_IN_SECRET", "test-secret")
     monkeypatch.setattr(advisor, "rate_limit_store", {})
     monkeypatch.setattr(advisor, "tutor_rate_store", {})
     monkeypatch.setattr(advisor, "_create_message", fake_create_message)
@@ -55,9 +56,17 @@ def client(monkeypatch, sent):
     return advisor.app.test_client()
 
 
-def ask(client, unit="unit-0", **extra):
+TEACHER = "teacher@school.org"
+
+
+def signed_in():
+    """Headers for a teacher signed in with an email link."""
+    return {"Authorization": "Bearer " + advisor.make_session_token(TEACHER), "X-Forwarded-For": "5.6.7.8"}
+
+
+def ask(client, unit="unit-0", headers=None, **extra):
     body = {"unit": unit, "messages": [{"role": "user", "content": "Hi, I teach PE."}], **extra}
-    return client.post("/tutor", json=body, headers={"X-Forwarded-For": "5.6.7.8"})
+    return client.post("/tutor", json=body, headers=signed_in() if headers is None else headers)
 
 
 def test_every_unit_in_the_content_files_is_available():
@@ -111,23 +120,43 @@ def test_unknown_unit_is_rejected(client):
 
 
 def test_malformed_messages_are_rejected(client):
-    r = client.post("/tutor", json={"unit": "unit-0", "messages": []})
+    r = client.post("/tutor", json={"unit": "unit-0", "messages": []}, headers=signed_in())
     assert r.status_code == 400
     r = client.post(
         "/tutor",
         json={"unit": "unit-0", "messages": [{"role": "assistant", "content": "Hi"}]},
+        headers=signed_in(),
     )
     assert r.status_code == 400
 
 
-def test_tutor_has_its_own_generous_limit(client):
+def test_signed_in_teachers_are_not_limited(client):
     import time
 
-    # The advisor's limit being used up doesn't affect the tutor
-    advisor.rate_limit_store["5.6.7.8"] = [time.time()] * advisor.RATE_LIMIT_MAX
+    # Using up the advisor's daily limit doesn't affect the course tutor
+    advisor.rate_limit_store["email:" + TEACHER] = [time.time()] * advisor.SIGNED_IN_RATE_LIMIT_MAX
     assert ask(client).status_code == 200
-    advisor.tutor_rate_store["5.6.7.8"] = [time.time()] * advisor.TUTOR_ANONYMOUS_LIMIT
-    assert ask(client).status_code == 429
+
+
+def test_anonymous_teachers_must_sign_in(client):
+    r = ask(client, headers={"X-Forwarded-For": "5.6.7.8"})
+    assert r.status_code == 401
+    assert "sign in" in r.get_json()["error"].lower()
+
+
+def test_bad_session_token_gets_401(client):
+    r = ask(client, headers={"Authorization": "Bearer ngs.not-a-real-token"})
+    assert r.status_code == 401
+
+
+def test_conversation_is_logged_under_the_signed_in_email(client, monkeypatch):
+    logged = {}
+    monkeypatch.setattr(
+        advisor, "_log_exchange",
+        lambda conv_id, messages, reply, response, user_info: logged.update(user_info),
+    )
+    ask(client)
+    assert logged["email"] == TEACHER
 
 
 def test_training_units_json_is_valid():

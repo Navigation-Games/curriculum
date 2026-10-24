@@ -26,6 +26,7 @@ ai-advisor/
   tutor-style.md      - Short style checklist, put at the end of the tutor's prompt
   training-units.json - Course unit material for the tutor (generated from content/training/)
   test_tutor.py       - Tests for the /tutor endpoint
+  test_email_signin.py - Tests for email sign-in links and /tutor/progress
   requirements.txt    - Python dependencies
   Dockerfile          - Cloud Run container
   .env.example        - Template for local dev environment variables
@@ -45,6 +46,8 @@ site/src/pages/review-conversations.module.css - Page styles
 site/src/components/ReviewConversations/index.tsx - Review component
 site/src/components/ReviewConversations/styles.module.css - Review styles
 site/src/components/TrainingTutor/index.tsx - Course tutor chat on /training/unit-N/ pages
+site/src/components/EmailSignInForm/       - "Email me a sign-in link" form
+site/src/pages/sign-in.tsx                 - Where sign-in links land (/sign-in/)
 ```
 
 ## Endpoints
@@ -57,7 +60,11 @@ site/src/components/TrainingTutor/index.tsx - Course tutor chat on /training/uni
 | `/review/conversations/<id>` | GET | Google ID token (staff) | Full thread plus all reviewers' feedback |
 | `/review/conversations/<id>/feedback` | POST | Google ID token (staff) | Add a feedback comment (`{"feedback": "..."}`) |
 | `/review/conversations/<id>/dismiss` | POST | Google ID token (staff) | Hide a conversation from the reviewer's default list |
-| `/tutor` | POST | optional Google ID token (shares the `/chat` limit) | Teacher course tutor (`{"unit", "conversation_id", "messages", "profile"}`). Conversation IDs start with `tutor-<unit>-`, so tutor conversations show up in the log sheet and the review tool |
+| `/tutor` | POST | sign-in required: Google ID token or email-link session (shares the signed-in `/chat` limit) | Teacher course tutor (`{"unit", "conversation_id", "messages", "profile"}`). Conversation IDs start with `tutor-<unit>-`, so tutor conversations show up in the log sheet and the review tool |
+| `/tutor/progress` | GET | sign-in required | The teacher's latest conversation for each unit and their latest learner profile, rebuilt from the log sheet, so they can pick up on any device |
+| `/auth/email-link` | POST | none (rate limited per IP and per address) | Email a 15-minute sign-in link (`{"email", "return_to"}`). `return_to` must be on the curriculum site or localhost |
+| `/auth/email-link/verify` | POST | the link's token | Exchange a sign-in link's token for a 30-day session token (`{"token"}`) |
+| `/auth/google-session` | POST | Google ID token | Swaps a one-hour Google sign-in for a 30-day session token (never staff), so the course tutor doesn't sign teachers out mid-unit. Needs `SIGN_IN_SECRET` |
 | `/page-feedback` | POST | optional Google ID token (rate limited when anonymous) | "Was this page helpful?" feedback from docs pages (`{"page", "title", "rating", "comment", "submitter"}`) |
 
 The `/review/*` endpoints are for Navigation Games staff. They require a Google ID token from a `navigationgames.org` account, sent as `Authorization: Bearer <token>`. The backend verifies the token signature, audience (our OAuth client ID), the `hd` claim, and `email_verified`. Feedback is stored in a **Feedback** tab of the logging spreadsheet, which the backend creates automatically if missing (columns: timestamp, conversation_id, reviewer_email, status, feedback).
@@ -261,6 +268,36 @@ gcloud run services update lesson-advisor `
 
 For the frontend, either paste the client ID as the fallback value of `reviewOauthClientId` in `site/docusaurus.config.ts` (client IDs are public, not secrets), or set a `REVIEW_OAUTH_CLIENT_ID` repository variable in GitHub Actions and pass it through the deploy workflow. For local dev, set `$env:REVIEW_OAUTH_CLIENT_ID` before `npm start`, and add `REVIEW_OAUTH_CLIENT_ID` to `ai-advisor/.env`.
 
+## Email sign-in links setup (one time)
+
+Teachers without a Google account can sign in to the course with a link we email them. The backend sends it through the Navigation Games Google Workspace, as one Workspace address, using a service account that is allowed to send mail as that address. You need to be a Google Cloud owner of `navigation-games-curriculum` and a Workspace super admin.
+
+1. **Pick the sender address.** It has to be a real Workspace user (not a group), such as a new `course@navigationgames.org` account or an existing staff account. Replies to sign-in emails go there, so someone should read it.
+2. **Turn on the Gmail API** in the Google Cloud project: APIs & Services > Library > Gmail API > Enable.
+3. **Create a service account**, for example `course-mailer`, under IAM & Admin > Service Accounts. Give it no project roles. Open it, note its **Client ID** (a long number), then Keys > Add key > JSON, and download the key file.
+4. **Allow it to send mail as the sender.** In the Workspace Admin console: Security > Access and data control > API controls > Manage Domain Wide Delegation > Add new. Paste the Client ID, with the single scope `https://www.googleapis.com/auth/gmail.send`. That scope can send mail but can't read anyone's inbox.
+5. **Store the secrets** in Secret Manager and give them to Cloud Run:
+
+   ```powershell
+   # A long random string for signing links
+   $bytes = New-Object byte[] 48; [Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes)
+   [Convert]::ToBase64String($bytes) | gcloud secrets create sign-in-secret --data-file=-
+   gcloud secrets create gmail-service-account --data-file=course-mailer-key.json
+
+   gcloud run services update lesson-advisor --region us-central1 `
+     --update-secrets "SIGN_IN_SECRET=sign-in-secret:latest,GMAIL_SERVICE_ACCOUNT_JSON=gmail-service-account:latest" `
+     --update-env-vars EMAIL_LINK_SENDER=course@navigationgames.org
+   ```
+
+   Keep the quotes around the `--update-secrets` value. Without them PowerShell treats the comma as a list separator and gcloud fails with "Invalid secret spec".
+
+   The Cloud Run service account needs the Secret Accessor role on both secrets (Secret Manager > the secret > Permissions), the same as for the Anthropic key.
+   **Changing the sender later** (for example from a staff address to `course@navigationgames.org`): run `gcloud run services update lesson-advisor --region us-central1 --update-env-vars EMAIL_LINK_SENDER=<new address>`. No rebuild, new secret or Admin console change is needed, because domain-wide delegation covers every user in the Workspace. While a staff address is the sender, replies to sign-in emails go to that inbox and copies collect in its Sent mail.
+6. **Delete the downloaded key file** from your computer once it is in Secret Manager.
+7. **Test it**: open a course unit while signed out, enter your own address under "No Google account?", and check that the email arrives and the link signs you in.
+
+If your Workspace blocks service account keys (some organizations do), tell Claude: the sender can instead sign as the Cloud Run service account without a key file, which takes a little more code.
+
 ## Daily activity email (one time)
 
 A Google Apps Script bound to the advisor conversation log spreadsheet emails `president@navigationgames.org` once a day when new rows have been added (conversations, feedback, or page feedback) — a count per tab plus a link to the sheet. It stays quiet on days with no new activity. The script source is `daily-summary-email.gs` in this directory; it lives in the Sheet's Apps Script project, not in the deployed backend.
@@ -323,6 +360,12 @@ If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub
 | `ADVISOR_SHEET_ID` | Backend (optional) | Google Sheet ID for conversation logging; also used by the review endpoints |
 | `REVIEW_OAUTH_CLIENT_ID` | Backend + frontend (build time) | OAuth client ID for staff sign-in on the review page |
 | `ADVISOR_API_URL` | Frontend (build time) | Backend URL for the chat component |
+| `SIGN_IN_SECRET` | Backend (Cloud Run secret) | Signs email sign-in links and sessions. Any long random string. Changing it signs everyone out who used an email link |
+| `EMAIL_LINK_SENDER` | Backend | The Workspace address sign-in emails come from, e.g. `course@navigationgames.org` |
+| `GMAIL_SERVICE_ACCOUNT_JSON` | Backend (Cloud Run secret) | Key for the service account that sends as `EMAIL_LINK_SENDER` (see "Email sign-in links setup") |
+| `EMAIL_LINK_LOG_ONLY` | Backend (local development) | `true` writes sign-in links to the log instead of emailing them. Never set it in production |
+
+Without `SIGN_IN_SECRET` and a sender (or log-only mode), email sign-in is off: the course still works with Google sign-in, and the email form says email sign-in isn't set up yet.
 
 ## Troubleshooting
 

@@ -193,7 +193,7 @@ Every docs page has a "Was this page helpful?" thumbs up/down + optional comment
 Optional Google sign-in site-wide, reusing the review-conversations OAuth client (`reviewOauthClientId` in `docusaurus.config.ts`, `REVIEW_OAUTH_CLIENT_ID` on Cloud Run). Tiers:
 
 - **Anonymous**: everything except For Editors; 20 advisor messages/day per IP; 10 feedback submissions/day per IP.
-- **Viewer** = any signed-in Google account: 100 advisor messages/day per verified email; unlimited page feedback, auto-tagged with the verified identity. No registration step or user store.
+- **Viewer** = any signed-in Google account, or anyone signed in with an emailed sign-in link (October 2026, for teachers without Google): 100 advisor messages/day per verified email; unlimited page feedback, auto-tagged with the verified identity. No registration step or user store. Email-link sessions are never staff or managers, whatever the address; staff status comes only from a Google token's `hd` claim.
 - **Manager** = signed in with a navigationgames.org account (`hd` claim): viewer perks, no advisor limit, and the For Editors section (navbar link + pages).
 
 Pieces:
@@ -201,6 +201,8 @@ Pieces:
 - Sign-in surfaces: advisor intro screen and chat header, page feedback form ("Give feedback often?" link), and the For Editors gate.
 - **For Editors soft gate**: the swizzled `site/src/theme/DocRoot/Layout/index.js` swaps `/editors/` page content for `site/src/components/EditorsGate/` unless manager; `site/src/clientModules/managerClass.js` toggles an `ng-manager` class on `<html>` that unhides the navbar link (CSS rule in `custom.css`). Client-side only: the static content is still deployed and indexed by local search. Never publish anything genuinely sensitive under `/editors/`.
 - Backend: `get_optional_user()` in `ai-advisor/app.py`. A present-but-invalid token returns 401 so the frontend re-prompts sign-in; with no client ID configured everyone is anonymous. Tests: `ai-advisor/test_signed_in.py`.
+- **Email sign-in links**: `/auth/email-link` emails a 15-minute link (sent through the NG Workspace as `EMAIL_LINK_SENDER`), `/sign-in/` (`site/src/pages/sign-in.tsx`) exchanges it at `/auth/email-link/verify` for a 30-day session token (prefix `ngs.`, signed with `SIGN_IN_SECRET`), stored in the same auth store as Google sign-in. Setup: "Email sign-in links setup" in `ai-advisor/README.md`. Tests: `ai-advisor/test_email_signin.py`.
+- **Teacher course**: the course tutor (`/tutor`) requires sign-in, and `/tutor/progress` rebuilds a teacher's conversations and profile from the log sheet so they can pick up on any device.
 - **Consent screen**: public viewer sign-in requires the OAuth consent screen (Google Cloud project `navigation-games-curriculum`) to be External and published. If it is Internal, only staff accounts can sign in anywhere.
 - Backend changes require a Cloud Run redeploy; frontend changes deploy on `git push` as usual.
 
