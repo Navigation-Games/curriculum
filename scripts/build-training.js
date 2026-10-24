@@ -25,6 +25,11 @@
 // content/training/index.md is the course home. It has the same title and
 // frontmatter format; its sections are all shown, followed by the unit list.
 //
+// Any of these files can add a short recording near the top of its page:
+//
+//   audio: training/unit-0-welcome.mp3          a file in site/static/audio/
+//   audio_caption: A welcome from Barb (1 min)  shown above the player
+//
 // The pages are "unlisted" while the course is a prototype: they work by URL
 // but stay out of the sidebar, site search and the advisor's site map.
 
@@ -38,6 +43,19 @@ const PAGES_DIR = path.join(REPO_ROOT, 'site', 'docs', 'training');
 const TUTOR_DATA_PATH = path.join(REPO_ROOT, 'ai-advisor', 'training-units.json');
 
 const REQUIRED_UNIT_SECTIONS = ['Page', "What you'll make", 'What we look for', 'Opening', 'Tutor'];
+const AUDIO_DIR = path.join(REPO_ROOT, 'site', 'static', 'audio');
+
+// The player for a page's recording, or [] if it has none
+function audioPlayer(meta) {
+  if (!meta.audio) return [];
+  return [
+    `<figure className="ng-page-audio">`,
+    `  <figcaption>${meta.audio_caption || 'Listen'}</figcaption>`,
+    `  <audio controls preload="metadata" src="/audio/${meta.audio}"></audio>`,
+    `</figure>`,
+    '',
+  ];
+}
 
 function buildTraining() {
   if (!fs.existsSync(CONTENT_DIR)) return [];
@@ -53,9 +71,13 @@ function buildTraining() {
       if (!unit.sections[section]) errors.push(`training/${unit.slug}.md: missing "## ${section}" section`);
     }
   }
-  if (errors.length) return errors;
-
   const home = parseFile(path.join(CONTENT_DIR, 'index.md'));
+  for (const file of [home, ...units]) {
+    if (file.meta.audio && !fs.existsSync(path.join(AUDIO_DIR, file.meta.audio))) {
+      errors.push(`training/${file.slug || 'index'}.md: audio file site/static/audio/${file.meta.audio} not found`);
+    }
+  }
+  if (errors.length) return errors;
 
   fs.rmSync(PAGES_DIR, { recursive: true, force: true });
   fs.mkdirSync(PAGES_DIR, { recursive: true });
@@ -146,6 +168,7 @@ function renderHome(home, units) {
     '',
   ];
   if (home.meta.tagline) lines.push(`*${home.meta.tagline}*`, '');
+  lines.push(...audioPlayer(home.meta));
   // A clear first step, repeated after the welcome text
   const startButton = units.length
     ? `<Link className="button button--primary button--lg" to="/training/${units[0].slug}/">Start with Unit ${units[0].number} →</Link>`
@@ -179,6 +202,7 @@ function renderUnit(unit, previous, next) {
     '',
     `**About ${unit.meta.minutes} minutes.** You'll make: ${lowerFirst(unit.meta.deliverable)}.`,
     '',
+    ...audioPlayer(unit.meta),
     s['Page'],
     '',
     "## What you'll make",

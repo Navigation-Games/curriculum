@@ -333,3 +333,18 @@ body.page-camp-overview {
   background-color: var(--ifm-background-surface-color);
   border-color: var(--ifm-color-emphasis-300);
 }
+
+/* A short recording near the top of a course page (audio: in the content file) */
+.ng-page-audio {
+  margin: 0 0 1.5rem;
+}
+
+.ng-page-audio figcaption {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.ng-page-audio audio {
+  width: 100%;
+  max-width: 28rem;
+}
