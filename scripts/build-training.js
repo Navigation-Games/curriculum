@@ -140,10 +140,17 @@ function renderHome(home, units) {
   const lines = [
     frontmatter({ title: home.title, unlisted: true, hide_table_of_contents: true }),
     GENERATED_NOTE('index.md'),
+    "import Link from '@docusaurus/Link';",
+    '',
     `# ${home.title}`,
     '',
   ];
   if (home.meta.tagline) lines.push(`*${home.meta.tagline}*`, '');
+  // A clear first step, repeated after the welcome text
+  const startButton = units.length
+    ? `<Link className="button button--primary button--lg" to="/training/${units[0].slug}/">Start with Unit ${units[0].number} →</Link>`
+    : '';
+  if (startButton) lines.push(startButton, '');
   for (const [name, text] of Object.entries(home.sections)) {
     lines.push(`## ${name}`, '', text, '');
   }
@@ -152,6 +159,7 @@ function renderHome(home, units) {
     // Relative links from an index page resolve to its children (see CLAUDE.md)
     lines.push(`- [${unitHeading(unit)}](./${unit.slug}) (about ${unit.meta.minutes} minutes). ${unit.meta.deliverable}.`);
   }
+  if (startButton) lines.push('', startButton);
   return lines.join('\n') + '\n';
 }
 
