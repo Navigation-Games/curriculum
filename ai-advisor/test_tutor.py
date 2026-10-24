@@ -50,6 +50,7 @@ def client(monkeypatch, sent):
 
     monkeypatch.setattr(advisor, "SIGN_IN_SECRET", "test-secret")
     monkeypatch.setattr(advisor, "rate_limit_store", {})
+    monkeypatch.setattr(advisor, "tutor_rate_store", {})
     monkeypatch.setattr(advisor, "_create_message", fake_create_message)
     monkeypatch.setattr(advisor, "get_sheets_client", lambda: None)
     return advisor.app.test_client()
@@ -129,12 +130,12 @@ def test_malformed_messages_are_rejected(client):
     assert r.status_code == 400
 
 
-def test_tutor_shares_the_signed_in_daily_chat_limit(client):
+def test_signed_in_teachers_are_not_limited(client):
     import time
 
+    # Using up the advisor's daily limit doesn't affect the course tutor
     advisor.rate_limit_store["email:" + TEACHER] = [time.time()] * advisor.SIGNED_IN_RATE_LIMIT_MAX
-    r = ask(client)
-    assert r.status_code == 429
+    assert ask(client).status_code == 200
 
 
 def test_anonymous_teachers_must_sign_in(client):
