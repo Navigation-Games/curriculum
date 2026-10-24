@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import GoogleSignInButton from '@site/src/components/GoogleSignInButton';
-import {useGoogleUser, signOut} from '@site/src/lib/googleAuth';
+import {useGoogleUser, signOut, bearerToken} from '@site/src/lib/googleAuth';
 import formatMessage from './formatMessage';
 import styles from './styles.module.css';
 
@@ -134,7 +134,7 @@ export default function AdvisorChat(): React.ReactElement {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          ...(googleUser ? {Authorization: `Bearer ${googleUser.credential}`} : {}),
+          ...(googleUser ? {Authorization: `Bearer ${bearerToken(googleUser)}`} : {}),
         },
         body: JSON.stringify({
           conversation_id: conversationId,

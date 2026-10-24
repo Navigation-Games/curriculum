@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import GoogleSignInButton from '@site/src/components/GoogleSignInButton';
-import {useGoogleUser, signOut} from '@site/src/lib/googleAuth';
+import {useGoogleUser, signOut, bearerToken} from '@site/src/lib/googleAuth';
 import styles from './styles.module.css';
 
 interface Props {
@@ -52,7 +52,7 @@ export default function PageFeedback({page, title}: Props): React.ReactElement {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          ...(user ? {Authorization: `Bearer ${user.credential}`} : {}),
+          ...(user ? {Authorization: `Bearer ${bearerToken(user)}`} : {}),
         },
         body: JSON.stringify({
           page,

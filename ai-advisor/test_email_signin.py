@@ -226,3 +226,50 @@ def test_progress_reads_the_log_sheet(client, monkeypatch):
     token = advisor.make_session_token("teacher@school.org")
     r = client.get("/tutor/progress", headers={"Authorization": "Bearer " + token})
     assert r.get_json()["profile"] == "State: CO, Denver"
+
+
+# ---------------------------------------------------------------------------
+# /auth/google-session: a 30-day session for Google sign-ins
+# ---------------------------------------------------------------------------
+
+
+def google_signed_in(monkeypatch, claims):
+    monkeypatch.setattr(advisor, "REVIEW_OAUTH_CLIENT_ID", "test-client-id")
+    monkeypatch.setattr(
+        advisor.google_id_token,
+        "verify_oauth2_token",
+        lambda token, request, audience, clock_skew_in_seconds=0: dict(claims),
+    )
+    return {"Authorization": "Bearer google-token"}
+
+
+def test_google_token_becomes_a_session(client, monkeypatch):
+    headers = google_signed_in(monkeypatch, {"email": "teacher@gmail.com", "email_verified": True, "name": "T"})
+    r = client.post("/auth/google-session", headers=headers)
+    assert r.status_code == 200
+    session = r.get_json()["session_token"]
+    assert session.startswith(advisor.SESSION_TOKEN_PREFIX)
+    assert advisor.read_session_token(session) == "teacher@gmail.com"
+
+
+def test_google_session_is_never_staff(client, monkeypatch):
+    headers = google_signed_in(
+        monkeypatch,
+        {"email": "barb@navigationgames.org", "email_verified": True, "hd": "navigationgames.org"},
+    )
+    session = client.post("/auth/google-session", headers=headers).get_json()["session_token"]
+    with advisor.app.test_request_context(headers={"Authorization": "Bearer " + session}):
+        assert advisor.get_optional_user()["is_staff"] is False
+
+
+def test_google_session_needs_a_google_token(client, monkeypatch):
+    assert client.post("/auth/google-session").status_code == 401
+    session = advisor.make_session_token("teacher@gmail.com")
+    r = client.post("/auth/google-session", headers={"Authorization": "Bearer " + session})
+    assert r.status_code == 400
+
+
+def test_google_session_off_without_secret(client, monkeypatch):
+    monkeypatch.setattr(advisor, "SIGN_IN_SECRET", "")
+    headers = google_signed_in(monkeypatch, {"email": "teacher@gmail.com", "email_verified": True})
+    assert client.post("/auth/google-session", headers=headers).status_code == 503

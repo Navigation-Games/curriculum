@@ -433,6 +433,35 @@ def request_email_link():
     return jsonify({"ok": True})
 
 
+@app.route("/auth/google-session", methods=["POST"])
+def google_session():
+    """
+    Exchange a Google ID token (good for about an hour) for one of our 30-day
+    session tokens, so teachers signed in with Google aren't signed out in the
+    middle of a course unit. Like email-link sessions, these are never staff:
+    staff features (the review tool) keep using the Google token itself.
+
+    Request: Authorization: Bearer <Google ID token>
+    Response: {"session_token": "ngs....", "email": "...", "exp": unix_seconds}
+    """
+    if not SIGN_IN_SECRET:
+        return jsonify({"error": "Long sign-in sessions aren't set up on this server."}), 503
+    auth = request.headers.get("Authorization", "")
+    if auth[len("Bearer "):].startswith(SESSION_TOKEN_PREFIX):
+        return jsonify({"error": "Send a Google sign-in token."}), 400
+    try:
+        user = get_optional_user()
+    except InvalidTokenError:
+        return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
+    if user is None:
+        return jsonify({"error": "Please sign in with Google first."}), 401
+    return jsonify({
+        "session_token": make_session_token(user["email"]),
+        "email": user["email"],
+        "exp": int(time.time()) + SESSION_TOKEN_MAX_AGE,
+    })
+
+
 @app.route("/auth/email-link/verify", methods=["POST"])
 def verify_email_link():
     """

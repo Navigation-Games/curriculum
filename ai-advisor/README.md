@@ -64,6 +64,7 @@ site/src/pages/sign-in.tsx                 - Where sign-in links land (/sign-in/
 | `/tutor/progress` | GET | sign-in required | The teacher's latest conversation for each unit and their latest learner profile, rebuilt from the log sheet, so they can pick up on any device |
 | `/auth/email-link` | POST | none (rate limited per IP and per address) | Email a 15-minute sign-in link (`{"email", "return_to"}`). `return_to` must be on the curriculum site or localhost |
 | `/auth/email-link/verify` | POST | the link's token | Exchange a sign-in link's token for a 30-day session token (`{"token"}`) |
+| `/auth/google-session` | POST | Google ID token | Swaps a one-hour Google sign-in for a 30-day session token (never staff), so the course tutor doesn't sign teachers out mid-unit. Needs `SIGN_IN_SECRET` |
 | `/page-feedback` | POST | optional Google ID token (rate limited when anonymous) | "Was this page helpful?" feedback from docs pages (`{"page", "title", "rating", "comment", "submitter"}`) |
 
 The `/review/*` endpoints are for Navigation Games staff. They require a Google ID token from a `navigationgames.org` account, sent as `Authorization: Bearer <token>`. The backend verifies the token signature, audience (our OAuth client ID), the `hd` claim, and `email_verified`. Feedback is stored in a **Feedback** tab of the logging spreadsheet, which the backend creates automatically if missing (columns: timestamp, conversation_id, reviewer_email, status, feedback).

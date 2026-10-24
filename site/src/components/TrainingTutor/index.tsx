@@ -19,7 +19,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import GoogleSignInButton from '@site/src/components/GoogleSignInButton';
 import EmailSignInForm from '@site/src/components/EmailSignInForm';
-import {useGoogleUser, signOut} from '@site/src/lib/googleAuth';
+import {useGoogleUser, signOut, bearerToken, setGoogleSession} from '@site/src/lib/googleAuth';
 import formatMessage from '@site/src/components/AdvisorChat/formatMessage';
 import chatStyles from '@site/src/components/AdvisorChat/styles.module.css';
 import styles from './styles.module.css';
@@ -111,6 +111,20 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
   const apiUrl = (siteConfig.customFields?.advisorApiUrl as string) || 'http://localhost:8080';
   const googleUser = useGoogleUser();
 
+  // A Google sign-in lasts about an hour. Swap it for a 30-day session so a
+  // teacher isn't signed out partway through a unit. If the backend can't
+  // (not set up yet), the Google token keeps working until it expires.
+  useEffect(() => {
+    if (!googleUser || googleUser.method === 'email' || googleUser.session) return;
+    fetch(`${apiUrl}/auth/google-session`, {
+      method: 'POST',
+      headers: {Authorization: `Bearer ${googleUser.credential}`},
+    })
+      .then(r => (r.ok ? r.json() : null))
+      .then(data => data?.session_token && setGoogleSession(data.session_token, data.exp))
+      .catch(() => {});
+  }, [googleUser?.credential, apiUrl]);
+
   const [conversationId, setConversationId] = useState(() => newConversationId(unit));
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -133,7 +147,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
   messagesRef.current = messages;
   useEffect(() => {
     if (!googleUser) return;
-    fetch(`${apiUrl}/tutor/progress`, {headers: {Authorization: `Bearer ${googleUser.credential}`}})
+    fetch(`${apiUrl}/tutor/progress`, {headers: {Authorization: `Bearer ${bearerToken(googleUser)}`}})
       .then(response => (response.ok ? response.json() : null))
       .then(progress => {
         if (!progress) return;
@@ -187,7 +201,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${googleUser.credential}`,
+          Authorization: `Bearer ${bearerToken(googleUser)}`,
         },
         body: JSON.stringify({
           unit,

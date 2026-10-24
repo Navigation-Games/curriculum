@@ -30,6 +30,13 @@ export interface AuthUser {
   exp: number;
   /** How they signed in; absent on sessions stored before email links existed */
   method?: 'google' | 'email';
+  /**
+   * For Google sign-ins: a 30-day session token from the backend
+   * (/auth/google-session), so the course tutor keeps working after the
+   * one-hour Google token expires. Staff features still use `credential`.
+   */
+  session?: string;
+  sessionExp?: number;
 }
 
 const STORAGE_KEY = 'ng-google-auth';
@@ -54,7 +61,8 @@ export function getUser(): AuthUser | null {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (!raw) return null;
     const user: AuthUser = JSON.parse(raw);
-    if (!user.credential || !user.exp || user.exp * 1000 <= Date.now()) {
+    const sessionValid = !!user.session && (user.sessionExp || 0) * 1000 > Date.now();
+    if (!user.credential || ((!user.exp || user.exp * 1000 <= Date.now()) && !sessionValid)) {
       window.localStorage.removeItem(STORAGE_KEY);
       return null;
     }
@@ -81,6 +89,23 @@ export function setCredential(credential: string): void {
     method: 'google',
   };
   storeUser(user);
+}
+
+/** Attach a long-lived backend session to the current Google sign-in. */
+export function setGoogleSession(sessionToken: string, sessionExp: number): void {
+  const user = getUser();
+  if (!user || user.method === 'email') return;
+  storeUser({...user, session: sessionToken, sessionExp});
+}
+
+/**
+ * The token to send to the backend: the Google token while it's still good
+ * (it carries staff status), then the long session once it has expired.
+ */
+export function bearerToken(user: AuthUser): string {
+  const googleValid = user.method !== 'email' && user.exp * 1000 > Date.now() + 60_000;
+  if (googleValid || !user.session) return user.credential;
+  return user.session;
 }
 
 /** Store the session from an emailed sign-in link (verified by the backend). */
