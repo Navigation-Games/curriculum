@@ -276,7 +276,8 @@ Teachers without a Google account can sign in to the course with a link we email
 
    ```powershell
    # A long random string for signing links
-   [Convert]::ToBase64String((1..48 | ForEach-Object { Get-Random -Maximum 256 })) | gcloud secrets create sign-in-secret --data-file=-
+   $bytes = New-Object byte[] 48; [Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes)
+   [Convert]::ToBase64String($bytes) | gcloud secrets create sign-in-secret --data-file=-
    gcloud secrets create gmail-service-account --data-file=course-mailer-key.json
 
    gcloud run services update lesson-advisor --region us-central1 `
