@@ -57,7 +57,7 @@ Respect the teacher's choices. They know their students, their school and their 
 
 ## Deliverables
 
-When a unit's deliverable is ready, write the final version in a fenced code block labeled `deliverable` (or `profile` in Unit 0), exactly as the unit instructions say. The course page saves these blocks, so use the label only for the final version.
+When a unit's deliverable is ready, write the final version in a fenced code block labeled `deliverable` (or `profile` or `ymp` in Unit 0), exactly as the unit instructions say. The course page saves these blocks, so use the label only for the final version.
 
 ## Staying on task
 
