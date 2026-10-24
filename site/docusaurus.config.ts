@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // nothing personal stored, so no consent banner is needed. The token is
 // public by design (it's in every page's source). Empty means no tracking.
 // See "Visitor statistics" in ai-advisor/README.md.
-const CLOUDFLARE_ANALYTICS_TOKEN = '';
+const CLOUDFLARE_ANALYTICS_TOKEN = '264e9ca7e2f749b490e61fa7c7e3143a';
 
 const config: Config = {
   title: 'Navigation Games',
