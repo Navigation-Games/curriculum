@@ -1,6 +1,6 @@
 # AI Lesson Plan Advisor
 
-> **Changed something in this folder? Redeploy.** The live advisor and course tutor do not update on `git push`. After any change to `app.py`, `system-prompt.md`, `tutor-prompt.md`, `requirements.txt`, or the generated `site-map.md` or `training-units.json`, follow [Redeploying after changes](#redeploying-after-changes).
+> **Changed something in this folder? Redeploy.** The live advisor and course tutor do not update on `git push`. After any change to `app.py`, `system-prompt.md`, `tutor-prompt.md`, `tutor-style.md`, `requirements.txt`, or the generated `site-map.md` or `training-units.json`, follow [Redeploying after changes](#redeploying-after-changes).
 
 One backend service, deployed on Cloud Run as `lesson-advisor`, runs two things: the lesson plan advisor (`/chat`, at `/plan-my-lessons/` on the site) and the teacher course tutor (`/tutor`, on the `/training/` unit pages). The folder and service keep the advisor's name.
 
@@ -23,6 +23,7 @@ ai-advisor/
   test_review.py      - Tests for the /review endpoints (run with pytest)
   system-prompt.md    - Curriculum knowledge baked into the AI's system prompt
   tutor-prompt.md     - General instructions for the teacher course tutor (/tutor)
+  tutor-style.md      - Short style checklist, put at the end of the tutor's prompt
   training-units.json - Course unit material for the tutor (generated from content/training/)
   test_tutor.py       - Tests for the /tutor endpoint
   requirements.txt    - Python dependencies

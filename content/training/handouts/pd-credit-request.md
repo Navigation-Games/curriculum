@@ -34,7 +34,7 @@ The lessons align with the SHAPE America National Physical Education Standards (
 
 | Part | Hours |
 |---|---|
-| Online units before teaching (five units) | 3.4 |
+| Online units before teaching (five units) | 3.65 |
 | Live cohort Q&A | 1 |
 | Online units during and after teaching (three units, including reflections) | 2.25 |
 | Two one-on-one consultations with Navigation Games | 1 |
