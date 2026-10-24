@@ -10,6 +10,12 @@
  * - When the tutor writes a ```profile block (Unit 0), it is saved as the
  *   teacher's learner profile and sent with every later unit's messages.
  * - When the tutor writes a ```deliverable block, it is saved for that unit.
+ *   The Unit 4 deliverable is the teacher's unit plan, sent with every later
+ *   unit's messages so the tutor knows what they planned to teach.
+ * - Saved boxes have a "Send to Navigation Games" button (POST /tutor/submit),
+ *   which emails the reviewer and the teacher a copy.
+ * - A ```schedule block (end of Unit 4) offers a calendar file of the
+ *   teacher's classes, with a reminder to reflect after each one.
  *
  * Messages go to the advisor backend's /tutor endpoint, which logs them for
  * Navigation Games review like the lesson plan advisor's.
@@ -29,6 +35,7 @@ import formatMessage from '@site/src/components/AdvisorChat/formatMessage';
 import chatStyles from '@site/src/components/AdvisorChat/styles.module.css';
 import styles from './styles.module.css';
 import {ympPrefillUrl} from './ympForm';
+import {downloadCalendar, parseSchedule} from './calendar';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -44,8 +51,11 @@ interface Props {
 const PROFILE_KEY = 'ng-course-profile';
 const YMP_KEY = 'ng-course-ymp-answers';
 const READ_ALOUD_KEY = 'ng-course-read-aloud';
+const PLAN_UNIT = 'unit-4'; // its deliverable is the teacher's unit plan
+const REFLECT_URL = 'https://curriculum.navigationgames.org/training/unit-6/';
 const conversationKey = (unit: string) => `ng-course-${unit}-conversation`;
 const deliverableKey = (unit: string) => `ng-course-${unit}-deliverable`;
+const sentKey = (unit: string) => `ng-course-${unit}-sent`; // kind -> the text last sent
 
 function load<T>(key: string, fallback: T): T {
   try {
@@ -69,12 +79,13 @@ function newConversationId(unit: string): string {
   return `tutor-${unit}-${random}`;
 }
 
-// Splits a tutor message into plain text and saved blocks (```profile, ```deliverable).
-type Part = {kind: 'text' | 'profile' | 'deliverable' | 'ymp'; text: string};
+// Splits a tutor message into plain text and saved blocks (```profile, ```deliverable, ...).
+type SavedKind = 'profile' | 'deliverable' | 'ymp' | 'schedule';
+type Part = {kind: 'text' | SavedKind; text: string};
 
 function splitBlocks(message: string): Part[] {
   const parts: Part[] = [];
-  const pattern = /```(profile|deliverable|ymp)\n([\s\S]*?)```/g;
+  const pattern = /```(profile|deliverable|ymp|schedule)\n([\s\S]*?)```/g;
   let last = 0;
   for (const match of message.matchAll(pattern)) {
     if (match.index! > last) parts.push({kind: 'text', text: message.slice(last, match.index)});
@@ -89,9 +100,39 @@ const SAVED_HEADINGS = {
   profile: 'Your learner profile (saved)',
   deliverable: 'Your deliverable (saved)',
   ymp: 'Your map application answers (saved)',
+  schedule: 'Your class dates (saved)',
 };
 
-function SavedBlock({kind, text}: {kind: 'profile' | 'deliverable' | 'ymp'; text: string}) {
+// What the Send button does for a saved box: send it, and whether this exact text was sent already
+export interface Sending {
+  send: (kind: SavedKind, text: string) => Promise<void>;
+  sentText: Partial<Record<SavedKind, string>>;
+  status: Partial<Record<SavedKind, string>>; // message shown after sending
+}
+
+function SendButton({kind, text, sending}: {kind: SavedKind; text: string; sending?: Sending}) {
+  const [busy, setBusy] = useState(false);
+  if (!sending) return null;
+  if (sending.sentText[kind] === text) {
+    return <p className={styles.savedAction}>{sending.status[kind] || 'Sent to Navigation Games.'}</p>;
+  }
+  return (
+    <p className={styles.savedAction}>
+      <button
+        className={styles.sendWorkButton}
+        disabled={busy}
+        onClick={() => {
+          setBusy(true);
+          sending.send(kind, text).finally(() => setBusy(false));
+        }}>
+        {busy ? 'Sending...' : 'Send to Navigation Games'}
+      </button>{' '}
+      when it's ready. You'll get a copy by email, and a person will reply.
+    </p>
+  );
+}
+
+function SavedBlock({kind, text, sending}: {kind: SavedKind; text: string; sending?: Sending}) {
   const [copied, setCopied] = useState(false);
   const copy = () => {
     navigator.clipboard?.writeText(text).then(() => setCopied(true));
@@ -113,17 +154,26 @@ function SavedBlock({kind, text}: {kind: 'profile' | 'deliverable' | 'ymp'; text
           . Check every answer there, then submit the form yourself.
         </p>
       )}
+      {kind === 'schedule' && parseSchedule(text).length > 0 && (
+        <p className={styles.savedAction}>
+          <button className={styles.sendWorkButton} onClick={() => downloadCalendar(text, REFLECT_URL)}>
+            Add these classes to my calendar
+          </button>{' '}
+          Each class comes with a 10-minute reminder afterwards to reflect on it with the tutor.
+        </p>
+      )}
+      {kind !== 'schedule' && <SendButton kind={kind} text={text} sending={sending} />}
     </div>
   );
 }
 
-function TutorMessage({content}: {content: string}) {
+function TutorMessage({content, sending}: {content: string; sending?: Sending}) {
   return (
     <>
       {splitBlocks(content).map((part, i) =>
         part.kind === 'text'
           ? <React.Fragment key={i}>{formatMessage(part.text.trim())}</React.Fragment>
-          : <SavedBlock key={i} kind={part.kind} text={part.text} />,
+          : <SavedBlock key={i} kind={part.kind} text={part.text} sending={sending} />,
       )}
     </>
   );
@@ -251,6 +301,44 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
     }
   };
 
+  // Sending saved boxes to Navigation Games
+  const [sentText, setSentText] = useState<Sending['sentText']>({});
+  const [sendStatus, setSendStatus] = useState<Sending['status']>({});
+  useEffect(() => setSentText(load(sentKey(unit), {})), [unit]);
+  const sending: Sending | undefined = googleUser
+    ? {
+        sentText,
+        status: sendStatus,
+        send: async (kind, text) => {
+          setError(null);
+          try {
+            const response = await fetch(`${apiUrl}/tutor/submit`, {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json', Authorization: `Bearer ${bearerToken(googleUser)}`},
+              body: JSON.stringify({unit, kind, text, conversation_id: conversationId}),
+            });
+            const data = await response.json().catch(() => ({}));
+            if (!response.ok) {
+              if (response.status === 401) signOut();
+              setError(data.error || 'Sending didn\'t work. Please try again, or copy it into an email to admin@navigationgames.org.');
+              return;
+            }
+            const updated = {...sentText, [kind]: text};
+            setSentText(updated);
+            save(sentKey(unit), updated);
+            setSendStatus({
+              ...sendStatus,
+              [kind]: data.emailed
+                ? `Sent. A copy is in your email, and someone at Navigation Games will reply ${data.turnaround}.`
+                : `Sent to Navigation Games, who will reply ${data.turnaround}.`,
+            });
+          } catch {
+            setError('Sending didn\'t work. Please try again, or copy it into an email to admin@navigationgames.org.');
+          }
+        },
+      }
+    : undefined;
+
   const toggleReadAloud = () => {
     const on = !readAloud;
     setReadAloud(on);
@@ -278,6 +366,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
       .then(progress => {
         if (!progress) return;
         if (progress.profile) save(PROFILE_KEY, progress.profile);
+        if (progress.plan) save(deliverableKey(PLAN_UNIT), progress.plan);
         const saved = progress.units?.[unit];
         if (saved?.messages?.length && saved.messages.length >= messagesRef.current.length) {
           setConversationId(saved.conversation_id);
@@ -310,6 +399,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
       if (part.kind === 'profile') save(PROFILE_KEY, part.text);
       if (part.kind === 'deliverable') save(deliverableKey(unit), part.text);
       if (part.kind === 'ymp') save(YMP_KEY, part.text);
+      if (part.kind === 'schedule') save(`ng-course-${unit}-schedule`, part.text);
     }
   };
 
@@ -335,6 +425,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
           conversation_id: conversationId,
           messages: updated.map(({role, content}) => ({role, content})),
           profile: load<string>(PROFILE_KEY, ''),
+          plan: unit === PLAN_UNIT ? '' : load<string>(deliverableKey(PLAN_UNIT), ''),
         }),
       });
       const data = await response.json().catch(() => ({}));
@@ -409,7 +500,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         {messages.map((msg, i) => (
           <div key={i} className={`${chatStyles.message} ${chatStyles[msg.role]}`}>
             <div className={chatStyles.bubble}>
-              {msg.role === 'assistant' ? <TutorMessage content={msg.content} /> : <p>{msg.content}</p>}
+              {msg.role === 'assistant' ? <TutorMessage content={msg.content} sending={sending} /> : <p>{msg.content}</p>}
               {msg.role === 'assistant' && googleUser && voice && msg.speech_token && (
                 <SpeakButton
                   state={speaking?.key === msg.speech_token ? speaking.state : 'idle'}

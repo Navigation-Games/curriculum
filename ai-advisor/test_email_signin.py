@@ -207,7 +207,7 @@ def test_progress_without_a_sheet_is_empty(client, monkeypatch):
     monkeypatch.setattr(advisor, "get_sheets_client", lambda: None)
     token = advisor.make_session_token("teacher@school.org")
     r = client.get("/tutor/progress", headers={"Authorization": "Bearer " + token})
-    assert r.get_json() == {"units": {}, "profile": ""}
+    assert r.get_json() == {"units": {}, "profile": "", "plan": ""}
 
 
 def test_progress_reads_the_log_sheet(client, monkeypatch):

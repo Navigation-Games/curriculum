@@ -104,3 +104,19 @@
   margin: 0.5rem 0.75rem 0;
   font-size: 0.85rem;
 }
+
+/* "Send to Navigation Games" and "Add these classes to my calendar" */
+.sendWorkButton {
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 4px;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+  padding: 0.2rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.sendWorkButton:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}

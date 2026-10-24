@@ -364,10 +364,14 @@ def safe_return_to(return_to: str) -> tuple[str, str] | None:
     return origin, path
 
 
-def send_sign_in_email(to_address: str, link: str) -> None:
-    """Send the sign-in link, or just log it in EMAIL_LINK_LOG_ONLY mode."""
+def send_email(to_address: str, subject: str, body: str, reply_to: str = "") -> None:
+    """
+    Send a plain-text email as EMAIL_LINK_SENDER through the Gmail API, or
+    just log it in EMAIL_LINK_LOG_ONLY mode. Used for sign-in links and
+    course submissions.
+    """
     if EMAIL_LINK_LOG_ONLY:
-        app.logger.warning(f"[EMAIL_LINK_LOG_ONLY] sign-in link for {to_address}: {link}")
+        app.logger.warning(f"[EMAIL_LINK_LOG_ONLY] email to {to_address}: {subject}\n{body}")
         return
 
     from google.auth.transport.requests import AuthorizedSession
@@ -381,15 +385,10 @@ def send_sign_in_email(to_address: str, link: str) -> None:
     message = EmailMessage()
     message["To"] = to_address
     message["From"] = f"Navigation Games <{EMAIL_LINK_SENDER}>"
-    message["Subject"] = "Your sign-in link for the Navigation Games course"
-    message.set_content(
-        "Here's your link to sign in to the Navigation Games teacher course:\n\n"
-        f"{link}\n\n"
-        "It works for 15 minutes. Once you're signed in, that browser stays "
-        "signed in for 30 days.\n\n"
-        "If you didn't ask for this, you can ignore this email.\n\n"
-        "Navigation Games"
-    )
+    message["Subject"] = subject
+    if reply_to:
+        message["Reply-To"] = reply_to
+    message.set_content(body)
     raw = base64.urlsafe_b64encode(message.as_bytes()).decode()
     response = AuthorizedSession(credentials).post(
         "https://gmail.googleapis.com/gmail/v1/users/me/messages/send",
@@ -397,6 +396,20 @@ def send_sign_in_email(to_address: str, link: str) -> None:
         timeout=20,
     )
     response.raise_for_status()
+
+
+def send_sign_in_email(to_address: str, link: str) -> None:
+    """Send the sign-in link."""
+    send_email(
+        to_address,
+        "Your sign-in link for the Navigation Games course",
+        "Here's your link to sign in to the Navigation Games teacher course:\n\n"
+        f"{link}\n\n"
+        "It works for 15 minutes. Once you're signed in, that browser stays "
+        "signed in for 30 days.\n\n"
+        "If you didn't ask for this, you can ignore this email.\n\n"
+        "Navigation Games",
+    )
 
 
 @app.route("/auth/email-link", methods=["POST"])
@@ -629,9 +642,11 @@ TRAINING_UNITS = (
     else {}
 )
 TUTOR_PROFILE_MAX_CHARS = 3000
+TUTOR_PLAN_MAX_CHARS = 6000
+PLAN_UNIT = "unit-4"  # the unit whose deliverable is the teacher's unit plan
 
 
-def tutor_system_prompt(unit: dict, profile: str = "") -> str:
+def tutor_system_prompt(unit: dict, profile: str = "", plan: str = "") -> str:
     """The tutor's system prompt: general instructions, this unit, the site map, then the style checklist."""
     parts = [
         TUTOR_PROMPT,
@@ -647,6 +662,11 @@ def tutor_system_prompt(unit: dict, profile: str = "") -> str:
         parts.append(
             "## The teacher's learner profile (from Unit 0, written by the tutor and checked by the teacher)\n\n"
             + profile[:TUTOR_PROFILE_MAX_CHARS]
+        )
+    if plan:
+        parts.append(
+            "## The teacher's unit plan (from Unit 4, as they last saved it; their actual teaching may differ)\n\n"
+            + plan[:TUTOR_PLAN_MAX_CHARS]
         )
     if SITE_MAP_PATH.exists():
         parts.append(SITE_MAP_PATH.read_text(encoding="utf-8"))
@@ -718,13 +738,16 @@ def tutor():
     profile = data.get("profile") or ""
     if not isinstance(profile, str):
         profile = ""
+    plan = data.get("plan") or ""
+    if not isinstance(plan, str) or unit_slug == PLAN_UNIT:
+        plan = ""
 
     user_info = {"organization": f"course {unit_slug}"}
     if user:
         user_info.update(name=user["name"], email=user["email"])
 
     try:
-        response = _create_message(messages, tutor_system_prompt(unit, profile), TUTOR_MAX_TOKENS)
+        response = _create_message(messages, tutor_system_prompt(unit, profile, plan), TUTOR_MAX_TOKENS)
         assistant_message = remove_em_dashes(response.content[0].text)
         _log_exchange(conversation_id, messages, assistant_message, response, user_info)
         reply = {"conversation_id": conversation_id, "response": assistant_message}
@@ -739,6 +762,7 @@ def tutor():
 
 
 PROFILE_BLOCK = re.compile(r"```profile\n(.*?)```", re.S)
+DELIVERABLE_BLOCK = re.compile(r"```deliverable\n(.*?)```", re.S)
 
 
 def unit_for_conversation(conversation_id: str) -> str | None:
@@ -776,12 +800,18 @@ def rebuild_progress(rows: list[list[str]], email: str) -> dict:
 
     units: dict[str, dict] = {}
     profile, profile_time = "", ""
+    plan, plan_time = "", ""
     for conv_id, conv in conversations.items():
         messages = [conv["messages"][n] for n in sorted(conv["messages"])]
         for m in messages:
-            found = PROFILE_BLOCK.findall(m["content"]) if m["role"] == "assistant" else []
+            if m["role"] != "assistant":
+                continue
+            found = PROFILE_BLOCK.findall(m["content"])
             if found and m["timestamp"] >= profile_time:
                 profile, profile_time = found[-1].strip(), m["timestamp"]
+            found = DELIVERABLE_BLOCK.findall(m["content"]) if conv["unit"] == PLAN_UNIT else []
+            if found and m["timestamp"] >= plan_time:
+                plan, plan_time = found[-1].strip(), m["timestamp"]
         current = units.get(conv["unit"])
         if current is None or conv["last"] > current["updated"]:
             units[conv["unit"]] = {
@@ -789,7 +819,7 @@ def rebuild_progress(rows: list[list[str]], email: str) -> dict:
                 "updated": conv["last"],
                 "messages": [{"role": m["role"], "content": m["content"]} for m in messages],
             }
-    return {"units": units, "profile": profile}
+    return {"units": units, "profile": profile, "plan": plan}
 
 
 @app.route("/tutor/progress", methods=["GET"])
@@ -798,7 +828,7 @@ def tutor_progress():
     The signed-in teacher's saved course progress, so they can pick up on
     any device.
 
-    Response: {"units": {"unit-0": {"conversation_id", "updated", "messages"}}, "profile": "..."}
+    Response: {"units": {"unit-0": {"conversation_id", "updated", "messages"}}, "profile": "...", "plan": "..."}
 
     Rebuilt from the conversation log sheet on every request. Fine for a
     prototype; move to a real datastore before the course is large.
@@ -812,12 +842,12 @@ def tutor_progress():
 
     gc = get_sheets_client()
     if not gc:
-        return jsonify({"units": {}, "profile": ""})
+        return jsonify({"units": {}, "profile": "", "plan": ""})
     try:
         rows = gc.open_by_key(SPREADSHEET_ID).sheet1.get_all_values()
     except Exception as e:
         app.logger.error(f"Could not read the log sheet for progress: {e}")
-        return jsonify({"units": {}, "profile": ""})
+        return jsonify({"units": {}, "profile": "", "plan": ""})
     progress = rebuild_progress(rows, user["email"])
     if voice_enabled():
         for saved in progress["units"].values():
@@ -825,6 +855,123 @@ def tutor_progress():
                 if m["role"] == "assistant":
                     m["speech_token"] = speech_token(m["content"])
     return jsonify(progress)
+
+
+# ---------------------------------------------------------------------------
+# Submitting a deliverable
+#
+# The teacher presses "Send to Navigation Games" on a saved box. The reviewer
+# gets an email they can reply to (Reply-To is the teacher), the teacher gets
+# a copy with the curriculum links spelled out, and the submission is logged
+# in the "Submissions" tab of the log sheet, which the weekly check-in script
+# reads.
+# ---------------------------------------------------------------------------
+
+COURSE_REVIEWER_EMAIL = os.environ.get("COURSE_REVIEWER_EMAIL", "") or EMAIL_LINK_SENDER
+SITE_URL = "https://curriculum.navigationgames.org"
+SUBMISSIONS_SHEET_TITLE = "Submissions"
+SUBMISSIONS_HEADER = ["timestamp", "email", "name", "unit", "kind", "conversation_id", "text"]
+SUBMISSION_MAX_CHARS = 20000
+SUBMISSIONS_PER_DAY = 20  # per teacher
+submission_rate_store: dict[str, list[float]] = {}
+SUBMISSION_KINDS = {"deliverable": "work", "profile": "learner profile", "ymp": "map application answers"}
+# When the reviewer replies. The unit plan drives Consultation 1, so it's quicker.
+REVIEW_TURNAROUND = {"unit-4": "within 3 business days"}
+
+
+def full_links(text: str) -> str:
+    """Spell out Markdown links for an email: [Map Walk](/activities/...) -> Map Walk (https://...)."""
+
+    def spell(match):
+        url = match.group(2)
+        if url.startswith("/"):
+            url = SITE_URL + url
+        return f"{match.group(1)} ({url})"
+
+    return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", spell, text)
+
+
+def submission_emails(unit_slug: str, unit: dict, kind: str, text: str, user: dict, conversation_id: str):
+    """The (reviewer email, teacher email) pairs of (subject, body) for a submission."""
+    who = f"{user['name']} <{user['email']}>" if user["name"] else user["email"]
+    what = SUBMISSION_KINDS[kind]
+    title = unit["title"]
+    turnaround = REVIEW_TURNAROUND.get(unit_slug, "within a week")
+    reviewer = (
+        f"Course submission: {title}, {what}, from {who}",
+        f"{who} sent their {what} for {title}.\n\n"
+        f"{full_links(text)}\n\n"
+        f"Reply to this email to answer them ({turnaround}). The whole conversation is in the "
+        f"review tool, {SITE_URL}/review-conversations/, as {conversation_id or 'an unsaved conversation'}.",
+    )
+    teacher = (
+        f"Your {what} for {title}",
+        f"Thanks! Navigation Games has your {what} for {title}, and someone will reply {turnaround}. "
+        "Here's a copy of what you sent, with the links to the curriculum spelled out:\n\n"
+        f"{full_links(text)}\n\n"
+        "Questions in the meantime? Just reply to this email.\n\nNavigation Games",
+    )
+    return reviewer, teacher
+
+
+def _log_submission(row: list[str]) -> None:
+    gc = get_sheets_client()
+    if not gc:
+        return
+    try:
+        sheet = _get_or_create_worksheet(gc.open_by_key(SPREADSHEET_ID), SUBMISSIONS_SHEET_TITLE, SUBMISSIONS_HEADER)
+        sheet.append_row(row, value_input_option="RAW")
+    except Exception as e:
+        app.logger.error(f"Could not log the submission: {e}")
+
+
+@app.route("/tutor/submit", methods=["POST"])
+def tutor_submit():
+    """
+    Send a saved deliverable to Navigation Games.
+
+    Request body: {"unit": "unit-4", "kind": "deliverable", "text": "...", "conversation_id": "..."}
+    Response: {"ok": true, "emailed": true, "turnaround": "within 3 business days"}
+
+    "emailed" is false when email isn't set up; the submission is still logged.
+    """
+    try:
+        user = get_optional_user()
+    except InvalidTokenError:
+        return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
+    if user is None:
+        return jsonify({"error": "Please sign in to send your work."}), 401
+
+    data = request.get_json(silent=True) or {}
+    unit_slug = data.get("unit", "")
+    unit = TRAINING_UNITS.get(unit_slug)
+    if not unit:
+        return jsonify({"error": "Unknown course unit."}), 400
+    kind = data.get("kind", "")
+    if kind not in SUBMISSION_KINDS:
+        return jsonify({"error": "Unknown kind of submission."}), 400
+    text = data.get("text")
+    if not isinstance(text, str) or not text.strip():
+        return jsonify({"error": "Nothing to send."}), 400
+    text = text.strip()[:SUBMISSION_MAX_CHARS]
+    conversation_id = str(data.get("conversation_id") or "")[:200]
+
+    if not _check_rate_limit(submission_rate_store, user["email"].lower(), SUBMISSIONS_PER_DAY):
+        return jsonify({"error": "That's a lot of sending for one day. Please email admin@navigationgames.org instead."}), 429
+
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    _log_submission([now, user["email"], user["name"], unit_slug, kind, conversation_id, text])
+
+    emailed = False
+    if EMAIL_LINK_SENDER and COURSE_REVIEWER_EMAIL and (GMAIL_SERVICE_ACCOUNT_JSON or EMAIL_LINK_LOG_ONLY):
+        reviewer, teacher = submission_emails(unit_slug, unit, kind, text, user, conversation_id)
+        try:
+            send_email(COURSE_REVIEWER_EMAIL, *reviewer, reply_to=user["email"])
+            send_email(user["email"], *teacher, reply_to=COURSE_REVIEWER_EMAIL)
+            emailed = True
+        except Exception as e:
+            app.logger.error(f"Could not email the submission: {e}")
+    return jsonify({"ok": True, "emailed": emailed, "turnaround": REVIEW_TURNAROUND.get(unit_slug, "within a week")})
 
 
 # ---------------------------------------------------------------------------
