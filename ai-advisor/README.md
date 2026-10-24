@@ -399,7 +399,7 @@ If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub
 | `ELEVENLABS_VOICE_ID` | Backend | The ElevenLabs voice the tutor speaks in |
 | `ELEVENLABS_MODEL` | Backend (optional) | ElevenLabs model, default `eleven_v4` (about 1 credit per character; speaks the teacher's language) |
 | `TUTOR_VOICE_LABEL` | Backend (optional) | Shown with the voice, default `AI voice`. For a cloned voice say whose, e.g. `AI voice based on Barb's` |
-| `TUTOR_SPEECH_DAILY_CHARS` | Backend (optional) | Characters each teacher can have read aloud per day, default 5000 (about 5 minutes of speech). Teachers see the percentage they have left today |
+| `TUTOR_SPEECH_DAILY_CHARS` | Backend (optional) | Characters each teacher can have read aloud per day, default 20000 (about 20 minutes of speech, enough to listen through the longest unit). Teachers see the percentage they have left today |
 | `TUTOR_SPEECH_MONTHLY_CHARS` | Backend (optional) | Characters the whole course can have read aloud per calendar month, default 100000. In memory, so it restarts on a redeploy: a safety net, not exact accounting |
 
 Without `SIGN_IN_SECRET` and a sender (or log-only mode), email sign-in is off: the course still works with Google sign-in, and the email form says email sign-in isn't set up yet.

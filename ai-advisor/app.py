@@ -843,7 +843,7 @@ ELEVENLABS_MODEL = os.environ.get("ELEVENLABS_MODEL", "eleven_v4")
 TUTOR_VOICE_LABEL = os.environ.get("TUTOR_VOICE_LABEL", "AI voice")
 # ElevenLabs charges about one credit per character. A typical reply is
 # 300 to 800 characters, and a minute of speech is about 900.
-SPEECH_DAILY_CHARS = int(os.environ.get("TUTOR_SPEECH_DAILY_CHARS", "5000"))  # per teacher
+SPEECH_DAILY_CHARS = int(os.environ.get("TUTOR_SPEECH_DAILY_CHARS", "20000"))  # per teacher, enough for the longest unit
 # For the whole course, per calendar month (UTC), so a busy week can't use up
 # the ElevenLabs plan. Kept in memory like the other limits: it starts again
 # on a redeploy and is counted per Cloud Run instance, so it is a safety net,
