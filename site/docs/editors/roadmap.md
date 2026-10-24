@@ -24,6 +24,7 @@ The course design is in the Google Doc "2026 Curriculum Training" (syllabi, unit
 - **Try it.** Redeploy the advisor to Cloud Run so `/tutor` exists, then have staff work through Units 0 to 4 and note what feels wrong.
 - **Try the same Unit 0 on a course platform** (Thinkific or LearnWorlds free trial), embedding the tutor, and compare effort and feel. Decide on the platform before the first cohort.
 - **Write Units 5 to 7** (map and courses, teaching reflections, next year), and the In-depth course additions.
+- **Save progress on the server.** Today each teacher's conversations, profile and deliverables live only in their browser (localStorage), so switching devices or clearing the browser loses them, and renaming a unit file orphans its saved conversation. Before real cohorts, store progress per signed-in teacher on the backend.
 - **Submitting deliverables.** Today a deliverable is saved in the teacher's browser and the whole conversation is logged for review. A real "send to reviewer" step, reviewer replies to the teacher, and progress tracking are still to build (or come from a platform).
 - **Content the course needs** is listed under the Phase 1 table in the course design doc (training videos, model opening briefing, printables, map-reading and course design guides, PD credit request handout).
 
