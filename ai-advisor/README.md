@@ -440,6 +440,17 @@ The tutor answers in whatever language the teacher writes in, and the `eleven_v4
 
 Change the recipient, the quiet thresholds or the suggested wording in the constants and functions at the top of the script.
 
+## Visitor statistics (one time)
+
+The curriculum site counts visits with **Cloudflare Web Analytics**: page views per page, where visitors came from, countries and devices. It uses no cookies and stores nothing personal, so the site needs no consent banner. GitHub Pages keeps no visitor counts of its own, so there are no numbers from before this was turned on. For earlier search traffic, Google Search Console (search.google.com/search-console, property `curriculum.navigationgames.org`) shows Google searches and clicks.
+
+1. Sign in at dash.cloudflare.com (a free account is fine). The site's domain does not need to move to Cloudflare.
+2. Go to **Analytics & Logs > Web Analytics > Add a site**, enter `curriculum.navigationgames.org`, and choose the manual JavaScript snippet.
+3. Copy the token from the snippet (the `"token": "..."` value) into `CLOUDFLARE_ANALYTICS_TOKEN` at the top of `site/docusaurus.config.ts`, and push. Counting starts once GitHub Actions has rebuilt the site.
+4. See the numbers in the same Web Analytics page in Cloudflare. They show up within a few minutes of the first visits.
+
+The token isn't a secret: it's in every page's source. To stop counting, set it back to `''`.
+
 ## Daily activity email (one time)
 
 A Google Apps Script bound to the advisor conversation log spreadsheet emails `president@navigationgames.org` once a day when new rows have been added (conversations, feedback, or page feedback) — a count per tab plus a link to the sheet. It stays quiet on days with no new activity. The script source is `daily-summary-email.gs` in this directory; it lives in the Sheet's Apps Script project, not in the deployed backend.
