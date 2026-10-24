@@ -99,3 +99,8 @@
 .listeningLeft {
   color: var(--ifm-color-emphasis-600);
 }
+
+.talkTip {
+  margin: 0.5rem 0.75rem 0;
+  font-size: 0.85rem;
+}
