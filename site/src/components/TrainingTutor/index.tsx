@@ -13,6 +13,11 @@
  *
  * Messages go to the advisor backend's /tutor endpoint, which logs them for
  * Navigation Games review like the lesson plan advisor's.
+ *
+ * If the backend has a voice set up (GET /tutor/voice), each tutor message
+ * gets a speaker button, and a "Read replies aloud" switch plays each new
+ * reply. Audio comes from /tutor/speak, which only reads the tutor's own
+ * replies (each comes with a signed speech_token) and unit openings.
  */
 
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -28,6 +33,7 @@ import {ympPrefillUrl} from './ympForm';
 interface Message {
   role: 'user' | 'assistant';
   content: string;
+  speech_token?: string; // lets /tutor/speak read this reply aloud
 }
 
 interface Props {
@@ -37,6 +43,7 @@ interface Props {
 
 const PROFILE_KEY = 'ng-course-profile';
 const YMP_KEY = 'ng-course-ymp-answers';
+const READ_ALOUD_KEY = 'ng-course-read-aloud';
 const conversationKey = (unit: string) => `ng-course-${unit}-conversation`;
 const deliverableKey = (unit: string) => `ng-course-${unit}-deliverable`;
 
@@ -122,6 +129,18 @@ function TutorMessage({content}: {content: string}) {
   );
 }
 
+type SpeakState = 'idle' | 'loading' | 'playing';
+
+function SpeakButton({state, onClick}: {state: SpeakState; onClick: () => void}) {
+  const label = state === 'playing' ? 'Stop' : state === 'loading' ? 'Loading...' : 'Listen';
+  return (
+    <button className={styles.speakButton} onClick={onClick} disabled={state === 'loading'} aria-label={label}>
+      {state === 'playing' ? '\u25A0 ' : '\u{1F50A} '}
+      {label}
+    </button>
+  );
+}
+
 export default function TrainingTutor({unit, opening}: Props): React.ReactElement {
   const {siteConfig} = useDocusaurusContext();
   const apiUrl = (siteConfig.customFields?.advisorApiUrl as string) || 'http://localhost:8080';
@@ -147,6 +166,69 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const messagesBoxRef = useRef<HTMLDivElement>(null);
+
+  // The tutor's voice, if the backend has one
+  const [voice, setVoice] = useState<{enabled: boolean; label: string} | null>(null);
+  const [readAloud, setReadAloud] = useState(false);
+  const [speaking, setSpeaking] = useState<{key: string; state: SpeakState} | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioCache = useRef(new Map<string, string>()); // message key -> audio URL, so replays cost nothing
+
+  useEffect(() => {
+    setReadAloud(load<boolean>(READ_ALOUD_KEY, false));
+    fetch(`${apiUrl}/tutor/voice`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(data => data?.enabled && setVoice(data))
+      .catch(() => {});
+  }, [apiUrl]);
+
+  const stopSpeaking = () => {
+    audioRef.current?.pause();
+    setSpeaking(null);
+  };
+
+  // key identifies the message ("opening" or its speech token); body is what /tutor/speak needs
+  const speak = async (key: string, body: object) => {
+    if (!googleUser) return;
+    if (speaking?.key === key) {
+      stopSpeaking();
+      return;
+    }
+    audioRef.current?.pause();
+    setSpeaking({key, state: 'loading'});
+    try {
+      let url = audioCache.current.get(key);
+      if (!url) {
+        const response = await fetch(`${apiUrl}/tutor/speak`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json', Authorization: `Bearer ${bearerToken(googleUser)}`},
+          body: JSON.stringify(body),
+        });
+        if (!response.ok) {
+          const data = await response.json().catch(() => ({}));
+          throw new Error(data.error || 'The tutor\'s voice isn\'t available right now.');
+        }
+        url = URL.createObjectURL(await response.blob());
+        audioCache.current.set(key, url);
+      }
+      const audio = audioRef.current || new Audio();
+      audioRef.current = audio;
+      audio.src = url;
+      audio.onended = () => setSpeaking(null);
+      await audio.play();
+      setSpeaking({key, state: 'playing'});
+    } catch (e) {
+      setSpeaking(null);
+      setError(e instanceof Error && e.name !== 'NotAllowedError' ? e.message : 'Press Listen to hear the reply.');
+    }
+  };
+
+  const toggleReadAloud = () => {
+    const on = !readAloud;
+    setReadAloud(on);
+    save(READ_ALOUD_KEY, on);
+    if (!on) stopSpeaking();
+  };
 
   // Restore this unit's conversation (localStorage only exists in the browser)
   useEffect(() => {
@@ -223,7 +305,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         body: JSON.stringify({
           unit,
           conversation_id: conversationId,
-          messages: updated,
+          messages: updated.map(({role, content}) => ({role, content})),
           profile: load<string>(PROFILE_KEY, ''),
         }),
       });
@@ -239,7 +321,10 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
 
       keepSavedBlocks(data.response);
       setConversationId(data.conversation_id);
-      setMessages([...updated, {role: 'assistant', content: data.response}]);
+      setMessages([...updated, {role: 'assistant', content: data.response, speech_token: data.speech_token}]);
+      if (readAloud && data.speech_token) {
+        speak(data.speech_token, {text: data.response, speech_token: data.speech_token});
+      }
     } catch {
       setError('The tutor is not available right now. Please try again later.');
       setMessages(messages);
@@ -247,11 +332,12 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
     } finally {
       setIsLoading(false);
     }
-  }, [input, isLoading, messages, apiUrl, googleUser, unit, conversationId]);
+  }, [input, isLoading, messages, apiUrl, googleUser, unit, conversationId, readAloud, speaking]);
 
   const startOver = () => {
     if (!window.confirm('Start this unit\'s conversation over? Your saved profile and deliverables stay.')) return;
     localStorage.removeItem(conversationKey(unit));
+    stopSpeaking();
     setMessages([]);
     setConversationId(newConversationId(unit));
     setError(null);
@@ -266,6 +352,11 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
             <button className={chatStyles.signOutButton} onClick={signOut}>Sign out</button>
           </span>
         )}
+        {googleUser && voice && (
+          <label className={styles.readAloud} title={voice.label}>
+            <input type="checkbox" checked={readAloud} onChange={toggleReadAloud} /> Read replies aloud
+          </label>
+        )}
         {googleUser && messages.length > 0 && (
           <button className={chatStyles.newChatButton} onClick={startOver}>Start over</button>
         )}
@@ -273,13 +364,27 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
 
       <div className={chatStyles.messages} ref={messagesBoxRef}>
         <div className={`${chatStyles.message} ${chatStyles.assistant}`}>
-          <div className={chatStyles.bubble}>{formatMessage(opening)}</div>
+          <div className={chatStyles.bubble}>
+            {formatMessage(opening)}
+            {googleUser && voice && (
+              <SpeakButton
+                state={speaking?.key === 'opening' ? speaking.state : 'idle'}
+                onClick={() => speak('opening', {unit})}
+              />
+            )}
+          </div>
         </div>
 
         {messages.map((msg, i) => (
           <div key={i} className={`${chatStyles.message} ${chatStyles[msg.role]}`}>
             <div className={chatStyles.bubble}>
               {msg.role === 'assistant' ? <TutorMessage content={msg.content} /> : <p>{msg.content}</p>}
+              {msg.role === 'assistant' && googleUser && voice && msg.speech_token && (
+                <SpeakButton
+                  state={speaking?.key === msg.speech_token ? speaking.state : 'idle'}
+                  onClick={() => speak(msg.speech_token!, {text: msg.content, speech_token: msg.speech_token})}
+                />
+              )}
             </div>
           </div>
         ))}
@@ -334,7 +439,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
       )}
 
       <p className={styles.disclosure}>
-        The tutor is an AI assistant. Your conversations are saved with your sign-in
+        The tutor is an AI assistant{voice ? `, and its voice is an ${voice.label}` : ''}. Your conversations are saved with your sign-in
         and recorded for Navigation Games staff, who review them and reply.
       </p>
     </div>
