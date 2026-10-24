@@ -49,6 +49,7 @@ def client(monkeypatch, sent):
         return FakeApiResponse()
 
     monkeypatch.setattr(advisor, "rate_limit_store", {})
+    monkeypatch.setattr(advisor, "tutor_rate_store", {})
     monkeypatch.setattr(advisor, "_create_message", fake_create_message)
     monkeypatch.setattr(advisor, "get_sheets_client", lambda: None)
     return advisor.app.test_client()
@@ -119,12 +120,14 @@ def test_malformed_messages_are_rejected(client):
     assert r.status_code == 400
 
 
-def test_tutor_shares_the_daily_chat_limit(client):
+def test_tutor_has_its_own_generous_limit(client):
     import time
 
+    # The advisor's limit being used up doesn't affect the tutor
     advisor.rate_limit_store["5.6.7.8"] = [time.time()] * advisor.RATE_LIMIT_MAX
-    r = ask(client)
-    assert r.status_code == 429
+    assert ask(client).status_code == 200
+    advisor.tutor_rate_store["5.6.7.8"] = [time.time()] * advisor.TUTOR_ANONYMOUS_LIMIT
+    assert ask(client).status_code == 429
 
 
 def test_training_units_json_is_valid():

@@ -175,6 +175,12 @@ RATE_LIMIT_MAX = 20  # chat messages per day per IP (anonymous)
 SIGNED_IN_RATE_LIMIT_MAX = 100  # chat messages per day per signed-in Google account
 RATE_LIMIT_WINDOW = 86400  # 24 hours in seconds
 
+# The course tutor has its own limit, separate from the advisor's. Teachers
+# signed in to the course aren't limited (the Anthropic monthly spend limit
+# is the backstop); anonymous visitors get a generous per-IP allowance.
+tutor_rate_store: dict[str, list[float]] = {}
+TUTOR_ANONYMOUS_LIMIT = 200  # tutor messages per day per IP
+
 # Separate bucket for page feedback so it never eats chat quota
 page_feedback_rate_store: dict[str, list[float]] = {}
 PAGE_FEEDBACK_RATE_MAX = 10  # submissions per day per IP
@@ -269,6 +275,16 @@ def _chat_limit_error(user):
     elif not user["is_staff"]:
         if not _check_rate_limit(rate_limit_store, "email:" + user["email"], SIGNED_IN_RATE_LIMIT_MAX):
             return jsonify({"error": "Daily message limit reached. Come back tomorrow."}), 429
+    return None
+
+
+def _tutor_limit_error(user):
+    """Return a 429 response if an anonymous visitor is over the tutor's daily limit, else None."""
+    if user is not None:
+        return None
+    client_ip = request.headers.get("X-Forwarded-For", request.remote_addr)
+    if not _check_rate_limit(tutor_rate_store, client_ip, TUTOR_ANONYMOUS_LIMIT):
+        return jsonify({"error": "Daily message limit reached. Sign in for unlimited use of the course tutor."}), 429
     return None
 
 
@@ -450,7 +466,7 @@ def tutor():
     except InvalidTokenError:
         return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
 
-    limit_error = _chat_limit_error(user)
+    limit_error = _tutor_limit_error(user)
     if limit_error:
         return limit_error
 
