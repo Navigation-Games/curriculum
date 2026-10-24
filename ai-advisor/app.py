@@ -56,6 +56,9 @@ client = anthropic.Anthropic()
 _CONFIGURED_MODEL = os.environ.get("ADVISOR_MODEL", "claude-sonnet-4-6")
 _MODEL_FAMILY_PREFERENCE = ("sonnet", "opus", "haiku")
 MAX_TOKENS = 1024
+# The course tutor writes whole deliverables (a six-session unit plan runs well
+# past 1024 tokens), so it gets more room
+TUTOR_MAX_TOKENS = 4096
 
 
 def resolve_model(preferred=_CONFIGURED_MODEL):
@@ -98,7 +101,7 @@ def resolve_model(preferred=_CONFIGURED_MODEL):
 MODEL = resolve_model()
 
 
-def _create_message(messages, system_prompt=None):
+def _create_message(messages, system_prompt=None, max_tokens=MAX_TOKENS):
     """Call the Claude API, self-healing if the active model was retired.
 
     Uses the advisor's system prompt unless another one is given (the course
@@ -106,7 +109,7 @@ def _create_message(messages, system_prompt=None):
     """
     global MODEL
     kwargs = dict(
-        max_tokens=MAX_TOKENS,
+        max_tokens=max_tokens,
         system=[
             {
                 "type": "text",
@@ -656,7 +659,7 @@ def tutor():
         user_info.update(name=user["name"], email=user["email"])
 
     try:
-        response = _create_message(messages, tutor_system_prompt(unit, profile))
+        response = _create_message(messages, tutor_system_prompt(unit, profile), TUTOR_MAX_TOKENS)
         assistant_message = response.content[0].text
         _log_exchange(conversation_id, messages, assistant_message, response, user_info)
         return jsonify({"conversation_id": conversation_id, "response": assistant_message})
