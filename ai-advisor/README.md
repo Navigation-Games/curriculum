@@ -285,9 +285,11 @@ Teachers without a Google account can sign in to the course with a link we email
    gcloud secrets create gmail-service-account --data-file=course-mailer-key.json
 
    gcloud run services update lesson-advisor --region us-central1 `
-     --update-secrets SIGN_IN_SECRET=sign-in-secret:latest,GMAIL_SERVICE_ACCOUNT_JSON=gmail-service-account:latest `
+     --update-secrets "SIGN_IN_SECRET=sign-in-secret:latest,GMAIL_SERVICE_ACCOUNT_JSON=gmail-service-account:latest" `
      --update-env-vars EMAIL_LINK_SENDER=course@navigationgames.org
    ```
+
+   Keep the quotes around the `--update-secrets` value. Without them PowerShell treats the comma as a list separator and gcloud fails with "Invalid secret spec".
 
    The Cloud Run service account needs the Secret Accessor role on both secrets (Secret Manager > the secret > Permissions), the same as for the Anthropic key.
    **Changing the sender later** (for example from a staff address to `course@navigationgames.org`): run `gcloud run services update lesson-advisor --region us-central1 --update-env-vars EMAIL_LINK_SENDER=<new address>`. No rebuild, new secret or Admin console change is needed, because domain-wide delegation covers every user in the Workspace. While a staff address is the sender, replies to sign-in emails go to that inbox and copies collect in its Sent mail.
