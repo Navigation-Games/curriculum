@@ -20,6 +20,7 @@ import {useGoogleUser, signOut} from '@site/src/lib/googleAuth';
 import formatMessage from '@site/src/components/AdvisorChat/formatMessage';
 import chatStyles from '@site/src/components/AdvisorChat/styles.module.css';
 import styles from './styles.module.css';
+import {ympPrefillUrl} from './ympForm';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -32,6 +33,7 @@ interface Props {
 }
 
 const PROFILE_KEY = 'ng-course-profile';
+const YMP_KEY = 'ng-course-ymp-answers';
 const conversationKey = (unit: string) => `ng-course-${unit}-conversation`;
 const deliverableKey = (unit: string) => `ng-course-${unit}-deliverable`;
 
@@ -58,11 +60,11 @@ function newConversationId(unit: string): string {
 }
 
 // Splits a tutor message into plain text and saved blocks (```profile, ```deliverable).
-type Part = {kind: 'text' | 'profile' | 'deliverable'; text: string};
+type Part = {kind: 'text' | 'profile' | 'deliverable' | 'ymp'; text: string};
 
 function splitBlocks(message: string): Part[] {
   const parts: Part[] = [];
-  const pattern = /```(profile|deliverable)\n([\s\S]*?)```/g;
+  const pattern = /```(profile|deliverable|ymp)\n([\s\S]*?)```/g;
   let last = 0;
   for (const match of message.matchAll(pattern)) {
     if (match.index! > last) parts.push({kind: 'text', text: message.slice(last, match.index)});
@@ -73,7 +75,13 @@ function splitBlocks(message: string): Part[] {
   return parts;
 }
 
-function SavedBlock({kind, text}: {kind: 'profile' | 'deliverable'; text: string}) {
+const SAVED_HEADINGS = {
+  profile: 'Your learner profile (saved)',
+  deliverable: 'Your deliverable (saved)',
+  ymp: 'Your map application answers (saved)',
+};
+
+function SavedBlock({kind, text}: {kind: 'profile' | 'deliverable' | 'ymp'; text: string}) {
   const [copied, setCopied] = useState(false);
   const copy = () => {
     navigator.clipboard?.writeText(text).then(() => setCopied(true));
@@ -81,12 +89,20 @@ function SavedBlock({kind, text}: {kind: 'profile' | 'deliverable'; text: string
   return (
     <div className={styles.savedBlock}>
       <div className={styles.savedHeading}>
-        {kind === 'profile' ? 'Your learner profile (saved)' : 'Your deliverable (saved)'}
+        {SAVED_HEADINGS[kind]}
         <button className={styles.copyButton} onClick={copy}>
           {copied ? 'Copied' : 'Copy'}
         </button>
       </div>
       <pre className={styles.savedText}>{text}</pre>
+      {kind === 'ymp' && (
+        <p className={styles.savedAction}>
+          <a href={ympPrefillUrl(text)} target="_blank" rel="noopener noreferrer">
+            Open the YMP application with these answers filled in
+          </a>
+          . Check every answer there, then submit the form yourself.
+        </p>
+      )}
     </div>
   );
 }
@@ -144,6 +160,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
     for (const part of splitBlocks(reply)) {
       if (part.kind === 'profile') save(PROFILE_KEY, part.text);
       if (part.kind === 'deliverable') save(deliverableKey(unit), part.text);
+      if (part.kind === 'ymp') save(YMP_KEY, part.text);
     }
   };
 
