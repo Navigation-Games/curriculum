@@ -15,7 +15,7 @@
  * Navigation Games review like the lesson plan advisor's.
  *
  * If the backend has a voice set up (GET /tutor/voice), each tutor message
- * gets a speaker button, and a "Read replies aloud" switch plays each new
+ * gets a speaker button, and a "Read the tutor's message out loud" switch plays each new
  * reply. Audio comes from /tutor/speak, which only reads the tutor's own
  * replies (each comes with a signed speech_token) and unit openings.
  */
@@ -145,9 +145,9 @@ type SpeakState = 'idle' | 'loading' | 'playing';
 // speech" mean little to a teacher. Rounded down to 5%, and never 0% while
 // a short reply can still be read.
 function listeningLeft(chars: number, daily: number): string {
-  if (chars < 300 || !daily) return 'Listening used up for today';
+  if (chars < 300 || !daily) return 'Read-aloud credits: used up for today';
   const percent = Math.max(5, Math.floor((chars / daily) * 20) * 5);
-  return `Listening: ${percent}% left today`;
+  return `Read-aloud credits: ${percent}% left today`;
 }
 
 function SpeakButton({state, onClick}: {state: SpeakState; onClick: () => void}) {
@@ -382,7 +382,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         )}
         {googleUser && voice && (
           <label className={styles.readAloud} title={voice.label}>
-            <input type="checkbox" checked={readAloud} onChange={toggleReadAloud} /> Read replies aloud
+            <input type="checkbox" checked={readAloud} onChange={toggleReadAloud} /> Read the tutor's message out loud
           </label>
         )}
         {googleUser && voice?.chars_left !== undefined && (

@@ -989,7 +989,7 @@ def tutor_speak():
         if SPEECH_MONTHLY_CHARS - _month_chars_used() < len(spoken):
             message = "The tutor's voice is used up for this month. You can still read the replies."
         else:
-            message = "That's all the listening for today. You can still read the replies, and listening starts again tomorrow."
+            message = "You've used today's read-aloud credits. You can still read the replies, and the credits come back tomorrow."
         return jsonify({"error": message}), 429
     _record_speech(email, len(spoken))
     try:
