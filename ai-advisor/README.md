@@ -2,6 +2,8 @@
 
 > **Changed something in this folder? Redeploy.** The live advisor and course tutor do not update on `git push`. After any change to `app.py`, `system-prompt.md`, `tutor-prompt.md`, `tutor-style.md`, `requirements.txt`, or the generated `site-map.md` or `training-units.json`, follow [Redeploying after changes](#redeploying-after-changes).
 
+> **Running the teacher course?** See [Teacher course: how it runs](#teacher-course-how-it-runs): feedback points, tracking teachers' dates, cohorts, check-ins and costs.
+
 One backend service, deployed on Cloud Run as `lesson-advisor`, runs two things: the lesson plan advisor (`/chat`, at `/plan-my-lessons/` on the site) and the teacher course tutor (`/tutor`, on the `/training/` unit pages). The folder and service keep the advisor's name.
 
 The advisor helps teachers plan orienteering lessons. Teachers chat with an AI advisor that recommends lesson sequences based on their grade level, schedule, space, and equipment.
@@ -28,6 +30,9 @@ ai-advisor/
   test_tutor.py       - Tests for the /tutor endpoint
   test_email_signin.py - Tests for email sign-in links and /tutor/progress
   test_tutor_voice.py - Tests for the tutor's voice (/tutor/voice, /tutor/speak)
+  test_tutor_submit.py - Tests for sending course work (/tutor/submit) and the Unit 4 plan in later units
+  daily-summary-email.gs - Apps Script: daily email when the log sheet has new rows
+  course-checkin.gs   - Apps Script: weekly email listing course teachers and who has gone quiet
   requirements.txt    - Python dependencies
   Dockerfile          - Cloud Run container
   .env.example        - Template for local dev environment variables
@@ -65,6 +70,7 @@ site/src/pages/sign-in.tsx                 - Where sign-in links land (/sign-in/
 | `/tutor/progress` | GET | sign-in required | The teacher's latest conversation for each unit and their latest learner profile, rebuilt from the log sheet, so they can pick up on any device |
 | `/tutor/voice` | GET | public | Whether the tutor can read replies aloud, and the voice's label |
 | `/tutor/speak` | POST | sign-in required | MP3 of a tutor reply (signed with a `speech_token`) or a unit opening, in the ElevenLabs voice. Daily character allowance per teacher |
+| `/tutor/submit` | POST | sign-in required | Sends a saved box (deliverable, profile or map answers) to Navigation Games: emails `COURSE_REVIEWER_EMAIL` (Reply-To the teacher) and the teacher a copy, and logs it in the Submissions tab |
 | `/auth/email-link` | POST | none (rate limited per IP and per address) | Email a 15-minute sign-in link (`{"email", "return_to"}`). `return_to` must be on the curriculum site or localhost |
 | `/auth/email-link/verify` | POST | the link's token | Exchange a sign-in link's token for a 30-day session token (`{"token"}`) |
 | `/auth/google-session` | POST | Google ID token | Swaps a one-hour Google sign-in for a 30-day session token (never staff), so the course tutor doesn't sign teachers out mid-unit. Needs `SIGN_IN_SECRET` |
@@ -357,6 +363,83 @@ None of these need a rebuild; each is one `gcloud run services update lesson-adv
 - **New API key**: `Read-Host "ElevenLabs API key" | gcloud secrets versions add elevenlabs-api-key --data-file=-`, then redeploy or run any `services update` so Cloud Run picks up the new version.
 - **Turn the voice off**: `--remove-env-vars ELEVENLABS_VOICE_ID`. The Listen buttons disappear.
 
+## Teacher course: how it runs
+
+This section is for Navigation Games staff running the course. The course content lives in `content/training/` (one Markdown file per unit; format in the editing guide), the pages are at `/training/`, and the tutor runs on this backend.
+
+### Two halves, two ways to update
+
+- **The website** (unit pages, buttons, tips) updates by itself: GitHub Actions rebuilds it on every push to main, in about 3 minutes. If a change doesn't show, do a hard refresh (Ctrl+Shift+R), or close the tab and open the page fresh. An open tab keeps the old page.
+- **The backend** (the tutor's instructions, `tutor-prompt.md`, the unit material in `training-units.json`, anything in `app.py`) only changes when you redeploy. See [Redeploying after changes](#redeploying-after-changes).
+- **Settings** such as the voice ID, limits or the reviewer address are environment variables: one `gcloud run services update lesson-advisor --region us-central1 --update-env-vars NAME=value` command, no rebuild.
+
+### Signing in and saved progress
+
+Teachers sign in with Google, or with a link we email them (for teachers without Google). Their progress follows their **email address**: the same address on any device brings back their conversations, profile and unit plan. Two different addresses are two different teachers to the course. A navigationgames.org address signed in by email link is treated as a regular teacher; only Google sign-in proves someone is staff.
+
+For non-staff Google sign-in to work, the OAuth consent screen (Google Cloud > APIs & Services > OAuth consent screen, or Google Auth Platform > Audience) must be **External** and **In production**. Internal means only navigationgames.org accounts; Testing means only the listed test users.
+
+### What teachers make, and how it reaches us
+
+- At the end of most units the tutor writes a saved box (profile, deliverable, map answers). Under it is **Send to Navigation Games**. Pressing it emails `COURSE_REVIEWER_EMAIL` with the work and the conversation ID, with Reply-To set to the teacher, so the reviewer just hits reply. The teacher gets a copy with the curriculum links spelled out. The submission is logged in the **Submissions** tab of the conversation log sheet.
+- Turnaround we promise: the Unit 4 plan within 3 business days (Consultation 1 depends on it), everything else within a week. Both are in `REVIEW_TURNAROUND` in `app.py`.
+- The whole conversation is always in the review tool (`/review-conversations/`), whether or not the teacher pressed Send.
+- **Unit 4 plan in later units.** The teacher's latest Unit 4 plan goes to the tutor in Units 5 to 7, so it knows what they planned to teach. Plans change: Unit 6 asks what they actually did.
+- **Class calendar.** At the end of Unit 4 the tutor offers a calendar file of the teacher's classes (a `schedule` box with "Add these classes to my calendar"). Each class comes with a 10-minute reminder right after it, linking to Unit 6.
+
+### When people at Navigation Games give feedback
+
+1. **Each deliverable**, by email reply: the Unit 4 plan within 3 business days, the others within a week.
+2. **Consultation 1**, after the unit plan and before teaching. It starts from the reviewed plan.
+3. **After the first class**, a short "How did it go?" email from the named staff member. If it went badly, offer a 15-minute call. This is when teachers most need a person.
+4. **Unit 6 reflections**, skimmed once a week. Safety notes get a reply the same day (the tutor also asks the teacher to email admin@navigationgames.org).
+5. **Cohort show and tell** in the Google Group.
+6. **Consultation 2**, from the reflections, the Unit 7 plan and the post-unit survey. Then the certificate.
+7. **Feedback on the course itself**: the "Was this page helpful?" widget on every page, the post-unit survey, and what reviewers notice in the conversations.
+
+### Keeping track of each teacher's dates
+
+- The Unit 4 plan has dates for each class. For the first cohort, the reviewer copies them into the Kickstart Tracker (Teaching starts, Teaching ends, Map expected, Consultation 1 and 2), and the Tracker's date flags show who's due for what.
+- Unit 6 asks what the teacher actually did, so changed dates come back through the reflections. Update the Tracker when they do.
+- The **weekly check-in email** (`course-checkin.gs`, setup below) lists every teacher in the course, where they are, and who has gone quiet: 7 days without activity before the kit, 14 days while teaching. Each quiet teacher comes with a suggested check-in email. Staff send it themselves, after a look at the Tracker, because the log doesn't know about a school break or a known teaching date. Later, once the wording is tested, the script could send the nudges itself.
+
+### How the cohort talks to each other
+
+A cohort is the teachers who start in the same window (for example the six Colorado applicants). A solo teacher is a cohort of one, with a Navigation Games staff member as their partner.
+
+- **Async discussion: one Google Group per cohort**, used as an email list (for example `kickstart-cohort-2026-11@navigationgames.org`). It works with any email address, including school accounts that block Google Chat or Classroom with outside domains. Create it at groups.google.com in the NG Workspace, allow external members, set "who can post" to group members, and add each teacher by the address they sign in with. Avoid Slack and Discord, which school networks often block.
+- **What goes there:** each teacher's introduction from Unit 0 (one hope and one doubt), one discussion prompt per unit from the staff member, swapping unit plans with a partner for feedback (Unit 4), and a show-and-tell thread while teaching (a photo or a story).
+- **Live: one Google Meet Q&A per cohort**, about an hour, at the point most of the cohort has finished Unit 4. Create it as a Calendar event with a Meet link and invite the group. Recording needs a paid Workspace edition; the free nonprofit edition doesn't record, so share notes afterwards for anyone who missed it. The NG host may need to admit people from outside the domain.
+- **In the Tracker:** a Cohort column (for example `C-2026-11`) on each applicant's row.
+- The tutor tells a teacher in a cohort to post their introduction at the end of Unit 0, and tells teachers who don't know their cohort that Navigation Games will let them know.
+
+### Languages
+
+The tutor answers in whatever language the teacher writes in, and the `eleven_v4` voice speaks that language too (in the cloned voice). The unit pages and the tutor's opening messages are in English. Saved boxes keep their labels in English, because the page reads them, and the tutor offers to put map application answers into English for the YMP form. Not yet tried with a real teacher in another language.
+
+### Talking and listening
+
+- **Talking instead of typing:** every common system has voice typing built in, so there's no microphone button. Windows: Windows key + H. Mac: press Fn (Globe) twice. Phones: the microphone on the keyboard. The tip under the answer box shows the right one for the teacher's device, and the course home mentions it.
+- **Listening to the tutor:** the Listen button and the "Read the tutor's message out loud" switch use ElevenLabs credits, not Anthropic usage. "Read-aloud credits: 75% left today" is the teacher's share of their daily read-aloud allowance. See [Tutor voice setup](#tutor-voice-setup-one-time).
+- **A whole page read aloud:** the browser does this for free. Edge: Ctrl+Shift+U, or right-click > Read aloud. Chrome: right-click > Open in reading mode, then play.
+- **Welcome recordings:** short recordings in Barb's real voice (not the clone) for the course home and Unit 0 are planned. Real recordings need no AI-voice label.
+
+### Costs to watch
+
+- **Anthropic** (the tutor's and advisor's replies): signed-in teachers have no message limit; the account's $100 monthly limit is the backstop. Check usage at console.anthropic.com now and then.
+- **ElevenLabs** (read-aloud): limited per teacher per day and for the whole course per month. Check the usage page in ElevenLabs.
+
+## Weekly course check-in email (one time)
+
+`course-checkin.gs` emails `CHECKIN_RECIPIENT` once a week with every teacher in the course, their stage (before the kit, teaching, finished), the units they've opened, when they were last active, and a suggested check-in email for each quiet one. It reads the conversation log and the Submissions tab, and leaves out navigationgames.org accounts.
+
+1. Open the [conversation log spreadsheet](https://docs.google.com/spreadsheets/d/13P76_hPAVDDjnwJ9aazIdW-WAtGKNW5fBVD6TX1s5aY), then **Extensions > Apps Script** (the same project as the daily activity email).
+2. Click **+** next to Files > Script, name it `course-checkin`, and paste in the contents of `course-checkin.gs`. Save.
+3. Choose `weeklyCourseCheckin` in the function dropdown and click **Run** once to authorize it. It sends the first email right away if anyone has used the course.
+4. Triggers (clock icon) > **Add Trigger**: function `weeklyCourseCheckin`, Time-driven, **Week timer**, Monday, 6am to 7am.
+
+Change the recipient, the quiet thresholds or the suggested wording in the constants and functions at the top of the script.
+
 ## Daily activity email (one time)
 
 A Google Apps Script bound to the advisor conversation log spreadsheet emails `president@navigationgames.org` once a day when new rows have been added (conversations, feedback, or page feedback) — a count per tab plus a link to the sheet. It stays quiet on days with no new activity. The script source is `daily-summary-email.gs` in this directory; it lives in the Sheet's Apps Script project, not in the deployed backend.
@@ -429,6 +512,7 @@ If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub
 | `TUTOR_VOICE_LABEL` | Backend (optional) | Shown with the voice, default `AI voice`. For a cloned voice say whose, e.g. `AI voice based on Barb's` |
 | `TUTOR_SPEECH_DAILY_CHARS` | Backend (optional) | Characters each teacher can have read aloud per day, default 20000 (about 20 minutes of speech, enough to listen through the longest unit). Teachers see the percentage they have left today |
 | `TUTOR_SPEECH_MONTHLY_CHARS` | Backend (optional) | Characters the whole course can have read aloud per calendar month, default 100000. In memory, so it restarts on a redeploy: a safety net, not exact accounting |
+| `COURSE_REVIEWER_EMAIL` | Backend (optional) | Who gets "Send to Navigation Games" emails from the course. Default: `EMAIL_LINK_SENDER`. Must be able to receive mail; replies go straight to the teacher |
 
 Without `SIGN_IN_SECRET` and a sender (or log-only mode), email sign-in is off: the course still works with Google sign-in, and the email form says email sign-in isn't set up yet.
 

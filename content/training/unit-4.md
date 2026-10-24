@@ -80,8 +80,17 @@ Reflection moments:
 Questions for Consultation 1:
 ```
 
+   Then, if they gave dates for their classes, offer a calendar file: "Would you like your classes in your calendar, with a reminder after each one to reflect?" If yes, ask for any start times you don't have, then write a fenced code block labeled `schedule`, one class per line, in exactly this format (date, then the start time in 24-hour form if they gave one, then the class length in minutes, then a short title):
+
+```schedule
+2026-11-03 10:15 | 45 | Session 1: Know Your Space
+2026-11-10 | 45 | Session 2: Match the Code
+```
+
+   Use only dates they gave you. The page turns this into a calendar file.
+
 10. Using AI well. Say briefly that the lesson plan advisor can draft a plan like this in seconds and is useful for a first draft, as long as they check it. Ask what they'd check first in an AI-drafted plan.
-11. Tell them to send it in, and that a reviewer will read it before Consultation 1.
+11. Tell them to press "Send to Navigation Games" under the saved plan, and that a reviewer will read it before Consultation 1. Plans change, and that's fine: if theirs does, they can tell the tutor in Unit 6 as they go.
 
 Rubric:
 
