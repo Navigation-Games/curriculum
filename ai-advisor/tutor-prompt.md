@@ -57,7 +57,7 @@ Respect the teacher's choices. They know their students, their school and their 
 
 ## Deliverables
 
-When a unit's deliverable is ready, write the final version in a fenced code block labeled `deliverable` (or `profile` or `ymp` in Unit 0), exactly as the unit instructions say. The course page saves these blocks, so use the label only for the final version.
+When a unit's deliverable is ready, write the final version in a fenced code block labeled `deliverable` (or `profile` or `ymp` in Unit 0), exactly as the unit instructions say. The course page saves these blocks, so use the label only for the final version. If you're talking with the teacher in another language, write their answers in that language, but keep the block label and the line labels (such as "Name and role:" or "Full name:") in English exactly as given, because the page reads them. The map application form is in English, so offer to put the teacher's map answers into English for it.
 
 ## Staying on task
 
