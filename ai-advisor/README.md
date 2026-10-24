@@ -303,19 +303,38 @@ If your Workspace blocks service account keys (some organizations do), tell Clau
 
 ## Tutor voice setup (one time)
 
-The course tutor can read its replies aloud in a voice made with ElevenLabs. Teachers get a "Listen" button under each tutor message and a "Read replies aloud" switch (off by default). The backend only reads the tutor's own replies and unit openings, never text someone sends it, so nobody can use the endpoint to make the voice say something else. ElevenLabs charges per character, so each teacher has a daily allowance (`TUTOR_SPEECH_DAILY_CHARS`), shown to them as the percentage of listening left today, the course has a monthly one (`TUTOR_SPEECH_MONTHLY_CHARS`), and each message's audio is kept in the browser, so replaying it costs nothing.
+The course tutor can read its replies aloud in a voice made with ElevenLabs (set up October 2026 with a professional clone of Barb's voice, on the `eleven_v4` model). Teachers who are signed in get a **Listen** button under each tutor message, a **Read replies aloud** switch (off by default) that plays each new reply, and a note in the chat header like "Listening: 75% left today". The page says the voice is an AI voice, using `TUTOR_VOICE_LABEL`. Keep that label honest, so nobody thinks they're hearing the real person.
 
-1. **Make the voice** in ElevenLabs (the ElevenCreative platform): Voices > Add a new voice > Instant Voice Clone, with a few minutes of natural speech. Try it in Text to Speech with a real tutor reply before going further.
-2. **Copy the voice ID** (on the voice's page, or in Voices > the voice > the ID button).
-3. **Make an API key**: your profile > API Keys > Create. If it asks, allow Text to Speech only. Copy the key.
-4. **Store the key and set the voice** (PowerShell):
+**How it's protected.** The backend only reads the tutor's own replies (each comes with a signed `speech_token`) and unit openings, never text someone sends it, so nobody can use the endpoint to make the voice say something else. Saved boxes (profile, plan, map answers) and link addresses are not read out.
+
+**What it costs.** ElevenLabs charges about 1 credit per character on `eleven_v4`. A tutor reply is roughly 300 to 800 characters, and a minute of speech about 900. The October 2026 plan has about 121,000 credits a month. Three limits keep usage in check:
+
+- Each teacher can have `TUTOR_SPEECH_DAILY_CHARS` (default 20,000, about 20 minutes of speech) read aloud per 24 hours. That's meant to cover listening through the longest unit. Teachers see what's left as a percentage, not characters.
+- The whole course can use `TUTOR_SPEECH_MONTHLY_CHARS` (default 100,000) per calendar month. When it runs out, Listen stops for everyone with a message, and replies can still be read. Like the other limits it's kept in memory, so it starts again on a redeploy and is counted per Cloud Run instance. It's a safety net, not exact accounting; the ElevenLabs usage page is the real count.
+- Replaying a message uses the audio already in the browser, so it costs nothing.
+
+If teachers really use the voice, the fix is a bigger ElevenLabs plan and higher limits. In ElevenLabs, turn off usage-based billing (overage) if your plan offers it, so going past the plan's credits stops the voice instead of charging more.
+
+### Setting it up
+
+1. **Make the voice** in ElevenLabs (the ElevenCreative platform): Voices > Add a new voice. A professional clone wants at least 30 minutes of clear, natural speech (more is better); an instant clone works from a few minutes. Try it in Text to Speech with a real tutor reply, and compare models in the Settings tab (the Model dropdown) before going further.
+2. **Copy the voice ID**: Voices > the voice > ⋯ > Copy voice ID. It looks like `vdzQGpyDQcjP4RmRrvWy`.
+3. **Make an API key**: your profile > API Keys > Create. Give it **Text to Speech: Access** and nothing else (no Voices or Voice collections permission is needed to speak in a voice by its ID). If it offers a credit limit for the key, set one near the course's monthly limit. ElevenLabs shows the key only once.
+4. **Store the key** (PowerShell, any folder). Paste the key at the prompt, so it never ends up in a file or your command history:
 
    ```powershell
    Read-Host "ElevenLabs API key" | gcloud secrets create elevenlabs-api-key --data-file=-
+   ```
+
+   It should say `Created version [1] of the secret [elevenlabs-api-key]`. Check with `gcloud secrets list`.
+5. **Let Cloud Run read it.** This has to come after step 4; on a secret that doesn't exist yet it fails with "404 ... not found".
+
+   ```powershell
    gcloud secrets add-iam-policy-binding elevenlabs-api-key --member="serviceAccount:523012695945-compute@developer.gserviceaccount.com" --role="roles/secretmanager.secretAccessor"
    ```
 
-   The second line lets Cloud Run read the secret. Then, with the real voice ID in place of `<voice id>`:
+   Without this, step 6 fails with "Permission denied on secret ... must be granted the 'Secret Manager Secret Accessor' role".
+6. **Connect the key and the voice**, with the real voice ID (no angle brackets):
 
    ```powershell
    gcloud run services update lesson-advisor --region us-central1 `
@@ -323,11 +342,20 @@ The course tutor can read its replies aloud in a voice made with ElevenLabs. Tea
      --update-env-vars "ELEVENLABS_VOICE_ID=<voice id>,TUTOR_VOICE_LABEL=AI voice based on Barb's,ELEVENLABS_MODEL=eleven_v4"
    ```
 
-5. **Test it**: open a course unit, signed in. Each tutor message should have a Listen button.
+   It worked if it ends with "serving 100 percent of traffic".
+7. **Redeploy** if the running code is older than the voice feature (see [Redeploying after changes](#redeploying-after-changes)).
+8. **Check the backend**: open https://lesson-advisor-523012695945.us-central1.run.app/tutor/voice in a browser. It should show `{"enabled":true,"label":"AI voice based on Barb's"}`. If `enabled` is false, the key, voice ID or `SIGN_IN_SECRET` is missing.
+9. **Check the page**: open a course unit, signed in, and hard refresh (Ctrl+Shift+R) so the browser loads the new site. The website half updates by itself through GitHub Actions on every push to main; only the backend needs redeploying.
 
-In ElevenLabs, turn off usage-based billing (overage) if your plan offers it, so going past the plan's credits stops the voice instead of charging more.
+### Changing it later
 
-To turn the voice off, remove the voice ID: `gcloud run services update lesson-advisor --region us-central1 --remove-env-vars ELEVENLABS_VOICE_ID`. To change voices, update `ELEVENLABS_VOICE_ID` (and the label).
+None of these need a rebuild; each is one `gcloud run services update lesson-advisor --region us-central1 ...` command:
+
+- **Bigger limits**: `--update-env-vars TUTOR_SPEECH_DAILY_CHARS=30000` or `TUTOR_SPEECH_MONTHLY_CHARS=200000`.
+- **Another voice** (for example a different staff member for some units, an idea on the roadmap): `--update-env-vars "ELEVENLABS_VOICE_ID=<id>,TUTOR_VOICE_LABEL=AI voice based on <name>'s"`. Get the person's consent to clone their voice first.
+- **Another model**: `--update-env-vars ELEVENLABS_MODEL=<model id>`, for example `eleven_flash_v2_5`, which ElevenLabs prices lower per character. Check the price on the ElevenLabs plan page.
+- **New API key**: `Read-Host "ElevenLabs API key" | gcloud secrets versions add elevenlabs-api-key --data-file=-`, then redeploy or run any `services update` so Cloud Run picks up the new version.
+- **Turn the voice off**: `--remove-env-vars ELEVENLABS_VOICE_ID`. The Listen buttons disappear.
 
 ## Daily activity email (one time)
 
