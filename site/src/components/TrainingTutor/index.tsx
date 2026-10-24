@@ -157,9 +157,12 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
   // reply arrives, never on page load or when saved progress is restored.
   // Scrolling the messages box itself (not scrollIntoView) keeps the page still.
   const followNewMessages = useRef(false);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   useEffect(() => {
     const box = messagesBoxRef.current;
     if (followNewMessages.current && box) box.scrollTop = box.scrollHeight;
+    // When a reply has arrived, put the cursor back in the answer box
+    if (followNewMessages.current && !isLoading) inputRef.current?.focus({preventScroll: true});
   }, [messages, isLoading]);
 
   const keepSavedBlocks = (reply: string) => {
@@ -279,6 +282,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
       ) : (
       <div className={chatStyles.inputArea}>
         <textarea
+          ref={inputRef}
           className={chatStyles.input}
           value={input}
           onChange={e => setInput(e.target.value)}
