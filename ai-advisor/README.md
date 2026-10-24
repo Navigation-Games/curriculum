@@ -27,6 +27,7 @@ ai-advisor/
   training-units.json - Course unit material for the tutor (generated from content/training/)
   test_tutor.py       - Tests for the /tutor endpoint
   test_email_signin.py - Tests for email sign-in links and /tutor/progress
+  test_tutor_voice.py - Tests for the tutor's voice (/tutor/voice, /tutor/speak)
   requirements.txt    - Python dependencies
   Dockerfile          - Cloud Run container
   .env.example        - Template for local dev environment variables
@@ -62,6 +63,8 @@ site/src/pages/sign-in.tsx                 - Where sign-in links land (/sign-in/
 | `/review/conversations/<id>/dismiss` | POST | Google ID token (staff) | Hide a conversation from the reviewer's default list |
 | `/tutor` | POST | sign-in required: Google ID token or email-link session (shares the signed-in `/chat` limit) | Teacher course tutor (`{"unit", "conversation_id", "messages", "profile"}`). Conversation IDs start with `tutor-<unit>-`, so tutor conversations show up in the log sheet and the review tool |
 | `/tutor/progress` | GET | sign-in required | The teacher's latest conversation for each unit and their latest learner profile, rebuilt from the log sheet, so they can pick up on any device |
+| `/tutor/voice` | GET | public | Whether the tutor can read replies aloud, and the voice's label |
+| `/tutor/speak` | POST | sign-in required | MP3 of a tutor reply (signed with a `speech_token`) or a unit opening, in the ElevenLabs voice. Daily character allowance per teacher |
 | `/auth/email-link` | POST | none (rate limited per IP and per address) | Email a 15-minute sign-in link (`{"email", "return_to"}`). `return_to` must be on the curriculum site or localhost |
 | `/auth/email-link/verify` | POST | the link's token | Exchange a sign-in link's token for a 30-day session token (`{"token"}`) |
 | `/auth/google-session` | POST | Google ID token | Swaps a one-hour Google sign-in for a 30-day session token (never staff), so the course tutor doesn't sign teachers out mid-unit. Needs `SIGN_IN_SECRET` |
@@ -298,6 +301,34 @@ Teachers without a Google account can sign in to the course with a link we email
 
 If your Workspace blocks service account keys (some organizations do), tell Claude: the sender can instead sign as the Cloud Run service account without a key file, which takes a little more code.
 
+## Tutor voice setup (one time)
+
+The course tutor can read its replies aloud in a voice made with ElevenLabs. Teachers get a "Listen" button under each tutor message and a "Read replies aloud" switch (off by default). The backend only reads the tutor's own replies and unit openings, never text someone sends it, so nobody can use the endpoint to make the voice say something else. ElevenLabs charges per character, so each teacher has a daily allowance (`TUTOR_SPEECH_DAILY_CHARS`), shown to them as minutes of listening left, the course has a monthly one (`TUTOR_SPEECH_MONTHLY_CHARS`), and each message's audio is kept in the browser, so replaying it costs nothing.
+
+1. **Make the voice** in ElevenLabs (the ElevenCreative platform): Voices > Add a new voice > Instant Voice Clone, with a few minutes of natural speech. Try it in Text to Speech with a real tutor reply before going further.
+2. **Copy the voice ID** (on the voice's page, or in Voices > the voice > the ID button).
+3. **Make an API key**: your profile > API Keys > Create. If it asks, allow Text to Speech only. Copy the key.
+4. **Store the key and set the voice** (PowerShell):
+
+   ```powershell
+   Read-Host "ElevenLabs API key" | gcloud secrets create elevenlabs-api-key --data-file=-
+   gcloud secrets add-iam-policy-binding elevenlabs-api-key --member="serviceAccount:523012695945-compute@developer.gserviceaccount.com" --role="roles/secretmanager.secretAccessor"
+   ```
+
+   The second line lets Cloud Run read the secret. Then, with the real voice ID in place of `<voice id>`:
+
+   ```powershell
+   gcloud run services update lesson-advisor --region us-central1 `
+     --update-secrets "ELEVENLABS_API_KEY=elevenlabs-api-key:latest" `
+     --update-env-vars "ELEVENLABS_VOICE_ID=<voice id>,TUTOR_VOICE_LABEL=AI voice based on Barb's,ELEVENLABS_MODEL=eleven_v4"
+   ```
+
+5. **Test it**: open a course unit, signed in. Each tutor message should have a Listen button.
+
+In ElevenLabs, turn off usage-based billing (overage) if your plan offers it, so going past the plan's credits stops the voice instead of charging more.
+
+To turn the voice off, remove the voice ID: `gcloud run services update lesson-advisor --region us-central1 --remove-env-vars ELEVENLABS_VOICE_ID`. To change voices, update `ELEVENLABS_VOICE_ID` (and the label).
+
 ## Daily activity email (one time)
 
 A Google Apps Script bound to the advisor conversation log spreadsheet emails `president@navigationgames.org` once a day when new rows have been added (conversations, feedback, or page feedback) — a count per tab plus a link to the sheet. It stays quiet on days with no new activity. The script source is `daily-summary-email.gs` in this directory; it lives in the Sheet's Apps Script project, not in the deployed backend.
@@ -364,6 +395,12 @@ If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub
 | `EMAIL_LINK_SENDER` | Backend | The Workspace address sign-in emails come from, e.g. `course@navigationgames.org` |
 | `GMAIL_SERVICE_ACCOUNT_JSON` | Backend (Cloud Run secret) | Key for the service account that sends as `EMAIL_LINK_SENDER` (see "Email sign-in links setup") |
 | `EMAIL_LINK_LOG_ONLY` | Backend (local development) | `true` writes sign-in links to the log instead of emailing them. Never set it in production |
+| `ELEVENLABS_API_KEY` | Backend (Cloud Run secret) | ElevenLabs key for the tutor's voice (see "Tutor voice setup"). Without it, or without `ELEVENLABS_VOICE_ID` or `SIGN_IN_SECRET`, there are no speaker buttons |
+| `ELEVENLABS_VOICE_ID` | Backend | The ElevenLabs voice the tutor speaks in |
+| `ELEVENLABS_MODEL` | Backend (optional) | ElevenLabs model, default `eleven_v4` (about 1 credit per character; speaks the teacher's language) |
+| `TUTOR_VOICE_LABEL` | Backend (optional) | Shown with the voice, default `AI voice`. For a cloned voice say whose, e.g. `AI voice based on Barb's` |
+| `TUTOR_SPEECH_DAILY_CHARS` | Backend (optional) | Characters each teacher can have read aloud per day, default 5000 (about 5 minutes). Teachers see how much listening they have left |
+| `TUTOR_SPEECH_MONTHLY_CHARS` | Backend (optional) | Characters the whole course can have read aloud per calendar month, default 100000. In memory, so it restarts on a redeploy: a safety net, not exact accounting |
 
 Without `SIGN_IN_SECRET` and a sender (or log-only mode), email sign-in is off: the course still works with Google sign-in, and the email form says email sign-in isn't set up yet.
 

@@ -8,6 +8,8 @@ Deployed on Google Cloud Run.
 """
 
 import base64
+import hashlib
+import hmac
 import os
 import re
 import json
@@ -20,9 +22,10 @@ from datetime import datetime, timezone
 from functools import wraps
 from pathlib import Path
 
-from flask import Flask, request, jsonify
+from flask import Flask, Response, request, jsonify
 from flask_cors import CORS
 import anthropic
+import requests
 from google.auth.transport import requests as google_requests
 from google.oauth2 import id_token as google_id_token
 from itsdangerous import BadSignature, SignatureExpired, URLSafeTimedSerializer
@@ -724,7 +727,10 @@ def tutor():
         response = _create_message(messages, tutor_system_prompt(unit, profile), TUTOR_MAX_TOKENS)
         assistant_message = remove_em_dashes(response.content[0].text)
         _log_exchange(conversation_id, messages, assistant_message, response, user_info)
-        return jsonify({"conversation_id": conversation_id, "response": assistant_message})
+        reply = {"conversation_id": conversation_id, "response": assistant_message}
+        if voice_enabled():
+            reply["speech_token"] = speech_token(assistant_message)
+        return jsonify(reply)
     except anthropic.RateLimitError:
         return jsonify({"error": "Service is busy. Please try again in a moment."}), 503
     except anthropic.APIError as e:
@@ -812,7 +818,187 @@ def tutor_progress():
     except Exception as e:
         app.logger.error(f"Could not read the log sheet for progress: {e}")
         return jsonify({"units": {}, "profile": ""})
-    return jsonify(rebuild_progress(rows, user["email"]))
+    progress = rebuild_progress(rows, user["email"])
+    if voice_enabled():
+        for saved in progress["units"].values():
+            for m in saved["messages"]:
+                if m["role"] == "assistant":
+                    m["speech_token"] = speech_token(m["content"])
+    return jsonify(progress)
+
+
+# ---------------------------------------------------------------------------
+# Tutor voice (ElevenLabs)
+#
+# Reads tutor replies aloud in a cloned voice. The endpoint only speaks text
+# the tutor itself wrote (each reply comes with a signed speech_token) or a
+# unit's opening, so nobody can make the voice say whatever they like.
+# Speaking costs per character, so each teacher has a daily allowance.
+# ---------------------------------------------------------------------------
+
+ELEVENLABS_API_KEY = os.environ.get("ELEVENLABS_API_KEY", "").strip()  # a piped-in secret can end in a newline
+ELEVENLABS_VOICE_ID = os.environ.get("ELEVENLABS_VOICE_ID", "").strip()
+ELEVENLABS_MODEL = os.environ.get("ELEVENLABS_MODEL", "eleven_v4")
+# Shown next to the speaker button, e.g. "AI voice based on Barb's"
+TUTOR_VOICE_LABEL = os.environ.get("TUTOR_VOICE_LABEL", "AI voice")
+# ElevenLabs charges about one credit per character. A typical reply is
+# 300 to 800 characters, and a minute of speech is about 900.
+SPEECH_DAILY_CHARS = int(os.environ.get("TUTOR_SPEECH_DAILY_CHARS", "5000"))  # per teacher
+# For the whole course, per calendar month (UTC), so a busy week can't use up
+# the ElevenLabs plan. Kept in memory like the other limits: it starts again
+# on a redeploy and is counted per Cloud Run instance, so it is a safety net,
+# not exact accounting.
+SPEECH_MONTHLY_CHARS = int(os.environ.get("TUTOR_SPEECH_MONTHLY_CHARS", "100000"))
+SPEECH_MAX_CHARS = 5000  # per reply
+speech_usage_store: dict[str, list[tuple[float, int]]] = {}
+speech_month_usage = {"month": "", "chars": 0}
+
+SAVED_BLOCK_SPEECH = {
+    "profile": "I've written your profile in the box below.",
+    "deliverable": "I've written it in the box below.",
+    "ymp": "I've put your answers in the box below.",
+}
+
+
+def voice_enabled() -> bool:
+    return bool(ELEVENLABS_API_KEY and ELEVENLABS_VOICE_ID and SIGN_IN_SECRET)
+
+
+def speech_token(text: str) -> str:
+    """A signature showing the tutor wrote this text."""
+    return hmac.new(SIGN_IN_SECRET.encode(), b"ng-speech:" + text.encode(), hashlib.sha256).hexdigest()
+
+
+def speech_text(reply: str) -> str:
+    """What to say aloud for a tutor reply: no saved boxes, links or Markdown marks."""
+    text = re.sub(
+        r"```(\w*)\n.*?```",
+        lambda m: SAVED_BLOCK_SPEECH.get(m.group(1), "I've written it in the box below."),
+        reply,
+        flags=re.S,
+    )
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)  # [words](url) -> words
+    text = re.sub(r"https?://\S+", "", text)
+    text = re.sub(r"^#+\s*", "", text, flags=re.M)
+    text = re.sub(r"^\s*[-*]\s+", "", text, flags=re.M)
+    text = text.replace("**", "").replace("`", "")
+    text = re.sub(r"[ \t]+", " ", text)
+    return text.strip()[:SPEECH_MAX_CHARS]
+
+
+def _month_chars_used() -> int:
+    month = datetime.now(timezone.utc).strftime("%Y-%m")
+    if speech_month_usage["month"] != month:
+        speech_month_usage.update(month=month, chars=0)
+    return speech_month_usage["chars"]
+
+
+def speech_chars_left(email: str) -> int:
+    """Characters this teacher can still have read aloud today (less if the course's month is nearly used up)."""
+    now = time.time()
+    recent = [(t, n) for t, n in speech_usage_store.get(email, []) if now - t < RATE_LIMIT_WINDOW]
+    speech_usage_store[email] = recent
+    today_left = SPEECH_DAILY_CHARS - sum(n for _, n in recent)
+    month_left = SPEECH_MONTHLY_CHARS - _month_chars_used()
+    return max(0, min(today_left, month_left))
+
+
+def _record_speech(email: str, chars: int) -> None:
+    speech_usage_store.setdefault(email, []).append((time.time(), chars))
+    _month_chars_used()
+    speech_month_usage["chars"] += chars
+
+
+def _unrecord_speech(email: str, chars: int) -> None:
+    """Give back characters when ElevenLabs failed, so the teacher isn't charged for nothing."""
+    usage = speech_usage_store.get(email, [])
+    if usage and usage[-1][1] == chars:
+        usage.pop()
+    speech_month_usage["chars"] = max(0, speech_month_usage["chars"] - chars)
+
+
+def synthesize_speech(text: str) -> bytes:
+    """MP3 audio of text in the tutor's voice, from ElevenLabs."""
+    response = requests.post(
+        f"https://api.elevenlabs.io/v1/text-to-speech/{ELEVENLABS_VOICE_ID}",
+        params={"output_format": "mp3_44100_128"},
+        headers={"xi-api-key": ELEVENLABS_API_KEY, "Accept": "audio/mpeg"},
+        json={"text": text, "model_id": ELEVENLABS_MODEL},
+        timeout=60,
+    )
+    response.raise_for_status()
+    return response.content
+
+
+@app.route("/tutor/voice", methods=["GET"])
+def tutor_voice():
+    """
+    Whether the tutor can speak, and the label to show by the speaker button.
+    For a signed-in teacher, also how many characters they can still have
+    read aloud today ("chars_left") and the daily allowance ("daily_chars").
+    """
+    voice = {"enabled": voice_enabled(), "label": TUTOR_VOICE_LABEL}
+    try:
+        user = get_optional_user()
+    except InvalidTokenError:
+        user = None
+    if voice["enabled"] and user:
+        voice.update(chars_left=speech_chars_left(user["email"].lower()), daily_chars=SPEECH_DAILY_CHARS)
+    return jsonify(voice)
+
+
+@app.route("/tutor/speak", methods=["POST"])
+def tutor_speak():
+    """
+    Read a tutor reply aloud.
+
+    Request body, either:
+      {"text": "<a tutor reply>", "speech_token": "<from /tutor or /tutor/progress>"}
+      {"unit": "unit-0"}   (the unit's opening message)
+
+    Response: audio/mpeg
+    """
+    if not voice_enabled():
+        return jsonify({"error": "The tutor's voice isn't set up."}), 404
+    try:
+        user = get_optional_user()
+    except InvalidTokenError:
+        return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
+    if user is None:
+        return jsonify({"error": "Please sign in to hear the tutor."}), 401
+
+    data = request.get_json(silent=True) or {}
+    if data.get("unit"):
+        unit = TRAINING_UNITS.get(data["unit"])
+        if not unit:
+            return jsonify({"error": "Unknown course unit."}), 400
+        text = unit["opening"]
+    else:
+        text = data.get("text")
+        token = data.get("speech_token")
+        if not isinstance(text, str) or not isinstance(token, str) or not hmac.compare_digest(
+            token, speech_token(text)
+        ):
+            return jsonify({"error": "The tutor can only read its own replies."}), 403
+
+    spoken = speech_text(text)
+    if not spoken:
+        return jsonify({"error": "Nothing to read aloud."}), 400
+    email = user["email"].lower()
+    if len(spoken) > speech_chars_left(email):
+        if SPEECH_MONTHLY_CHARS - _month_chars_used() < len(spoken):
+            message = "The tutor's voice is used up for this month. You can still read the replies."
+        else:
+            message = "That's all the listening for today. You can still read the replies, and listening starts again tomorrow."
+        return jsonify({"error": message}), 429
+    _record_speech(email, len(spoken))
+    try:
+        audio = synthesize_speech(spoken)
+    except requests.RequestException as e:
+        _unrecord_speech(email, len(spoken))
+        app.logger.error(f"ElevenLabs error: {e}")
+        return jsonify({"error": "The tutor's voice isn't available right now."}), 502
+    return Response(audio, mimetype="audio/mpeg", headers={"Cache-Control": "private, max-age=86400"})
 
 
 def _log_exchange(
