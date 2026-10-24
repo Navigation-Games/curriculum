@@ -131,6 +131,13 @@ function TutorMessage({content}: {content: string}) {
 
 type SpeakState = 'idle' | 'loading' | 'playing';
 
+// About 900 characters of text make a minute of speech
+function listeningLeft(chars: number): string {
+  if (chars < 300) return 'No listening left today';
+  const minutes = Math.round(chars / 900);
+  return minutes < 1 ? 'Under a minute of listening left today' : `About ${minutes} min of listening left today`;
+}
+
 function SpeakButton({state, onClick}: {state: SpeakState; onClick: () => void}) {
   const label = state === 'playing' ? 'Stop' : state === 'loading' ? 'Loading...' : 'Listen';
   return (
@@ -168,19 +175,25 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
   const messagesBoxRef = useRef<HTMLDivElement>(null);
 
   // The tutor's voice, if the backend has one
-  const [voice, setVoice] = useState<{enabled: boolean; label: string} | null>(null);
+  const [voice, setVoice] = useState<{enabled: boolean; label: string; chars_left?: number} | null>(null);
   const [readAloud, setReadAloud] = useState(false);
   const [speaking, setSpeaking] = useState<{key: string; state: SpeakState} | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const audioCache = useRef(new Map<string, string>()); // message key -> audio URL, so replays cost nothing
 
+  // Also how much listening this teacher has left today, refreshed after each Listen
+  const loadVoice = useCallback(() => {
+    if (!googleUser) return;
+    fetch(`${apiUrl}/tutor/voice`, {headers: {Authorization: `Bearer ${bearerToken(googleUser)}`}})
+      .then(r => (r.ok ? r.json() : null))
+      .then(data => setVoice(data?.enabled ? data : null))
+      .catch(() => {});
+  }, [apiUrl, googleUser?.credential, googleUser?.session]);
+
   useEffect(() => {
     setReadAloud(load<boolean>(READ_ALOUD_KEY, false));
-    fetch(`${apiUrl}/tutor/voice`)
-      .then(r => (r.ok ? r.json() : null))
-      .then(data => data?.enabled && setVoice(data))
-      .catch(() => {});
-  }, [apiUrl]);
+    loadVoice();
+  }, [loadVoice]);
 
   const stopSpeaking = () => {
     audioRef.current?.pause();
@@ -210,6 +223,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         }
         url = URL.createObjectURL(await response.blob());
         audioCache.current.set(key, url);
+        loadVoice();
       }
       const audio = audioRef.current || new Audio();
       audioRef.current = audio;
@@ -356,6 +370,9 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
           <label className={styles.readAloud} title={voice.label}>
             <input type="checkbox" checked={readAloud} onChange={toggleReadAloud} /> Read replies aloud
           </label>
+        )}
+        {googleUser && voice?.chars_left !== undefined && (
+          <span className={styles.listeningLeft}>{listeningLeft(voice.chars_left)}</span>
         )}
         {googleUser && messages.length > 0 && (
           <button className={chatStyles.newChatButton} onClick={startOver}>Start over</button>

@@ -838,12 +838,20 @@ def tutor_progress():
 
 ELEVENLABS_API_KEY = os.environ.get("ELEVENLABS_API_KEY", "").strip()  # a piped-in secret can end in a newline
 ELEVENLABS_VOICE_ID = os.environ.get("ELEVENLABS_VOICE_ID", "").strip()
-ELEVENLABS_MODEL = os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2")
+ELEVENLABS_MODEL = os.environ.get("ELEVENLABS_MODEL", "eleven_v4")
 # Shown next to the speaker button, e.g. "AI voice based on Barb's"
 TUTOR_VOICE_LABEL = os.environ.get("TUTOR_VOICE_LABEL", "AI voice")
-SPEECH_DAILY_CHARS = int(os.environ.get("TUTOR_SPEECH_DAILY_CHARS", "30000"))  # per teacher
+# ElevenLabs charges about one credit per character. A typical reply is
+# 300 to 800 characters, and a minute of speech is about 900.
+SPEECH_DAILY_CHARS = int(os.environ.get("TUTOR_SPEECH_DAILY_CHARS", "5000"))  # per teacher
+# For the whole course, per calendar month (UTC), so a busy week can't use up
+# the ElevenLabs plan. Kept in memory like the other limits: it starts again
+# on a redeploy and is counted per Cloud Run instance, so it is a safety net,
+# not exact accounting.
+SPEECH_MONTHLY_CHARS = int(os.environ.get("TUTOR_SPEECH_MONTHLY_CHARS", "100000"))
 SPEECH_MAX_CHARS = 5000  # per reply
 speech_usage_store: dict[str, list[tuple[float, int]]] = {}
+speech_month_usage = {"month": "", "chars": 0}
 
 SAVED_BLOCK_SPEECH = {
     "profile": "I've written your profile in the box below.",
@@ -878,15 +886,35 @@ def speech_text(reply: str) -> str:
     return text.strip()[:SPEECH_MAX_CHARS]
 
 
-def _speech_allowance_left(email: str, chars: int) -> bool:
-    """Record a teacher's use of the voice; False if it would go over the daily allowance."""
+def _month_chars_used() -> int:
+    month = datetime.now(timezone.utc).strftime("%Y-%m")
+    if speech_month_usage["month"] != month:
+        speech_month_usage.update(month=month, chars=0)
+    return speech_month_usage["chars"]
+
+
+def speech_chars_left(email: str) -> int:
+    """Characters this teacher can still have read aloud today (less if the course's month is nearly used up)."""
     now = time.time()
     recent = [(t, n) for t, n in speech_usage_store.get(email, []) if now - t < RATE_LIMIT_WINDOW]
-    if sum(n for _, n in recent) + chars > SPEECH_DAILY_CHARS:
-        speech_usage_store[email] = recent
-        return False
-    speech_usage_store[email] = recent + [(now, chars)]
-    return True
+    speech_usage_store[email] = recent
+    today_left = SPEECH_DAILY_CHARS - sum(n for _, n in recent)
+    month_left = SPEECH_MONTHLY_CHARS - _month_chars_used()
+    return max(0, min(today_left, month_left))
+
+
+def _record_speech(email: str, chars: int) -> None:
+    speech_usage_store.setdefault(email, []).append((time.time(), chars))
+    _month_chars_used()
+    speech_month_usage["chars"] += chars
+
+
+def _unrecord_speech(email: str, chars: int) -> None:
+    """Give back characters when ElevenLabs failed, so the teacher isn't charged for nothing."""
+    usage = speech_usage_store.get(email, [])
+    if usage and usage[-1][1] == chars:
+        usage.pop()
+    speech_month_usage["chars"] = max(0, speech_month_usage["chars"] - chars)
 
 
 def synthesize_speech(text: str) -> bytes:
@@ -904,8 +932,19 @@ def synthesize_speech(text: str) -> bytes:
 
 @app.route("/tutor/voice", methods=["GET"])
 def tutor_voice():
-    """Whether the tutor can speak, and the label to show by the speaker button."""
-    return jsonify({"enabled": voice_enabled(), "label": TUTOR_VOICE_LABEL})
+    """
+    Whether the tutor can speak, and the label to show by the speaker button.
+    For a signed-in teacher, also how many characters they can still have
+    read aloud today ("chars_left") and the daily allowance ("daily_chars").
+    """
+    voice = {"enabled": voice_enabled(), "label": TUTOR_VOICE_LABEL}
+    try:
+        user = get_optional_user()
+    except InvalidTokenError:
+        user = None
+    if voice["enabled"] and user:
+        voice.update(chars_left=speech_chars_left(user["email"].lower()), daily_chars=SPEECH_DAILY_CHARS)
+    return jsonify(voice)
 
 
 @app.route("/tutor/speak", methods=["POST"])
@@ -945,11 +984,18 @@ def tutor_speak():
     spoken = speech_text(text)
     if not spoken:
         return jsonify({"error": "Nothing to read aloud."}), 400
-    if not _speech_allowance_left(user["email"].lower(), len(spoken)):
-        return jsonify({"error": "You've reached today's limit for the tutor's voice. You can still read the replies."}), 429
+    email = user["email"].lower()
+    if len(spoken) > speech_chars_left(email):
+        if SPEECH_MONTHLY_CHARS - _month_chars_used() < len(spoken):
+            message = "The tutor's voice is used up for this month. You can still read the replies."
+        else:
+            message = "That's all the listening for today. You can still read the replies, and listening starts again tomorrow."
+        return jsonify({"error": message}), 429
+    _record_speech(email, len(spoken))
     try:
         audio = synthesize_speech(spoken)
     except requests.RequestException as e:
+        _unrecord_speech(email, len(spoken))
         app.logger.error(f"ElevenLabs error: {e}")
         return jsonify({"error": "The tutor's voice isn't available right now."}), 502
     return Response(audio, mimetype="audio/mpeg", headers={"Cache-Control": "private, max-age=86400"})

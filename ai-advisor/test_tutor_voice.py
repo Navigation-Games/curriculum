@@ -31,6 +31,7 @@ def spoken(monkeypatch):
     monkeypatch.setattr(advisor, "ELEVENLABS_API_KEY", "test-key")
     monkeypatch.setattr(advisor, "ELEVENLABS_VOICE_ID", "test-voice")
     monkeypatch.setattr(advisor, "speech_usage_store", {})
+    monkeypatch.setattr(advisor, "speech_month_usage", {"month": "", "chars": 0})
     monkeypatch.setattr(advisor, "tutor_rate_store", {})
     monkeypatch.setattr(advisor, "synthesize_speech", fake_synthesize)
     monkeypatch.setattr(advisor, "_create_message", lambda *args, **kwargs: FakeApiResponse())
@@ -102,12 +103,36 @@ def test_daily_allowance(client, monkeypatch):
     assert speak(client, text=text, speech_token=token).status_code == 429
 
 
-def test_elevenlabs_failure_is_reported(client, monkeypatch):
+def test_teachers_see_how_much_listening_is_left(client, monkeypatch):
+    monkeypatch.setattr(advisor, "SPEECH_DAILY_CHARS", 100)
+    assert client.get("/tutor/voice", headers=signed_in()).get_json()["chars_left"] == 100
+    text = "Hello there teacher."
+    speak(client, text=text, speech_token=advisor.speech_token(text))
+    voice = client.get("/tutor/voice", headers=signed_in()).get_json()
+    assert voice["chars_left"] == 80
+    assert voice["daily_chars"] == 100
+    assert "chars_left" not in client.get("/tutor/voice").get_json()
+
+
+def test_monthly_limit_for_the_whole_course(client, monkeypatch):
+    monkeypatch.setattr(advisor, "SPEECH_MONTHLY_CHARS", 30)
+    text = "Hello there teacher."  # 20 characters
+    token = advisor.speech_token(text)
+    assert speak(client, text=text, speech_token=token).status_code == 200
+    other_teacher = {"Authorization": "Bearer " + advisor.make_session_token("other@school.org")}
+    response = speak(client, headers=other_teacher, text=text, speech_token=token)
+    assert response.status_code == 429
+    assert "this month" in response.get_json()["error"]
+
+
+def test_elevenlabs_failure_is_reported_and_not_counted(client, monkeypatch):
     def broken(text):
         raise requests.ConnectionError("down")
 
     monkeypatch.setattr(advisor, "synthesize_speech", broken)
     assert speak(client, unit="unit-0").status_code == 502
+    assert advisor.speech_chars_left(TEACHER) == advisor.SPEECH_DAILY_CHARS
+    assert advisor.speech_month_usage["chars"] == 0
 
 
 def test_progress_replies_get_speech_tokens(client, monkeypatch):

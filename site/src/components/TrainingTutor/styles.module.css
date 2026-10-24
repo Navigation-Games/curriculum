@@ -95,3 +95,7 @@
   gap: 0.3rem;
   cursor: pointer;
 }
+
+.listeningLeft {
+  color: var(--ifm-color-emphasis-600);
+}

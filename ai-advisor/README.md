@@ -303,7 +303,7 @@ If your Workspace blocks service account keys (some organizations do), tell Clau
 
 ## Tutor voice setup (one time)
 
-The course tutor can read its replies aloud in a voice made with ElevenLabs. Teachers get a "Listen" button under each tutor message and a "Read replies aloud" switch (off by default). The backend only reads the tutor's own replies and unit openings, never text someone sends it, so nobody can use the endpoint to make the voice say something else. ElevenLabs charges per character, so each teacher has a daily allowance (`TUTOR_SPEECH_DAILY_CHARS`) and each message's audio is kept in the browser, so replaying it costs nothing.
+The course tutor can read its replies aloud in a voice made with ElevenLabs. Teachers get a "Listen" button under each tutor message and a "Read replies aloud" switch (off by default). The backend only reads the tutor's own replies and unit openings, never text someone sends it, so nobody can use the endpoint to make the voice say something else. ElevenLabs charges per character, so each teacher has a daily allowance (`TUTOR_SPEECH_DAILY_CHARS`), shown to them as minutes of listening left, the course has a monthly one (`TUTOR_SPEECH_MONTHLY_CHARS`), and each message's audio is kept in the browser, so replaying it costs nothing.
 
 1. **Make the voice** in ElevenLabs (the ElevenCreative platform): Voices > Add a new voice > Instant Voice Clone, with a few minutes of natural speech. Try it in Text to Speech with a real tutor reply before going further.
 2. **Copy the voice ID** (on the voice's page, or in Voices > the voice > the ID button).
@@ -312,17 +312,20 @@ The course tutor can read its replies aloud in a voice made with ElevenLabs. Tea
 
    ```powershell
    Read-Host "ElevenLabs API key" | gcloud secrets create elevenlabs-api-key --data-file=-
+   gcloud secrets add-iam-policy-binding elevenlabs-api-key --member="serviceAccount:523012695945-compute@developer.gserviceaccount.com" --role="roles/secretmanager.secretAccessor"
    ```
 
-   Give the Cloud Run service account the Secret Manager Secret Accessor role on `elevenlabs-api-key`, as for the other secrets. Then:
+   The second line lets Cloud Run read the secret. Then, with the real voice ID in place of `<voice id>`:
 
    ```powershell
    gcloud run services update lesson-advisor --region us-central1 `
      --update-secrets "ELEVENLABS_API_KEY=elevenlabs-api-key:latest" `
-     --update-env-vars "ELEVENLABS_VOICE_ID=<voice id>,TUTOR_VOICE_LABEL=AI voice based on Barb's"
+     --update-env-vars "ELEVENLABS_VOICE_ID=<voice id>,TUTOR_VOICE_LABEL=AI voice based on Barb's,ELEVENLABS_MODEL=eleven_v4"
    ```
 
 5. **Test it**: open a course unit, signed in. Each tutor message should have a Listen button.
+
+In ElevenLabs, turn off usage-based billing (overage) if your plan offers it, so going past the plan's credits stops the voice instead of charging more.
 
 To turn the voice off, remove the voice ID: `gcloud run services update lesson-advisor --region us-central1 --remove-env-vars ELEVENLABS_VOICE_ID`. To change voices, update `ELEVENLABS_VOICE_ID` (and the label).
 
@@ -394,9 +397,10 @@ If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub
 | `EMAIL_LINK_LOG_ONLY` | Backend (local development) | `true` writes sign-in links to the log instead of emailing them. Never set it in production |
 | `ELEVENLABS_API_KEY` | Backend (Cloud Run secret) | ElevenLabs key for the tutor's voice (see "Tutor voice setup"). Without it, or without `ELEVENLABS_VOICE_ID` or `SIGN_IN_SECRET`, there are no speaker buttons |
 | `ELEVENLABS_VOICE_ID` | Backend | The ElevenLabs voice the tutor speaks in |
-| `ELEVENLABS_MODEL` | Backend (optional) | ElevenLabs model, default `eleven_multilingual_v2` (speaks the teacher's language) |
+| `ELEVENLABS_MODEL` | Backend (optional) | ElevenLabs model, default `eleven_v4` (about 1 credit per character; speaks the teacher's language) |
 | `TUTOR_VOICE_LABEL` | Backend (optional) | Shown with the voice, default `AI voice`. For a cloned voice say whose, e.g. `AI voice based on Barb's` |
-| `TUTOR_SPEECH_DAILY_CHARS` | Backend (optional) | Characters each teacher can have read aloud per day, default 30000 |
+| `TUTOR_SPEECH_DAILY_CHARS` | Backend (optional) | Characters each teacher can have read aloud per day, default 5000 (about 5 minutes). Teachers see how much listening they have left |
+| `TUTOR_SPEECH_MONTHLY_CHARS` | Backend (optional) | Characters the whole course can have read aloud per calendar month, default 100000. In memory, so it restarts on a redeploy: a safety net, not exact accounting |
 
 Without `SIGN_IN_SECRET` and a sender (or log-only mode), email sign-in is off: the course still works with Google sign-in, and the email form says email sign-in isn't set up yet.
 
