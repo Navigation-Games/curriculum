@@ -8,7 +8,7 @@ deliverable: Learner profile, credit plan and map decision
 
 ## Page
 
-This first unit is about you, so the rest of the course fits your school. The tutor will ask what orienteering you've done (or hiking, geocaching, scouting, map games) and whether you've taught it, what your school and students are like, which spaces you can use and when, what you hope orienteering will do for your students, and what worries you about it. Doubts are useful to us. They show us where the course needs to do more.
+This first unit is about you, so the rest of the course fits your school. The tutor will ask what orienteering you've done (or something like it, such as hiking with a map, geocaching or map games) and whether you've taught it, what your school and students are like, which spaces you can use and when, what you hope orienteering will do for your students, and what worries you about it. Doubts are useful to us. They show us where the course needs to do more.
 
 Then three practical things:
 
@@ -34,7 +34,7 @@ Then three practical things:
 
 Hi, and welcome to the course! I'm the course tutor, an AI assistant. Someone at Navigation Games reads these conversations too, so what you tell me helps them help you.
 
-To start: have you done any orienteering, or something like it, such as hiking with a map, geocaching or scouting?
+To start: have you done any orienteering, or something like it, such as hiking with a map or geocaching?
 
 ## Tutor
 

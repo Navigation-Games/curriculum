@@ -113,7 +113,10 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const endRef = useRef<HTMLDivElement>(null);
+  const messagesBoxRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+  // Only follow new messages after the teacher sends one, never on page load
+  const followNewMessages = useRef(false);
 
   // Restore this unit's conversation (localStorage only exists in the browser)
   useEffect(() => {
@@ -126,8 +129,16 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
 
   useEffect(() => {
     if (messages.length) save(conversationKey(unit), {id: conversationId, messages});
-    endRef.current?.scrollIntoView({behavior: 'smooth', block: 'nearest'});
   }, [messages, conversationId, unit]);
+
+  // Scroll the messages box itself (so the page stays still), and put the
+  // cursor back in the answer box when a reply arrives
+  useEffect(() => {
+    if (!followNewMessages.current) return;
+    const box = messagesBoxRef.current;
+    if (box) box.scrollTop = box.scrollHeight;
+    if (!isLoading) inputRef.current?.focus({preventScroll: true});
+  }, [messages, isLoading]);
 
   const keepSavedBlocks = (reply: string) => {
     for (const part of splitBlocks(reply)) {
@@ -143,6 +154,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
     setInput('');
     const updated: Message[] = [...messages, {role: 'user', content: text}];
     setMessages(updated);
+    followNewMessages.current = true;
     setIsLoading(true);
 
     try {
@@ -205,7 +217,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         )}
       </div>
 
-      <div className={chatStyles.messages}>
+      <div className={chatStyles.messages} ref={messagesBoxRef}>
         <div className={`${chatStyles.message} ${chatStyles.assistant}`}>
           <div className={chatStyles.bubble}>{formatMessage(opening)}</div>
         </div>
@@ -229,11 +241,11 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         )}
 
         {error && <div className={chatStyles.error}><p>{error}</p></div>}
-        <div ref={endRef} />
       </div>
 
       <div className={chatStyles.inputArea}>
         <textarea
+          ref={inputRef}
           className={chatStyles.input}
           value={input}
           onChange={e => setInput(e.target.value)}
