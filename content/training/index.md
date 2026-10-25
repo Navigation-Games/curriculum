@@ -19,6 +19,8 @@ You can talk instead of typing. Your computer or phone already has voice typing 
 
 When the tutor writes up your finished piece, Navigation Games staff read it and get back to you, usually within 3 business days.
 
+**Who sees your work.** Navigation Games staff read your conversations with the tutor and the work you send in. If you're in a cohort, you'll swap your unit plan with one partner. You get a copy of everything you send, and we don't share your work with your school, district or anyone else unless you ask us to (for example, so your district can approve PD hours).
+
 ## Your cohort
 
 Teachers who start the course around the same time go through it together as a cohort. You'll post a short introduction, swap unit plans with a partner for feedback, and join one live Q&A on Google Meet. If nobody else is starting when you are, a Navigation Games staff member will be your partner instead, and you can join the next cohort's Q&A.

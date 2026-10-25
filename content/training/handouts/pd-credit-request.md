@@ -43,7 +43,7 @@ The lessons align with the SHAPE America National Physical Education Standards (
 
 ## Evidence of completion
 
-Navigation Games issues a certificate of completion listing the contact hours. The teacher's deliverables (unit plan, safety briefing, course design, teaching reflections) are reviewed by Navigation Games staff, and can be shared on request.
+Navigation Games issues a certificate of completion listing the contact hours. Navigation Games staff review the teacher's work (unit plan, safety briefing, course design, teaching reflections). The teacher gets a copy of each piece by email and can share it with you. Navigation Games shares a teacher's work with a school, district or BOCES only when the teacher asks us to.
 
 ## Accreditation
 

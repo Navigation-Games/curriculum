@@ -252,7 +252,7 @@ Participating schools get a Beginning Orienteering Instruction Kit, an orienteer
 
 **Other tabs:** Applicant view (pick an applicant ID to see status, latest Contact log entries, progress, school details and their application answers), To do (current action list for the program, including deferred decisions on pricing, cohort size and funding).
 
-**Status (October 18, 2026):** 6 applicants from the SHAPE CO conference (IDs KO-2026-001 to 006), all in Colorado, all needing a map. The current action list is the To do tab. The biggest blockers are OUSA's answer on YMP for non-Massachusetts schools and building the online training.
+**Status (October 18, 2026):** 6 applicants from the SHAPE CO conference (IDs KO-2026-001 to 006), all in Colorado, all needing a map. The current action list is the To do tab. YMP is open to schools and youth-serving organizations throughout the US, Colorado included (confirmed October 25, 2026). The online training is live at /training/ (Units 0 to 4 tested, 5 to 7 drafted).
 
 ## Camp Curriculum Sources (TEMPORARY - remove when camp curricula are built)
 
