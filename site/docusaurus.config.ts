@@ -2,6 +2,12 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+// Cloudflare Web Analytics: counts visits per page, with no cookies and
+// nothing personal stored, so no consent banner is needed. The token is
+// public by design (it's in every page's source). Empty means no tracking.
+// See "Visitor statistics" in ai-advisor/README.md.
+const CLOUDFLARE_ANALYTICS_TOKEN = '264e9ca7e2f749b490e61fa7c7e3143a';
+
 const config: Config = {
   title: 'Navigation Games',
   tagline: 'Orienteering curriculum for schools and camps',
@@ -28,6 +34,18 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  scripts: CLOUDFLARE_ANALYTICS_TOKEN
+    ? [
+        {
+          src: 'https://static.cloudflareinsights.com/beacon.min.js',
+          defer: true,
+          // spa: count each page a visitor opens, not just the first one
+          // (Docusaurus changes pages without a full reload)
+          'data-cf-beacon': JSON.stringify({token: CLOUDFLARE_ANALYTICS_TOKEN, spa: true}),
+        },
+      ]
+    : [],
 
   clientModules: [
     './src/clientModules/pageTypeClass.js',

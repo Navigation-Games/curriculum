@@ -3,6 +3,8 @@
 ---
 tagline: Learn to teach orienteering at your school, with an AI tutor, a Navigation Games reviewer, and a cohort of other teachers
 status: prototype
+audio: training/welcome-course.mp3
+audio_caption: A welcome from Barb Bryant, president of Navigation Games (about 45 seconds)
 ---
 
 ## Welcome

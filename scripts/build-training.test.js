@@ -75,6 +75,15 @@ describe('renderUnit', () => {
     assert.ok(!page.includes('## Reviewer notes'));
     assert.ok(!page.includes(unit.sections['Reviewer notes']));
   });
+
+  it('adds a player when the unit has a recording', () => {
+    const withAudio = { ...unit, meta: { ...unit.meta, audio: 'training/test.mp3', audio_caption: 'A welcome from Barb' } };
+    const audioPage = renderUnit(withAudio, undefined, units[1]);
+    assert.match(audioPage, /<figcaption>A welcome from Barb<\/figcaption>/);
+    assert.match(audioPage, /<audio controls preload="metadata" src="\/audio\/training\/test.mp3"><\/audio>/);
+    const withoutAudio = renderUnit({ ...unit, meta: { ...unit.meta, audio: undefined } }, undefined, units[1]);
+    assert.ok(!withoutAudio.includes('<audio'));
+  });
 });
 
 

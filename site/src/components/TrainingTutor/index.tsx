@@ -453,6 +453,22 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
     }
   }, [input, isLoading, messages, apiUrl, googleUser, unit, conversationId, readAloud, speaking]);
 
+  // Signing out also clears this browser's copy of the course (it's saved on
+  // the server), so the next person on a shared school computer doesn't see it
+  const signOutAndForget = () => {
+    stopSpeaking();
+    try {
+      Object.keys(localStorage)
+        .filter(key => key.startsWith('ng-course-') && key !== READ_ALOUD_KEY)
+        .forEach(key => localStorage.removeItem(key));
+    } catch {
+      // Storage unavailable; nothing saved to clear
+    }
+    setMessages([]);
+    setConversationId(newConversationId(unit));
+    signOut();
+  };
+
   const startOver = () => {
     if (!window.confirm('Start this unit\'s conversation over? Your saved profile and deliverables stay.')) return;
     localStorage.removeItem(conversationKey(unit));
@@ -468,7 +484,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         {googleUser && (
           <span className={chatStyles.userName}>
             {googleUser.name || googleUser.email}{' '}
-            <button className={chatStyles.signOutButton} onClick={signOut}>Sign out</button>
+            <button className={chatStyles.signOutButton} onClick={signOutAndForget}>Sign out</button>
           </span>
         )}
         {googleUser && voice && (
@@ -497,7 +513,8 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
           </div>
         </div>
 
-        {messages.map((msg, i) => (
+        {/* A saved conversation shows only once signed in, so the sign-in box isn't buried under it */}
+        {googleUser && messages.map((msg, i) => (
           <div key={i} className={`${chatStyles.message} ${chatStyles[msg.role]}`}>
             <div className={chatStyles.bubble}>
               {msg.role === 'assistant' ? <TutorMessage content={msg.content} sending={sending} /> : <p>{msg.content}</p>}
