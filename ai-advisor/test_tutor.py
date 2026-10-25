@@ -181,3 +181,34 @@ def test_em_dashes_are_removed_but_ranges_stay():
 def test_style_checklist_comes_last(client, sent):
     ask(client)
     assert sent["system_prompt"].rstrip().endswith(advisor.TUTOR_STYLE.rstrip())
+
+
+def test_conversation_history_is_marked_for_caching(monkeypatch):
+    captured = {}
+
+    def fake_create(**kwargs):
+        captured.update(kwargs)
+        return FakeApiResponse()
+
+    monkeypatch.setattr(advisor.client.messages, "create", fake_create)
+    messages = [
+        {"role": "user", "content": "Hi"},
+        {"role": "assistant", "content": "Hello!"},
+        {"role": "user", "content": "I teach 4th grade."},
+    ]
+    advisor._create_message(messages, "system text", 100)
+
+    sent_messages = captured["messages"]
+    assert sent_messages[:2] == messages[:2]
+    assert sent_messages[-1] == {
+        "role": "user",
+        "content": [
+            {
+                "type": "text",
+                "text": "I teach 4th grade.",
+                "cache_control": {"type": "ephemeral"},
+            }
+        ],
+    }
+    # The caller's copy, which gets logged, is unchanged
+    assert messages[-1] == {"role": "user", "content": "I teach 4th grade."}

@@ -105,6 +105,31 @@ def resolve_model(preferred=_CONFIGURED_MODEL):
 MODEL = resolve_model()
 
 
+def _with_history_cache(messages):
+    """Mark the end of the conversation for prompt caching.
+
+    The whole history is resent on every turn. With a cache breakpoint on the
+    newest message, the next turn reads everything before it from the cache
+    at a tenth of the input price instead of paying full price again. Returns
+    a copy; the caller's messages (which get logged) are left alone.
+    """
+    if not messages or not isinstance(messages[-1].get("content"), str):
+        return messages
+    last = messages[-1]
+    return messages[:-1] + [
+        {
+            "role": last["role"],
+            "content": [
+                {
+                    "type": "text",
+                    "text": last["content"],
+                    "cache_control": {"type": "ephemeral"},
+                }
+            ],
+        }
+    ]
+
+
 def _create_message(messages, system_prompt=None, max_tokens=MAX_TOKENS):
     """Call the Claude API, self-healing if the active model was retired.
 
@@ -121,7 +146,7 @@ def _create_message(messages, system_prompt=None, max_tokens=MAX_TOKENS):
                 "cache_control": {"type": "ephemeral"},
             }
         ],
-        messages=messages,
+        messages=_with_history_cache(messages),
     )
     try:
         return client.messages.create(model=MODEL, **kwargs)

@@ -13,7 +13,7 @@ The advisor recommends from the existing Navigation Games curriculum. It does no
 ## Architecture
 
 - **Backend:** Python (Flask) on Google Cloud Run
-- **AI:** Anthropic Claude API (Sonnet) with prompt caching
+- **AI:** Anthropic Claude API (Sonnet) with prompt caching on the system prompt and the conversation history (October 2026), so each turn pays full price only for what's new
 - **Frontend:** React chat component embedded in the Docusaurus curriculum site
 - **Logging:** stdout (Cloud Run logs) for now; Google Sheets integration planned
 
