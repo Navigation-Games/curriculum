@@ -8,7 +8,11 @@ deliverable: A three-sentence pitch for orienteering
 
 ## Page
 
-Orienteering is a sport where you use a map to visit checkpoints, and how you get from one to the next is up to you, because there's no marked route. That's what makes it interesting for kids: they decide where to go, pick a way to get there, and notice when they've gone wrong. [About Orienteering](/about/about-orienteering/) has the longer version.
+Orienteering is a sport where you use a map to visit checkpoints. How you get from one to the next is up to you, because there's no marked route.
+
+Please read [About Orienteering](/about/about-orienteering/) before you talk with the tutor. Here's what competitive orienteering looks like (video from the International Orienteering Federation, IOF):
+
+<YouTube id="itbJUl-ingo" title="Competitive orienteering (International Orienteering Federation)" />
 
 Three ideas run through every lesson:
 
@@ -32,24 +36,25 @@ A **three-sentence pitch** for orienteering, for someone at your school who has 
 
 ## Opening
 
-In this unit you'll practice explaining orienteering to someone who has never heard of it. First, after reading the page, how would you describe orienteering in a sentence?
+In this unit you'll practice explaining orienteering to someone who has never heard of it. First, now that you've read the About Orienteering page, how would you describe orienteering in a sentence?
 
 ## Tutor
 
 Your job is to help the teacher understand the core ideas of the curriculum and write a short pitch.
 
 1. Ask for their one-sentence description of orienteering. Gently correct misunderstandings (for example, that it is mainly about compasses, or that it is a race).
-2. Ask which of the three ideas (checking, growth mindset, being lost) seems most important for their students, and why. Connect their answer to their situation from the learner profile, if one is provided.
-3. Then role-play. Say you will play a skeptical listener, ask who it should be (principal, parent or colleague), and stay in character for two or three exchanges. Raise realistic concerns: time away from other PE units, safety, cost, "kids will just run around." Then step out of character and say you are the tutor again.
-4. Ask the teacher to write their three-sentence pitch. Give feedback against the rubric below, one or two specific suggestions at a time. Let them revise.
-5. When they are happy with it, repeat the final pitch back in a fenced code block labeled `deliverable`, and tell them to send it in.
+2. Ask who they'd most like to pitch orienteering to: their principal, a parent, a colleague, or someone else. The pitch is written for that person, so keep them in mind from here on.
+3. Ask which of the three ideas (checking, growth mindset, being lost) seems most important for their students, and why. Connect their answer to their situation from the learner profile, if one is provided.
+4. Then role-play. Say you will play the listener they chose, a little skeptical, and stay in character for two or three exchanges. Raise realistic concerns: time away from other PE units, safety, cost, "kids will just run around." Then step out of character and say you are the tutor again.
+5. Ask the teacher to write their three-sentence pitch, for the listener they chose. Give feedback against the rubric below, one or two specific suggestions at a time. Let them revise.
+6. When they are happy with it, repeat the final pitch back in a fenced code block labeled `deliverable`, starting with a line saying who it's for ("For: my principal"), and tell them to press "Send to Navigation Games" under it.
 
 Rubric:
 
 - Says what orienteering is: using a map to find checkpoints, choosing your own route
 - Names at least one benefit that matters to the chosen listener
 - Names one life skill
-- Plain language, no unexplained jargon (if they write "controls," suggest "checkpoints")
+- Plain language, with any orienteering terms explained
 - About three sentences
 
 ## Reviewer notes
