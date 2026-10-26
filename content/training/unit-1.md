@@ -16,7 +16,7 @@ Please read [About Orienteering](/about/about-orienteering/) before you talk wit
 
 Three ideas run through every lesson:
 
-- **[Checking](/reference/frameworks/skill-concept-sequence/#checking).** Confirm before you move on: am I at the right checkpoint, and do I know where I'm going next? Partners check each other first, then students learn to check themselves. This is also how the lessons run without electronic timing.
+- **[Checking](/reference/frameworks/skill-concept-sequence/#checking).** Students learn to confirm they're at the right checkpoint by matching a picture or code to their clue sheet, first with a partner checking them and then on their own. In competition, electronic timing is used to confirm the athletes visited the correct checkpoints in the correct order, but the athletes first check themselves at each checkpoint with a "clue sheet".
 - **[Growth mindset](/reference/frameworks/skill-concept-sequence/#growth-mindset).** Plenty of kids, and adults, are sure they're "bad with directions." Each step in the curriculum is small enough to succeed at and accuracy counts for more than speed, so by the time students navigate a course on their own they have a lot of evidence that they can.
 - **[Being lost](/reference/frameworks/skill-concept-sequence/#being-lost).** Getting lost is a feeling as much as a navigation problem. The lessons start in small spaces you can see across, teach the safety routine before anyone goes off alone, and give students something to do when they're confused: stop, turn the map to match the ground, and look for a feature they recognize.
 
