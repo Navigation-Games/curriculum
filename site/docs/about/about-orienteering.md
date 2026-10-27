@@ -3,6 +3,8 @@ title: About Orienteering
 sidebar_position: 1
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # About Orienteering
 
 ## What is orienteering?
@@ -12,6 +14,10 @@ Orienteering is a sport in which you use a map to visit checkpoints. The map sho
 Orienteering also has a strong community side. After a course, orienteers compare route choices, analyze their errors, share techniques, and try again. That habit of reflecting and improving carries into everyday life.
 
 At the competitive level, orienteering is a timed race through parks, forests, or city terrain, and the fastest navigator wins. But most people orienteer recreationally, and it is one of the most age-inclusive sports there is: children as young as four can do beginner courses, and events regularly include competitors in their eighties. Orienteering is practiced in over 70 countries. In Scandinavia, single events draw thousands of participants; in the US, about 100 local clubs host events that always include beginner courses and friendly instruction. A person who orienteers is called an orienteer.
+
+Here's what competitive orienteering looks like (video from the International Orienteering Federation, IOF):
+
+<YouTube id="itbJUl-ingo" title="Competitive orienteering (International Orienteering Federation)" poster="/img/training/iof-video-poster.jpg" />
 
 Orienteering maps are remarkably detailed. They show not just paths and buildings but individual boulders, fences, and vegetation, all drawn to an international standard, so an orienteer can read a map anywhere in the world. You do not need an official map to start, though: the early activities in this curriculum work with a hand-drawn sketch, a simple pattern of cones, or no map at all. See [Maps](/reference/equipment/maps) for how to get started.
 
@@ -25,6 +31,10 @@ Orienteering asks kids to do something rare in their day: make real decisions, o
 - **Teamwork and communication.** Partner navigation, relays, and checking each other's work give every student a real job and a real reason to talk things through.
 - **Time outdoors and connection to nature.** Orienteering gets kids moving outside and paying close attention to the terrain, often in green spaces they had never really explored.
 - **Physical activity.** Students keep moving the whole session, at their own pace, over varied ground. Students who rarely engage in PE often love orienteering, because it is a game they can play their own way.
+
+Here's what it looks like with kids (Animal-O at Cambridge Camping):
+
+<YouTube id="DhSJ-nxsQiI" title="Animal-O with Cambridge Camping" />
 
 These claims are backed by a growing body of research on orienteering, navigation, spatial learning, and outdoor education. Studies have linked orienteering to gains in executive function, attention, spatial memory, and map literacy in school-aged children. See [Our Impact](../impact) for what we observe in our programs and a summary of the research.
 
