@@ -34,7 +34,7 @@ Orienteering asks kids to do something rare in their day: make real decisions, o
 
 Here's what it looks like with kids (Animal-O at Cambridge Camping):
 
-<YouTube id="DhSJ-nxsQiI" title="Animal-O with Cambridge Camping" />
+<YouTube id="DhSJ-nxsQiI" title="Animal-O with Cambridge Camping" poster="/img/training/cambridge-camping-poster.jpg" />
 
 These claims are backed by a growing body of research on orienteering, navigation, spatial learning, and outdoor education. Studies have linked orienteering to gains in executive function, attention, spatial memory, and map literacy in school-aged children. See [Our Impact](../impact) for what we observe in our programs and a summary of the research.
 
