@@ -55,7 +55,7 @@ See [About Orienteering](/about/about-orienteering) for what these are and when 
 
 <CardGrid columns={2}>
   <div>
-    <YouTube id="DhSJ-nxsQiI" title="Animal-O" />
+    <YouTube id="DhSJ-nxsQiI" title="Animal-O" poster="/img/video-posters/cambridge-camping-animal-o.jpg" />
     <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}><strong>Animal-O.</strong></p>
   </div>
   <div>

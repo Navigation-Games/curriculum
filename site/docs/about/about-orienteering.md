@@ -17,7 +17,7 @@ At the competitive level, orienteering is a timed race through parks, forests, o
 
 Here's what competitive orienteering looks like (video from the International Orienteering Federation, IOF):
 
-<YouTube id="itbJUl-ingo" title="Competitive orienteering (International Orienteering Federation)" poster="/img/training/iof-video-poster.jpg" />
+<YouTube id="itbJUl-ingo" title="Competitive orienteering (International Orienteering Federation)" poster="/img/video-posters/iof-competitive-orienteering.jpg" />
 
 Orienteering maps are remarkably detailed. They show not just paths and buildings but individual boulders, fences, and vegetation, all drawn to an international standard, so an orienteer can read a map anywhere in the world. You do not need an official map to start, though: the early activities in this curriculum work with a hand-drawn sketch, a simple pattern of cones, or no map at all. See [Maps](/reference/equipment/maps) for how to get started.
 
@@ -34,7 +34,7 @@ Orienteering asks kids to do something rare in their day: make real decisions, o
 
 Here's what it looks like with kids (Animal-O at Cambridge Camping):
 
-<YouTube id="DhSJ-nxsQiI" title="Animal-O with Cambridge Camping" poster="/img/training/cambridge-camping-poster.jpg" />
+<YouTube id="DhSJ-nxsQiI" title="Animal-O with Cambridge Camping" poster="/img/video-posters/cambridge-camping-animal-o.jpg" />
 
 These claims are backed by a growing body of research on orienteering, navigation, spatial learning, and outdoor education. Studies have linked orienteering to gains in executive function, attention, spatial memory, and map literacy in school-aged children. See [Our Impact](../impact) for what we observe in our programs and a summary of the research.
 

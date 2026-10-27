@@ -877,6 +877,8 @@ function generateActivityMDX(slug, { fm, sections, goals, vocabulary, steps }) {
       let props = `id="${v.id}" title="${escAttr(v.title)}"`;
       if (v.start) props += ` start={${v.start}}`;
       if (v.end) props += ` end={${v.end}}`;
+      // Our own preview image instead of YouTube's frame (see the YouTube component)
+      if (v.poster) props += ` poster="${escAttr(v.poster)}"`;
       return props;
     };
     if (fm.videos.length === 1) {

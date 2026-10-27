@@ -31,6 +31,7 @@ videos:
   - id: DhSJ-nxsQiI
     title: Animal-O with Cambridge Camping
     caption: Campers playing Animal-O
+    poster: /img/video-posters/cambridge-camping-animal-o.jpg
   - id: HpDzuzA03X0
     title: How to play Animal-O
     caption: How to play, for participants (uses electronic timing)

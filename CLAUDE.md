@@ -60,7 +60,7 @@ Every core activity needs these, consistent with each other:
 - Custom `<ActivityCard>` component for lesson pages to link to activities
 - `<ActivityLink>` popovers: activity links in lesson Delivery sections open an in-place summary (tagline, description, time, space) with a link on to the full activity page. The build script converts the markdown links and generates the data module (`site/src/components/ActivityLink/activitySummaries.ts`, gitignored) from `content/activities/`
 - `<CardGrid>` for responsive grid layouts (3 columns on desktop, 2 on tablet, 1 on phone)
-- `<YouTube>` for responsive video embeds
+- `<YouTube>` for responsive video embeds. Optional `poster` (an image in `site/static/img/video-posters/`) replaces YouTube's preview frame and loads the video only on click; use it when YouTube's frame isn't right for schools. Activity `videos:` frontmatter takes `poster:` too
 - Tabs component for structured sections within activity/lesson pages
 - Compact/one-pager view rendered from the same MDX source (URL parameter or print-friendly toggle)
 - The right-side TOC is hidden on all generated activity and lesson pages (`hide_table_of_contents` added by the build script). On activity pages the content headings live inside Tabs panels, so TOC anchors can never scroll; lesson pages have a fixed section order that needs no TOC
