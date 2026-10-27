@@ -12,15 +12,15 @@ Orienteering is a sport where you use a map to visit checkpoints. How you get fr
 
 Please read [About Orienteering](/about/about-orienteering/) before you talk with the tutor. Here's what competitive orienteering looks like (video from the International Orienteering Federation, IOF):
 
-<YouTube id="itbJUl-ingo" title="Competitive orienteering (International Orienteering Federation)" />
+<YouTube id="itbJUl-ingo" title="Competitive orienteering (International Orienteering Federation)" poster="/img/training/iof-video-poster.jpg" />
 
 Three ideas run through every lesson:
 
-- **[Checking](/reference/frameworks/skill-concept-sequence/#checking).** Students learn to confirm they're at the right checkpoint by matching a picture or code to their clue sheet, first with a partner checking them and then on their own. In competition, electronic timing is used to confirm the athletes visited the correct checkpoints in the correct order, but the athletes first check themselves at each checkpoint with a "clue sheet".
-- **[Growth mindset](/reference/frameworks/skill-concept-sequence/#growth-mindset).** Plenty of kids, and adults, are sure they're "bad with directions." Each step in the curriculum is small enough to succeed at and accuracy counts for more than speed, so by the time students navigate a course on their own they have a lot of evidence that they can.
+- **[Checking](/reference/frameworks/skill-concept-sequence/#checking).** Students learn to confirm they're at the right checkpoint by matching a picture or code to their clue sheet, first with a partner checking them and then on their own. In competition, electronic timing is used to confirm the athletes visited the correct checkpoints in the correct order, but the athletes first check the code at each checkpoint with a "clue sheet".
+- **[Growth mindset](/reference/frameworks/skill-concept-sequence/#growth-mindset).** Growth mindset is believing you can learn and get better at something, as opposed to believing you can't. We build that belief with small, achievable steps: each step in the curriculum is small enough to succeed at, and accuracy counts for more than speed, so by the time students navigate a course on their own they have a lot of evidence that they can.
 - **[Being lost](/reference/frameworks/skill-concept-sequence/#being-lost).** Getting lost is a feeling as much as a navigation problem. The lessons start in small spaces you can see across, teach the safety routine before anyone goes off alone, and give students something to do when they're confused: stop, turn the map to match the ground, and look for a feature they recognize.
 
-The lessons follow the [experiential learning cycle](/reference/frameworks/experiential-learning/), where students try something, talk about what happened, pull out the idea and try again. That's why each lesson stops for reflection questions partway through as well as at the end. Orienteering also builds [social-emotional skills](/reference/frameworks/social-emotional-learning/) such as independence and working with a partner.
+The lessons follow the [experiential learning cycle](/reference/frameworks/experiential-learning/), where students try something, talk about what happened, pull out the idea and try again. Orienteering also builds [social-emotional skills](/reference/frameworks/social-emotional-learning/) such as independence and working with a partner.
 
 ## What you'll make
 
