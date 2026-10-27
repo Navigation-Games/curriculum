@@ -413,6 +413,37 @@ A cohort is the teachers who start in the same window (for example the six Color
 - **In the Tracker:** a Cohort column (for example `C-2026-11`) on each applicant's row.
 - The tutor tells a teacher in a cohort to post their introduction at the end of Unit 0, and tells teachers who don't know their cohort that Navigation Games will let them know.
 
+### A cohort group from start to finish
+
+Each cohort group has one owner at Navigation Games, named in the Tracker, who sets it up, watches it and closes it. It lasts for the course: about 12 weeks, plus a few weeks after the last Consultation 2.
+
+1. **Set up (Week 0, part of the 2 setup hours).** Create the group as above. Turn off "anyone can ask to join", so only the owner adds people. Allow members to see the conversation history on the web, so a teacher who joins late can read what came before. The owner subscribes with email delivery or a daily digest. Add the group address to the welcome email and say how long the group runs ("through the end of the course in [month]").
+2. **Run (10 to 15 minutes a week, plus the weekly prompt).** Read the group in the digest, answer questions, and nudge anyone whose introduction is missing. The weekly check-in email reads only the tutor log, not the group, so it won't show who is silent there. Posting is encouraged, never required.
+3. **Add people partway through.** Anyone can be added at any time. Ask them to post an introduction anyway, pair them for the Unit 4 swap (a group of three, or a staff partner), and send them the Q&A notes if they missed it.
+4. **Close (2 to 4 weeks after the last Consultation 2).** Send the closing email below. Two weeks later, on the date it names, set "who can post" to managers only. Keep the group rather than deleting it, so people keep the archive and nobody posts into a group nobody reads. Mark the cohort closed in the Tracker.
+
+**Closing email template.** Send from the group owner to the group. Fill in the brackets.
+
+> Subject: Thank you, and what happens to this group
+>
+> Hi everyone,
+>
+> You've all finished the course, and I've loved reading about your classes here. [One or two specific moments from the group: a photo, a student's comment, a clever course.]
+>
+> Before we close the group, please share one more thing: a photo, a story, or what you'll try next year. Anything you post by [date, two weeks out] will reach everyone.
+>
+> On [date], the group becomes read-only. You can still read everything in it at [group web address], but new posts won't go through, and we'll stop checking it.
+>
+> If you'd like to keep in touch with each other, reply to me (not the group) by [date] and say so. I'll send a list of everyone who opts in to the people on it, and only them.
+>
+> [If the educators community exists: You're also welcome in the Navigation Games Educators group, where teachers from all our programs share ideas: [link].]
+>
+> And you can always email me, or admin@navigationgames.org, with questions about your map, your courses or next year.
+>
+> Thank you for bringing orienteering to your students.
+>
+> [Name]
+
 ### Languages
 
 The tutor answers in whatever language the teacher writes in, and the `eleven_v4` voice speaks that language too (in the cloned voice). The unit pages and the tutor's opening messages are in English. Saved boxes keep their labels in English, because the page reads them, and the tutor offers to put map application answers into English for the YMP form. Not yet tried with a real teacher in another language.
@@ -422,12 +453,13 @@ The tutor answers in whatever language the teacher writes in, and the `eleven_v4
 - **Talking instead of typing:** every common system has voice typing built in, so there's no microphone button. Windows: Windows key + H. Mac: press Fn (Globe) twice. Phones: the microphone on the keyboard. The tip under the answer box shows the right one for the teacher's device, and the course home mentions it.
 - **Listening to the tutor:** the Listen button and the "Read the tutor's message out loud" switch use ElevenLabs credits, not Anthropic usage. "Read-aloud credits: 75% left today" is the teacher's share of their daily read-aloud allowance. See [Tutor voice setup](#tutor-voice-setup-one-time).
 - **A whole page read aloud:** the browser does this for free. Edge: Ctrl+Shift+U, or right-click > Read aloud. Chrome: right-click > Open in reading mode, then play.
-- **Welcome recordings:** short recordings in Barb's real voice (not the clone) for the course home and Unit 0 are planned. Real recordings need no AI-voice label.
+- **Welcome recordings:** the course home and Unit 0 have short recordings in Barb's real voice (not the clone), set with `audio` in the content file's frontmatter. Real recordings need no AI-voice label.
 
 ### Costs to watch
 
 - **Anthropic** (the tutor's and advisor's replies): signed-in teachers have no message limit; the account's $100 monthly limit is the backstop. Check usage at console.anthropic.com now and then.
-- **ElevenLabs** (read-aloud): limited per teacher per day and for the whole course per month. Check the usage page in ElevenLabs.
+- **ElevenLabs** (read-aloud): the Creator plan, $22 a month for about 121,000 credits (one credit per character), enough for roughly 240 replies read aloud, or 10 to 15 teachers listening through a unit. Limited per teacher per day and for the whole course per month. Check the usage page in ElevenLabs.
+- **Staff time** is the larger cost: about 30 hours for a first cohort of 6, including group setup and watching, consultations and reviews. The week-by-week breakdown is in the course design doc.
 
 ## Weekly course check-in email (one time)
 
