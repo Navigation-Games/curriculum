@@ -57,15 +57,20 @@ These anecdotes from our program participants show a clear impact on individuals
 
 We are fortunate that a large body of research strongly predicts the impact of programs like ours. Our programs combine physical activity, time outdoors, spatial reasoning, problem-solving, and collaboration, and each is well studied and linked to positive outcomes for children.
 
+In *The Anxious Generation* (2024), Jonathan Haidt calls for more independence, free play, and responsibility in the real world, and for more play in schools. Orienteering gives kids that inside the school day: they go out on their own with a map, choose a route, and find their way back.
+
 There is also a growing body of research on orienteering and navigation specifically, including studies with school-aged children:
 
 - In children, orienteering programs have been associated with gains in executive function, attention, and inhibitory control, and with stronger map literacy and academic achievement (studies with students in grades 4 through 8, including children with ADHD and learning disabilities).
 - Spatial reasoning, which orienteering exercises directly, is linked to later success in mathematics, and instruction that builds spatial skill carries over into math understanding (Geer et al., 2019; Mitchell & Malone, 2024).
+- Spatial skills can be taught. A meta-analysis of 217 studies found that training improves them, the gains hold up over time and carry over to spatial tasks that weren't trained, and the people who started out weakest improved the most (Uttal et al., *Psychological Bulletin*, 2013).
 - In adults, orienteering combined with vigorous exercise improved cognition and raised brain-derived neurotrophic factor more than exercise alone (Waddington et al., 2024), and experienced orienteers report stronger spatial processing and memory across adulthood (Waddington & Heisz, 2023).
 - A 2025 systematic review and meta-analysis found significant large effects of orienteering interventions on physical fitness and memory in non-athletes, with a medium effect on spatial skills, and recommended orienteering across age groups and settings including schools (Public Health, 2025).
 - Orienteers score above normative levels on tests of executive function, sustained attention, and recognition memory, and outperform road runners on visual fluency and spatial working memory, suggesting the sport develops specific executive function networks (Hohl et al., 2025).
 - Building and trusting a mental map of the world lets children explore with confidence and independence, and eases the stress of not knowing where they are (Bond, *From Here to There*, Harvard University Press, 2021).
-- Researchers believe that memory and navigation evolved together in the hippocampus. Evidence suggests that working on navigational skills strengthens the hippocampus and improves memory (Bond, 2021).
+- Learning to navigate changes the brain. London trainee taxi drivers who learned the city and passed the licensing test grew more gray matter in the hippocampus, the part of the brain that handles both navigation and memory. Trainees who didn't pass, and non-drivers, did not (Woollett & Maguire, *Current Biology*, 2011).
+- The reverse also seems true. Adults who relied more on GPS had weaker spatial memory, and in a small three-year follow-up, more GPS use went with a steeper decline (Dahmani & Bohbot, *Scientific Reports*, 2020). Orienteering is navigation without GPS.
+- A systematic review found that risky outdoor play, including children exploring on their own, had positive effects on physical activity and social behavior (Brussoni et al., 2015).
 - Time outdoors and experiential learning support concentration, motivation, and children's wellbeing (Rickinson et al., 2004; Sheldrake & Reiss, The Wildlife Trusts).
 
 We put our resources into delivering programs and improving the curriculum, informed by this research, our own experience, and feedback from the people we work with. We keep a fuller, sourced review in [Orienteering Education and Research Around the World](https://navigation-games-2.gitbook.io/orienteering-education-around-the-world/literature/introduction-to-the-literature).
