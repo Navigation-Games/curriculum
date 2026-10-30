@@ -500,6 +500,22 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         )}
       </div>
 
+      {/* Signed out: sign in first, above the tutor's opening message */}
+      {!googleUser && (
+        <div className={styles.signIn}>
+          <p className={styles.signInHeading}>Sign in to start</p>
+          <p>
+            Your conversations are saved to your account, so you can stop and pick up
+            again later, on any computer.
+          </p>
+          <GoogleSignInButton size="medium" />
+          <p className={styles.signInOr}>
+            No Google account? You can also use any email address:
+          </p>
+          <EmailSignInForm />
+        </div>
+      )}
+
       <div className={chatStyles.messages} ref={messagesBoxRef}>
         <div className={`${chatStyles.message} ${chatStyles.assistant}`}>
           <div className={chatStyles.bubble}>
@@ -541,20 +557,7 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         {error && <div className={chatStyles.error}><p>{error}</p></div>}
       </div>
 
-      {!googleUser ? (
-        <div className={styles.signIn}>
-          <p className={styles.signInHeading}>Sign in to start</p>
-          <p>
-            Your conversations are saved to your account, so you can stop and pick up
-            again later, on any computer.
-          </p>
-          <GoogleSignInButton size="medium" />
-          <p className={styles.signInOr}>
-            No Google account? You can also use any email address:
-          </p>
-          <EmailSignInForm />
-        </div>
-      ) : (
+      {googleUser && (
       <div className={chatStyles.inputArea}>
         <textarea
           ref={inputRef}

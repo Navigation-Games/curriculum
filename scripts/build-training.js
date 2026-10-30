@@ -197,6 +197,7 @@ function renderUnit(unit, previous, next) {
     frontmatter({ title: unitHeading(unit), unlisted: true, hide_table_of_contents: true }),
     GENERATED_NOTE(`${unit.slug}.md`),
     "import TrainingTutor from '@site/src/components/TrainingTutor';",
+    "import YouTube from '@site/src/components/YouTube';",
     '',
     `# ${unitHeading(unit)}`,
     '',

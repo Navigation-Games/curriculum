@@ -8,15 +8,23 @@ deliverable: A three-sentence pitch for orienteering
 
 ## Page
 
-Orienteering is a sport where you use a map to visit checkpoints, and how you get from one to the next is up to you, because there's no marked route. That's what makes it interesting for kids: they decide where to go, pick a way to get there, and notice when they've gone wrong. [About Orienteering](/about/about-orienteering/) has the longer version.
+Orienteering is a sport where you use a map to visit checkpoints. How you get from one to the next is up to you, because there's no marked route.
 
-Three ideas run through every lesson:
+Please read [About Orienteering](/about/about-orienteering/), and watch its two short videos (competitive orienteering, and kids doing Animal-O at a camp), before you talk with the tutor.
 
-- **[Checking](/reference/frameworks/skill-concept-sequence/#checking).** Confirm before you move on: am I at the right checkpoint, and do I know where I'm going next? Partners check each other first, then students learn to check themselves. This is also how the lessons run without electronic timing.
-- **[Growth mindset](/reference/frameworks/skill-concept-sequence/#growth-mindset).** Plenty of kids, and adults, are sure they're "bad with directions." Each step in the curriculum is small enough to succeed at and accuracy counts for more than speed, so by the time students navigate a course on their own they have a lot of evidence that they can.
-- **[Being lost](/reference/frameworks/skill-concept-sequence/#being-lost).** Getting lost is a feeling as much as a navigation problem. The lessons start in small spaces you can see across, teach the safety routine before anyone goes off alone, and give students something to do when they're confused: stop, turn the map to match the ground, and look for a feature they recognize.
+### Why it's good for kids
 
-The lessons follow the [experiential learning cycle](/reference/frameworks/experiential-learning/), where students try something, talk about what happened, pull out the idea and try again. That's why each lesson stops for reflection questions partway through as well as at the end. Orienteering also builds [social-emotional skills](/reference/frameworks/social-emotional-learning/) such as independence and working with a partner.
+Orienteering asks kids to make real decisions on their own while they move, which is rare in a school day. Students who don't shine in ball sports often love it, because it's a game they can play their own way. It also carries over: reading a map is sustained spatial thinking, and recovering from a wrong turn is practice for handling setbacks anywhere. [Our Impact](/about/impact/) has what teachers and students tell us, and a summary of the research.
+
+The lessons start before any map, in a space students can see across, and add one small skill at a time. They work with what a school already has, with no electronic timing, and every student is moving and deciding, not waiting for a turn.
+
+### Three things the lessons build
+
+- **[Checking](/reference/frameworks/skill-concept-sequence/#checking).** Students learn to confirm they're at the right checkpoint by matching a picture or code to their clue sheet, first with a partner checking them and then on their own. In competition, electronic timing is used to confirm the athletes visited the correct checkpoints in the correct order, but the athletes first check the code at each checkpoint themselves.
+- **[Growth mindset](/reference/frameworks/skill-concept-sequence/#growth-mindset).** Growth mindset is believing you can learn and get better at something, as opposed to believing you can't. We build that belief with small, achievable steps: each step in the curriculum is small enough to succeed at. By the time students navigate a course on a real orienteering map, they've built up confidence from many small successes along the way.
+- **[Handling being lost](/reference/frameworks/skill-concept-sequence/#being-lost).** Feeling lost or confused is normal, and the first step is to calm down enough to think. Students practice a simple routine for those moments: stop, turn the map to match the ground, and look for a feature they recognize. Mistakes are welcome, because a wrong turn is how you learn to read the map better.
+
+The lessons follow the [experiential learning cycle](/reference/frameworks/experiential-learning/), where students try something, talk about what happened, pull out the idea and try again. Orienteering also builds [social-emotional skills](/reference/frameworks/social-emotional-learning/) such as independence and working with a partner.
 
 ## What you'll make
 
@@ -32,24 +40,25 @@ A **three-sentence pitch** for orienteering, for someone at your school who has 
 
 ## Opening
 
-In this unit you'll practice explaining orienteering to someone who has never heard of it. First, after reading the page, how would you describe orienteering in a sentence?
+In this unit you'll practice explaining orienteering to someone who has never heard of it. First, now that you've read the About Orienteering page, how would you describe orienteering in a sentence?
 
 ## Tutor
 
 Your job is to help the teacher understand the core ideas of the curriculum and write a short pitch.
 
 1. Ask for their one-sentence description of orienteering. Gently correct misunderstandings (for example, that it is mainly about compasses, or that it is a race).
-2. Ask which of the three ideas (checking, growth mindset, being lost) seems most important for their students, and why. Connect their answer to their situation from the learner profile, if one is provided.
-3. Then role-play. Say you will play a skeptical listener, ask who it should be (principal, parent or colleague), and stay in character for two or three exchanges. Raise realistic concerns: time away from other PE units, safety, cost, "kids will just run around." Then step out of character and say you are the tutor again.
-4. Ask the teacher to write their three-sentence pitch. Give feedback against the rubric below, one or two specific suggestions at a time. Let them revise.
-5. When they are happy with it, repeat the final pitch back in a fenced code block labeled `deliverable`, and tell them to send it in.
+2. Ask who they'd most like to pitch orienteering to: their principal, a parent, a colleague, or someone else. The pitch is written for that person, so keep them in mind from here on.
+3. Ask which of the three things the lessons build (checking, growth mindset, handling being lost) seems most important for their students, and why. Connect their answer to their situation from the learner profile, if one is provided.
+4. Then role-play. Say you will play the listener they chose, a little skeptical, and stay in character for two or three exchanges. Raise realistic concerns: time away from other PE units, safety, cost, "kids will just run around." Then step out of character and say you are the tutor again.
+5. Ask the teacher to write their three-sentence pitch, for the listener they chose. Give feedback against the rubric below, one or two specific suggestions at a time. Let them revise.
+6. When they are happy with it, repeat the final pitch back in a fenced code block labeled `deliverable`, starting with a line saying who it's for ("For: my principal"), and tell them to press "Send to Navigation Games" under it.
 
 Rubric:
 
 - Says what orienteering is: using a map to find checkpoints, choosing your own route
 - Names at least one benefit that matters to the chosen listener
 - Names one life skill
-- Plain language, no unexplained jargon (if they write "controls," suggest "checkpoints")
+- Plain language, with any orienteering terms explained
 - About three sentences
 
 ## Reviewer notes

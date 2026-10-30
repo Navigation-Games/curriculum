@@ -60,7 +60,7 @@ Every core activity needs these, consistent with each other:
 - Custom `<ActivityCard>` component for lesson pages to link to activities
 - `<ActivityLink>` popovers: activity links in lesson Delivery sections open an in-place summary (tagline, description, time, space) with a link on to the full activity page. The build script converts the markdown links and generates the data module (`site/src/components/ActivityLink/activitySummaries.ts`, gitignored) from `content/activities/`
 - `<CardGrid>` for responsive grid layouts (3 columns on desktop, 2 on tablet, 1 on phone)
-- `<YouTube>` for responsive video embeds
+- `<YouTube>` for responsive video embeds. Optional `poster` (an image in `site/static/img/video-posters/`) replaces YouTube's preview frame and loads the video only on click; use it when YouTube's frame isn't right for schools. Activity `videos:` frontmatter takes `poster:` too
 - Tabs component for structured sections within activity/lesson pages
 - Compact/one-pager view rendered from the same MDX source (URL parameter or print-friendly toggle)
 - The right-side TOC is hidden on all generated activity and lesson pages (`hide_table_of_contents` added by the build script). On activity pages the content headings live inside Tabs panels, so TOC anchors can never scroll; lesson pages have a fixed section order that needs no TOC
@@ -252,7 +252,7 @@ Participating schools get a Beginning Orienteering Instruction Kit, an orienteer
 
 **Other tabs:** Applicant view (pick an applicant ID to see status, latest Contact log entries, progress, school details and their application answers), To do (current action list for the program, including deferred decisions on pricing, cohort size and funding).
 
-**Status (October 18, 2026):** 6 applicants from the SHAPE CO conference (IDs KO-2026-001 to 006), all in Colorado, all needing a map. The current action list is the To do tab. The biggest blockers are OUSA's answer on YMP for non-Massachusetts schools and building the online training.
+**Status (October 18, 2026):** 6 applicants from the SHAPE CO conference (IDs KO-2026-001 to 006), all in Colorado, all needing a map. The current action list is the To do tab. YMP is open to schools and youth-serving organizations throughout the US, Colorado included (confirmed October 25, 2026). The online training is live at /training/ (Units 0 to 4 tested, 5 to 7 drafted).
 
 ## Camp Curriculum Sources (TEMPORARY - remove when camp curricula are built)
 
