@@ -61,6 +61,19 @@ def test_submission_emails_the_reviewer_and_the_teacher(client, mail):
     assert "Know Your Space (https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-1/)" in teacher_body
 
 
+def test_ymp_confirmation_tells_the_reviewer_it_is_self_reported(client, mail):
+    response = submit(client, unit="unit-1", kind="ymp_done", text="Submitted the YMP application.", conversation_id="")
+    assert response.status_code == 200
+    (to_reviewer, subject, body, reply_to), (to_teacher, teacher_subject, teacher_body, _) = mail["sent"]
+    assert to_reviewer == "reviewer@navigationgames.org"
+    assert subject.startswith("YMP application submitted (self-reported)")
+    assert "self-reported" in body and "YMP applied column" in body
+    assert to_teacher == TEACHER
+    assert "a few days" in teacher_body and "ympcommittee@orienteeringusa.org" in teacher_body
+    (row,) = mail["logged"]
+    assert row[3:5] == ["unit-1", "ymp_done"]
+
+
 def test_submission_is_logged(client, mail):
     submit(client)
     (row,) = mail["logged"]

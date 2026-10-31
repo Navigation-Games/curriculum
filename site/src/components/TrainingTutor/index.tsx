@@ -81,6 +81,9 @@ function newConversationId(unit: string): string {
 
 // Splits a tutor message into plain text and saved blocks (```profile, ```deliverable, ...).
 type SavedKind = 'profile' | 'deliverable' | 'ymp' | 'schedule';
+// What can be sent: a saved box, or the note that the YMP application was submitted
+type SendKind = SavedKind | 'ymp_done';
+const YMP_DONE_TEXT = 'Submitted the YMP application.';
 type Part = {kind: 'text' | SavedKind; text: string};
 
 function splitBlocks(message: string): Part[] {
@@ -105,9 +108,9 @@ const SAVED_HEADINGS = {
 
 // What the Send button does for a saved box: send it, and whether this exact text was sent already
 export interface Sending {
-  send: (kind: SavedKind, text: string) => Promise<void>;
-  sentText: Partial<Record<SavedKind, string>>;
-  status: Partial<Record<SavedKind, string>>; // message shown after sending
+  send: (kind: SendKind, text: string) => Promise<void>;
+  sentText: Partial<Record<SendKind, string>>;
+  status: Partial<Record<SendKind, string>>; // message shown after sending
 }
 
 // What pressing Send does, in words a teacher can act on. The map answers say plainly that
@@ -126,7 +129,12 @@ function SendButton({kind, text, sending}: {kind: SavedKind; text: string; sendi
   const [busy, setBusy] = useState(false);
   if (!sending) return null;
   if (sending.sentText[kind] === text) {
-    return <p className={styles.savedAction}>{sending.status[kind] || 'Sent to Navigation Games.'}</p>;
+    return (
+      <p className={styles.savedAction}>
+        {kind === 'ymp' && <strong>Step 2: let us know. </strong>}
+        {sending.status[kind] || 'Done. Sent to Navigation Games.'}
+      </p>
+    );
   }
   return (
     <p className={styles.savedAction}>
@@ -141,6 +149,36 @@ function SendButton({kind, text, sending}: {kind: SavedKind; text: string; sendi
         {busy ? 'Sending...' : 'Send to Navigation Games'}
       </button>{' '}
       {SEND_EXPLANATIONS[kind]}
+    </p>
+  );
+}
+
+// Step 3 of the map box: the teacher tells us they submitted the YMP application
+function YmpDoneStep({sending}: {sending?: Sending}) {
+  const [busy, setBusy] = useState(false);
+  if (!sending) return null;
+  if (sending.sentText.ymp_done === YMP_DONE_TEXT) {
+    return (
+      <p className={styles.savedAction}>
+        <strong>Step 3: tell us when it's done. </strong>
+        {sending.status.ymp_done || "Done. Thanks, we've noted it."}
+      </p>
+    );
+  }
+  return (
+    <p className={styles.savedAction}>
+      <strong>Step 3: tell us when it's done. </strong>
+      <button
+        className={styles.sendWorkButton}
+        disabled={busy}
+        onClick={() => {
+          setBusy(true);
+          sending.send('ymp_done', YMP_DONE_TEXT).finally(() => setBusy(false));
+        }}>
+        {busy ? 'Sending...' : "I've submitted the YMP application"}
+      </button>{' '}
+      Press this after you submit the form, so we know. Someone from the YMP committee will be in touch, but that
+      can take a few days, so don't worry if you haven't heard yet. If you decide not to apply, you can skip this.
     </p>
   );
 }
@@ -178,6 +216,7 @@ function SavedBlock({kind, text, sending}: {kind: SavedKind; text: string; sendi
         </p>
       )}
       {kind !== 'schedule' && <SendButton kind={kind} text={text} sending={sending} />}
+      {kind === 'ymp' && <YmpDoneStep sending={sending} />}
     </div>
   );
 }
@@ -341,12 +380,13 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
             const updated = {...sentText, [kind]: text};
             setSentText(updated);
             save(sentKey(unit), updated);
-            setSendStatus({
-              ...sendStatus,
-              [kind]: data.emailed
-                ? `Sent. A copy is in your email, and someone at Navigation Games will reply ${data.turnaround}.`
-                : `Sent to Navigation Games, who will reply ${data.turnaround}.`,
-            });
+            const message =
+              kind === 'ymp_done'
+                ? "Done. Thanks, we've noted it. Someone from the YMP committee will be in touch. That can take a few days, so don't worry if you haven't heard yet. Add ympcommittee@orienteeringusa.org to your contacts so their email doesn't land in spam."
+                : data.emailed
+                  ? `Done. A copy is in your email, and someone at Navigation Games will reply ${data.turnaround}.`
+                  : `Done. Sent to Navigation Games, who will reply ${data.turnaround}.`;
+            setSendStatus({...sendStatus, [kind]: message});
           } catch {
             setError('Sending didn\'t work. Please try again, or copy it into an email to admin@navigationgames.org.');
           }

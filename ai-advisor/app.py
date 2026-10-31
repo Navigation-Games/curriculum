@@ -1047,7 +1047,13 @@ SUBMISSIONS_HEADER = ["timestamp", "email", "name", "unit", "kind", "conversatio
 SUBMISSION_MAX_CHARS = 20000
 SUBMISSIONS_PER_DAY = 20  # per teacher
 submission_rate_store: dict[str, list[float]] = {}
-SUBMISSION_KINDS = {"deliverable": "work", "profile": "learner profile", "ymp": "map application answers"}
+SUBMISSION_KINDS = {
+    "deliverable": "work",
+    "profile": "learner profile",
+    "ymp": "map application answers",
+    # The teacher says they submitted the YMP application (self-reported; OUSA is the real confirmation)
+    "ymp_done": "YMP application confirmation",
+}
 # When the reviewer replies. The unit plan drives Consultation 1, so it's quicker.
 REVIEW_TURNAROUND = {"unit-5": "within 3 business days"}
 
@@ -1070,6 +1076,25 @@ def submission_emails(unit_slug: str, unit: dict, kind: str, text: str, user: di
     what = SUBMISSION_KINDS[kind]
     title = unit["title"]
     turnaround = REVIEW_TURNAROUND.get(unit_slug, "within a week")
+    if kind == "ymp_done":
+        reviewer = (
+            f"YMP application submitted (self-reported): {who}",
+            f"{who} pressed \"I've submitted the YMP application\" in {title}.\n\n"
+            "This is self-reported. The YMP committee usually gets in touch a few days after the application "
+            "arrives, so confirm with Orienteering USA before the kit ships, then enter the date in the Kickstart "
+            "Tracker's YMP applied column.\n\n"
+            f"The whole conversation is in the review tool, {SITE_URL}/review-conversations/, "
+            f"as {conversation_id or 'an unsaved conversation'}.",
+        )
+        teacher = (
+            "We've noted that you submitted the YMP application",
+            "Thanks! Navigation Games has noted that you submitted the Youth Mapping Program application.\n\n"
+            "Someone from the YMP committee will be in touch. That can take a few days, so don't worry if you "
+            "haven't heard yet. Add ympcommittee@orienteeringusa.org to your contacts so their email doesn't land "
+            "in spam.\n\n"
+            "Questions in the meantime? Just reply to this email.\n\nNavigation Games",
+        )
+        return reviewer, teacher
     reviewer = (
         f"Course submission: {title}, {what}, from {who}",
         f"{who} sent their {what} for {title}.\n\n"
