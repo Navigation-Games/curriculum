@@ -47,7 +47,10 @@ export default function EmailSignInForm(): React.ReactElement {
     return (
       <p className={styles.sent}>
         Check your email at <strong>{email.trim()}</strong> for a sign-in link. It works for
-        15 minutes. If it doesn't arrive in a few minutes, look in your spam folder.
+        15 minutes. If it doesn't arrive in a few minutes, look in your spam folder.{' '}
+        <button type="button" className={styles.linkButton} onClick={() => setStatus('idle')}>
+          Wrong address? Use a different one.
+        </button>
       </p>
     );
   }

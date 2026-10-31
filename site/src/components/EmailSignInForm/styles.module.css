@@ -38,3 +38,13 @@
 .sent {
   margin: 0;
 }
+
+.linkButton {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--ifm-link-color);
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
