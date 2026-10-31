@@ -648,6 +648,148 @@ def chat():
 
 
 # ---------------------------------------------------------------------------
+# Course access (who may use the teacher course, and which units are open)
+#
+# Two tabs in the conversation log sheet, edited by hand by staff:
+#   CourseAccess:  email | name | applicant_id | added | note   (one row per enrolled teacher)
+#   CourseSettings: setting | value   (units_open = the highest unit number open, e.g. 1 = Units 0 and 1)
+# Staff (a navigationgames.org Google sign-in) always get in, to every unit.
+# Everyone else must be on the list, and can only use units up to units_open.
+# The tabs are read every couple of minutes, so a change takes effect without a
+# redeploy. If the sheet can't be read and nothing is cached, the course closes
+# (503) instead of opening to everyone.
+#
+# The check is skipped when no log sheet is configured (local development),
+# unless COURSE_ACCESS_REQUIRED=true.
+# ---------------------------------------------------------------------------
+
+COURSE_ACCESS_SHEET_TITLE = "CourseAccess"
+COURSE_ACCESS_HEADER = ["email", "name", "applicant_id", "added", "note"]
+COURSE_SETTINGS_SHEET_TITLE = "CourseSettings"
+COURSE_SETTINGS_HEADER = ["setting", "value"]
+COURSE_UNITS_OPEN_DEFAULT = 1  # used only if the units_open setting is missing or not a number
+COURSE_ACCESS_CACHE_SECONDS = 120
+COURSE_ACCESS_REQUIRED = os.environ.get("COURSE_ACCESS_REQUIRED", "").lower() == "true"
+
+_course_access_cache: dict = {"at": 0.0, "ok": False, "emails": set(), "units_open": COURSE_UNITS_OPEN_DEFAULT}
+
+
+class CourseAccessUnavailable(Exception):
+    """The access list couldn't be read and there is no earlier copy to use."""
+
+
+def course_access_enforced() -> bool:
+    return bool(SPREADSHEET_ID) or COURSE_ACCESS_REQUIRED
+
+
+def read_course_access() -> tuple[set[str], int]:
+    """Read the access list and the units_open setting from the log sheet (creating the tabs if missing)."""
+    spreadsheet = _open_spreadsheet()
+    if spreadsheet is None:
+        raise CourseAccessUnavailable()
+    access_rows = _get_or_create_worksheet(spreadsheet, COURSE_ACCESS_SHEET_TITLE, COURSE_ACCESS_HEADER).get_all_values()
+    setting_rows = _get_or_create_worksheet(spreadsheet, COURSE_SETTINGS_SHEET_TITLE, COURSE_SETTINGS_HEADER).get_all_values()
+
+    emails = {row[0].strip().lower() for row in access_rows[1:] if row and row[0].strip()}
+    units_open = COURSE_UNITS_OPEN_DEFAULT
+    for row in setting_rows[1:]:
+        if len(row) >= 2 and row[0].strip().lower() == "units_open":
+            try:
+                units_open = int(row[1].strip())
+            except ValueError:
+                pass
+    return emails, units_open
+
+
+def load_course_access() -> tuple[set[str], int]:
+    """The access list and units_open, from a copy at most COURSE_ACCESS_CACHE_SECONDS old."""
+    cache = _course_access_cache
+    if cache["ok"] and time.time() - cache["at"] < COURSE_ACCESS_CACHE_SECONDS:
+        return cache["emails"], cache["units_open"]
+    try:
+        emails, units_open = read_course_access()
+    except Exception as e:
+        if cache["ok"]:
+            app.logger.warning(f"Could not refresh the course access list, using the last copy: {e}")
+            return cache["emails"], cache["units_open"]
+        app.logger.error(f"Could not read the course access list: {e}")
+        raise CourseAccessUnavailable() from e
+    cache.update(at=time.time(), ok=True, emails=emails, units_open=units_open)
+    return emails, units_open
+
+
+def course_unit_number(unit_slug: str) -> int | None:
+    """3 for "unit-3"; None for anything else."""
+    match = re.fullmatch(r"unit-(\d+)", unit_slug or "")
+    return int(match.group(1)) if match else None
+
+
+def course_access_error(user: dict, unit_slug: str | None = None):
+    """
+    Return a (response, status) error if this signed-in user may not use the
+    course (or the given unit), else None. Staff always pass.
+    """
+    if not course_access_enforced() or user["is_staff"]:
+        return None
+    try:
+        emails, units_open = load_course_access()
+    except CourseAccessUnavailable:
+        return jsonify({"error": "We can't check your course access right now. Please try again in a minute."}), 503
+    if user["email"].strip().lower() not in emails:
+        return jsonify({
+            "error": "This course is for teachers enrolled in Kickstart Orienteering. "
+                     "If you think you should have access, email admin@navigationgames.org.",
+            "code": "not_enrolled",
+        }), 403
+    if unit_slug is not None:
+        number = course_unit_number(unit_slug)
+        if number is None or number > units_open:
+            return jsonify({"error": "This unit isn't open yet. We'll let you know when it is.", "code": "unit_not_open"}), 403
+    return None
+
+
+@app.route("/training/access", methods=["GET"])
+def training_access():
+    """
+    Whether the signed-in visitor may use the course, and how far it is open.
+    The unit pages call this after sign-in and show the unit, or a short note.
+
+    Response: {"enrolled": true, "is_staff": false, "units_open": 1}
+    "units_open" is the highest open unit number, or null when every unit is
+    open to this person (staff, or access control off). Staff also get
+    "teachers_units_open", how far the course is open to teachers, so a unit
+    page can say it is a staff preview. Not-enrolled visitors get
+    {"enrolled": false} and nothing else.
+    """
+    try:
+        user = get_optional_user()
+    except InvalidTokenError:
+        return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
+    if user is None:
+        return jsonify({"error": "Please sign in."}), 401
+    if user["is_staff"] or not course_access_enforced():
+        teachers_units_open = None
+        if user["is_staff"] and course_access_enforced():
+            try:
+                teachers_units_open = load_course_access()[1]
+            except CourseAccessUnavailable:
+                pass
+        return jsonify({
+            "enrolled": True,
+            "is_staff": bool(user["is_staff"]),
+            "units_open": None,
+            "teachers_units_open": teachers_units_open,
+        })
+    try:
+        emails, units_open = load_course_access()
+    except CourseAccessUnavailable:
+        return jsonify({"error": "We can't check your course access right now. Please try again in a minute."}), 503
+    if user["email"].strip().lower() not in emails:
+        return jsonify({"enrolled": False})
+    return jsonify({"enrolled": True, "is_staff": False, "units_open": units_open})
+
+
+# ---------------------------------------------------------------------------
 # Course tutor (Kickstart Orienteering Teacher Course, prototype)
 #
 # Each course unit page has a tutor chat. The unit material comes from
@@ -749,6 +891,9 @@ def tutor():
     unit = TRAINING_UNITS.get(unit_slug)
     if not unit:
         return jsonify({"error": f"Unknown course unit '{unit_slug}'."}), 400
+    access_error = course_access_error(user, unit_slug)
+    if access_error:
+        return access_error
 
     messages = data.get("messages")
     messages_error = _messages_error(messages)
@@ -864,6 +1009,9 @@ def tutor_progress():
         return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
     if user is None:
         return jsonify({"error": "Please sign in to see your progress."}), 401
+    access_error = course_access_error(user)
+    if access_error:
+        return access_error
 
     gc = get_sheets_client()
     if not gc:
@@ -972,6 +1120,9 @@ def tutor_submit():
     unit = TRAINING_UNITS.get(unit_slug)
     if not unit:
         return jsonify({"error": "Unknown course unit."}), 400
+    access_error = course_access_error(user, unit_slug)
+    if access_error:
+        return access_error
     kind = data.get("kind", "")
     if kind not in SUBMISSION_KINDS:
         return jsonify({"error": "Unknown kind of submission."}), 400
@@ -1138,12 +1289,18 @@ def tutor_speak():
         return jsonify({"error": "Your sign-in expired. Please sign in again."}), 401
     if user is None:
         return jsonify({"error": "Please sign in to hear the tutor."}), 401
+    access_error = course_access_error(user)
+    if access_error:
+        return access_error
 
     data = request.get_json(silent=True) or {}
     if data.get("unit"):
         unit = TRAINING_UNITS.get(data["unit"])
         if not unit:
             return jsonify({"error": "Unknown course unit."}), 400
+        access_error = course_access_error(user, data["unit"])
+        if access_error:
+            return access_error
         text = unit["opening"]
     else:
         text = data.get("text")

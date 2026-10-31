@@ -68,6 +68,7 @@ site/src/pages/sign-in.tsx                 - Where sign-in links land (/sign-in/
 | `/review/conversations/<id>/dismiss` | POST | Google ID token (staff) | Hide a conversation from the reviewer's default list |
 | `/tutor` | POST | sign-in required: Google ID token or email-link session (shares the signed-in `/chat` limit) | Teacher course tutor (`{"unit", "conversation_id", "messages", "profile"}`). Conversation IDs start with `tutor-<unit>-`, so tutor conversations show up in the log sheet and the review tool |
 | `/tutor/progress` | GET | sign-in required | The teacher's latest conversation for each unit and their latest learner profile, rebuilt from the log sheet, so they can pick up on any device |
+| `/training/access` | GET | sign-in required | Whether the signed-in visitor is enrolled in the course and how many units are open to them (`{"enrolled", "is_staff", "units_open"}`). The unit pages call it after sign-in. See [Who can take the course](#who-can-take-the-course) |
 | `/tutor/voice` | GET | public | Whether the tutor can read replies aloud, and the voice's label |
 | `/tutor/speak` | POST | sign-in required | MP3 of a tutor reply (signed with a `speech_token`) or a unit opening, in the ElevenLabs voice. Daily character allowance per teacher |
 | `/tutor/submit` | POST | sign-in required | Sends a saved box (deliverable, profile or map answers) to Navigation Games: emails `COURSE_REVIEWER_EMAIL` (Reply-To the teacher) and the teacher a copy, and logs it in the Submissions tab |
@@ -379,6 +380,25 @@ Teachers sign in with Google, or with a link we email them (for teachers without
 
 For non-staff Google sign-in to work, the OAuth consent screen (Google Cloud > APIs & Services > OAuth consent screen, or Google Auth Platform > Audience) must be **External** and **In production**. Internal means only navigationgames.org accounts; Testing means only the listed test users.
 
+### Who can take the course
+
+Signing in is not enough: anyone with an email address can sign in. The course checks two more things, using two tabs in the conversation log sheet (the `ADVISOR_SHEET_ID` sheet, "Advisor Conversations"). You edit them by hand, and a change takes effect within about two minutes, with no redeploy.
+
+- **`CourseAccess`** (columns `email`, `name`, `applicant_id`, `added`, `note`): one row per enrolled teacher. Only the `email` column matters to the code; the rest is for you. Add a teacher's row before you send them the link. Capitals and stray spaces don't matter. It must be the address they sign in with.
+- **`CourseSettings`** (columns `setting`, `value`): the row `units_open` is the highest unit number open to teachers. `1` means Units 0 and 1; change it to `2` to open Unit 2. It applies to everyone. A missing or non-numeric value means 1.
+
+What the checks cover:
+
+- Staff (a navigationgames.org Google sign-in) always get in, to every unit. An email-link sign-in is never staff, even with a navigationgames.org address. To test as a teacher, add a test address to `CourseAccess` and sign in with an email link.
+- Someone not on the list sees "This address isn't enrolled in the course yet" on a unit page, and `/tutor`, `/tutor/progress`, `/tutor/submit` and `/tutor/speak` refuse them (403, `code: not_enrolled`).
+- A unit past `units_open` shows "Unit N isn't open yet" to teachers, and `/tutor`, `/tutor/submit` and `/tutor/speak` refuse it (403, `code: unit_not_open`). Staff see it with a "Staff preview" note.
+- If the sheet can't be read, the last good copy is used. With no good copy yet, the course closes (503) instead of opening to everyone.
+- The check is off when no log sheet is configured (local development), unless `COURSE_ACCESS_REQUIRED=true`.
+
+The unit page text is in the static site, so the gate on the page keeps it out of the way and does not lock it. The backend checks above are the real control, and they protect the tutor, which is what costs money.
+
+When you first turn this on, **redeploy the backend before pushing the site**. The new unit pages call `/training/access`, and the old backend doesn't have it, so every teacher would see "We couldn't check your access".
+
 ### What teachers make, and how it reaches us
 
 - At the end of most units the tutor writes a saved box (profile, deliverable, map answers). Under it is **Send to Navigation Games**. Pressing it emails `COURSE_REVIEWER_EMAIL` with the work and the conversation ID, with Reply-To set to the teacher, so the reviewer just hits reply. The teacher gets a copy with the curriculum links spelled out. The submission is logged in the **Submissions** tab of the conversation log sheet.
@@ -555,6 +575,7 @@ If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub
 | `TUTOR_VOICE_LABEL` | Backend (optional) | Shown with the voice, default `AI voice`. For a cloned voice say whose, e.g. `AI voice based on Barb's` |
 | `TUTOR_SPEECH_DAILY_CHARS` | Backend (optional) | Characters each teacher can have read aloud per day, default 20000 (about 20 minutes of speech, enough to listen through the longest unit). Teachers see the percentage they have left today |
 | `TUTOR_SPEECH_MONTHLY_CHARS` | Backend (optional) | Characters the whole course can have read aloud per calendar month, default 100000. In memory, so it restarts on a redeploy: a safety net, not exact accounting |
+| `COURSE_ACCESS_REQUIRED` | Backend (optional) | `true` enforces the course access list even when no log sheet is configured. Leave unset in production (the log sheet turns it on) |
 | `COURSE_REVIEWER_EMAIL` | Backend (optional) | Who gets "Send to Navigation Games" emails from the course. Default: `EMAIL_LINK_SENDER`. Must be able to receive mail; replies go straight to the teacher |
 
 Without `SIGN_IN_SECRET` and a sender (or log-only mode), email sign-in is off: the course still works with Google sign-in, and the email form says email sign-in isn't set up yet.

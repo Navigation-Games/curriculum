@@ -11,6 +11,12 @@ audio_caption: A welcome from Barb Bryant, president of Navigation Games (about 
 
 This course gets you ready to teach orienteering to your own students. It's part of Kickstart Orienteering, Navigation Games' program for schools. Plan on about 4 hours before your kit ships, spread over two or three weeks, then three more short units while you teach, mostly reflections on how your classes went. With the two consultations and the class you teach, that comes to about 10 contact hours.
 
+## Getting in
+
+The course is for teachers and school leaders taking part in Kickstart Orienteering. When you're enrolled, we email you. After that, open any unit and sign in with the email address we have for you, either with Google or with a link we email you. You only sign in once, and the tutor on the page uses the same sign-in. If you'd like to take part and haven't heard from us, write to admin@navigationgames.org.
+
+We open the units one at a time, so a later unit may say it isn't open yet. We'll email you when it is.
+
 ## How a unit works
 
 Each unit is a short page followed by a conversation with the course tutor, an AI assistant. The tutor asks about your situation and helps you make something you'll actually use, like a pitch for your principal or the safety briefing you'll give your class. You sign in once, with Google or with a link we email you, and then you can stop partway and pick up later on any device.

@@ -261,7 +261,7 @@ activities:
 
 ### Teacher course files (prototype)
 
-The Kickstart Orienteering Teacher Course lives in `content/training/`: `index.md` is the course home and `unit-0.md`, `unit-1.md` and so on are the units. `scripts/build-training.js` (run as part of the normal build) turns them into pages at `/training/` and writes `ai-advisor/training-units.json` for the course tutor. While the course is a prototype, the pages are unlisted: they work by URL but are not in the sidebar, site search or the advisor's site map.
+The Kickstart Orienteering Teacher Course lives in `content/training/`: `index.md` is the course home and `unit-0.md`, `unit-1.md` and so on are the units. `scripts/build-training.js` (run as part of the normal build) turns them into pages at `/training/` and writes `ai-advisor/training-units.json` for the course tutor. While the course is a prototype, the pages are unlisted: they work by URL but are not in the sidebar, site search or the advisor's site map. Each unit page is wrapped in `<TrainingGate>`, so its text and the tutor show only to a signed-in teacher who is on the access list, on a unit that is open (staff see all units). The course home stays public. Who is enrolled and which units are open is set in two tabs of the conversation log sheet, not in the content files; see "Who can take the course" in `ai-advisor/README.md`.
 
 A unit file has a numbered title, a little frontmatter and six sections:
 

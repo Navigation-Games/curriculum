@@ -1,0 +1,47 @@
+/* The box that stands in for a unit's text until the visitor may see it */
+.gate {
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+}
+
+.gate p {
+  margin: 0 0 0.75rem;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.or {
+  margin-top: 1rem !important;
+  font-size: 0.95rem;
+}
+
+.note {
+  margin-top: 1rem !important;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.linkButton {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--ifm-link-color);
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Shown above a unit that staff can see but teachers can't yet */
+.preview {
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.9rem;
+  border-left: 4px solid var(--ifm-color-warning);
+  background: var(--ifm-color-warning-contrast-background);
+  font-size: 0.9rem;
+}

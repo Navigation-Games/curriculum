@@ -196,10 +196,14 @@ function renderUnit(unit, previous, next) {
   return [
     frontmatter({ title: unitHeading(unit), unlisted: true, hide_table_of_contents: true }),
     GENERATED_NOTE(`${unit.slug}.md`),
+    "import TrainingGate from '@site/src/components/TrainingGate';",
     "import TrainingTutor from '@site/src/components/TrainingTutor';",
     "import YouTube from '@site/src/components/YouTube';",
     '',
     `# ${unitHeading(unit)}`,
+    '',
+    // The unit's text and the tutor show only to an enrolled teacher on an open unit (or to staff)
+    `<TrainingGate unit=${JSON.stringify(unit.slug)}>`,
     '',
     `**About ${unit.meta.minutes} minutes.** You'll make: ${lowerFirst(unit.meta.deliverable)}.`,
     '',
@@ -217,6 +221,8 @@ function renderUnit(unit, previous, next) {
     '## Talk it through with the tutor',
     '',
     `<TrainingTutor unit=${JSON.stringify(unit.slug)} opening={${JSON.stringify(s['Opening'])}} />`,
+    '',
+    '</TrainingGate>',
     '',
     '---',
     '',
