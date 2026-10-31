@@ -282,7 +282,7 @@ For the frontend, either paste the client ID as the fallback value of `reviewOau
 
 Teachers without a Google account can sign in to the course with a link we email them. The backend sends it through the Navigation Games Google Workspace, as one Workspace address, using a service account that is allowed to send mail as that address. You need to be a Google Cloud owner of `navigation-games-curriculum` and a Workspace super admin.
 
-1. **Pick the sender address.** It has to be a real Workspace user (not a group), such as a new `course@navigationgames.org` account or an existing staff account. Replies to sign-in emails go there, so someone should read it.
+1. **Pick the sender address.** It has to be a real Workspace user (not a group), such as a new `training@navigationgames.org` account or an existing staff account. Replies to sign-in emails go there, so someone should read it.
 2. **Turn on the Gmail API** in the Google Cloud project: APIs & Services > Library > Gmail API > Enable.
 3. **Create a service account**, for example `course-mailer`, under IAM & Admin > Service Accounts. Give it no project roles. Open it, note its **Client ID** (a long number), then Keys > Add key > JSON, and download the key file.
 4. **Allow it to send mail as the sender.** In the Workspace Admin console: Security > Access and data control > API controls > Manage Domain Wide Delegation > Add new. Paste the Client ID, with the single scope `https://www.googleapis.com/auth/gmail.send`. That scope can send mail but can't read anyone's inbox.
@@ -296,13 +296,13 @@ Teachers without a Google account can sign in to the course with a link we email
 
    gcloud run services update lesson-advisor --region us-central1 `
      --update-secrets "SIGN_IN_SECRET=sign-in-secret:latest,GMAIL_SERVICE_ACCOUNT_JSON=gmail-service-account:latest" `
-     --update-env-vars EMAIL_LINK_SENDER=course@navigationgames.org
+     --update-env-vars EMAIL_LINK_SENDER=training@navigationgames.org
    ```
 
    Keep the quotes around the `--update-secrets` value. Without them PowerShell treats the comma as a list separator and gcloud fails with "Invalid secret spec".
 
    The Cloud Run service account needs the Secret Accessor role on both secrets (Secret Manager > the secret > Permissions), the same as for the Anthropic key.
-   **Changing the sender later** (for example from a staff address to `course@navigationgames.org`): run `gcloud run services update lesson-advisor --region us-central1 --update-env-vars EMAIL_LINK_SENDER=<new address>`. No rebuild, new secret or Admin console change is needed, because domain-wide delegation covers every user in the Workspace. While a staff address is the sender, replies to sign-in emails go to that inbox and copies collect in its Sent mail.
+   **Changing the sender later** (for example from a staff address to `training@navigationgames.org`): run `gcloud run services update lesson-advisor --region us-central1 --update-env-vars EMAIL_LINK_SENDER=<new address>`. No rebuild, new secret or Admin console change is needed, because domain-wide delegation covers every user in the Workspace. While a staff address is the sender, replies to sign-in emails go to that inbox and copies collect in its Sent mail.
 6. **Delete the downloaded key file** from your computer once it is in Secret Manager.
 7. **Test it**: open a course unit while signed out, enter your own address under "No Google account?", and check that the email arrives and the link signs you in.
 
@@ -568,7 +568,7 @@ If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub
 | `REVIEW_OAUTH_CLIENT_ID` | Backend + frontend (build time) | OAuth client ID for staff sign-in on the review page |
 | `ADVISOR_API_URL` | Frontend (build time) | Backend URL for the chat component |
 | `SIGN_IN_SECRET` | Backend (Cloud Run secret) | Signs email sign-in links and sessions. Any long random string. Changing it signs everyone out who used an email link |
-| `EMAIL_LINK_SENDER` | Backend | The Workspace address sign-in emails come from, e.g. `course@navigationgames.org` |
+| `EMAIL_LINK_SENDER` | Backend | The Workspace address sign-in emails come from, e.g. `training@navigationgames.org` |
 | `GMAIL_SERVICE_ACCOUNT_JSON` | Backend (Cloud Run secret) | Key for the service account that sends as `EMAIL_LINK_SENDER` (see "Email sign-in links setup") |
 | `EMAIL_LINK_LOG_ONLY` | Backend (local development) | `true` writes sign-in links to the log instead of emailing them. Never set it in production |
 | `ELEVENLABS_API_KEY` | Backend (Cloud Run secret) | ElevenLabs key for the tutor's voice (see "Tutor voice setup"). Without it, or without `ELEVENLABS_VOICE_ID` or `SIGN_IN_SECRET`, there are no speaker buttons |

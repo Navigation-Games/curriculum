@@ -409,7 +409,7 @@ def send_email(to_address: str, subject: str, body: str, reply_to: str = "") -> 
     )
     message = EmailMessage()
     message["To"] = to_address
-    message["From"] = f"Navigation Games <{EMAIL_LINK_SENDER}>"
+    message["From"] = f"Navigation Games Training <{EMAIL_LINK_SENDER}>"
     message["Subject"] = subject
     if reply_to:
         message["Reply-To"] = reply_to
