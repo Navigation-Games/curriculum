@@ -31,12 +31,12 @@ If you already have a map, are getting one another way, or won't use a map yet, 
 The tutor goes through the questions with you, then shows your answers in a box with two steps:
 
 1. **Apply for your map.** Click the link that opens the [application form](https://docs.google.com/forms/d/e/1FAIpQLSciJF8ZFi8hqO7OetK17u4A_Te6uxw6Gv6ExeVFRe6Zm-a_Sg/viewform) with your answers filled in. Check them there and submit the form yourself. This is what requests your map, and only you can do it.
-2. **Tell us when you've submitted the YMP application to OUSA.** After you submit the form, press **I've submitted the YMP application to OUSA**. That sends us a copy of your answers and lets us know, so we can follow your application and help if the mapper has questions.
+2. **Tell us when you've submitted the YMP application to OUSA.** After you submit the form, press **I've submitted the YMP application to OUSA**, so we know your application is in.
 Someone from the YMP committee will be in touch after you apply, but that can take a few days, so don't worry if you haven't heard yet.
 
 ## What you'll make
 
-- A short **learner profile**, which the tutor writes from your conversation. Please check it and fix anything it got wrong, because later units use it. Then press **Send to Navigation Games** under it, so a person here can read it before your first call. Everyone does this, with or without a map.
+- A short **learner profile**, which the tutor writes from your conversation. Please check it and fix anything it got wrong, because later units use it. Then press **Send to Navigation Games** under it to hand in this unit's assignment. Everyone does this, with or without a map.
 - A **credit plan**: who approves your PD hours, and what they need from us.
 - Your **map decision**: you have a map already, you're applying to YMP (with your answers ready to submit), you're getting one another way, or you won't use a map for now.
 - If you're in a cohort, a short **introduction** for the others, with one hope and one doubt.
@@ -98,7 +98,7 @@ How the club will collaborate:
 Contact for others wishing to use the area:
 ```
 
-   Tell them the box has two steps, and say both plainly. Step 1: the link opens the application with these answers filled in, and they must check every answer there and submit the form themselves; that is what applies for the map, and nothing is requested until they do. Step 2: after they submit the form to OUSA, they press "I've submitted the YMP application to OUSA", which sends Navigation Games a copy of their answers and lets us know, so we can follow their application and help if the mapper has questions. Tell them someone from the YMP committee will be in touch, but that can take a few days, so not hearing yet is normal. If they'd rather apply later, that's fine; the Map line says "Will apply to YMP later".
+   Tell them the box has two steps, and say both plainly. Step 1: the link opens the application with these answers filled in, and they must check every answer there and submit the form themselves; that is what applies for the map, and nothing is requested until they do. Step 2: after they submit the form to OUSA, they press "I've submitted the YMP application to OUSA", so we know their application is in. Tell them someone from the YMP committee will be in touch, but that can take a few days, so not hearing yet is normal. If they'd rather apply later, that's fine; the Map line says "Will apply to YMP later".
 
 6. PD credit: which state they teach in, and who approves PD hours for them. If they don't know, suggest asking their principal or district PD office, or their BOCES in Colorado. Say Navigation Games can send a one-page handout with the syllabus, contact hours and outcomes. Never promise that the hours will count.
 
@@ -119,7 +119,7 @@ Map:
 PD credit plan:
 ```
 
-If they correct it, write the corrected profile again in the same format. Once it's right, tell them to press "Send to Navigation Games" under the profile. That sends it to a person at Navigation Games who reads it before their first call, and everyone does it, with or without a map. If they are in a cohort, finish by suggesting what to say in their introduction (one hope and one doubt). If they don't know whether they are, say Navigation Games will let them know.
+If they correct it, write the corrected profile again in the same format. The profile is this unit's assignment. Once it's right, tell them to press "Send to Navigation Games" under it to hand it in, with or without a map. If they are in a cohort, finish by suggesting what to say in their introduction (one hope and one doubt). If they don't know whether they are, say Navigation Games will let them know.
 
 ## Reviewer notes
 

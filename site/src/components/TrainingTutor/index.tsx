@@ -175,10 +175,9 @@ function YmpDoneStep({answers, sending}: {answers: string; sending?: Sending}) {
         }}>
         {busy ? 'Sending...' : "I've submitted the YMP application to OUSA"}
       </button>{' '}
-      Press this after you submit the form in Step 1. It sends us a copy of your answers and lets us know, so we
-      can follow your application and help if the mapper has questions. Someone from the YMP committee will be in
-      touch, but that can take a few days, so don't worry if you haven't heard yet. If you decide not to apply,
-      skip this.
+      Press this after you submit the form in Step 1, so we know your application is in. Someone from the YMP
+      committee will be in touch, but that can take a few days, so don't worry if you haven't heard yet. If you
+      decide not to apply, skip this.
     </p>
   );
 }
@@ -532,6 +531,10 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
   const startOver = () => {
     if (!window.confirm('Start this unit\'s conversation over? Your saved profile and deliverables stay.')) return;
     localStorage.removeItem(conversationKey(unit));
+    // A new conversation has nothing sent yet, so its Send buttons start fresh
+    localStorage.removeItem(sentKey(unit));
+    setSentText({});
+    setSendStatus({});
     stopSpeaking();
     setMessages([]);
     setConversationId(newConversationId(unit));
