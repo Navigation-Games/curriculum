@@ -37,6 +37,13 @@
   font: inherit;
 }
 
+/* The "Signed in as ... Sign out" line at the top of a unit */
+.signedIn {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
 /* Shown above a unit that staff can see but teachers can't yet */
 .preview {
   margin: 0 0 1rem;

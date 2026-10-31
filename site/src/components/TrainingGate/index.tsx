@@ -145,8 +145,8 @@ export default function TrainingGate({unit, children}: Props): React.ReactElemen
       <div className={styles.gate}>
         <p className={styles.heading}>Unit {number} isn't open yet</p>
         <p>
-          We open the units one at a time. We'll email you when this one is ready. Meanwhile, the units
-          before it are open on the <Link to="/training/">course home page</Link>.
+          This unit will be available soon. Meanwhile, the units before it are open on
+          the <Link to="/training/">course home page</Link>.
         </p>
         {signedInAs}
       </div>
@@ -158,6 +158,12 @@ export default function TrainingGate({unit, children}: Props): React.ReactElemen
 
   return (
     <>
+      <p className={styles.signedIn}>
+        Signed in as <strong>{user.email}</strong>.{' '}
+        <button type="button" className={styles.linkButton} onClick={signOut}>
+          Sign out
+        </button>
+      </p>
       {previewOnly && (
         <div className={styles.preview}>
           Staff preview: Unit {number} isn't open to teachers yet. Only people signed in with a

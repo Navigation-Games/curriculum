@@ -334,6 +334,14 @@ body.page-camp-overview {
   border-color: var(--ifm-color-emphasis-300);
 }
 
+/* The teacher course pages are "unlisted" (kept out of the sidebar, search, sitemap and search
+   engines). Docusaurus also adds a banner saying so, which is only noise for a teacher. Hiding
+   the banner changes nothing else: the pages stay unlisted. The course pages are the only
+   unlisted pages on the site. */
+.theme-unlisted-banner {
+  display: none;
+}
+
 /* A short recording near the top of a course page (audio: in the content file) */
 .ng-page-audio {
   margin: 0 0 1.5rem;

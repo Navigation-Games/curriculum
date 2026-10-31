@@ -744,7 +744,7 @@ def course_access_error(user: dict, unit_slug: str | None = None):
     if unit_slug is not None:
         number = course_unit_number(unit_slug)
         if number is None or number > units_open:
-            return jsonify({"error": "This unit isn't open yet. We'll let you know when it is.", "code": "unit_not_open"}), 403
+            return jsonify({"error": "This unit will be available soon.", "code": "unit_not_open"}), 403
     return None
 
 

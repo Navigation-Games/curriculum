@@ -15,7 +15,7 @@ This course gets you ready to teach orienteering to your own students. It's part
 
 The course is for teachers and school leaders taking part in Kickstart Orienteering. When you're enrolled, we email you. After that, open any unit and sign in with the email address we have for you, either with Google or with a link we email you. You only sign in once, and the tutor on the page uses the same sign-in. If you'd like to take part and haven't heard from us, write to admin@navigationgames.org.
 
-We open the units one at a time, so a later unit may say it isn't open yet. We'll email you when it is.
+We open the units one at a time, so a later unit may say it will be available soon.
 
 ## How a unit works
 
