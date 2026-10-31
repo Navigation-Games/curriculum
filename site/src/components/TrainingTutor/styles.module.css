@@ -120,3 +120,25 @@
   opacity: 0.7;
   cursor: wait;
 }
+
+/* Shown under the chat once the unit's work is sent: what's done and where to go next */
+.unitDone {
+  margin: 0.75rem;
+  padding: 0.9rem 1rem;
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.unitDone p {
+  margin: 0 0 0.6rem;
+}
+
+.unitDone p:last-child {
+  margin-bottom: 0;
+}
+
+.unitDoneHeading {
+  font-size: 1.15rem;
+  font-weight: 700;
+}

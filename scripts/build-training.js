@@ -220,7 +220,9 @@ function renderUnit(unit, previous, next) {
     '',
     '## Talk it through with the tutor',
     '',
-    `<TrainingTutor unit=${JSON.stringify(unit.slug)} opening={${JSON.stringify(s['Opening'])}} />`,
+    `<TrainingTutor unit=${JSON.stringify(unit.slug)} opening={${JSON.stringify(s['Opening'])}} next={${JSON.stringify(
+      next ? { path: `/training/${next.slug}/`, title: unitHeading(next) } : null,
+    )}} />`,
     '',
     '</TrainingGate>',
     '',

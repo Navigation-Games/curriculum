@@ -28,15 +28,15 @@ If you already have a map, are getting one another way, or won't use a map yet, 
 - A school campus map costs about $550, more for a large or complicated area. OUSA often gives grants for a first map, usually up to $500 (not the $50 administrative fee), and asks for a short summary after a year of how the map was used. Some schools in the Kickstart Orienteering program will get grants from OUSA, Navigation Games or both to cover some or all of the cost of their map, so always apply for the grant.
 - After you apply, someone from the YMP committee gets in touch to set up the project. Add ympcommittee@orienteeringusa.org to your contacts so their email doesn't land in spam.
 
-The tutor goes through the questions with you, then shows your answers in a box with three steps:
+The tutor goes through the questions with you, then shows your answers in a box with two steps:
 
 1. **Apply for your map.** Click the link that opens the [application form](https://docs.google.com/forms/d/e/1FAIpQLSciJF8ZFi8hqO7OetK17u4A_Te6uxw6Gv6ExeVFRe6Zm-a_Sg/viewform) with your answers filled in. Check them there and submit the form yourself. This is what requests your map, and only you can do it.
-2. **Let us know.** Press **Send to Navigation Games** under the box. That sends us a copy of your answers, so we can follow your application and help if the mapper has questions. It does not apply for your map.
-3. **Tell us when it's done.** After you submit the form, press **I've submitted the YMP application**, so we know. Someone from the YMP committee will be in touch, but that can take a few days, so don't worry if you haven't heard yet.
+2. **Tell us when you've submitted the YMP application to OUSA.** After you submit the form, press **I've submitted the YMP application to OUSA**. That sends us a copy of your answers and lets us know, so we can follow your application and help if the mapper has questions.
+Someone from the YMP committee will be in touch after you apply, but that can take a few days, so don't worry if you haven't heard yet.
 
 ## What you'll make
 
-- A short **learner profile**, which the tutor writes from your conversation. Please check it and fix anything it got wrong, because later units use it.
+- A short **learner profile**, which the tutor writes from your conversation. Please check it and fix anything it got wrong, because later units use it. Then press **Send to Navigation Games** under it, so a person here can read it before your first call. Everyone does this, with or without a map.
 - A **credit plan**: who approves your PD hours, and what they need from us.
 - Your **map decision**: you have a map already, you're applying to YMP (with your answers ready to submit), you're getting one another way, or you won't use a map for now.
 - If you're in a cohort, a short **introduction** for the others, with one hope and one doubt.
@@ -63,7 +63,7 @@ Cover these topics, roughly in this order, one question at a time:
 1. Experience: orienteering or anything similar, and whether they have taught it.
 2. Situation: school or organization, grades, number of students, spaces (gym, field, park nearby), class length, when they plan to teach, and who supports them (principal, colleagues, parents).
 3. Hopes: what they want orienteering to do for their students.
-4. Doubts: ask directly. Take every doubt seriously. Don't argue it away. Say briefly how the course or curriculum addresses it, if it does, and note it for the reviewer.
+4. Doubts: ask directly. Take every doubt seriously. Don't argue it away, and don't comment on it or call it a good or real concern. Acknowledge it plainly ("Thanks for letting me know."). Then say briefly how the course or curriculum addresses it, if it does, and note it for the reviewer.
 5. Map. Not everyone needs one, so first ask: "Will you use an orienteering map with your students, now or later?" (A teacher of young children may stay with Animal-O and the other kit activities, for example.) Then follow what they say, and start the profile's Map line with exactly one of these labels:
    - "No map for now": that's fine. The kit activities need no map, and they can add one later. Don't take them through the YMP application. Move on.
    - "Have one": ask where it came from and whether they can use it and print it. Move on.
@@ -98,7 +98,7 @@ How the club will collaborate:
 Contact for others wishing to use the area:
 ```
 
-   Tell them the box has three steps, and say all three plainly. Step 1: the link opens the application with these answers filled in, and they must check every answer there and submit the form themselves; that is what applies for the map, and nothing is requested until they do. Step 2: the "Send to Navigation Games" button sends Navigation Games a copy of their answers so we can follow their application; it does not apply for the map. Step 3: after they submit the form, they press "I've submitted the YMP application" so we know. Tell them someone from the YMP committee will be in touch, but that can take a few days, so not hearing yet is normal. If they'd rather apply later, that's fine; the Map line says "Will apply to YMP later".
+   Tell them the box has two steps, and say both plainly. Step 1: the link opens the application with these answers filled in, and they must check every answer there and submit the form themselves; that is what applies for the map, and nothing is requested until they do. Step 2: after they submit the form to OUSA, they press "I've submitted the YMP application to OUSA", which sends Navigation Games a copy of their answers and lets us know, so we can follow their application and help if the mapper has questions. Tell them someone from the YMP committee will be in touch, but that can take a few days, so not hearing yet is normal. If they'd rather apply later, that's fine; the Map line says "Will apply to YMP later".
 
 6. PD credit: which state they teach in, and who approves PD hours for them. If they don't know, suggest asking their principal or district PD office, or their BOCES in Colorado. Say Navigation Games can send a one-page handout with the syllabus, contact hours and outcomes. Never promise that the hours will count.
 
@@ -119,7 +119,7 @@ Map:
 PD credit plan:
 ```
 
-If they correct it, write the corrected profile again in the same format. If they are in a cohort, finish by suggesting what to say in their introduction (one hope and one doubt). If they don't know whether they are, say Navigation Games will let them know.
+If they correct it, write the corrected profile again in the same format. Once it's right, tell them to press "Send to Navigation Games" under the profile. That sends it to a person at Navigation Games who reads it before their first call, and everyone does it, with or without a map. If they are in a cohort, finish by suggesting what to say in their introduction (one hope and one doubt). If they don't know whether they are, say Navigation Games will let them know.
 
 ## Reviewer notes
 

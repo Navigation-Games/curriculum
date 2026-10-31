@@ -1079,7 +1079,8 @@ def submission_emails(unit_slug: str, unit: dict, kind: str, text: str, user: di
     if kind == "ymp_done":
         reviewer = (
             f"YMP application submitted (self-reported): {who}",
-            f"{who} pressed \"I've submitted the YMP application\" in {title}.\n\n"
+            f"{who} pressed \"I've submitted the YMP application to OUSA\" in {title}. "
+            f"Here is what they sent:\n\n{full_links(text)}\n\n"
             "This is self-reported. The YMP committee usually gets in touch a few days after the application "
             "arrives, so confirm with Orienteering USA before the kit ships, then enter the date in the Kickstart "
             "Tracker's YMP applied column.\n\n"
@@ -1088,7 +1089,8 @@ def submission_emails(unit_slug: str, unit: dict, kind: str, text: str, user: di
         )
         teacher = (
             "We've noted that you submitted the YMP application",
-            "Thanks! Navigation Games has noted that you submitted the Youth Mapping Program application.\n\n"
+            "Thanks! Navigation Games has noted that you submitted the Youth Mapping Program application. "
+            f"Here's a copy of the answers you sent:\n\n{full_links(text)}\n\n"
             "Someone from the YMP committee will be in touch. That can take a few days, so don't worry if you "
             "haven't heard yet. Add ympcommittee@orienteeringusa.org to your contacts so their email doesn't land "
             "in spam.\n\n"

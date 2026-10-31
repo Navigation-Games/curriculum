@@ -28,6 +28,7 @@
 
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Link from '@docusaurus/Link';
 import GoogleSignInButton from '@site/src/components/GoogleSignInButton';
 import EmailSignInForm from '@site/src/components/EmailSignInForm';
 import {useGoogleUser, signOut, bearerToken, setGoogleSession} from '@site/src/lib/googleAuth';
@@ -46,6 +47,7 @@ interface Message {
 interface Props {
   unit: string;
   opening: string;
+  next: {path: string; title: string} | null; // the following unit, or null after the last
 }
 
 const PROFILE_KEY = 'ng-course-profile';
@@ -84,6 +86,9 @@ type SavedKind = 'profile' | 'deliverable' | 'ymp' | 'schedule';
 // What can be sent: a saved box, or the note that the YMP application was submitted
 type SendKind = SavedKind | 'ymp_done';
 const YMP_DONE_TEXT = 'Submitted the YMP application.';
+// What the Step 2 button sends: that line, then the teacher's answers
+const ympDoneText = (answers: string) => `${YMP_DONE_TEXT}\n\n${answers}`;
+
 type Part = {kind: 'text' | SavedKind; text: string};
 
 function splitBlocks(message: string): Part[] {
@@ -113,16 +118,12 @@ export interface Sending {
   status: Partial<Record<SendKind, string>>; // message shown after sending
 }
 
-// What pressing Send does, in words a teacher can act on. The map answers say plainly that
-// Send does not apply for the map: that is the teacher's own step with the YMP form.
+// What pressing Send does, in words a teacher can act on
 const SEND_EXPLANATIONS: Partial<Record<SavedKind, string>> = {
   profile:
-    "Sends your learner profile to a person at Navigation Games, who reads it before your first call and may reply by email. You'll get a copy.",
+    "If you're happy with this profile, click the 'Send to Navigation Games' button to submit your assignment. Otherwise, tell me what you want to change.",
   deliverable:
     "Sends this to a person at Navigation Games, who will read it and reply by email. You'll get a copy.",
-  ymp:
-    "Sends us a copy of these answers, so we can follow your application and help if the mapper has questions. " +
-    "This does not apply for your map: that's Step 1. You'll get a copy by email.",
 };
 
 function SendButton({kind, text, sending}: {kind: SavedKind; text: string; sending?: Sending}) {
@@ -130,15 +131,11 @@ function SendButton({kind, text, sending}: {kind: SavedKind; text: string; sendi
   if (!sending) return null;
   if (sending.sentText[kind] === text) {
     return (
-      <p className={styles.savedAction}>
-        {kind === 'ymp' && <strong>Step 2: let us know. </strong>}
-        {sending.status[kind] || 'Done. Sent to Navigation Games.'}
-      </p>
+      <p className={styles.savedAction}>{sending.status[kind] || 'Done. Sent to Navigation Games.'}</p>
     );
   }
   return (
     <p className={styles.savedAction}>
-      {kind === 'ymp' && <strong>Step 2: let us know. </strong>}
       <button
         className={styles.sendWorkButton}
         disabled={busy}
@@ -153,32 +150,35 @@ function SendButton({kind, text, sending}: {kind: SavedKind; text: string; sendi
   );
 }
 
-// Step 3 of the map box: the teacher tells us they submitted the YMP application
-function YmpDoneStep({sending}: {sending?: Sending}) {
+// Step 2 of the map box: the teacher tells us they submitted the YMP application, and we get their answers
+function YmpDoneStep({answers, sending}: {answers: string; sending?: Sending}) {
   const [busy, setBusy] = useState(false);
   if (!sending) return null;
-  if (sending.sentText.ymp_done === YMP_DONE_TEXT) {
+  const text = ympDoneText(answers);
+  if (sending.sentText.ymp_done === text) {
     return (
       <p className={styles.savedAction}>
-        <strong>Step 3: tell us when it's done. </strong>
+        <strong>Step 2: tell us when you've submitted the YMP application to OUSA. </strong>
         {sending.status.ymp_done || "Done. Thanks, we've noted it."}
       </p>
     );
   }
   return (
     <p className={styles.savedAction}>
-      <strong>Step 3: tell us when it's done. </strong>
+      <strong>Step 2: tell us when you've submitted the YMP application to OUSA. </strong>
       <button
         className={styles.sendWorkButton}
         disabled={busy}
         onClick={() => {
           setBusy(true);
-          sending.send('ymp_done', YMP_DONE_TEXT).finally(() => setBusy(false));
+          sending.send('ymp_done', text).finally(() => setBusy(false));
         }}>
-        {busy ? 'Sending...' : "I've submitted the YMP application"}
+        {busy ? 'Sending...' : "I've submitted the YMP application to OUSA"}
       </button>{' '}
-      Press this after you submit the form, so we know. Someone from the YMP committee will be in touch, but that
-      can take a few days, so don't worry if you haven't heard yet. If you decide not to apply, you can skip this.
+      Press this after you submit the form in Step 1. It sends us a copy of your answers and lets us know, so we
+      can follow your application and help if the mapper has questions. Someone from the YMP committee will be in
+      touch, but that can take a few days, so don't worry if you haven't heard yet. If you decide not to apply,
+      skip this.
     </p>
   );
 }
@@ -215,8 +215,8 @@ function SavedBlock({kind, text, sending}: {kind: SavedKind; text: string; sendi
           Each class comes with a 10-minute reminder afterwards to reflect on it with the tutor.
         </p>
       )}
-      {kind !== 'schedule' && <SendButton kind={kind} text={text} sending={sending} />}
-      {kind === 'ymp' && <YmpDoneStep sending={sending} />}
+      {kind !== 'schedule' && kind !== 'ymp' && <SendButton kind={kind} text={text} sending={sending} />}
+      {kind === 'ymp' && <YmpDoneStep answers={text} sending={sending} />}
     </div>
   );
 }
@@ -264,7 +264,7 @@ function SpeakButton({state, onClick}: {state: SpeakState; onClick: () => void})
   );
 }
 
-export default function TrainingTutor({unit, opening}: Props): React.ReactElement {
+export default function TrainingTutor({unit, opening, next}: Props): React.ReactElement {
   const {siteConfig} = useDocusaurusContext();
   const apiUrl = (siteConfig.customFields?.advisorApiUrl as string) || 'http://localhost:8080';
   const googleUser = useGoogleUser();
@@ -393,6 +393,11 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
         },
       }
     : undefined;
+
+  // The teacher got a map application box from the tutor but hasn't pressed Step 2 yet
+  const mapStepPending =
+    !Object.keys(sentText).some(kind => kind === 'ymp_done') &&
+    messages.some(m => m.role === 'assistant' && m.content.includes('```ymp'));
 
   const toggleReadAloud = () => {
     const on = !readAloud;
@@ -611,6 +616,26 @@ export default function TrainingTutor({unit, opening}: Props): React.ReactElemen
 
         {error && <div className={chatStyles.error}><p>{error}</p></div>}
       </div>
+
+      {/* Once the unit's work is sent, say plainly that the unit is done and what comes next */}
+      {googleUser && (sentText.profile || sentText.deliverable) && (
+        <div className={styles.unitDone}>
+          <p className={styles.unitDoneHeading}>You've finished this unit.</p>
+          {mapStepPending && (
+            <p>
+              One thing first: you started a map application, and its Step 2 button ("I've submitted the YMP
+              application to OUSA") is still waiting for you in the box above.
+            </p>
+          )}
+          <p>
+            {next ? (
+              <Link className="button button--primary" to={next.path}>Continue to {next.title} →</Link>
+            ) : (
+              <Link className="button button--primary" to="/training/">Back to the course home →</Link>
+            )}
+          </p>
+        </div>
+      )}
 
       {googleUser && (
       <div className={chatStyles.inputArea}>
