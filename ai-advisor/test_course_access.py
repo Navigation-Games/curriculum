@@ -47,10 +47,10 @@ STRANGER = "stranger@school.org"
 
 @pytest.fixture
 def sheets(monkeypatch):
-    """The fake access list: ENROLLED is on it, and Units 0 and 1 are open."""
+    """The fake access list: ENROLLED is on it, and Units 1 and 2 are open."""
     state = {
         "access": [["email", "name", "applicant_id", "added", "note"], ["  Enrolled@School.org ", "Ellen", "KO-2026-001", "", ""], ["", "", "", "", ""]],
-        "settings": [["setting", "value"], ["units_open", "1"]],
+        "settings": [["setting", "value"], ["units_open", "2"]],
         "fail": False,
         "reads": 0,
     }
@@ -64,7 +64,7 @@ def sheets(monkeypatch):
     monkeypatch.setattr(advisor, "SPREADSHEET_ID", "fake-sheet-id")
     monkeypatch.setattr(advisor, "_open_spreadsheet", lambda: object())
     monkeypatch.setattr(advisor, "_get_or_create_worksheet", fake_worksheet)
-    monkeypatch.setattr(advisor, "_course_access_cache", {"at": 0.0, "ok": False, "emails": set(), "units_open": 1})
+    monkeypatch.setattr(advisor, "_course_access_cache", {"at": 0.0, "ok": False, "emails": set(), "units_open": 2})
     return state
 
 
@@ -88,7 +88,7 @@ def as_staff(monkeypatch):
     )
 
 
-def ask(client, email, unit="unit-0"):
+def ask(client, email, unit="unit-1"):
     body = {"unit": unit, "messages": [{"role": "user", "content": "Hi, I teach PE."}]}
     return client.post("/tutor", json=body, headers=headers(email))
 
@@ -96,8 +96,8 @@ def ask(client, email, unit="unit-0"):
 # --- the tutor -------------------------------------------------------------
 
 def test_enrolled_teacher_can_use_an_open_unit(client):
-    assert ask(client, ENROLLED, "unit-0").status_code == 200
     assert ask(client, ENROLLED, "unit-1").status_code == 200
+    assert ask(client, ENROLLED, "unit-2").status_code == 200
 
 
 def test_email_case_and_spaces_do_not_matter(client):
@@ -112,24 +112,24 @@ def test_someone_not_on_the_list_is_refused(client):
 
 
 def test_unit_past_units_open_is_refused(client):
-    r = ask(client, ENROLLED, "unit-2")
+    r = ask(client, ENROLLED, "unit-3")
     assert r.status_code == 403
     assert r.get_json()["code"] == "unit_not_open"
 
 
 def test_opening_a_unit_in_the_sheet_takes_effect_after_the_cache_expires(client, sheets, monkeypatch):
-    assert ask(client, ENROLLED, "unit-2").status_code == 403
-    sheets["settings"][1][1] = "2"
+    assert ask(client, ENROLLED, "unit-3").status_code == 403
+    sheets["settings"][1][1] = "3"
     # Still the cached copy
-    assert ask(client, ENROLLED, "unit-2").status_code == 403
+    assert ask(client, ENROLLED, "unit-3").status_code == 403
     advisor._course_access_cache["at"] = time.time() - advisor.COURSE_ACCESS_CACHE_SECONDS - 1
-    assert ask(client, ENROLLED, "unit-2").status_code == 200
+    assert ask(client, ENROLLED, "unit-3").status_code == 200
 
 
 def test_staff_can_use_any_unit_without_being_on_the_list(client, monkeypatch):
     as_staff(monkeypatch)
-    assert ask(client, "ignored@x.org", "unit-0").status_code == 200
-    assert ask(client, "ignored@x.org", "unit-7").status_code == 200
+    assert ask(client, "ignored@x.org", "unit-1").status_code == 200
+    assert ask(client, "ignored@x.org", "unit-8").status_code == 200
 
 
 def test_email_link_session_is_never_staff(client):
@@ -140,8 +140,8 @@ def test_email_link_session_is_never_staff(client):
 
 def test_missing_or_bad_units_open_setting_falls_back_to_the_default(client, sheets):
     sheets["settings"] = [["setting", "value"], ["units_open", "soon"]]
-    assert ask(client, ENROLLED, "unit-1").status_code == 200
-    assert ask(client, ENROLLED, "unit-2").status_code == 403
+    assert ask(client, ENROLLED, "unit-2").status_code == 200
+    assert ask(client, ENROLLED, "unit-3").status_code == 403
 
 
 def test_sheet_failure_with_nothing_cached_closes_the_course(client, sheets):
@@ -160,13 +160,13 @@ def test_the_sheet_is_not_read_on_every_request(client, sheets):
     ask(client, ENROLLED)
     reads = sheets["reads"]
     ask(client, ENROLLED)
-    ask(client, ENROLLED, "unit-1")
+    ask(client, ENROLLED, "unit-2")
     assert sheets["reads"] == reads
 
 
 def test_access_is_not_enforced_without_a_log_sheet(client, monkeypatch):
     monkeypatch.setattr(advisor, "SPREADSHEET_ID", "")
-    assert ask(client, STRANGER, "unit-5").status_code == 200
+    assert ask(client, STRANGER, "unit-6").status_code == 200
 
 
 # --- the other tutor endpoints ---------------------------------------------
@@ -177,9 +177,9 @@ def test_progress_needs_enrollment(client):
 
 
 def test_submit_needs_enrollment_and_an_open_unit(client):
-    body = {"unit": "unit-0", "kind": "profile", "text": "My profile"}
+    body = {"unit": "unit-1", "kind": "profile", "text": "My profile"}
     assert client.post("/tutor/submit", json=body, headers=headers(STRANGER)).status_code == 403
-    body["unit"] = "unit-3"
+    body["unit"] = "unit-4"
     r = client.post("/tutor/submit", json=body, headers=headers(ENROLLED))
     assert r.status_code == 403
     assert r.get_json()["code"] == "unit_not_open"
@@ -187,7 +187,7 @@ def test_submit_needs_enrollment_and_an_open_unit(client):
 
 def test_voice_needs_enrollment(client, monkeypatch):
     monkeypatch.setattr(advisor, "voice_enabled", lambda: True)
-    r = client.post("/tutor/speak", json={"unit": "unit-0"}, headers=headers(STRANGER))
+    r = client.post("/tutor/speak", json={"unit": "unit-1"}, headers=headers(STRANGER))
     assert r.status_code == 403
 
 
@@ -200,7 +200,7 @@ def test_access_needs_sign_in(client):
 def test_access_for_an_enrolled_teacher(client):
     r = client.get("/training/access", headers=headers(ENROLLED))
     assert r.status_code == 200
-    assert r.get_json() == {"enrolled": True, "is_staff": False, "units_open": 1}
+    assert r.get_json() == {"enrolled": True, "is_staff": False, "units_open": 2}
 
 
 def test_access_for_someone_not_enrolled_reveals_nothing_more(client):
@@ -213,7 +213,7 @@ def test_access_for_staff_has_every_unit_open(client, monkeypatch):
     as_staff(monkeypatch)
     r = client.get("/training/access", headers=headers("x@y.org"))
     # Staff also learn how far the course is open to teachers, for the preview banner
-    assert r.get_json() == {"enrolled": True, "is_staff": True, "units_open": None, "teachers_units_open": 1}
+    assert r.get_json() == {"enrolled": True, "is_staff": True, "units_open": None, "teachers_units_open": 2}
 
 
 def test_access_check_fails_closed_when_the_sheet_is_unreadable(client, sheets):

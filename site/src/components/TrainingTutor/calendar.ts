@@ -1,10 +1,10 @@
 /**
- * Turns the tutor's ```schedule block (written at the end of Unit 4) into a
+ * Turns the tutor's ```schedule block (written at the end of Unit 5) into a
  * calendar file the teacher can open in Google Calendar, Outlook or Apple
  * Calendar. Each class gets an event, and right after it a 10-minute
- * reminder to reflect on the class in Unit 6.
+ * reminder to reflect on the class in Unit 7.
  *
- * The block has one class per line, in the format the Unit 4 tutor
+ * The block has one class per line, in the format the Unit 5 tutor
  * instructions ask for:
  *
  *   2026-11-03 10:15 | 45 | Session 1: Know Your Space

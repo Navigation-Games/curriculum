@@ -2,7 +2,7 @@
 
 A running log of Barb's edits and comments on the teacher course text, so the patterns can go into the voice guidance (the "Writing in Barb's Voice" section of CLAUDE.md and the Voice section of `ai-advisor/tutor-prompt.md`). Add new edits at the bottom with the date and where they were made. When a pattern shows up more than once, promote it to the guidance.
 
-## October 26, 2026: Unit 1 (What Orienteering Is and Why It Works)
+## October 26, 2026: Unit 2 (What Orienteering Is and Why It Works)
 
 | Before | After / comment | Pattern |
 |---|---|---|
@@ -19,8 +19,8 @@ A running log of Barb's edits and comments on the teacher course text, so the pa
 | Growth mindset began "Plenty of kids, and adults, are sure they're 'bad with directions.'" | Lead with a positive definition: believing you can learn, as opposed to believing you can't. Then: we build that belief with small, achievable steps. | Open with what something is, positively, not with the problem. |
 | "That's why each lesson stops for reflection questions partway through as well as at the end." | Removed: not clearly true of every lesson. | Don't claim "every" or "each" unless it's true. |
 | IOF video preview frame | Too much bare skin; use a different image. | Check images and previews for how they read to schools. |
-| Unit 1 overall | Wants more about why orienteering is good for kids and why this curriculum, and a video of kids orienteering. Asks how the three ideas were chosen; her own candidates: moving and navigating in the real world, every kid gets a meaningful experience, carry-over to other areas of life. | When listing guiding ideas, say why they were chosen. Lead with what matters to kids. |
+| Unit 2 overall | Wants more about why orienteering is good for kids and why this curriculum, and a video of kids orienteering. Asks how the three ideas were chosen; her own candidates: moving and navigating in the real world, every kid gets a meaningful experience, carry-over to other areas of life. | When listing guiding ideas, say why they were chosen. Lead with what matters to kids. |
 | Checking: "...check the code at each checkpoint with a 'clue sheet'." | "...check the code at each checkpoint themselves." | Cut the extra detail once the point is made. |
 | Growth mindset: "...small enough to succeed at, and accuracy counts for more than speed, so by the time students navigate a course on their own they have a lot of evidence that they can." | Full stop after "succeed at". Then: "By the time students navigate a course with a real orienteering map, they've built up confidence from achievements along the way." Accuracy vs speed "not getting across what we want". | Drop a point that doesn't land rather than explain it. Talk about confidence and achievement, not "evidence". |
-| Videos in Unit 1 | Move the IOF and Cambridge Camping videos to the About Orienteering page (the IOF one by what orienteering is, the kids one in "Why orienteering is good for kids"). | Put shared material where every reader sees it, and point to it. |
+| Videos in Unit 2 | Move the IOF and Cambridge Camping videos to the About Orienteering page (the IOF one by what orienteering is, the kids one in "Why orienteering is good for kids"). | Put shared material where every reader sees it, and point to it. |
 | "Three habits the lessons build", with "Being lost" as one | "Being lost" isn't a habit: it's dealing with, embracing, recovering from and handling being lost. Chose "Handling being lost", under "Three things the lessons build" (Growth mindset is a belief, not a habit). | Labels must fit every item they cover; name the skill, not the situation. |

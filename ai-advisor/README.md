@@ -30,7 +30,7 @@ ai-advisor/
   test_tutor.py       - Tests for the /tutor endpoint
   test_email_signin.py - Tests for email sign-in links and /tutor/progress
   test_tutor_voice.py - Tests for the tutor's voice (/tutor/voice, /tutor/speak)
-  test_tutor_submit.py - Tests for sending course work (/tutor/submit) and the Unit 4 plan in later units
+  test_tutor_submit.py - Tests for sending course work (/tutor/submit) and the Unit 5 plan in later units
   daily-summary-email.gs - Apps Script: daily email when the log sheet has new rows
   course-checkin.gs   - Apps Script: weekly email listing course teachers and who has gone quiet
   requirements.txt    - Python dependencies
@@ -385,7 +385,7 @@ For non-staff Google sign-in to work, the OAuth consent screen (Google Cloud > A
 Signing in is not enough: anyone with an email address can sign in. The course checks two more things, using two tabs in the conversation log sheet (the `ADVISOR_SHEET_ID` sheet, "Advisor Conversations"). You edit them by hand, and a change takes effect within about two minutes, with no redeploy.
 
 - **`CourseAccess`** (columns `email`, `name`, `applicant_id`, `added`, `note`): one row per enrolled teacher. Only the `email` column matters to the code; the rest is for you. Add a teacher's row before you send them the link. Capitals and stray spaces don't matter. It must be the address they sign in with.
-- **`CourseSettings`** (columns `setting`, `value`): the row `units_open` is the highest unit number open to teachers. `1` means Units 0 and 1; change it to `2` to open Unit 2. It applies to everyone. A missing or non-numeric value means 1.
+- **`CourseSettings`** (columns `setting`, `value`): the row `units_open` is the highest unit number open to teachers. `2` means Units 1 and 2; change it to `3` to open Unit 3. It applies to everyone. A missing or non-numeric value means 2.
 
 What the checks cover:
 
@@ -402,25 +402,25 @@ When you first turn this on, **redeploy the backend before pushing the site**. T
 ### What teachers make, and how it reaches us
 
 - At the end of most units the tutor writes a saved box (profile, deliverable, map answers). Under it is **Send to Navigation Games**. Pressing it emails `COURSE_REVIEWER_EMAIL` with the work and the conversation ID, with Reply-To set to the teacher, so the reviewer just hits reply. The teacher gets a copy with the curriculum links spelled out. The submission is logged in the **Submissions** tab of the conversation log sheet.
-- Turnaround we promise: the Unit 4 plan within 3 business days (Consultation 1 depends on it), everything else within a week. Both are in `REVIEW_TURNAROUND` in `app.py`.
+- Turnaround we promise: the Unit 5 plan within 3 business days (Consultation 1 depends on it), everything else within a week. Both are in `REVIEW_TURNAROUND` in `app.py`.
 - The whole conversation is always in the review tool (`/review-conversations/`), whether or not the teacher pressed Send.
-- **Unit 4 plan in later units.** The teacher's latest Unit 4 plan goes to the tutor in Units 5 to 7, so it knows what they planned to teach. Plans change: Unit 6 asks what they actually did.
-- **Class calendar.** At the end of Unit 4 the tutor offers a calendar file of the teacher's classes (a `schedule` box with "Add these classes to my calendar"). Each class comes with a 10-minute reminder right after it, linking to Unit 6.
+- **Unit 5 plan in later units.** The teacher's latest Unit 5 plan goes to the tutor in Units 6 to 8, so it knows what they planned to teach. Plans change: Unit 7 asks what they actually did.
+- **Class calendar.** At the end of Unit 5 the tutor offers a calendar file of the teacher's classes (a `schedule` box with "Add these classes to my calendar"). Each class comes with a 10-minute reminder right after it, linking to Unit 7.
 
 ### When people at Navigation Games give feedback
 
-1. **Each deliverable**, by email reply: the Unit 4 plan within 3 business days, the others within a week.
+1. **Each deliverable**, by email reply: the Unit 5 plan within 3 business days, the others within a week.
 2. **Consultation 1**, after the unit plan and before teaching. It starts from the reviewed plan.
 3. **After the first class**, a short "How did it go?" email from the named staff member. If it went badly, offer a 15-minute call. This is when teachers most need a person.
-4. **Unit 6 reflections**, skimmed once a week. Safety notes get a reply the same day (the tutor also asks the teacher to email admin@navigationgames.org).
+4. **Unit 7 reflections**, skimmed once a week. Safety notes get a reply the same day (the tutor also asks the teacher to email admin@navigationgames.org).
 5. **Cohort show and tell** in the Google Group.
-6. **Consultation 2**, from the reflections, the Unit 7 plan and the post-unit survey. Then the certificate.
+6. **Consultation 2**, from the reflections, the Unit 8 plan and the post-unit survey. Then the certificate.
 7. **Feedback on the course itself**: the "Was this page helpful?" widget on every page, the post-unit survey, and what reviewers notice in the conversations.
 
 ### Keeping track of each teacher's dates
 
-- The Unit 4 plan has dates for each class. For the first cohort, the reviewer copies them into the Kickstart Tracker (Teaching starts, Teaching ends, Map expected, Consultation 1 and 2), and the Tracker's date flags show who's due for what.
-- Unit 6 asks what the teacher actually did, so changed dates come back through the reflections. Update the Tracker when they do.
+- The Unit 5 plan has dates for each class. For the first cohort, the reviewer copies them into the Kickstart Tracker (Teaching starts, Teaching ends, Map expected, Consultation 1 and 2), and the Tracker's date flags show who's due for what.
+- Unit 7 asks what the teacher actually did, so changed dates come back through the reflections. Update the Tracker when they do.
 - The **weekly check-in email** (`course-checkin.gs`, setup below) lists every teacher in the course, where they are, and who has gone quiet: 7 days without activity before the kit, 14 days while teaching. Each quiet teacher comes with a suggested check-in email. Staff send it themselves, after a look at the Tracker, because the log doesn't know about a school break or a known teaching date. Later, once the wording is tested, the script could send the nudges itself.
 
 ### How the cohort talks to each other
@@ -428,10 +428,10 @@ When you first turn this on, **redeploy the backend before pushing the site**. T
 A cohort is the teachers who start in the same window (for example the six Colorado applicants). A solo teacher is a cohort of one, with a Navigation Games staff member as their partner.
 
 - **Async discussion: one Google Group per cohort**, used as an email list (for example `kickstart-cohort-2026-11@navigationgames.org`). It works with any email address, including school accounts that block Google Chat or Classroom with outside domains. Create it at groups.google.com in the NG Workspace, allow external members, set "who can post" to group members, and add each teacher by the address they sign in with. Avoid Slack and Discord, which school networks often block.
-- **What goes there:** each teacher's introduction from Unit 0 (one hope and one doubt), one discussion prompt per unit from the staff member, swapping unit plans with a partner for feedback (Unit 4), and a show-and-tell thread while teaching (a photo or a story).
-- **Live: one Google Meet Q&A per cohort**, about an hour, at the point most of the cohort has finished Unit 4. Create it as a Calendar event with a Meet link and invite the group. Recording needs a paid Workspace edition; the free nonprofit edition doesn't record, so share notes afterwards for anyone who missed it. The NG host may need to admit people from outside the domain.
+- **What goes there:** each teacher's introduction from Unit 1 (one hope and one doubt), one discussion prompt per unit from the staff member, swapping unit plans with a partner for feedback (Unit 5), and a show-and-tell thread while teaching (a photo or a story).
+- **Live: one Google Meet Q&A per cohort**, about an hour, at the point most of the cohort has finished Unit 5. Create it as a Calendar event with a Meet link and invite the group. Recording needs a paid Workspace edition; the free nonprofit edition doesn't record, so share notes afterwards for anyone who missed it. The NG host may need to admit people from outside the domain.
 - **In the Tracker:** a Cohort column (for example `C-2026-11`) on each applicant's row.
-- The tutor tells a teacher in a cohort to post their introduction at the end of Unit 0, and tells teachers who don't know their cohort that Navigation Games will let them know.
+- The tutor tells a teacher in a cohort to post their introduction at the end of Unit 1, and tells teachers who don't know their cohort that Navigation Games will let them know.
 
 ### A cohort group from start to finish
 
@@ -439,7 +439,7 @@ Each cohort group has one owner at Navigation Games, named in the Tracker, who s
 
 1. **Set up (Week 0, part of the 2 setup hours).** Create the group as above. Turn off "anyone can ask to join", so only the owner adds people. Allow members to see the conversation history on the web, so a teacher who joins late can read what came before. The owner subscribes with email delivery or a daily digest. Add the group address to the welcome email and say how long the group runs ("through the end of the course in [month]").
 2. **Run (10 to 15 minutes a week, plus the weekly prompt).** Read the group in the digest, answer questions, and nudge anyone whose introduction is missing. The weekly check-in email reads only the tutor log, not the group, so it won't show who is silent there. Posting is encouraged, never required.
-3. **Add people partway through.** Anyone can be added at any time. Ask them to post an introduction anyway, pair them for the Unit 4 swap (a group of three, or a staff partner), and send them the Q&A notes if they missed it.
+3. **Add people partway through.** Anyone can be added at any time. Ask them to post an introduction anyway, pair them for the Unit 5 swap (a group of three, or a staff partner), and send them the Q&A notes if they missed it.
 4. **Close (2 to 4 weeks after the last Consultation 2).** Send the closing email below. Two weeks later, on the date it names, set "who can post" to managers only. Keep the group rather than deleting it, so people keep the archive and nobody posts into a group nobody reads. Mark the cohort closed in the Tracker.
 
 **Closing email template.** Send from the group owner to the group. Fill in the brackets.
@@ -473,7 +473,7 @@ The tutor answers in whatever language the teacher writes in, and the `eleven_v4
 - **Talking instead of typing:** every common system has voice typing built in, so there's no microphone button. Windows: Windows key + H. Mac: press Fn (Globe) twice. Phones: the microphone on the keyboard. The tip under the answer box shows the right one for the teacher's device, and the course home mentions it.
 - **Listening to the tutor:** the Listen button and the "Read the tutor's message out loud" switch use ElevenLabs credits, not Anthropic usage. "Read-aloud credits: 75% left today" is the teacher's share of their daily read-aloud allowance. See [Tutor voice setup](#tutor-voice-setup-one-time).
 - **A whole page read aloud:** the browser does this for free. Edge: Ctrl+Shift+U, or right-click > Read aloud. Chrome: right-click > Open in reading mode, then play.
-- **Welcome recordings:** the course home and Unit 0 have short recordings in Barb's real voice (not the clone), set with `audio` in the content file's frontmatter. Real recordings need no AI-voice label.
+- **Welcome recordings:** the course home and Unit 1 have short recordings in Barb's real voice (not the clone), set with `audio` in the content file's frontmatter. Real recordings need no AI-voice label.
 
 ### Costs to watch
 

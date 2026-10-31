@@ -1,11 +1,11 @@
 /**
  * The Orienteering USA Youth Mapping Program (YMP) application, a Google Form.
- * Used to build a pre-filled link from the answers the Unit 0 tutor helps a
+ * Used to build a pre-filled link from the answers the Unit 1 tutor helps a
  * teacher draft. The teacher opens the link, checks every answer, and submits
  * the form themselves.
  *
  * The tutor writes the answers as "Label: answer" lines in a ```ymp block,
- * using exactly the labels below (they're listed in content/training/unit-0.md).
+ * using exactly the labels below (they're listed in content/training/unit-1.md).
  * Each label maps to the form's hidden field ID ("entry" number).
  *
  * If OUSA changes the form, refresh the IDs: open the form, view the page

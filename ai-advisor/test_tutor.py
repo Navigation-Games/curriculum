@@ -64,7 +64,7 @@ def signed_in():
     return {"Authorization": "Bearer " + advisor.make_session_token(TEACHER), "X-Forwarded-For": "5.6.7.8"}
 
 
-def ask(client, unit="unit-0", headers=None, **extra):
+def ask(client, unit="unit-1", headers=None, **extra):
     body = {"unit": unit, "messages": [{"role": "user", "content": "Hi, I teach PE."}], **extra}
     return client.post("/tutor", json=body, headers=signed_in() if headers is None else headers)
 
@@ -82,49 +82,49 @@ def test_tutor_replies(client):
 
 
 def test_system_prompt_has_general_and_unit_instructions(client, sent):
-    ask(client, unit="unit-1")
-    unit = advisor.TRAINING_UNITS["unit-1"]
+    ask(client, unit="unit-2")
+    unit = advisor.TRAINING_UNITS["unit-2"]
     assert "Course tutor for the Kickstart Orienteering Teacher Course" in sent["system_prompt"]
     assert unit["instructions"] in sent["system_prompt"]
     assert unit["opening"] in sent["system_prompt"]
 
 
 def test_system_prompt_leaves_out_reviewer_notes(client, sent):
-    ask(client, unit="unit-0")
-    raw = (Path(__file__).parent.parent / "content" / "training" / "unit-0.md").read_text()
+    ask(client, unit="unit-1")
+    raw = (Path(__file__).parent.parent / "content" / "training" / "unit-1.md").read_text()
     reviewer_notes = raw.split("## Reviewer notes", 1)[1].strip()
     assert reviewer_notes not in sent["system_prompt"]
 
 
 def test_profile_is_passed_to_the_tutor(client, sent):
-    ask(client, unit="unit-4", profile="Students (grades, number): grade 4, 60")
+    ask(client, unit="unit-5", profile="Students (grades, number): grade 4, 60")
     assert "grade 4, 60" in sent["system_prompt"]
 
 
 def test_profile_is_truncated(client, sent):
-    ask(client, unit="unit-4", profile="x" * 10000)
+    ask(client, unit="unit-5", profile="x" * 10000)
     assert "x" * advisor.TUTOR_PROFILE_MAX_CHARS in sent["system_prompt"]
     assert "x" * (advisor.TUTOR_PROFILE_MAX_CHARS + 1) not in sent["system_prompt"]
 
 
 def test_conversation_id_names_the_unit(client):
-    r = ask(client, unit="unit-2", conversation_id="abc")
-    assert r.get_json()["conversation_id"] == "tutor-unit-2-abc"
-    r = ask(client, unit="unit-2", conversation_id="tutor-unit-2-abc")
-    assert r.get_json()["conversation_id"] == "tutor-unit-2-abc"
+    r = ask(client, unit="unit-3", conversation_id="abc")
+    assert r.get_json()["conversation_id"] == "tutor-unit-3-abc"
+    r = ask(client, unit="unit-3", conversation_id="tutor-unit-3-abc")
+    assert r.get_json()["conversation_id"] == "tutor-unit-3-abc"
 
 
 def test_unknown_unit_is_rejected(client):
-    r = ask(client, unit="unit-99")
+    r = ask(client, unit="unit-100")
     assert r.status_code == 400
 
 
 def test_malformed_messages_are_rejected(client):
-    r = client.post("/tutor", json={"unit": "unit-0", "messages": []}, headers=signed_in())
+    r = client.post("/tutor", json={"unit": "unit-1", "messages": []}, headers=signed_in())
     assert r.status_code == 400
     r = client.post(
         "/tutor",
-        json={"unit": "unit-0", "messages": [{"role": "assistant", "content": "Hi"}]},
+        json={"unit": "unit-1", "messages": [{"role": "assistant", "content": "Hi"}]},
         headers=signed_in(),
     )
     assert r.status_code == 400

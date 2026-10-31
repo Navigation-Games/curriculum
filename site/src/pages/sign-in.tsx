@@ -1,5 +1,5 @@
 /**
- * Landing page for emailed sign-in links (/sign-in/?token=...&next=/training/unit-0/).
+ * Landing page for emailed sign-in links (/sign-in/?token=...&next=/training/unit-1/).
  *
  * Exchanges the link's token for a 30-day session (POST
  * /auth/email-link/verify), stores it in the shared auth store, and goes on

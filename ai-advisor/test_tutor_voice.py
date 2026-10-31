@@ -51,7 +51,7 @@ def speak(client, headers=None, **body):
 def test_voice_is_off_without_a_key(client, monkeypatch):
     monkeypatch.setattr(advisor, "ELEVENLABS_API_KEY", "")
     assert client.get("/tutor/voice").get_json()["enabled"] is False
-    assert speak(client, unit="unit-0").status_code == 404
+    assert speak(client, unit="unit-1").status_code == 404
 
 
 def test_voice_reports_its_label(client, monkeypatch):
@@ -61,7 +61,7 @@ def test_voice_reports_its_label(client, monkeypatch):
 
 def test_replies_come_with_a_speech_token_that_reads_them_aloud(client, spoken):
     reply = client.post(
-        "/tutor", json={"unit": "unit-0", "messages": [{"role": "user", "content": "Hi"}]}, headers=signed_in()
+        "/tutor", json={"unit": "unit-1", "messages": [{"role": "user", "content": "Hi"}]}, headers=signed_in()
     ).get_json()
     response = speak(client, text=reply["response"], speech_token=reply["speech_token"])
     assert response.status_code == 200
@@ -72,7 +72,7 @@ def test_replies_come_with_a_speech_token_that_reads_them_aloud(client, spoken):
 def test_no_speech_token_without_the_voice(client, monkeypatch):
     monkeypatch.setattr(advisor, "ELEVENLABS_VOICE_ID", "")
     reply = client.post(
-        "/tutor", json={"unit": "unit-0", "messages": [{"role": "user", "content": "Hi"}]}, headers=signed_in()
+        "/tutor", json={"unit": "unit-1", "messages": [{"role": "user", "content": "Hi"}]}, headers=signed_in()
     ).get_json()
     assert "speech_token" not in reply
 
@@ -85,14 +85,14 @@ def test_it_will_not_read_text_the_tutor_did_not_write(client, spoken):
 
 
 def test_it_reads_a_unit_opening(client, spoken):
-    assert speak(client, unit="unit-0").status_code == 200
-    assert spoken == [advisor.speech_text(advisor.TRAINING_UNITS["unit-0"]["opening"])]
-    assert speak(client, unit="unit-99").status_code == 400
+    assert speak(client, unit="unit-1").status_code == 200
+    assert spoken == [advisor.speech_text(advisor.TRAINING_UNITS["unit-1"]["opening"])]
+    assert speak(client, unit="unit-100").status_code == 400
 
 
 def test_teachers_must_sign_in(client):
-    assert speak(client, headers={}, unit="unit-0").status_code == 401
-    assert speak(client, headers={"Authorization": "Bearer ngs.bad"}, unit="unit-0").status_code == 401
+    assert speak(client, headers={}, unit="unit-1").status_code == 401
+    assert speak(client, headers={"Authorization": "Bearer ngs.bad"}, unit="unit-1").status_code == 401
 
 
 def test_daily_allowance(client, monkeypatch):
@@ -130,15 +130,15 @@ def test_elevenlabs_failure_is_reported_and_not_counted(client, monkeypatch):
         raise requests.ConnectionError("down")
 
     monkeypatch.setattr(advisor, "synthesize_speech", broken)
-    assert speak(client, unit="unit-0").status_code == 502
+    assert speak(client, unit="unit-1").status_code == 502
     assert advisor.speech_chars_left(TEACHER) == advisor.SPEECH_DAILY_CHARS
     assert advisor.speech_month_usage["chars"] == 0
 
 
 def test_progress_replies_get_speech_tokens(client, monkeypatch):
     rows = [
-        ["2026-10-24T10:00:00", "tutor-unit-0-abc", "1", "user", "Hi", "", "", "", "", TEACHER],
-        ["2026-10-24T10:00:01", "tutor-unit-0-abc", "2", "assistant", "Welcome!", "", "", "", "", TEACHER],
+        ["2026-10-24T10:00:00", "tutor-unit-1-abc", "1", "user", "Hi", "", "", "", "", TEACHER],
+        ["2026-10-24T10:00:01", "tutor-unit-1-abc", "2", "assistant", "Welcome!", "", "", "", "", TEACHER],
     ]
 
     class FakeSheet:
@@ -149,7 +149,7 @@ def test_progress_replies_get_speech_tokens(client, monkeypatch):
             return FakeSheet()
 
     monkeypatch.setattr(advisor, "get_sheets_client", lambda: FakeClient())
-    messages = client.get("/tutor/progress", headers=signed_in()).get_json()["units"]["unit-0"]["messages"]
+    messages = client.get("/tutor/progress", headers=signed_in()).get_json()["units"]["unit-1"]["messages"]
     assert "speech_token" not in messages[0]
     assert messages[1]["speech_token"] == advisor.speech_token("Welcome!")
 

@@ -7,14 +7,14 @@
  * - Each unit's conversation is saved in this browser (localStorage), and on
  *   the server through the conversation log, so a teacher can stop and pick
  *   up later on any device (GET /tutor/progress).
- * - When the tutor writes a ```profile block (Unit 0), it is saved as the
+ * - When the tutor writes a ```profile block (Unit 1), it is saved as the
  *   teacher's learner profile and sent with every later unit's messages.
  * - When the tutor writes a ```deliverable block, it is saved for that unit.
- *   The Unit 4 deliverable is the teacher's unit plan, sent with every later
+ *   The Unit 5 deliverable is the teacher's unit plan, sent with every later
  *   unit's messages so the tutor knows what they planned to teach.
  * - Saved boxes have a "Send to Navigation Games" button (POST /tutor/submit),
  *   which emails the reviewer and the teacher a copy.
- * - A ```schedule block (end of Unit 4) offers a calendar file of the
+ * - A ```schedule block (end of Unit 5) offers a calendar file of the
  *   teacher's classes, with a reminder to reflect after each one.
  *
  * Messages go to the advisor backend's /tutor endpoint, which logs them for
@@ -51,8 +51,8 @@ interface Props {
 const PROFILE_KEY = 'ng-course-profile';
 const YMP_KEY = 'ng-course-ymp-answers';
 const READ_ALOUD_KEY = 'ng-course-read-aloud';
-const PLAN_UNIT = 'unit-4'; // its deliverable is the teacher's unit plan
-const REFLECT_URL = 'https://curriculum.navigationgames.org/training/unit-6/';
+const PLAN_UNIT = 'unit-5'; // its deliverable is the teacher's unit plan
+const REFLECT_URL = 'https://curriculum.navigationgames.org/training/unit-7/';
 const conversationKey = (unit: string) => `ng-course-${unit}-conversation`;
 const deliverableKey = (unit: string) => `ng-course-${unit}-deliverable`;
 const sentKey = (unit: string) => `ng-course-${unit}-sent`; // kind -> the text last sent

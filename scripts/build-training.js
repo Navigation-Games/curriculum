@@ -7,7 +7,7 @@
 //                                    (committed, like site-map.md, because the
 //                                    advisor's container is built from the repo)
 //
-// A unit file looks like this (see content/training/unit-0.md):
+// A unit file looks like this (see content/training/unit-1.md):
 //
 //   # 0 - Unit Title
 //   ---
@@ -27,7 +27,7 @@
 //
 // Any of these files can add a short recording near the top of its page:
 //
-//   audio: training/unit-0-welcome.mp3          a file in site/static/audio/
+//   audio: training/unit-1-welcome.mp3          a file in site/static/audio/
 //   audio_caption: A welcome from Barb (1 min)  shown above the player
 //
 // The pages are "unlisted" while the course is a prototype: they work by URL

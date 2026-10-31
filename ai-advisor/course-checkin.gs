@@ -11,7 +11,7 @@ const SUBMISSIONS_TAB = 'Submissions';
 // Staff accounts that try the course are left out of the list
 const IGNORE_DOMAINS = ['navigationgames.org'];
 // Days without any tutor activity before a teacher counts as quiet
-const QUIET_DAYS_BEFORE_KIT = 7;   // working through Units 0 to 4
+const QUIET_DAYS_BEFORE_KIT = 7;   // working through Units 1 to 5
 const QUIET_DAYS_TEACHING = 14;    // sent their unit plan, not finished yet
 const COURSE_URL = 'https://curriculum.navigationgames.org/training/';
 
@@ -54,20 +54,20 @@ function weeklyCourseCheckin() {
     const t = teachers[email];
     const days = t.last ? Math.floor((now - t.last) / 86400000) : null;
     let stage, limit;
-    if (t.sent['unit-7']) {
-      stage = 'finished (sent Unit 7)';
-    } else if (t.sent['unit-4']) {
+    if (t.sent['unit-8']) {
+      stage = 'finished (sent Unit 8)';
+    } else if (t.sent['unit-5']) {
       stage = 'teaching (sent their unit plan)';
       limit = QUIET_DAYS_TEACHING;
     } else {
-      stage = 'before the kit (Units 0 to 4)';
+      stage = 'before the kit (Units 1 to 5)';
       limit = QUIET_DAYS_BEFORE_KIT;
     }
     const units = Object.keys(t.units).sort().join(', ') || 'none';
     const line = (t.name ? t.name + ' <' + email + '>' : email) + ': ' + stage + '; units opened: ' + units +
       '; last active ' + (days === null ? 'never' : days + ' days ago');
     everyone.push(line);
-    if (limit && (days === null || days >= limit)) quiet.push({ t: t, line: line, teaching: Boolean(t.sent['unit-4']) });
+    if (limit && (days === null || days >= limit)) quiet.push({ t: t, line: line, teaching: Boolean(t.sent['unit-5']) });
   });
 
   if (!everyone.length) return; // nobody in the course yet
@@ -90,7 +90,7 @@ function suggestedCheckin(t, teaching) {
   const first = t.name ? t.name.split(' ')[0] : 'there';
   if (teaching) {
     return 'Hi ' + first + ', how is your orienteering unit going? If you\'ve taught a class, a 5-minute reflection ' +
-      'in Unit 6 (' + COURSE_URL + 'unit-6/) helps us a lot. If your plans or dates have changed, just reply ' +
+      'in Unit 7 (' + COURSE_URL + 'unit-7/) helps us a lot. If your plans or dates have changed, just reply ' +
       'and tell me what you\'re doing now.';
   }
   return 'Hi ' + first + ', I noticed you haven\'t been back to the course in a while. Is anything getting in the way? ' +

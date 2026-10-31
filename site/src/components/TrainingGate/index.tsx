@@ -21,7 +21,7 @@ import {useGoogleUser, signOut, bearerToken} from '@site/src/lib/googleAuth';
 import styles from './styles.module.css';
 
 interface Props {
-  unit: string; // "unit-2"
+  unit: string; // "unit-3"
   children: React.ReactNode;
 }
 

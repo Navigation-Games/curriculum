@@ -33,4 +33,4 @@ Teachers who start the course around the same time go through it together as a c
 
 ## Prototype notes
 
-This is a prototype for Navigation Games staff and a few test teachers. Units 0 to 4 come before your kit ships. Units 5 to 7 are first drafts, for when your map arrives, while you teach and after your last class. Reminders and certificates come later.
+This is a prototype for Navigation Games staff and a few test teachers. Units 1 to 5 come before your kit ships. Units 6 to 8 are first drafts, for when your map arrives, while you teach and after your last class. Reminders and certificates come later.

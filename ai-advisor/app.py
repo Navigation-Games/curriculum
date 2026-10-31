@@ -442,7 +442,7 @@ def request_email_link():
     """
     Email a sign-in link.
 
-    Request body: {"email": "teacher@school.org", "return_to": "https://curriculum.navigationgames.org/training/unit-0/"}
+    Request body: {"email": "teacher@school.org", "return_to": "https://curriculum.navigationgames.org/training/unit-1/"}
     Response: {"ok": true} whenever the request is well formed, so the
     response never reveals anything about the address.
     """
@@ -652,7 +652,7 @@ def chat():
 #
 # Two tabs in the conversation log sheet, edited by hand by staff:
 #   CourseAccess:  email | name | applicant_id | added | note   (one row per enrolled teacher)
-#   CourseSettings: setting | value   (units_open = the highest unit number open, e.g. 1 = Units 0 and 1)
+#   CourseSettings: setting | value   (units_open = the highest unit number open, e.g. 2 = Units 1 and 2)
 # Staff (a navigationgames.org Google sign-in) always get in, to every unit.
 # Everyone else must be on the list, and can only use units up to units_open.
 # The tabs are read every couple of minutes, so a change takes effect without a
@@ -667,7 +667,7 @@ COURSE_ACCESS_SHEET_TITLE = "CourseAccess"
 COURSE_ACCESS_HEADER = ["email", "name", "applicant_id", "added", "note"]
 COURSE_SETTINGS_SHEET_TITLE = "CourseSettings"
 COURSE_SETTINGS_HEADER = ["setting", "value"]
-COURSE_UNITS_OPEN_DEFAULT = 1  # used only if the units_open setting is missing or not a number
+COURSE_UNITS_OPEN_DEFAULT = 2  # used only if the units_open setting is missing or not a number
 COURSE_ACCESS_CACHE_SECONDS = 120
 COURSE_ACCESS_REQUIRED = os.environ.get("COURSE_ACCESS_REQUIRED", "").lower() == "true"
 
@@ -719,7 +719,7 @@ def load_course_access() -> tuple[set[str], int]:
 
 
 def course_unit_number(unit_slug: str) -> int | None:
-    """3 for "unit-3"; None for anything else."""
+    """3 for "unit-4"; None for anything else."""
     match = re.fullmatch(r"unit-(\d+)", unit_slug or "")
     return int(match.group(1)) if match else None
 
@@ -810,7 +810,7 @@ TRAINING_UNITS = (
 )
 TUTOR_PROFILE_MAX_CHARS = 3000
 TUTOR_PLAN_MAX_CHARS = 6000
-PLAN_UNIT = "unit-4"  # the unit whose deliverable is the teacher's unit plan
+PLAN_UNIT = "unit-5"  # the unit whose deliverable is the teacher's unit plan
 
 
 def tutor_system_prompt(unit: dict, profile: str = "", plan: str = "") -> str:
@@ -827,12 +827,12 @@ def tutor_system_prompt(unit: dict, profile: str = "", plan: str = "") -> str:
     ]
     if profile:
         parts.append(
-            "## The teacher's learner profile (from Unit 0, written by the tutor and checked by the teacher)\n\n"
+            "## The teacher's learner profile (from Unit 1, written by the tutor and checked by the teacher)\n\n"
             + profile[:TUTOR_PROFILE_MAX_CHARS]
         )
     if plan:
         parts.append(
-            "## The teacher's unit plan (from Unit 4, as they last saved it; their actual teaching may differ)\n\n"
+            "## The teacher's unit plan (from Unit 5, as they last saved it; their actual teaching may differ)\n\n"
             + plan[:TUTOR_PLAN_MAX_CHARS]
         )
     if SITE_MAP_PATH.exists():
@@ -861,13 +861,13 @@ def tutor():
 
     Request body:
     {
-        "unit": "unit-0",
+        "unit": "unit-1",
         "conversation_id": "optional-id",
         "messages": [{"role": "user", "content": "..."}],
-        "profile": "optional learner profile text from Unit 0"
+        "profile": "optional learner profile text from Unit 1"
     }
 
-    Response: {"conversation_id": "tutor-unit-0-...", "response": "..."}
+    Response: {"conversation_id": "tutor-unit-1-...", "response": "..."}
 
     Conversation IDs always start with "tutor-<unit>-" so tutor conversations
     are easy to find in the log sheet and the review tool.
@@ -936,7 +936,7 @@ DELIVERABLE_BLOCK = re.compile(r"```deliverable\n(.*?)```", re.S)
 
 
 def unit_for_conversation(conversation_id: str) -> str | None:
-    """The course unit a tutor conversation ID belongs to, e.g. "unit-0"."""
+    """The course unit a tutor conversation ID belongs to, e.g. "unit-1"."""
     for slug in TRAINING_UNITS:
         if conversation_id.startswith(f"tutor-{slug}-"):
             return slug
@@ -998,7 +998,7 @@ def tutor_progress():
     The signed-in teacher's saved course progress, so they can pick up on
     any device.
 
-    Response: {"units": {"unit-0": {"conversation_id", "updated", "messages"}}, "profile": "...", "plan": "..."}
+    Response: {"units": {"unit-1": {"conversation_id", "updated", "messages"}}, "profile": "...", "plan": "..."}
 
     Rebuilt from the conversation log sheet on every request. Fine for a
     prototype; move to a real datastore before the course is large.
@@ -1049,7 +1049,7 @@ SUBMISSIONS_PER_DAY = 20  # per teacher
 submission_rate_store: dict[str, list[float]] = {}
 SUBMISSION_KINDS = {"deliverable": "work", "profile": "learner profile", "ymp": "map application answers"}
 # When the reviewer replies. The unit plan drives Consultation 1, so it's quicker.
-REVIEW_TURNAROUND = {"unit-4": "within 3 business days"}
+REVIEW_TURNAROUND = {"unit-5": "within 3 business days"}
 
 
 def full_links(text: str) -> str:
@@ -1103,7 +1103,7 @@ def tutor_submit():
     """
     Send a saved deliverable to Navigation Games.
 
-    Request body: {"unit": "unit-4", "kind": "deliverable", "text": "...", "conversation_id": "..."}
+    Request body: {"unit": "unit-5", "kind": "deliverable", "text": "...", "conversation_id": "..."}
     Response: {"ok": true, "emailed": true, "turnaround": "within 3 business days"}
 
     "emailed" is false when email isn't set up; the submission is still logged.
@@ -1277,7 +1277,7 @@ def tutor_speak():
 
     Request body, either:
       {"text": "<a tutor reply>", "speech_token": "<from /tutor or /tutor/progress>"}
-      {"unit": "unit-0"}   (the unit's opening message)
+      {"unit": "unit-1"}   (the unit's opening message)
 
     Response: audio/mpeg
     """

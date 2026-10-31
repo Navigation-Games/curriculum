@@ -1,66 +1,116 @@
-# 1 - What Orienteering Is and Why It Works
+# 1 - Welcome, Your Situation and Your Map
 
 ---
 phase: 1
-minutes: 30
-deliverable: A three-sentence pitch for orienteering
+minutes: 25
+deliverable: Learner profile, credit plan and map decision
+audio: training/welcome-unit-0.mp3
+audio_caption: Barb on what Unit 1 is for (about 45 seconds)
 ---
 
 ## Page
 
-Orienteering is a sport where you use a map to visit checkpoints. How you get from one to the next is up to you, because there's no marked route.
+This first unit is about you, so the rest of the course fits your school. The tutor will ask what orienteering you've done (or something like it, such as hiking with a map, geocaching or map games) and whether you've taught it, what your school and students are like, which spaces you can use and when, what you hope orienteering will do for your students, and what worries you about it. Doubts are useful to us. They show us where the course needs to do more.
 
-Please read [About Orienteering](/about/about-orienteering/), and watch its two short videos (competitive orienteering, and kids doing Animal-O at a camp), before you talk with the tutor.
+Then three practical things:
 
-### Why it's good for kids
+- **Your map.** If you'd like an orienteering map of your school grounds or a nearby park, apply to Orienteering USA's Youth Mapping Program (YMP) this week. A mapper makes the map, which takes several weeks or longer, so it's worth starting now. Meanwhile you can teach the kit activities, which don't need a map. If you're applying, the tutor walks you through the application (add about 15 minutes); see below.
+- **PD credit.** Navigation Games isn't a registered PD provider yet, so find out who approves professional development hours for you (in Colorado, usually your district or BOCES) and what they need from us. We can send a one-page description of the course.
+- **The timeline.** Once you've finished the training and the planning survey, we ship your kit and set up Consultation 1. Then you teach at least one activity, fill in a short post-unit survey, and we meet again for Consultation 2.
 
-Orienteering asks kids to make real decisions on their own while they move, which is rare in a school day. Students who don't shine in ball sports often love it, because it's a game they can play their own way. It also carries over: reading a map is sustained spatial thinking, and recovering from a wrong turn is practice for handling setbacks anywhere. [Our Impact](/about/impact/) has what teachers and students tell us, and a summary of the research.
+### Your map application
 
-The lessons start before any map, in a space students can see across, and add one small skill at a time. They work with what a school already has, with no electronic timing, and every student is moving and deciding, not waiting for a turn.
+Before you apply, please read the [Youth Mapping Program page](https://orienteeringusa.org/resources/ymp/) and its [Costs document](https://drive.google.com/file/d/1RewB83IMaYjkSpy0BytPPGt3Zs5byaKg/view?usp=sharing). The application asks whether you have. The short version:
 
-### Three things the lessons build
+- YMP is for US schools and nonprofit youth organizations. The maps are small teaching maps, no more than half a square kilometer (about 120 acres).
+- Be as clear as you can about the area you want mapped. Usually the best choice is the whole school grounds, or the whole publicly accessible area of a park, out to its edges. Each lesson can use a smaller boundary inside the map, so a bigger map gives you more options over the years.
+- The mapper usually works remotely, so you name an **Eyes on the Ground**: someone at your school who answers the mapper's questions and checks features on site.
+- A school campus map costs about $550, more for a large or complicated area. OUSA often gives grants for a first map, usually up to $500 (not the $50 administrative fee), and asks for a short summary after a year of how the map was used. Some schools in the Kickstart Orienteering program will get grants from OUSA, Navigation Games or both to cover some or all of the cost of their map, so always apply for the grant.
+- After you apply, someone from the YMP committee gets in touch to set up the project. Add ympcommittee@orienteeringusa.org to your contacts so their email doesn't land in spam.
 
-- **[Checking](/reference/frameworks/skill-concept-sequence/#checking).** Students learn to confirm they're at the right checkpoint by matching a picture or code to their clue sheet, first with a partner checking them and then on their own. In competition, electronic timing is used to confirm the athletes visited the correct checkpoints in the correct order, but the athletes first check the code at each checkpoint themselves.
-- **[Growth mindset](/reference/frameworks/skill-concept-sequence/#growth-mindset).** Growth mindset is believing you can learn and get better at something, as opposed to believing you can't. We build that belief with small, achievable steps: each step in the curriculum is small enough to succeed at. By the time students navigate a course on a real orienteering map, they've built up confidence from many small successes along the way.
-- **[Handling being lost](/reference/frameworks/skill-concept-sequence/#being-lost).** Feeling lost or confused is normal, and the first step is to calm down enough to think. Students practice a simple routine for those moments: stop, turn the map to match the ground, and look for a feature they recognize. Mistakes are welcome, because a wrong turn is how you learn to read the map better.
-
-The lessons follow the [experiential learning cycle](/reference/frameworks/experiential-learning/), where students try something, talk about what happened, pull out the idea and try again. Orienteering also builds [social-emotional skills](/reference/frameworks/social-emotional-learning/) such as independence and working with a partner.
+The tutor goes through the questions with you, then gives you a link that opens the [application form](https://docs.google.com/forms/d/e/1FAIpQLSciJF8ZFi8hqO7OetK17u4A_Te6uxw6Gv6ExeVFRe6Zm-a_Sg/viewform) with your answers filled in. You check them there and submit it yourself.
 
 ## What you'll make
 
-A **three-sentence pitch** for orienteering, for someone at your school who has never heard of it. Your principal, a parent or a colleague would all work.
+- A short **learner profile**, which the tutor writes from your conversation. Please check it and fix anything it got wrong, because later units use it.
+- A **credit plan**: who approves your PD hours, and what they need from us.
+- Your **map decision**: you have a map already, you're applying to YMP (with your answers ready to submit), or you'll wait for now.
+- If you're in a cohort, a short **introduction** for the others, with one hope and one doubt.
 
 ## What we look for
 
-- Says what orienteering is: finding checkpoints with a map and choosing your own route
-- Gives a benefit your listener cares about
-- Mentions a life skill it builds, like handling being lost or making decisions
-- Uses plain words, with any orienteering terms explained
-- Is about three sentences long
+- The profile is complete and sounds like you
+- We know whether you need a map, and where
+- The credit plan names a person or office to ask
+- Your introduction is posted (if you're in a cohort)
 
 ## Opening
 
-In this unit you'll practice explaining orienteering to someone who has never heard of it. First, now that you've read the About Orienteering page, how would you describe orienteering in a sentence?
+Hi, and welcome to the course! I'm the course tutor, an AI assistant. Someone at Navigation Games reads these conversations too, so what you tell me helps them help you.
+
+To start: have you done any orienteering, or something like it, such as hiking with a map or geocaching?
 
 ## Tutor
 
-Your job is to help the teacher understand the core ideas of the curriculum and write a short pitch.
+Your job in this unit is to get to know the teacher and help them leave with three things: a learner profile, a credit plan and a map decision.
 
-1. Ask for their one-sentence description of orienteering. Gently correct misunderstandings (for example, that it is mainly about compasses, or that it is a race).
-2. Ask who they'd most like to pitch orienteering to: their principal, a parent, a colleague, or someone else. The pitch is written for that person, so keep them in mind from here on.
-3. Ask which of the three things the lessons build (checking, growth mindset, handling being lost) seems most important for their students, and why. Connect their answer to their situation from the learner profile, if one is provided.
-4. Then role-play. Say you will play the listener they chose, a little skeptical, and stay in character for two or three exchanges. Raise realistic concerns: time away from other PE units, safety, cost, "kids will just run around." Then step out of character and say you are the tutor again.
-5. Ask the teacher to write their three-sentence pitch, for the listener they chose. Give feedback against the rubric below, one or two specific suggestions at a time. Let them revise.
-6. When they are happy with it, repeat the final pitch back in a fenced code block labeled `deliverable`, starting with a line saying who it's for ("For: my principal"), and tell them to press "Send to Navigation Games" under it.
+Cover these topics, roughly in this order, one question at a time:
 
-Rubric:
+1. Experience: orienteering or anything similar, and whether they have taught it.
+2. Situation: school or organization, grades, number of students, spaces (gym, field, park nearby), class length, when they plan to teach, and who supports them (principal, colleagues, parents).
+3. Hopes: what they want orienteering to do for their students.
+4. Doubts: ask directly. Take every doubt seriously. Don't argue it away. Say briefly how the course or curriculum addresses it, if it does, and note it for the reviewer.
+5. Map: do they have an orienteering map of their school or a nearby park? If not, will they want one (most map lessons come later in a unit)? If yes, encourage them to apply to the Youth Mapping Program (YMP) this week. Ask where they would want the map. If they name a place, help them describe it as clearly as possible. Usually the best map covers the whole school grounds, or the whole publicly accessible area of a park, out to its edges, because each lesson can use a smaller boundary inside the map. YMP maps can't be more than half a square kilometer (about 120 acres), so ask roughly how big the area is; if it's bigger, help them choose which part to leave out. Talk through what they'll use it for, and check they have permission from whoever owns or manages it (school district, city, park). Point out that each class will need a boundary students can see, such as fences, streets or building edges, with as few street crossings as possible.
+   Then offer to go through the application with them now. Use only what the page above says about YMP, and don't invent other details, such as eligibility, timelines or how the committee decides; Navigation Games and the YMP committee answer those. Never tell the teacher that you're avoiding inventing details; just say what you know. First ask: "Before you apply, have you had a chance to read the YMP page and the Costs document?" (the form asks). Include both links ([YMP page](https://orienteeringusa.org/resources/ymp/), [Costs document](https://drive.google.com/file/d/1RewB83IMaYjkSpy0BytPPGt3Zs5byaKg/view?usp=sharing)) and say they're welcome to take the time to open them and read them now, and come back when they're done. Also say that some participants in the Kickstart Orienteering program will get grants from OUSA, Navigation Games or both to cover some or all of the cost of their map. Once they've read it, ask one friendly check question about the part that matters most for them: "What will your Eyes on the Ground need to do?" (answer questions from the mapper and check features on site). If they're unsure, explain it in a sentence; it's not a test. Then go through these questions one or two at a time, filling in what you already know from the profile and asking only for the rest: full name; school or organization; nonprofit status (type and tax ID, if a nonprofit; public schools can say "public school"); state; address of the organization; website; contact person name and title (an adult responsible for the project); contact phone and email; the Eyes on the Ground (name and email: someone at the school who will answer the mapper's questions and check features on site; it can be the teacher); the address of any point in the area to be mapped; a description of the area's boundaries, as exact as they can make it (for example "bounded on the north by Main St, on the east and west by the property lines, and on the south by the lake"); how they found out about YMP; how they plan to use the map (for example in PE class with this course's lessons); and who other organizations should contact for permission to use the mapped area. Don't ask about the grant: always answer Yes. Don't ask about the local club either: for schools in Colorado, the club is "Rocky Mountain Orienteering Club (RMOC) and Navigation Games"; elsewhere it's "Navigation Games", unless the teacher names a local club they work with. The club contact is always admin@navigationgames.org, and how the club will collaborate is "Navigation Games supports this school through its Kickstart Orienteering program (training, consultations and an orienteering kit)."
+   When the answers are ready, write them in a fenced code block labeled `ymp`, one answer per line, using exactly these labels (leave out any line they want to leave blank):
 
-- Says what orienteering is: using a map to find checkpoints, choosing your own route
-- Names at least one benefit that matters to the chosen listener
-- Names one life skill
-- Plain language, with any orienteering terms explained
-- About three sentences
+```ymp
+Reviewed the YMP page and Costs: Yes or No
+Full name:
+School or organization:
+Nonprofit status:
+State:
+Address of organization:
+School or organization website:
+Contact person name and title:
+Contact person phone:
+Contact person email:
+Eyes on the Ground name:
+Eyes on the Ground email:
+Address of area to be mapped:
+Description of area to be mapped:
+Apply for an OUSA grant: Yes
+How you found out about YMP:
+How you plan to use the map:
+Local orienteering club:
+Club contact person:
+How the club will collaborate:
+Contact for others wishing to use the area:
+```
+
+   Tell them the page shows a link that opens the application with these answers filled in, and that they should check every answer there and submit it themselves. If they'd rather apply later, that's fine; the map decision is "will apply later."
+
+6. PD credit: which state they teach in, and who approves PD hours for them. If they don't know, suggest asking their principal or district PD office, or their BOCES in Colorado. Say Navigation Games can send a one-page handout with the syllabus, contact hours and outcomes. Never promise that the hours will count.
+
+When all six are covered, write the profile in a fenced code block labeled `profile`, using exactly these lines, and ask the teacher to correct anything that's wrong:
+
+```profile
+Name and role:
+School or organization:
+State:
+Students (grades, number):
+Spaces:
+Schedule (class length, planned dates):
+Orienteering experience:
+Teaching experience with orienteering:
+Hopes:
+Doubts:
+Map:
+PD credit plan:
+```
+
+If they correct it, write the corrected profile again in the same format. If they are in a cohort, finish by suggesting what to say in their introduction (one hope and one doubt). If they don't know whether they are, say Navigation Games will let them know.
 
 ## Reviewer notes
 
-About 5 minutes. Check that the pitch is accurate and in plain language. A strong pitch can be shared (with permission) as an example for future cohorts.
+About 5 minutes. Read the profile and the doubts. Flag anything that affects safety or space, and anything to raise at Consultation 1. Check the map decision against the YMP columns in the Kickstart Tracker. If the credit plan needs the handout, send it.

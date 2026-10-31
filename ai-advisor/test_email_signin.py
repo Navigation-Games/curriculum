@@ -38,7 +38,7 @@ def client(outbox):
     return advisor.app.test_client()
 
 
-def request_link(client, email=TEACHER, return_to=SITE + "/training/unit-0/", ip="1.1.1.1"):
+def request_link(client, email=TEACHER, return_to=SITE + "/training/unit-1/", ip="1.1.1.1"):
     return client.post(
         "/auth/email-link",
         json={"email": email, "return_to": return_to},
@@ -60,7 +60,7 @@ def test_link_round_trip(client, outbox):
     to, link = outbox[0]
     assert to == "teacher@school.org"  # addresses are lowercased
     assert link.startswith(SITE + "/sign-in/?token=")
-    assert parse_qs(urlparse(link).query)["next"] == ["/training/unit-0/"]
+    assert parse_qs(urlparse(link).query)["next"] == ["/training/unit-1/"]
 
     r = client.post("/auth/email-link/verify", json={"token": token_from(link)})
     assert r.status_code == 200
@@ -71,7 +71,7 @@ def test_link_round_trip(client, outbox):
 
 
 def test_links_from_local_development_point_back_to_localhost(client, outbox):
-    request_link(client, return_to="http://localhost:3000/training/unit-1/")
+    request_link(client, return_to="http://localhost:3000/training/unit-2/")
     assert outbox[0][1].startswith("http://localhost:3000/sign-in/")
 
 
@@ -172,30 +172,30 @@ def log_row(when, conv_id, n, role, content, email="teacher@school.org"):
 
 
 ROWS = [
-    log_row("2026-10-20 10:00:00 UTC", "tutor-unit-0-old", 1, "user", "Hi"),
-    log_row("2026-10-20 10:00:00 UTC", "tutor-unit-0-old", 2, "assistant", "```profile\nState: MA\n```"),
-    log_row("2026-10-21 09:00:00 UTC", "tutor-unit-0-new", 1, "user", "Starting over"),
-    log_row("2026-10-21 09:00:00 UTC", "tutor-unit-0-new", 2, "assistant", "Welcome back"),
-    log_row("2026-10-21 09:05:00 UTC", "tutor-unit-0-new", 3, "user", "Colorado now"),
-    log_row("2026-10-21 09:05:00 UTC", "tutor-unit-0-new", 4, "assistant", "Updated:\n```profile\nState: CO\n```"),
+    log_row("2026-10-20 10:00:00 UTC", "tutor-unit-1-old", 1, "user", "Hi"),
+    log_row("2026-10-20 10:00:00 UTC", "tutor-unit-1-old", 2, "assistant", "```profile\nState: MA\n```"),
+    log_row("2026-10-21 09:00:00 UTC", "tutor-unit-1-new", 1, "user", "Starting over"),
+    log_row("2026-10-21 09:00:00 UTC", "tutor-unit-1-new", 2, "assistant", "Welcome back"),
+    log_row("2026-10-21 09:05:00 UTC", "tutor-unit-1-new", 3, "user", "Colorado now"),
+    log_row("2026-10-21 09:05:00 UTC", "tutor-unit-1-new", 4, "assistant", "Updated:\n```profile\nState: CO\n```"),
     # A retried message: same numbers, logged again; the later row wins
-    log_row("2026-10-21 09:06:00 UTC", "tutor-unit-0-new", 4, "assistant", "Updated:\n```profile\nState: CO, Denver\n```"),
-    log_row("2026-10-22 08:00:00 UTC", "tutor-unit-1-a", 1, "user", "Pitch time"),
-    log_row("2026-10-22 08:00:00 UTC", "tutor-unit-1-a", 2, "assistant", "Go ahead"),
+    log_row("2026-10-21 09:06:00 UTC", "tutor-unit-1-new", 4, "assistant", "Updated:\n```profile\nState: CO, Denver\n```"),
+    log_row("2026-10-22 08:00:00 UTC", "tutor-unit-2-a", 1, "user", "Pitch time"),
+    log_row("2026-10-22 08:00:00 UTC", "tutor-unit-2-a", 2, "assistant", "Go ahead"),
     # Someone else's conversation and an advisor conversation are ignored
-    log_row("2026-10-23 08:00:00 UTC", "tutor-unit-1-b", 1, "user", "Not mine", email="other@school.org"),
+    log_row("2026-10-23 08:00:00 UTC", "tutor-unit-2-b", 1, "user", "Not mine", email="other@school.org"),
     log_row("2026-10-23 08:00:00 UTC", "plain-advisor-chat", 1, "user", "Plan my lessons"),
 ]
 
 
 def test_progress_rebuild_picks_latest_conversation_and_profile():
     progress = advisor.rebuild_progress(ROWS, "Teacher@School.org")
-    assert set(progress["units"]) == {"unit-0", "unit-1"}
-    unit0 = progress["units"]["unit-0"]
-    assert unit0["conversation_id"] == "tutor-unit-0-new"
+    assert set(progress["units"]) == {"unit-1", "unit-2"}
+    unit0 = progress["units"]["unit-1"]
+    assert unit0["conversation_id"] == "tutor-unit-1-new"
     assert [m["content"] for m in unit0["messages"]][0] == "Starting over"
     assert len(unit0["messages"]) == 4
-    assert progress["units"]["unit-1"]["conversation_id"] == "tutor-unit-1-a"
+    assert progress["units"]["unit-2"]["conversation_id"] == "tutor-unit-2-a"
     assert progress["profile"] == "State: CO, Denver"
 
 

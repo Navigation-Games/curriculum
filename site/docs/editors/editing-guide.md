@@ -193,7 +193,7 @@ Detailed setup instructions here.
 Lesson files live in `content/lessons/school/grade-3-5/`. They are simpler than activities:
 
 ```markdown
-# 3 - Explore & Find
+# 4 - Explore & Find
 
 ---
 tagline: There are things out there; go find them and come back
@@ -261,12 +261,12 @@ activities:
 
 ### Teacher course files (prototype)
 
-The Kickstart Orienteering Teacher Course lives in `content/training/`: `index.md` is the course home and `unit-0.md`, `unit-1.md` and so on are the units. `scripts/build-training.js` (run as part of the normal build) turns them into pages at `/training/` and writes `ai-advisor/training-units.json` for the course tutor. While the course is a prototype, the pages are unlisted: they work by URL but are not in the sidebar, site search or the advisor's site map. Each unit page is wrapped in `<TrainingGate>`, so its text and the tutor show only to a signed-in teacher who is on the access list, on a unit that is open (staff see all units). The course home stays public. Who is enrolled and which units are open is set in two tabs of the conversation log sheet, not in the content files; see "Who can take the course" in `ai-advisor/README.md`.
+The Kickstart Orienteering Teacher Course lives in `content/training/`: `index.md` is the course home and `unit-1.md`, `unit-2.md` and so on are the units. `scripts/build-training.js` (run as part of the normal build) turns them into pages at `/training/` and writes `ai-advisor/training-units.json` for the course tutor. While the course is a prototype, the pages are unlisted: they work by URL but are not in the sidebar, site search or the advisor's site map. Each unit page is wrapped in `<TrainingGate>`, so its text and the tutor show only to a signed-in teacher who is on the access list, on a unit that is open (staff see all units). The course home stays public. Who is enrolled and which units are open is set in two tabs of the conversation log sheet, not in the content files; see "Who can take the course" in `ai-advisor/README.md`.
 
 A unit file has a numbered title, a little frontmatter and six sections:
 
 ```markdown
-# 0 - Welcome, Your Situation and Your Map
+# 1 - Welcome, Your Situation and Your Map
 
 ---
 phase: 1
@@ -293,7 +293,7 @@ Instructions for the AI tutor: what to ask, in what order, and the rubric to giv
 For Navigation Games reviewers: what to check and how long it takes. Not shown on the page, and not sent to the AI.
 ```
 
-The tutor's general behavior (tone, vocabulary, accuracy rules) is in `ai-advisor/tutor-prompt.md`, and a short style checklist that goes at the very end of its prompt is in `ai-advisor/tutor-style.md`. The backend also replaces any em-dashes in the tutor's replies with commas. When the tutor finishes a deliverable it writes it in a fenced block labeled `deliverable` (or `profile` in Unit 0), which the page saves in the teacher's browser. Like the advisor, the live tutor only picks up changes to unit files or `tutor-prompt.md` after a Cloud Run redeploy.
+The tutor's general behavior (tone, vocabulary, accuracy rules) is in `ai-advisor/tutor-prompt.md`, and a short style checklist that goes at the very end of its prompt is in `ai-advisor/tutor-style.md`. The backend also replaces any em-dashes in the tutor's replies with commas. When the tutor finishes a deliverable it writes it in a fenced block labeled `deliverable` (or `profile` in Unit 1), which the page saves in the teacher's browser. Like the advisor, the live tutor only picks up changes to unit files or `tutor-prompt.md` after a Cloud Run redeploy.
 
 ## Building the Site
 
