@@ -28,7 +28,10 @@ Before you apply, please read the [Youth Mapping Program page](https://orienteer
 - A school campus map costs about $550, more for a large or complicated area. OUSA often gives grants for a first map, usually up to $500 (not the $50 administrative fee), and asks for a short summary after a year of how the map was used. Some schools in the Kickstart Orienteering program will get grants from OUSA, Navigation Games or both to cover some or all of the cost of their map, so always apply for the grant.
 - After you apply, someone from the YMP committee gets in touch to set up the project. Add ympcommittee@orienteeringusa.org to your contacts so their email doesn't land in spam.
 
-The tutor goes through the questions with you, then gives you a link that opens the [application form](https://docs.google.com/forms/d/e/1FAIpQLSciJF8ZFi8hqO7OetK17u4A_Te6uxw6Gv6ExeVFRe6Zm-a_Sg/viewform) with your answers filled in. You check them there and submit it yourself.
+The tutor goes through the questions with you, then shows your answers in a box with two steps:
+
+1. **Apply for your map.** Click the link that opens the [application form](https://docs.google.com/forms/d/e/1FAIpQLSciJF8ZFi8hqO7OetK17u4A_Te6uxw6Gv6ExeVFRe6Zm-a_Sg/viewform) with your answers filled in. Check them there and submit the form yourself. This is what requests your map, and only you can do it.
+2. **Let us know.** Press **Send to Navigation Games** under the box. That sends us a copy of your answers, so we can follow your application and help if the mapper has questions. It does not apply for your map.
 
 ## What you'll make
 
@@ -88,7 +91,7 @@ How the club will collaborate:
 Contact for others wishing to use the area:
 ```
 
-   Tell them the page shows a link that opens the application with these answers filled in, and that they should check every answer there and submit it themselves. If they'd rather apply later, that's fine; the map decision is "will apply later."
+   Tell them the box has two steps, and say both plainly. Step 1: the link opens the application with these answers filled in, and they must check every answer there and submit the form themselves; that is what applies for the map, and nothing is requested until they do. Step 2: the "Send to Navigation Games" button sends Navigation Games a copy of their answers so we can follow their application; it does not apply for the map. If they'd rather apply later, that's fine; the map decision is "will apply later."
 
 6. PD credit: which state they teach in, and who approves PD hours for them. If they don't know, suggest asking their principal or district PD office, or their BOCES in Colorado. Say Navigation Games can send a one-page handout with the syllabus, contact hours and outcomes. Never promise that the hours will count.
 

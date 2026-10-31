@@ -110,6 +110,18 @@ export interface Sending {
   status: Partial<Record<SavedKind, string>>; // message shown after sending
 }
 
+// What pressing Send does, in words a teacher can act on. The map answers say plainly that
+// Send does not apply for the map: that is the teacher's own step with the YMP form.
+const SEND_EXPLANATIONS: Partial<Record<SavedKind, string>> = {
+  profile:
+    "Sends your learner profile to a person at Navigation Games, who reads it before your first call and may reply by email. You'll get a copy.",
+  deliverable:
+    "Sends this to a person at Navigation Games, who will read it and reply by email. You'll get a copy.",
+  ymp:
+    "Sends us a copy of these answers, so we can follow your application and help if the mapper has questions. " +
+    "This does not apply for your map: that's Step 1. You'll get a copy by email.",
+};
+
 function SendButton({kind, text, sending}: {kind: SavedKind; text: string; sending?: Sending}) {
   const [busy, setBusy] = useState(false);
   if (!sending) return null;
@@ -118,6 +130,7 @@ function SendButton({kind, text, sending}: {kind: SavedKind; text: string; sendi
   }
   return (
     <p className={styles.savedAction}>
+      {kind === 'ymp' && <strong>Step 2: let us know. </strong>}
       <button
         className={styles.sendWorkButton}
         disabled={busy}
@@ -127,7 +140,7 @@ function SendButton({kind, text, sending}: {kind: SavedKind; text: string; sendi
         }}>
         {busy ? 'Sending...' : 'Send to Navigation Games'}
       </button>{' '}
-      when it's ready. You'll get a copy by email, and a person will reply.
+      {SEND_EXPLANATIONS[kind]}
     </p>
   );
 }
@@ -148,10 +161,12 @@ function SavedBlock({kind, text, sending}: {kind: SavedKind; text: string; sendi
       <pre className={styles.savedText}>{text}</pre>
       {kind === 'ymp' && (
         <p className={styles.savedAction}>
+          <strong>Step 1: apply for your map.</strong>{' '}
           <a href={ympPrefillUrl(text)} target="_blank" rel="noopener noreferrer">
             Open the YMP application with these answers filled in
           </a>
-          . Check every answer there, then submit the form yourself.
+          . Check every answer there, then submit the form yourself. Navigation Games can't submit it for
+          you, and nothing is requested from Orienteering USA until you do.
         </p>
       )}
       {kind === 'schedule' && parseSchedule(text).length > 0 && (
