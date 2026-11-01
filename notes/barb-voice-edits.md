@@ -24,3 +24,9 @@ A running log of Barb's edits and comments on the teacher course text, so the pa
 | Growth mindset: "...small enough to succeed at, and accuracy counts for more than speed, so by the time students navigate a course on their own they have a lot of evidence that they can." | Full stop after "succeed at". Then: "By the time students navigate a course with a real orienteering map, they've built up confidence from achievements along the way." Accuracy vs speed "not getting across what we want". | Drop a point that doesn't land rather than explain it. Talk about confidence and achievement, not "evidence". |
 | Videos in Unit 2 | Move the IOF and Cambridge Camping videos to the About Orienteering page (the IOF one by what orienteering is, the kids one in "Why orienteering is good for kids"). | Put shared material where every reader sees it, and point to it. |
 | "Three habits the lessons build", with "Being lost" as one | "Being lost" isn't a habit: it's dealing with, embracing, recovering from and handling being lost. Chose "Handling being lost", under "Three things the lessons build" (Growth mindset is a belief, not a habit). | Labels must fit every item they cover; name the skill, not the situation. |
+
+## November 1, 2026: Unit 2 (What Orienteering Is and Why It Works)
+
+| Before | After / comment | Pattern |
+|---|---|---|
+| "Mistakes are welcome, because a wrong turn is how you learn to read the map better." | "Mistakes are welcome, because they teach you how to read a map better." | Keep the subject of the sentence as the subject of the reason; plainer and more general ("a map", not "the map"). |
