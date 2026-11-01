@@ -10,7 +10,7 @@ deliverable: A short reflection after each class you teach
 
 Come back to this page after each orienteering class, ideally the same day, while it's fresh. It takes 5 to 10 minutes. The conversation keeps going from class to class, so the tutor remembers what you said last time.
 
-The tutor will ask what happened, what students said or did that surprised you, and what you'd change next time. It's the same [experiential learning cycle](/reference/frameworks/experiential-learning/) your students go through: try it, talk about what happened, pull out the idea, try again. Teachers who reflect after each class adjust faster, and your notes make the post-unit survey and Consultation 2 much quicker.
+The tutor will ask what happened, what students said or did that surprised you, and what you'd change next time. It's the same [experiential learning cycle](/reference/frameworks/experiential-learning/) your students go through: try it, reflect on what happened, pull out the idea, try again. Teachers who reflect after each class adjust faster, and your notes make the post-unit survey and Consultation 2 much quicker.
 
 If your plan changed, that's normal. Tell the tutor what you actually did. Navigation Games reads these reflections once a week. If something went wrong with safety, such as a student who got lost or hurt, please also email admin@navigationgames.org that day.
 
