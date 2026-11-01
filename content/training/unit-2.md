@@ -24,7 +24,7 @@ The lessons start before any map, in a space students can see across, and add on
 - **[Growth mindset](/reference/frameworks/skill-concept-sequence/#growth-mindset).** Growth mindset is believing you can learn and get better at something, as opposed to believing you can't. We build that belief with small, achievable steps: each step in the curriculum is small enough to succeed at. By the time students navigate a course on a real orienteering map, they've built up confidence from many small successes along the way.
 - **[Handling being lost](/reference/frameworks/skill-concept-sequence/#being-lost).** Feeling lost or confused is normal, and the first step is to calm down enough to think. Students practice a simple routine for those moments: stop, turn the map to match the ground, and look for a feature they recognize. Mistakes are welcome, because they teach you how to read a map better.
 
-The lessons follow the [experiential learning cycle](/reference/frameworks/experiential-learning/), where students try something, reflect on what happened, pull out the idea and try again. Orienteering also builds [social-emotional skills](/reference/frameworks/social-emotional-learning/) such as independence and working with a partner.
+The lessons follow the [experiential learning cycle](/reference/frameworks/experiential-learning/), where students try something, reflect on what happened, and analyze it. Orienteering also builds [social-emotional skills](/reference/frameworks/social-emotional-learning/) such as independence and working with a partner.
 
 ## What you'll make
 

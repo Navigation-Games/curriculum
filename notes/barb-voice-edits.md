@@ -31,3 +31,4 @@ A running log of Barb's edits and comments on the teacher course text, so the pa
 |---|---|---|
 | "Mistakes are welcome, because a wrong turn is how you learn to read the map better." | "Mistakes are welcome, because they teach you how to read a map better." | Keep the subject of the sentence as the subject of the reason; plainer and more general ("a map", not "the map"). |
 | Experiential learning cycle: "try something, talk about what happened, pull out the idea and try again" (Units 2 and 7) | "reflect on what happened" | Use the precise term for the step (reflection), not a casual stand-in. |
+| Unit 2: "where students try something, reflect on what happened, pull out the idea and try again." | "where students try something, reflect on what happened, and analyze it." Trying again is implied by all the talk of progression. | Cut what the surrounding text already makes clear. Name the step precisely ("analyze"). |
