@@ -23,6 +23,8 @@ Do this unit after your last class, before Consultation 2. It's a look back at w
 
 A **plan for the next 12 months**: what you'll teach next, and when, and who else might be involved. Plus a short **look back** at the hopes and doubts from Unit 1.
 
+Then the **post-unit survey**. The tutor fills in the basics (what you taught, when and to whom) and opens the survey with those answers in place. The questions about how it went are yours to answer in your own words, and your Unit 7 reflections will help. Please submit it before Consultation 2.
+
 ## What we look for
 
 - Looks back honestly at the Unit 1 hopes and doubts
@@ -54,7 +56,20 @@ Beyond this year's class:
 Questions for Consultation 2:
 ```
 
-6. Tell them to press "Send to Navigation Games" under it, then to fill in the post-unit survey and book Consultation 2. Thank them warmly and specifically for what they did.
+6. Tell them to press "Send to Navigation Games" under it.
+7. Post-unit survey. Say the post-unit survey is next, that you can fill in the basics, and that the questions about how it went are theirs. Ask for what the survey needs, one or two questions at a time, offering their unit plan (if you have it) as a starting point ("Your plan said Grade 4, three sessions. Is that what happened?"): the dates they taught, where, how many participants (adults and youth separately), the age groups, and the activities they taught. Then write the answers in a fenced code block labeled `survey`, one answer per line, using exactly these labels (leave out any line you don't have an answer for; never guess):
+
+```survey
+Organization:
+Dates taught:
+Where:
+Participants:
+Age groups:
+Activities taught:
+```
+
+   "Participants" gives adults and youth separately. Tell them the box has a link that opens the post-unit survey with these answers in place, that the rest of the questions (how the lessons went, inclusion and accessibility, highlights, challenges, whether they'll teach more) are for them to answer in their own words, and that their Unit 7 reflections will help. They submit the survey themselves. Navigation Games can't submit it for them.
+8. Remind them to book Consultation 2. Thank them warmly and specifically for what they did.
 
 Rubric:
 

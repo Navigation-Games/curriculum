@@ -36,6 +36,7 @@ import formatMessage from '@site/src/components/AdvisorChat/formatMessage';
 import chatStyles from '@site/src/components/AdvisorChat/styles.module.css';
 import styles from './styles.module.css';
 import {ympPrefillUrl} from './ympForm';
+import {surveyFor, surveyPrefillUrl, type SurveyPerson} from './surveyForms';
 import {downloadCalendar, parseSchedule} from './calendar';
 
 interface Message {
@@ -82,7 +83,7 @@ function newConversationId(unit: string): string {
 }
 
 // Splits a tutor message into plain text and saved blocks (```profile, ```deliverable, ...).
-type SavedKind = 'profile' | 'deliverable' | 'ymp' | 'schedule';
+type SavedKind = 'profile' | 'deliverable' | 'ymp' | 'schedule' | 'survey';
 // What can be sent: a saved box, or the note that the YMP application was submitted
 type SendKind = SavedKind | 'ymp_done';
 const YMP_DONE_TEXT = 'Submitted the YMP application.';
@@ -93,7 +94,7 @@ type Part = {kind: 'text' | SavedKind; text: string};
 
 function splitBlocks(message: string): Part[] {
   const parts: Part[] = [];
-  const pattern = /```(profile|deliverable|ymp|schedule)\n([\s\S]*?)```/g;
+  const pattern = /```(profile|deliverable|ymp|schedule|survey)\n([\s\S]*?)```/g;
   let last = 0;
   for (const match of message.matchAll(pattern)) {
     if (match.index! > last) parts.push({kind: 'text', text: message.slice(last, match.index)});
@@ -109,6 +110,7 @@ const SAVED_HEADINGS = {
   deliverable: 'Your deliverable (saved)',
   ymp: 'Your map application answers (saved)',
   schedule: 'Your class dates (saved)',
+  survey: 'Your survey answers (saved)',
 };
 
 // What the Send button does for a saved box: send it, and whether this exact text was sent already
@@ -116,6 +118,7 @@ export interface Sending {
   send: (kind: SendKind, text: string) => Promise<void>;
   sentText: Partial<Record<SendKind, string>>;
   status: Partial<Record<SendKind, string>>; // message shown after sending
+  survey: {unit: string; person: SurveyPerson}; // what a survey link needs to pre-fill
 }
 
 // What pressing Send does, in words a teacher can act on
@@ -182,6 +185,22 @@ function YmpDoneStep({answers, sending}: {answers: string; sending?: Sending}) {
   );
 }
 
+// The unit's survey, a Google Form, opened with the answers so far filled in
+function SurveyLink({text, survey}: {text: string; survey: Sending['survey']}) {
+  const form = surveyFor(survey.unit);
+  const url = surveyPrefillUrl(survey.unit, text, survey.person);
+  if (!form || !url) return null;
+  return (
+    <p className={styles.savedAction}>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        Open the {form.title} with these answers filled in
+      </a>
+      . Check every answer there, fill in anything left blank, and submit the form yourself. Navigation Games
+      can't submit it for you.
+    </p>
+  );
+}
+
 function SavedBlock({kind, text, sending}: {kind: SavedKind; text: string; sending?: Sending}) {
   const [copied, setCopied] = useState(false);
   const copy = () => {
@@ -214,7 +233,10 @@ function SavedBlock({kind, text, sending}: {kind: SavedKind; text: string; sendi
           Each class comes with a 10-minute reminder afterwards to reflect on it with the tutor.
         </p>
       )}
-      {kind !== 'schedule' && kind !== 'ymp' && <SendButton kind={kind} text={text} sending={sending} />}
+      {kind === 'survey' && sending && <SurveyLink text={text} survey={sending.survey} />}
+      {kind !== 'schedule' && kind !== 'ymp' && kind !== 'survey' && (
+        <SendButton kind={kind} text={text} sending={sending} />
+      )}
       {kind === 'ymp' && <YmpDoneStep answers={text} sending={sending} />}
     </div>
   );
@@ -357,11 +379,13 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
   // Sending saved boxes to Navigation Games
   const [sentText, setSentText] = useState<Sending['sentText']>({});
   const [sendStatus, setSendStatus] = useState<Sending['status']>({});
+  const [person, setPerson] = useState<{name?: string; applicant_id?: string}>({}); // from CourseAccess
   useEffect(() => setSentText(load(sentKey(unit), {})), [unit]);
   const sending: Sending | undefined = googleUser
     ? {
         sentText,
         status: sendStatus,
+        survey: {unit, person: {...person, name: person.name || googleUser.name, email: googleUser.email}},
         send: async (kind, text) => {
           setError(null);
           try {
@@ -425,6 +449,7 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
       .then(progress => {
         if (!progress) return;
         if (progress.profile) save(PROFILE_KEY, progress.profile);
+        if (progress.person) setPerson(progress.person);
         if (progress.plan) save(deliverableKey(PLAN_UNIT), progress.plan);
         const saved = progress.units?.[unit];
         if (saved?.messages?.length && saved.messages.length >= messagesRef.current.length) {

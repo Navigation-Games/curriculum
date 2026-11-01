@@ -671,7 +671,9 @@ COURSE_UNITS_OPEN_DEFAULT = 2  # used only if the units_open setting is missing 
 COURSE_ACCESS_CACHE_SECONDS = 120
 COURSE_ACCESS_REQUIRED = os.environ.get("COURSE_ACCESS_REQUIRED", "").lower() == "true"
 
-_course_access_cache: dict = {"at": 0.0, "ok": False, "emails": set(), "units_open": COURSE_UNITS_OPEN_DEFAULT}
+_course_access_cache: dict = {
+    "at": 0.0, "ok": False, "emails": set(), "units_open": COURSE_UNITS_OPEN_DEFAULT, "people": {},
+}
 
 
 class CourseAccessUnavailable(Exception):
@@ -682,8 +684,11 @@ def course_access_enforced() -> bool:
     return bool(SPREADSHEET_ID) or COURSE_ACCESS_REQUIRED
 
 
-def read_course_access() -> tuple[set[str], int]:
-    """Read the access list and the units_open setting from the log sheet (creating the tabs if missing)."""
+def read_course_access() -> tuple[set[str], int, dict]:
+    """
+    Read the access list and the units_open setting from the log sheet (creating the tabs if missing).
+    The third value maps each email to that teacher's name and applicant ID, for pre-filling forms.
+    """
     spreadsheet = _open_spreadsheet()
     if spreadsheet is None:
         raise CourseAccessUnavailable()
@@ -691,6 +696,14 @@ def read_course_access() -> tuple[set[str], int]:
     setting_rows = _get_or_create_worksheet(spreadsheet, COURSE_SETTINGS_SHEET_TITLE, COURSE_SETTINGS_HEADER).get_all_values()
 
     emails = {row[0].strip().lower() for row in access_rows[1:] if row and row[0].strip()}
+    people = {
+        row[0].strip().lower(): {
+            "name": row[1].strip() if len(row) > 1 else "",
+            "applicant_id": row[2].strip() if len(row) > 2 else "",
+        }
+        for row in access_rows[1:]
+        if row and row[0].strip()
+    }
     units_open = COURSE_UNITS_OPEN_DEFAULT
     for row in setting_rows[1:]:
         if len(row) >= 2 and row[0].strip().lower() == "units_open":
@@ -698,7 +711,7 @@ def read_course_access() -> tuple[set[str], int]:
                 units_open = int(row[1].strip())
             except ValueError:
                 pass
-    return emails, units_open
+    return emails, units_open, people
 
 
 def load_course_access() -> tuple[set[str], int]:
@@ -707,15 +720,29 @@ def load_course_access() -> tuple[set[str], int]:
     if cache["ok"] and time.time() - cache["at"] < COURSE_ACCESS_CACHE_SECONDS:
         return cache["emails"], cache["units_open"]
     try:
-        emails, units_open = read_course_access()
+        emails, units_open, people = read_course_access()
     except Exception as e:
         if cache["ok"]:
             app.logger.warning(f"Could not refresh the course access list, using the last copy: {e}")
             return cache["emails"], cache["units_open"]
         app.logger.error(f"Could not read the course access list: {e}")
         raise CourseAccessUnavailable() from e
-    cache.update(at=time.time(), ok=True, emails=emails, units_open=units_open)
+    cache.update(at=time.time(), ok=True, emails=emails, units_open=units_open, people=people)
     return emails, units_open
+
+
+def course_person(email: str) -> dict:
+    """
+    The name and applicant ID on this teacher's CourseAccess row ({} if none, or if the
+    list can't be read). The course uses them to pre-fill the planning and post-unit surveys.
+    """
+    if not course_access_enforced():
+        return {}
+    try:
+        load_course_access()
+    except CourseAccessUnavailable:
+        return {}
+    return _course_access_cache.get("people", {}).get(email.strip().lower(), {})
 
 
 def course_unit_number(unit_slug: str) -> int | None:
@@ -998,7 +1025,10 @@ def tutor_progress():
     The signed-in teacher's saved course progress, so they can pick up on
     any device.
 
-    Response: {"units": {"unit-1": {"conversation_id", "updated", "messages"}}, "profile": "...", "plan": "..."}
+    Response: {"units": {"unit-1": {"conversation_id", "updated", "messages"}}, "profile": "...", "plan": "...",
+               "person": {"name": "...", "applicant_id": "..."}}
+    "person" comes from the teacher's CourseAccess row ({} if they have none) and
+    is used to pre-fill the survey links.
 
     Rebuilt from the conversation log sheet on every request. Fine for a
     prototype; move to a real datastore before the course is large.
@@ -1013,15 +1043,17 @@ def tutor_progress():
     if access_error:
         return access_error
 
+    person = course_person(user["email"])
     gc = get_sheets_client()
     if not gc:
-        return jsonify({"units": {}, "profile": "", "plan": ""})
+        return jsonify({"units": {}, "profile": "", "plan": "", "person": person})
     try:
         rows = gc.open_by_key(SPREADSHEET_ID).sheet1.get_all_values()
     except Exception as e:
         app.logger.error(f"Could not read the log sheet for progress: {e}")
-        return jsonify({"units": {}, "profile": "", "plan": ""})
+        return jsonify({"units": {}, "profile": "", "plan": "", "person": person})
     progress = rebuild_progress(rows, user["email"])
+    progress["person"] = person
     if voice_enabled():
         for saved in progress["units"].values():
             for m in saved["messages"]:

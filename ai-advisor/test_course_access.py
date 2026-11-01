@@ -219,3 +219,15 @@ def test_access_for_staff_has_every_unit_open(client, monkeypatch):
 def test_access_check_fails_closed_when_the_sheet_is_unreadable(client, sheets):
     sheets["fail"] = True
     assert client.get("/training/access", headers=headers(ENROLLED)).status_code == 503
+
+
+def test_progress_includes_the_teachers_name_and_applicant_id(client):
+    # The surveys are pre-filled from the CourseAccess row
+    r = client.get("/tutor/progress", headers=headers(ENROLLED))
+    assert r.get_json()["person"] == {"name": "Ellen", "applicant_id": "KO-2026-001"}
+
+
+def test_progress_person_is_empty_for_staff_not_on_the_list(client, monkeypatch):
+    as_staff(monkeypatch)
+    r = client.get("/tutor/progress", headers=headers("x@y.org"))
+    assert r.get_json()["person"] == {}

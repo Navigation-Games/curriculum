@@ -32,6 +32,8 @@ Every lesson works without electronic timing. If your classes are longer than a 
 
 A **unit plan** for your class, session by session. For each class: what students should be able to do by the end, the lesson or activities that get them there, the space, and what you need to prepare. Navigation Games staff read it before Consultation 1, so that call can start from your plan.
 
+Then your **planning survey**. Most of its answers are in your plan already, so the tutor fills in what it knows and opens the survey with your answers in place. You check them, add the rest (such as when you're free for Consultation 1) and submit it. We ship your kit after you've finished the training and sent the survey.
+
 ## What we look for
 
 - Each session has a goal you've thought about
@@ -91,6 +93,30 @@ Questions for Consultation 1:
 
 10. Using AI well. Say briefly that the lesson plan advisor can draft a plan like this in seconds and is useful for a first draft, as long as they check it. Ask what they'd check first in an AI-drafted plan.
 11. Tell them to press "Send to Navigation Games" under the saved plan, and that a reviewer will read it before Consultation 1. Plans change, and that's fine: if theirs does, they can tell the tutor in Unit 7 as they go.
+12. Planning survey. Say that the planning survey comes next, that most of its answers are already in their plan and profile, and that you'll fill in what you can so they only check it and add the rest. Ask only for what you don't have, one or two questions at a time: their school's mailing address (if you don't have it), whether they need a permit to use their space, and their staff to participant ratio. Leave the phone number out unless they've given one. Then write the answers in a fenced code block labeled `survey`, one answer per line, using exactly these labels (leave out any line you don't have an answer for; never guess):
+
+```survey
+Phone number:
+School or organization:
+Mailing address:
+Number of sessions:
+Session length:
+Participants per session:
+Ages or grades:
+Activities:
+Dates:
+Location:
+Permit needed:
+Orienteering map needed:
+Orienteering map exists:
+Access to the map:
+Applied to YMP:
+Staff to participant ratio:
+Help all students take part:
+Questions:
+```
+
+   Use their words and their plan: session length in minutes, the activities across all sessions, the dates they plan to teach, and the place (such as the schoolyard or gym). "Help all students take part" comes from the adaptations in their plan, and "Questions" from "Questions for Consultation 1". The answers to "Permit needed" are Yes, No or I don't know; "Orienteering map needed" is Yes, No or Maybe; "Orienteering map exists" and "Access to the map" are Yes or No; "Applied to YMP" is Yes, Not yet or Don't need a map. For the map lines, use the Map line in their profile and plan, and leave them out if you can't tell. The page fills in their name, applicant ID and email by itself. Tell them the box has a link that opens the planning survey with these answers in place, that they should check every answer and fill in anything left blank (including when they're free for Consultation 1), and that they submit the survey themselves. Navigation Games can't submit it for them.
 
 Rubric:
 
