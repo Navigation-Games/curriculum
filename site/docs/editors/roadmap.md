@@ -124,6 +124,7 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub is done. July 2
 
 - **Grade band expansion.** K-2 and 6+ lesson plans exist but need further editing passes. Camp Intro and Skill Development curricula have first-draft lesson plans.
 - **Search.** Docusaurus has built-in search (Algolia or local). Not yet configured.
+- **Move videos to Vimeo (ad-free).** All site videos are YouTube embeds, and YouTube can run its own ads on them, even from a channel that isn't monetized. A paid Vimeo plan has no ads. This means re-uploading the videos and changing the `<YouTube>` component (or adding a Vimeo one). Since November 2026 the embeds set `rel=0`, so suggested videos at the end come only from NG's channel. The clips waiting to be uploaded are in the "For YouTube" tab of the Video and Photo Index; upload them straight to Vimeo if this happens first.
 - **Print styles.** The one-pager view works but could use CSS refinement for clean printing.
 - **AI lesson plan advisor enhancements.** The advisor is live at `/plan-my-lessons/`. Remaining work: follow-up survey link at end of conversations, curriculum Q&A mode (answer specific questions like "give me the script for Animal-O"). Done July 2026: generated site map (`ai-advisor/site-map.md`, rebuilt by the content build script) is appended to the system prompt so the advisor can route people to real pages; requires a Cloud Run redeploy to take effect. See the [detailed plan](https://github.com/Navigation-Games/curriculum/blob/main/notes/ai-lesson-advisor-plan.md).
 - **Conversation review.** Live. Staff review advisor conversations and leave feedback at `/review-conversations/` (linked from For Editors). Periodically: review the accumulated feedback with Claude and update the advisor system prompt. Setup details in "Conversation review setup" in `ai-advisor/README.md`.
@@ -141,7 +142,7 @@ These activities are set aside and not part of the current curriculum structure:
 
 Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O
 
-Maze-O now has a short write-up on the hand-maintained [More Games](/activities/more-games) page (November 2026), from the NG Maze-O one-pager and full description. The other deferred games could go there too, as short entries rather than full activity pages. Maze-O needs a video: phone clip V1146 in the Video and Photo Index shows kids running a maze with maps, and would need to go on YouTube first.
+Maze-O now has a short write-up on the hand-maintained [More Games](/activities/more-games) page (November 2026), from the NG Maze-O one-pager and full description. The other deferred games could go there too, as short entries rather than full activity pages. The page embeds a YouTube video of Ethan running Maze-O.
 
 ## Done
 

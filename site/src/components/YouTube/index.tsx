@@ -19,6 +19,9 @@ export default function YouTube({id, title = 'Video', description, start, end, p
   if (end) params.set('end', String(end));
   const query = params.toString();
   const embedParams = new URLSearchParams(params);
+  // Suggested videos at the end come only from the same channel (NG's).
+  // YouTube has no option to allow other channels such as OUSA or IOF.
+  embedParams.set('rel', '0');
   if (poster) embedParams.set('autoplay', '1');
   const embedQuery = embedParams.toString();
   const url = `https://www.youtube.com/watch?v=${id}${query ? `&${query}` : ''}`;
@@ -41,7 +44,7 @@ export default function YouTube({id, title = 'Video', description, start, end, p
         ) : (
         <iframe
           className={styles.iframe}
-          src={`https://www.youtube.com/embed/${id}${(poster ? embedQuery : query) ? `?${poster ? embedQuery : query}` : ''}`}
+          src={`https://www.youtube.com/embed/${id}?${embedQuery}`}
           title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

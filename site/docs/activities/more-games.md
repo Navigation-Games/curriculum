@@ -3,6 +3,8 @@ title: More Games
 sidebar_position: 3
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # More Games
 
 These games aren't part of the lesson sequences. They're great for a special day, a field day station, a camp evening, or a group that has done the core activities and wants something new.
@@ -13,7 +15,7 @@ These games aren't part of the lesson sequences. They're great for a special day
 
 Students navigate through a small maze to visit checkpoints in order. To find the right checkpoint, they have to connect the walls and paths of the maze to the walls and paths on their map. If they lose that connection, they run into a dead end or an unexpected turn, and that's how they learn. Kids love it, and it works from about first grade up, depending on the size of the maze.
 
-![A maze of yellow stakes and white tape on a grassy field, with runners going through it](/img/activities/maze-o.png)
+<YouTube id="LRdgDdG0uGE" title="Running Maze-O" />
 
 **Time and space:** 30-60 minutes. A gym, schoolyard, or park with a flat area about 20 by 20 feet for a small maze.
 
