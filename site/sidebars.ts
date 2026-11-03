@@ -39,6 +39,7 @@ const sidebars: SidebarsConfig = {
         'activities/core/capture-the-flag-o',
       ],
     },
+    {type: 'doc', id: 'activities/more-games', label: 'More Games'},
   ],
 
   lessonsSidebar: [

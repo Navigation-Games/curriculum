@@ -139,7 +139,9 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub is done. July 2
 
 These activities are set aside and not part of the current curriculum structure:
 
-Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O, Maze-O
+Corridor-O, Scooter-O, Tabletop-O, String-O, Tarzan-O
+
+Maze-O now has a short write-up on the hand-maintained [More Games](/activities/more-games) page (November 2026), from the NG Maze-O one-pager and full description. The other deferred games could go there too, as short entries rather than full activity pages. Maze-O needs a video: phone clip V1146 in the Video and Photo Index shows kids running a maze with maps, and would need to go on YouTube first.
 
 ## Done
 

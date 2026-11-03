@@ -45,3 +45,7 @@ Related activities (readiness exercises, variations, extensions) live on their p
 | [Window-O](window-o) | Navigate with parts of the map removed |
 | [Vampire-O](vampire-o) | Score-O with a chase; vampires take your punch card |
 | [Capture the Flag-O](capture-the-flag-o) | Capture the flag with flags at mapped locations |
+
+## More games
+
+[More Games](../more-games) collects games that aren't part of the lesson sequences, for special days and groups that want something new. It starts with Maze-O: find checkpoints in order inside a maze.
