@@ -11,6 +11,8 @@ This page describes how to set up the physical layout for Geometric-O courses. F
 
 Geometric-O uses an imaginary **4x5 grid** of evenly-spaced positions. You do not need to mark the grid on the ground. Just picture the layout mentally and place cones at the grid points shown on the all-checkpoints map.
 
+![Geometric-O setup diagram showing animal checkpoints arranged in a rectangle with four colored corner cones (red, blue, green, yellow)](/img/activities/geometric-o-setup-2.png)
+
 ### Setting Up
 
 1. **Place the colored landmark cones** at the four corners of the grid. These must match the all-checkpoints map exactly. If the all-checkpoints map shows red in the northeast corner, put the red cone in the northeast corner. Double-check this before placing any other cones.
