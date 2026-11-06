@@ -15,8 +15,8 @@ This first unit is about you, so the rest of the course fits your school. The tu
 Then three practical things:
 
 - **Your map.** Not everyone needs an orienteering map. Some teachers already have one, some will make their own or get one another way, and some, such as teachers of young children who'll stay with Animal-O and the other kit activities, won't use a map yet. The tutor asks which is you. If you'd like a map of your school grounds or a nearby park made, apply to Orienteering USA's Youth Mapping Program (YMP) this week. A mapper makes the map, which takes several weeks or longer, so it's worth starting now. Meanwhile you can teach the kit activities, which don't need a map. If you're applying, the tutor walks you through the application (add about 15 minutes); see below.
-- **PD credit.** Navigation Games isn't a registered PD provider yet, so find out who approves professional development hours for you (in Colorado, usually your district or BOCES) and what they need from us. We can send a one-page description of the course.
-- **The timeline.** Once you've finished the training and the planning survey, we ship your kit and set up Consultation 1. Then you teach at least one activity, fill in a short post-unit survey, and we meet again for Consultation 2.
+- **PD credit.** Navigation Games isn't a registered PD provider yet, so find out who approves professional development hours for you (in Colorado, usually your district or BOCES) and what they need from us. Give them our [one-page course description](/pd-credit/).
+- **The timeline.** Once you've finished the training and the planning survey, we ship your kit and set up Consultation 1. Then you teach at least one day of orienteering, fill in a short post-unit survey, and we meet again for Consultation 2.
 
 ### Your map application (only if you're applying to YMP)
 
@@ -100,7 +100,7 @@ Contact for others wishing to use the area:
 
    Tell them the box has two steps, and say both plainly. Step 1: the link opens the application with these answers filled in, and they must check every answer there and submit the form themselves; that is what applies for the map, and nothing is requested until they do. Step 2: after they submit the form to OUSA, they press "I've submitted the YMP application to OUSA", so we know their application is in. Tell them someone from the YMP committee will be in touch, but that can take a few days, so not hearing yet is normal. If they'd rather apply later, that's fine; the Map line says "Will apply to YMP later".
 
-6. PD credit: which state they teach in, and who approves PD hours for them. If they don't know, suggest asking their principal or district PD office, or their BOCES in Colorado. Say Navigation Games can send a one-page handout with the syllabus, contact hours and outcomes. Never promise that the hours will count.
+6. PD credit: which state they teach in, and who approves PD hours for them. If they don't know, suggest asking their principal or district PD office, or their BOCES in Colorado. Point them to the one-page course description at https://curriculum.navigationgames.org/pd-credit/ (outcome, contact hours, objectives and units) to give whoever approves their hours. Never promise that the hours will count.
 
 When all six are covered, write the profile in a fenced code block labeled `profile`, using exactly these lines, and ask the teacher to correct anything that's wrong:
 
@@ -123,4 +123,4 @@ If they correct it, write the corrected profile again in the same format. The pr
 
 ## Reviewer notes
 
-About 5 minutes. Read the profile and the doubts. Flag anything that affects safety or space, and anything to raise at Consultation 1. Check the map decision against the YMP columns in the Kickstart Tracker, and set the Tracker's "Map needed?" from the profile's Map line (No map for now, or Have one, means no). If they chose "Applying to YMP", watch for the "YMP application submitted" email, then confirm with Orienteering USA before the kit ships. The committee can take a few days to get in touch, so don't chase early. If the credit plan needs the handout, send it.
+About 5 minutes. Read the profile and the doubts. Flag anything that affects safety or space, and anything to raise at Consultation 1. Check the map decision against the YMP columns in the Kickstart Tracker, and set the Tracker's "Map needed?" from the profile's Map line (No map for now, or Have one, means no). If they chose "Applying to YMP", watch for the "YMP application submitted" email, then confirm with Orienteering USA before the kit ships. The committee can take a few days to get in touch, so don't chase early. If the credit plan needs the one-page description, send the link https://curriculum.navigationgames.org/pd-credit/.
