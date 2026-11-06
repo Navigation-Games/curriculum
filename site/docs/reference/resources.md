@@ -63,3 +63,7 @@ See [About Orienteering](/about/about-orienteering) for what these are and when 
     <p style={{fontSize:'0.85rem', marginTop:'0.5rem'}}><strong>A summary for educators</strong> about our orienteering curriculum.</p>
   </div>
 </CardGrid>
+
+## Talks and webinars
+
+- **Teaching Orienteering Where Kids Already Are: Lessons from the Schoolyard** ([slides](https://curriculum.navigationgames.org/go/iof-webinar/)). Barb Bryant's International Orienteering Federation development webinar, November 2026, for clubs and federations that want to bring orienteering into schools.

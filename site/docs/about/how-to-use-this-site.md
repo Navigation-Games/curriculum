@@ -22,7 +22,7 @@ This site contains orienteering curricula for schools and camps. Here is how the
   - [Equipment & Materials](/reference/equipment/) — maps, checkpoints, kits, setup guides
   - [Frameworks](/reference/frameworks/) — the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence), [PE standards](/reference/frameworks/pe-standards), OUSA skill levels, SEL
   - [Adapting for All Learners](/reference/adaptations) — inclusion adaptations
-  - [Resources](/reference/resources) — videos and outside links
+  - [Resources](/reference/resources) — videos, talks and outside links
 - ℹ️ [About](/about/) — [About Orienteering](/about/about-orienteering), [How to Use This Site](/about/how-to-use-this-site), [Our Impact](/about/impact), acknowledgments, copyright
 
 ## Two types of content
