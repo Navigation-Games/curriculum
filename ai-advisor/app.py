@@ -1133,7 +1133,8 @@ def submission_emails(unit_slug: str, unit: dict, kind: str, text: str, user: di
         f"Course submission: {title}, {what}, from {who}",
         f"{who} sent their {what} for {title}.\n\n"
         f"{full_links(text)}\n\n"
-        f"Reply to this email to answer them ({turnaround}). The whole conversation is in the "
+        f"Reply to this email to answer them ({turnaround}). Delete the quoted text before you send, "
+        "since it includes these staff notes; they already have a copy of what they sent. The whole conversation is in the "
         f"review tool, {SITE_URL}/review-conversations/, as {conversation_id or 'an unsaved conversation'}.",
     )
     teacher = (
