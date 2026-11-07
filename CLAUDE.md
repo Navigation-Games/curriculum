@@ -120,13 +120,30 @@ Every core activity needs these, consistent with each other:
 For anything written for Barb to publish or send (web copy, docs, emails, README text). Copied from her global CLAUDE.md so it applies in this repo too. Learned from her edits to the MapMap About page, which turned a draft from an organization covering itself into a person explaining something.
 
 - Say what's true and specific to this work. Prefer the real reason or example over a generic claim.
-- Don't pre-apologize or promise ("some info may be wrong," "we read everything," "things will change"). State it once, only if it matters.
+- Don't pre-apologize or promise ("some info may be wrong," "we read everything," "things will change"). State it once, only if it matters. Don't commit Barb to work in her name ("I'll send it"); invite the person to ask instead.
 - Leave out completeness for its own sake. Include what the reader needs.
 - Add the practical advice and stakes an insider would give (permissions, access, a free tool to use meanwhile). Plain emphasis is fine ("That is super important").
 - Use precise domain terms (copyright owner, landowner, club map curator) instead of flattening them.
 - Be warm and direct when inviting people ("We'd love to...", "Please send..."). Use plain verbs.
 - Avoid: an even rhythm of short declarative sentences, "not X but Y", lists of three, institutional hedging, marketing wording.
 - Let sentence length vary. Draft short, and expect Barb to edit; her edits are the best guide to the voice.
+- When someone asks for materials, offer what NG actually has before suggesting they make their own. Example: animal pictures come in the kit (sold in the NG store), or as PDFs to print and laminate, usable as long as the copyright notice stays on and they're used for their intended purpose. NG also has advice on using your own pictures. If unsure what NG offers, ask Barb rather than suggest a workaround.
+- Ask about the person's own context with real curiosity ("I'd love to hear more about teaching orienteering in PE in your country. Please send me a story or two").
+- Speak as Barb, in the first person, about her own views ("my favorite way"), rather than claiming what works best for everyone.
+- When someone says what they lack ("I have no teaching background"), show them the part they can play ("the teachers have the background; you bring your passion and knowledge of orienteering"). Where you can, connect their goals to each other (translating the curriculum could be a way to engage their clubmates).
+- Match Barb's enthusiasm for an opportunity someone offers. Don't draft defensive or cautious replies about NG's position on a proposal; if her stance is unclear, leave a placeholder for her to decide.
+- When proposing ways to work together, build on what the other person already does well (a club volunteer who runs events could run events that teachers bring their classes to, after the teachers teach a few lessons themselves).
+- Details from old meeting notes may be out of date. Ask whether something is still happening before building on it.
+- When someone has a good story, offer them the credit and a place to tell it (for example, the OUSA newsletter) rather than asking to use it in NG materials.
+- Cut general statements that take up space without telling the reader anything new. Don't hand generic tips to experienced people; invite their questions instead ("I have all kinds of advice, but maybe you could poke around the curriculum and let us know what questions you have").
+- When the other person uses a different term for the same thing, link the two in passing ("a rogaine (our Score-O)"), without explaining what they already know. Don't repeat a point the message already made.
+- For NG programs, the outcome that matters is what happens for students ("Students play navigation games and gain skills"). Teachers adapt our progressive lesson plans to their school; they don't design units from scratch.
+- When describing the teacher course, say what it is (online, self-paced, interactive units; meetings with NG staff) rather than leading with the AI tutor.
+- Make the numbers add up (hours, totals) before handing a draft over.
+- Keep asks light ("if you have any favorites or a list, would you share them?"). Leave out extra conditions and promises.
+- Don't bring in details from Barb's other emails or calendar (such as travel dates) unless she asks.
+- Don't describe the curriculum as free in emails or copy (November 2026). NG may charge for it someday. Just give the link.
+- In replies, answer what the person asked, using what they told you. Check each added suggestion against their situation as they described it, and cut generic next steps. (Someone asked for the slides for a family member who missed the talk; that person starts with the slides, so pointing them to a curriculum page as "a good place to start" ignored the email.)
 
 ## Lesson Plan Writing Practices
 
@@ -238,7 +255,7 @@ The "Edit this page" links use a custom `editUrl` function in `site/docusaurus.c
 
 **Kickstart Orienteering: "Put your School on the Map"** is a free Navigation Games program (launched at the SHAPE Colorado conference, October 2026) that helps teachers and school leaders teach this curriculum. It is a program for *delivering* the curriculum, not part of the curriculum, so its working files live in Google Drive, not here. Keep it that way for now.
 
-Participating schools get a Beginning Orienteering Instruction Kit, an orienteering map made through OUSA's Youth Map Program (YMP), online training, two consultations with NG, and curriculum access. They commit to the training, a planning survey, teaching at least one activity, and a post-unit survey. The kit ships after the training and planning survey are done (lesson from the 2026 MOOR grant program, where kits went first and surveys never came back).
+Participating schools get a Beginning Orienteering Instruction Kit, an orienteering map made through OUSA's Youth Map Program (YMP), online training, two consultations with NG, and curriculum access. They commit to the training, a planning survey, teaching at least one day of orienteering (changed from "at least one activity" in November 2026), and a post-unit survey. The kit ships after the training and planning survey are done (lesson from the 2026 MOOR grant program, where kits went first and surveys never came back).
 
 **Where things are** (Drive folder `18aymaUA_7GEcTcQitVeHdVpqxaqBpeuN`, https://drive.google.com/drive/u/0/folders/18aymaUA_7GEcTcQitVeHdVpqxaqBpeuN):
 - **2026 Updated Kickstart Orienteering Program Description** (Google Doc). Public-facing draft text, the internal participant flow (11 steps), school verification via NCES, MOOR lessons, resources needed, budget, open decisions, and draft survey questions. Collaborators (Dave Yee) comment here.

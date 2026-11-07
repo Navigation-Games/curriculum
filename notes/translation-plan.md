@@ -25,7 +25,7 @@ This is the real cost. Every time we edit an English activity or lesson, the tra
 
 1. Pick one high-demand language (Spanish?)
 2. AI-generate a first draft of all pages
-3. Have a bilingual orienteering person review and correct
+3. Have a fluent speaker who knows orienteering review and correct (decided November 2026: translations are written or edited by fluent speakers, not just machine-translated)
 4. Set up the Docusaurus i18n structure
 5. Accept that translations will lag behind English updates
 
