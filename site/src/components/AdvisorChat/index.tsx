@@ -301,6 +301,7 @@ export default function AdvisorChat(): React.ReactElement {
                 schedule, and space.
               </p>
               <p>Tell me about your situation and I'll suggest a lesson sequence.</p>
+              <p>I can also help you install EasyGecNG or troubleshoot your electronic timing equipment.</p>
             </div>
           </div>
         )}
