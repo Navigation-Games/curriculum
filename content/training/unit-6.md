@@ -24,7 +24,7 @@ Do this unit when your map arrives, or when the mapper sends you a draft to chec
 
 You can draw the course by hand on a printed map with a red or purple pen. [Purple Pen](https://purplepen.golde.org/) is free course design software for Windows if you'd like printed course maps.
 
-## What you'll make
+## Assignments
 
 A **first course** on your own map: what kind it is (Score-O or Point-to-Point), the start, and each checkpoint with the feature it's on. Add a photo of the map with your circles drawn on it if you can. A reviewer looks at it with you before you use it with a class.
 

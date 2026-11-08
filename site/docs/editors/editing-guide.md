@@ -279,7 +279,7 @@ deliverable: Learner profile, credit plan and map decision
 ## Page
 What the teacher reads, with links into the curriculum.
 
-## What you'll make
+## Assignments
 The deliverable, in the teacher's terms.
 
 ## What we look for

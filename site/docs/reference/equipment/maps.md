@@ -48,9 +48,18 @@ Schools do not need professional orienteering maps to begin. Alternatives includ
 
 The key is that the map shows features students can see and match to reality. Even a rough sketch will work for early activities.
 
-## Drawing Courses on Maps
+## Drawing Courses on Maps {#drawing-courses}
 
-Once you have a base map, you need to add course markings (start triangle, checkpoint circles, finish double circle, and connecting lines).
+Once you have a base map, you draw the course on top of it. A pen works fine. Orienteering courses are drawn in purple or red, so they stand out from the map's own colors.
+
+- **Start:** a triangle, centered on the start point.
+- **Checkpoints:** a circle centered on the feature where the checkpoint is, with its number beside it. Put the number where it doesn't hide anything important.
+- **Lines:** a straight line from the start to checkpoint 1, from 1 to 2, and so on, to show the order. The line is not the route. Runners choose their own way. Leave a gap where a line would cover an important feature.
+- **Finish:** a double circle.
+
+For a Score-O, leave out the lines, because students visit the checkpoints in any order.
+
+You can also draw courses on the computer, as below.
 
 ### Purple Pen (Free Course Design Software)
 

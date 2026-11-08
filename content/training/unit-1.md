@@ -34,7 +34,7 @@ The tutor goes through the questions with you, then shows your answers in a box 
 2. **Tell us when you've submitted the YMP application to OUSA.** After you submit the form, press **I've submitted the YMP application to OUSA**, so we know your application is in.
 Someone from the YMP committee will be in touch after you apply, but that can take a few days, so don't worry if you haven't heard yet.
 
-## What you'll make
+## Assignments
 
 - A short **learner profile**, which the tutor writes from your conversation. Please check it and fix anything it got wrong, because later units use it. Then press **Send to Navigation Games** under it to hand in this unit's assignment. Everyone does this, with or without a map.
 - A **credit plan**: who approves your PD hours, and what they need from us.

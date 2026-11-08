@@ -113,6 +113,8 @@ python app.py
 
 The backend runs at http://localhost:8080.
 
+On Windows, `run-local.ps1` does the same with the settings in `.env` (app.py doesn't read `.env` itself), and restarts when `app.py`, `training-units.json` or the prompts change. Put `REVIEW_OAUTH_CLIENT_ID` in `.env` so Google sign-in works locally; with no `ADVISOR_SHEET_ID`, nothing is logged to the real sheet, course access isn't checked, and the tutor has no saved profile from earlier units. In the Code tab, `.claude/launch.json` has `tutor-backend` (this script) and `docusaurus-local-tutor` (the site pointed at it).
+
 ### Run the frontend
 
 In a separate terminal:
@@ -125,7 +127,7 @@ npm start
 
 Go to http://localhost:3000/plan-my-lessons/ to test the chat.
 
-The frontend defaults to http://localhost:8080 for the backend API during local development.
+The frontend uses the live Cloud Run backend unless `ADVISOR_API_URL` is set. To use the local backend, set it first (PowerShell: `$env:ADVISOR_API_URL='http://localhost:8080'; npm start`).
 
 ### Run the tests
 

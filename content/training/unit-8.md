@@ -19,7 +19,7 @@ Do this unit after your last class, before Consultation 2. It's a look back at w
 - Permanent checkpoints on your map, so classes and families can orienteer any time
 - A local orienteering club event for interested students and families ([Resources](/reference/resources/) lists ways to find one), and the [OUSA skill levels](/reference/frameworks/ousa-skill-levels/) for students who want to go further
 
-## What you'll make
+## Assignments
 
 A **plan for the next 12 months**: what you'll teach next, and when, and who else might be involved. Plus a short **look back** at the hopes and doubts from Unit 1.
 

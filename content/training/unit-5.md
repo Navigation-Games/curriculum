@@ -28,7 +28,7 @@ Start from the lessons for your grade band:
 
 Every lesson works without electronic timing. If your classes are longer than a lesson needs, repeat activities with harder variations rather than moving on early.
 
-## What you'll make
+## Assignments
 
 A **unit plan** for your class, session by session. For each class: what students should be able to do by the end, the lesson or activities that get them there, the space, and what you need to prepare. Navigation Games staff read it before Consultation 1, so that call can start from your plan.
 

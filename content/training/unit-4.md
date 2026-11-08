@@ -19,7 +19,7 @@ Your Beginning Orienteering Instruction Kit has what you need for the first acti
 
 Every lesson starts with the same short briefing: where the boundary is, what the gathering signal sounds like, what to do if you're lost or hurt, and today's task. A calm, clear briefing is what makes it safe to let students go off on their own. Say "checkpoints" rather than "controls," and say "out of bounds" in full.
 
-## What you'll make
+## Assignments
 
 - Your **opening briefing**, about a minute when spoken. For now, type or paste what you'd say; recording comes later.
 - A **dry run** of one kit activity with colleagues, family or a few students, and a line or two on how it went.

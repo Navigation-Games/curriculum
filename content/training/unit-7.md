@@ -16,7 +16,7 @@ If your plan changed, that's normal. Tell the tutor what you actually did. Navig
 
 If you added your classes to your calendar in Unit 5, each class has a reminder right after it with a link to this page.
 
-## What you'll make
+## Assignments
 
 A **short reflection** after each class: what you did, what worked, what surprised you and what you'll change. After your last class, the tutor offers a summary to use for the post-unit survey.
 

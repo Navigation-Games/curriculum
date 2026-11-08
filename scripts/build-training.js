@@ -16,8 +16,9 @@
 //   deliverable: One line saying what the teacher makes
 //   ---
 //   ## Page               shown to teachers
-//   ## What you'll make   shown to teachers
-//   ## What we look for   shown to teachers (the rubric, in plain words)
+//   ## Assignments        shown to teachers
+//   ## What we look for   shown to teachers (the rubric, in plain words); the heading
+//                         may name its focus, e.g. "## What we look for in the pitch"
 //   ## Opening            the tutor's first message
 //   ## Tutor              instructions for the AI tutor (not shown on the page)
 //   ## Reviewer notes     for Navigation Games reviewers (not shown on the page)
@@ -42,7 +43,7 @@ const CONTENT_DIR = path.join(REPO_ROOT, 'content', 'training');
 const PAGES_DIR = path.join(REPO_ROOT, 'site', 'docs', 'training');
 const TUTOR_DATA_PATH = path.join(REPO_ROOT, 'ai-advisor', 'training-units.json');
 
-const REQUIRED_UNIT_SECTIONS = ['Page', "What you'll make", 'What we look for', 'Opening', 'Tutor'];
+const REQUIRED_UNIT_SECTIONS = ['Page', 'Assignments', 'What we look for', 'Opening', 'Tutor'];
 const AUDIO_DIR = path.join(REPO_ROOT, 'site', 'static', 'audio');
 
 // The player for a page's recording, or [] if it has none
@@ -135,6 +136,13 @@ function parseSections(body) {
     }
   }
   for (const name of Object.keys(sections)) sections[name] = sections[name].join('\n').trim();
+  // "## What we look for in the pitch" counts as the What we look for section
+  const lookFor = Object.keys(sections).find((name) => name.startsWith('What we look for '));
+  if (lookFor) {
+    sections['What we look for'] = sections[lookFor];
+    sections.lookForHeading = lookFor;
+    delete sections[lookFor];
+  }
   return sections;
 }
 
@@ -205,16 +213,16 @@ function renderUnit(unit, previous, next) {
     // The unit's text and the tutor show only to an enrolled teacher on an open unit (or to staff)
     `<TrainingGate unit=${JSON.stringify(unit.slug)}>`,
     '',
-    `**About ${unit.meta.minutes} minutes.** You'll make: ${lowerFirst(unit.meta.deliverable)}.`,
+    `**About ${unit.meta.minutes} minutes.** You'll produce: ${lowerFirst(unit.meta.deliverable)}.`,
     '',
     ...audioPlayer(unit.meta),
     s['Page'],
     '',
-    "## What you'll make",
+    '## Assignments',
     '',
-    s["What you'll make"],
+    s['Assignments'],
     '',
-    '## What we look for',
+    `## ${s.lookForHeading || 'What we look for'}`,
     '',
     s['What we look for'],
     '',
@@ -248,7 +256,7 @@ function tutorData(units) {
       minutes: unit.meta.minutes,
       deliverable: unit.meta.deliverable,
       page: unit.sections['Page'],
-      make: unit.sections["What you'll make"],
+      make: unit.sections['Assignments'],
       look_for: unit.sections['What we look for'],
       opening: unit.sections['Opening'],
       instructions: unit.sections['Tutor'],

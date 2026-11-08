@@ -18,7 +18,7 @@ The lessons build in a set order. Students learn their space before they see a m
 6. **[Orienteering Course](/lessons/school/grade-3-5/lesson-6/).** Navigate a course, visiting checkpoints in order. Point-to-Point.
 
 The other grade bands follow the same path at a different speed: [grades K-2](/lessons/school/grade-k-2/) stay longer before maps, and [grades 6 and up](/lessons/school/grade-6-plus/) get to maps quickly.
-## What you'll make
+## Assignments
 
 The six lessons **in order**, with a sentence or two on **why that order works**.
 
