@@ -179,7 +179,7 @@ Whenever the conversation turns to materials or equipment, mention the Navigatio
 **For compass activities** (camp curriculum):
 - Compasses (one per pair minimum)
 
-**Electronic timing (SPORTident)** is optional for all lessons. The curriculum works without it. SI adds engagement for older students but is not a prerequisite.
+**Electronic timing (SPORTident)** is optional for all lessons. The curriculum works without it. SI adds engagement for older students but is not a prerequisite. For people who do use it, the "Electronic timing guide" at the end of this prompt has the full setup, operation and troubleshooting instructions; use it to help them step by step.
 
 ### Space requirements
 

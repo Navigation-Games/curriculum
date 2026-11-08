@@ -47,7 +47,8 @@ Every core activity needs these, consistent with each other:
 ## Vocabulary Decisions
 
 - "Controls" vs "checkpoints" — **decided: use "checkpoints"** throughout. Done. Glossary notes the orienteering term "control."
-- "Punch" vs "beep" vs "visit" — pick one org-wide (pending)
+- "Punch" vs "beep" vs "visit" — pick one org-wide (pending). The Electronic Timing pages (November 2026) use "check in" for the student action and "beep" for the sound
+- Electronic timing: "SI box" (not "control box"), "SI card", "mini reader"
 - "OOB" — always spell out as "out of bounds"
 - "Score-O" → use "Map Treasure Hunt" for camp audiences
 - A person who orienteers is an **"orienteer"**, not "orienteerer"
@@ -189,6 +190,7 @@ An embedded AI chat at `/plan-my-lessons/` that helps teachers and anyone else p
 ### Architecture
 
 - **Backend:** Python/Flask on Google Cloud Run (`ai-advisor/`). Wraps the Claude API with curriculum knowledge baked into the system prompt.
+- **Electronic timing guide in prompt:** `scripts/build-content.js` also writes `ai-advisor/electronic-timing-guide.md`, the full text of the pages in `site/docs/reference/equipment/electronic-timing/` (hand-maintained), and `app.py` appends it to the advisor's system prompt so the advisor can walk people through EasyGecNG troubleshooting. Committed like site-map.md; redeploy after editing those pages.
 - **Site map in prompt:** `scripts/build-content.js` generates `ai-advisor/site-map.md` (every public page with title, URL, and one-line description; excludes `editors/`). `app.py` appends it to the system prompt at startup so the advisor routes people to real URLs instead of guessing. Lesson descriptions come from the content files' taglines. The file is committed (not gitignored) and regenerates on every content build.
 - **Frontend:** React chat component (`site/src/components/AdvisorChat/`) on the Docusaurus site.
 - **Rate limit:** in-memory (resets on deploy). Anonymous: 20 chat messages/day per IP. Signed in with any Google account: 100/day per verified email. Staff (navigationgames.org): unlimited. See "Site sign-in" below.

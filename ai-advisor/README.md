@@ -1,6 +1,6 @@
 # AI Lesson Plan Advisor
 
-> **Changed something in this folder? Redeploy.** The live advisor and course tutor do not update on `git push`. After any change to `app.py`, `system-prompt.md`, `tutor-prompt.md`, `tutor-style.md`, `requirements.txt`, or the generated `site-map.md` or `training-units.json`, follow [Redeploying after changes](#redeploying-after-changes).
+> **Changed something in this folder? Redeploy.** The live advisor and course tutor do not update on `git push`. After any change to `app.py`, `system-prompt.md`, `tutor-prompt.md`, `tutor-style.md`, `requirements.txt`, or the generated `site-map.md`, `electronic-timing-guide.md` or `training-units.json`, follow [Redeploying after changes](#redeploying-after-changes).
 
 > **Running the teacher course?** See [Teacher course: how it runs](#teacher-course-how-it-runs): feedback points, tracking teachers' dates, cohorts, check-ins and costs.
 

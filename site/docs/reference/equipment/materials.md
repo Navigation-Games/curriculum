@@ -198,6 +198,17 @@ A permanent marker for labeling checkpoint codes, writing on cones, or marking m
 | **Used in** | Setup for all checkpoint-based activities |
 | **Learning connection** | Clear labeling is essential for checkpoint identification. Students need to read codes to confirm the correct checkpoint. |
 
+#### Electronic timing equipment {#electronic-timing-equipment}
+
+A SPORTident school kit: SI boxes for the checkpoints and for Clear, Start and Finish, SI cards for the students, and a mini reader that plugs into a Windows computer running EasyGecNG. Optional for every lesson.
+
+| | |
+|---|---|
+| **Where to get** | SPORTident USA (sportident.us); see [Equipment for Electronic Timing](/reference/equipment/electronic-timing/equipment) for the full list, including cones and cone toppers |
+| **Alternatives** | Animal pictures, letter codes, stickers or pin punches at each checkpoint, plus a stopwatch |
+| **Used in** | Animal-O, Geometric-O, Point-to-Point, and any course activity |
+| **Learning connection** | The beep and the instant smiley or sad face tell students right away whether they did the course correctly, and free the teacher from checking results to focus on teaching. |
+
 #### Flags or pinnies {#flags-or-pinnies}
 
 Colored cloth flags or mesh vests used for team identification in competitive activities.

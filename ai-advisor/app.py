@@ -51,6 +51,12 @@ SITE_MAP_PATH = Path(__file__).parent / "site-map.md"
 if SITE_MAP_PATH.exists():
     SYSTEM_PROMPT += "\n\n" + SITE_MAP_PATH.read_text(encoding="utf-8")
 
+# Append the full Electronic Timing pages (also written by build-content.js)
+# so the advisor can walk people through EasyGecNG setup and troubleshooting.
+TIMING_GUIDE_PATH = Path(__file__).parent / "electronic-timing-guide.md"
+if TIMING_GUIDE_PATH.exists():
+    SYSTEM_PROMPT += "\n\n" + TIMING_GUIDE_PATH.read_text(encoding="utf-8")
+
 # Anthropic client - uses ANTHROPIC_API_KEY env var automatically
 client = anthropic.Anthropic()
 

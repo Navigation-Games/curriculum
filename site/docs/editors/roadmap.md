@@ -146,6 +146,7 @@ Maze-O now has a short write-up on the hand-maintained [More Games](/activities/
 
 ## Done
 
+- Electronic Timing moved into the curriculum (November 2026) from the Google Site and the EasyGecNG Operation Tutorial and installation Docs: overview, equipment and cone toppers, installing, running EasyGecNG, troubleshooting, and SI box maintenance, under Reference > Equipment & Materials > Electronic Timing. The full text is also generated into the advisor's prompt (`ai-advisor/electronic-timing-guide.md`). District logins and staff-only links stayed out. Still to do: point the Google Site's Electronic Timing pages to the new ones; ask the EasyGecNG team whether the release should come with the red "easy" Desktop icon (installing v1.1.2 doesn't create one, so the Running page doesn't show it); replace the photo of the "Erreur d'écriture" access denied message on the Troubleshooting page with a screenshot
 - Animal-O videos (October 2026): Cambridge Camping video added to the activity page; tips for checking students go in order without electronic timing; video sources (videos, slide decks, planning doc) recorded in the video script; 2-minute video draft with a coverage check against the activity page
 - Content build system: clean Markdown content files generate MDX site pages
 - 8 core activity pages: Boundary Run, Gathering, Animal-O, Clothespin-O, Geometric-O, Map Walk, Score-O, Point-to-Point

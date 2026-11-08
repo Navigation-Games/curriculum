@@ -73,6 +73,14 @@ A picture of a space that can be used as a map to locate objects. Used before st
 
 The path you choose to get from one checkpoint to the next. Good route choice considers distance, terrain, and landmarks.
 
+#### SI box
+
+An SI box at each checkpoint, plus Clear, Start and Finish boxes, in [electronic timing](/reference/equipment/electronic-timing). Students check in by putting their SI card into the box, which beeps and flashes. In orienteering events these are often called control boxes or stations.
+
+#### SI card
+
+A small card each student carries in [electronic timing](/reference/equipment/electronic-timing). It records each SI box the student checks in at, and the time. Students download it at the end of the course to see whether they got it right.
+
 #### Spatial memory
 
 The ability to remember where things are in space. Develops through repeated exploration of the same area.

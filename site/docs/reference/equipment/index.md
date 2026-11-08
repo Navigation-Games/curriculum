@@ -12,4 +12,4 @@ Everything you need to run orienteering activities: what to buy, how to get maps
 - **[Checkpoints](controls-and-punches)** -- checkpoint markers and how students confirm their visits
 - **[Navigation Games Kits](kits)** -- what's included in the NG teaching kits
 - **[Geometric-O Setup](geometric-o-setup)** -- grid layout guide for setting up Geometric-O courses
-- **[Electronic Timing](electronic-timing)** -- SPORTident system for automated timing and checkpoint verification (optional)
+- **[Electronic Timing](electronic-timing)** -- SPORTident and EasyGecNG (optional): equipment, installing, running a class, troubleshooting and maintenance
