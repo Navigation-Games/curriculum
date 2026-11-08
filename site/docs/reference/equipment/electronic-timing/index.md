@@ -54,8 +54,6 @@ Kids using electronic timing with Navigation Games activities:
 
 <YouTube id="i6sBtF-MGGA" title="Animal O Draft Video" />
 
-<YouTube id="DhSJ-nxsQiI" title="Animal-O with Cambridge Camping" />
-
 <YouTube id="Xu1DLRNDAlA" title="Geometric Animal-O" />
 
 <YouTube id="OtUZVh1cQPI" title="Orienteering with a pattern map" />

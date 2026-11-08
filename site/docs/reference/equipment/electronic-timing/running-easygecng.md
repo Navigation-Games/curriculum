@@ -4,6 +4,9 @@ sidebar_position: 3
 description: Step-by-step EasyGecNG operation for a class (COM port, opening a course file, reading SI cards), practice scenarios, tabular view, clean course files, assigning SI cards to students, new courses, and mass-start Score-O.
 ---
 
+import {Steps, Step} from '@site/src/components/StepTable';
+import {Pic, PhotoRow} from '@site/src/components/Pic';
+
 # Running EasyGecNG
 
 Before class:
@@ -22,39 +25,60 @@ Before class:
 
 ## Steps
 
-1. **Sign in to the laptop.**
+<Steps>
+<Step n="1" title="Sign in to the laptop">
+</Step>
+<Step n="2" title="Connect the mini reader" img="/img/electronic-timing/mini-reader.png" alt="Mini reader" imgWidth={110}>
 
-2. **Connect the mini reader.** Plug it into a USB port. It beeps twice.
+Plug it into a USB port. It beeps twice.
 
-3. **Start EasyGecNG.** Double-click the EasyGecNG shortcut on the Desktop, or open the EasyGecNG folder, then `bin`, and double-click **EasyGecNG** (Windows Batch File).
+</Step>
+<Step n="3" title="Start EasyGecNG">
 
-4. **Check the COM port.** Under "Reading Si-card", look at the **COM Port** menu. If it's blank, click it and choose a port. If there are no choices, check that the mini reader is plugged in, then click the blue and white arrow next to the menu to look again. If the computer shows more than one COM port, you may need to try each one until cards read (step 10).
+Double-click the EasyGecNG shortcut on the Desktop, or open the EasyGecNG folder, then `bin`, and double-click **EasyGecNG.bat** (see [Installing EasyGecNG](../installing#4-start-easygecng)).
 
-   ![The COM Port menu is blank; click the arrow to refresh](/img/electronic-timing/com-port-blank.png)
+</Step>
+<Step n="4" title="Check the COM port" img="/img/electronic-timing/com-port-blank.png" alt="A blank COM Port menu with the blue and white arrow" imgWidth={240}>
 
-   ![Choosing between COM3 and COM4](/img/electronic-timing/com-port-choices.webp)
+Under "Reading Si-card", look at the **COM Port** menu. If it's blank, click it and choose a port. If there are no choices, check that the mini reader is plugged in, then click the blue and white arrow next to the menu to look again. If there is more than one COM port, you may need to try each one until cards read (step 10).
 
-5. **Open the course file.** Click the **Open** icon (under File, the second icon) and open the Animal-O `.egc` file for your school, usually in a Desktop folder such as `Orienteering Courses`. If EasyGecNG asks "Do you want to save the current event?", click **No**.
+</Step>
+<Step n="5" title="Open the course file" img="/img/electronic-timing/open-file-icon.png" alt="The Open File icon" imgWidth={60}>
 
-   ![EasyGecNG with a course file open](/img/electronic-timing/easygecng-window.png)
+Click the **Open File** icon (under File, the second icon) and open the Animal-O `.egc` file from a folder on the Desktop (usually `Orienteering Courses` > your school > the activity name). If EasyGecNG asks "Do you want to save the current event?", click **No**.
 
-   ![Click No when asked to save the current event](/img/electronic-timing/save-event-prompt.webp)
+</Step>
+<Step n="6" title="Check the output mode" img="/img/electronic-timing/tabular-to-face.png" alt="The table icon changes to the smiley face icon" imgWidth={200}>
 
-6. **Check the output mode.** Results should show as a smiley face (pass) or a sad face (mistake). Newer versions start this way. If results show as a table, click the **Parameters** icon to switch to face view (see [Tabular view](#tabular-view)).
+Results should show as a smiley face (pass) or a sad face (mistake). Newer versions start this way: the first icon under **Parameters** is a smiley face. If it's a table, click it to change to face view.
 
-7. **Set the display time.** Click the tools icon under Parameters to set how many seconds each result stays on the screen. We like 2 seconds (the minimum) so students can download quickly one after another. When students are just starting, or to help them understand a mistake, set it longer.
+</Step>
+<Step n="7" title="Set the display time" img="/img/electronic-timing/display-settings-icon.png" alt="The tools icon" imgWidth={60}>
 
-   ![The tools icon](/img/electronic-timing/display-settings-icon.png)
+Click the tools icon under Parameters to set how many seconds each result stays on the screen. We like 2 seconds (the minimum) so students can download quickly one after another. When students are just starting, or to help them understand a mistake, set it longer.
 
-8. **Click the green Start button** (next to "Zero time"). The button turns orange, then red, and the mini reader beeps twice. EasyGecNG is now ready to read cards. The red button is the Stop button.
+</Step>
+<Step n="8" title="Click the green Start button" img="/img/electronic-timing/start-to-stop.png" alt="The green Start button changes to the red Stop button" imgWidth={200}>
 
-   ![When EasyGecNG is reading cards, the button is a red square (Stop)](/img/electronic-timing/stop-button.png)
+The button is next to "Zero time". It turns orange, then red, and the mini reader beeps twice. EasyGecNG is now ready to read cards. If the button stays orange, see [Troubleshooting](../troubleshooting#easygecng-doesnt-read-si-cards).
 
-9. **Try a course yourself before the students do.** Take an SI card and check in at the boxes in order: Clear, Start, the checkpoints on one of your courses, then Finish. That is super important. The best time is before you set the checkpoints out, with the boxes side by side, so only a second or two passes between check-ins. If a box's clock has drifted, even a little, a quick course like this shows it: you get a sad face for a course you did right. Then [synchronize the boxes](../maintenance#synchronizing-the-si-boxes) before class.
+</Step>
+<Step n="9" title="Try a course yourself before the students do" img="/img/electronic-timing/si-card.png" alt="An SI card" imgWidth={110}>
 
-10. **Download the SI card.** Put the card in the mini reader. The reader beeps once, and the computer shows the result and plays a sound. If nothing happens, see [Troubleshooting](../troubleshooting). The most common fix is choosing a different COM port.
+Take an SI card and check in at the boxes in order: Clear, Start, the checkpoints on one of your courses, then Finish. That is super important. The best time is before you set the checkpoints out, with the boxes side by side, so only a second or two passes between check-ins. If a box's clock has drifted, even a little, a quick course like this shows it: you get a sad face for a course you did right. Then [synchronize the boxes](../maintenance#synchronizing-the-si-boxes) before class.
 
-11. **When you're done**, close EasyGecNG with the X at the top right. When it asks "Do you want to save the current event?", click **No** unless you want to keep the results.
+</Step>
+<Step n="10" title="Download the SI card" img="/img/electronic-timing/mini-reader.png" alt="Mini reader" imgWidth={110}>
+
+Put the card in the mini reader. The reader beeps once, and the computer shows the result and plays a sound. If nothing happens, see [Troubleshooting](../troubleshooting). The most common fix is choosing a different COM port.
+
+</Step>
+<Step n="11" title="When you're done" img="/img/electronic-timing/save-event-prompt.png" alt="Do you want to save the current event?" imgWidth={240}>
+
+Close EasyGecNG with the X at the top right. When it asks "Do you want to save the current event?", click **No** unless you want to keep the results.
+
+</Step>
+</Steps>
 
 ## Practice scenarios
 
@@ -71,11 +95,12 @@ You don't need to save the file after class unless you want to look at the resul
 
 If a student makes a mistake and you have time, switch to tabular view and have them download again to see which checkpoints they visited. Tabular view also lets you fix it when EasyGecNG guesses the wrong course for a student: change the course by hand.
 
-Click the **Parameters** icon to switch between face view and tabular view. In face view the icon shows a table; in tabular view it shows a smiley face. Switch back to face view afterward.
+Click the first icon under **Parameters** to switch between the two views. It shows the view you're in: a smiley face in face view, a table in tabular view. Switch back to face view afterward.
 
-![Parameters icons in tabular view (smiley face icon)](/img/electronic-timing/parameters-face-view.png)
-
-![Parameters icons in face view (table icon)](/img/electronic-timing/parameters-tabular-view.png)
+<PhotoRow>
+<Pic src="/img/electronic-timing/parameters-face-view.png" caption="Face view" width={180} />
+<Pic src="/img/electronic-timing/parameters-tabular-view.png" caption="Tabular view" width={180} />
+</PhotoRow>
 
 ## Clean course files
 

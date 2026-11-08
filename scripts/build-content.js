@@ -242,6 +242,15 @@ function writeAdvisorTimingGuide() {
       .replace(/^import .*$/gm, '')                  // MDX imports
       .replace(/^\s*!\[.*\]\(.*\)\s*$/gm, '')        // images
       .replace(/^\s*<YouTube[^>]*\/>\s*$/gm, '')     // video embeds
+      .replace(/^\s*<Pic [^>]*\/>\s*$/gm, '')        // <Pic> pictures
+      .replace(/^\s*<\/?(PhotoRow|Steps)>\s*$/gm, '') // picture rows, step tables
+      .replace(/^\s*<\/Step>\s*$/gm, '')
+      // <Step n="4" title="Check the COM port" ...> -> 4. **Check the COM port**
+      .replace(/^\s*<Step\b([^>]*)>\s*$/gm, (m, attrs) => {
+        const n = (attrs.match(/\bn="([^"]*)"/) || [])[1];
+        const title = (attrs.match(/\btitle="([^"]*)"/) || [])[1] || '';
+        return `${n ? `${n}. ` : ''}**${title}**`;
+      })
       // resolve relative links to full URLs
       .replace(/\]\(\.\.\/([^)#]+)(#[^)]*)?\)/g, (m, slug, hash) => `](${baseUrl}${slug}/${hash || ''})`)
       .replace(/\]\((?!https?:|mailto:|\/|#)([^)#]+)(#[^)]*)?\)/g, (m, slug, hash) => `](${baseUrl}${slug}/${hash || ''})`)

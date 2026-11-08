@@ -1,0 +1,70 @@
+.steps {
+  margin: 1.5rem 0;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) minmax(0, 40%);
+  grid-template-areas: 'num body media';
+  gap: 0.5rem 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Steps without a picture use the full width for words */
+.step:not(:has(.media)) {
+  grid-template-columns: 2rem minmax(0, 1fr);
+  grid-template-areas: 'num body';
+}
+
+.num {
+  grid-area: num;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.body {
+  grid-area: body;
+}
+
+.body > :last-child {
+  margin-bottom: 0;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.media {
+  grid-area: media;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.media img {
+  height: auto;
+}
+
+.arrow {
+  font-size: 1.5rem;
+}
+
+/* Phones: pictures go under the words */
+@media (max-width: 600px) {
+  .step,
+  .step:not(:has(.media)) {
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+    grid-template-areas:
+      'num body'
+      '. media';
+  }
+
+  .media {
+    justify-content: flex-start;
+  }
+}

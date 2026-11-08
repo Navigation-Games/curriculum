@@ -4,6 +4,8 @@ sidebar_position: 2
 description: How to install the SPORTident USB driver, Java 8 and EasyGecNG on a Windows computer, download the latest release from GitHub, and test with the mini reader.
 ---
 
+import {Pic} from '@site/src/components/Pic';
+
 # Installing EasyGecNG
 
 EasyGecNG runs on Windows. It can also run on Mac and Linux; the [EasyGecNG page on GitHub](https://github.com/Navigation-Games/EasyGecNG) explains how. EasyGecNG is a Java program, and its source code is public if your IT department wants to review it.
@@ -29,17 +31,17 @@ Then turn off automatic Java updates, because EasyGecNG needs this older version
 3. Under **Assets** at the bottom of that release, click the `.zip` file (for example, `EasyGecNG-v1.1.2.zip`) to download it.
 4. Unzip it: in File Explorer, right-click the downloaded file, choose **Extract All...**, and extract it to a folder you'll remember.
 
-The unzipped folder has `bin`, `doc` and `lib` folders inside it.
+The unzipped folder has `bin`, `documentation` and `lib` folders inside it.
 
-![The EasyGecNG-v1.1.2 folder, with bin, doc and lib folders](/img/electronic-timing/easygecng-folder.webp)
+<Pic src="/img/electronic-timing/easygecng-folder.png" alt="The unzipped folder: bin, documentation, lib, LICENSE, README.md" width={240} />
 
 ## 4. Start EasyGecNG
 
-Open the `bin` folder and double-click **EasyGecNG**, the one whose type is "Windows Batch File". (There's another file with the same name and no extension. That one is for Mac and Linux.)
+Open the `bin` folder and double-click **EasyGecNG.bat**. (If your computer hides file extensions, it's the EasyGecNG file whose type is "Windows Batch File". The other EasyGecNG file, with no extension, is for Mac and Linux.)
 
-![In the bin folder, double-click the EasyGecNG Windows Batch File](/img/electronic-timing/easygecng-bin.webp)
+<Pic src="/img/electronic-timing/easygecng-bin.png" alt="The bin folder: config.xml, EasyGecNG, EasyGecNG.bat, gecosi.log, temp.html" width={200} />
 
-To make it easier to find in class, right-click that file and choose **Send to > Desktop (create shortcut)**.
+To make it easier to find in class, right-click that file and choose **Send to > Desktop (create shortcut)**. (On Windows 11, **Send to** is under **Show more options**.)
 
 ## 5. Test it
 

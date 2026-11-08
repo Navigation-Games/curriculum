@@ -60,7 +60,7 @@ Page URL: https://curriculum.navigationgames.org/reference/equipment/electronic-
 
 To build one complete set for teaching orienteering with electronic timing, schools buy:
 
-- **SPORTident school kit** from [sportident.us](https://www.sportident.us/product-page/school-and-training-set), and 13 [mounting holders](https://www.sportident.us/product-page/mounting-holder) that fit the SI boxes in the kit. The kit cost about $2,800 in August 2025 and has gone up since because of tariffs. SPORTident USA can take a credit card or give you a quote so you can raise a purchase order. They ship the kit with an invoice. If kits are out of stock, the whole process can take 4 to 6 weeks.
+- **SPORTident school kit** from [sportident.us](https://www.sportident.us/product-page/school-and-training-set), and 13 [mounting holders](https://www.sportident.us/product-page/mounting-holder) that fit the SI boxes in the kit. The kit cost about $2,800 in August 2025 and has gone up since because of tariffs. SPORTident USA can take a credit card or give you a quote so you can obtain a purchase order. They ship the kit with an invoice. If kits are out of stock, the whole process can take 4 to 6 weeks.
 - **13 traffic cones with holes in the top.** We recommend 12-inch cones ([example](https://www.amazon.com/dp/B0C7SR23YR)) because they're easier to carry. 18-inch cones ([example](https://www.amazon.com/Traffic-Collars-Parking-Control-Construction/dp/B0CPP3NFBT/)) are sturdier but harder to carry.
 - **A hardwood dowel** that fits into the top of the cones, and screws to attach the mounting holders (see [Cone toppers](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/equipment/#cone-toppers) below).
 - **A Windows computer or tablet** to run EasyGecNG. Pick one with good battery life for use outdoors. See [Installing EasyGecNG](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/installing/).
@@ -87,7 +87,7 @@ Navigation Games uses cone toppers to hold SI boxes on traffic cones, indoors an
 1. Cut a wooden dowel into 3-inch lengths. Use a hardwood like oak or maple, not pine, so the screws hold better in the end grain. The dowel should fit snugly into the top of your cones without being hard to push in.
 2. Screw the black SI box mounting holders into the ends of the dowels. SPORTident USA sells the holders. Their website may not show everything they offer, so contact them if you don't see it.
 
-Navigation Games can make the cone toppers for you. [Contact us](mailto:admin@navigationgames.org) for a quote.
+If you'd rather not make your own, you can buy [cone tops for SI boxes from O-Store in Canada](https://www.o-store.ca/en/cone-tops-for-si), or Navigation Games can make cone toppers for you. [Contact us](mailto:admin@navigationgames.org) for a quote.
 
 ### You might also want
 
@@ -122,13 +122,13 @@ Then turn off automatic Java updates, because EasyGecNG needs this older version
 3. Under **Assets** at the bottom of that release, click the `.zip` file (for example, `EasyGecNG-v1.1.2.zip`) to download it.
 4. Unzip it: in File Explorer, right-click the downloaded file, choose **Extract All...**, and extract it to a folder you'll remember.
 
-The unzipped folder has `bin`, `doc` and `lib` folders inside it.
+The unzipped folder has `bin`, `documentation` and `lib` folders inside it.
 
 ### 4. Start EasyGecNG
 
-Open the `bin` folder and double-click **EasyGecNG**, the one whose type is "Windows Batch File". (There's another file with the same name and no extension. That one is for Mac and Linux.)
+Open the `bin` folder and double-click **EasyGecNG.bat**. (If your computer hides file extensions, it's the EasyGecNG file whose type is "Windows Batch File". The other EasyGecNG file, with no extension, is for Mac and Linux.)
 
-To make it easier to find in class, right-click that file and choose **Send to > Desktop (create shortcut)**.
+To make it easier to find in class, right-click that file and choose **Send to > Desktop (create shortcut)**. (On Windows 11, **Send to** is under **Show more options**.)
 
 ### 5. Test it
 
@@ -169,28 +169,26 @@ Before class:
 - A course file (`.egc`) with the courses already built. See [Clean course files](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/running-easygecng/#clean-course-files).
 
 ### Steps
-
-1. **Sign in to the laptop.**
-
-2. **Connect the mini reader.** Plug it into a USB port. It beeps twice.
-
-3. **Start EasyGecNG.** Double-click the EasyGecNG shortcut on the Desktop, or open the EasyGecNG folder, then `bin`, and double-click **EasyGecNG** (Windows Batch File).
-
-4. **Check the COM port.** Under "Reading Si-card", look at the **COM Port** menu. If it's blank, click it and choose a port. If there are no choices, check that the mini reader is plugged in, then click the blue and white arrow next to the menu to look again. If the computer shows more than one COM port, you may need to try each one until cards read (step 10).
-
-5. **Open the course file.** Click the **Open** icon (under File, the second icon) and open the Animal-O `.egc` file for your school, usually in a Desktop folder such as `Orienteering Courses`. If EasyGecNG asks "Do you want to save the current event?", click **No**.
-
-6. **Check the output mode.** Results should show as a smiley face (pass) or a sad face (mistake). Newer versions start this way. If results show as a table, click the **Parameters** icon to switch to face view (see [Tabular view](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/running-easygecng/#tabular-view)).
-
-7. **Set the display time.** Click the tools icon under Parameters to set how many seconds each result stays on the screen. We like 2 seconds (the minimum) so students can download quickly one after another. When students are just starting, or to help them understand a mistake, set it longer.
-
-8. **Click the green Start button** (next to "Zero time"). The button turns orange, then red, and the mini reader beeps twice. EasyGecNG is now ready to read cards. The red button is the Stop button.
-
-9. **Try a course yourself before the students do.** Take an SI card and check in at the boxes in order: Clear, Start, the checkpoints on one of your courses, then Finish. That is super important. The best time is before you set the checkpoints out, with the boxes side by side, so only a second or two passes between check-ins. If a box's clock has drifted, even a little, a quick course like this shows it: you get a sad face for a course you did right. Then [synchronize the boxes](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/maintenance/#synchronizing-the-si-boxes) before class.
-
-10. **Download the SI card.** Put the card in the mini reader. The reader beeps once, and the computer shows the result and plays a sound. If nothing happens, see [Troubleshooting](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/troubleshooting/). The most common fix is choosing a different COM port.
-
-11. **When you're done**, close EasyGecNG with the X at the top right. When it asks "Do you want to save the current event?", click **No** unless you want to keep the results.
+1. **Sign in to the laptop**2. **Connect the mini reader**
+Plug it into a USB port. It beeps twice.
+3. **Start EasyGecNG**
+Double-click the EasyGecNG shortcut on the Desktop, or open the EasyGecNG folder, then `bin`, and double-click **EasyGecNG.bat** (see [Installing EasyGecNG](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/installing/#4-start-easygecng)).
+4. **Check the COM port**
+Under "Reading Si-card", look at the **COM Port** menu. If it's blank, click it and choose a port. If there are no choices, check that the mini reader is plugged in, then click the blue and white arrow next to the menu to look again. If there is more than one COM port, you may need to try each one until cards read (step 10).
+5. **Open the course file**
+Click the **Open File** icon (under File, the second icon) and open the Animal-O `.egc` file from a folder on the Desktop (usually `Orienteering Courses` > your school > the activity name). If EasyGecNG asks "Do you want to save the current event?", click **No**.
+6. **Check the output mode**
+Results should show as a smiley face (pass) or a sad face (mistake). Newer versions start this way: the first icon under **Parameters** is a smiley face. If it's a table, click it to change to face view.
+7. **Set the display time**
+Click the tools icon under Parameters to set how many seconds each result stays on the screen. We like 2 seconds (the minimum) so students can download quickly one after another. When students are just starting, or to help them understand a mistake, set it longer.
+8. **Click the green Start button**
+The button is next to "Zero time". It turns orange, then red, and the mini reader beeps twice. EasyGecNG is now ready to read cards. If the button stays orange, see [Troubleshooting](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/troubleshooting/#easygecng-doesnt-read-si-cards).
+9. **Try a course yourself before the students do**
+Take an SI card and check in at the boxes in order: Clear, Start, the checkpoints on one of your courses, then Finish. That is super important. The best time is before you set the checkpoints out, with the boxes side by side, so only a second or two passes between check-ins. If a box's clock has drifted, even a little, a quick course like this shows it: you get a sad face for a course you did right. Then [synchronize the boxes](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/maintenance/#synchronizing-the-si-boxes) before class.
+10. **Download the SI card**
+Put the card in the mini reader. The reader beeps once, and the computer shows the result and plays a sound. If nothing happens, see [Troubleshooting](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/troubleshooting/). The most common fix is choosing a different COM port.
+11. **When you're done**
+Close EasyGecNG with the X at the top right. When it asks "Do you want to save the current event?", click **No** unless you want to keep the results.
 
 ### Practice scenarios
 
@@ -207,7 +205,7 @@ You don't need to save the file after class unless you want to look at the resul
 
 If a student makes a mistake and you have time, switch to tabular view and have them download again to see which checkpoints they visited. Tabular view also lets you fix it when EasyGecNG guesses the wrong course for a student: change the course by hand.
 
-Click the **Parameters** icon to switch between face view and tabular view. In face view the icon shows a table; in tabular view it shows a smiley face. Switch back to face view afterward.
+Click the first icon under **Parameters** to switch between the two views. It shows the view you're in: a smiley face in face view, a table in tabular view. Switch back to face view afterward.
 
 ### Clean course files
 
@@ -266,17 +264,19 @@ Page URL: https://curriculum.navigationgames.org/reference/equipment/electronic-
 
 ## Troubleshooting Electronic Timing
 
-Problems are listed by what you see. Try the fixes in order.
+Use the menu for this page to select the problem you are observing.
 
 ### EasyGecNG doesn't read SI cards
 
 You put an SI card in the mini reader and nothing shows on the screen, or the mini reader doesn't beep.
 
-1. **Try a different COM port.** This is the most common fix. Under "Reading Si-card", click the **COM Port** menu. If there is more than one port (for example COM3 and COM4), you have to find the one the mini reader is using. Click the red Stop button, choose another port, click the green Start button, and download a card again. Try each port in the list until a card reads.
+1. **Make sure the mini reader is plugged into a USB port** on the computer. It beeps twice when you plug it in.
 
-2. **If the COM Port menu is blank**, check that the mini reader is plugged in, then click the blue and white arrow next to the menu to look again. Unplug the mini reader and plug it back in. It should beep twice.
+2. **Try a different COM port.** This is the most common fix. A sign you're on the wrong port: the button next to "Zero time" stays orange instead of turning red, and if you hold the mouse over it, it says "Connect the master station".
 
-3. **Check that EasyGecNG is reading.** The button next to "Zero time" should be a red square (Stop). If it's a green arrow, click it. If it stays orange instead of turning red, EasyGecNG isn't connected to the mini reader: go back to step 1.
+   Click the **COM Port** menu. If there is more than one port, you have to find the one the mini reader is using. Choose another port, click the button next to "Zero time", and download a card again. Try each port in the list until a card reads. When EasyGecNG is reading cards, the button is a red square.
+
+3. **If the COM Port menu is blank**, click the blue and white arrow next to the menu to look again. Unplug the mini reader and plug it back in. It should beep twice.
 
 4. **Check the driver.** If no COM port works, the SPORTident USB driver may be missing. Install it ([Installing EasyGecNG](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/installing/)) and restart the computer. If you have SPORTident Config+, see whether it finds the mini reader; if it doesn't either, it's a driver problem.
 
@@ -350,6 +350,8 @@ Page URL: https://curriculum.navigationgames.org/reference/equipment/electronic-
 
 ## Maintaining the SI Boxes
 
+Maintenance uses these three things:
+
 ### Synchronizing the SI boxes
 
 Each SI box has its own clock, and the clocks drift over time. When they drift too far apart, EasyGecNG can tell a student they visited checkpoints out of order when they didn't. Synchronize the boxes every 3 to 4 weeks, and whenever students who did a course right are told they made a mistake.
@@ -369,54 +371,59 @@ This copies the SI-Master's clock to all the other boxes, with no computer:
 
 This sets the SI-Master's clock from the computer first, then copies it to every box.
 
-**You need:** the Service/OFF card, the coupling stick, the SI-Master (Clear box), the other SI boxes (31 to 40, Start, Finish), the mini reader, and a laptop with [SPORTident Config+](https://www.sportident.com/products.html#software) installed.
-
-1. **Connect the mini reader.** Plug it into a USB port. It beeps twice.
-2. **Open SPORTident Config+** from its Desktop shortcut.
-
-3. **Check the device connection.** In the Devices menu, the mini reader should be listed. Click the blue refresh button if it isn't.
-
-4. **Check the connection type.** It should say **Direct**. If it says Remote, click the box to change it.
-
-5. **Click Settings.** Config+ reads and shows the mini reader's settings.
-
-6. **Couple the SI-Master to the mini reader.** Place the SI-Master on top of the mini reader and put the coupling stick through both holes.
-
-7. **Change the connection type to Remote** by clicking the connection box.
-
-8. **Click Settings.** Config+ reads the SI-Master's settings. If you get an error, couple the boxes again and click Retry.
-9. **Check the settings.** They should be: Code number 1, Operating mode CLR - Clear, Operating time 00:10:00. Change them if needed.
-
-10. **Click Set time.** The SI-Master beeps once.
-
-11. **Close Config+.** You don't need the computer for the rest.
-12. **Take the SI-Master and coupling stick off the mini reader.**
-13. **Turn off the SI-Master.** Insert the Service/OFF card until the display is blank.
-14. **Lay out all the other boxes:** 31 to 40, Start and Finish.
-
-15. **Set the SI-Master to EXT MA.** With its display blank, insert the Service/OFF card 3 times until the display shows **EXT MA**.
-
-16. **Synchronize each box.** Put the coupling stick in the SI-Master. Place the SI-Master flat on top of a box with the stick in both holes. After a few seconds it beeps, and that box's time is set. If it doesn't beep, line them up again. Repeat for every box.
-
-17. **Turn off all the boxes.** Insert the Service/OFF card into each box until its display is blank. Some boxes need it more than once.
+**You need:** the Service/OFF card, the coupling stick, the SI-Master, the other SI boxes (31 to 40, Start, Finish), the mini reader, and a laptop with [SPORTident Config+](https://www.sportident.com/products.html#software) installed.
+1. **Connect the mini reader**
+Plug it into a USB port. It beeps twice.
+2. **Open SPORTident Config+**
+Double-click its shortcut on the Desktop.
+3. **Check the device connection**
+In the Devices menu, the mini reader should be listed. Click the blue refresh button if it isn't.
+4. **Check the connection type**
+It should say **Direct**. If it says Remote, click the box to change it.
+5. **Click Settings**
+Config+ reads and shows the mini reader's settings.
+6. **Couple the SI-Master to the mini reader**
+Place the SI-Master on top of the mini reader and put the coupling stick through both holes.
+7. **Change the connection type to Remote**
+Click the connection box.
+8. **Click Settings**
+Config+ reads the SI-Master's settings. If you get an error, couple the boxes again and click Retry.
+9. **Check the settings**
+They should be: Code number 1, Operating mode CLR - Clear, Operating time 00:10:00. Change them if needed.
+10. **Click Set time**
+The SI-Master beeps once.
+11. **Close Config+**
+You don't need the computer for the rest.
+12. **Take the SI-Master and coupling stick off the mini reader**13. **Turn off the SI-Master**
+Insert the Service/OFF card until the display is blank.
+14. **Lay out all the other boxes**
+Boxes 31 to 40, Start and Finish.
+15. **Set the SI-Master to EXT MA**
+With its display blank, insert the Service/OFF card 3 times until the display shows **EXT MA**.
+16. **Synchronize each box**
+Put the coupling stick in the SI-Master. Place the SI-Master flat on top of a box with the stick in both holes. After a few seconds it beeps, and that box's time is set. If it doesn't beep, line them up again. Repeat for every box.
+17. **Turn off all the boxes**
+Insert the Service/OFF card into each box until its display is blank. Some boxes need it more than once.
 
 ### Checking battery levels
 
 **You need:** the Service/OFF card, the coupling stick, all the SI boxes (31 to 40, Start, Finish, Clear), the mini reader, and a laptop with SPORTident Config+.
-
-1. **Connect the mini reader**, **open Config+**, **check the device connection** and **check that the connection type is Direct**, as in steps 1 to 4 above.
-2. **Click Settings.**
-3. **Couple a box to the mini reader.** Place the box on top of the mini reader and put the coupling stick through both holes.
-4. **Change the connection type to Remote.**
-5. **Click Settings.** Config+ reads and shows the box's data.
-6. **Check the battery:**
-   - **Green:** above 3.2 volts is safe.
-   - **Yellow:** between 3.0 and 3.2 volts is in between. The box may still work for another event.
-   - **Red:** below 3.0 volts is low. Replace the battery.
-
-7. **Write it down.** We recommend tracking each box's battery level over time.
-8. **Turn off the box.** Take it and the coupling stick off the mini reader, and insert the Service/OFF card until the display is blank.
-9. **Repeat** steps 3 to 8 for each box.
+1. **Connect Config+ to the mini reader**
+Connect the mini reader, open Config+, check the device connection and check that the connection type is **Direct**, as in steps 1 to 4 above.
+2. **Click Settings**3. **Couple a box to the mini reader**
+Place the box on top of the mini reader and put the coupling stick through both holes.
+4. **Change the connection type to Remote**5. **Click Settings**
+Config+ reads and shows the box's data.
+6. **Check the battery**
+- **Green:** above 3.2 volts is safe.
+- **Yellow:** between 3.0 and 3.2 volts is in between. The box may still work for another event.
+- **Red:** below 3.0 volts is low. Replace the battery.
+7. **Write it down**
+We recommend tracking each box's battery level over time.
+8. **Turn off the box**
+Take it and the coupling stick off the mini reader, and insert the Service/OFF card until the display is blank.
+9. **Repeat for each box**
+Do steps 3 to 8 for every box.
 
 Batteries usually last at least 5 years. To replace them, send the boxes to SPORTident, or [contact Navigation Games](mailto:admin@navigationgames.org).
 
