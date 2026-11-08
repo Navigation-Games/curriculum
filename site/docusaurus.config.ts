@@ -58,7 +58,25 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
-          editUrl: undefined,
+          // "Edit this page" opens the file to edit on GitHub. Pages generated
+          // by scripts/build-content.js and build-training.js point to their
+          // source in content/, everything else to site/docs/. The link is shown
+          // only to signed-in NG staff (src/theme/EditThisPage). When adding a
+          // new kind of generated page, add its mapping here.
+          editUrl: ({docPath}) => {
+            const repo = 'https://github.com/Navigation-Games/curriculum/edit/main';
+            // Generated activity pages (not index.md)
+            const activity = docPath.match(/^activities\/core\/(?!index\.md$)(.+\.md)$/);
+            if (activity) return `${repo}/content/activities/${activity[1]}`;
+            // Generated school and camp lesson pages (not index.md)
+            const lesson = docPath.match(/^lessons\/(school|camp)\/([^/]+)\/(?!index\.md$)(.+\.md)$/);
+            if (lesson) return `${repo}/content/lessons/${lesson[1]}/${lesson[2]}/${lesson[3]}`;
+            // Generated teacher course pages (all of them, index.md included)
+            const training = docPath.match(/^training\/(.+\.md)$/);
+            if (training) return `${repo}/content/training/${training[1]}`;
+            // Everything else is hand-maintained in site/docs/
+            return `${repo}/site/docs/${docPath}`;
+          },
         },
         blog: false,
         theme: {

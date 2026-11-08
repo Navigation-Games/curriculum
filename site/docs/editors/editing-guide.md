@@ -15,6 +15,8 @@ The curriculum manager makes the actual edits in the repo, sometimes with assist
 
 If you are a curriculum manager making edits yourself, the rest of this guide explains where files live and how to work with them.
 
+**The easiest way in is the "Edit this page" link** at the bottom of every page. You see it when you're signed in to the site with a navigationgames.org account. It opens the right file to edit on GitHub, even for pages that are generated from another file, so you don't have to work out where the source is. You need write access to the GitHub repo to save a change; anyone else who follows the link can only propose one.
+
 ## Where to Edit
 
 Content lives in different places depending on what you are editing.
@@ -333,9 +335,8 @@ Error messages include the filename and what is wrong, for example:
 
 You can edit content files directly on GitHub.com without any local setup:
 
-1. Navigate to the file (see "Where to Edit" above for which file to change)
-2. Click the pencil icon to edit
-3. Make your changes and commit
+1. Click "Edit this page" at the bottom of the page (signed in with your navigationgames.org account), or navigate to the file yourself (see "Where to Edit" above for which file to change) and click the pencil icon
+2. Make your changes and commit
 
 The site auto-publishes when you push to `main`. A GitHub Actions workflow runs the content build script, then builds and deploys to GitHub Pages (takes 1-2 minutes). You do not need to run the build script yourself or commit the generated files. They are gitignored.
 
