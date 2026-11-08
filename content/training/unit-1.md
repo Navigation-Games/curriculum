@@ -16,7 +16,7 @@ Then three practical things:
 
 - **Your map.** Not everyone needs an orienteering map. Some teachers already have one, some will make their own or get one another way, and some, such as teachers of young children who'll stay with Animal-O and the other kit activities, won't use a map yet. The tutor asks which is you. If you'd like a map of your school grounds or a nearby park made, apply to Orienteering USA's Youth Mapping Program (YMP) this week. A mapper makes the map, which takes several weeks or longer, so it's worth starting now. Applying doesn't commit you: you make the final decision on the map after seeing the contract that OUSA sends you. Meanwhile you can teach the kit activities, which don't need a map. If you're applying, the tutor walks you through the application (add about 15 minutes); see below.
 - **PD credit.** Who approves professional development hours, and what they need, varies by state and district. Find out who approves yours (in Colorado, usually your district or BOCES) and give them our [one-page course description](/pd-credit/).
-- **The timeline.** Once you've finished the training and the planning survey, we ship your kit and set up Consultation 1. Then you teach at least one day of orienteering, fill in a short post-unit survey, and we meet again for Consultation 2.
+- **The timeline.** Once you've finished the training and the planning survey, we ship your kit and set up Consultation 1. Then you teach orienteering to your students, fill in a short post-unit survey, and we meet again for Consultation 2.
 
 ### Your map application (only if you're applying to YMP)
 
