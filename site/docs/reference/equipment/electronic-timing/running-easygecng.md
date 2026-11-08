@@ -9,6 +9,11 @@ import {Pic, PhotoRow} from '@site/src/components/Pic';
 
 # Running EasyGecNG
 
+
+:::tip Ask the advisor
+Our [Lesson Plan Advisor](/plan-my-lessons/) knows these instructions. Tell it what you see on your screen, and it will walk you through the steps one at a time.
+:::
+
 Before class:
 
 - **Charge the laptop** between classes.
@@ -58,9 +63,18 @@ Results should show as a smiley face (pass) or a sad face (mistake). Newer versi
 Click the tools icon under Parameters to set how many seconds each result stays on the screen. We like 2 seconds (the minimum) so students can download quickly one after another. When students are just starting, or to help them understand a mistake, set it longer.
 
 </Step>
-<Step n="8" title="Click the green Start button" img="/img/electronic-timing/start-to-stop.png" alt="The green Start button changes to the red Stop button" imgWidth={200}>
+<Step n="8" title="Click the Connect to station button" img="/img/electronic-timing/start-to-stop.png" alt="The Connect to station button changes from green to red" imgWidth={200}>
 
-The button is next to "Zero time". It turns orange, then red, and the mini reader beeps twice. EasyGecNG is now ready to read cards. If the button stays orange, see [Troubleshooting](../troubleshooting#easygecng-doesnt-read-si-cards).
+It's the round button at the right end of the "Reading Si-card" row, after "Zero time". Its color tells you what's happening:
+
+- **Green, with an arrow:** waiting for you to click it to connect.
+- **Red:** connected to the mini reader and ready to read cards. The mini reader beeps twice when it connects.
+- **Orange:** it couldn't connect to the mini reader. See [Troubleshooting](../troubleshooting#easygecng-doesnt-read-si-cards); the usual fix is a different COM port.
+
+<PhotoRow>
+<Pic src="/img/electronic-timing/connect-green.png" caption="Green: waiting to connect" width={300} />
+<Pic src="/img/electronic-timing/connect-orange.png" caption="Orange: couldn't connect" width={300} />
+</PhotoRow>
 
 </Step>
 <Step n="9" title="Try a course yourself before the students do" img="/img/electronic-timing/si-card.png" alt="An SI card" imgWidth={110}>

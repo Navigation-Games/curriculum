@@ -3,7 +3,7 @@
 
 ## Electronic timing guide (SPORTident and EasyGecNG)
 
-The full text of the site's Electronic Timing pages. Use it when someone asks about electronic timing, SPORTident, SI boxes, SI cards or EasyGecNG. For a problem, walk them through the Troubleshooting fixes one step at a time, in the order given, asking what they see after each step; don't list every fix at once. If SI cards don't read, start with trying each COM port in the COM Port menu, which is the most common fix. If a student gets a sad face, the most likely reason is that they really skipped a checkpoint, went out of order, or didn't hold the SI card in a box until it beeped: first have them run the course again with a reminder of how. Only if students who clearly did the course right keep getting sad faces, check box placement and then synchronize the boxes. Link the relevant page. Don't invent steps, menu names or settings that are not in this guide; if the guide doesn't cover the problem, suggest they email admin@navigationgames.org with a photo of the screen.
+The full text of the site's Electronic Timing pages. Use it when someone asks about electronic timing, SPORTident, SI boxes, SI cards or EasyGecNG. For a problem, walk them through the Troubleshooting fixes one step at a time, in the order given, asking what they see after each step; don't list every fix at once. If SI cards don't read, start with trying each COM port in the COM Port menu, which is the most common fix. If a student gets a sad face, the most likely reason is that they really skipped a checkpoint, went out of order, or didn't hold the SI card in a box until it beeped: first have them run the course again with a reminder of how. Only if students who clearly did the course right keep getting sad faces, check box placement and then synchronize the boxes. You can't see or show pictures, but the pages have a picture for most steps (buttons, menus, error messages, SI boxes). When you walk someone through steps, give the link to the page section with those steps in your first reply and say they can see pictures of each step there; then give the link again every couple of messages so it stays on their screen. If someone asks for a picture, say you can't show one and give the link to the section that has it. Don't invent steps, menu names or settings that are not in this guide; if the guide doesn't cover the problem, suggest they email admin@navigationgames.org with a photo of the screen.
 
 <!-- https://curriculum.navigationgames.org/reference/equipment/electronic-timing/ -->
 Page URL: https://curriculum.navigationgames.org/reference/equipment/electronic-timing/
@@ -181,8 +181,12 @@ Click the **Open File** icon (under File, the second icon) and open the Animal-O
 Results should show as a smiley face (pass) or a sad face (mistake). Newer versions start this way: the first icon under **Parameters** is a smiley face. If it's a table, click it to change to face view.
 7. **Set the display time**
 Click the tools icon under Parameters to set how many seconds each result stays on the screen. We like 2 seconds (the minimum) so students can download quickly one after another. When students are just starting, or to help them understand a mistake, set it longer.
-8. **Click the green Start button**
-The button is next to "Zero time". It turns orange, then red, and the mini reader beeps twice. EasyGecNG is now ready to read cards. If the button stays orange, see [Troubleshooting](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/troubleshooting/#easygecng-doesnt-read-si-cards).
+8. **Click the Connect to station button**
+It's the round button at the right end of the "Reading Si-card" row, after "Zero time". Its color tells you what's happening:
+
+- **Green, with an arrow:** waiting for you to click it to connect.
+- **Red:** connected to the mini reader and ready to read cards. The mini reader beeps twice when it connects.
+- **Orange:** it couldn't connect to the mini reader. See [Troubleshooting](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/troubleshooting/#easygecng-doesnt-read-si-cards); the usual fix is a different COM port.
 9. **Try a course yourself before the students do**
 Take an SI card and check in at the boxes in order: Clear, Start, the checkpoints on one of your courses, then Finish. That is super important. The best time is before you set the checkpoints out, with the boxes side by side, so only a second or two passes between check-ins. If a box's clock has drifted, even a little, a quick course like this shows it: you get a sad face for a course you did right. Then [synchronize the boxes](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/maintenance/#synchronizing-the-si-boxes) before class.
 10. **Download the SI card**
@@ -272,9 +276,9 @@ You put an SI card in the mini reader and nothing shows on the screen, or the mi
 
 1. **Make sure the mini reader is plugged into a USB port** on the computer. It beeps twice when you plug it in.
 
-2. **Try a different COM port.** This is the most common fix. A sign you're on the wrong port: the button next to "Zero time" stays orange instead of turning red, and if you hold the mouse over it, it says "Connect the master station".
+2. **Try a different COM port.** This is the most common fix. A sign you're on the wrong port: the **Connect to station** button (the round button at the right end of the "Reading Si-card" row) stays orange instead of turning red, and if you hold the mouse over it, it says "Connect the master station".
 
-   Click the **COM Port** menu. If there is more than one port, you have to find the one the mini reader is using. Choose another port, click the button next to "Zero time", and download a card again. Try each port in the list until a card reads. When EasyGecNG is reading cards, the button is a red square.
+   Click the **COM Port** menu. If there is more than one port, you have to find the one the mini reader is using. Choose another port, click the Connect to station button, and download a card again. Try each port in the list until a card reads. When EasyGecNG is connected and reading cards, the button is red.
 
 3. **If the COM Port menu is blank**, click the blue and white arrow next to the menu to look again. Unplug the mini reader and plug it back in. It should beep twice.
 
@@ -311,7 +315,7 @@ Downloading shows a mistake if a student forgot to check in at the Clear, Start 
 
 Try these in order:
 
-1. Click the red Stop button, then the green Start button.
+1. Click the red Connect to station button to disconnect (it turns green), then click it again to reconnect.
 2. Check that a COM port is chosen (see [EasyGecNG doesn't read SI cards](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/troubleshooting/#easygecng-doesnt-read-si-cards)).
 3. Unplug the mini reader from the USB port and plug it back in.
 4. Close EasyGecNG and start it again.

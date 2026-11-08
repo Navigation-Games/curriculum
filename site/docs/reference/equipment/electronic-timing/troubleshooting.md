@@ -11,22 +11,27 @@ import {Pic, PhotoRow} from '@site/src/components/Pic';
 
 Use the menu for this page to select the problem you are observing.
 
+
+:::tip Ask the advisor
+Our [Lesson Plan Advisor](/plan-my-lessons/) knows these instructions. Tell it what you see on your screen, and it will walk you through the steps one at a time.
+:::
+
 ## EasyGecNG doesn't read SI cards
 
 You put an SI card in the mini reader and nothing shows on the screen, or the mini reader doesn't beep.
 
 1. **Make sure the mini reader is plugged into a USB port** on the computer. It beeps twice when you plug it in.
 
-2. **Try a different COM port.** This is the most common fix. A sign you're on the wrong port: the button next to "Zero time" stays orange instead of turning red, and if you hold the mouse over it, it says "Connect the master station".
+2. **Try a different COM port.** This is the most common fix. A sign you're on the wrong port: the **Connect to station** button (the round button at the right end of the "Reading Si-card" row) stays orange instead of turning red, and if you hold the mouse over it, it says "Connect the master station".
 
    <PhotoRow>
-   <Pic src="/img/electronic-timing/com-port-orange.png" caption="The COM Port menu, with the orange button at the right" width={420} />
-   <Pic src="/img/electronic-timing/connect-master-station.png" caption="Holding the mouse over the orange button" width={180} />
+   <Pic src="/img/electronic-timing/com-port-orange.png" caption="The COM Port menu, with the orange Connect to station button at the right" width={420} />
+   <Pic src="/img/electronic-timing/connect-master-station.png" caption="Holding the mouse over the orange Connect to station button" width={180} />
    </PhotoRow>
 
-   Click the **COM Port** menu. If there is more than one port, you have to find the one the mini reader is using. Choose another port, click the button next to "Zero time", and download a card again. Try each port in the list until a card reads. When EasyGecNG is reading cards, the button is a red square.
+   Click the **COM Port** menu. If there is more than one port, you have to find the one the mini reader is using. Choose another port, click the Connect to station button, and download a card again. Try each port in the list until a card reads. When EasyGecNG is connected and reading cards, the button is red.
 
-   <Pic src="/img/electronic-timing/stop-button.png" caption="Red: EasyGecNG is reading cards" width={60} />
+   <Pic src="/img/electronic-timing/stop-button.png" caption="Red: connected and reading cards" width={60} />
 
 3. **If the COM Port menu is blank**, click the blue and white arrow next to the menu to look again. Unplug the mini reader and plug it back in. It should beep twice.
 
@@ -65,7 +70,7 @@ Downloading shows a mistake if a student forgot to check in at the Clear, Start 
 
 Try these in order:
 
-1. Click the red Stop button, then the green Start button.
+1. Click the red Connect to station button to disconnect (it turns green), then click it again to reconnect.
 2. Check that a COM port is chosen (see [EasyGecNG doesn't read SI cards](#easygecng-doesnt-read-si-cards)).
 3. Unplug the mini reader from the USB port and plug it back in.
 4. Close EasyGecNG and start it again.

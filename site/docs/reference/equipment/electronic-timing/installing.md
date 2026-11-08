@@ -10,6 +10,11 @@ import {Pic} from '@site/src/components/Pic';
 
 EasyGecNG runs on Windows. It can also run on Mac and Linux; the [EasyGecNG page on GitHub](https://github.com/Navigation-Games/EasyGecNG) explains how. EasyGecNG is a Java program, and its source code is public if your IT department wants to review it.
 
+
+:::tip Ask the advisor
+Our [Lesson Plan Advisor](/plan-my-lessons/) knows these instructions. Tell it what you see on your screen, and it will walk you through the steps one at a time.
+:::
+
 ## 1. Install the SPORTident USB driver
 
 Download the USB driver from [SPORTident's software page](https://www.sportident.com/products.html#software) and install it. You may also need to install the Microsoft .NET framework. Restart the computer after installing the driver.

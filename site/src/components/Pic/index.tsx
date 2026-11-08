@@ -15,10 +15,13 @@ interface PicProps {
   width?: number;
 }
 
+// Small pictures (120px or less, such as icons) put the caption to the
+// right so it isn't squeezed into the picture's width.
 export function Pic({src, alt = '', caption, width = 320}: PicProps): React.ReactElement {
+  const side = Boolean(caption) && width <= 120;
   return (
-    <figure className={styles.figure} style={{maxWidth: `min(${width}px, 100%)`}}>
-      <img src={src} alt={alt || caption || ''} loading="lazy" />
+    <figure className={`${styles.figure} ${side ? styles.side : ''}`}>
+      <img src={src} alt={alt || caption || ''} loading="lazy" style={{maxWidth: `min(${width}px, 100%)`}} />
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
   );

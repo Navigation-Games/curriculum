@@ -89,7 +89,7 @@ Every page on the curriculum site, with a one-line summary. This is the complete
 - [Equipment for Electronic Timing](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/equipment/) — To build one complete set for teaching orienteering with electronic timing, schools buy:
 - [Installing EasyGecNG](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/installing/) — EasyGecNG runs on Windows. It can also run on Mac and Linux; the EasyGecNG page on GitHub explains how. EasyGecNG is a Java program, and its source code is public if your IT…
 - [Maintaining the SI Boxes](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/maintenance/) — Maintenance uses these three things:
-- [Running EasyGecNG](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/running-easygecng/) — Before class:
+- [Running EasyGecNG](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/running-easygecng/) — Our Lesson Plan Advisor knows these instructions. Tell it what you see on your screen, and it will walk you through the steps one at a time.
 - [Troubleshooting Electronic Timing](https://curriculum.navigationgames.org/reference/equipment/electronic-timing/troubleshooting/) — Use the menu for this page to select the problem you are observing.
 - [Geometric-O Setup](https://curriculum.navigationgames.org/reference/equipment/geometric-o-setup/) — This page describes how to set up the physical layout for Geometric-O courses. For how to teach the activity, see the Geometric-O activity page.
 - [Navigation Games Kits](https://curriculum.navigationgames.org/reference/equipment/kits/) — title: Navigation Games Kits

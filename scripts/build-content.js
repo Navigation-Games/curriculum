@@ -242,6 +242,7 @@ function writeAdvisorTimingGuide() {
       .replace(/^import .*$/gm, '')                  // MDX imports
       .replace(/^\s*!\[.*\]\(.*\)\s*$/gm, '')        // images
       .replace(/^\s*<YouTube[^>]*\/>\s*$/gm, '')     // video embeds
+      .replace(/^:::tip Ask the advisor[\s\S]*?^:::\s*$/gm, '') // note pointing to the advisor itself
       .replace(/^\s*<Pic [^>]*\/>\s*$/gm, '')        // <Pic> pictures
       .replace(/^\s*<\/?(PhotoRow|Steps)>\s*$/gm, '') // picture rows, step tables
       .replace(/^\s*<\/Step>\s*$/gm, '')
@@ -274,7 +275,10 @@ function writeAdvisorTimingGuide() {
     'If SI cards don\'t read, start with trying each COM port in the COM Port menu, which is the most common fix. ' +
     'If a student gets a sad face, the most likely reason is that they really skipped a checkpoint, went out of order, or didn\'t hold the SI card in a box until it beeped: first have them run the course again with a reminder of how. ' +
     'Only if students who clearly did the course right keep getting sad faces, check box placement and then synchronize the boxes. ' +
-    'Link the relevant page. Don\'t invent steps, menu names or settings that are not in this guide; if the guide doesn\'t cover the problem, suggest they email admin@navigationgames.org with a photo of the screen.\n' +
+    'You can\'t see or show pictures, but the pages have a picture for most steps (buttons, menus, error messages, SI boxes). ' +
+    'When you walk someone through steps, give the link to the page section with those steps in your first reply and say they can see pictures of each step there; then give the link again every couple of messages so it stays on their screen. ' +
+    'If someone asks for a picture, say you can\'t show one and give the link to the section that has it. ' +
+    'Don\'t invent steps, menu names or settings that are not in this guide; if the guide doesn\'t cover the problem, suggest they email admin@navigationgames.org with a photo of the screen.\n' +
     '\n' +
     sections.join('\n\n') + '\n';
 
