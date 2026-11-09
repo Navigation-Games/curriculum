@@ -55,7 +55,7 @@ This is where students learn to turn a map to match the ground, the most importa
 
 <YouTube id="-Nk2K_QQ89s" title="Geometric-O in action" maxWidth={360} />
 
-[Basketball-O](https://www.youtube.com/watch?v=HKYcVCUWYQ8) does the same thing with the lines of a basketball court, which is handy in a gym.
+[Basketball-O](https://www.youtube.com/watch?v=HKYcVCUWYQ8) is another simple map activity, and requires a half basketball court; both Basketball-O and Geometric-O can be done indoors.
 
 </details>
 
