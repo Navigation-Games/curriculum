@@ -3,6 +3,8 @@ title: Maps
 sidebar_position: 2
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Maps
 
 You do not need a professional orienteering map to start teaching orienteering. The early activities in the curriculum (Boundary Run, Gathering, Animal-O, Geometric-O) use no map at all, or use simple pattern maps you can draw yourself. But as students progress to Symbol-O, Score-O, and Point-to-Point, a real orienteering map of your site makes a big difference.
@@ -52,9 +54,11 @@ The key is that the map shows features students can see and match to reality. Ev
 
 Once you have a base map, you draw the course on top of it. A pen works fine. Orienteering courses are drawn in purple or red, so they stand out from the map's own colors.
 
+![A course drawn in red: a triangle labeled Start, circles numbered 1 to 5 joined by straight lines in order, and a double circle labeled Finish](/img/course-drawing/drawing-a-course.svg)
+
 - **Start:** a triangle, centered on the start point.
 - **Checkpoints:** a circle centered on the feature where the checkpoint is, with its number beside it. Put the number where it doesn't hide anything important.
-- **Lines:** a straight line from the start to checkpoint 1, from 1 to 2, and so on, to show the order. The line is not the route. Runners choose their own way. Leave a gap where a line would cover an important feature.
+- **Lines:** a straight line from the start to checkpoint 1, from 1 to 2, and so on, to show the order. Aim each line at the center of the circle, and stop it at the circle's edge. The line is not the route. Runners choose their own way. Leave a gap where a line would cover an important feature.
 - **Finish:** a double circle.
 
 For a Score-O, leave out the lines, because students visit the checkpoints in any order.

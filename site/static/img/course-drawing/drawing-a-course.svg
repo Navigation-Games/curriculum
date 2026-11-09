@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 1050 900" width="460" role="img" aria-label="How to draw a course: a triangle for the start, numbered circles for checkpoints 1 to 5 joined by straight lines in order, and a double circle for the finish">
+<g fill="none" stroke="#E8141B" stroke-width="8" stroke-linecap="round">
+<polygon points="215.0,67.0 164.8,154.0 265.2,154.0" stroke-linejoin="miter"/>
+<circle cx="593" cy="225" r="33"/>
+<circle cx="530" cy="385" r="33"/>
+<circle cx="233" cy="487" r="33"/>
+<circle cx="198" cy="737" r="33"/>
+<circle cx="633" cy="833" r="33"/>
+<circle cx="885" cy="760" r="40"/>
+<circle cx="885" cy="760" r="20"/>
+<line x1="260.3" y1="137.0" x2="555.3" y2="215.0"/>
+<line x1="578.7" y1="261.3" x2="544.3" y2="348.7"/>
+<line x1="493.1" y1="397.7" x2="269.9" y2="474.3"/>
+<line x1="227.6" y1="525.6" x2="203.4" y2="698.4"/>
+<line x1="236.1" y1="745.4" x2="594.9" y2="824.6"/>
+<line x1="670.5" y1="822.1" x2="840.8" y2="772.8"/>
+</g>
+<g fill="#E8141B" font-family="Arial, Helvetica, sans-serif" font-weight="bold" text-anchor="middle">
+<text x="75" y="105" font-size="46">Start</text>
+<text x="685" y="205" font-size="44">1</text>
+<text x="627" y="468" font-size="44">2</text>
+<text x="143" y="435" font-size="44">3</text>
+<text x="110" y="772" font-size="44">4</text>
+<text x="628" y="748" font-size="44">5</text>
+<text x="955" y="880" font-size="46">Finish</text>
+</g>
+</svg>

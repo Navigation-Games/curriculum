@@ -33,7 +33,11 @@ If you can go to an event, please do! A beginner course at a local event is the 
 <details>
 <summary>Design a course and test it</summary>
 
-Draw your course the way orienteers do: a triangle for the start, a circle around each checkpoint with its number beside it, straight lines joining them in order, and a double circle for the finish. [Drawing courses on maps](/reference/equipment/maps/#drawing-courses) has a little more. Then pick one:
+Draw your course the way orienteers do: a triangle for the start, a circle around each checkpoint with its number beside it, straight lines joining them in order, and a double circle for the finish. [Drawing courses on maps](/reference/equipment/maps/#drawing-courses) has a little more.
+
+![A course drawn in red: a triangle labeled Start, circles numbered 1 to 5 joined by straight lines in order, and a double circle labeled Finish](/img/course-drawing/drawing-a-course.svg)
+
+Then pick one:
 
 - **At home.** Sketch a map of your home, room by room, with doors and big furniture. Draw a course on it with five checkpoints, and put a sticky note with a letter at each spot. Then follow your map from 1 to 5 and write down the letters. Better still, hand the map to someone at home and watch them do it.
 - **In your neighborhood.** Print a map of your block from Google Maps, or make an orienteering-style one on [OpenOrienteeringMap](https://oomap.dna-software.co.uk/). Draw a course with five checkpoints on features you can find, like a corner, a bench or a big tree, and walk it. This video shows how to make a course map of your neighborhood with OpenOrienteeringMap:
