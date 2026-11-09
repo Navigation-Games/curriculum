@@ -74,10 +74,20 @@ Every activity starts with a short briefing: a safety reminder (where the bounda
 
 ## Assignments
 
-Choose one of the activities above.
+Choose one of the activities above. You'll work with the tutor below to produce:
 
 - Your **opening briefing** for it, about a minute when spoken. For now, type or paste what you'd say.
 - A **dry run** of the activity with colleagues, family or a few students, and a line or two on how it went.
+
+Your kit arrives after the training, so for the dry run:
+
+- **Boundary Run and Gathering** need nothing but a whistle, and cones if you have them.
+- **Explore & Find** works with any set of objects as checkpoints, like stuffed animals or pictures.
+- **Animal-O** needs markers and a clue sheet. Make your own, or print ours.
+- **Geometric-O** needs a simple map of the checkpoints. Draw your own, or print ours.
+- **Courses** need a map of your space with the course drawn on it, like the one you made in Unit 2.
+
+For our printable animal markers, clue sheets and Geometric-O maps, write to [admin@navigationgames.org](mailto:admin@navigationgames.org).
 
 ## What we look for
 
@@ -88,11 +98,11 @@ In the briefing:
 - What to do, in simple words for the age group
 - About 60 seconds when spoken
 
-In your dry run (you judge this yourself, with the tutor):
+In your dry run:
 
 - You had the space and materials ready before you started
-- People knew what to do after your briefing, without many questions
-- The gathering signal brought everyone back
+- People knew what to do after your short briefing
+- You used the activity's vocabulary word(s)
 - You know one thing you'd keep and one thing you'd change before teaching it to your class
 
 ## Opening
@@ -106,7 +116,7 @@ Your job is to help the teacher feel ready to run the activities, and to write a
 1. Ask which activity they chose and with which grade. If a learner profile is provided, use it. Briefly confirm the setup and steps for that activity, based on the page above and the activity page, and ask whether anything is unclear. Don't invent steps that aren't on the activity page.
 2. Ask them to write the briefing they would give before that activity, for their grade and their space. Mention that the activity page's opening sentence is a good start for the "why."
 3. Give feedback against the briefing rubric below. Point out what works first, then one or two suggestions, often as a question. Pay attention to the age group: younger students need shorter sentences and a demonstration. Let them revise if they want; it's their briefing.
-4. Ask them to do a dry run of the activity, even in a living room or with two colleagues, and to come back to this conversation afterward. When they're back, ask them to judge it against the dry run rubric below, one question at a time if needed, and ask what they'd change before teaching it to their class.
+4. Ask them to do a dry run of the activity, even in a living room or with two colleagues, and to come back to this conversation afterward. Their kit hasn't arrived yet, so if they ask about materials, point them to the list on the page: their own objects, markers, clue sheets or maps, or Navigation Games' printables from admin@navigationgames.org. When they're back, ask them to judge it against the dry run rubric below, one question at a time if needed, and ask what they'd change before teaching it to their class.
 5. Then write a fenced code block labeled `deliverable` with exactly these lines, and tell them to press "Send to Navigation Games" under it:
 
 ```deliverable
@@ -126,8 +136,8 @@ Briefing rubric:
 Dry run rubric (the teacher judges this, with your help):
 
 - Space and materials were ready before they started
-- People knew what to do after the briefing, without many questions
-- The gathering signal brought everyone back
+- People knew what to do after the short briefing
+- They used the activity's vocabulary word(s)
 - One thing they'd keep and one thing they'd change
 
 ## Reviewer notes
