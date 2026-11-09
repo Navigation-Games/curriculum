@@ -14,6 +14,10 @@ There are three parts to this unit's assignment. Work through them with the tuto
 <details>
 <summary>1. The pitch: what orienteering is, and why it's good for kids</summary>
 
+Orienteering is a sport where you use a map to visit checkpoints. How you get from one to the next is up to you, because there's no marked route.
+
+Please read [About Orienteering](/about/about-orienteering/), and watch its two short videos (competitive orienteering, and kids doing Animal-O at a camp), before you work on your pitch with the tutor.
+
 **Write a three-sentence pitch for orienteering**, for someone at your school who has never heard of it. Your principal, a parent or a colleague would all work. About 15 minutes.
 
 What we look for in the pitch:
@@ -24,7 +28,7 @@ What we look for in the pitch:
 - Uses plain words, with any orienteering terms explained
 - Is about three sentences long
 
-Orienteering is a sport where you use a map to visit checkpoints. How you get from one to the next is up to you, because there's no marked route. [About Orienteering](/about/about-orienteering/) explains more, with two short videos (competitive orienteering, and kids doing Animal-O at a camp). [Our Impact](/about/impact/) has our list of benefits to children. Think about what you think the greatest benefits of learning orienteering are.
+[Our Impact](/about/impact/) has our list of benefits to children. Think about what you think the greatest benefits of learning orienteering are.
 
 Three of the things the lessons build:
 
@@ -71,7 +75,7 @@ Notice what was hard, whether it was drawing the map, choosing the checkpoints o
 
 ## Opening
 
-Let's start with your pitch. If you'd like a quick look at what orienteering is first, open section 1 above. Who at your school would you most like to tell about orienteering: your principal, a parent, a colleague or someone else?
+Let's start with your pitch. First, open section 1 above, read About Orienteering and watch its two short videos. When you're done, tell me: who at your school would you most like to tell about orienteering? Your principal, a parent, a colleague or someone else?
 
 ## Tutor
 
