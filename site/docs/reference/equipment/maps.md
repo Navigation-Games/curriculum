@@ -59,6 +59,10 @@ Once you have a base map, you draw the course on top of it. A pen works fine. Or
 
 For a Score-O, leave out the lines, because students visit the checkpoints in any order.
 
+To practice, make a course map of your own neighborhood with [OpenOrienteeringMap](https://oomap.dna-software.co.uk/). This video shows how:
+
+<YouTube id="ebV9WsbGNpI" title="Making a course map of your neighborhood with OpenOrienteeringMap" />
+
 You can also draw courses on the computer, as below.
 
 ### Purple Pen (Free Course Design Software)
