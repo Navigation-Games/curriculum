@@ -40,9 +40,7 @@ There's no map or clue sheet yet. Students build a picture of the space in their
 
 Then do it again, faster. Then from memory. Then trade for a different clue sheet. Checking that each animal matches is the first step toward checking a checkpoint code on a real course.
 
-<YouTube id="DhSJ-nxsQiI" title="Animal-O with Cambridge Camping" poster="/img/video-posters/cambridge-camping-animal-o.jpg" maxWidth={360} />
-
-For a walk-through aimed at teachers, see [Animal Orienteering for Instructors](https://www.youtube.com/watch?v=rok2Ghx3fq4).
+<YouTube id="rok2Ghx3fq4" title="Animal Orienteering for Instructors" maxWidth={360} />
 
 </details>
 
