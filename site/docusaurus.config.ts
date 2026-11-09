@@ -154,7 +154,8 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Navigation Games. Built with Docusaurus.`,
+      // Docusaurus renders this as HTML, so the link works
+      copyright: `<a href="/about/copyright/">Copyright © ${new Date().getFullYear()} Navigation Games</a>. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
