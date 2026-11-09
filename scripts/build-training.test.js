@@ -43,7 +43,7 @@ describe('training content files', () => {
         assert.ok(unit.meta.deliverable);
       });
 
-      for (const section of ['Page', "What you'll make", 'What we look for', 'Opening', 'Tutor', 'Reviewer notes']) {
+      for (const section of ['Page', 'Assignments', 'What we look for', 'Opening', 'Tutor', 'Reviewer notes']) {
         it(`has a "## ${section}" section`, () => {
           assert.ok(unit.sections[section], `missing ## ${section}`);
         });
