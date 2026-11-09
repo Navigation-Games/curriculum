@@ -9,7 +9,7 @@ audio_caption: A welcome from Barb Bryant, president of Navigation Games (about 
 
 ## Welcome
 
-This course gets you ready to teach orienteering to your own students. It's part of Kickstart Orienteering, Navigation Games' program for schools. Plan on about 4 hours before your kit ships, spread over two or three weeks, then three more short units while you teach, mostly reflections on how your classes went. With the two consultations and the class you teach, that comes to about 10 contact hours. For PD credit, give whoever approves your professional development hours our [one-page course description](/pd-credit/).
+This course gets you ready to teach orienteering to your own students. It's part of Kickstart Orienteering, Navigation Games' program for schools. Plan on about 4 hours before your kit ships, spread over two or three weeks, then three more short units while you teach, mostly reflections on how your classes went. With the two consultations and the class you teach, that comes to about 10.5 contact hours. For PD credit, give whoever approves your professional development hours our [one-page course description](/pd-credit/).
 
 ## Getting in
 

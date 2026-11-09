@@ -16,7 +16,7 @@ unlisted: true
 
 **Format:** Online, self-paced, interactive units; meetings with NG staff
 
-**Contact hours:** About 10: about 2.5 hours of online units before teaching, about 2 hours of prep for teaching, two consultations (1h total), and practicum (4.5h)
+**Contact hours:** About 10.5: about 3 hours of online units before teaching (Units 1 to 4), about 2 hours of prep for teaching (Units 5 and 6), two consultations (1h total), and practicum (4.5h)
 
 **Audience:** PE teachers and other K-12 educators taking part in Kickstart Orienteering
 
@@ -29,22 +29,23 @@ Orienteering is a sport where you use a map to find checkpoints, choosing your o
 Participants will be able to:
 
 - Explain what orienteering is and what skills and abilities it teaches; pitch it to an administrator or parent
-- Put lessons in order, from learning a space, to simple maps, to navigating a real orienteering map
+- Find their local orienteering club and its events
 - Run the kit activities safely, with a clear boundary, a gathering signal and an opening briefing
+- Put lessons in order, from learning a space, to simple maps, to navigating a real orienteering map, and connect a lesson's learning goal to standards or outcomes their school uses
 - Plan an orienteering unit sized to their students, space and schedule
 - Design a first course on a map of their school grounds
 - Reflect on each class and adjust their teaching
 
 ## Units and assignments
 
-- **Welcome, Your Situation and Your Map**. Learner profile and map plan
-- **What Orienteering Is and Why It Works**. A short pitch for orienteering at your school, and a course the educator designs and tests
-- **Teaching the Activities**. An opening safety briefing and a practice run of one activity
-- **The Progression and Learning Goals**. A lesson's learning goal, connected to a framework the educator chooses
-- **Plan Your Unit**. A unit plan, reviewed in Consultation 1
-- **Your Map and Your Courses**. A first course on your own map
-- **Teach, Reflect, Adjust**. A reflection after each class taught
-- **Next Year and Beyond**. A 12-month plan, discussed in Consultation 2
+1. **Welcome, Your Situation and Your Map**. A learner profile and map plan
+2. **What Orienteering Is and Why It Works**. A three-sentence pitch for orienteering at the educator's school, their nearest orienteering club and its next event, and a short course the educator designs and tests
+3. **Teaching the Activities**. An opening briefing for one activity, and a practice run of that activity
+4. **The Progression and Learning Goals**. A lesson's learning goal in the educator's words, connected to a framework they choose, and how the lessons fit their biggest teaching challenge
+5. **Plan Your Unit**. A unit plan, reviewed in Consultation 1
+6. **Your Map and Your Courses**. A first course on the school's own map
+7. **Teach, Reflect, Adjust**. A reflection after each class taught
+8. **Next Year and Beyond**. A 12-month plan, discussed in Consultation 2
 
 ## Evidence of completion
 
