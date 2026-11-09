@@ -14,6 +14,8 @@ There are three parts to this unit's assignment. Work through them with the tuto
 <details>
 <summary>1. The pitch: what orienteering is, and why it's good for kids</summary>
 
+**First, you'll learn about orienteering.**
+
 Orienteering is a sport where you use a map to visit checkpoints. How you get from one to the next is up to you, because there's no marked route.
 
 Please read [About Orienteering](/about/about-orienteering/), and watch its two short videos (competitive orienteering, and kids doing Animal-O at a camp), before you work on your pitch with the tutor.
