@@ -54,7 +54,7 @@ If you can go to an event, please do! A beginner course at a local event is the 
 
 **Design a short course at home or in your neighborhood, test it, and tell the tutor what you noticed.** About 20 minutes. You leave the conversation to do it, and pick up where you left off when you're back.
 
-Draw your course the way orienteers do: a triangle for the start, a circle around each checkpoint with its number beside it, straight lines joining them in order, and a double circle for the finish. [Drawing courses on maps](/reference/equipment/maps/#drawing-courses) has a little more.
+Draw your course the way orienteers do: a triangle for the start, a circle around each checkpoint with its number beside it, straight lines joining them in order, and a double circle for the finish. [Click here](/reference/equipment/maps/#drawing-courses) if you want more details about drawing courses on maps.
 
 ![A course drawn in red: a triangle labeled Start, circles numbered 1 to 5 joined by straight lines in order, and a double circle labeled Finish](/img/course-drawing/drawing-a-course.svg)
 
