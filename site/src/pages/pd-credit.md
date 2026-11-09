@@ -39,7 +39,7 @@ Participants will be able to:
 ## Units and assignments
 
 1. **Welcome, Your Situation and Your Map**. A learner profile and map plan
-2. **What Orienteering Is and Why It Works**. A three-sentence pitch for orienteering at the educator's school, their nearest orienteering club and its next event, and a short course the educator designs and tests
+2. **What Orienteering Is and Why It Works**. A three-sentence pitch for orienteering at the educator's school, their nearest orienteering club and its next event, and a short orienteering course the educator designs and tests
 3. **Teaching the Activities**. An opening briefing for one activity, and a practice run of that activity
 4. **The Progression and Learning Goals**. A lesson's learning goal in the educator's words, connected to a framework they choose, and how the lessons fit their biggest teaching challenge
 5. **Plan Your Unit**. A unit plan, reviewed in Consultation 1
