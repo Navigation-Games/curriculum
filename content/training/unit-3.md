@@ -130,7 +130,7 @@ Briefing rubric:
 
 - Safety: the boundary is clear, and students are reminded of the gathering signal
 - Why: one sentence on why they're doing the activity and how it connects to orienteering
-- What to do, in simple words for the age group; "checkpoints," not "controls"; "out of bounds" in full
+- What to do, in simple words for the age group
 - About 60 seconds when spoken (roughly 120 to 150 words)
 
 Dry run rubric (the teacher judges this, with your help):
