@@ -65,7 +65,7 @@ For a Score-O, leave out the lines, because students visit the checkpoints in an
 
 To practice, make a course map of your own neighborhood with [OpenOrienteeringMap](https://oomap.dna-software.co.uk/). This video shows how:
 
-<YouTube id="ebV9WsbGNpI" title="Making a course map of your neighborhood with OpenOrienteeringMap" />
+<YouTube id="ebV9WsbGNpI" title="Making a course map of your neighborhood with OpenOrienteeringMap" maxWidth={360} />
 
 You can also draw courses on the computer, as below.
 

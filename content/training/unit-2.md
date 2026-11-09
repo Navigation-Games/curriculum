@@ -9,7 +9,15 @@ summary: You'll create a three-sentence pitch, look up the next event by your ne
 
 ## Page
 
-There are three parts to this unit's assignment. Work through them with the tutor below, and expand each section for more information as you go.
+There are three parts to this unit's assignment:
+
+1. A three-sentence pitch for orienteering
+2. Your nearest orienteering club and its next event
+3. A short course you design and test
+
+You turn in everything through the conversation with the tutor below. You write your pitch with the tutor, tell it your club and event, and, after you've tried your course, come back and tell it how it went. You don't send us the course itself. At the end, the tutor puts all three in one box, and you press "Send to Navigation Games."
+
+Expand each section below for more information as you work through the assignment.
 
 <details>
 <summary>1. The pitch: what orienteering is, and why it's good for kids</summary>
@@ -20,7 +28,7 @@ Orienteering is a sport where you use a map to visit checkpoints. How you get fr
 
 Please read [About Orienteering](/about/about-orienteering/), and watch its two short videos (competitive orienteering, and kids doing Animal-O at a camp), before you work on your pitch with the tutor.
 
-**Write a three-sentence pitch for orienteering**, for someone at your school who has never heard of it. Your principal, a parent or a colleague would all work. About 15 minutes.
+**Write a three-sentence pitch for orienteering**, for someone at your school who has never heard of it. Your principal, a parent or a colleague would all work. You write it with the tutor, which gives you feedback. About 15 minutes.
 
 What we look for in the pitch:
 
@@ -45,7 +53,7 @@ The lessons follow the [experiential learning cycle](/reference/frameworks/exper
 <details>
 <summary>2. Your nearest club and its next event</summary>
 
-**Find your nearest orienteering club and its next event.** About 5 minutes. It's fine if you can't go. We want you to know where to find events.
+**Find your nearest orienteering club and its next event, and tell the tutor.** About 5 minutes. It's fine if you can't go. We want you to know where to find events.
 
 - **Your local club.** Type your zip code into Orienteering USA's [club finder](https://orienteeringusa.org/events/clubs/), then look at your nearest club's website for upcoming events. Local events usually have a beginner course.
 - **Permanent courses.** A permanent course has checkpoints that stay in place all year, often in a park, so you can print the map and go whenever you like. Look on OUSA's [Permanent & DIY Courses](https://orienteeringusa.org/events/permanent-courses/) page and on your club's website.
@@ -58,7 +66,7 @@ If you can go to an event, please do! A beginner course at a local event is the 
 <details>
 <summary>3. A course you design and test</summary>
 
-**Design a short course at home or in your neighborhood, test it, and tell the tutor what you noticed.** About 20 minutes. You leave the conversation to do it, and pick up where you left off when you're back.
+**Design a short course at home or in your neighborhood, test it, and tell the tutor how it went.** About 20 minutes. You leave the conversation to do it, and pick up where you left off when you're back. You don't need to send us the course; just tell the tutor you did it, and what you noticed.
 
 Draw your course the way orienteers do: a triangle for the start, a circle around each checkpoint with its number beside it, straight lines joining them in order, and a double circle for the finish. [Click here](/reference/equipment/maps/#drawing-courses) if you want more details about drawing courses on maps.
 
@@ -69,7 +77,7 @@ Then pick one:
 - **At home.** Sketch a map of your home, room by room, with doors and big furniture. Draw a course on it with five checkpoints, and put a sticky note with a letter at each spot. Then follow your map from 1 to 5 and write down the letters. Better still, hand the map to someone at home and watch them do it.
 - **In your neighborhood.** Print a map of your block from Google Maps, or make an orienteering-style one on [OpenOrienteeringMap](https://oomap.dna-software.co.uk/). Draw a course with five checkpoints on features you can find, like a corner, a bench or a big tree, and walk it. This video shows how to make a course map of your neighborhood with OpenOrienteeringMap:
 
-<YouTube id="ebV9WsbGNpI" title="Making a course map of your neighborhood with OpenOrienteeringMap" />
+<YouTube id="ebV9WsbGNpI" title="Making a course map of your neighborhood with OpenOrienteeringMap" maxWidth={360} />
 
 Notice what was hard, whether it was drawing the map, choosing the checkpoints or following it.
 

@@ -10,9 +10,12 @@ interface YouTubeProps {
   // An image to show instead of YouTube's own preview frame. The video loads
   // (and starts) only when it's clicked.
   poster?: string;
+  // Show the player smaller than the full column width, in pixels
+  // (it still shrinks on phones, and full screen still works).
+  maxWidth?: number;
 }
 
-export default function YouTube({id, title = 'Video', description, start, end, poster}: YouTubeProps): React.ReactElement {
+export default function YouTube({id, title = 'Video', description, start, end, poster, maxWidth}: YouTubeProps): React.ReactElement {
   const [playing, setPlaying] = useState(false);
   const params = new URLSearchParams();
   if (start) params.set('start', String(start));
@@ -35,6 +38,7 @@ export default function YouTube({id, title = 'Video', description, start, end, p
   }
   return (
     <>
+      <div style={maxWidth ? {maxWidth} : undefined}>
       <div className={styles.wrapper}>
         {poster && !playing ? (
           <button className={styles.poster} onClick={() => setPlaying(true)} aria-label={`Play video: ${title}`}>
@@ -50,6 +54,7 @@ export default function YouTube({id, title = 'Video', description, start, end, p
           allowFullScreen
         />
         )}
+      </div>
       </div>
       <div className={styles.printInfo}>
         <span className={styles.printIcon}>&#9654;</span>
