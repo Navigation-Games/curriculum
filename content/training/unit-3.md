@@ -3,8 +3,8 @@
 ---
 phase: 1
 minutes: 75
-deliverable: Your opening briefing, plus a dry run of one activity
-summary: You'll see the activities your students will do, write the briefing you'll give at the start of every lesson, and try one activity yourself.
+deliverable: An opening briefing for one activity, plus a dry run of it
+summary: You'll see the activities your students will do, choose one, write the briefing you'll give before it, and try it yourself.
 ---
 
 ## Page
@@ -62,7 +62,7 @@ This is where students learn to turn a map to match the ground, the most importa
 <details>
 <summary>5. Courses: Score-O and Point-to-Point on a map of your space</summary>
 
-These need a map of your school grounds or park, with the checkpoints drawn on it ([Drawing courses on maps](/reference/equipment/maps/#drawing-courses) shows how).
+These need a map of your school grounds or park, with the checkpoints drawn on it (Visit page [Drawing courses on maps](/reference/equipment/maps/#drawing-courses) for instructions).
 
 **[Score-O](/activities/core/score-o/)** (15 to 30 minutes). Students visit as many checkpoints as they can in a set time (8 to 12 minutes for beginners), in any order, and write down the letter code at each one. Before the start, review the boundary on the map, describe a few checkpoint locations and have students point to them on their maps, and ask what their plan would be. There's no single best strategy. Only correct codes count. This is the first time students choose their own route.
 
@@ -70,45 +70,66 @@ These need a map of your school grounds or park, with the checkpoints drawn on i
 
 </details>
 
-Every lesson starts with the same short briefing: where the boundary is, what the gathering signal sounds like, what to do if you're lost or hurt, and today's task. A calm, clear briefing is what makes it safe to let students go off on their own. Say "checkpoints" rather than "controls," and say "out of bounds" in full.
+Every activity starts with a short briefing: a safety reminder (where the boundary is, and the gathering signal), why you're doing the activity, and what to do. A calm, clear briefing is what makes it safe to let students go off on their own. Each activity page opens with a sentence on why, such as "In orienteering, you find checkpoints in order using clue sheets." Say "checkpoints" rather than "controls," and say "out of bounds" in full.
 
 ## Assignments
 
-- Your **opening briefing**, about a minute when spoken. For now, type or paste what you'd say.
-- A **dry run** of one activity with colleagues, family or a few students, and a line or two on how it went.
+Choose one of the activities above.
 
-## What we look for in the briefing
+- Your **opening briefing** for it, about a minute when spoken. For now, type or paste what you'd say.
+- A **dry run** of the activity with colleagues, family or a few students, and a line or two on how it went.
 
-- The boundary is described so students could find it
-- The gathering signal is named, and students know what to do when they hear it
-- Students know what to do if they are lost, hurt or see a problem
-- Today's task is clear
-- Plain words for the age group, no unexplained jargon
+## What we look for
+
+In the briefing:
+
+- Safety: the boundary is clear, and students are reminded of the gathering signal
+- Why: one sentence on why you're doing the activity, and how it connects to orienteering
+- What to do, in simple words for the age group
 - About 60 seconds when spoken
+
+In your dry run (you judge this yourself, with the tutor):
+
+- You had the space and materials ready before you started
+- People knew what to do after your briefing, without many questions
+- The gathering signal brought everyone back
+- You know one thing you'd keep and one thing you'd change before teaching it to your class
 
 ## Opening
 
-This unit is about running the activities, starting with the briefing you'll give at the beginning of every lesson. Which activity do you think you'll teach first, and to which grade?
+This unit is about running the activities, starting with the briefing you'll give before each one. Which of these activities would you like to try first, and with which grade?
 
 ## Tutor
 
 Your job is to help the teacher feel ready to run the activities, and to write a strong opening briefing. Keep it efficient.
 
-1. Ask which activity they will teach first and with which grade. If a learner profile is provided, use it. Briefly confirm the setup and steps for that activity, based on the page above and the activity page, and ask whether anything is unclear. Don't invent steps that aren't on the activity page.
-2. Explain why the briefing matters, in one or two sentences. Then ask them to write the briefing they would give before that activity, for their grade and their space.
-3. Give feedback against the rubric below. Point out what works first, then one or two specific improvements. Pay attention to the age group: younger students need shorter sentences and a demonstration.
-4. Let them revise until it meets the rubric. Then write the final briefing in a fenced code block labeled `deliverable`.
-5. Ask them to do a dry run of one activity, even in a living room or with two colleagues, and to tell you afterward how it went. If they come back with a report, ask what surprised them and what they would change.
+1. Ask which activity they chose and with which grade. If a learner profile is provided, use it. Briefly confirm the setup and steps for that activity, based on the page above and the activity page, and ask whether anything is unclear. Don't invent steps that aren't on the activity page.
+2. Ask them to write the briefing they would give before that activity, for their grade and their space. Mention that the activity page's opening sentence is a good start for the "why."
+3. Give feedback against the briefing rubric below. Point out what works first, then one or two suggestions, often as a question. Pay attention to the age group: younger students need shorter sentences and a demonstration. Let them revise if they want; it's their briefing.
+4. Ask them to do a dry run of the activity, even in a living room or with two colleagues, and to come back to this conversation afterward. When they're back, ask them to judge it against the dry run rubric below, one question at a time if needed, and ask what they'd change before teaching it to their class.
+5. Then write a fenced code block labeled `deliverable` with exactly these lines, and tell them to press "Send to Navigation Games" under it:
 
-Rubric:
+```deliverable
+Activity and grade:
+My briefing:
+Dry run (who, and how it went):
+What I'd change:
+```
 
-- Boundary described so students could find it
-- Gathering signal named, with what to do when it sounds
-- What to do if lost, hurt or seeing a problem
-- Today's task is clear
-- Plain words for the age group; "checkpoints," not "controls"; "out of bounds" in full
+Briefing rubric:
+
+- Safety: the boundary is clear, and students are reminded of the gathering signal
+- Why: one sentence on why they're doing the activity and how it connects to orienteering
+- What to do, in simple words for the age group; "checkpoints," not "controls"; "out of bounds" in full
 - About 60 seconds when spoken (roughly 120 to 150 words)
+
+Dry run rubric (the teacher judges this, with your help):
+
+- Space and materials were ready before they started
+- People knew what to do after the briefing, without many questions
+- The gathering signal brought everyone back
+- One thing they'd keep and one thing they'd change
 
 ## Reviewer notes
 
-About 10 minutes. Safety first: make sure the boundary, the gathering signal and the lost-or-hurt plan are all there and realistic for the space in the learner profile. Note anything to raise at Consultation 1.
+About 10 minutes. Safety first: make sure the boundary and the gathering signal are there and realistic for the space in the learner profile. Note anything to raise at Consultation 1.
