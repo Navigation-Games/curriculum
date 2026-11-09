@@ -334,6 +334,13 @@ body.page-camp-overview {
   border-color: var(--ifm-color-emphasis-300);
 }
 
+/* Docusaurus draws details as an alert box, whose links take the text color with
+   a faint underline, so they hardly look like links. Use the normal link color. */
+.theme-doc-markdown details a:not([class*="card"]):not([class*="Card"]) {
+  color: var(--ifm-color-primary);
+  text-decoration-color: currentColor;
+}
+
 /* The teacher course pages are "unlisted" (kept out of the sidebar, search, sitemap and search
    engines). Docusaurus also adds a banner saying so, which is only noise for a teacher. Hiding
    the banner changes nothing else: the pages stay unlisted. The course pages are the only
