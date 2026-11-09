@@ -18,7 +18,7 @@
 //            "You'll produce: <deliverable>."
 //   ---
 //   ## Page               shown to teachers
-//   ## Assignments        shown to teachers
+//   ## Assignments        shown to teachers (optional, like What we look for)
 //   ## What we look for   shown to teachers (the rubric, in plain words); the heading
 //                         may name its focus, e.g. "## What we look for in the pitch"
 //   ## Opening            the tutor's first message
@@ -45,7 +45,9 @@ const CONTENT_DIR = path.join(REPO_ROOT, 'content', 'training');
 const PAGES_DIR = path.join(REPO_ROOT, 'site', 'docs', 'training');
 const TUTOR_DATA_PATH = path.join(REPO_ROOT, 'ai-advisor', 'training-units.json');
 
-const REQUIRED_UNIT_SECTIONS = ['Page', 'Assignments', 'What we look for', 'Opening', 'Tutor'];
+// "Assignments" and "What we look for" are optional: a unit can put them in
+// its Page instead (Unit 2 does, inside its collapsible sections).
+const REQUIRED_UNIT_SECTIONS = ['Page', 'Opening', 'Tutor'];
 const AUDIO_DIR = path.join(REPO_ROOT, 'site', 'static', 'audio');
 
 // The player for a page's recording, or [] if it has none
@@ -220,14 +222,8 @@ function renderUnit(unit, previous, next) {
     ...audioPlayer(unit.meta),
     s['Page'],
     '',
-    '## Assignments',
-    '',
-    s['Assignments'],
-    '',
-    `## ${s.lookForHeading || 'What we look for'}`,
-    '',
-    s['What we look for'],
-    '',
+    ...(s['Assignments'] ? ['## Assignments', '', s['Assignments'], ''] : []),
+    ...(s['What we look for'] ? [`## ${s.lookForHeading || 'What we look for'}`, '', s['What we look for'], ''] : []),
     '## Talk it through with the tutor',
     '',
     `<TrainingTutor unit=${JSON.stringify(unit.slug)} opening={${JSON.stringify(s['Opening'])}} next={${JSON.stringify(
@@ -258,8 +254,8 @@ function tutorData(units) {
       minutes: unit.meta.minutes,
       deliverable: unit.meta.deliverable,
       page: unit.sections['Page'],
-      make: unit.sections['Assignments'],
-      look_for: unit.sections['What we look for'],
+      make: unit.sections['Assignments'] || '(See the page above.)',
+      look_for: unit.sections['What we look for'] || '(See the page above.)',
       opening: unit.sections['Opening'],
       instructions: unit.sections['Tutor'],
     };

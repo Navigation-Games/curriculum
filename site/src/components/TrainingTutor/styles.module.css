@@ -5,6 +5,27 @@
   margin: 1rem 0 2rem;
 }
 
+/* The advisor chat is a fixed 600px box. The tutor's box instead starts
+   short, right under the opening message, so the answer box is in view, and
+   grows with the conversation up to the same height before it scrolls.
+   (div. raises specificity above the advisor's .chat rules.) */
+div.tutor {
+  height: auto;
+  max-height: 600px;
+}
+
+div.tutorMessages {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+@media (max-width: 768px) {
+  div.tutor {
+    height: auto;
+    max-height: 500px;
+  }
+}
+
 .savedBlock {
   margin: 0.75rem 0;
   border: 1px solid var(--ifm-color-primary-light);

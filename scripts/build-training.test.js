@@ -43,7 +43,8 @@ describe('training content files', () => {
         assert.ok(unit.meta.deliverable);
       });
 
-      for (const section of ['Page', 'Assignments', 'What we look for', 'Opening', 'Tutor', 'Reviewer notes']) {
+      // Assignments and What we look for are optional (Unit 2 puts them in its Page)
+      for (const section of ['Page', 'Opening', 'Tutor', 'Reviewer notes']) {
         it(`has a "## ${section}" section`, () => {
           assert.ok(unit.sections[section], `missing ## ${section}`);
         });

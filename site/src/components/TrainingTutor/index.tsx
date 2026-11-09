@@ -604,7 +604,7 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
         </div>
       )}
 
-      <div className={chatStyles.messages} ref={messagesBoxRef}>
+      <div className={`${chatStyles.messages} ${styles.tutorMessages}`} ref={messagesBoxRef}>
         <div className={`${chatStyles.message} ${chatStyles.assistant}`}>
           <div className={chatStyles.bubble}>
             {formatMessage(opening)}
