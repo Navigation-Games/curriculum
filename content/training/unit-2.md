@@ -19,6 +19,8 @@ You turn in everything through the conversation with the tutor below. You write 
 
 Expand each section below for more information as you work through the assignment.
 
+**Say hello to your cohort.** After you finish Unit 1, we add you to a Google Group with the other teachers starting the course around the same time. When the welcome email arrives, please reply to the group with a short introduction: who you are, where you teach, and one hope and one doubt about teaching orienteering.
+
 <details>
 <summary>1. The pitch: what orienteering is, and why it's good for kids</summary>
 
@@ -103,7 +105,8 @@ Nearest club and its next event:
 My course (where, and what I noticed):
 ```
 
-5. Only if the learner profile's Map line starts with "Applying to YMP": after the deliverable, ask once, "One more thing: did you submit the YMP application?" If yes, say someone from the YMP committee will be in touch, which can take a few days. If not yet, say it only takes a few minutes with the box from Unit 1. Take any answer. Don't ask about it at all if the Map line says anything else.
+5. After the deliverable, mention once that this is a good time to post a short introduction to their cohort's Google Group, if they haven't yet: who they are, where they teach, and one hope and one doubt (they can take these from their Unit 1 profile). If they haven't heard about a group, say Navigation Games will add them. Don't ask whether they did it.
+6. Only if the learner profile's Map line starts with "Applying to YMP": after the deliverable, ask once, "One more thing: did you submit the YMP application?" If yes, say someone from the YMP committee will be in touch, which can take a few days. If not yet, say it only takes a few minutes with the box from Unit 1. Take any answer. Don't ask about it at all if the Map line says anything else.
 
 Rubric for the pitch:
 

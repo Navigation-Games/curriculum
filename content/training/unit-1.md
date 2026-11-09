@@ -39,14 +39,12 @@ Someone from the YMP committee will be in touch after you apply, but that can ta
 - A short **learner profile**, which the tutor writes from your conversation. Please check it and fix anything it got wrong, because later units use it. Then press **Send to Navigation Games** under it to hand in this unit's assignment. Everyone does this, with or without a map.
 - A **credit plan**: who approves your PD hours, and what they need from us.
 - Your **map decision**: you have a map already, you're applying to YMP (with your answers ready to submit), you're getting one another way, or you won't use a map for now.
-- If you're in a cohort, a short **introduction** for the others, with one hope and one doubt.
 
 ## What we look for
 
 - The profile is complete and sounds like you
 - We know whether you need a map, and where
 - The credit plan names a person or office to ask
-- Your introduction is posted (if you're in a cohort)
 
 ## Opening
 
@@ -119,7 +117,7 @@ Map:
 PD credit plan:
 ```
 
-If they correct it, write the corrected profile again in the same format. The profile is this unit's assignment. Once it's right, tell them to press "Send to Navigation Games" under it to hand it in, with or without a map. If they are in a cohort, finish by suggesting what to say in their introduction (one hope and one doubt). If they don't know whether they are, say Navigation Games will let them know.
+If they correct it, write the corrected profile again in the same format. The profile is this unit's assignment. Once it's right, tell them to press "Send to Navigation Games" under it to hand it in, with or without a map.
 
 ## Reviewer notes
 

@@ -433,7 +433,7 @@ A cohort is the teachers who start in the same window (for example the six Color
 - **What goes there:** each teacher's introduction from Unit 1 (one hope and one doubt), one discussion prompt per unit from the staff member, swapping unit plans with a partner for feedback (Unit 5), and a show-and-tell thread while teaching (a photo or a story).
 - **Live: one Google Meet Q&A per cohort**, about an hour, at the point most of the cohort has finished Unit 5. Create it as a Calendar event with a Meet link and invite the group. Recording needs a paid Workspace edition; the free nonprofit edition doesn't record, so share notes afterwards for anyone who missed it. The NG host may need to admit people from outside the domain.
 - **In the Tracker:** a Cohort column (for example `C-2026-11`) on each applicant's row.
-- The tutor tells a teacher in a cohort to post their introduction at the end of Unit 1, and tells teachers who don't know their cohort that Navigation Games will let them know.
+- Add each teacher to their cohort's group when their Unit 1 profile arrives (the Submissions tab of the log sheet, or the email to the reviewer). The welcome email asks them to post an introduction, and the Unit 2 page and tutor remind them.
 
 ### A cohort group from start to finish
 
