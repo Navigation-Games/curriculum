@@ -20,7 +20,7 @@ This unit shows you the activities your students will do, in the order they meet
 
 Together they take about 15 to 20 minutes, and need no equipment beyond cones and a whistle.
 
-<YouTube id="lD0_AKjR_Ic" title="Boundary Run and Gathering" />
+<YouTube id="lD0_AKjR_Ic" title="Boundary Run and Gathering" maxWidth={360} />
 
 </details>
 
@@ -40,7 +40,7 @@ There's no map or clue sheet yet. Students build a picture of the space in their
 
 Then do it again, faster. Then from memory. Then trade for a different clue sheet. Checking that each animal matches is the first step toward checking a checkpoint code on a real course.
 
-<YouTube id="DhSJ-nxsQiI" title="Animal-O with Cambridge Camping" poster="/img/video-posters/cambridge-camping-animal-o.jpg" />
+<YouTube id="DhSJ-nxsQiI" title="Animal-O with Cambridge Camping" poster="/img/video-posters/cambridge-camping-animal-o.jpg" maxWidth={360} />
 
 For a walk-through aimed at teachers, see [Animal Orienteering for Instructors](https://www.youtube.com/watch?v=rok2Ghx3fq4).
 
@@ -55,7 +55,7 @@ Start at a whiteboard with the map drawn upside down, and have students shout "S
 
 This is where students learn to turn a map to match the ground, the most important map skill there is.
 
-<YouTube id="-Nk2K_QQ89s" title="Geometric-O in action" />
+<YouTube id="-Nk2K_QQ89s" title="Geometric-O in action" maxWidth={360} />
 
 [Basketball-O](https://www.youtube.com/watch?v=HKYcVCUWYQ8) does the same thing with the lines of a basketball court, which is handy in a gym.
 
