@@ -9,7 +9,7 @@ summary: You'll see the activities your students will do, choose one, write the 
 
 ## Page
 
-This unit shows you the activities your students will do, in the order they meet them. Each one adds one small skill to the one before. Expand each section to see what students do, how to set it up and run it, and, where we have one, a video of kids doing it. Each activity page has the full details, vocabulary and a script.
+This unit shows you the progression of activities in the Grades 3-5 curriculum. Please expand each section and read the short description about how to run the activity, and watch the video, if we have one. Visit at least one of the linked activity pages, so you know how it is organized. An activity page has the full details, vocabulary and script. Note that activities also have a one-pager version (see the button near the top of an activity page) that can be useful to review the plan once you're familiar with it. Note also that there are different tabs in the activity description, such as Learning Goals, How to Run It, Reflection, Script and Vocabulary.
 
 <details>
 <summary>1. Boundary Run and Gathering: learn the space and come back on a signal</summary>
@@ -70,7 +70,7 @@ These need a map of your school grounds or park, with the checkpoints drawn on i
 
 </details>
 
-Every activity starts with a short briefing: a safety reminder (where the boundary is, and the gathering signal), why you're doing the activity, and what to do. A calm, clear briefing is what makes it safe to let students go off on their own. Each activity page opens with a sentence on why, such as "In orienteering, you find checkpoints in order using clue sheets." Say "checkpoints" rather than "controls," and say "out of bounds" in full.
+Every activity starts with a short briefing: a safety reminder (where the boundary is, and the gathering signal), why you're doing the activity, and what to do. A calm, clear briefing is what makes it safe to let students go off on their own. Each activity page opens with a sentence on why, such as "In orienteering, you find checkpoints in order using clue sheets."
 
 ## Assignments
 
