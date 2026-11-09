@@ -14,6 +14,8 @@
 //   phase: 1
 //   minutes: 25
 //   deliverable: One line saying what the teacher makes
+//   summary: Optional sentence shown after "About N minutes." instead of
+//            "You'll produce: <deliverable>."
 //   ---
 //   ## Page               shown to teachers
 //   ## Assignments        shown to teachers
@@ -213,7 +215,7 @@ function renderUnit(unit, previous, next) {
     // The unit's text and the tutor show only to an enrolled teacher on an open unit (or to staff)
     `<TrainingGate unit=${JSON.stringify(unit.slug)}>`,
     '',
-    `**About ${unit.meta.minutes} minutes.** You'll produce: ${lowerFirst(unit.meta.deliverable)}.`,
+    `**About ${unit.meta.minutes} minutes.** ${unit.meta.summary || `You'll produce: ${lowerFirst(unit.meta.deliverable)}.`}`,
     '',
     ...audioPlayer(unit.meta),
     s['Page'],
