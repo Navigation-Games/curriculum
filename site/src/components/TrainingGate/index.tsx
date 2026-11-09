@@ -108,6 +108,22 @@ export default function TrainingGate({unit, children}: Props): React.ReactElemen
     </p>
   );
 
+  // A Google sign-in lasts about an hour. After that the 30-day session takes
+  // over, and it never carries staff status, so staff see the teacher's view
+  // (often "not enrolled" or "not open yet") while still showing as signed in.
+  const staffSignInExpired =
+    user.method !== 'email' && user.hd === 'navigationgames.org' && user.exp * 1000 <= Date.now() + 60_000;
+  const staffNote = staffSignInExpired ? (
+    <div className={styles.staffNote}>
+      <p>
+        <strong>Navigation Games staff:</strong> your Google sign-in lasts about an hour, and after that the
+        course treats you like a teacher, even though it still shows you as signed in. If you can't see
+        something, sign in with Google again.
+      </p>
+      <GoogleSignInButton size="medium" />
+    </div>
+  ) : null;
+
   if (state.status === 'checking') return <div className={styles.gate}>Checking your access...</div>;
 
   if (state.status === 'error') {
@@ -119,6 +135,7 @@ export default function TrainingGate({unit, children}: Props): React.ReactElemen
           Try again
         </button>
         {signedInAs}
+        {staffNote}
       </div>
     );
   }
@@ -135,6 +152,7 @@ export default function TrainingGate({unit, children}: Props): React.ReactElemen
           <a href="mailto:admin@navigationgames.org">admin@navigationgames.org</a> and we'll sort it out.
         </p>
         {signedInAs}
+        {staffNote}
       </div>
     );
   }
@@ -149,6 +167,7 @@ export default function TrainingGate({unit, children}: Props): React.ReactElemen
           the <Link to="/training/">course home page</Link>.
         </p>
         {signedInAs}
+        {staffNote}
       </div>
     );
   }

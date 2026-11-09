@@ -52,3 +52,12 @@
   background: var(--ifm-color-warning-contrast-background);
   font-size: 0.9rem;
 }
+
+/* Shown to staff whose one-hour Google sign-in has run out */
+.staffNote {
+  margin-top: 1rem;
+  padding: 0.6rem 0.9rem;
+  border-left: 4px solid var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+  font-size: 0.9rem;
+}
