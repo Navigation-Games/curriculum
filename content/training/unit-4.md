@@ -1,61 +1,83 @@
-# 4 - Teaching the Kit Activities
+# 4 - The Progression and Learning Goals
 
 ---
 phase: 1
-minutes: 75
-deliverable: Your opening briefing, plus a dry run of one activity
+minutes: 35
+deliverable: One lesson's learning goal in your words, connected to a framework you choose, and how the lessons fit your biggest teaching challenge
+summary: You'll put one lesson's learning goal in your own words, connect it to a framework your school cares about, and think about how the lessons fit your biggest teaching challenge.
 ---
 
 ## Page
 
-Your Beginning Orienteering Instruction Kit has what you need for the first activities in the curriculum, and none of them need an orienteering map. Each activity page has the setup, the steps, the vocabulary and photos, and short videos are on the way.
+The activities you saw in Unit 3 come together in lessons, in a set order. Students learn their space before they see a map, and each lesson adds one small skill. The full sequence of orienteering concepts is in the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence/). Here are the six lessons for grades 3 to 5:
 
-- **[Gathering](/activities/core/gathering/)** (10 to 20 minutes). Return to the teacher on a signal. This is your safety routine for every lesson after it.
-- **[Explore & Find](/activities/core/explore-and-find/)** (10 to 20 minutes). Find checkpoints inside a boundary.
-- **[Animal-O](/activities/core/animal-o/)** (15 to 30 minutes). Use a clue sheet to find checkpoints in order, checking each one.
-- **[Geometric-O](/activities/core/geometric-o/)** (30 to 60 minutes). Use a simple map of a cone pattern to do harder and harder courses. Basketball-O, its extension on that page, uses the lines of a basketball court instead.
-- **[Clothespin-O](/activities/core/clothespin-o/)** (30 to 45 minutes). Find hidden clothespins and describe where they are.
-- **[Score-O](/activities/core/score-o/)** (15 to 30 minutes). Visit as many checkpoints as you can, in any order. This one needs a map of your space.
+1. **[Know Your Space](/lessons/school/grade-3-5/lesson-1/).** Learn where you can go, and practice observational skills. Boundary Run, Gathering, Explore & Find.
+2. **[Match the Code](/lessons/school/grade-3-5/lesson-2/).** Find checkpoints in a specific order, and confirm you're at the right one. Animal-O.
+3. **[Map Readiness](/lessons/school/grade-3-5/lesson-3/).** Spatial relationships, turning a map to match the space, and connecting a map to the space, using a very simple map with colored shapes. Geometric-O.
+4. **[Map Symbols](/lessons/school/grade-3-5/lesson-4/).** Symbols tell you what is on the ground. Symbol-O, Map Walk.
+5. **[Visiting Checkpoints](/lessons/school/grade-3-5/lesson-5/).** Navigate with a map, visiting checkpoints in any order. Map Walk, Score-O.
+6. **[Orienteering Course](/lessons/school/grade-3-5/lesson-6/).** Navigate a course, visiting checkpoints in order. Point-to-Point.
 
-Every lesson starts with the same short briefing: where the boundary is, what the gathering signal sounds like, what to do if you're lost or hurt, and today's task. A calm, clear briefing is what makes it safe to let students go off on their own. Say "checkpoints" rather than "controls," and say "out of bounds" in full.
+The other grade bands follow the same path at a different speed: [grades K-2](/lessons/school/grade-k-2/) stay longer before maps, and [grades 6 and up](/lessons/school/grade-6-plus/) get to maps quickly.
+
+Every lesson page starts with its goals. The orienteering goals say what students learn about navigating. For grades 3 to 5 and 6 and up, the lessons also list the SHAPE America PE standards they meet. Your school may care about other outcomes too, and orienteering connects to many of them. These pages show some of the connections:
+
+- [PE standards](/reference/frameworks/pe-standards/) (SHAPE America)
+- [Social-emotional learning](/reference/frameworks/social-emotional-learning/)
+- [Experiential learning](/reference/frameworks/experiential-learning/)
+- [Leave No Trace](/reference/frameworks/leave-no-trace/)
+- [Vision of a Massachusetts Graduate](/reference/frameworks/ma-vision-of-a-graduate/)
+- [OUSA Skill Level Recognition Program](/reference/frameworks/ousa-skill-levels/)
+
+You can also use your state's or district's standards, or another subject such as math, science or geography.
 
 ## Assignments
 
-- Your **opening briefing**, about a minute when spoken. For now, type or paste what you'd say; recording comes later.
-- A **dry run** of one kit activity with colleagues, family or a few students, and a line or two on how it went.
+There's no single right answer here. With the tutor:
+
+- Pick one lesson from your grade band and put its **learning goal** in your own words, with a sentence on **why it comes where it does** in the order.
+- Choose a **framework** your school cares about, and say how that lesson connects to it.
+- Name your **biggest teaching challenge** (behavior, space, short classes, too many kids, or something else), and say how the lessons help with it or what you'd change.
 
 ## What we look for
 
-- The boundary is described so students could find it
-- The gathering signal is named, and students know what to do when they hear it
-- Students know what to do if they are lost, hurt or see a problem
-- Today's task is clear
-- Plain words for the age group, no unexplained jargon
-- About 60 seconds when spoken
+- The learning goal is in your own words and fits the lesson
+- Your reason for the order shows how the lesson builds on the ones before it
+- The connection to your framework is specific: a standard, an outcome or a skill, and what students do in the lesson that meets it
+- Your challenge is real for your school, and you've thought about how to handle it
 
 ## Opening
 
-This unit is about running the kit activities, starting with the briefing you'll give at the beginning of every lesson. Which activity do you think you'll teach first, and to which grade?
+This unit is about what students learn in each lesson, and how that connects to what your school cares about. To start: why do you think Boundary Run, which has no map at all, comes before every lesson that uses one?
 
 ## Tutor
 
-Your job is to help the teacher feel ready to run the kit activities, and to write a strong opening briefing.
+Your job is to help the teacher think about what students learn in the lessons and why, and connect it to their own school. Accept any reasonable answer, and ask about their reasoning instead of steering them to one right answer. Keep it efficient.
 
-1. Ask which activity they will teach first and with which grade. If a learner profile is provided, use it. Briefly confirm the setup and steps for that activity, based on the activity page, and ask whether anything is unclear. Don't invent steps that aren't on the activity page.
-2. Explain why the briefing matters, in two or three sentences. Then ask them to write the briefing they would give before that activity, for their grade and their space.
-3. Give feedback against the rubric below. Point out what works first, then one or two specific improvements. Pay attention to the age group: younger students need shorter sentences and a demonstration.
-4. Let them revise until it meets the rubric. Then write the final briefing in a fenced code block labeled `deliverable`.
-5. Ask them to do a dry run of one activity before their kit arrives, even in a living room or with two colleagues, and to tell you afterward how it went. If they come back with a report, ask what surprised them and what they would change.
+1. Follow up on the opening question briefly. The key ideas: students need to know the boundary, the gathering signal and the space before they can safely go off on their own, and a map only makes sense once you can relate places to each other.
+2. Ask them to pick one lesson from their grade band (from the learner profile, if provided) and say its learning goal in their own words, and why it comes where it does. Point them to the lesson page if they want to look at its goals. If their reason misses how the lesson builds on the ones before, ask one question that helps them see it (for example, "What would go wrong if students skipped Map Readiness and went straight to symbols?").
+3. Ask which framework or outcomes their school cares about. Offer the frameworks on the page as options, and say their own state or district standards, or another subject, are fine too. Ask them to connect the lesson to it: a specific standard, outcome or skill, and what students do in the lesson that meets it. For the PE standards, the lesson page lists them; let them use those or find their own. Never invent standard codes or the wording of a standard you don't have on the page; if they name a framework you don't know, ask them to tell you the outcome they have in mind.
+4. Ask about their biggest teaching challenge (behavior, engagement, space, little time outdoors, no outdoor clothing, short classes, too many kids, or something else). Then ask how the lessons might help with it, or whether they'd change something because of it. Respect their judgment about their school. Raise a safety concern plainly, and a progression concern once, as a question. If they have few class periods, say it's fine to move faster, but for grades 3 and up the priority is getting students onto a real map by the end.
+5. When all three are done, write a fenced code block labeled `deliverable` with exactly these lines, and tell them to send it in:
+
+```deliverable
+Grade band:
+Lesson:
+Its learning goal, in my words:
+Why it comes where it does:
+Framework I chose:
+How the lesson connects to it:
+My biggest teaching challenge:
+How the lessons help, or what I'd change:
+```
 
 Rubric:
 
-- Boundary described so students could find it
-- Gathering signal named, with what to do when it sounds
-- What to do if lost, hurt or seeing a problem
-- Today's task is clear
-- Plain words for the age group; "checkpoints," not "controls"; "out of bounds" in full
-- About 60 seconds when spoken (roughly 120 to 150 words)
+- Learning goal in their own words, and it fits the lesson
+- The reason for the order shows how the lesson builds on earlier ones
+- The framework connection is specific: an outcome plus what students do that meets it
+- The challenge is real for their school, with a reasonable way to handle it
 
 ## Reviewer notes
 
-About 10 minutes. Safety first: make sure the boundary, the gathering signal and the lost-or-hurt plan are all there and realistic for the space in the learner profile. Note anything to raise at Consultation 1.
+About 5 to 10 minutes. Read the challenge and how they plan to handle it, and note anything to raise at Consultation 1. Note any misunderstanding of the progression that keeps coming up across the cohort, for the live Q&A. Framework connections that are well made can be shared (with permission) with future teachers who use the same framework.

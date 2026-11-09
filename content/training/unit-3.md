@@ -1,62 +1,116 @@
-# 3 - The Progression: From Space to Map
+# 3 - Teaching the Activities
 
 ---
 phase: 1
-minutes: 30
-deliverable: The six lessons in order, with a reason for the order
+minutes: 75
+deliverable: Your opening briefing, plus a dry run of one activity
+summary: You'll see the activities your students will do, write the briefing you'll give at the start of every lesson, and try one activity yourself.
 ---
 
 ## Page
 
-The lessons build in a set order. Students learn their space before they see a map. The full sequence of orienteering concepts is in the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence/). Here are the six lessons for grades 3 to 5:
+This unit shows you the activities your students will do, in the order they meet them. Each one adds one small skill to the one before. Expand each section to see what students do, how to set it up and run it, and, where we have one, a video of kids doing it. Each activity page has the full details, vocabulary and a script.
 
-1. **[Know Your Space](/lessons/school/grade-3-5/lesson-1/).** Learn where you can go, and practice observational skills. Boundary Run, Gathering, Explore & Find.
-2. **[Match the Code](/lessons/school/grade-3-5/lesson-2/).** Find checkpoints in a specific order, and confirm you're at the right one. Animal-O.
-3. **[Map Readiness](/lessons/school/grade-3-5/lesson-3/).** Spatial relationships, turning a map to match the space, and connecting a map to the space, using a very simple map with colored shapes. Geometric-O.
-4. **[Map Symbols](/lessons/school/grade-3-5/lesson-4/).** Symbols tell you what is on the ground. Symbol-O, Map Walk.
-5. **[Visiting Checkpoints](/lessons/school/grade-3-5/lesson-5/).** Navigate with a map, visiting checkpoints in any order. Map Walk, Score-O.
-6. **[Orienteering Course](/lessons/school/grade-3-5/lesson-6/).** Navigate a course, visiting checkpoints in order. Point-to-Point.
+<details>
+<summary>1. Boundary Run and Gathering: learn the space and come back on a signal</summary>
 
-The other grade bands follow the same path at a different speed: [grades K-2](/lessons/school/grade-k-2/) stay longer before maps, and [grades 6 and up](/lessons/school/grade-6-plus/) get to maps quickly.
+**[Boundary Run](/activities/core/boundary-run/).** You run the boundary of the play area with the class following you in single file. Then you quiz them: point to places and ask, "Inside or outside?" Ask about off-limits spots inside the boundary too, like a garden or playground equipment. Before class, walk the space and put cones anywhere the edge is unclear. Running it beats describing it, because students remember where they went.
+
+**[Gathering](/activities/core/gathering/).** Demonstrate the gathering signal (a whistle works well). Students move freely inside the boundary, and when they hear the signal they come back to you as quickly and safely as they can. Time how long it takes, then try again and ask the class for ideas to get faster. This becomes your safety routine for every lesson after it.
+
+Together they take about 15 to 20 minutes, and need no equipment beyond cones and a whistle.
+
+<YouTube id="lD0_AKjR_Ic" title="Boundary Run and Gathering" />
+
+</details>
+
+<details>
+<summary>2. Explore & Find: find checkpoints and remember where they are</summary>
+
+**[Explore & Find](/activities/core/explore-and-find/)** (10 to 20 minutes). Place the animal checkpoints from the kit around the space, with a start/finish marker where you gather. Say "Go explore!" and let students find as many animals as they can. Signal them back, and ask what they found and where ("The elephant was near the fence"). Send them out again to find different ones. Then test their memory: "Run to the lion and back!" "Run to the octopus, then the dog, and back!"
+
+There's no map or clue sheet yet. Students build a picture of the space in their heads, which is what they'll match a map to later.
+
+</details>
+
+<details>
+<summary>3. Animal-O: find checkpoints in order with a clue sheet</summary>
+
+**[Animal-O](/activities/core/animal-o/)** (15 to 30 minutes). With the animal checkpoints out, each student or pair picks up a clue sheet at the start. The clue sheet is a list of animal pictures in order. Students run to the first animal, check that it matches, go on to the next in order, and return to the finish. The kit has six 5-animal clue sheets, each a different course, and 10-animal sheets for a challenge.
+
+Then do it again, faster. Then from memory. Then trade for a different clue sheet. Checking that each animal matches is the first step toward checking a checkpoint code on a real course.
+
+<YouTube id="DhSJ-nxsQiI" title="Animal-O with Cambridge Camping" poster="/img/video-posters/cambridge-camping-animal-o.jpg" />
+
+For a walk-through aimed at teachers, see [Animal Orienteering for Instructors](https://www.youtube.com/watch?v=rok2Ghx3fq4).
+
+</details>
+
+<details>
+<summary>4. Geometric-O: a first map</summary>
+
+**[Geometric-O](/activities/core/geometric-o/)** (30 to 60 minutes). Set out the animal checkpoints in the pattern on the kit's all-checkpoints map, with a red, blue, green and yellow cone in the corners as landmarks. The map is very simple: dots for the checkpoints and colored dots for the corner cones.
+
+Start at a whiteboard with the map drawn upside down, and have students shout "Stop!" as you turn it until it matches the cones. Point to a dot and ask which animal is there, then point to an animal and ask where it is on the map. Then give spatial challenges ("Find the animal closest to the red cone"). Finally, pairs share a 5-checkpoint map and visit the checkpoints in order, starting at the triangle, then move up to 10-checkpoint maps.
+
+This is where students learn to turn a map to match the ground, the most important map skill there is.
+
+<YouTube id="-Nk2K_QQ89s" title="Geometric-O in action" />
+
+[Basketball-O](https://www.youtube.com/watch?v=HKYcVCUWYQ8) does the same thing with the lines of a basketball court, which is handy in a gym.
+
+</details>
+
+<details>
+<summary>5. Courses: Score-O and Point-to-Point on a map of your space</summary>
+
+These need a map of your school grounds or park, with the checkpoints drawn on it ([Drawing courses on maps](/reference/equipment/maps/#drawing-courses) shows how).
+
+**[Score-O](/activities/core/score-o/)** (15 to 30 minutes). Students visit as many checkpoints as they can in a set time (8 to 12 minutes for beginners), in any order, and write down the letter code at each one. Before the start, review the boundary on the map, describe a few checkpoint locations and have students point to them on their maps, and ask what their plan would be. There's no single best strategy. Only correct codes count. This is the first time students choose their own route.
+
+**[Point-to-Point](/activities/core/point-to-point/)** (30 to 60 minutes). This is "real" orienteering: visit the checkpoints in order, from 1 to 2 to 3. Have everyone orient the map together first ("If something is behind you, turn your map so it's behind you on the map too"). At each checkpoint, students check the code. If it doesn't match, they're in the wrong place: stop, turn the map to match the ground, find where they are, and go on. Pairs plan the route to the first checkpoint before they move. Going the right way matters more than going fast.
+
+</details>
+
+Every lesson starts with the same short briefing: where the boundary is, what the gathering signal sounds like, what to do if you're lost or hurt, and today's task. A calm, clear briefing is what makes it safe to let students go off on their own. Say "checkpoints" rather than "controls," and say "out of bounds" in full.
+
 ## Assignments
 
-The six lessons **in order**, with a sentence or two on **why that order works**.
+- Your **opening briefing**, about a minute when spoken. For now, type or paste what you'd say.
+- A **dry run** of one activity with colleagues, family or a few students, and a line or two on how it went.
 
-## What we look for
+## What we look for in the briefing
 
-- The lessons are in order
-- Your reason explains why the space and safety come before maps
-- Your reason mentions that each lesson builds on the ones before it
-- You can say what would go wrong if a step were skipped
+- The boundary is described so students could find it
+- The gathering signal is named, and students know what to do when they hear it
+- Students know what to do if they are lost, hurt or see a problem
+- Today's task is clear
+- Plain words for the age group, no unexplained jargon
+- About 60 seconds when spoken
 
 ## Opening
 
-This unit is about why the lessons come in the order they do. To start: why do you think Boundary Run, which has no map at all, comes before every lesson that uses one?
+This unit is about running the activities, starting with the briefing you'll give at the beginning of every lesson. Which activity do you think you'll teach first, and to which grade?
 
 ## Tutor
 
-Your job is to help the teacher understand the logic of the progression, through questions rather than lectures.
+Your job is to help the teacher feel ready to run the activities, and to write a strong opening briefing. Keep it efficient.
 
-1. Start with the opening question and follow up on their answer. The key ideas: students need to know the boundary, the gathering signal and the space before they can safely go off on their own; and a map only makes sense once you can relate places to each other.
-2. Give the six lessons in a scrambled order, each with its short description and activities, so the teacher isn't guessing from the names. Use these:
-   - Know Your Space: learn where you can go, and practice observational skills (Boundary Run, Gathering, Explore & Find)
-   - Match the Code: find checkpoints in a specific order using a clue sheet, with no map (Animal-O)
-   - Map Readiness: a very simple map with colored shapes, to learn how a map relates to the space and how to turn it to match (Geometric-O)
-   - Map Symbols: the symbols on a real orienteering map and what they mean (Symbol-O, Map Walk)
-   - Visiting Checkpoints: navigate with a map, choosing your own order (Map Walk, Score-O)
-   - Orienteering Course: navigate a whole course in order (Point-to-Point)
-   Ask the teacher to put them in order. Ask them to explain any step they put out of place, and help them find the reason. Don't rate their answers ("Getting closer", "That's a fair instinct"). Just say what is right and what isn't.
-3. Ask "What would go wrong if we skipped Lesson 3 and went straight to symbols?" or a similar question about a step they seem unsure of.
-4. Connect to their situation, if a learner profile is provided: their grade band, and how many class periods they have. If they have few periods, explain that it is fine to move faster, but for grades 3 and up the priority is getting students onto a real map by the end.
-5. When they have the order and a reason, write it back in a fenced code block labeled `deliverable`: the six lessons in order, then their reason in their own words. Tell them to send it in.
+1. Ask which activity they will teach first and with which grade. If a learner profile is provided, use it. Briefly confirm the setup and steps for that activity, based on the page above and the activity page, and ask whether anything is unclear. Don't invent steps that aren't on the activity page.
+2. Explain why the briefing matters, in one or two sentences. Then ask them to write the briefing they would give before that activity, for their grade and their space.
+3. Give feedback against the rubric below. Point out what works first, then one or two specific improvements. Pay attention to the age group: younger students need shorter sentences and a demonstration.
+4. Let them revise until it meets the rubric. Then write the final briefing in a fenced code block labeled `deliverable`.
+5. Ask them to do a dry run of one activity, even in a living room or with two colleagues, and to tell you afterward how it went. If they come back with a report, ask what surprised them and what they would change.
 
 Rubric:
 
-- Correct order
-- Reason covers safety and the space before maps
-- Reason covers each lesson building on the ones before it
-- Can say what would go wrong if a step were skipped
+- Boundary described so students could find it
+- Gathering signal named, with what to do when it sounds
+- What to do if lost, hurt or seeing a problem
+- Today's task is clear
+- Plain words for the age group; "checkpoints," not "controls"; "out of bounds" in full
+- About 60 seconds when spoken (roughly 120 to 150 words)
 
 ## Reviewer notes
 
-About 5 minutes, often less. This unit is mostly a check for understanding. Note any misunderstanding that keeps coming up across the cohort, for the live Q&A.
+About 10 minutes. Safety first: make sure the boundary, the gathering signal and the lost-or-hurt plan are all there and realistic for the space in the learner profile. Note anything to raise at Consultation 1.

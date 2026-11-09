@@ -38,9 +38,9 @@ Participants will be able to:
 ## Units and assignments
 
 - **Welcome, Your Situation and Your Map**. Learner profile and map plan
-- **What Orienteering Is and Why It Works**. A short pitch for orienteering at your school
-- **The Progression: From Space to Map**. The lesson sequence and why it works
-- **Teaching the Kit Activities**. An opening safety briefing and a practice run of one activity
+- **What Orienteering Is and Why It Works**. A short pitch for orienteering at your school, and a course the educator designs and tests
+- **Teaching the Activities**. An opening safety briefing and a practice run of one activity
+- **The Progression and Learning Goals**. A lesson's learning goal, connected to a framework the educator chooses
 - **Plan Your Unit**. A unit plan, reviewed in Consultation 1
 - **Your Map and Your Courses**. A first course on your own map
 - **Teach, Reflect, Adjust**. A reflection after each class taught
