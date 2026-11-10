@@ -850,7 +850,7 @@ def tutor_system_prompt(unit: dict, profile: str = "", plan: str = "") -> str:
     """The tutor's system prompt: general instructions, this unit, the site map, then the style checklist."""
     parts = [
         TUTOR_PROMPT,
-        f"# This unit: {unit['title']}\n\nAbout {unit['minutes']} minutes. "
+        f"# This unit: {unit['title']}\n\nTime: {unit['minutes']} minutes. "
         f"The teacher makes: {unit['deliverable']}.",
         "## What the teacher reads on the page\n\n" + unit["page"],
         "## What the teacher makes\n\n" + unit["make"],

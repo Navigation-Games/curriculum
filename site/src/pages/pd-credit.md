@@ -16,9 +16,9 @@ unlisted: true
 
 **Format:** Online, self-paced, interactive units; meetings with NG staff
 
-**Contact hours:** About 10.5: about 3 hours of online units before teaching (Units 1 to 4), about 2 hours of prep for teaching (Units 5 and 6), two consultations (1h total), and practicum (4.5h)
+**Contact hours:** About 7 to 10, depending on the educator's experience: online units before teaching (Units 1 to 4), 45 minutes to 3 hours; prep for teaching (Units 5 and 6), 35 minutes to 1.75 hours; two consultations (1h total); and practicum (4.5h). Educators who have taught orienteering skip material they already know, and can use that time to go deeper, for example by evaluating a unit they've taught and designing its next version.
 
-**Audience:** PE teachers and other K-12 educators taking part in Kickstart Orienteering
+**Audience:** PE teachers and other K-12 educators taking part in Kickstart Orienteering, both new to orienteering and experienced
 
 ## What the course is for
 

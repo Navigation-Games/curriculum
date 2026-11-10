@@ -2,7 +2,7 @@
 
 ---
 phase: 2
-minutes: 10
+minutes: 5-10
 deliverable: A short reflection after each class you teach
 ---
 

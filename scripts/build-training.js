@@ -12,9 +12,10 @@
 //   # 0 - Unit Title
 //   ---
 //   phase: 1
-//   minutes: 25
+//   minutes: 10-25   a range: quick for a teacher who has done this before,
+//                    longer for one who is new to it (a single number also works)
 //   deliverable: One line saying what the teacher makes
-//   summary: Optional sentence shown after "About N minutes." instead of
+//   summary: Optional sentence shown after "10 to 25 minutes." instead of
 //            "You'll produce: <deliverable>."
 //   ---
 //   ## Page               shown to teachers
@@ -159,8 +160,18 @@ function unitHeading(unit) {
   return `Unit ${unit.number}: ${unit.title}`;
 }
 
+// "10 to 25" for a range like "10-25", "about 25" for a single number
+function minutesText(meta) {
+  const range = String(meta.minutes).match(/^\s*(\d+)\s*-\s*(\d+)\s*$/);
+  return range ? `${range[1]} to ${range[2]}` : `about ${meta.minutes}`;
+}
+
 function lowerFirst(text) {
   return text.charAt(0).toLowerCase() + text.slice(1);
+}
+
+function upperFirst(text) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 function frontmatter(fields) {
@@ -192,7 +203,7 @@ function renderHome(home, units) {
   lines.push('## Units', '');
   for (const unit of units) {
     // Relative links from an index page resolve to its children (see CLAUDE.md)
-    lines.push(`- [${unitHeading(unit)}](./${unit.slug}) (about ${unit.meta.minutes} minutes). ${unit.meta.deliverable}.`);
+    lines.push(`- [${unitHeading(unit)}](./${unit.slug}) (${minutesText(unit.meta)} minutes). ${unit.meta.deliverable}.`);
   }
   if (startButton) lines.push('', startButton);
   return lines.join('\n') + '\n';
@@ -217,7 +228,7 @@ function renderUnit(unit, previous, next) {
     // The unit's text and the tutor show only to an enrolled teacher on an open unit (or to staff)
     `<TrainingGate unit=${JSON.stringify(unit.slug)}>`,
     '',
-    `**About ${unit.meta.minutes} minutes.** ${unit.meta.summary || `You'll produce: ${lowerFirst(unit.meta.deliverable)}.`}`,
+    `**${upperFirst(minutesText(unit.meta))} minutes.** ${unit.meta.summary || `You'll produce: ${lowerFirst(unit.meta.deliverable)}.`}`,
     '',
     ...audioPlayer(unit.meta),
     s['Page'],
@@ -251,7 +262,7 @@ function tutorData(units) {
   for (const unit of units) {
     data[unit.slug] = {
       title: unitHeading(unit),
-      minutes: unit.meta.minutes,
+      minutes: minutesText(unit.meta),
       deliverable: unit.meta.deliverable,
       page: unit.sections['Page'],
       make: unit.sections['Assignments'] || '(See the page above.)',

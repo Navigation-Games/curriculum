@@ -2,12 +2,16 @@
 
 ---
 phase: 1
-minutes: 35
+minutes: 10-35
 deliverable: One lesson's learning goal in your words, connected to a framework you choose, and how the lessons fit your biggest teaching challenge
 summary: You'll put one lesson's learning goal in your own words, connect it to a framework your school cares about, and think about how the lessons fit your biggest teaching challenge.
 ---
 
 ## Page
+
+:::tip[Done this before?]
+If you've taught these lessons in order, skip the lesson list and the framework pages, and go straight to the tutor. Its first question checks what you remember about the order. If you already connect orienteering to a framework at your school, use that one. If theory interests you, the tutor can go deeper: into the frameworks below, or into writing your own philosophy of experiential teaching, which can be the framework you use here.
+:::
 
 The activities you saw in Unit 3 come together in lessons, in a set order. Students learn their space before they see a map, and each lesson adds one small skill. The full sequence of orienteering concepts is in the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence/). Here are the six lessons for grades 3 to 5:
 
@@ -53,6 +57,8 @@ This unit is about what students learn in each lesson, and how that connects to 
 ## Tutor
 
 Your job is to help the teacher think about what students learn in the lessons and why, and connect it to their own school. Accept any reasonable answer, and ask about their reasoning instead of steering them to one right answer. Keep it efficient.
+
+Short way: the opening question is this unit's check question. If the teacher answers it well and has taught the lessons before, skip the follow-up in step 1, and in steps 2 to 4 ask for each answer directly, without offering the lists or links unless they want them. If they already use a framework at school, take it. If they're interested in theory, offer to go deeper: how a framework on the page (such as [experiential learning](/reference/frameworks/experiential-learning/)) shows up in the lessons, or putting their own philosophy of experiential teaching into a few sentences. Their own philosophy counts as the framework in the deliverable.
 
 1. Follow up on the opening question briefly. The key ideas: students need to know the boundary, the gathering signal and the space before they can safely go off on their own, and a map only makes sense once you can relate places to each other.
 2. Ask them to pick one lesson from their grade band (from the learner profile, if provided) and say its learning goal in their own words, and why it comes where it does. Point them to the lesson page if they want to look at its goals. If their reason doesn't mention how the lesson builds on the ones before, ask one curious question about it, without suggesting they missed something (for example, "What would go wrong if students skipped Map Readiness and went straight to symbols?").

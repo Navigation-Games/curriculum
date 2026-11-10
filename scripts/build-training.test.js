@@ -39,7 +39,8 @@ describe('training content files', () => {
       });
 
       it('has minutes and a deliverable in its frontmatter', () => {
-        assert.equal(typeof unit.meta.minutes, 'number');
+        // A number, or a range like "10-25"
+        assert.ok(typeof unit.meta.minutes === 'number' || /^\d+-\d+$/.test(unit.meta.minutes), 'minutes: 25 or minutes: 10-25');
         assert.ok(unit.meta.deliverable);
       });
 

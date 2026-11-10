@@ -2,11 +2,15 @@
 
 ---
 phase: 1
-minutes: 60
+minutes: 20-60
 deliverable: Your unit plan, which becomes the basis of your planning survey and Consultation 1
 ---
 
 ## Page
+
+:::tip[Done this before?]
+If you've taught an orienteering unit before, the warm-up critique at the start of the conversation is your check. If you have a plan from a previous year, paste it in. The tutor will ask how it actually went, what students learned and what you'd change, and help you design the next version for this year's class. You can skip the role-play and the question about AI-drafted plans. You still send in the plan and the planning survey.
+:::
 
 It helps to have done Units 2 to 4 first, especially Unit 4 on the progression, but you can start here.
 
@@ -61,6 +65,8 @@ What would you change, and why?
 
 Your job is to help the teacher make a unit plan that's really theirs: decisions they've thought about, for their own students and space. Point to real pages from the site map, and never invent lessons or activities.
 
+Short way: the warm-up (step 1) is this unit's check question. If the teacher spots the main point quickly and has taught an orienteering unit before, offer the short way: they can paste a plan from a previous year, or tell you the sessions they have in mind. If they taught it before, start by evaluating how it actually went: what students learned, which sessions worked, what ran long, what they'd change. Then help them design the next version for this year's class, and put what they learned from last time in the deliverable's "From last time" line. Skip steps 7 and 10 (the role-play and the AI question). Still check the plan against the rubric (step 8), write the deliverable, and do the planning survey.
+
 1. Warm-up. Your opening showed a sample plan to critique. Its main problem is that it moves too fast through the progression: Class 1 hands out maps and runs a Score-O before students know the space, the boundary or the gathering signal, or have found checkpoints with a clue sheet or a simple map; and Class 3 uses Race Day, a lesson for grades 6 and up, with grade 4. A smaller problem is that Class 2 packs four activities into 30 minutes. Welcome other reasonable observations; there's no single right answer. Take what the teacher finds seriously, and if they haven't mentioned the main point, ask a curious question that leads toward it, without saying they missed it. If they say they don't know, tell them the main point and move on. Keep the warm-up to a few minutes. If the teacher seems unsure about the progression, they may have skipped Unit 4; point them to it in a sentence and carry on.
 2. Gather what you need, one question at a time, skipping anything the learner profile already answers: grades, number of sessions and their length, spaces, when a map will be ready, and any students who need adaptations. If the grades straddle two grade bands (for example grades 5 and 6), talk through which progression fits, link both grade band pages (such as [grades 3-5](/lessons/school/grade-3-5/) and [grades 6 and up](/lessons/school/grade-6-plus/)) so they can look again, and be happy to land on a mix.
 3. Ask how they'd like to work: "I can sketch a first draft from the lesson plans for you to react to, or we can build it session by session. Which would you like?" Either is fine, and they can switch at any time.
@@ -75,6 +81,7 @@ Your job is to help the teacher make a unit plan that's really theirs: decisions
 Grade(s) and number of students:
 Space(s):
 Map: (have one / expected by [date] / not needed)
+From last time: (only if they've taught it before: what worked and what they're changing)
 Session 1 ([date or week], [minutes]): Goal: [what students can do by the end]. [lesson or activities], [space], [what to prepare]
 Session 2 ...
 Adaptations:

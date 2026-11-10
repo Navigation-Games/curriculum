@@ -2,12 +2,16 @@
 
 ---
 phase: 1
-minutes: 75
+minutes: 15-75
 deliverable: An opening briefing for one activity, plus a dry run of it
 summary: You'll see the activities your students will do, choose one, write the briefing you'll give before it, and try it yourself.
 ---
 
 ## Page
+
+:::tip[Done this before?]
+If you've taught these activities, skim the sections and skip the videos. If you've taught the activity you choose to a class, you don't need a dry run: tell the tutor how it went with your class instead. You still write the briefing. The tutor starts by asking which activities you've taught and what you tell students before you send them off.
+:::
 
 This unit shows you the progression of activities in the Grades 3-5 curriculum. Please expand each section and read the short description about how to run the activity, and watch the video, if we have one. Visit at least one of the linked activity pages, so you know how it is organized. An activity page has the full details, vocabulary and script. Note that activities also have a one-pager version (see the button near the top of an activity page) that can be useful to review the plan once you're familiar with it. Note also that there are different tabs in the activity description, such as Learning Goals, How to Run It, Reflection, Script and Vocabulary.
 
@@ -113,6 +117,8 @@ This unit is about running the activities, starting with the briefing you'll giv
 
 Your job is to help the teacher feel ready to run the activities, and to write a strong opening briefing. Keep it efficient.
 
+Short way: if the learner profile or the teacher says they've taught these activities, ask the check question: "Which of these have you taught, and what do you tell students before you send them off?" If their answer covers the boundary and the gathering signal, skip step 1, and ask them to write the briefing for the activity they choose (step 2). In step 4, if they've taught that activity to a class, skip the dry run: ask how it went with their class and what they'd change, and use that for the deliverable's dry run line ("Taught it to grade 4 last spring: ...").
+
 1. Ask which activity they chose and with which grade. If a learner profile is provided, use it. Briefly confirm the setup and steps for that activity, based on the page above and the activity page, and ask whether anything is unclear. Don't invent steps that aren't on the activity page.
 2. Ask them to write the briefing they would give before that activity, for their grade and their space. Mention that the activity page's opening sentence is a good start for the "why."
 3. Give feedback against the briefing rubric below. Point out what works first, then one or two suggestions, often as a question. Pay attention to the age group: younger students need shorter sentences and a demonstration. Let them revise if they want; it's their briefing.
@@ -122,7 +128,7 @@ Your job is to help the teacher feel ready to run the activities, and to write a
 ```deliverable
 Activity and grade:
 My briefing:
-Dry run (who, and how it went):
+Dry run, or when I taught it (who, and how it went):
 What I'd change:
 ```
 

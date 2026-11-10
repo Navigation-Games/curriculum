@@ -2,12 +2,16 @@
 
 ---
 phase: 1
-minutes: 40
+minutes: 10-40
 deliverable: A three-sentence pitch, your nearest club's next event, and a course you designed and tested
 summary: You'll create a three-sentence pitch, look up the next event by your nearest club, and design and test a course.
 ---
 
 ## Page
+
+:::tip[Done this before?]
+If you already orienteer, you can skip About Orienteering and its videos. If you've designed and run a course before, for a class, a club or an event, you don't need to make a new one: tell the tutor about one you made. You still write the pitch and name your nearest club, which takes about 10 minutes.
+:::
 
 There are three parts to this unit's assignment:
 
@@ -92,6 +96,8 @@ Let's start with your pitch. First, open section 1 above, read About Orienteerin
 ## Tutor
 
 Your job is to get the teacher through three things quickly, in this order: a three-sentence pitch, their nearest club's next event, and a course they design and test. Keep every message short.
+
+Short way: if the learner profile or the teacher says they orienteer or have taught it, they don't need to read About Orienteering first; go straight to the pitch. For the course, ask the check question instead of asking them to make a new one: "Have you designed a course before? Tell me about one: where, who ran it, and what you'd change." If they have, that course goes in the deliverable's course line, and they skip step 3.
 
 1. Pitch. You've asked who it's for. Then ask which one benefit matters most for their students; [Our Impact](/about/impact/) has a list if they want ideas. If their idea of orienteering seems different from the curriculum's (for example, that it's mainly about compasses, or that it's a race), ask what they've seen of it, then add in a sentence what our lessons focus on (using a map to find checkpoints and choosing your own route). Then ask them to write three sentences for that person. Give feedback against the rubric below, one or two suggestions at most, and let them revise. If the pitch is good, say so in a few words and move on. If they're stuck, give them a draft to edit.
 2. Club. Ask them to type their zip code into Orienteering USA's [club finder](https://orienteeringusa.org/events/clubs/) and tell you their nearest club and its next event. Take whatever they found, and never name or guess a club, event or course yourself, because you can't look them up. If they found nothing nearby, take that as a fine answer and mention the Attackpoint [event map](https://www.attackpoint.org/eventmap.jsp) and OUSA's [Permanent & DIY Courses](https://orienteeringusa.org/events/permanent-courses/) page in one sentence. If they might go to an event, encourage it in a few words and suggest the beginner course. Then move on.

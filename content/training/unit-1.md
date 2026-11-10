@@ -2,13 +2,17 @@
 
 ---
 phase: 1
-minutes: 25
+minutes: 10-25
 deliverable: Learner profile, credit plan and map decision
 audio: training/welcome-unit-0.mp3
 audio_caption: Barb on what Unit 1 is for (about 45 seconds)
 ---
 
 ## Page
+
+:::tip[Done this before?]
+If you've orienteered or taught orienteering, tell the tutor at the start and keep your answers short. It will skip what it doesn't need. If you already have a map, or won't use one yet, skip the map application section below. Without the map application, this unit takes about 10 minutes.
+:::
 
 This first unit is about you, so the rest of the course fits your school. The tutor will ask what orienteering you've done (or something like it, such as hiking with a map, geocaching or map games) and whether you've taught it, what your school and students are like, which spaces you can use and when, what you hope orienteering will do for your students, and what worries you about it. Doubts are useful to us. They show us where the course needs to do more.
 
@@ -17,6 +21,18 @@ Then three practical things:
 - **Your map.** Not everyone needs an orienteering map. Some teachers already have one, some will make their own or get one another way, and some, such as teachers of young children who'll stay with Animal-O and the other kit activities, won't use a map yet. The tutor asks which is you. If you'd like a map of your school grounds or a nearby park made, apply to Orienteering USA's Youth Mapping Program (YMP) this week. A mapper makes the map, which takes several weeks or longer, so it's worth starting now. Applying doesn't commit you: you make the final decision on the map after seeing the contract that OUSA sends you. Meanwhile you can teach the kit activities, which don't need a map. If you're applying, the tutor walks you through the application (add about 15 minutes); see below.
 - **PD credit.** Who approves professional development hours, and what they need, varies by state and district. Find out who approves yours (in Colorado, usually your district or BOCES) and give them our [one-page course description](/pd-credit/).
 - **The timeline.** Once you've finished the training and the planning survey, we ship your kit and set up Consultation 1. Then you teach orienteering to your students, fill in a short post-unit survey, and we meet again for Consultation 2.
+
+<details>
+<summary>Other training we ask of our own staff</summary>
+
+None of these is required for this course, and your school may already give you some of them. They're what Navigation Games asks of its own staff and volunteers who teach orienteering to kids, and they're worth having if you coach or lead activities outside school too.
+
+- **[How to Coach Kids](https://www.howtocoachkids.org/).** A free, 30-minute online course, "Intro to Coaching," from the U.S. Olympic and Paralympic Committee and Nike. "Coaching Girls" (also 30 minutes) is another good one.
+- **SafeSport Trained.** A 90-minute online course from the U.S. Center for SafeSport on recognizing, reporting and preventing abuse and misconduct in sport. Repeat it every 3 years. Orienteering USA pays for it for members in some roles; see [OUSA's SafeSport page](https://orienteeringusa.org/resources/safesport/).
+- **First aid, CPR and AED**, for adults and children. The [Red Cross](https://www.redcross.org/take-a-class) offers courses near you. An online-only course isn't a full certification: for that you also need an in-person skills session. Repeat it every 2 years.
+- **Mandated reporting.** Teachers are mandated reporters, and most schools train you on it. In Massachusetts, the [51A training](http://51a.middlesexcac.org/introduction) from the Middlesex Children's Advocacy Center is free; other states have their own.
+
+</details>
 
 ### Your map application (only if you're applying to YMP)
 
@@ -55,6 +71,10 @@ To start: have you done any orienteering, or something like it, such as hiking w
 ## Tutor
 
 Your job in this unit is to get to know the teacher and help them leave with three things: a learner profile, a credit plan and a map decision.
+
+Short way: if the teacher has orienteered or taught orienteering, take their answers as given, ask fewer follow-ups, and combine questions where you can. Skip the YMP application unless they want a map made. There's no separate check question in this unit, because the experience question is the check.
+
+If they ask about other certifications (first aid, SafeSport, coaching courses), point them to "Other training we ask of our own staff" on the page. None is required for the course; never say otherwise.
 
 Cover these topics, roughly in this order, one question at a time:
 

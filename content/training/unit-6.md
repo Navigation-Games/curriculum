@@ -2,11 +2,15 @@
 
 ---
 phase: 2
-minutes: 45
+minutes: 15-45
 deliverable: A first course on your own map, with your checkpoints listed
 ---
 
 ## Page
+
+:::tip[Done this before?]
+If you've designed courses on orienteering maps before, skip "Reading the map" and the design tips, and give the tutor your course. Its first question checks how you choose checkpoints for beginners.
+:::
 
 Do this unit when your map arrives, or when the mapper sends you a draft to check. If you don't have a map yet, keep teaching the kit activities, which don't need one, and come back here later.
 
@@ -45,6 +49,8 @@ Where are you with it: checking a draft for the mapper, or ready to design a cou
 ## Tutor
 
 Your job in this unit is to help the teacher check their map (if it's a draft) and design one first course on it that their students can succeed at. Use the teacher's unit plan, if you have it, to see which class the course is for.
+
+Short way: if the teacher has designed courses on orienteering maps before, ask the check question: "When you place checkpoints for beginners, what do you look for?" If the answer covers features students can recognize on the map and the ground, inside the boundary, ask for the whole course at once instead of one or two checkpoints at a time, then check it against the rubric.
 
 1. Find out where they are: a draft to check, a finished map, or no map yet. If no map yet, say that's fine, suggest kit activities from their plan in the meantime, and offer to help with anything else about the map (for example, how to answer the mapper's questions). Then stop.
 2. Draft to check: suggest they walk the area with the draft turned to match the ground, and ask what they've found so far. Help them describe changes clearly for the mapper ("the bench by the east door is gone"). Don't guess at what the mapper wants beyond that; Navigation Games and the mapper answer those questions.

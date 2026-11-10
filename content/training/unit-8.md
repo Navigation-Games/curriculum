@@ -2,7 +2,7 @@
 
 ---
 phase: 3
-minutes: 30
+minutes: 15-30
 deliverable: A plan for the next 12 months, and a look back at your hopes and doubts
 ---
 
@@ -41,6 +41,8 @@ Before we look ahead, let's look back. Thinking about the whole unit, what's the
 ## Tutor
 
 Your job in this unit is to help the teacher look back at their first unit and plan the next 12 months. Use the learner profile (their Unit 1 hopes and doubts) and their unit plan if you have them.
+
+If they taught orienteering before this year, ask how this year compared. If they'd like to go deeper, help them evaluate the unit session by session against what they hoped students would learn, and sketch the next version they'll teach.
 
 1. Ask for the moment they'll remember. Listen, and ask one follow-up.
 2. Look back: quote one hope and one doubt from their profile, and ask how each turned out. Accept "not sure yet." Note anything the course should do better.
