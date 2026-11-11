@@ -2,6 +2,8 @@
 
 Map games and their simulators. Each game is a single self-contained HTML file, served as-is from the site (`/games/...`), with `noindex` and no links from the site menus. Nothing here goes through the content build.
 
+`index.html` is the landing page at `/games/`: a card for each of our games, cards for orienteering games from elsewhere (Catching Features, MapRun, rogaining), each tagged by where it's played (real life, simulator, computer, phone app), and an invitation to send ideas. Add a card when a game is added.
+
 ## Road Block
 
 A team game on a trail network: teams race to visit every checkpoint, traveling only on trails, and the team with the most players at an intersection blocks it.

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Map Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#edf0eb; --panel:#ffffff; --fg:#18201b; --muted:#56615a; --line:#d4dad2; --accent:#a3268f;
+  --font-display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101512; --panel:#18201b; --fg:#e3eae4; --muted:#99a69e; --line:#2a342e; --accent:#d65dc1; color-scheme:dark;
+}}
+:root[data-theme="dark"]{--bg:#101512; --panel:#18201b; --fg:#e3eae4; --muted:#99a69e; --line:#2a342e; --accent:#d65dc1; color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.6;margin:0}
+.wrap{max-width:780px;margin:0 auto;padding:22px 16px 64px}
+.eyebrow{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin:0 0 4px}
+.eyebrow a{color:inherit}
+h1{font-family:var(--font-display);font-weight:700;font-size:clamp(2.2rem,5.5vw,3.2rem);line-height:.95;margin:0 0 12px;text-transform:uppercase}
+h2{font-family:var(--font-display);font-weight:600;font-size:1.5rem;line-height:1.1;text-transform:uppercase;letter-spacing:.03em;margin:40px 0 10px;padding-top:14px;border-top:1px solid var(--line)}
+p,li{max-width:72ch}
+a{color:var(--accent)}
+.game{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin:16px 0}
+.game h3{font-family:var(--font-display);font-weight:600;font-size:1.4rem;text-transform:uppercase;letter-spacing:.03em;margin:0 0 6px}
+.game p{margin:6px 0}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px;font-weight:500}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.tag{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:1px 9px;color:var(--muted)}
+.tag.irl{color:var(--accent);border-color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow"><a href="/">Navigation Games curriculum</a> · Games</p>
+  <h1>Map games</h1>
+  <p>Games where navigating is the fun. Some you play outside with a map, some on a screen, and some both ways. The ones we invent get a simulator, so we can try out rules before trying them with real people.</p>
+
+  <h2>Our games</h2>
+  <div class="game">
+    <h3>Road Block</h3>
+    <div class="tags"><span class="tag irl">Real life</span><span class="tag">Simulator</span></div>
+    <p>Teams race to visit every checkpoint on a trail network, traveling only on trails. The team with the most players at an intersection blocks it, so a team has to decide when to split up, when to stick together, and when to stand guard.</p>
+    <div class="links">
+      <a href="road-block.html">Simulator</a>
+      <a href="road-block-help.html">How the simulator works</a>
+      <a href="/activities/core/road-block/">The school activity</a>
+    </div>
+  </div>
+  <p>Every <a href="/activities/core/">activity in our curriculum</a> is a real-life game too, from Animal-O to Vampire-O, and <a href="/activities/more-games/">More Games</a> has a few extras like Maze-O.</p>
+
+  <h2>Games from elsewhere</h2>
+  <div class="game">
+    <h3>Catching Features</h3>
+    <div class="tags"><span class="tag">On a computer</span></div>
+    <p>A 3D orienteering game for Windows. You run courses through virtual terrain with an orienteering map, and you can race other people online. Clubs and coaches use it to practice map reading and route choice. There's a free demo; the full version is paid.</p>
+    <div class="links"><a href="https://www.catchingfeatures.com/">catchingfeatures.com</a></div>
+  </div>
+  <div class="game">
+    <h3>MapRun</h3>
+    <div class="tags"><span class="tag irl">Real life</span><span class="tag">Phone app</span></div>
+    <p>Courses with virtual checkpoints: you carry a map, and the phone app registers each checkpoint by GPS and times you. Clubs set up MapRun courses in towns, parks and forests that you can run any time, with no flags to put out.</p>
+    <div class="links"><a href="https://maprunners.weebly.com/">MapRun site</a></div>
+  </div>
+  <div class="game">
+    <h3>Rogaining</h3>
+    <div class="tags"><span class="tag irl">Real life</span></div>
+    <p>Long-distance team navigation. Teams choose which checkpoints to visit and in what order before time runs out, like a big Score-O (our Map Treasure Hunt). Championships last 24 hours; most events are shorter.</p>
+    <div class="links"><a href="https://rogaining.com/what-is-rogaining">International Rogaining Federation</a></div>
+  </div>
+
+  <h2>Got an idea for a game?</h2>
+  <p>We'd love to hear it, whether it's a game you invented, one your students made up, or a favorite of yours we should list here. Please send it to <a href="mailto:admin@navigationgames.org">admin@navigationgames.org</a>.</p>
+</div>
+</body>
+</html>
