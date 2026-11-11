@@ -84,6 +84,9 @@ canvas{display:block;width:100%;max-width:100%;aspect-ratio:900/620;height:auto;
 .fields{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px 22px}
 .field{display:grid;gap:4px;align-content:start;min-width:0}
 .field label{font-size:.8rem;color:var(--muted);font-weight:500}
+.field{grid-template-columns:minmax(0,1fr)}
+.field select{width:100%;min-width:0;text-overflow:ellipsis}
+.hint{font-size:.78rem;color:var(--muted);line-height:1.4}
 .check{display:flex;gap:8px;align-items:flex-start;font-size:.9rem}
 .check input{margin-top:4px;accent-color:var(--accent)}
 .tablewrap{overflow-x:auto}
@@ -158,7 +161,7 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
           <option value="30">30 seconds</option>
           <option value="60" selected>1 minute</option>
           <option value="120">2 minutes</option>
-          <option value="inf">Until they're no longer outnumbered</option>
+          <option value="inf">Until not outnumbered</option>
         </select></div>
       <div class="field"><label for="release">Who picks the way out</label>
         <select id="release">
@@ -168,18 +171,18 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
         </select></div>
       <div class="field"><label for="tie">Who can leave an intersection</label>
         <select id="tie">
-          <option value="pass" selected>The team with the most, and teams tied with it (the team already blocking keeps the block)</option>
-          <option value="first">Only the team blocking it (ties go to the team already blocking)</option>
-          <option value="lead">A team with the most: all its players there, even as they leave. A tie for the most: nobody</option>
-        </select></div>
+          <option value="pass" selected>The most, and teams tied with it</option>
+          <option value="first">Only the blocking team</option>
+          <option value="lead">A lead frees all, a tie freezes all</option>
+        </select><small class="hint" id="tieHint"></small></div>
       <div class="field"><label for="sight">Players see a block</label>
         <select id="sight">
-          <option value="all" selected>From anywhere (they always know)</option>
+          <option value="all" selected>From anywhere</option>
           <option value="100">From 100 m away</option>
           <option value="40">From 40 m away</option>
-          <option value="third">From the last third of the trail to it</option>
+          <option value="third">On the last third of the trail</option>
           <option value="0">Only when they get there</option>
-        </select></div>
+        </select><small class="hint" id="sightHint"></small></div>
       <input type="hidden" id="control" value="most">
       <div class="field"><label for="nCp">Checkpoints</label>
         <select id="nCp"><option>6</option><option>8</option><option selected>10</option><option>12</option><option>14</option><option>16</option></select></div>
@@ -189,15 +192,15 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
           <option value="trail">On the trails between them</option>
         </select></div>
       <div class="field"><label for="nStops">Bus stops</label>
-        <select id="nStops"><option value="4" selected>4</option><option value="3">3</option><option value="2">2 (opposite sides)</option><option value="1">1</option></select></div>
+        <select id="nStops"><option value="4" selected>4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select></div>
       <div class="field"><label for="busEvery">How often buses leave</label>
         <select id="busEvery">
-          <option value="spread" selected>A bus leaves some stop every 75 seconds</option>
-          <option value="300">Every 5 minutes at each stop</option>
-          <option value="600">Every 10 minutes at each stop</option>
-        </select></div>
+          <option value="spread" selected>One somewhere every 75 s</option>
+          <option value="300">Every 5 min at each stop</option>
+          <option value="600">Every 10 min at each stop</option>
+        </select><small class="hint" id="busHint"></small></div>
       <div class="field"><label for="wrong">Wrong turns at an intersection</label>
-        <select id="wrong"><option value="0">Never</option><option value="0.05" selected>5% of the time</option><option value="0.15">15%</option><option value="0.3">30% (true beginners)</option></select></div>
+        <select id="wrong"><option value="0">Never</option><option value="0.05" selected>5% of the time</option><option value="0.15">15%</option><option value="0.3">30% (beginners)</option></select></div>
       <div class="field"><label for="limit">Time limit</label>
         <select id="limit"><option value="30">30 minutes</option><option value="45">45 minutes</option><option value="60" selected>60 minutes</option><option value="90">90 minutes</option></select></div>
       <div class="field">
@@ -954,8 +957,22 @@ function readSettings(){
     nStops:+$('#nStops').value,busEvery:$('#busEvery').value==='spread'?'spread':+$('#busEvery').value,avoid:$('#avoid').checked,wrong:+$('#wrong').value,limit:+$('#limit').value*60,
     strats:[$('#s0').value,$('#s1').value,$('#s2').value]};
 }
+const HINTS={
+  tie:{pass:'Tied teams can leave too. The team already blocking keeps the block.',
+       first:"A tie isn't enough: teammates have to outnumber the blockers.",
+       lead:'A team with the most frees all its players there, and they stay free as they leave. An arrival that ties the count for the most freezes everyone.'},
+  sight:{all:'Players always know every block, as if teammates reported them all.',
+         other:'Players see a block only this close, may turn back, and remember it for 3 minutes.'}
+};
+function updateHints(S){
+  $('#tieHint').textContent=HINTS.tie[S.tie];
+  $('#sightHint').textContent=S.sight==='all'?HINTS.sight.all:HINTS.sight.other;
+  const n=S.nStops;
+  $('#busHint').textContent=n===1?"With one stop, this can't change who wins.":S.busEvery==='spread'?`With ${n} stops: every ${fmt(75*n)} at each.`:'Stops take turns, evenly spaced.';
+}
 function rebuild(newSeed){
   S=readSettings();
+  updateHints(S);
   if(newSeed!=null)seed=newSeed;
   $('#s2').disabled=S.nTeams<3;
   M=makeMap(seed,S);G=makeGame(M,S,seed);acc=0;lastLogLen=-1;

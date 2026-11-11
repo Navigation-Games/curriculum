@@ -24,7 +24,7 @@ The online multiplayer version is on the roadmap ("Junction Control online" in `
 - Once a team has every checkpoint, each player can take any bus from any stop. The team finishes when its last player's bus leaves. Tiebreak: the team whose last player reached a stop first.
 - Herding (variation): a smaller group meeting a bigger one head-on on a trail is herded back to the last intersection and held there.
 
-Still being tried in the simulator: how long a team can hold someone, and who can leave an intersection (three versions; see the help page).
+Still being tried in the simulator: how long a team can hold someone, who can leave an intersection (three versions; see the help page), and how many bus stops. Findings, open questions and next steps are in `notes/map-games.md`, under "What the simulator shows", "Open questions" and "Where things stand".
 
 ### How the simulator is built
 
@@ -37,18 +37,57 @@ All game logic sits between the `/* SIM START */` and `/* SIM END */` markers, w
 
 The settings object `S`: `nTeams`, `perTeam`, `nCp`, `cpMode` (`node`/`trail`), `holdLimit` (seconds, `0` for no blocking, `Infinity`), `release` (`controller`/`back`/`held`), `tie` (`pass`/`first`/`lead`), `control: 'most'`, `sight` (`'all'`, meters, or `'third'`), `rescue`, `avoid`, `herd`, `guard`, `nStops` (1 to 4), `busEvery` (`'spread'` or seconds), `wrong` (0 to 1), `limit` (seconds), `oneAtATime`, `cols`, `rows`, `spacing`, `density` (`sparse`/`medium`/`dense`), `strats` (one per team: `scatter`, `pairs`, `packs`, `team`, `blockers`, `wall`, `guards`).
 
-### Testing headlessly
+### Test games
 
-Read the HTML in Node, take the text between the SIM markers and `eval` it, then:
+The findings in `notes/map-games.md` ("What the simulator shows") come from batches of games run in Node. The page's "Run 100 games" button does the same for one setup at a time.
+
+To run batches, copy this script to a file outside the repo (scratch test scripts don't get committed), and run it from the repo root with `node <file>`. Each `batch` line plays the same 150 maps (seeds 1 to 150) with the default settings plus your changes, and prints wins per team (and games nobody won), seconds held per player, seconds held on the way to the bus once the team had every checkpoint, average finish, and how many wins came down to the tiebreak.
 
 ```js
-const M = makeMap(seed, S), G = makeGame(M, S, seed);
-G.quiet = true;            // skip the event log
-while (!G.over) step(G);
-// G.result: {order, winner, finished}; each team in G.teams has heldSec, finishAt, doneAt, visited
+const fs = require('fs');
+const html = fs.readFileSync('site/static/games/junction-control.html', 'utf8');
+eval(html.split('/* SIM START */')[1].split('/* SIM END */')[0]); // makeMap, makeGame, step, fmt...
+
+// the page's default settings
+const DEFAULTS = {nTeams: 3, perTeam: 5, nCp: 10, cpMode: 'node', holdLimit: 60, release: 'controller',
+  tie: 'pass', control: 'most', sight: 'all', rescue: true, avoid: true, herd: false, guard: false,
+  nStops: 4, busEvery: 'spread', wrong: 0.05, limit: 3600, oneAtATime: true,
+  cols: 6, rows: 5, spacing: 150, density: 'medium', strats: ['pairs', 'scatter', 'blockers']};
+
+function batch(label, changes, n = 150) {
+  const S = Object.assign({}, DEFAULTS, changes), T = S.nTeams;
+  const wins = new Array(T).fill(0), held = new Array(T).fill(0), late = new Array(T).fill(0);
+  const fin = new Array(T).fill(0), finN = new Array(T).fill(0);
+  let none = 0, tiebreak = 0;
+  for (let seed = 1; seed <= n; seed++) {
+    const M = makeMap(seed, S), G = makeGame(M, S, seed);
+    G.quiet = true; // skip the event log (leave it on to read G.log)
+    while (!G.over) {
+      step(G);
+      for (const p of G.players) if (p.heldSince != null && p.state === 'node' && G.teams[p.team].done) late[p.team]++;
+    }
+    const w = G.result.winner;
+    if (w < 0) none++; else wins[w]++;
+    if (w >= 0 && G.teams.some(t => t.i !== w && t.finishAt === G.teams[w].finishAt)) tiebreak++;
+    G.teams.forEach((t, i) => { held[i] += t.heldSec / t.size; if (t.finishAt != null) { fin[i] += t.finishAt; finN[i]++; } });
+  }
+  const per = a => a.map(x => fmt(x / n)).join(' / ');
+  console.log(`${label}\n  wins ${wins.join(' / ')} (none ${none}) | held ${per(held)} | held on the way to the bus ${per(late.map((x, i) => x / S.perTeam))}`
+    + ` | finish ${fin.map((x, i) => finN[i] ? fmt(x / finN[i]) : '-').join(' / ')} | won on tiebreak ${tiebreak}`);
+}
+
+batch('Two blockers together / Everyone alone / Pairs', {strats: ['wall', 'scatter', 'pairs']});
+batch('Same, one bus stop', {strats: ['wall', 'scatter', 'pairs'], nStops: 1});
+batch('Same, a lead frees all, no hold limit', {strats: ['wall', 'scatter', 'pairs'], tie: 'lead', holdLimit: Infinity});
 ```
 
-`const` names inside the eval (like `STRATS`) aren't visible outside it; functions are. To syntax-check the whole page script, extract the `<script>` contents to a file and run `node --check` on it. Keep scratch test scripts out of the repo.
+Other things worth knowing:
+
+- Games are deterministic: the same seed and settings give the same game, so two setups compared on seeds 1 to 150 differ only by the change. The page's "Run 100 games" uses random seeds instead.
+- Each player has `team`, `role` (`runner` or `blocker`), `state` (`node`, `edge` or `done`), `node`, `heldSince`, `busAt`. Each team has `visited` (a Set of checkpoint indexes), `done`, `doneAt`, `finishAt`, `heldSec`. With `G.quiet = false`, `G.log` holds the event lines the page shows ("Red is held at intersection 4..."), which is the easiest way to count events or trace one game.
+- To try a change without editing the page, patch the extracted text before `eval` (for example, `src.replace('const GUARD_WHEN=5;', 'const GUARD_WHEN=3;')`). `const` names inside the eval (like `STRATS`) aren't visible outside it; functions are.
+- After editing the page, syntax-check its script: extract everything between `<script>` and `</script>` to a file and run `node --check` on it. Then run a quick sweep of every setting combination (a few seeds each) to catch errors.
+- Batches of 150 games take a few seconds each on a 6 × 5 network. With 150 games, a difference of 10 wins or so can be chance.
 
 ### Conventions
 
