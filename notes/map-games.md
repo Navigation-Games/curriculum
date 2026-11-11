@@ -2,7 +2,9 @@
 
 Game ideas that use a map, beyond the activities in the curriculum. Each one is a draft: the idea, how it might work, and the questions still open. Add new games as their own section.
 
-## Junction Control (trail network game)
+## Road Block (trail network game)
+
+Called Junction Control until November 11, 2026. The old links (`/games/junction-control.html`, its help page, and `/activities/core/junction-control/`) forward to the new ones, because Barb shared them.
 
 **The idea.** Teams race to visit every checkpoint, but they can only travel on trails, and whoever has the most players at an intersection blocks it. Players who arrive outnumbered get held there until the blocking team lets them go. So a team has to decide when to spread out to cover checkpoints and when to travel together to win intersections.
 
@@ -20,7 +22,7 @@ Game ideas that use a map, beyond the activities in the curriculum. Each one is 
 
 **Blocking.** The team with the most players at an intersection blocks it. (We say "block" because "control" is the orienteering word for a checkpoint.) A tie goes to the team already blocking: the block changes hands only when another team has more players. So players only need to know who blocks an intersection now, not the order everyone arrived in.
 
-**Moving through (decided November 11, 2026).** If your team has the most players at an intersection, you can pass through it or leave it in any direction, and teammates who are leaving go together, at the same moment. The rest can stay. (Barb: if they left one by one, there'd be a moment when they no longer had the most and could still leave.) A tie for the most freezes everyone there until the count changes. Every departure changes the count, so leaving can hand the block to another team. The other two versions tried in the simulator are adaptations in the activity: tied teams can leave too (rock-paper-scissors if two teams reach an empty intersection at the same moment), or only the blocking team can leave.
+**Moving through (decided November 11, 2026).** If your team has the most players at an intersection, you can pass through it or leave it in any direction, and teammates who are leaving go together, at the same moment. The rest can stay. (Barb: if they left one by one, there'd be a moment when they no longer had the most and could still leave.) A tie for the most freezes everyone there until the count changes. If the blocking team leaves and the teams left are tied, the blocking team picks ("anoints") one of them to block, and that team can leave while the others stay held (Barb, November 11; before this, a tie left behind froze everyone, and with no time limit players could be stuck for many minutes). Every departure changes the count, so leaving can hand the block to another team. The other two versions tried in the simulator are adaptations in the activity: tied teams can leave too (rock-paper-scissors if two teams reach an empty intersection at the same moment), or only the blocking team can leave.
 
 **Held players.** If you arrive at an intersection where another team has more players, you're held. You leave when enough teammates arrive to give your team the most, or after one minute (the hold limit), by the trail the blocking team chooses. A tie also ends after one minute. Example: 2 Red and 1 Green are at intersection 12. Red blocks it. The Green player stays until Red releases them, and Red decides whether Green goes north toward the checkpoint or back south the way they came. If 1 more Green arrives, it's a tie, and nobody can leave. If 2 more arrive, Green has 3 to Red's 2: Green now blocks the intersection, the Greens can leave together, and the Reds are held.
 
@@ -53,17 +55,35 @@ The operator can also decide who gets which channel when: for example, giving a 
 
 ### Levels
 
-**Level 1: school path network.** The schoolyard or school and park paths, with cones or numbered markers at the intersections. No radios: teams talk only when they meet. A short game in one class period, with the teacher as the game operator. The finish can be the start instead of bus stops, or a few "pickup" cones around the edge with times on a whiteboard. Written up as an activity page: [Junction Control](https://curriculum.navigationgames.org/activities/core/junction-control/) (`content/activities/junction-control.md`).
+**Level 1: school path network.** The schoolyard or school and park paths, with cones or numbered markers at the intersections. No radios: teams talk only when they meet. A short game in one class period, with the teacher as the game operator. The finish can be the start instead of bus stops, or a few "pickup" cones around the edge with times on a whiteboard. Written up as an activity page: [Road Block](https://curriculum.navigationgames.org/activities/core/road-block/) (`content/activities/road-block.md`).
 
 **Level 2: forest trails, or anywhere out of sight.** A trail network in the woods, a large campus, or even a building with hallways, where players can't see each other. This is where the earpieces or texting, the game operator's channels, the talk windows between teams, and the bus stops come in.
 
+### Playing it in real life (November 11, 2026)
+
+Ways to run the game, from no technology up. The pieces mix and match, and each one changes what players know, so it changes the game.
+
+**Counting at intersections, no technology.** Players count for themselves: you're at an intersection when you're touching its cone or within three steps of it. The blocking team clips a clothespin in its color on the cone so others see the block from a distance. Held players count to 60 or check a watch. A third team, or parent volunteers, can referee the busiest intersections. This is Level 1, and it's how the activity page runs it.
+
+**Texting among team members.** Each team has a group chat, or walkie-talkies on one channel per team for players without phones (one device per pair works too). The useful messages are short: checkpoints gotten ("got 7"), blocks seen ("Red has 2 at 12"), and calls for help ("held at 9, need one"). With texting, a team knows roughly what the simulator's "From anywhere" setting assumes. Without it, players know only what they see, as in "Only when they get there". Two rules worth having: stop walking to text, and the game operator decides which channels are open when (see Communication). Texting isn't in the simulator yet.
+
+**GPS for spectators.** Each player carries a GPS tracker, or a phone sharing its location, and spectators (parents, the rest of the class, the game operator) watch the dots move on a map on a big screen at the base, much like the simulator. Orienteering events already run live GPS tracking for spectators; which services a school could use is worth looking into. Keep the screen out of the players' sight, or show it a few minutes late, so no team uses it as a scout. Afterward, replaying everyone's tracks makes a great debrief: who took which route, where the holds happened, which teams split up well. For students, check the school's rules on tracking minors and get permission before sharing anyone's location. Dedicated trackers keep that simpler than students' own phones.
+
+**GPS for the players.** Each step gives players more and takes away more of the navigation the game teaches:
+
+- **Teammates' positions, not your own.** A team shares locations (phone location sharing within the team), and the map shows teammates but not you. The team coordinates like it has perfect texting, and each player still has to know where they are.
+- **Your own position.** A dot on the map makes navigation easy, so this suits a variation for younger or newer players: for example, you may look only while held, or each look costs a minute.
+- **An app as referee.** The app counts players by team around each intersection, tells a player they're held and for how long, releases them at the hold limit, and registers checkpoints. (The MapRun app already registers virtual checkpoints by GPS for orienteering.) This is close to "Road Block online" on the roadmap, played on real trails. Phone GPS is off by roughly 5 to 10 m in the open and more under trees, so "at an intersection" would mean within about 15 m, and intersections need to be farther apart than that.
+
+**Electronic timing.** SI boxes at the checkpoints record visits (see the curriculum's Electronic Timing pages). Boxes at intersections would also log every arrival, so holds could be checked afterward, but a trail network needs a lot of boxes.
+
 ### What the simulator shows
 
-[Simulator](https://curriculum.navigationgames.org/games/junction-control.html) (November 2026; the file is `site/static/games/junction-control.html`, not linked from the site menus). Its [help page](https://curriculum.navigationgames.org/games/junction-control-help.html) explains every setting and how the players decide. `site/static/games/README.md` covers how it's built, and has a script for running test games.
+[Simulator](https://curriculum.navigationgames.org/games/road-block.html) (November 2026; the file is `site/static/games/road-block.html`, not linked from the site menus). Its [help page](https://curriculum.navigationgames.org/games/road-block-help.html) explains every setting and how the players decide. `site/static/games/README.md` covers how it's built, and has a script for running test games.
 
 **Read this first.** These are simulated players following simple rules, not kids, and results shift with the other teams' ways of playing and with the settings. The help page section "What the simulator has shown" is the tempered summary (November 11, 2026, all on the same 150 maps): matchups at the default settings first, then Two blockers together / Everyone alone / Pairs with one setting changed at a time. In short: at the defaults spreading out did best, blocking paid only against teams traveling in groups, the rule for who can leave mattered most, fewer bus stops and fewer checkpoints helped blocking a little, and distance, network size, loops, sight and wrong turns changed little besides game length. The sections below are the working record, and some of their numbers come from earlier versions of the simulator.
 
-**How these were measured.** Batches of 100 to 150 random games, run in Node. Unless it says otherwise: three teams of 5, 10 checkpoints at intersections, a 6 × 5 network with 150 m between points and some loops, hold up to 1 minute, the team with the most and tied teams can leave (the default until November 11; the planning findings use the new default, a lead frees all), players always know every block, rescue on, 4 bus stops with a bus somewhere every 75 seconds. Wins for three teams are listed in team order, for example "Two blockers together / Everyone alone / Pairs: 20 / 100 / 30". With 150 games, a difference of 10 wins or so can be chance. The simulator changed during November 2026 (bends stopped counting as intersections, rescue became a swap, blockers started timing their exit), so older numbers are rough.
+**How these were measured.** Batches of 100 to 150 random games, run in Node. Unless it says otherwise: three teams of 5, 10 checkpoints at intersections, a 6 × 5 network with 150 m between points and some loops, hold up to 1 minute, the team with the most and tied teams can leave (the default until November 11; the planning findings use the new default, the most can leave), players always know every block, rescue on, 4 bus stops with a bus somewhere every 75 seconds. Wins for three teams are listed in team order, for example "Two blockers together / Everyone alone / Pairs: 20 / 100 / 30". With 150 games, a difference of 10 wins or so can be chance. The simulator changed during November 2026 (bends stopped counting as intersections, rescue became a swap, blockers started timing their exit), so older numbers are rough.
 
 **Ways of playing**
 
@@ -80,20 +100,21 @@ The operator can also decide who gets which channel when: for example, giving a 
 **Rescue**
 
 - Before November 11, a rescue sent one teammate to tie the count. Over 100 games: with tied teams able to leave, the two left one at a time and the second was outnumbered again, so a rescue was really a swap, and with no hold limit the rescuer walked off first about two times in three. With "only the blocking team can leave", both players were stuck in about half the rescues.
-- Now a rescue is a deliberate swap: the held player leaves first and the rescuer stays. Barb: switching off could let players rest. Under "a lead frees all", the rescuer gives the team the most players, so both leave.
-- **Rescue from the bus stop** (Barb, November 11). Once a team has every checkpoint, it sends as many players as it takes to free a held teammate, from anywhere, even from a bus stop before their bus leaves, if they'd get there before the hold limit lets the held player go. Not under "the most and tied teams", where a rescue is only a swap. Before this, with "a lead frees all" and no hold limit, a team with every checkpoint never got everyone onto a bus in 60 of 150 games, and nobody won 8. Now none.
-- Rescues matter most with no hold limit: with "a lead frees all", they cut time held from 7 to 8 minutes a player to about 1.5, and games where nobody won from 24 of 150 to none. With "only the blocking team", rescue helped the other teams against Two blockers together (50 / 60 / 40 with rescue, 19 / 94 / 37 without). With "the most and tied teams", rescue on or off changes little.
+- Now a rescue is a deliberate swap: the held player leaves first and the rescuer stays. Barb: switching off could let players rest. Under "the most can leave", the rescuer gives the team the most players, so both leave.
+- **Rescue from the bus stop** (Barb, November 11). Once a team has every checkpoint, it sends as many players as it takes to free a held teammate, from anywhere, even from a bus stop before their bus leaves, if they'd get there before the hold limit lets the held player go. Not under "the most and tied teams", where a rescue is only a swap. Before this, with "the most can leave" and no hold limit, a team with every checkpoint never got everyone onto a bus in 60 of 150 games, and nobody won 8. Now none.
+- **Really stuck** (Barb, November 11). A runner held 2 minutes or more gets rescuers from anywhere, as many as it takes, even a blocker waiting at a bus stop. Rescuers head straight for the teammate instead of detouring around blocks (they used to wander back and forth). With anointing, this cut runners held 5 minutes or more with no time limit from 116 to about 70 in 150 games; the rest are rescue races (both tied teams keep sending one more) and long walks. The hold setting "Until not outnumbered" is now "No time limit", since under the default rule a tie freezes players who aren't outnumbered.
+- Rescues matter most with no hold limit: with "the most can leave", they cut time held from 7 to 8 minutes a player to about 1.5, and games where nobody won from 24 of 150 to none. With "only the blocking team", rescue helped the other teams against Two blockers together (50 / 60 / 40 with rescue, 19 / 94 / 37 without). With "the most and tied teams", rescue on or off changes little.
 
 **Who can leave an intersection** (Two blockers together / Everyone alone / Pairs, seeds 1 to 150 for each row)
 
 | Who can leave | Hold limit | Wins | Held, per player (other teams) |
 |---|---|---|---|
 | The most, and tied teams | 1 minute | 20 / 100 / 30 | about 40 s |
-| The most, and tied teams | Until not outnumbered | 23 / 102 / 25 | about 1 min |
+| The most, and tied teams | No time limit | 23 / 102 / 25 | about 1 min |
 | Only the blocking team | 1 minute | 42 / 86 / 22 | about 50 s |
-| Only the blocking team | Until not outnumbered | 40 / 67 / 43 | about 1.5 min |
-| A lead frees all, a tie freezes all | 1 minute | 22 / 78 / 50 | about 50 s |
-| A lead frees all, a tie freezes all | Until not outnumbered | 19 / 76 / 55 | about 1.5 min |
+| Only the blocking team | No time limit | 40 / 67 / 43 | about 1.5 min |
+| The most can leave, a tie freezes everyone | 1 minute | 24 / 78 / 48 | about 50 s |
+| The most can leave, a tie freezes everyone | No time limit | 19 / 85 / 46 | about 1.3 min |
 
 The rule for leaving changes the game more than anything else tried. The "lead" rows are with the leading team's players leaving together, and players able to leave a bus stop to rescue (both since November 11). Before that, when they left one by one and stayed free, Two blockers together won 35 (1 minute) and 29 (no limit), and other teams were held about a minute each, so leaving together made blocking weaker. With no hold limit and rescue off, players were held 7 to 8 minutes each and nobody won 24 of the 150 games within the hour.
 
@@ -111,7 +132,7 @@ The rule for leaving changes the game more than anything else tried. The "lead" 
 - **Guarding helps only a little** (November 11). With guarding on, a held player doesn't get the checkpoint at that intersection; once some team has 5 or fewer left, blockers guard a checkpoint other teams still need; and attackers who know about a guard gather enough players to take it. Two blockers together won 33 of 150 with guarding against 20 without, when tied teams can leave. With the other two rules the difference was within chance (40 vs 42, 37 vs 35). "Everyone alone, spares guard" did no better than Everyone alone, and worse when tied teams can leave, because one player arriving ties a single guard. Guarding moves blockers off the busiest intersection, so other teams were held less overall. The first version guarded too late and without checking where other players were: in one traced game, Blue took the guarded checkpoint 20 seconds after Red's guards set out. Choosing only checkpoints the guards can reach at least 15 seconds first fixed most of that.
 - **Fewer bus stops makes blocking pay; fewer buses doesn't** (November 11). With one or two stops, the busiest intersections are on everyone's way to the bus. Two blockers together / Everyone alone / Pairs, 150 games:
 
-| Buses | The most, and tied teams | Only the blocking team | A lead frees all (leaving together, bus stop rescues) |
+| Buses | The most, and tied teams | Only the blocking team | The most can leave (leaving together, bus stop rescues) |
 |---|---|---|---|
 | 4 stops, every 5:00 each (the default) | 20 / 100 / 30 | 42 / 86 / 22 | 22 / 78 / 50 |
 | 4 stops, every 10:00 each | 31 / 79 / 40 | 39 / 78 / 33 | 28 / 72 / 50 |
@@ -125,7 +146,7 @@ The rule for leaving changes the game more than anything else tried. The "lead" 
 
 **One at a time, and routing around blocks** (November 11)
 
-- **Leaving one at a time matters most when tied teams can leave.** Turned off, a rescuer who ties the count leaves together with the held player, so a rescue frees them instead of swapping: Pairs won 52 of 150 instead of 29 and were held 12 seconds a player instead of 40. Under "a lead frees all" it changes little, since the leading team leaves together anyway. Under "only the blocking team", other teams were held about 10 seconds less.
+- **Leaving one at a time matters most when tied teams can leave.** Turned off, a rescuer who ties the count leaves together with the held player, so a rescue frees them instead of swapping: Pairs won 52 of 150 instead of 29 and were held 12 seconds a player instead of 40. Under "the most can leave" it changes little, since the leading team leaves together anyway. Under "only the blocking team", other teams were held about 10 seconds less.
 - **Routing around blocks** (players plan routes with a penalty for intersections they know they'd be held at) saved Everyone alone about 20 seconds a game when players always know every block. With sight of 40 m or less it made no difference: players rarely know about a block before they're on the trail to it.
 
 **Planning the split** (November 11)
@@ -148,10 +169,13 @@ The rule for leaving changes the game more than anything else tried. The "lead" 
 - **How many bus stops, and how often?** Fewer stops makes blocking matter. With one stop, buses add nothing but waiting. Two stops keeps the choice of which bus to run for.
 - **Scoring if no team gets every checkpoint.** Most checkpoints by the last pickup time, with ties broken by arrival time at pickup?
 - **How to make blocking matter more,** since spreading out wins. Tried: guarding (a little), fewer bus stops (yes). Not tried: bus stops behind a single "gate" intersection, a last checkpoint every team must visit, the whole team on one bus, more checkpoints than players, fewer loops, a bonus for holding an intersection.
-- **The name.** Still "Junction Control". Alternatives offered: Roadblock, Gridlock, Junction Block. A rename touches the activity file name and slug, `activitiesData.ts`, `site/docs/activities/core/index.md`, these notes, the simulator and help file names and titles, the games README, and the roadmap link.
+- **The name.** Decided November 11, 2026: Road Block (Barb). The forwarding pages for the old links are `site/static/games/junction-control.html`, `site/static/games/junction-control-help.html` and `site/static/activities/core/junction-control/index.html`.
 
 ### Where things stand (November 11, 2026)
 
-- The simulator, its help page and the games README are up to date. The latest simulator work: "a lead frees all, a tie freezes all" with a 1-minute hold is the default, the leading team's leavers go together, and teams can plan the checkpoint split at the start.
-- The Level 1 activity page (`content/activities/junction-control.md`) has the leaving rule, the 1-minute hold, the other two rules and no hold limit as adaptations, and intersections with at least 3 ways out.
-- Simulator ideas not built yet: players texting teammates (which checkpoints they have, which intersections are blocked and by whom) instead of knowing everything; the untried end-game ideas above. Open: should "Planned at the start" be the simulator's default, since the activity has planning time? On the roadmap: the online multiplayer version ("Junction Control online" in `site/docs/editors/roadmap.md`).
+- The simulator, its help page and the games README are up to date. The latest simulator work: "the most can leave, a tie freezes everyone" with a 1-minute hold is the default, the leading team's leavers go together, and teams can plan the checkpoint split at the start. Later the same day: renamed Road Block (old links forward); a blocking team that leaves a tie behind picks who blocks next; the hold option "Until not outnumbered" is now "No time limit"; really stuck players (2 minutes or more) get rescuers from anywhere, even a bus stop; the help page findings were rewritten with softer claims, defaults first.
+- The Level 1 activity page (`content/activities/road-block.md`) has the leaving rule, the 1-minute hold, the other two rules and no hold limit as adaptations, and intersections with at least 3 ways out.
+- "Playing it in real life" above covers texting, GPS for spectators and players, and electronic timing.
+- The advisor's generated site map now lists Road Block; it reaches the live advisor only after a Cloud Run redeploy.
+- Possible next: a proper literature search on related games and theory (team orienteering problem, network interdiction, Colonel Blotto, the Canadian traveller problem), maybe as a note on the help page.
+- Simulator ideas not built yet: players texting teammates (which checkpoints they have, which intersections are blocked and by whom) instead of knowing everything; the untried end-game ideas above. Open: should "Planned at the start" be the simulator's default, since the activity has planning time? On the roadmap: the online multiplayer version ("Road Block online" in `site/docs/editors/roadmap.md`).

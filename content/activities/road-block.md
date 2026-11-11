@@ -1,4 +1,4 @@
-# Junction Control
+# Road Block
 
 ---
 tagline: Teams race to visit every checkpoint on a path network, and the most players at an intersection block it
@@ -69,7 +69,7 @@ It's a good game for students who can already follow a simple map of their schoo
 - **You're at an intersection when you're touching its cone,** or within three steps of it.
 - **The team with the most players at an intersection blocks it.** A player alone at an intersection blocks it, and can leave any way, any time.
 - **The most can leave.** If your team has the most players at an intersection, any of you can leave, and the rest can stay. Teammates who are leaving go together, at the same moment.
-- **A tie freezes everyone.** If two teams tie for the most, nobody there can leave until the count changes.
+- **A tie freezes everyone.** If two teams tie for the most, nobody there can leave until the count changes. If the blocking team leaves and the teams left are tied, the blocking team picks one of them to block. That team can leave, and the others are held until it does.
 - **If you arrive outnumbered, you're held.** Step to the side. You can leave once enough teammates arrive to give your team the most. After one minute, the blocking team must let you go, by the path they choose. A tie also ends after one minute, and everyone goes their own way.
 - **Otherwise, one player leaves at a time.** Count to three before the next one goes. Every player who leaves changes the count.
 - **No touching.** Blocking is a rule, not a body block.
@@ -86,7 +86,7 @@ It's a good game for students who can already follow a simple map of their schoo
 *Ways to adapt the activity to meet the needs of your students: slow things down, increase the challenge, or adapt for different learners*
 
 - **Other rules for leaving**: if a tie freezing everyone is too much, let tied teams leave too, and a tie goes to the team that was already blocking (if two teams reach an empty intersection at the same moment, rock-paper-scissors). Blocking matters less this way. For more blocking, let only the blocking team leave, so held players' teammates have to outnumber the blockers
-- **No hold limit**: held players wait until they're no longer outnumbered, so teammates have to come and free them. Games take longer, and a team can get stuck
+- **No time limit**: held players wait until the count changes, so teammates have to come and free them. Games take longer
 - **Show the block**: give each team clothespins in its color. The blocking team clips one on the intersection cone, so everyone can see the block from a distance
 - **Buses**: instead of finishing at the start, put pickup cones around the edge with bus times on a whiteboard (a bus every 2 minutes at each cone, staggered). Once a team has every letter, each player can take any bus. The team finishes when its last player's bus leaves. If two teams finish on the same bus time, the team whose last player reached a pickup cone first wins
 - **Herding**: blocking happens on the paths too. When two teams meet coming toward each other and one has more players, the smaller group turns around and is herded along in front of the bigger one, at a steady pace, until the next intersection. There the usual rules apply: they're outnumbered, so they're held. Keep a few steps apart, no touching. If the groups are the same size, both step aside and pass
@@ -98,7 +98,7 @@ It's a good game for students who can already follow a simple map of their schoo
 
 - You're the game operator. Walk the busiest intersections, and settle disputes on the spot
 - Expect teams to spread out at first. Players who stick together win intersections, but teams that spread out cover more checkpoints. Let them discover this
-- To see how the rules play out with different team sizes, networks and strategies, try the [Junction Control simulator](pathname:///games/junction-control.html)
+- To see how the rules play out with different team sizes, networks and strategies, try the [Road Block simulator](pathname:///games/road-block.html)
 - Short games work: on a schoolyard, a round can take 5 to 10 minutes. Play two or three rounds and let teams change their plan between rounds
 
 

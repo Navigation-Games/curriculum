@@ -77,7 +77,7 @@ Design decisions in `notes/site-navigation-redesign.md`. The hub is done. July 2
 
 - **Outside resources.** Done at summary level (July 2026): "Beyond school and camp" section on About Orienteering and "Get Involved in Orienteering" links on Resources (clubs, OUSA, IOF, Rogaine, adventure racing; URLs verified July 2026). Could later add guidance on when students are ready for each.
 
-- **Junction Control online.** A version of the trail network game (`notes/map-games.md`) where real people play the dots online, each choosing their own route on the map. Builds on the November 2026 simulator (https://curriculum.navigationgames.org/games/junction-control.html). Later.
+- **Road Block online.** A version of the trail network game (`notes/map-games.md`) where real people play the dots online, each choosing their own route on the map. Builds on the November 2026 simulator (https://curriculum.navigationgames.org/games/road-block.html). Later.
 
 - **District-wide progression across grades.** An administrators section on the school landing page (July 2026) sketches the vision: align with district goals, champion, workshops, maps and materials, co-teaching, ongoing consultation, after-school teams, parent involvement. Could grow into a dedicated administrators page with case studies (e.g., Cambridge Public Schools partnership).
 

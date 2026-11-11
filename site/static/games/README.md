@@ -2,25 +2,26 @@
 
 Map games and their simulators. Each game is a single self-contained HTML file, served as-is from the site (`/games/...`), with `noindex` and no links from the site menus. Nothing here goes through the content build.
 
-## Junction Control
+## Road Block
 
 A team game on a trail network: teams race to visit every checkpoint, traveling only on trails, and the team with the most players at an intersection blocks it.
 
 | File | What it is |
 |---|---|
-| `junction-control.html` | The simulator: <https://curriculum.navigationgames.org/games/junction-control.html> |
-| `junction-control-help.html` | Help page for the simulator: every setting, each way of playing, how the players decide, and what the simulator has shown |
+| `road-block.html` | The simulator: <https://curriculum.navigationgames.org/games/road-block.html> |
+| `road-block-help.html` | Help page for the simulator: every setting, each way of playing, how the players decide, and what the simulator has shown |
 | `../../../notes/map-games.md` | The game's rules, decisions, levels and open questions |
-| `../../../content/activities/junction-control.md` | The Level 1 school activity (live at `/activities/core/junction-control/`) |
+| `../../../content/activities/road-block.md` | The Level 1 school activity (live at `/activities/core/road-block/`) |
+| `junction-control.html`, `junction-control-help.html`, `../activities/core/junction-control/index.html` | Forwarding pages: the game was called Junction Control until November 11, 2026, and those links were shared |
 
-The online multiplayer version is on the roadmap ("Junction Control online" in `site/docs/editors/roadmap.md`).
+The online multiplayer version is on the roadmap ("Road Block online" in `site/docs/editors/roadmap.md`).
 
 ### Rules decided (November 2026)
 
 - The team with the most players at an intersection **blocks** it. ("Block", because "control" means checkpoint in orienteering.) Any lead blocks. A lone player blocks and can leave any way.
 - Ties go to the team already blocking, so nobody tracks arrival order.
 - An intersection has at least 3 ways to leave it. Bends and dead ends aren't intersections.
-- Who can leave (November 11): a team with the most players at an intersection can leave, and its players who are leaving go together. A tie for the most freezes everyone. A hold lasts at most 1 minute. The simulator's other two versions ("the most, and teams tied with it"; "only the blocking team") and no hold limit are adaptations in the activity.
+- Who can leave (November 11): a team with the most players at an intersection can leave, and its players who are leaving go together. A tie for the most freezes everyone, except when the blocking team leaves a tie behind: then it picks which tied team blocks. A hold lasts at most 1 minute. The simulator's other two versions ("the most, and teams tied with it"; "only the blocking team") and no hold limit are adaptations in the activity.
 - Otherwise one player leaves an intersection at a time. No contact.
 - Once a team has every checkpoint, each player can take any bus from any stop. The team finishes when its last player's bus leaves. Tiebreak: the team whose last player reached a stop first.
 - Herding (variation): a smaller group meeting a bigger one head-on on a trail is herded back to the last intersection and held there.
@@ -47,7 +48,7 @@ To run batches, copy this script to a file outside the repo (scratch test script
 
 ```js
 const fs = require('fs');
-const html = fs.readFileSync('site/static/games/junction-control.html', 'utf8');
+const html = fs.readFileSync('site/static/games/road-block.html', 'utf8');
 eval(html.split('/* SIM START */')[1].split('/* SIM END */')[0]); // makeMap, makeGame, step, fmt...
 
 // the page's default settings
