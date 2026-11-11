@@ -20,11 +20,12 @@ The online multiplayer version is on the roadmap ("Junction Control online" in `
 - The team with the most players at an intersection **blocks** it. ("Block", because "control" means checkpoint in orienteering.) Any lead blocks. A lone player blocks and can leave any way.
 - Ties go to the team already blocking, so nobody tracks arrival order.
 - An intersection has at least 3 ways to leave it. Bends and dead ends aren't intersections.
-- One player leaves an intersection at a time. No contact.
+- Who can leave (November 11): a team with the most players at an intersection can leave, and its players who are leaving go together. A tie for the most freezes everyone. A hold lasts at most 1 minute. The simulator's other two versions ("the most, and teams tied with it"; "only the blocking team") and no hold limit are adaptations in the activity.
+- Otherwise one player leaves an intersection at a time. No contact.
 - Once a team has every checkpoint, each player can take any bus from any stop. The team finishes when its last player's bus leaves. Tiebreak: the team whose last player reached a stop first.
 - Herding (variation): a smaller group meeting a bigger one head-on on a trail is herded back to the last intersection and held there.
 
-Still being tried in the simulator: how long a team can hold someone, who can leave an intersection (three versions; see the help page), and how many bus stops. Findings, open questions and next steps are in `notes/map-games.md`, under "What the simulator shows", "Open questions" and "Where things stand".
+Still being tried in the simulator: how many bus stops, planning the checkpoint split at the start, and ways to make blocking pay. Findings, open questions and next steps are in `notes/map-games.md`, under "What the simulator shows", "Open questions" and "Where things stand".
 
 ### How the simulator is built
 
@@ -32,10 +33,11 @@ All game logic sits between the `/* SIM START */` and `/* SIM END */` markers, w
 
 - `makeMap(seed, S)` builds the network: a grid of points joined by a random spanning tree plus extra trails. `M.isX[node]` is true for intersections (3 or more trails), and `M.label[node]` is the number shown on the map. It also places the start, the four bus stops (`M.stops`), the checkpoints (`M.cps`), and ranks the busiest intersections (`M.hubs`).
 - `makeGame(M, S, seed)` sets up the teams and players. `step(G)` advances one second: herding, movement and arrivals, `computeControl` (who blocks what), `updateFree` (for the "lead" rule), `look` (what players see), `planGuards` (blockers moving to guard a checkpoint), `planExits` (blockers heading for the bus), `planRescues`, then `decide` for every player at a point.
-- Key rule functions: `canLeave` (can this player leave?), `wouldHold` (would arriving players be held?), `route` (shortest path with penalties for known blocks), `approach` (a player seeing the intersection ahead decides whether to turn back), `guardCp` (which checkpoint to guard), `stageFor` (gathering next to a guarded checkpoint).
+- Planning: with `S.plan` set, `makeGame` calls `planSplit`, which gives each runner group a `plan` (a list of checkpoint indexes) using `tour` (nearest-next route from the start, ending at the nearest bus stop). `assignCp` takes the nearest checkpoint left on the group's plan, then falls back to deciding as it goes.
+- Key rule functions: `canLeave` (can this player leave? under `lead`, `hasLead`), `go` (departs; under `lead`, teammates of the leading team can leave in the same second), `wouldHold` (would arriving players be held?), `route` (shortest path with penalties for known blocks), `approach` (a player seeing the intersection ahead decides whether to turn back), `guardCp` (which checkpoint to guard), `stageFor` (gathering next to a guarded checkpoint).
 - Buses: each stop in `M.stops` has a `period` (seconds between its buses) and an `offset` (its first bus); `nextBus(s, t)` gives the next bus at or after `t`. `S.nStops` (1 to 4) picks the stops and `S.busEvery` sets the period (`'spread'` = a bus somewhere every 75 s). Checkpoints are kept off all four possible stops, so they don't move when the number of stops changes. The bus animation is drawing only (`BUS_COME`, `BUS_WAIT`, `BUS_GO`).
 
-The settings object `S`: `nTeams`, `perTeam`, `nCp`, `cpMode` (`node`/`trail`), `holdLimit` (seconds, `0` for no blocking, `Infinity`), `release` (`controller`/`back`/`held`), `tie` (`pass`/`first`/`lead`), `control: 'most'`, `sight` (`'all'`, meters, or `'third'`), `rescue`, `avoid`, `herd`, `guard`, `nStops` (1 to 4), `busEvery` (`'spread'` or seconds), `wrong` (0 to 1), `limit` (seconds), `oneAtATime`, `cols`, `rows`, `spacing`, `density` (`sparse`/`medium`/`dense`), `strats` (one per team: `scatter`, `pairs`, `packs`, `team`, `blockers`, `wall`, `guards`).
+The settings object `S`: `nTeams`, `perTeam`, `nCp`, `cpMode` (`node`/`trail`), `holdLimit` (seconds, `0` for no blocking, `Infinity`), `release` (`controller`/`back`/`held`), `tie` (`pass`/`first`/`lead`), `control: 'most'`, `sight` (`'all'`, meters, or `'third'`), `rescue`, `avoid`, `herd`, `guard`, `nStops` (1 to 4), `busEvery` (`'spread'` or seconds), `wrong` (0 to 1), `limit` (seconds), `oneAtATime`, `cols`, `rows`, `spacing`, `density` (`sparse`/`medium`/`dense`), `plan` (`go`/`start`/`red`, or an array with `'start'` or `'go'` per team), `strats` (one per team: `scatter`, `pairs`, `packs`, `team`, `blockers`, `wall`, `guards`).
 
 ### Test games
 
@@ -50,9 +52,9 @@ eval(html.split('/* SIM START */')[1].split('/* SIM END */')[0]); // makeMap, ma
 
 // the page's default settings
 const DEFAULTS = {nTeams: 3, perTeam: 5, nCp: 10, cpMode: 'node', holdLimit: 60, release: 'controller',
-  tie: 'pass', control: 'most', sight: 'all', rescue: true, avoid: true, herd: false, guard: false,
+  tie: 'lead', control: 'most', sight: 'all', rescue: true, avoid: true, herd: false, guard: false,
   nStops: 4, busEvery: 'spread', wrong: 0.05, limit: 3600, oneAtATime: true,
-  cols: 6, rows: 5, spacing: 150, density: 'medium', strats: ['pairs', 'scatter', 'blockers']};
+  cols: 6, rows: 5, spacing: 150, density: 'medium', plan: 'go', strats: ['pairs', 'scatter', 'blockers']};
 
 function batch(label, changes, n = 150) {
   const S = Object.assign({}, DEFAULTS, changes), T = S.nTeams;
@@ -78,7 +80,8 @@ function batch(label, changes, n = 150) {
 
 batch('Two blockers together / Everyone alone / Pairs', {strats: ['wall', 'scatter', 'pairs']});
 batch('Same, one bus stop', {strats: ['wall', 'scatter', 'pairs'], nStops: 1});
-batch('Same, a lead frees all, no hold limit', {strats: ['wall', 'scatter', 'pairs'], tie: 'lead', holdLimit: Infinity});
+batch('Same, the most and teams tied with it', {strats: ['wall', 'scatter', 'pairs'], tie: 'pass'});
+batch('Same, every team plans the split', {strats: ['wall', 'scatter', 'pairs'], plan: 'start'});
 ```
 
 Other things worth knowing:

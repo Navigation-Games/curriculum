@@ -69,7 +69,7 @@ code{font-family:var(--font-mono);font-size:.88em}
     <li><b>Intersections</b> are the numbered places where three or more trails meet. A bend in a trail (two ways to go) or a dead end (one) isn't an intersection: it has no number, and nobody blocks or is held there.</li>
     <li><b>Checkpoints</b> are the purple circles. A small colored dot under a checkpoint shows that team has it.</li>
     <li><b>The start</b> is the purple triangle. Nobody can block the start.</li>
-    <li><b>Bus stops</b> are the dashed boxes on the edge (B1 to B4, or fewer; see <a href="#buses-setting">Bus stops</a>). The line under the map gives the bus times. Each bus pulls up shortly before it leaves (90 seconds, or less when buses come close together) and drives off along the edge. Players waiting for a bus stand next to the stop, and ride away as colored dots in the bus.</li>
+    <li><b>Bus stops</b> are the dashed boxes on the edge (B1 to B4, or fewer; see <a href="#buses-setting">Bus stops</a>). The line under the map gives the bus times. Each bus pulls up shortly before it leaves (90 seconds, or less when buses come close together) and drives off along the edge. Players waiting for a bus line up beside the stop, one line per team, and ride away as colored dots in the bus. The map leaves room around the edge so stops, buses and lines stay in view.</li>
     <li><b>Players</b> are dots in their team's color. Squares are blockers. A hollow dot is a held player.</li>
     <li><b>A blocked intersection</b> has a light circle in the blocking team's color.</li>
   </ul>
@@ -95,11 +95,11 @@ code{font-family:var(--font-mono);font-size:.88em}
 
     <dt>Who can leave an intersection</dt>
     <dd>
-      <p>Three versions of the rule. In each one, the team with the most players at an intersection blocks it, and a tie goes to the team already blocking.</p>
+      <p>Three versions of the rule. In each one, the team with the most players at an intersection blocks it, and a tie goes to the team already blocking. The default is "A lead frees all, a tie freezes all", the rule in the activity.</p>
       <ul>
         <li><b>The most, and teams tied with it.</b> If 2 Red are holding 1 Green and a second Green arrives, the count is tied and either Green can leave. Since players leave one at a time, the first Green to go leaves the other outnumbered again. So a rescue here is really a swap.</li>
         <li><b>Only the blocking team.</b> A tie isn't enough. To free a held player, teammates have to outnumber the blockers.</li>
-        <li><b>A lead frees all, a tie freezes all.</b> When a team gets the most players at an intersection, all its players there are free, and they stay free as they leave one by one, so a rescue can get everyone out. If someone arrives and ties the count for the most, everyone there is stuck until the count changes or the hold limit runs out. A lone player passing an intersection where two other teams are tied is stuck too.</li>
+        <li><b>A lead frees all, a tie freezes all.</b> A team with the most players at an intersection can leave, and its players who are leaving go together, at the same moment, so a rescue gets everyone out. The rest can stay: one player can leave while the others keep blocking. (Until November 11, they left one by one and stayed free as they went, so for a moment a team could leave without having the most.) If someone arrives and ties the count for the most, everyone there is stuck until the count changes or the hold limit runs out. A lone player passing an intersection where two other teams are tied is stuck too.</li>
       </ul>
     </dd>
 
@@ -132,7 +132,7 @@ code{font-family:var(--font-mono);font-size:.88em}
     <dd>If no team is on a bus by then, the team with the most checkpoints is ahead, but nobody wins.</dd>
 
     <dt>One player leaves an intersection at a time</dt>
-    <dd>Departures from an intersection are 3 seconds apart, so every departure changes the count before the next player goes.</dd>
+    <dd>Departures from an intersection are 3 seconds apart, so every departure changes the count before the next player goes. Under "a lead frees all", the leading team's players who are leaving go together. With this off, any players allowed to leave can go at the same moment. That matters most under "The most, and teams tied with it": a teammate who ties the count can leave together with the held player, so a rescue frees them instead of swapping. See <a href="#findings">findings</a>.</dd>
 
     <dt>Teams send someone to free a held teammate</dt>
     <dd>See <a href="#rescue">Rescues</a>.</dd>
@@ -144,7 +144,7 @@ code{font-family:var(--font-mono);font-size:.88em}
     <dd>A player who is held at an intersection doesn't get its checkpoint. They get it only once they're free to leave: when teammates arrive, or the other team leaves. If the hold limit runs out first, they're sent away without it. Guarding also changes what blockers do (see <a href="#guarding">Guarding</a>). It applies to checkpoints at intersections, not ones on trails.</dd>
 
     <dt>Players route around intersections where they'd be held</dt>
-    <dd>With this off, players take the shortest route no matter what's ahead.</dd>
+    <dd>With this on, players plan their route with a penalty for each intersection where they know they'd be held (3 times the hold limit, or 10 minutes with no limit), so they go around a block when the detour is shorter than the wait. Which blocks they know about depends on "Players see a block". With limited sight, they also decide whether to turn back when they see a block ahead. With this off, players take the shortest route no matter what's ahead, never turn back, and walk into any block on the way.</dd>
   </dl>
 
   <h2 id="network">Trail network settings</h2>
@@ -162,19 +162,26 @@ code{font-family:var(--font-mono);font-size:.88em}
     <dt>Two packs</dt><dd>The team splits in half.</dd>
     <dt>Whole team together</dt><dd>One big group.</dd>
     <dt>Blockers + pairs</dt><dd>One blocker (two, with 5 or more players) parks at the busiest intersection, and the second at the next busiest. The rest go in pairs. "Busiest" means on the most shortest routes between the checkpoints, the start and the bus stops.</dd>
-    <dt>Two blockers together + pairs</dt><dd>Two blockers park together at the busiest intersection, and the rest go in pairs.</dd>
+    <dt>Two blockers together + pairs</dt><dd>Two blockers park together at the busiest intersection, and the rest go in pairs. On a network so small that every intersection is the start or a bus stop, blockers play as runners.</dd>
     <dt>Everyone alone, spares guard</dt><dd>Like "Everyone alone", but with guarding on, a player with no checkpoint of their own left goes to guard instead of backing up a teammate. Without guarding, it plays exactly like "Everyone alone".</dd>
+  </dl>
+
+  <dl>
+    <dt>Who goes for which checkpoint</dt>
+    <dd>"Decided as they go": each group takes the nearest checkpoint nobody on its team is going for (see <a href="#which">Which checkpoint</a>). "Planned at the start": every team divides the checkpoints among its groups before the start, like the activity's planning time. "Only Red plans" lets you compare a planning team with two that don't.</dd>
   </dl>
 
   <h2 id="players">How the players decide</h2>
   <h3>Speed</h3>
   <p>Players run 2.5 to 3.4 meters a second. Pairs and packs move at their slowest member's speed.</p>
 
-  <h3>Which checkpoint</h3>
+  <h3 id="which">Which checkpoint</h3>
   <p>Each group heads for the nearest checkpoint that no other group on its team is going for. When every checkpoint the team still needs has someone headed for it, the group heads for the nearest one anyway, as a backup. That's worth more than it sounds: the split isn't planned, so a backup is often closer than the teammate who claimed it. A team always knows which checkpoints it has, as if it had a team channel.</p>
+  <p>A team that plans at the start divides the checkpoints among its groups (not its blockers). It starts by cutting them into slices by direction from the start, then moves or swaps checkpoints between groups while that makes the slowest group's route quicker. A route goes from the start to the nearest checkpoint on the list, then the nearest next, and ends at the nearest bus stop, and faster groups get longer routes. The plan is good, not perfect. During the game, each group takes the nearest checkpoint left on its own list. A group that finishes its list helps out, taking the nearest checkpoint a teammate isn't already headed for, and the teammate drops it.</p>
 
   <h3 id="rescue">Rescues</h3>
-  <p>When a player is held and one more teammate would free them, the nearest free teammate within 350 meters comes. A rescue is a swap: the held player leaves first, and the rescuer stays in their place. Under the "a team with the most" rule, the rescuer gives the team the most players, so both can leave. A player who swapped in isn't rescued in turn; they wait out the hold. Players who can only see blocks up close become rescuers when they happen on a held teammate they can free.</p>
+  <p>When a player is held and one more teammate would free them, the nearest free teammate within 350 meters comes. A rescue is a swap: the held player leaves first, and the rescuer stays in their place. Under "a lead frees all", the rescuer gives the team the most players, so both leave together. A player who swapped in isn't rescued in turn; they wait out the hold. Players who can only see blocks up close become rescuers when they happen on a held teammate they can free.</p>
+  <p>Once a team has every checkpoint, a held player is all that stands between the team and the bus, so the team sends as many players as it takes to free them, from anywhere, even players waiting at a bus stop (whose bus hasn't left yet). They go only if the team has enough players to free the held one, and only if they'd get there before the hold limit lets the held player go. A rescuer who arrives first waits there for the others. Under "The most, and teams tied with it" the team doesn't do this, because a rescue there is only a swap and someone is still stuck.</p>
 
   <h3>Blockers and the bus</h3>
   <p>Blockers stay at their intersection until every checkpoint the team still needs (two at most) has a teammate headed for it. Then each blocker works out which bus the last of those teammates will catch, and leaves in time to catch a bus no later than that one, with 20 seconds to spare. A blocker who gets to a stop before the team has every checkpoint waits there.</p>
@@ -193,7 +200,7 @@ code{font-family:var(--font-mono);font-size:.88em}
   <p>"Run 100 games" plays 100 games with the settings and teams on the page, each on a new random network, and counts wins, buses made, average bus time, checkpoints and time held. Use it to see whether a rule makes the game lopsided, or whether one way of playing always beats the others. With 100 games, a difference of 10 wins or so can be chance.</p>
 
   <h2 id="findings">What the simulator has shown</h2>
-  <p class="note">From batches of 100 to 150 games (the tables: seeds 1 to 150, as in the test script in the games README), November 2026, with 5 players a team, 10 checkpoints at intersections and a 6 × 5 network 150 m apart unless it says otherwise. The simulator has changed since some of these, so the numbers are rough.</p>
+  <p class="note">From batches of 100 to 150 games (the tables: seeds 1 to 150, as in the test script in the games README), November 2026, with 5 players a team, 10 checkpoints at intersections and a 6 × 5 network 150 m apart unless it says otherwise. Until November 11 the default rule was "The most, and teams tied with it", and findings use it unless they say otherwise. The simulator has changed since some of these, so the numbers are rough.</p>
   <ul>
     <li><b>Spreading out wins.</b> "Everyone alone" wins most games against pairs, packs or blockers. Covering checkpoints in parallel matters more than winning intersections. "Whole team together" never won.</li>
     <li><b>Two blockers together at the busiest intersection is the play that makes blocking matter.</b> Other teams' players lose 40 seconds to a minute each to holds. It still wins less often than "everyone alone".</li>
@@ -206,12 +213,15 @@ code{font-family:var(--font-mono);font-size:.88em}
       <tr><td>The most, and teams tied with it</td><td>Until not outnumbered</td><td>23 / 102 / 25</td><td>about 1 min</td></tr>
       <tr><td>Only the blocking team</td><td>1 minute</td><td>42 / 86 / 22</td><td>about 50 s</td></tr>
       <tr><td>Only the blocking team</td><td>Until not outnumbered</td><td>40 / 67 / 43</td><td>about 1.5 min</td></tr>
-      <tr><td>A lead frees all, a tie freezes all</td><td>1 minute</td><td>35 / 68 / 47</td><td>about 1 min</td></tr>
-      <tr><td>A lead frees all, a tie freezes all</td><td>Until not outnumbered</td><td>29 / 72 / 45 (4 games nobody won)</td><td>3 to 4 min</td></tr>
+      <tr><td>A lead frees all, a tie freezes all</td><td>1 minute</td><td>22 / 78 / 50</td><td>about 50 s</td></tr>
+      <tr><td>A lead frees all, a tie freezes all</td><td>Until not outnumbered</td><td>19 / 76 / 55</td><td>about 1.5 min</td></tr>
     </tbody>
   </table></div>
   <ul>
-    <li><b>Rescues matter most when a tie freezes everyone.</b> With "a lead frees all" and no hold limit, rescues cut the time held from 9 to 10 minutes a player to 2.5 to 3.75, and the games nobody won within the hour from 30 of 150 to 4. With the other rules, rescue on or off changes little.</li>
+    <li><b>Leaving together made blocking weaker</b> under "a lead frees all". Before the leading team's players left together, Two blockers together won 35 of 150 (29 with no hold limit), and other teams were held about a minute each.</li>
+    <li><b>Rescues matter most with no hold limit.</b> With "a lead frees all", rescues cut the time held from 7 to 8 minutes a player to about 1.5, and the games nobody won within the hour from 24 of 150 to none. Before players could leave a bus stop to rescue, a team with every checkpoint never got everyone onto a bus in 60 of the 150 games, and nobody won 8. With "only the blocking team", rescue on helped the other teams against Two blockers together (50 / 60 / 40 with rescue, 19 / 94 / 37 without). With "the most, and teams tied with it", rescue on or off changes little.</li>
+    <li><b>Leaving one at a time matters most when tied teams can leave.</b> With it off, a rescue frees the held player instead of swapping: Pairs won 52 of 150 instead of 29, and were held 12 seconds a player instead of 40. Under "a lead frees all", turning it off changes little (other teams held 5 to 10 seconds less), since the leading team leaves together anyway. Under "only the blocking team", the other teams were held about 10 seconds less (25 seconds less with no hold limit).</li>
+    <li><b>Routing around blocks saves a little, and only when players know about blocks ahead.</b> With players always knowing every block, routing around saved Everyone alone about 20 seconds a game and 10 seconds held. With sight of 40 m or less, it made no difference, because players rarely know about a block before they're on the trail to it.</li>
     <li><b>How far players see blocks changes little</b> so far: "everyone alone" won 95 of 150 games with "From 40 m away" or "Only when they get there", against 100 when players always know. Players who see a block up close turn back about once every three games, or about twice a game when ties freeze everyone and there's no hold limit.</li>
     <li><b>Spare players blocking doesn't pay.</b> Sending players with no checkpoint of their own to block (at the busiest intersection or next to a bus stop, leaving early or not) cost their team about a minute, because backing up a teammate gets the last checkpoints sooner. The blocks held other teams only about 5 seconds a player.</li>
     <li><b>When blockers leave matters little.</b> Timing their exit to the last checkpoints, instead of waiting until the team has them all, changed finish times by about 10 seconds. Blockers were the team's last ones onto a bus in about 1 game in 8 either way.</li>
@@ -219,18 +229,20 @@ code{font-family:var(--font-mono);font-size:.88em}
     <li><b>Fewer bus stops makes blocking pay; fewer buses doesn't.</b> With 150 games each (Two blockers together / Everyone alone / Pairs, 1-minute hold):</li>
   </ul>
   <div class="tablewrap"><table>
-    <thead><tr><th>Buses</th><th>The most, and teams tied with it</th><th>Only the blocking team</th><th>A lead frees all, a tie freezes all</th></tr></thead>
+    <thead><tr><th>Buses</th><th>The most, and teams tied with it</th><th>Only the blocking team</th><th>A lead frees all, a tie freezes all (players leaving together, bus stop rescues)</th></tr></thead>
     <tbody>
-      <tr><td>4 stops, every 5:00 each</td><td>20 / 100 / 30</td><td>42 / 86 / 22</td><td>35 / 68 / 47</td></tr>
-      <tr><td>4 stops, every 10:00 each</td><td>31 / 79 / 40</td><td>39 / 78 / 33</td><td>33 / 76 / 41</td></tr>
-      <tr><td>2 stops, every 2:30 each</td><td>42 / 76 / 32</td><td>40 / 79 / 31</td><td>29 / 69 / 52</td></tr>
-      <tr><td>2 stops, every 5:00 each</td><td>37 / 84 / 29</td><td>45 / 83 / 22</td><td>34 / 72 / 44</td></tr>
-      <tr><td>2 stops, every 10:00 each</td><td>30 / 77 / 43</td><td>38 / 72 / 40</td><td>37 / 68 / 45</td></tr>
-      <tr><td>1 stop, every 1:15</td><td>40 / 76 / 34</td><td>47 / 68 / 35</td><td>47 / 61 / 42</td></tr>
+      <tr><td>4 stops, every 5:00 each</td><td>20 / 100 / 30</td><td>42 / 86 / 22</td><td>22 / 78 / 50</td></tr>
+      <tr><td>4 stops, every 10:00 each</td><td>31 / 79 / 40</td><td>39 / 78 / 33</td><td>28 / 72 / 50</td></tr>
+      <tr><td>2 stops, every 2:30 each</td><td>42 / 76 / 32</td><td>40 / 79 / 31</td><td>31 / 75 / 44</td></tr>
+      <tr><td>2 stops, every 5:00 each</td><td>37 / 84 / 29</td><td>45 / 83 / 22</td><td>29 / 71 / 50</td></tr>
+      <tr><td>2 stops, every 10:00 each</td><td>30 / 77 / 43</td><td>38 / 72 / 40</td><td>30 / 81 / 39</td></tr>
+      <tr><td>1 stop, every 1:15</td><td>40 / 76 / 34</td><td>47 / 68 / 35</td><td>36 / 74 / 40</td></tr>
     </tbody>
   </table></div>
   <ul>
     <li>With one or two stops, the busiest intersections are on everyone's way to the bus, so blockers sit where every team has to pass. Fewer buses mostly adds waiting (a game runs 1 to 3 minutes longer) and ties: with 2 stops and a bus every 10 minutes, 108 of 150 games were won on the tiebreak. Players were held on the way to the bus only about 10 seconds each in every version.</li>
+    <li><b>Planning the split helps.</b> With three teams playing Everyone alone and only Red planning, Red won 64 of 150 (77 when tied teams can leave), where an even share is 50. Pairs that plan won 35 against two teams of Everyone alone, against 21 without planning. Planning teams finish 20 seconds to a minute sooner.</li>
+    <li><b>Planning doesn't make blocking pay on its own.</b> With every team planning, Two blockers together won 27 of 150 against two teams of Everyone alone (31 when tied teams can leave). It came close to an even share only when the team had players to spare: with 6 checkpoints for 5 players, 41 of 150, and with one bus stop, 42 (33 without planning). With 8 players a team, it won 24.</li>
     <li><b>Herding</b> happens 3 to 5 times a game and costs players 5 to 15 seconds each.</li>
     <li><b>Game length:</b> on schoolyard paths (40 m apart), a game takes about 5 minutes; on forest trails (250 m), about 35.</li>
   </ul>
@@ -238,7 +250,6 @@ code{font-family:var(--font-mono);font-size:.88em}
   <h2 id="missing">Not in the simulator yet</h2>
   <ul>
     <li><b>Talking by text.</b> Players telling teammates which checkpoints they've got and which intersections are blocked, and by whom. For now a team always knows its checkpoints, and each player knows only the blocks they've seen (or all of them, with "From anywhere").</li>
-    <li><b>Planning the split.</b> Teams dividing the checkpoints at the start, the way they do in the activity's planning time, instead of each group taking the nearest one as it goes.</li>
     <li>Talk between teams and deals, the game operator's announcements, players leaving the trails, and anyone staying lost for longer than one wrong turn.</li>
   </ul>
 </div>
