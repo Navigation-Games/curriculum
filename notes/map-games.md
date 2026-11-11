@@ -1,0 +1,72 @@
+# Games on a map
+
+Game ideas that use a map, beyond the activities in the curriculum. Each one is a draft: the idea, how it might work, and the questions still open. Add new games as their own section.
+
+## Junction Control (trail network game)
+
+**The idea.** Teams race to visit every checkpoint, but they can only travel on trails, and whoever has the most players at an intersection blocks it. Players who arrive outnumbered get held there until the blocking team lets them go. So a team has to decide when to spread out to cover checkpoints and when to travel together to win intersections.
+
+**What it teaches.** The introductory level of map navigation: knowing where you are on a trail network, choosing a route, and following it. Every intersection is a decision point, and the game makes players stop at intersections, count, and decide which way to go next. That's concepts 17 to 20 in the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence/) (following trails as handrails, decisions at junctions, tracking progress along a route, route choice), and the OUSA Basic skills of thumbing the map and choosing the right direction at intersections ([OUSA skill levels](/reference/frameworks/ousa-skill-levels/)). Being held, or a closed intersection, forces a new route on the spot.
+
+**Where.** Any area with a network of trails or paths and lots of intersections: a park, a campus, a conservation area. The map shows the trails, the intersections (numbered), the checkpoints, and the pickup points at bus stops around the edge.
+
+**Teams.** Three teams, Red, Green and Blue, with the same number of players (maybe 4 to 8 each). Teams can also face off head to head: two teams at a time, as heats of a tournament, or Red vs Green on one network while Blue plays the winner later.
+
+### Rules (draft)
+
+**Stay on trails.** Players travel only on trails shown on the map. Leaving a trail (cutting a corner, crossing a field) is a penalty.
+
+**Being at an intersection.** A player is "at" an intersection when they are within a set distance of its center (5 steps?) or touching its marker.
+
+**Blocking.** The team with the most players at an intersection blocks it. (We say "block" because "control" is the orienteering word for a checkpoint.) A tie goes to the team already blocking: the block changes hands only when another team has more players. So players only need to know who blocks an intersection now, not the order everyone arrived in. If two teams reach an empty intersection at the same moment, rock-paper-scissors.
+
+**Moving through.** If your team blocks an intersection, or is tied for most players there, you can pass through it or leave it in any direction. Every player who leaves changes the count, so leaving can hand the block to another team.
+
+**Held players.** If you arrive at an intersection where another team has more players, you're held. You leave only when the blocking team says you can, by the trail they choose. Example: 2 Red and 1 Green are at intersection 12. Red blocks it. The Green player stays until Red releases them, and Red decides whether Green goes north toward the checkpoint or back south the way they came. If 2 more Greens arrive, Green has 3 to Red's 2: Green now blocks the intersection, and the Reds are held.
+
+**No contact.** Blocking is a rule, not a body block. Nobody touches, grabs or stands in another player's way. Held players step to the side of the trail.
+
+**Goal.** A team wins by having someone on the team visit every checkpoint, and getting everyone onto a bus first. Proof of a visit: a code at the checkpoint, a photo, or an electronic punch.
+
+**Pickup.** Each bus stop on the edge of the map has pickup times. Once the team has every checkpoint, each player can take any bus from any stop. The team finishes when its last player's bus leaves, so one player who gets held can cost the team.
+
+### Communication
+
+Every player wears an earpiece or carries a phone for texting. A game operator runs the game from a base and sets the channels:
+
+- **Team channel.** Each team talks among itself the whole game.
+- **Operator to all.** The operator announces rule changes, closes an intersection, adds a bonus checkpoint, or rules on disputes.
+- **Between teams.** Only during windows the operator opens (the first 5 minutes, or one window mid-game). This is where deals happen: "Let our runner through 7 and we'll release yours at 12." Whether deals are binding is up to the players.
+
+The operator can also decide who gets which channel when: for example, giving a team that's behind a few minutes of the other teams' channel.
+
+### Decided (November 2026)
+
+- **Any lead blocks** (3 vs 2+2 is a block).
+- **A lone player at an intersection blocks it**, and can leave at any time in any direction.
+- **Ties go to the team already blocking.** Nobody has to track arrival order.
+- **One player leaves an intersection at a time.** So a group that's holding someone can't all walk off at once, and each departure changes the count.
+
+### Levels
+
+**Level 1: school path network.** The schoolyard or school and park paths, with cones or numbered markers at the intersections. No radios: teams talk only when they meet. A short game in one class period, with the teacher as the game operator. The finish can be the start instead of bus stops, or a few "pickup" cones around the edge with times on a whiteboard.
+
+**Level 2: forest trails, or anywhere out of sight.** A trail network in the woods, a large campus, or even a building with hallways, where players can't see each other. This is where the earpieces or texting, the game operator's channels, the talk windows between teams, and the bus stops come in.
+
+### What the simulator shows
+
+[Simulator](https://curriculum.navigationgames.org/games/junction-control.html) (November 2026; the file is `site/static/games/junction-control.html`, not linked from the site menus). Over 60 random games with the default rules (hold up to 1 minute, 5 players a team, 10 checkpoints):
+
+- **Spreading out wins.** "Everyone alone" beats pairs and packs about three games in four, because covering checkpoints in parallel matters more than winning intersections. Whole-team-together never won.
+- **Holding rarely happens by accident.** Teams lose only a second or two per player to holds, unless someone blocks on purpose.
+- **One blocker per intersection doesn't pay.** A lone blocker is outnumbered by any pair, and the team is one runner short. Its team won 1 game in 60.
+- **Two blockers together at the busiest intersection do work.** Other teams' players lose over a minute each to holds, and and the blocking team won 27 of 60 games against "everyone alone" when the whole team had to take the same bus. Once each player can take any bus, it won 15 to "everyone alone"'s 39, because players who are already spread out can each catch the nearest bus. This is still the play that makes blocking matter.
+- On a schoolyard network (40 m between intersections), a game takes about 5 minutes. On forest trails (250 m), about 35.
+
+### Open questions
+
+- **How long can a team hold someone?** Without a limit, one player could be stuck all game. Options: a time limit (2 minutes, then the blocking team must release them, but still picks the direction), or held players can always go back the way they came. Holding "until they're no longer outnumbered" makes for interesting play (Barb, in the simulator): a held player's teammates have to come and even the count.
+- **How does everyone see who's blocking?** Arrival order no longer matters (ties go to the team already blocking), but players still need to see the block at a glance. Low-tech, for Level 1: a team-colored clip or flag that the blocking team puts on the intersection marker. Fancier: team-colored light sticks like the ones at K-pop concerts, which glow the team's color, and maybe blink when a player is held. Concert light sticks are switched centrally by the venue's system; whether a game operator could do that is worth looking into. An electronic timing box at each intersection would also log every arrival, but that takes a lot of boxes.
+- **Checkpoints at intersections or on the trails between them?** At intersections makes them worth fighting over; on trails makes route choice matter more.
+- **Scoring if no team gets every checkpoint.** Most checkpoints by the last pickup time, with ties broken by arrival time at pickup?
+- **How to make blocking matter more,** since spreading out wins: more checkpoints than players, fewer loops in the network, or a bonus for holding an intersection.
