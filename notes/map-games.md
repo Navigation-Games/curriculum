@@ -26,7 +26,7 @@ Game ideas that use a map, beyond the activities in the curriculum. Each one is 
 
 **No contact.** Blocking is a rule, not a body block. Nobody touches, grabs or stands in another player's way. Held players step to the side of the trail.
 
-**Goal.** A team wins by having someone on the team visit every checkpoint, and getting everyone onto a bus first. Proof of a visit: a code at the checkpoint, a photo, or an electronic punch.
+**Goal.** A team wins by having someone on the team visit every checkpoint, and getting everyone onto a bus first. A team's finish time is when its last player's bus leaves. If two teams finish on buses leaving at the same moment, the team whose last player reached a bus stop first wins. Proof of a visit: a code at the checkpoint, a photo, or an electronic punch.
 
 **Pickup.** Each bus stop on the edge of the map has pickup times. Once the team has every checkpoint, each player can take any bus from any stop. The team finishes when its last player's bus leaves, so one player who gets held can cost the team.
 
