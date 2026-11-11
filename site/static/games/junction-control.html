@@ -188,6 +188,14 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
           <option value="node" selected>At intersections</option>
           <option value="trail">On the trails between them</option>
         </select></div>
+      <div class="field"><label for="nStops">Bus stops</label>
+        <select id="nStops"><option value="4" selected>4</option><option value="3">3</option><option value="2">2 (opposite sides)</option><option value="1">1</option></select></div>
+      <div class="field"><label for="busEvery">How often buses leave</label>
+        <select id="busEvery">
+          <option value="spread" selected>A bus leaves some stop every 75 seconds</option>
+          <option value="300">Every 5 minutes at each stop</option>
+          <option value="600">Every 10 minutes at each stop</option>
+        </select></div>
       <div class="field"><label for="wrong">Wrong turns at an intersection</label>
         <select id="wrong"><option value="0">Never</option><option value="0.05" selected>5% of the time</option><option value="0.15">15%</option><option value="0.3">30% (true beginners)</option></select></div>
       <div class="field"><label for="limit">Time limit</label>
@@ -251,7 +259,6 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
 
 <script>
 /* SIM START */
-const PERIOD = 300; // a bus leaves each stop every 5 minutes
 const TEAMS = [{name:'Red'},{name:'Green'},{name:'Blue'}];
 const STRATS = {pairs:'Pairs', scatter:'Everyone alone', packs:'Two packs', team:'Whole team together', blockers:'Blockers + pairs', wall:'Two blockers together + pairs', guards:'Everyone alone, spares guard'};
 
@@ -324,9 +331,14 @@ function makeMap(seed,S){
   for(const p of nodes){const d=Math.hypot(p.x-W/2,p.y-H/2);if(d<bd){bd=d;best=p.id;}}
   M.start=best;
   const mr=Math.floor(rows/2),mc=Math.floor(cols/2);
-  M.stops=[{node:id(mr,0),label:'B1',dx:-1,dy:0},{node:id(0,mc),label:'B2',dx:0,dy:-1},{node:id(mr,cols-1),label:'B3',dx:1,dy:0},{node:id(rows-1,Math.max(0,mc-1)),label:'B4',dx:0,dy:1}]
-    .map((s,i)=>Object.assign(s,{offset:i*75}));
-  const isStop=new Set(M.stops.map(s=>s.node));
+  // Bus stops: 1 to 4 of these (S.nStops). S.busEvery: 'spread' means a bus leaves some stop every 75 seconds,
+  // otherwise the seconds between buses at each stop. Stops take turns, evenly spaced.
+  const allStops=[{node:id(mr,0),label:'B1',dx:-1,dy:0},{node:id(0,mc),label:'B2',dx:0,dy:-1},{node:id(mr,cols-1),label:'B3',dx:1,dy:0},{node:id(rows-1,Math.max(0,mc-1)),label:'B4',dx:0,dy:1}];
+  const nS=Math.min(4,Math.max(1,S.nStops||4));
+  M.stops=[[0],[0,2],[0,1,2],[0,1,2,3]][nS-1].map(i=>allStops[i]);
+  const period=S.busEvery&&S.busEvery!=='spread'?+S.busEvery:75*nS;
+  M.stops.forEach((s,i)=>Object.assign(s,{period,offset:Math.round(i*period/nS)}));
+  const isStop=new Set(allStops.map(s=>s.node)); // keep checkpoints off every possible stop, so they don't move when the number of stops changes
   const S0=nodes[M.start];
   const pt=c=>c.node!=null?nodes[c.node]:bez(M,M.edges[c.edge],.5);
   // "at intersections": real intersections first; bends and dead ends only if there aren't enough intersections
@@ -634,7 +646,7 @@ function planExits(G){
       const at=b.state==='node'?b.node:b.to,extra=b.state==='node'?0:b.len-b.s;
       let leave=-Infinity,stop=null;
       M.stops.forEach((s,si)=>{
-        const bus=s.offset+Math.floor((B-s.offset)/PERIOD)*PERIOD; // the last bus at this stop that's no later than B
+        const bus=s.offset+Math.floor((B-s.offset)/s.period)*s.period; // the last bus at this stop that's no later than B
         const L=bus-(extra+M.dist[at][s.node])/b.speed;
         if(L>leave){leave=L;stop=si;}
       });
@@ -698,7 +710,7 @@ function visit(G,team,ci){
   }
 }
 
-function nextBus(s,t){return s.offset+Math.max(0,Math.ceil((t-s.offset)/PERIOD))*PERIOD;}
+function nextBus(s,t){return s.offset+Math.max(0,Math.ceil((t-s.offset)/s.period))*s.period;}
 
 // Each player takes whichever bus they can catch soonest, at any stop.
 function bestStop(G,p){
@@ -938,7 +950,8 @@ function readSettings(){
     holdLimit:hl==='inf'?Infinity:+hl,release:$('#release').value,tie:$('#tie').value,control:$('#control').value,
     sight:['all','third'].includes($('#sight').value)?$('#sight').value:+$('#sight').value,
     oneAtATime:$('#oneAtATime').checked,cols:+$('#netSize').value.split('x')[0],rows:+$('#netSize').value.split('x')[1],spacing:+$('#spacing').value,density:$('#density').value,
-    rescue:$('#rescue').checked,herd:$('#herd').checked,guard:$('#guard').checked,avoid:$('#avoid').checked,wrong:+$('#wrong').value,limit:+$('#limit').value*60,
+    rescue:$('#rescue').checked,herd:$('#herd').checked,guard:$('#guard').checked,
+    nStops:+$('#nStops').value,busEvery:$('#busEvery').value==='spread'?'spread':+$('#busEvery').value,avoid:$('#avoid').checked,wrong:+$('#wrong').value,limit:+$('#limit').value*60,
     strats:[$('#s0').value,$('#s1').value,$('#s2').value]};
 }
 function rebuild(newSeed){
@@ -949,7 +962,11 @@ function rebuild(newSeed){
   const km2=M.W*M.H/1e6;
   $('#seedLabel').textContent=`Map ${seed} · ${M.nX} intersections · ${km2.toFixed(2)} km² (${Math.round(km2*247.105)} acres)`;
   $('#map').style.aspectRatio=`${M.W}/${M.H}`;
-  $('#busNote').textContent='Buses leave every 5 minutes: '+M.stops.map(s=>`${s.label} at ${fmt(s.offset)}`).join(', ')+', and every 5 minutes after. Each bus pulls up 90 seconds before it leaves.';
+  $('#busEvery').disabled=S.nStops===1;
+  const P=M.stops[0].period,wait=Math.min(BUS_WAIT,P-BUS_COME-BUS_GO-5);
+  $('#busNote').textContent=M.stops.length===1
+    ?`One bus stop, ${M.stops[0].label}, with a bus every ${fmt(P)}. The first team with everyone at the stop wins: how often buses leave can't change the order.`
+    :`Buses leave every ${fmt(P)} at each stop, taking turns: `+M.stops.map(s=>`${s.label} at ${fmt(s.offset)}`).join(', ')+`. Each bus pulls up ${wait} seconds before it leaves.`;
   updatePanel(true);
 }
 function readColors(){
@@ -1001,14 +1018,15 @@ function draw(){
     ctx.setLineDash([px(3),px(2)]);ctx.stroke();ctx.setLineDash([]);
     ctx.fillStyle=C['map-bus'];ctx.fillText(s.label,bx,by+px(.5));
     // where this stop's bus is: tau is seconds since its last bus left
-    const tau=((T-s.offset)%PERIOD+PERIOD)%PERIOD;
+    const P=s.period,wait=Math.min(BUS_WAIT,P-BUS_COME-BUS_GO-5); // with buses close together, each waits less
+    const tau=((T-s.offset)%P+P)%P;
     let off=null,alpha=1,riders=[];
     if(tau<BUS_GO){
       const k=tau/BUS_GO;off=k*k*px(90);alpha=1-k; // drives off, speeding up
-      const dep=s.offset+Math.floor((T-s.offset)/PERIOD)*PERIOD;
+      const dep=s.offset+Math.floor((T-s.offset)/P)*P;
       riders=G.players.filter(p=>p.state==='done'&&p.stop===si&&p.busAt===dep);
-    }else if(tau>=PERIOD-BUS_WAIT-BUS_COME){
-      const k=Math.min(1,(tau-(PERIOD-BUS_WAIT-BUS_COME))/BUS_COME);off=-(1-k)*(1-k)*px(90);alpha=k; // pulls up, slowing down
+    }else if(tau>=P-wait-BUS_COME){
+      const k=Math.min(1,(tau-(P-wait-BUS_COME))/BUS_COME);off=-(1-k)*(1-k)*px(90);alpha=k; // pulls up, slowing down
     }
     if(off==null)return;
     const ux=-s.dy,uy=s.dx,x=bx+ux*off,y=by+uy*off,horiz=ux!==0;

@@ -69,7 +69,7 @@ code{font-family:var(--font-mono);font-size:.88em}
     <li><b>Intersections</b> are the numbered places where three or more trails meet. A bend in a trail (two ways to go) or a dead end (one) isn't an intersection: it has no number, and nobody blocks or is held there.</li>
     <li><b>Checkpoints</b> are the purple circles. A small colored dot under a checkpoint shows that team has it.</li>
     <li><b>The start</b> is the purple triangle. Nobody can block the start.</li>
-    <li><b>Bus stops</b> are the dashed boxes on the edge (B1 to B4). A bus leaves each stop every 5 minutes, and the stops take turns: B1 at 0:00, B2 at 1:15, B3 at 2:30, B4 at 3:45, then every 5 minutes after. Each bus pulls up 90 seconds before it leaves and drives off along the edge. Players waiting for a bus stand next to the stop, and ride away as colored dots in the bus.</li>
+    <li><b>Bus stops</b> are the dashed boxes on the edge (B1 to B4, or fewer; see <a href="#buses-setting">Bus stops</a>). The line under the map gives the bus times. Each bus pulls up shortly before it leaves (90 seconds, or less when buses come close together) and drives off along the edge. Players waiting for a bus stand next to the stop, and ride away as colored dots in the bus.</li>
     <li><b>Players</b> are dots in their team's color. Squares are blockers. A hollow dot is a held player.</li>
     <li><b>A blocked intersection</b> has a light circle in the blocking team's color.</li>
   </ul>
@@ -117,6 +117,13 @@ code{font-family:var(--font-mono);font-size:.88em}
 
     <dt>Checkpoints, Checkpoints are</dt>
     <dd>How many checkpoints, and whether they're at intersections or halfway along trails. At intersections, they go on real intersections first. On a small network without enough intersections, some go at bends and dead ends.</dd>
+
+    <dt id="buses-setting">Bus stops, How often buses leave</dt>
+    <dd>
+      <p>1 to 4 bus stops: 1 is B1 on the left edge, 2 are on opposite sides, 3 are left, top and right. Fewer stops brings every team past the same few intersections at the end. Checkpoints stay where they are when you change the number of stops.</p>
+      <p>"A bus leaves some stop every 75 seconds" keeps the total number of buses the same, so one stop gets a bus every 1:15, two stops every 2:30 each, four stops every 5 minutes each. Or choose a bus every 5 or 10 minutes at each stop. The stops take turns, evenly spaced.</p>
+      <p>With one stop, how often buses leave doesn't matter: getting there sooner never means a later bus, and a tie on the same bus goes to the team whose last player got there first, so the finish order is the order teams arrive. Buses come into their own with two or more stops, where a player chooses which bus to run for.</p>
+    </dd>
 
     <dt>Wrong turns at an intersection</dt>
     <dd>How often a player takes a different trail than they meant to. They notice at the next intersection and replan.</dd>
@@ -208,6 +215,21 @@ code{font-family:var(--font-mono);font-size:.88em}
     <li><b>Spare players blocking doesn't pay.</b> Sending players with no checkpoint of their own to block (at the busiest intersection or next to a bus stop, leaving early or not) cost their team about a minute, because backing up a teammate gets the last checkpoints sooner. The blocks held other teams only about 5 seconds a player.</li>
     <li><b>When blockers leave matters little.</b> Timing their exit to the last checkpoints, instead of waiting until the team has them all, changed finish times by about 10 seconds. Blockers were the team's last ones onto a bus in about 1 game in 8 either way.</li>
     <li><b>Guarding helps only a little.</b> Guarding was an idea for making blocking pay toward the end of the game. With 150 games each, Two blockers together won 33 games with guarding against 20 without, when tied teams can leave. With the other two rules for leaving, the difference was within chance. "Everyone alone, spares guard" did no better than "Everyone alone", and worse when tied teams can leave, because one guard is beaten by one player arriving. Guarding moves the blockers away from the busiest intersection, so other teams were held less overall, not more. The teams being guarded against were good at gathering enough players to take the checkpoint.</li>
+    <li><b>Fewer bus stops makes blocking pay; fewer buses doesn't.</b> With 150 games each (Two blockers together / Everyone alone / Pairs, 1-minute hold):</li>
+  </ul>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Buses</th><th>Most, and tied teams</th><th>Only the blocking team</th><th>A lead frees everyone</th></tr></thead>
+    <tbody>
+      <tr><td>4 stops, every 5:00 each</td><td>20 / 100 / 30</td><td>42 / 86 / 22</td><td>35 / 68 / 47</td></tr>
+      <tr><td>4 stops, every 10:00 each</td><td>31 / 79 / 40</td><td>39 / 78 / 33</td><td>33 / 76 / 41</td></tr>
+      <tr><td>2 stops, every 2:30 each</td><td>42 / 76 / 32</td><td>40 / 79 / 31</td><td>29 / 69 / 52</td></tr>
+      <tr><td>2 stops, every 5:00 each</td><td>37 / 84 / 29</td><td>45 / 83 / 22</td><td>34 / 72 / 44</td></tr>
+      <tr><td>2 stops, every 10:00 each</td><td>30 / 77 / 43</td><td>38 / 72 / 40</td><td>37 / 68 / 45</td></tr>
+      <tr><td>1 stop, every 1:15</td><td>40 / 76 / 34</td><td>47 / 68 / 35</td><td>47 / 61 / 42</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li>With one or two stops, the busiest intersections are on everyone's way to the bus, so blockers sit where every team has to pass. Fewer buses mostly adds waiting (a game runs 1 to 3 minutes longer) and ties: with 2 stops and a bus every 10 minutes, 108 of 150 games were won on the tiebreak. Players were held on the way to the bus only about 10 seconds each in every version.</li>
     <li><b>Herding</b> happens 3 to 5 times a game and costs players 5 to 15 seconds each.</li>
     <li><b>Game length:</b> on schoolyard paths (40 m apart), a game takes about 5 minutes; on forest trails (250 m), about 35.</li>
   </ul>
