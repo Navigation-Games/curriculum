@@ -33,6 +33,14 @@ const glossaryEntries: GlossaryEntry[] = [
     definition: 'A signal from the leader (such as a whistle blast or raised hand) telling everyone to stop and gather at a designated spot.',
   },
   {
+    term: 'Handrail',
+    definition: 'A long feature you can follow, like a path, fence or stream, so you know where you are as you go.',
+  },
+  {
+    term: 'Intersection',
+    definition: "A place where two or more paths or trails meet. In orienteering it's also called a junction.",
+  },
+  {
     term: 'Landmark',
     definition: 'A distinct, recognizable object or location in the space. Good landmarks are easy to see from a distance and hard to confuse with others.',
   },

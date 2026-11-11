@@ -49,7 +49,7 @@ The operator can also decide who gets which channel when: for example, giving a 
 
 ### Levels
 
-**Level 1: school path network.** The schoolyard or school and park paths, with cones or numbered markers at the intersections. No radios: teams talk only when they meet. A short game in one class period, with the teacher as the game operator. The finish can be the start instead of bus stops, or a few "pickup" cones around the edge with times on a whiteboard.
+**Level 1: school path network.** The schoolyard or school and park paths, with cones or numbered markers at the intersections. No radios: teams talk only when they meet. A short game in one class period, with the teacher as the game operator. The finish can be the start instead of bus stops, or a few "pickup" cones around the edge with times on a whiteboard. Written up as an activity page: [Junction Control](https://curriculum.navigationgames.org/activities/core/junction-control/) (`content/activities/junction-control.md`).
 
 **Level 2: forest trails, or anywhere out of sight.** A trail network in the woods, a large campus, or even a building with hallways, where players can't see each other. This is where the earpieces or texting, the game operator's channels, the talk windows between teams, and the bus stops come in.
 

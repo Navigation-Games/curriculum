@@ -45,6 +45,7 @@ Related activities (readiness exercises, variations, extensions) live on their p
 | [Window-O](window-o) | Navigate with parts of the map removed |
 | [Vampire-O](vampire-o) | Score-O with a chase; vampires take your punch card |
 | [Capture the Flag-O](capture-the-flag-o) | Capture the flag with flags at mapped locations |
+| [Junction Control](junction-control) | Team game on a path network; the most players at an intersection block it |
 
 ## More games
 

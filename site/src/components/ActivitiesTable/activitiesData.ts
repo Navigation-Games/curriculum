@@ -477,6 +477,23 @@ const activities: ActivitySummary[] = [
       'Increase difficulty each round',
     ],
   },
+  {
+    name: 'Junction Control',
+    tagline: 'Teams race to visit every checkpoint on a path network, and the most players at an intersection block it',
+    time: '30-45 minutes',
+    lessons: 'Not in a lesson yet',
+    status: 'done',
+    icon: '',
+    image: '',
+    link: '/activities/core/junction-control',
+    description: 'A team game on a network of paths. Teams visit every checkpoint traveling only on paths. The team with the most players at an intersection blocks it, and outnumbered players are held until the blocking team lets them go.',
+    steps: [
+      'Make three teams and go over the rules',
+      'Teams plan with the map',
+      'Visit every checkpoint, staying on the paths',
+      'Everyone back to the start; first complete team wins',
+    ],
+  },
 ];
 
 export default activities;

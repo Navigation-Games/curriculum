@@ -37,6 +37,14 @@ A distinct object in the real world, such as a tree, bench, fence, or boulder. F
 
 A signal from the leader (such as a whistle blast or raised hand) telling everyone to stop and gather at a designated spot.
 
+#### Handrail
+
+A long feature you can follow, like a path, fence or stream, so you know where you are as you go.
+
+#### Intersection
+
+A place where two or more paths or trails meet. In orienteering it's also called a junction.
+
 #### Landmark
 
 A distinct, recognizable object or location in the space. Good landmarks are easy to see from a distance and hard to confuse with others.
