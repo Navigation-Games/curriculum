@@ -69,6 +69,7 @@ The operator can also decide who gets which channel when: for example, giving a 
 - **Rescue is a swap** under the other two rules: one more teammate ties the count, the held player leaves, and the rescuer is left outnumbered in their place. Barb: switching off could let players rest.
 - **Seeing blocks only up close** (40 or 100 m, or the last third of the trail) changed little: Everyone alone won 59 to 63 instead of 67.
 - **Blockers timing their exit** to the last checkpoints changed finish times by about 10 seconds.
+- **Guarding checkpoints helps only a little** (November 11, 2026). It was an idea for making blocking pay at the end: a held player doesn't get the checkpoint at that intersection, and late in the game blockers guard a checkpoint the other teams still need. Two blockers together won 33 of 150 with guarding against 20 without, when tied teams can leave. With the other rules for leaving, the difference was within chance. Spare players guarding did no better than backing up. Guards leave the busiest intersection, so other teams were held less overall, and attackers who know about a guard gather enough players to take it. Other ideas for end-game blocking, not yet tried: funnel the finish (one finish, bus stops behind a single "gate" intersection, a last checkpoint everyone must visit, fewer loops), or make a missed bus cost more (the whole team on one bus, fewer buses).
 - On a schoolyard network (40 m between intersections), a game takes about 5 minutes. On forest trails (250 m), about 35.
 
 ### Open questions

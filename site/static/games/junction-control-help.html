@@ -133,6 +133,9 @@ code{font-family:var(--font-mono);font-size:.88em}
     <dt>Herding</dt>
     <dd>When two teams meet head-on on a trail and one group is bigger, the smaller group turns around and walks back to the intersection it came from (past any bends), then waits there. When the herders arrive, the herded players are outnumbered, so they're held. Groups of the same size pass each other.</dd>
 
+    <dt>Guarding</dt>
+    <dd>A player who is held at an intersection doesn't get its checkpoint. They get it only once they're free to leave: when teammates arrive, or the other team leaves. If the hold limit runs out first, they're sent away without it. Guarding also changes what blockers do (see <a href="#guarding">Guarding</a>). It applies to checkpoints at intersections, not ones on trails.</dd>
+
     <dt>Players route around intersections where they'd be held</dt>
     <dd>With this off, players take the shortest route no matter what's ahead.</dd>
   </dl>
@@ -153,6 +156,7 @@ code{font-family:var(--font-mono);font-size:.88em}
     <dt>Whole team together</dt><dd>One big group.</dd>
     <dt>Blockers + pairs</dt><dd>One blocker (two, with 5 or more players) parks at the busiest intersection, and the second at the next busiest. The rest go in pairs. "Busiest" means on the most shortest routes between the checkpoints, the start and the bus stops.</dd>
     <dt>Two blockers together + pairs</dt><dd>Two blockers park together at the busiest intersection, and the rest go in pairs.</dd>
+    <dt>Everyone alone, spares guard</dt><dd>Like "Everyone alone", but with guarding on, a player with no checkpoint of their own left goes to guard instead of backing up a teammate. Without guarding, it plays exactly like "Everyone alone".</dd>
   </dl>
 
   <h2 id="players">How the players decide</h2>
@@ -167,6 +171,10 @@ code{font-family:var(--font-mono);font-size:.88em}
 
   <h3>Blockers and the bus</h3>
   <p>Blockers stay at their intersection until every checkpoint the team still needs (two at most) has a teammate headed for it. Then each blocker works out which bus the last of those teammates will catch, and leaves in time to catch a bus no later than that one, with 20 seconds to spare. A blocker who gets to a stop before the team has every checkpoint waits there.</p>
+
+  <h3 id="guarding">Guarding</h3>
+  <p>With guarding on, teams know which checkpoints the other teams still need, as if the game operator announced it. Once any team is down to 5 checkpoints or fewer, blockers leave their busy intersection to guard a checkpoint. They pick one that the most other teams still need, and that they can reach at least 15 seconds before any player who needs it, so they're there first. Spare guards (in "Everyone alone, spares guard") go to the same checkpoint as their team's other guards.</p>
+  <p>Players going for a checkpoint they know is guarded don't walk in alone. They wait at the point next to it until enough teammates have gathered to get it (a tie is enough when tied teams can leave), then go in together. They give up waiting after 2 minutes and go anyway.</p>
 
   <h3>Being let go</h3>
   <p>When the hold limit runs out, the held player leaves by the trail the "Who picks the way out" setting gives. A held player waiting their turn to leave (one at a time) is still held, and the hold clock keeps running.</p>
@@ -199,6 +207,7 @@ code{font-family:var(--font-mono);font-size:.88em}
     <li><b>How far players see blocks changes little</b> so far: "everyone alone" won 59 to 63 games in 100 with limited sight, against 67 when players always know. Players who see a block up close turn back about once every three games, or about twice a game when ties freeze everyone and there's no hold limit.</li>
     <li><b>Spare players blocking doesn't pay.</b> Sending players with no checkpoint of their own to block (at the busiest intersection or next to a bus stop, leaving early or not) cost their team about a minute, because backing up a teammate gets the last checkpoints sooner. The blocks held other teams only about 5 seconds a player.</li>
     <li><b>When blockers leave matters little.</b> Timing their exit to the last checkpoints, instead of waiting until the team has them all, changed finish times by about 10 seconds. Blockers were the team's last ones onto a bus in about 1 game in 8 either way.</li>
+    <li><b>Guarding helps only a little.</b> Guarding was an idea for making blocking pay toward the end of the game. With 150 games each, Two blockers together won 33 games with guarding against 20 without, when tied teams can leave. With the other two rules for leaving, the difference was within chance. "Everyone alone, spares guard" did no better than "Everyone alone", and worse when tied teams can leave, because one guard is beaten by one player arriving. Guarding moves the blockers away from the busiest intersection, so other teams were held less overall, not more. The teams being guarded against were good at gathering enough players to take the checkpoint.</li>
     <li><b>Herding</b> happens 3 to 5 times a game and costs players 5 to 15 seconds each.</li>
     <li><b>Game length:</b> on schoolyard paths (40 m apart), a game takes about 5 minutes; on forest trails (250 m), about 35.</li>
   </ul>

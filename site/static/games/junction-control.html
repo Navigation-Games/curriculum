@@ -196,6 +196,7 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
         <label class="check" for="oneAtATime"><input type="checkbox" id="oneAtATime" checked> One player leaves an intersection at a time (3 seconds apart)</label>
         <label class="check" for="rescue"><input type="checkbox" id="rescue" checked> Teams send someone to free a held teammate</label>
         <label class="check" for="herd"><input type="checkbox" id="herd"> Herding: a smaller group that meets a bigger one on a trail is herded back to the last intersection, and held there</label>
+        <label class="check" for="guard"><input type="checkbox" id="guard"> Guarding: a player held at an intersection doesn't get its checkpoint (and blockers move late in the game to guard a checkpoint other teams still need)</label>
         <label class="check" for="avoid"><input type="checkbox" id="avoid" checked> Players route around intersections where they'd be held</label>
       </div>
     </form>
@@ -241,6 +242,7 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
       <li>Players run 2.5 to 3.4 meters a second, and pairs and packs move at their slowest member's speed. Each group heads for the nearest checkpoint no other group on its team is going for. When none is left, it backs up a teammate by heading for the nearest one anyway.</li>
       <li>A rescue is a swap: when one more teammate would free a held player, the nearest free teammate within 350 meters comes. The held player leaves first, and the rescuer stays in their place (unless the rule frees both).</li>
       <li>Blockers leave their intersection when every remaining checkpoint (two at most) has a teammate headed for it, timed to catch a bus no later than the one the last of those teammates will catch.</li>
+      <li>With guarding on, a held player doesn't get the checkpoint at that intersection. Late in the game, blockers move to guard a checkpoint other teams still need and that they can reach first, and players going for a guarded checkpoint gather next to it until there are enough of them.</li>
       <li>"Players see a block" sets what players know. From anywhere, they route around every block. Otherwise they find out when they get close, may turn back, and remember what they saw for 3 minutes.</li>
       <li>Not in the simulator: talk between players or teams, deals, the game operator's announcements, players leaving the trails, or anyone staying lost for longer than one wrong turn.</li>
     </ul>
@@ -251,7 +253,7 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
 /* SIM START */
 const PERIOD = 300; // a bus leaves each stop every 5 minutes
 const TEAMS = [{name:'Red'},{name:'Green'},{name:'Blue'}];
-const STRATS = {pairs:'Pairs', scatter:'Everyone alone', packs:'Two packs', team:'Whole team together', blockers:'Blockers + pairs', wall:'Two blockers together + pairs'};
+const STRATS = {pairs:'Pairs', scatter:'Everyone alone', packs:'Two packs', team:'Whole team together', blockers:'Blockers + pairs', wall:'Two blockers together + pairs', guards:'Everyone alone, spares guard'};
 
 function rng(seed){let a=seed>>>0;return function(){a=(a+0x6D2B79F5)|0;let t=Math.imul(a^(a>>>15),1|a);t=(t+Math.imul(t^(t>>>7),61|t))^t;return((t^(t>>>14))>>>0)/4294967296;};}
 function shuffle(arr,R){for(let i=arr.length-1;i>0;i--){const j=Math.floor(R()*(i+1));const x=arr[i];arr[i]=arr[j];arr[j]=x;}return arr;}
@@ -360,7 +362,7 @@ function makeMap(seed,S){
 function makeGroups(n,strat){
   const g=[],all=[...Array(n).keys()];
   const chunk=(arr,k)=>{for(let i=0;i<arr.length;i+=k)g.push({role:'runner',members:arr.slice(i,i+k)});};
-  if(strat==='scatter')chunk(all,1);
+  if(strat==='scatter'||strat==='guards')chunk(all,1);
   else if(strat==='pairs')chunk(all,2);
   else if(strat==='packs')chunk(all,Math.ceil(n/2));
   else if(strat==='team')chunk(all,n);
@@ -462,6 +464,7 @@ function step(G){
   G.ctrl=computeControl(G);
   updateFree(G);
   look(G);
+  planGuards(G);
   planExits(G);
   planRescues(G);
   for(const p of G.players)if(p.state==='node')decide(G,p);
@@ -532,6 +535,69 @@ function edgeTarget(G,p){
   if(cp.node!=null)return cp.node;
   const e=M.edges[cp.edge];
   return M.dist[p.to][e.a]<=M.dist[p.to][e.b]?e.a:e.b;
+}
+
+// ---- Guarding (S.guard): a held player doesn't get the checkpoint at that intersection ----
+// Teams know which checkpoints the other teams still need (as if the game operator announced it).
+const GUARD_WHEN=5; // blockers start guarding once some team has this many checkpoints or fewer left
+// the checkpoint at an intersection that the most other teams still need, that the guards can reach first;
+// then the team closest to done; then the biggest head start
+function guardCp(G,team,p){
+  const M=G.M,from=p.state==='node'?p.node:p.to;let best=null,bv=-Infinity;
+  M.cps.forEach((c,i)=>{
+    if(c.node==null)return;
+    let need=0,close=0;
+    for(const o of G.teams){if(o===team||o.done||o.visited.has(i))continue;need++;close=Math.max(close,o.visited.size);}
+    if(!need)return;
+    // only checkpoints the guards can reach before any other team's player who still needs it
+    const mine=M.dist[from][c.node]/3;let theirs=Infinity;
+    for(const q of G.players){
+      if(q.team===team.i||q.state==='done'||G.teams[q.team].visited.has(i))continue;
+      const d=q.state==='node'?M.dist[q.node][c.node]:(q.len-q.s)+M.dist[q.to][c.node];
+      theirs=Math.min(theirs,d/q.speed);
+    }
+    if(theirs<mine+15)return;
+    const v=need*1e6+close*1e4+Math.min(theirs-mine,300)*10-M.dist[from][c.node];
+    if(v>bv){bv=v;best=i;}
+  });
+  return best;
+}
+function planGuards(G){
+  if(!G.S.guard)return;
+  const M=G.M,N=M.cps.length;
+  const late=G.teams.some(t=>!t.done&&N-t.visited.size<=GUARD_WHEN);
+  for(const team of G.teams){
+    if(team.done)continue;
+    const gs=G.players.filter(p=>p.team===team.i&&p.role==='blocker'&&p.state!=='done'&&p.exitStop==null&&(p.spare||late));
+    if(!gs.length)continue;
+    const cur=team.guardCp;
+    if(cur==null||!G.teams.some(o=>o!==team&&!o.done&&!o.visited.has(cur))){
+      const ci=guardCp(G,team,gs[0]);
+      if(ci!==cur){team.guardCp=ci;if(ci!=null)log(G,`${team.name} sends ${gs.length>1?gs.length+' players':'a player'} to guard checkpoint ${M.cps[ci].num}`,team.i);}
+    }
+    if(team.guardCp!=null)for(const p of gs)p.guard=M.cps[team.guardCp].node;
+  }
+}
+// Runners heading for a guarded checkpoint gather at the point next to it until there are enough of them to get it.
+function stageFor(G,team,p,ci){
+  const M=G.M,cn=M.cps[ci].node,c=known(G,p,cn);
+  team.stage=team.stage||{};
+  let st=team.stage[ci];
+  if(st&&st.go){if(G.t-st.goAt>60)delete team.stage[ci];return null;}
+  if(!wouldHold(G,c,team.i,1)){if(st)delete team.stage[ci];return null;}
+  let need=1;while(need<team.size&&wouldHold(G,c,team.i,need))need++;
+  if(!st){
+    const nb=M.next[cn][p.node];
+    if(nb==null||nb<0||nb===cn)return null;
+    st=team.stage[ci]={node:nb,since:G.t,go:false};
+  }
+  const here=G.players.filter(q=>q.team===team.i&&q.state==='node'&&q.node===st.node).length;
+  if(here>=need||G.t-st.since>120){
+    st.go=true;st.goAt=G.t;
+    log(G,`${team.name} gathers ${here} at ${J(M,st.node)} and goes for checkpoint ${M.cps[ci].num}`,team.i);
+    return null;
+  }
+  return st.node;
 }
 
 // ---- Blockers leave in time to catch the bus the team's last checkpoint-getter will catch ----
@@ -616,7 +682,7 @@ function arrive(G,p,at){
   if(G.arrNodes)G.arrNodes.add(p.node);
   if(!team.done){
     const ec=G.M.cpByEdge.get(eid);if(ec!=null)visit(G,team,ec);
-    const nc=G.M.cpByNode.get(p.node);if(nc!=null)visit(G,team,nc);
+    const nc=G.M.cpByNode.get(p.node);if(nc!=null&&!G.S.guard)visit(G,team,nc); // with guarding, decide() checks the hold first
   }
 }
 
@@ -680,6 +746,11 @@ function resultText(G){
 function decide(G,p){
   const S=G.S,team=G.teams[p.team],c=G.ctrl[p.node];
   if(team.done){p.stop=bestStop(G,p).si;if(p.node===G.M.stops[p.stop].node){p.herd=null;finishPlayer(G,p);return;}}
+  if(S.guard&&!team.done){
+    // guarding: you get the checkpoint at an intersection only if you're free to leave it
+    const ci=G.M.cpByNode.get(p.node);
+    if(ci!=null&&!team.visited.has(ci)&&canLeave(G,p,c))visit(G,team,ci);
+  }
   if(p.herd){
     // herded players wait at the intersection until the herders arrive (or 45 seconds pass)
     // a bend isn't an intersection: keep going back along the trail to the intersection
@@ -752,6 +823,7 @@ function assignCp(G,team,g,node){
     if(cost<ba){ba=cost;any=i;}
     if(!claimed.has(i)&&cost<bc){bc=cost;best=i;}
   });
+  g.dup=best==null; // every checkpoint left already has a teammate headed for it
   g.cp=best!=null?best:any;
 }
 
@@ -763,8 +835,16 @@ function targetNode(G,p){
   const g=team.groups[p.group];
   if(g.cp==null||team.visited.has(g.cp))assignCp(G,team,g,p.node);
   if(g.cp==null)return null;
+  if(G.S.guard&&team.strat==='guards'&&g.dup&&g.role==='runner'){
+    // a spare player goes to guard instead of backing up a teammate
+    const ci=team.guardCp!=null?team.guardCp:guardCp(G,team,p);
+    if(ci!=null){team.guardCp=ci;g.role='blocker';p.role='blocker';p.spare=true;p.guard=M.cps[ci].node;log(G,`${team.name} sends a spare player to guard checkpoint ${M.cps[ci].num}`,team.i);return p.guard;}
+  }
   const cp=M.cps[g.cp];
-  if(cp.node!=null)return cp.node;
+  if(cp.node!=null){
+    if(G.S.guard){const st=stageFor(G,team,p,g.cp);if(st!=null)return st;}
+    return cp.node;
+  }
   const e=M.edges[cp.edge];
   if(p.node===e.a)return e.b;
   if(p.node===e.b)return e.a;
@@ -858,7 +938,7 @@ function readSettings(){
     holdLimit:hl==='inf'?Infinity:+hl,release:$('#release').value,tie:$('#tie').value,control:$('#control').value,
     sight:['all','third'].includes($('#sight').value)?$('#sight').value:+$('#sight').value,
     oneAtATime:$('#oneAtATime').checked,cols:+$('#netSize').value.split('x')[0],rows:+$('#netSize').value.split('x')[1],spacing:+$('#spacing').value,density:$('#density').value,
-    rescue:$('#rescue').checked,herd:$('#herd').checked,avoid:$('#avoid').checked,wrong:+$('#wrong').value,limit:+$('#limit').value*60,
+    rescue:$('#rescue').checked,herd:$('#herd').checked,guard:$('#guard').checked,avoid:$('#avoid').checked,wrong:+$('#wrong').value,limit:+$('#limit').value*60,
     strats:[$('#s0').value,$('#s1').value,$('#s2').value]};
 }
 function rebuild(newSeed){
