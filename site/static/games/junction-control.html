@@ -185,6 +185,7 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
       <div class="field">
         <label class="check" for="oneAtATime"><input type="checkbox" id="oneAtATime" checked> One player leaves an intersection at a time (3 seconds apart)</label>
         <label class="check" for="rescue"><input type="checkbox" id="rescue" checked> Teams send someone to free a held teammate</label>
+        <label class="check" for="herd"><input type="checkbox" id="herd"> Herding: a smaller group that meets a bigger one on a trail is herded back to the last intersection, and held there</label>
         <label class="check" for="avoid"><input type="checkbox" id="avoid" checked> Players route around intersections where they'd be held</label>
       </div>
     </form>
@@ -231,6 +232,7 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
       <li>When the blocking team picks the way out, it sends the held player toward whichever trail leads farthest from where that player is trying to go.</li>
       <li>With rescue on, if one more teammate would tie the count, the nearest free teammate within 350 meters comes to help.</li>
       <li>A wrong turn sends a player down a different trail than they meant to take. They notice at the next intersection and replan.</li>
+      <li>With herding on, a group that meets a bigger group of another team head-on along a trail turns around, walks back to the intersection it came from at its usual pace, and waits there. When the herders arrive, the herded players are outnumbered, so they're held. Groups of the same size pass each other.</li>
       <li>Once a team has every checkpoint, each player heads for whichever bus they can catch soonest, at any stop. The team finishes when its last player's bus leaves. A player who gets held on the way can miss a bus and hold the whole team up.</li>
       <li>Not in the simulator: talk between teams, deals, the game operator's announcements, players leaving the trails, or anyone staying lost for longer than one wrong turn.</li>
     </ul>
@@ -399,6 +401,7 @@ function canLeave(G,p,c){
 
 function step(G){
   if(G.over)return;
+  if(G.S.herd)herd(G);
   for(const p of G.players){
     if(p.state!=='edge')continue;
     p.s+=p.speed;
@@ -409,6 +412,36 @@ function step(G){
   for(const p of G.players)if(p.state==='node')decide(G,p);
   G.t++;
   checkOver(G);
+}
+
+// Herding: when two teams meet head-on on a trail, the smaller group turns around and is herded,
+// at a steady pace, back to the intersection it came from. It waits there for the herders, who hold it.
+const HERD_GROUP=12; // meters: players of one team this close together count as one group
+function herd(G){
+  const byEdge=new Map();
+  for(const p of G.players){
+    if(p.state!=='edge'||p.herd)continue;
+    const e=G.M.edges[p.edge],dir=p.from===e.a?1:-1,x=dir>0?p.s:p.len-p.s;
+    if(!byEdge.has(p.edge))byEdge.set(p.edge,[]);
+    byEdge.get(p.edge).push({p,dir,x});
+  }
+  for(const list of byEdge.values()){
+    for(const u of list)for(const v of list){
+      if(u.dir!==1||v.dir!==-1||u.p.team===v.p.team||u.p.herd||v.p.herd)continue;
+      const gap=v.x-u.x;
+      if(gap<0||gap>u.p.speed+v.p.speed+1)continue;
+      const A=list.filter(w=>w.dir===1&&w.p.team===u.p.team&&!w.p.herd&&Math.abs(w.x-u.x)<=HERD_GROUP);
+      const B=list.filter(w=>w.dir===-1&&w.p.team===v.p.team&&!w.p.herd&&Math.abs(w.x-v.x)<=HERD_GROUP);
+      if(A.length===B.length)continue;
+      const [small,big]=A.length<B.length?[A,B]:[B,A];
+      const by=big[0].p.team;
+      for(const w of small){
+        const p=w.p;[p.from,p.to]=[p.to,p.from];p.s=p.len-p.s;
+        p.herd={team:by,n:big.length,since:null};
+      }
+      log(G,`${G.teams[by].name} (${big.length}) meets ${G.teams[small[0].p.team].name} (${small.length}) on the trail and herds them back to ${J(small[0].p.to)}`,by);
+    }
+  }
 }
 
 function arrive(G,p,at){
@@ -479,7 +512,14 @@ function resultText(G){
 
 function decide(G,p){
   const S=G.S,team=G.teams[p.team],c=G.ctrl[p.node];
-  if(team.done){p.stop=bestStop(G,p).si;if(p.node===G.M.stops[p.stop].node){finishPlayer(G,p);return;}}
+  if(team.done){p.stop=bestStop(G,p).si;if(p.node===G.M.stops[p.stop].node){p.herd=null;finishPlayer(G,p);return;}}
+  if(p.herd){
+    // herded players wait at the intersection until the herders arrive (or 45 seconds pass)
+    if(p.herd.since==null)p.herd.since=G.t;
+    const here=c?c.counts[p.herd.team]:0,mine=c?c.counts[p.team]:1;
+    if(here<Math.min(p.herd.n,mine+1)&&G.t-p.herd.since<45){team.heldSec++;return;}
+    p.herd=null;
+  }
   if(!canLeave(G,p,c)){
     if(p.heldSince==null){p.heldSince=G.t;log(G,`${team.name} is held at ${J(p.node)} by ${G.teams[c.ctrl].name} (${countText(G,c)})`,p.team);}
     team.heldSec++;
@@ -626,7 +666,7 @@ function readSettings(){
   return {nTeams:+$('#nTeams').value,perTeam:+$('#perTeam').value,nCp:+$('#nCp').value,cpMode:$('#cpMode').value,
     holdLimit:hl==='inf'?Infinity:+hl,release:$('#release').value,tie:$('#tie').value,control:$('#control').value,
     oneAtATime:$('#oneAtATime').checked,cols:+$('#netSize').value.split('x')[0],rows:+$('#netSize').value.split('x')[1],spacing:+$('#spacing').value,density:$('#density').value,
-    rescue:$('#rescue').checked,avoid:$('#avoid').checked,wrong:+$('#wrong').value,limit:+$('#limit').value*60,
+    rescue:$('#rescue').checked,herd:$('#herd').checked,avoid:$('#avoid').checked,wrong:+$('#wrong').value,limit:+$('#limit').value*60,
     strats:[$('#s0').value,$('#s1').value,$('#s2').value]};
 }
 function rebuild(newSeed){
