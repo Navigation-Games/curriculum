@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Junction Control Help</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#edf0eb; --panel:#ffffff; --fg:#18201b; --muted:#56615a; --line:#d4dad2; --accent:#a3268f;
+  --font-display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101512; --panel:#18201b; --fg:#e3eae4; --muted:#99a69e; --line:#2a342e; --accent:#d65dc1; color-scheme:dark;
+}}
+:root[data-theme="dark"]{--bg:#101512; --panel:#18201b; --fg:#e3eae4; --muted:#99a69e; --line:#2a342e; --accent:#d65dc1; color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.6;margin:0}
+.wrap{max-width:780px;margin:0 auto;padding:22px 16px 64px}
+.eyebrow{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin:0 0 4px}
+.eyebrow a{color:inherit}
+h1{font-family:var(--font-display);font-weight:700;font-size:clamp(2.2rem,5.5vw,3.2rem);line-height:.95;margin:0 0 12px;text-transform:uppercase}
+h2{font-family:var(--font-display);font-weight:600;font-size:1.5rem;line-height:1.1;text-transform:uppercase;letter-spacing:.03em;margin:40px 0 10px;padding-top:14px;border-top:1px solid var(--line)}
+h3{font-size:1rem;font-weight:600;margin:22px 0 6px}
+p,li{max-width:72ch}
+ul{padding-left:1.2em}
+li{margin:4px 0}
+li::marker{color:var(--accent)}
+a{color:var(--accent)}
+nav ul{columns:2;column-gap:28px;padding-left:1.1em}
+@media (max-width:560px){nav ul{columns:1}}
+dt{font-weight:600;margin-top:12px}
+dd{margin:2px 0 0 0;max-width:72ch}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem;font-variant-numeric:tabular-nums;margin:8px 0}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:500}
+.note{color:var(--muted);font-size:.92rem}
+code{font-family:var(--font-mono);font-size:.88em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow"><a href="junction-control.html">Junction Control simulator</a> · Help</p>
+  <h1>Junction Control: how the simulator works</h1>
+  <p>Junction Control is a team game on a trail network. Teams race to visit every checkpoint, traveling only on trails. The team with the most players at an intersection blocks it, and players who arrive outnumbered are held until the blocking team lets them go. When a team has every checkpoint, its players head for buses around the edge of the map, and the first team with everyone on a bus wins.</p>
+  <p>The simulator plays the game with dots, so we can try rules and ways of playing before trying them with real people. The school version is the <a href="/activities/core/junction-control/">Junction Control activity</a>.</p>
+
+  <nav aria-label="On this page"><ul>
+    <li><a href="#map">Reading the map</a></li>
+    <li><a href="#controls">Buttons</a></li>
+    <li><a href="#rules">Rules settings</a></li>
+    <li><a href="#network">Trail network settings</a></li>
+    <li><a href="#teams">Teams and ways of playing</a></li>
+    <li><a href="#players">How the players decide</a></li>
+    <li><a href="#batch">Trying the rules over many games</a></li>
+    <li><a href="#findings">What the simulator has shown</a></li>
+    <li><a href="#missing">Not in the simulator yet</a></li>
+  </ul></nav>
+
+  <h2 id="map">Reading the map</h2>
+  <ul>
+    <li><b>Trails</b> are the dashed lines. Players travel only on them.</li>
+    <li><b>Intersections</b> are the numbered places where three or more trails meet. A bend in a trail (two ways to go) or a dead end (one) isn't an intersection: it has no number, and nobody blocks or is held there.</li>
+    <li><b>Checkpoints</b> are the purple circles. A small colored dot under a checkpoint shows that team has it.</li>
+    <li><b>The start</b> is the purple triangle. Nobody can block the start.</li>
+    <li><b>Bus stops</b> are the dashed boxes on the edge (B1 to B4). A bus leaves each stop every 5 minutes, and the stops take turns: B1 at 0:00, B2 at 1:15, B3 at 2:30, B4 at 3:45, then every 5 minutes after. Each bus pulls up 90 seconds before it leaves and drives off along the edge. Players waiting for a bus stand next to the stop, and ride away as colored dots in the bus.</li>
+    <li><b>Players</b> are dots in their team's color. Squares are blockers. A hollow dot is a held player.</li>
+    <li><b>A blocked intersection</b> has a light circle in the blocking team's color.</li>
+  </ul>
+  <p>The race board on the right shows each team's checkpoints, how many players are held now, the total time its players have been held, and what the team is doing. "What happened" lists the game's events, newest first.</p>
+
+  <h2 id="controls">Buttons</h2>
+  <dl>
+    <dt>Play / Pause</dt><dd>Starts and stops the game. After a game ends, it replays the same map.</dd>
+    <dt>+10 s</dt><dd>Moves the game ahead 10 seconds, for watching one moment closely.</dd>
+    <dt>Restart</dt><dd>Starts over on the same map.</dd>
+    <dt>New map</dt><dd>Makes a new random trail network.</dd>
+    <dt>Speed</dt><dd>How fast game time runs: 30× means 30 seconds of game time each second.</dd>
+  </dl>
+  <p>Changing any setting restarts the game on the same map.</p>
+
+  <h2 id="rules">Rules settings</h2>
+  <dl>
+    <dt>How long a team can hold someone</dt>
+    <dd>"No blocking" turns blocking off, so the game is just a race. With 30 seconds, 1 minute or 2 minutes, a held player waits that long, then the blocking team must let them go. With "until they're no longer outnumbered", a held player waits until enough teammates arrive or the other team's players leave.</dd>
+
+    <dt>Who picks the way out</dt>
+    <dd>When the hold limit runs out: "The blocking team" sends the held player down whichever trail leads farthest from where they're going. "Back the way they came" sends them back. "The held player" lets them choose.</dd>
+
+    <dt>Who can leave an intersection</dt>
+    <dd>
+      <p>Three versions of the rule. In each one, the team with the most players at an intersection blocks it, and a tie goes to the team already blocking.</p>
+      <ul>
+        <li><b>The team with the most, and teams tied with it.</b> If 2 Red are holding 1 Green and a second Green arrives, the count is tied and either Green can leave. Since players leave one at a time, the first Green to go leaves the other outnumbered again. So a rescue here is really a swap.</li>
+        <li><b>Only the team blocking it.</b> A tie isn't enough. To free a held player, teammates have to outnumber the blockers.</li>
+        <li><b>A team with the most: all its players there, even as they leave. A tie for the most: nobody.</b> When a team gets the most players at an intersection, all its players there are free, and they stay free as they leave one by one, so a rescue can get everyone out. If someone arrives and ties the count for the most, everyone there is stuck until the count changes or the hold limit runs out. A lone player passing an intersection where two other teams are tied is stuck too.</li>
+      </ul>
+    </dd>
+
+    <dt>Players see a block</dt>
+    <dd>
+      <p>How much players know about blocks they haven't reached yet.</p>
+      <ul>
+        <li><b>From anywhere:</b> every player always knows every block on the map, as if teammates reported them all, and routes around the ones where they'd be held.</li>
+        <li><b>From 100 m or 40 m away:</b> a player sees an intersection once they're that close along the trail. Standing at an intersection, they also see neighboring intersections that close.</li>
+        <li><b>From the last third of the trail to it:</b> a player sees the intersection ahead once they're two thirds of the way along the trail.</li>
+        <li><b>Only when they get there.</b></li>
+      </ul>
+      <p>When a player sees that they'd be held at the intersection ahead, they compare going on (and waiting out a hold) with turning back and going around. If a held teammate is there and their arrival would free them, they go on and rescue. Pairs and packs make the choice together. Players remember what they've seen for 3 minutes, and plan routes around blocks they remember. They don't share what they see with teammates (see <a href="#missing">Not in the simulator yet</a>).</p>
+    </dd>
+
+    <dt>Checkpoints, Checkpoints are</dt>
+    <dd>How many checkpoints, and whether they're at intersections or halfway along trails. At intersections, they go on real intersections first. On a small network without enough intersections, some go at bends and dead ends.</dd>
+
+    <dt>Wrong turns at an intersection</dt>
+    <dd>How often a player takes a different trail than they meant to. They notice at the next intersection and replan.</dd>
+
+    <dt>Time limit</dt>
+    <dd>If no team is on a bus by then, the team with the most checkpoints is ahead, but nobody wins.</dd>
+
+    <dt>One player leaves an intersection at a time</dt>
+    <dd>Departures from an intersection are 3 seconds apart, so every departure changes the count before the next player goes.</dd>
+
+    <dt>Teams send someone to free a held teammate</dt>
+    <dd>See <a href="#rescue">Rescues</a>.</dd>
+
+    <dt>Herding</dt>
+    <dd>When two teams meet head-on on a trail and one group is bigger, the smaller group turns around and walks back to the intersection it came from (past any bends), then waits there. When the herders arrive, the herded players are outnumbered, so they're held. Groups of the same size pass each other.</dd>
+
+    <dt>Players route around intersections where they'd be held</dt>
+    <dd>With this off, players take the shortest route no matter what's ahead.</dd>
+  </dl>
+
+  <h2 id="network">Trail network settings</h2>
+  <dl>
+    <dt>Network size</dt><dd>The number of points across and down. Each point becomes an intersection, a bend or a dead end, depending on how many trails reach it. The line above the map says how many intersections the map has.</dd>
+    <dt>Distance between intersections</dt><dd>40 m is schoolyard paths, 80 m school and park, 150 m a park or campus, 250 m forest trails.</dd>
+    <dt>Trails</dt><dd>Few, some or many loops. More loops means more intersections and more ways around a block.</dd>
+  </dl>
+
+  <h2 id="teams">Teams and ways of playing</h2>
+  <p>Three teams, or two head to head, with 2 to 8 players each. Each team plays one of these ways:</p>
+  <dl>
+    <dt>Everyone alone</dt><dd>Each player goes off on their own.</dd>
+    <dt>Pairs</dt><dd>Players go in twos.</dd>
+    <dt>Two packs</dt><dd>The team splits in half.</dd>
+    <dt>Whole team together</dt><dd>One big group.</dd>
+    <dt>Blockers + pairs</dt><dd>One blocker (two, with 5 or more players) parks at the busiest intersection, and the second at the next busiest. The rest go in pairs. "Busiest" means on the most shortest routes between the checkpoints, the start and the bus stops.</dd>
+    <dt>Two blockers together + pairs</dt><dd>Two blockers park together at the busiest intersection, and the rest go in pairs.</dd>
+  </dl>
+
+  <h2 id="players">How the players decide</h2>
+  <h3>Speed</h3>
+  <p>Players run 2.5 to 3.4 meters a second. Pairs and packs move at their slowest member's speed.</p>
+
+  <h3>Which checkpoint</h3>
+  <p>Each group heads for the nearest checkpoint that no other group on its team is going for. When every checkpoint the team still needs has someone headed for it, the group heads for the nearest one anyway, as a backup. That's worth more than it sounds: the split isn't planned, so a backup is often closer than the teammate who claimed it. A team always knows which checkpoints it has, as if it had a team channel.</p>
+
+  <h3 id="rescue">Rescues</h3>
+  <p>When a player is held and one more teammate would free them, the nearest free teammate within 350 meters comes. A rescue is a swap: the held player leaves first, and the rescuer stays in their place. Under the "a team with the most" rule, the rescuer gives the team the most players, so both can leave. A player who swapped in isn't rescued in turn; they wait out the hold. Players who can only see blocks up close become rescuers when they happen on a held teammate they can free.</p>
+
+  <h3>Blockers and the bus</h3>
+  <p>Blockers stay at their intersection until every checkpoint the team still needs (two at most) has a teammate headed for it. Then each blocker works out which bus the last of those teammates will catch, and leaves in time to catch a bus no later than that one, with 20 seconds to spare. A blocker who gets to a stop before the team has every checkpoint waits there.</p>
+
+  <h3>Being let go</h3>
+  <p>When the hold limit runs out, the held player leaves by the trail the "Who picks the way out" setting gives. A held player waiting their turn to leave (one at a time) is still held, and the hold clock keeps running.</p>
+
+  <h3>Buses</h3>
+  <p>Once a team has every checkpoint, each player heads for whichever bus they can catch soonest, at any stop. The team finishes when its last player's bus leaves. If two teams finish on buses leaving at the same moment, the team whose last player reached a stop first wins.</p>
+
+  <h2 id="batch">Trying the rules over many games</h2>
+  <p>"Run 100 games" plays 100 games with the settings and teams on the page, each on a new random network, and counts wins, buses made, average bus time, checkpoints and time held. Use it to see whether a rule makes the game lopsided, or whether one way of playing always beats the others. With 100 games, a difference of 10 wins or so can be chance.</p>
+
+  <h2 id="findings">What the simulator has shown</h2>
+  <p class="note">From batches of 100 to 150 games, November 2026, with 5 players a team, 10 checkpoints at intersections and a 6 × 5 network 150 m apart unless it says otherwise. The simulator has changed since some of these, so the numbers are rough.</p>
+  <ul>
+    <li><b>Spreading out wins.</b> "Everyone alone" wins most games against pairs, packs or blockers. Covering checkpoints in parallel matters more than winning intersections. "Whole team together" never won.</li>
+    <li><b>Two blockers together at the busiest intersection is the play that makes blocking matter.</b> Other teams' players lose 40 seconds to a minute each to holds. It still wins less often than "everyone alone".</li>
+    <li><b>The rule for who can leave changes the game more than anything else.</b> With Two blockers together, Everyone alone and Pairs:</li>
+  </ul>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Who can leave</th><th>Hold limit</th><th>Wins (Two blockers / Alone / Pairs)</th><th>Held, per player</th></tr></thead>
+    <tbody>
+      <tr><td>Most, and tied teams</td><td>1 minute</td><td>14 / 67 / 19</td><td>about 40 s</td></tr>
+      <tr><td>Most, and tied teams</td><td>Until not outnumbered</td><td>14 / 71 / 15</td><td>about 1 min</td></tr>
+      <tr><td>Only the blocking team</td><td>Until not outnumbered</td><td>26 / 46 / 28</td><td>about 1.5 min</td></tr>
+      <tr><td>A lead frees everyone; a tie freezes</td><td>1 minute</td><td>20 / 46 / 34</td><td>about 1 min</td></tr>
+      <tr><td>A lead frees everyone; a tie freezes</td><td>Until not outnumbered</td><td>20 / 45 / 31</td><td>2 to 4 min</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li><b>Rescues matter most when a tie freezes everyone.</b> With "a lead frees everyone" and no hold limit, rescues cut the time held from about 9 minutes a player to about 3. With the other rules, rescue on or off changes little.</li>
+    <li><b>How far players see blocks changes little</b> so far: "everyone alone" won 59 to 63 games in 100 with limited sight, against 67 when players always know. Players who see a block up close turn back about once every three games, or about twice a game when ties freeze everyone and there's no hold limit.</li>
+    <li><b>Spare players blocking doesn't pay.</b> Sending players with no checkpoint of their own to block (at the busiest intersection or next to a bus stop, leaving early or not) cost their team about a minute, because backing up a teammate gets the last checkpoints sooner. The blocks held other teams only about 5 seconds a player.</li>
+    <li><b>When blockers leave matters little.</b> Timing their exit to the last checkpoints, instead of waiting until the team has them all, changed finish times by about 10 seconds. Blockers were the team's last ones onto a bus in about 1 game in 8 either way.</li>
+    <li><b>Herding</b> happens 3 to 5 times a game and costs players 5 to 15 seconds each.</li>
+    <li><b>Game length:</b> on schoolyard paths (40 m apart), a game takes about 5 minutes; on forest trails (250 m), about 35.</li>
+  </ul>
+
+  <h2 id="missing">Not in the simulator yet</h2>
+  <ul>
+    <li><b>Talking by text.</b> Players telling teammates which checkpoints they've got and which intersections are blocked, and by whom. For now a team always knows its checkpoints, and each player knows only the blocks they've seen (or all of them, with "From anywhere").</li>
+    <li><b>Planning the split.</b> Teams dividing the checkpoints at the start, the way they do in the activity's planning time, instead of each group taking the nearest one as it goes.</li>
+    <li>Talk between teams and deals, the game operator's announcements, players leaving the trails, and anyone staying lost for longer than one wrong turn.</li>
+  </ul>
+</div>
+</body>
+</html>

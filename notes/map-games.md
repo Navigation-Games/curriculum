@@ -48,6 +48,7 @@ The operator can also decide who gets which channel when: for example, giving a 
 - **A lone player at an intersection blocks it**, and can leave at any time in any direction.
 - **Ties go to the team already blocking.** Nobody has to track arrival order.
 - **One player leaves an intersection at a time.** So a group that's holding someone can't all walk off at once, and each departure changes the count.
+- **An intersection has at least 3 ways to leave it.** A bend in a trail (2 ways) or a dead end (1) isn't an intersection: no blocking or holding there, and it gets no number on the map.
 
 ### Levels
 
@@ -57,12 +58,17 @@ The operator can also decide who gets which channel when: for example, giving a 
 
 ### What the simulator shows
 
-[Simulator](https://curriculum.navigationgames.org/games/junction-control.html) (November 2026; the file is `site/static/games/junction-control.html`, not linked from the site menus). Over 60 random games with the default rules (hold up to 1 minute, 5 players a team, 10 checkpoints):
+[Simulator](https://curriculum.navigationgames.org/games/junction-control.html) (November 2026; the file is `site/static/games/junction-control.html`, not linked from the site menus). Its [help page](https://curriculum.navigationgames.org/games/junction-control-help.html) explains every setting and how the players decide, and `site/static/games/README.md` covers how it's built and tested. Over 60 random games with the default rules (hold up to 1 minute, 5 players a team, 10 checkpoints):
 
 - **Spreading out wins.** "Everyone alone" beats pairs and packs about three games in four, because covering checkpoints in parallel matters more than winning intersections. Whole-team-together never won.
 - **Holding rarely happens by accident.** Teams lose only a second or two per player to holds, unless someone blocks on purpose.
 - **One blocker per intersection doesn't pay.** A lone blocker is outnumbered by any pair, and the team is one runner short. Its team won 1 game in 60.
 - **Two blockers together at the busiest intersection do work.** Other teams' players lose over a minute each to holds, and and the blocking team won 27 of 60 games against "everyone alone" when the whole team had to take the same bus. Once each player can take any bus, it won 15 to "everyone alone"'s 39, because players who are already spread out can each catch the nearest bus. This is still the play that makes blocking matter.
+- **Spare players blocking doesn't pay either** (tested November 11, 2026). When a player has no checkpoint left that a teammate isn't already going for, the simulator normally sends them toward one anyway, as a backup. Sending them to block instead (at the busiest intersection, or next to a bus stop, with or without leaving early for the bus) cost their team about a minute: the backups get the last checkpoints sooner, because the team's split of checkpoints isn't perfect. The blocks held other teams only about 5 seconds a player, since the blocking starts late and one intersection catches few players by then. Sending spares to wait at a bus stop did a little better than blocking, but still worse than backing up.
+- **Who can leave an intersection changes the game most** (November 11, 2026, Two blockers together vs Everyone alone vs Pairs). With "the most, and tied teams" and a 1-minute hold, Everyone alone won 67 of 100. With "only the blocking team" and no hold limit, 46, and the blockers 26. With Barb's "a lead frees everyone there, a tie freezes everyone", Everyone alone won 45 to 46 and players were held 1 to 4 minutes each. Under that rule, rescues cut the time held from about 9 minutes a player to 3.
+- **Rescue is a swap** under the other two rules: one more teammate ties the count, the held player leaves, and the rescuer is left outnumbered in their place. Barb: switching off could let players rest.
+- **Seeing blocks only up close** (40 or 100 m, or the last third of the trail) changed little: Everyone alone won 59 to 63 instead of 67.
+- **Blockers timing their exit** to the last checkpoints changed finish times by about 10 seconds.
 - On a schoolyard network (40 m between intersections), a game takes about 5 minutes. On forest trails (250 m), about 35.
 
 ### Open questions
@@ -71,4 +77,6 @@ The operator can also decide who gets which channel when: for example, giving a 
 - **How does everyone see who's blocking?** Arrival order no longer matters (ties go to the team already blocking), but players still need to see the block at a glance. Low-tech, for Level 1: a team-colored clip or flag that the blocking team puts on the intersection marker. Fancier: team-colored light sticks like the ones at K-pop concerts, which glow the team's color, and maybe blink when a player is held. Concert light sticks are switched centrally by the venue's system; whether a game operator could do that is worth looking into. An electronic timing box at each intersection would also log every arrival, but that takes a lot of boxes.
 - **Checkpoints at intersections or on the trails between them?** At intersections makes them worth fighting over; on trails makes route choice matter more.
 - **Scoring if no team gets every checkpoint.** Most checkpoints by the last pickup time, with ties broken by arrival time at pickup?
+- **Who can leave an intersection?** Three versions in the simulator: the team with the most and teams tied with it; only the blocking team; or Barb's idea (November 11, 2026), where a team with the most frees all its players there (they stay free as they leave one by one, so a rescue gets everyone out) and a tie for the most freezes everyone. Not yet thought through: under the last one, a lone player passing an intersection where two other teams are tied is stuck too.
+- **Simulator, next:** players texting teammates (which checkpoints they have, which intersections are blocked and by whom) instead of knowing everything; and teams planning the checkpoint split at the start, as in the activity's planning time.
 - **How to make blocking matter more,** since spreading out wins: more checkpoints than players, fewer loops in the network, or a bonus for holding an intersection.

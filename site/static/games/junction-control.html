@@ -101,7 +101,7 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
 
 <div class="wrap">
   <header>
-    <p class="eyebrow"><a href="/" style="color:inherit">Navigation Games curriculum</a> · Trail network game simulator</p>
+    <p class="eyebrow"><a href="/" style="color:inherit">Navigation Games curriculum</a> · Trail network game simulator · <a href="junction-control-help.html" style="color:inherit">Help</a></p>
     <h1>Junction Control</h1>
     <p class="lede">Teams race to visit every checkpoint, traveling only on trails. The team with the most players at an intersection blocks it, and players who arrive outnumbered are held until the blocking team lets them go. When a team has every checkpoint, everyone heads for a bus stop on the edge of the map. The first team with everyone on a bus wins.</p>
   </header>
@@ -128,7 +128,8 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
         <span><svg width="26" height="8" aria-hidden="true"><line x1="0" y1="4" x2="26" y2="4" style="stroke:var(--fg);stroke-width:1.7;stroke-dasharray:6 3"/></svg>Trail</span>
         <span><svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" style="fill:none;stroke:var(--map-cp);stroke-width:2"/></svg>Checkpoint</span>
         <span><svg width="16" height="16" aria-hidden="true"><path d="M8 2 L14 13 L2 13 Z" style="fill:none;stroke:var(--map-cp);stroke-width:2"/></svg>Start (no blocking here)</span>
-        <span><svg width="22" height="16" aria-hidden="true"><rect x="1" y="2" width="20" height="12" rx="3" style="fill:var(--map-bus)"/></svg>Bus stop</span>
+        <span><svg width="22" height="16" aria-hidden="true"><rect x="1" y="2" width="20" height="12" rx="3" style="fill:none;stroke:var(--map-bus);stroke-width:1.5;stroke-dasharray:3 2"/></svg>Bus stop</span>
+        <span><svg width="26" height="16" aria-hidden="true"><rect x="1" y="1" width="24" height="14" rx="3" style="fill:var(--map-bus)"/></svg>Bus</span>
         <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" style="fill:var(--team0)"/></svg>Player</span>
         <span><svg width="14" height="14" aria-hidden="true"><rect x="2" y="2" width="10" height="10" style="fill:var(--team0)"/></svg>Blocker</span>
         <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.6" style="fill:var(--panel);stroke:var(--team0);stroke-width:2.2"/></svg>Held</span>
@@ -165,10 +166,19 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
           <option value="back">Back the way they came</option>
           <option value="held">The held player</option>
         </select></div>
-      <div class="field"><label for="tie">Ties</label>
+      <div class="field"><label for="tie">Who can leave an intersection</label>
         <select id="tie">
-          <option value="pass" selected>Tied teams can leave; the team already blocking keeps it</option>
-          <option value="first">Only the team already blocking can leave</option>
+          <option value="pass" selected>The team with the most, and teams tied with it (the team already blocking keeps the block)</option>
+          <option value="first">Only the team blocking it (ties go to the team already blocking)</option>
+          <option value="lead">A team with the most: all its players there, even as they leave. A tie for the most: nobody</option>
+        </select></div>
+      <div class="field"><label for="sight">Players see a block</label>
+        <select id="sight">
+          <option value="all" selected>From anywhere (they always know)</option>
+          <option value="100">From 100 m away</option>
+          <option value="40">From 40 m away</option>
+          <option value="third">From the last third of the trail to it</option>
+          <option value="0">Only when they get there</option>
         </select></div>
       <input type="hidden" id="control" value="most">
       <div class="field"><label for="nCp">Checkpoints</label>
@@ -194,7 +204,7 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
   <section class="block" aria-labelledby="netH">
     <h2 id="netH">Trail network</h2>
     <form class="fields" id="netForm" onsubmit="return false">
-      <div class="field"><label for="netSize">Intersections (across × down)</label>
+      <div class="field"><label for="netSize">Network size (points across × down)</label>
         <select id="netSize"><option value="4x3">4 × 3</option><option value="5x4">5 × 4</option><option value="6x5" selected>6 × 5</option><option value="8x6">8 × 6</option><option value="10x7">10 × 7</option></select></div>
       <div class="field"><label for="spacing">Distance between intersections</label>
         <select id="spacing"><option value="40">40 m (schoolyard paths)</option><option value="80">80 m (school and park)</option><option value="150" selected>150 m (park or campus)</option><option value="250">250 m (forest trails)</option></select></div>
@@ -225,16 +235,14 @@ td .sw{display:inline-block;margin-right:6px;vertical-align:middle}
 
   <section class="block notes" aria-labelledby="notesH">
     <h2 id="notesH">How the simulator plays</h2>
+    <p>The short version is below. <a href="junction-control-help.html">The help page</a> explains every setting, each way of playing, and what the simulator has shown so far.</p>
     <ul>
-      <li>The map is a random trail network about 900 by 620 meters. Players run 2.5 to 3.4 meters a second, and pairs and packs move at their slowest member's speed.</li>
-      <li>Each pair or pack heads for the nearest checkpoint that no other group on its team is going for. A team always knows which checkpoints it has (the team channel).</li>
-      <li>"Everyone alone" sends each player off on their own. "Blockers + pairs" parks one or two players at the busiest intersections to hold other teams up, and sends the rest out in pairs.</li>
-      <li>When the blocking team picks the way out, it sends the held player toward whichever trail leads farthest from where that player is trying to go.</li>
-      <li>With rescue on, if one more teammate would tie the count, the nearest free teammate within 350 meters comes to help.</li>
-      <li>A wrong turn sends a player down a different trail than they meant to take. They notice at the next intersection and replan.</li>
-      <li>With herding on, a group that meets a bigger group of another team head-on along a trail turns around, walks back to the intersection it came from at its usual pace, and waits there. When the herders arrive, the herded players are outnumbered, so they're held. Groups of the same size pass each other.</li>
-      <li>Once a team has every checkpoint, each player heads for whichever bus they can catch soonest, at any stop. The team finishes when its last player's bus leaves. A player who gets held on the way can miss a bus and hold the whole team up.</li>
-      <li>Not in the simulator: talk between teams, deals, the game operator's announcements, players leaving the trails, or anyone staying lost for longer than one wrong turn.</li>
+      <li>An intersection is a place with at least three ways to leave it. Bends and dead ends get no number, and nobody blocks or is held there.</li>
+      <li>Players run 2.5 to 3.4 meters a second, and pairs and packs move at their slowest member's speed. Each group heads for the nearest checkpoint no other group on its team is going for. When none is left, it backs up a teammate by heading for the nearest one anyway.</li>
+      <li>A rescue is a swap: when one more teammate would free a held player, the nearest free teammate within 350 meters comes. The held player leaves first, and the rescuer stays in their place (unless the rule frees both).</li>
+      <li>Blockers leave their intersection when every remaining checkpoint (two at most) has a teammate headed for it, timed to catch a bus no later than the one the last of those teammates will catch.</li>
+      <li>"Players see a block" sets what players know. From anywhere, they route around every block. Otherwise they find out when they get close, may turn back, and remember what they saw for 3 minutes.</li>
+      <li>Not in the simulator: talk between players or teams, deals, the game operator's announcements, players leaving the trails, or anyone staying lost for longer than one wrong turn.</li>
     </ul>
   </section>
 </div>
@@ -249,7 +257,18 @@ function rng(seed){let a=seed>>>0;return function(){a=(a+0x6D2B79F5)|0;let t=Mat
 function shuffle(arr,R){for(let i=arr.length-1;i>0;i--){const j=Math.floor(R()*(i+1));const x=arr[i];arr[i]=arr[j];arr[j]=x;}return arr;}
 function bez(M,e,t){const A=M.nodes[e.a],B=M.nodes[e.b],u=1-t;return{x:u*u*A.x+2*u*t*e.cx+t*t*B.x,y:u*u*A.y+2*u*t*e.cy+t*t*B.y};}
 function fmt(t){t=Math.max(0,Math.round(t));return Math.floor(t/60)+':'+String(t%60).padStart(2,'0');}
-function J(n){return 'intersection '+(n+1);}
+// An intersection is a place with at least 3 ways to leave. Bends (2 ways) and dead ends (1) are just points on a trail.
+function J(M,n){
+  if(M.isX[n])return 'intersection '+M.label[n];
+  const s=M.stops.find(s=>s.node===n);
+  return s?'bus stop '+s.label:n===M.start?'the start':M.adj[n].length===1?'a dead end':'a bend';
+}
+// follow a trail from `from` through `to` and on through any bends, to the next intersection (or dead end)
+function ahead(M,from,to){
+  let prev=from,cur=to;
+  for(let k=0;k<M.nodes.length&&!M.isX[cur]&&M.adj[cur].length===2;k++){const nx=M.adj[cur][0].to===prev?M.adj[cur][1].to:M.adj[cur][0].to;prev=cur;cur=nx;}
+  return cur;
+}
 
 function makeMap(seed,S){
   const R=rng(seed);
@@ -284,6 +303,8 @@ function makeMap(seed,S){
   M.adj=nodes.map(()=>[]);
   for(const e of M.edges){M.adj[e.a].push({to:e.b,e:e.id});M.adj[e.b].push({to:e.a,e:e.id});}
   M.edgeBetween=(a,b)=>{for(const x of M.adj[a])if(x.to===b)return x.e;return -1;};
+  M.isX=nodes.map((_,i)=>M.adj[i].length>=3);
+  let nX=0;M.label=nodes.map((_,i)=>M.isX[i]?++nX:null);M.nX=nX;
   const dist=[],next=[];
   for(let i=0;i<n;i++){dist.push(new Float64Array(n).fill(Infinity));next.push(new Int16Array(n).fill(-1));dist[i][i]=0;next[i][i]=i;}
   for(const e of M.edges){dist[e.a][e.b]=dist[e.b][e.a]=e.len;next[e.a][e.b]=e.b;next[e.b][e.a]=e.a;}
@@ -306,11 +327,14 @@ function makeMap(seed,S){
   const isStop=new Set(M.stops.map(s=>s.node));
   const S0=nodes[M.start];
   const pt=c=>c.node!=null?nodes[c.node]:bez(M,M.edges[c.edge],.5);
-  const pool=S.cpMode==='trail'
-    ?shuffle(M.edges.filter(e=>e.a!==M.start&&e.b!==M.start).map(e=>({edge:e.id,node:null})),R)
-    :shuffle(nodes.filter(p=>p.id!==M.start&&!isStop.has(p.id)).map(p=>({node:p.id,edge:null})),R);
+  // "at intersections": real intersections first; bends and dead ends only if there aren't enough intersections
+  const spots=nodes.filter(p=>p.id!==M.start&&!isStop.has(p.id));
+  const pools=S.cpMode==='trail'
+    ?[shuffle(M.edges.filter(e=>e.a!==M.start&&e.b!==M.start).map(e=>({edge:e.id,node:null})),R)]
+    :[shuffle(spots.filter(p=>M.isX[p.id]).map(p=>({node:p.id,edge:null})),R),shuffle(spots.filter(p=>!M.isX[p.id]).map(p=>({node:p.id,edge:null})),R)];
   const cps=[];
-  for(let f=1;cps.length<S.nCp&&f>0.04;f*=.75){
+  for(let pi=0;pi<pools.length;pi++)for(let f=1;cps.length<S.nCp&&f>0.04;f*=.75){
+    const pool=pools.slice(0,pi+1).flat();
     for(const c of pool){
       if(cps.length>=S.nCp)break;
       if(cps.includes(c))continue;
@@ -329,7 +353,7 @@ function makeMap(seed,S){
   cps.forEach(c=>{if(c.node!=null)interest.add(c.node);else{interest.add(M.edges[c.edge].a);interest.add(M.edges[c.edge].b);}});
   const cnt=new Array(n).fill(0),I=[...interest];
   for(let i=0;i<I.length;i++)for(let j=i+1;j<I.length;j++){let u=next[I[i]][I[j]];while(u!==-1&&u!==I[j]){cnt[u]++;u=next[u][I[j]];}}
-  M.hubs=nodes.map(p=>p.id).filter(i=>i!==M.start&&!isStop.has(i)).sort((a,b)=>cnt[b]-cnt[a]);
+  M.hubs=nodes.map(p=>p.id).filter(i=>i!==M.start&&!isStop.has(i)&&M.isX[i]).sort((a,b)=>cnt[b]-cnt[a]);
   return M;
 }
 
@@ -373,7 +397,7 @@ function computeControl(G){
   for(const p of G.players){
     if(p.state!=='node')continue;
     let c=ctrl[p.node];
-    if(!c)c=ctrl[p.node]={counts:new Array(nT).fill(0),first:new Array(nT).fill(Infinity),total:0,max:0,ctrl:-1,node:p.node,neutral:p.node===M.start};
+    if(!c)c=ctrl[p.node]={counts:new Array(nT).fill(0),first:new Array(nT).fill(Infinity),total:0,max:0,ctrl:-1,node:p.node,neutral:p.node===M.start||!M.isX[p.node]};
     c.counts[p.team]++;c.total++;
     if(p.arrivedAt<c.first[p.team])c.first[p.team]=p.arrivedAt;
   }
@@ -393,14 +417,42 @@ function computeControl(G){
 
 function countText(G,c){return c.counts.map((n,ti)=>n?n+' '+G.teams[ti].name:null).filter(Boolean).join(', ');}
 
+// Who can leave (the "Who can leave an intersection" setting, S.tie):
+//  pass  the team with the most, and teams tied with it
+//  first only the team blocking it
+//  lead  a team with the most frees all its players there, and they stay free as they leave one by one.
+//        An arrival that ties the count for the most freezes everyone there.
 function canLeave(G,p,c){
   if(G.S.holdLimit===0||!c||c.neutral)return true;
+  if(G.S.tie==='lead')return !!p.free;
   if(c.ctrl<0||c.ctrl===p.team)return true;
   return c.counts[p.team]===c.max&&G.S.tie==='pass';
+}
+// would k more players of team ti, arriving at an intersection that looks like c, be held there?
+function wouldHold(G,c,ti,k){
+  if(!c||c.neutral||G.S.holdLimit===0)return false;
+  let om=0;c.counts.forEach((n,t)=>{if(t!==ti&&n>om)om=n;});
+  if(om===0)return false;
+  const mine=c.counts[ti]+k;
+  if(G.S.tie==='pass')return mine<om;
+  if(G.S.tie==='first')return c.ctrl!==ti&&mine<=om;
+  return mine<=om;
+}
+function updateFree(G){
+  if(G.S.tie!=='lead')return;
+  const nT=G.teams.length;
+  for(const p of G.players){
+    if(p.state!=='node')continue;
+    const c=G.ctrl[p.node];if(!c||c.neutral)continue;
+    let lead=-1,n=0;for(let ti=0;ti<nT;ti++)if(c.counts[ti]===c.max){n++;lead=ti;}
+    if(n===1&&lead===p.team)p.free=true;
+    else if(G.arrNodes.has(p.node))p.free=false;
+  }
 }
 
 function step(G){
   if(G.over)return;
+  G.arrNodes=new Set();
   if(G.S.herd)herd(G);
   for(const p of G.players){
     if(p.state!=='edge')continue;
@@ -408,10 +460,124 @@ function step(G){
     if(p.s>=p.len)arrive(G,p,G.t+1-(p.s-p.len)/p.speed);
   }
   G.ctrl=computeControl(G);
+  updateFree(G);
+  look(G);
+  planExits(G);
   planRescues(G);
   for(const p of G.players)if(p.state==='node')decide(G,p);
   G.t++;
   checkOver(G);
+}
+
+// ---- Seeing blocks ----
+// With S.sight 'all', players always know every block (as if everyone reports them).
+// Otherwise each player knows only what they've seen, and remembers it for MEMORY seconds.
+const MEMORY=180;
+function known(G,p,node){
+  if(G.S.sight==='all')return G.ctrl[node];
+  if(p.state==='node'&&p.node===node)return G.ctrl[node];
+  const k=p.seen&&p.seen.get(node);
+  return k&&G.t-k.t<=MEMORY?k.c:null;
+}
+function look(G){
+  const S=G.S,M=G.M;
+  if(S.sight==='all')return;
+  for(const p of G.players){
+    if(p.state==='done')continue;
+    if(!p.seen)p.seen=new Map();
+    const see=n=>p.seen.set(n,{t:G.t,c:G.ctrl[n]||null});
+    if(p.state==='node'){
+      see(p.node);
+      if(typeof S.sight==='number')for(const a of M.adj[p.node])if(M.edges[a.e].len<=S.sight)see(a.to);
+    }else if(!p.herd){
+      const ok=S.sight==='third'?p.s>=p.len*2/3:p.len-p.s<=S.sight;
+      if(ok){see(p.to);if(!p.looked){p.looked=true;approach(G,p);}}
+    }
+  }
+}
+// A player who can see the intersection ahead decides what to do about it.
+function approach(G,p){
+  const S=G.S,M=G.M,team=G.teams[p.team],c=G.ctrl[p.to],g=team.groups[p.group];
+  if(!c||c.neutral)return;
+  if(g.turn&&g.turn.edge===p.edge&&g.turn.to===p.to&&G.t-g.turn.t<=8){if(g.turn.back)turnBack(G,p);return;} // stay with my group
+  const coming=G.players.filter(q=>q.team===p.team&&q.state==='edge'&&q.edge===p.edge&&q.to===p.to&&!q.herd&&Math.abs(q.s-p.s)<=HERD_GROUP).length;
+  if(!wouldHold(G,c,p.team,coming)){
+    // going on anyway; if a teammate is held there and we'd free them, we're the rescue
+    if(S.rescue&&!team.done&&!p.rescue&&p.role!=='blocker'){
+      const h=G.players.find(q=>q.team===p.team&&q.state==='node'&&q.node===p.to&&q.heldSince!=null&&q.rescuer==null);
+      if(h){p.rescue={node:p.to,for:h.id};h.rescuer=p.id;}
+    }
+    return;
+  }
+  const tgt=edgeTarget(G,p);
+  if(tgt==null||tgt===p.to||!S.avoid)return; // it's where I'm going (to block or rescue), or players don't avoid blocks
+  const pen=holdPen(G);
+  const goOn=(p.len-p.s)+pen+M.dist[p.to][tgt];
+  const r=route(G,p,p.from,tgt,1);
+  const back=p.s+r.d[tgt];
+  const turn=back<goOn;
+  g.turn={edge:p.edge,to:p.to,t:G.t,back:turn};
+  if(turn){log(G,`${team.name} sees ${countText(G,c)} at ${J(M,p.to)} and turns back`,p.team);turnBack(G,p);}
+}
+function turnBack(G,p){[p.from,p.to]=[p.to,p.from];p.s=p.len-p.s;p.looked=false;}
+// where a player on a trail is heading, without changing any plans
+function edgeTarget(G,p){
+  const team=G.teams[p.team],M=G.M;
+  if(team.done)return M.stops[bestStop(G,p).si].node;
+  if(p.rescue)return p.rescue.node;
+  if(p.role==='blocker')return p.exitStop!=null?M.stops[p.exitStop].node:p.guard;
+  const g=team.groups[p.group];
+  if(g.cp==null||team.visited.has(g.cp))return null;
+  const cp=M.cps[g.cp];
+  if(cp.node!=null)return cp.node;
+  const e=M.edges[cp.edge];
+  return M.dist[p.to][e.a]<=M.dist[p.to][e.b]?e.a:e.b;
+}
+
+// ---- Blockers leave in time to catch the bus the team's last checkpoint-getter will catch ----
+const EXIT_MARGIN=20;
+function cpCost(M,node,c){return c.node!=null?M.dist[node][c.node]:Math.min(M.dist[node][M.edges[c.edge].a],M.dist[node][M.edges[c.edge].b])+M.edges[c.edge].len;}
+function planExits(G){
+  const M=G.M;
+  for(const team of G.teams){
+    if(team.done)continue;
+    const blockers=G.players.filter(p=>p.team===team.i&&p.role==='blocker'&&p.state!=='done'&&p.exitStop==null);
+    if(!blockers.length)continue;
+    const runners=G.players.filter(p=>p.team===team.i&&p.role!=='blocker'&&p.state!=='done');
+    if(!runners.length)continue;
+    // Wait until the last checkpoint or two each have a teammate headed for them. Then: when will the
+    // team have every checkpoint, and where will the last one be?
+    const left=M.cps.map((c,i)=>i).filter(i=>!team.visited.has(i));
+    if(left.length>2)continue;
+    let D=-1,lastNode=null,lastSp=3,ok=true;
+    for(const i of left){
+      const c=M.cps[i];
+      let best=Infinity,sp=3;
+      for(const r of runners){
+        if(team.groups[r.group].cp!==i)continue;
+        const d=r.state==='node'?cpCost(M,r.node,c):(r.len-r.s)+cpCost(M,r.to,c);
+        if(d/r.speed<best){best=d/r.speed;sp=r.speed;}
+      }
+      if(best===Infinity){ok=false;break;}
+      if(G.t+best>D){D=G.t+best;lastSp=sp;lastNode=c.node!=null?c.node:M.edges[c.edge].a;}
+    }
+    if(!ok||lastNode==null)continue;
+    let B=Infinity;
+    for(const s of M.stops)B=Math.min(B,nextBus(s,D+M.dist[lastNode][s.node]/lastSp));
+    for(const b of blockers){
+      const at=b.state==='node'?b.node:b.to,extra=b.state==='node'?0:b.len-b.s;
+      let leave=-Infinity,stop=null;
+      M.stops.forEach((s,si)=>{
+        const bus=s.offset+Math.floor((B-s.offset)/PERIOD)*PERIOD; // the last bus at this stop that's no later than B
+        const L=bus-(extra+M.dist[at][s.node])/b.speed;
+        if(L>leave){leave=L;stop=si;}
+      });
+      if(G.t>=leave-EXIT_MARGIN){
+        b.exitStop=stop;
+        log(G,`${team.name}'s blocker leaves ${J(M,b.guard)} for bus stop ${M.stops[stop].label}, to be on a bus by ${fmt(Math.max(B,G.t))}`,team.i);
+      }
+    }
+  }
 }
 
 // Herding: when two teams meet head-on on a trail, the smaller group turns around and is herded,
@@ -439,14 +605,15 @@ function herd(G){
         const p=w.p;[p.from,p.to]=[p.to,p.from];p.s=p.len-p.s;
         p.herd={team:by,n:big.length,since:null};
       }
-      log(G,`${G.teams[by].name} (${big.length}) meets ${G.teams[small[0].p.team].name} (${small.length}) on the trail and herds them back to ${J(small[0].p.to)}`,by);
+      log(G,`${G.teams[by].name} (${big.length}) meets ${G.teams[small[0].p.team].name} (${small.length}) on the trail and herds them back to ${J(G.M,ahead(G.M,small[0].p.from,small[0].p.to))}`,by);
     }
   }
 }
 
 function arrive(G,p,at){
   const team=G.teams[p.team],eid=p.edge;
-  p.prev=p.from;p.node=p.to;p.state='node';p.edge=null;p.arrivedAt=at;p.s=0;
+  p.prev=p.from;p.node=p.to;p.state='node';p.edge=null;p.arrivedAt=at;p.s=0;p.free=false;
+  if(G.arrNodes)G.arrNodes.add(p.node);
   if(!team.done){
     const ec=G.M.cpByEdge.get(eid);if(ec!=null)visit(G,team,ec);
     const nc=G.M.cpByNode.get(p.node);if(nc!=null)visit(G,team,nc);
@@ -515,35 +682,52 @@ function decide(G,p){
   if(team.done){p.stop=bestStop(G,p).si;if(p.node===G.M.stops[p.stop].node){p.herd=null;finishPlayer(G,p);return;}}
   if(p.herd){
     // herded players wait at the intersection until the herders arrive (or 45 seconds pass)
+    // a bend isn't an intersection: keep going back along the trail to the intersection
+    if(!G.M.isX[p.node]&&p.node!==G.M.start&&G.M.adj[p.node].length===2){
+      const nx=G.M.adj[p.node].map(a=>a.to).find(o=>o!==p.prev);
+      if(nx!=null&&go(G,p,nx)){team.heldSec++;return;}
+    }
     if(p.herd.since==null)p.herd.since=G.t;
     const here=c?c.counts[p.herd.team]:0,mine=c?c.counts[p.team]:1;
     if(here<Math.min(p.herd.n,mine+1)&&G.t-p.herd.since<45){team.heldSec++;return;}
     p.herd=null;
   }
+  if(p.rescue&&p.node===p.rescue.node){
+    // A rescue is a swap: the held teammate leaves first, and the rescuer stays (unless the rule frees both)
+    const h=G.players[p.rescue.for],hHere=h.state==='node'&&h.node===p.node;
+    if(p.rescue.wait==null)p.rescue.wait=G.t;
+    if(hHere&&h.heldSince!=null&&canLeave(G,h,c)&&G.t-p.rescue.wait<10)return;
+    if(!hHere&&!canLeave(G,p,c)){p.swapIn=true;log(G,`${team.name} swaps a fresh player in at ${J(G.M,p.node)}`,p.team);}
+    if(h.rescuer===p.id)h.rescuer=null;
+    p.rescue=null;
+  }
   if(!canLeave(G,p,c)){
-    if(p.heldSince==null){p.heldSince=G.t;log(G,`${team.name} is held at ${J(p.node)} by ${G.teams[c.ctrl].name} (${countText(G,c)})`,p.team);}
+    const own=c.ctrl===p.team||c.ctrl<0;
+    if(p.heldSince==null){p.heldSince=G.t;log(G,own?`${team.name} is stuck at ${J(G.M,p.node)} in a tie (${countText(G,c)})`:`${team.name} is held at ${J(G.M,p.node)} by ${G.teams[c.ctrl].name} (${countText(G,c)})`,p.team);}
     team.heldSec++;
     if(Number.isFinite(S.holdLimit)&&G.t-p.heldSince>=S.holdLimit){
-      const nxt=releaseDir(G,p);
-      if(nxt!=null){const from=p.node;if(go(G,p,nxt)){log(G,`${G.teams[c.ctrl].name} lets ${team.name} go from ${J(from)}, toward ${J(nxt)}`,c.ctrl);p.heldSince=null;}}
+      const nxt=own?chooseNext(G,p):releaseDir(G,p);
+      if(nxt!=null){const from=p.node;if(go(G,p,nxt)){log(G,own?`${team.name} leaves ${J(G.M,from)} after the hold limit`:`${G.teams[c.ctrl].name} lets ${team.name} go from ${J(G.M,from)}, toward ${J(G.M,ahead(G.M,from,nxt))}`,own?p.team:c.ctrl);p.heldSince=null;}}
     }
     return;
   }
-  p.heldSince=null;
+  // free to go. The hold clock keeps running while a player waits their turn to leave (one at a time).
   const nxt=chooseNext(G,p);
-  if(nxt!=null)go(G,p,nxt);
+  if(nxt==null)p.heldSince=null;
+  else if(go(G,p,nxt))p.heldSince=null;
 }
 
 const LEAVE_GAP=3; // seconds between departures from one intersection
 function go(G,p,nxt){
   const e=G.M.edgeBetween(p.node,nxt);
   if(e<0)return false;
-  if(G.S.oneAtATime&&p.node!==G.M.start){
+  if(G.S.oneAtATime&&p.node!==G.M.start&&G.M.isX[p.node]){
     const last=G.lastLeave.get(p.node);
     if(last!=null&&G.t-last<LEAVE_GAP)return false;
     G.lastLeave.set(p.node,G.t);
   }
   p.state='edge';p.edge=e;p.from=p.node;p.to=nxt;p.node=null;p.s=0;p.len=G.M.edges[e].len;
+  p.swapIn=false;p.looked=false;p.free=false;
   return true;
 }
 
@@ -575,7 +759,7 @@ function targetNode(G,p){
   const team=G.teams[p.team],M=G.M;
   if(team.done){if(p.stop==null)p.stop=bestStop(G,p).si;return M.stops[p.stop].node;}
   if(p.rescue)return p.rescue.node;
-  if(p.role==='blocker')return p.guard;
+  if(p.role==='blocker')return p.exitStop!=null?M.stops[p.exitStop].node:p.guard;
   const g=team.groups[p.group];
   if(g.cp==null||team.visited.has(g.cp))assignCp(G,team,g,p.node);
   if(g.cp==null)return null;
@@ -614,22 +798,27 @@ function pathNext(G,p,tgt){
   const M=G.M;
   if(!G.S.avoid||G.S.holdLimit===0)return M.next[p.node][tgt];
   const here=G.ctrl[p.node],mine=here?here.counts[p.team]:1;
-  const pen=Number.isFinite(G.S.holdLimit)?G.S.holdLimit*3:600;
+  const r=route(G,p,p.node,tgt,mine);
+  return r.first[tgt]>=0?r.first[tgt]:M.next[p.node][tgt];
+}
+function holdPen(G){return Number.isFinite(G.S.holdLimit)?G.S.holdLimit*3:600;}
+// shortest route from src, with a penalty for each intersection the player knows they'd be held at
+function route(G,p,src,tgt,mine){
+  const M=G.M,pen=holdPen(G);
   const n=M.nodes.length,d=new Float64Array(n).fill(Infinity),first=new Int16Array(n).fill(-1),done=new Uint8Array(n);
-  d[p.node]=0;
+  d[src]=0;
   for(;;){
     let u=-1,bv=Infinity;
     for(let i=0;i<n;i++)if(!done[i]&&d[i]<bv){bv=d[i];u=i;}
     if(u<0||u===tgt)break;
     done[u]=1;
     for(const a of M.adj[u]){
-      const c=G.ctrl[a.to];
       let w=M.edges[a.e].len;
-      if(c&&!c.neutral&&c.ctrl>=0&&c.ctrl!==p.team&&c.counts[p.team]+mine<c.max)w+=pen;
-      if(d[u]+w<d[a.to]){d[a.to]=d[u]+w;first[a.to]=u===p.node?a.to:first[u];}
+      if(a.to!==tgt&&wouldHold(G,known(G,p,a.to),p.team,mine))w+=pen;
+      if(d[u]+w<d[a.to]){d[a.to]=d[u]+w;first[a.to]=u===src?a.to:first[u];}
     }
   }
-  return first[tgt]>=0?first[tgt]:M.next[p.node][tgt];
+  return {d,first};
 }
 
 function planRescues(G){
@@ -639,8 +828,9 @@ function planRescues(G){
     for(const h of G.players){
       if(h.team!==team.i||h.state!=='node'||h.heldSince==null)continue;
       if(h.rescuer!=null){const q=G.players[h.rescuer];if(q.rescue&&q.rescue.for===h.id&&q.state!=='done')continue;h.rescuer=null;}
+      // send someone only if one more player would free the held teammate, and not for a player who swapped in
       const c=G.ctrl[h.node];
-      if(!c||c.max-c.counts[team.i]!==1)continue;
+      if(!c||h.swapIn||c.max-c.counts[team.i]+(G.S.tie==='pass'?0:1)!==1)continue;
       let best=null,bd=350;
       for(const q of G.players){
         if(q.team!==team.i||q===h||q.role==='blocker'||q.state==='done'||q.heldSince!=null||q.rescue)continue;
@@ -648,7 +838,7 @@ function planRescues(G){
         const d=q.state==='node'?G.M.dist[q.node][h.node]:(q.len-q.s)+G.M.dist[q.to][h.node];
         if(d<bd){bd=d;best=q;}
       }
-      if(best){best.rescue={node:h.node,for:h.id};h.rescuer=best.id;log(G,`${team.name} sends a player to free a teammate at ${J(h.node)}`,team.i);}
+      if(best){best.rescue={node:h.node,for:h.id};h.rescuer=best.id;log(G,`${team.name} sends a player to free a teammate at ${J(G.M,h.node)}`,team.i);}
     }
   }
 }
@@ -656,6 +846,7 @@ function planRescues(G){
 
 /* ---------- page ---------- */
 const $=s=>document.querySelector(s);
+const BUS_COME=20,BUS_WAIT=90,BUS_GO=20; // seconds of game time: a bus pulls up, waits at the stop, then drives off
 const MONO='"IBM Plex Mono", ui-monospace, monospace', DISPLAY='"Barlow Condensed", "Arial Narrow", sans-serif';
 let S,M,G,seed=4127,playing=!window.matchMedia('(prefers-reduced-motion: reduce)').matches,acc=0,last=performance.now(),lastPanel=0,lastLogLen=-1,C={};
 
@@ -665,6 +856,7 @@ function readSettings(){
   const hl=$('#holdLimit').value;
   return {nTeams:+$('#nTeams').value,perTeam:+$('#perTeam').value,nCp:+$('#nCp').value,cpMode:$('#cpMode').value,
     holdLimit:hl==='inf'?Infinity:+hl,release:$('#release').value,tie:$('#tie').value,control:$('#control').value,
+    sight:['all','third'].includes($('#sight').value)?$('#sight').value:+$('#sight').value,
     oneAtATime:$('#oneAtATime').checked,cols:+$('#netSize').value.split('x')[0],rows:+$('#netSize').value.split('x')[1],spacing:+$('#spacing').value,density:$('#density').value,
     rescue:$('#rescue').checked,herd:$('#herd').checked,avoid:$('#avoid').checked,wrong:+$('#wrong').value,limit:+$('#limit').value*60,
     strats:[$('#s0').value,$('#s1').value,$('#s2').value]};
@@ -675,9 +867,9 @@ function rebuild(newSeed){
   $('#s2').disabled=S.nTeams<3;
   M=makeMap(seed,S);G=makeGame(M,S,seed);acc=0;lastLogLen=-1;
   const km2=M.W*M.H/1e6;
-  $('#seedLabel').textContent=`Map ${seed} · ${km2.toFixed(2)} km² (${Math.round(km2*247.105)} acres)`;
+  $('#seedLabel').textContent=`Map ${seed} · ${M.nX} intersections · ${km2.toFixed(2)} km² (${Math.round(km2*247.105)} acres)`;
   $('#map').style.aspectRatio=`${M.W}/${M.H}`;
-  $('#busNote').textContent='Buses leave every 5 minutes: '+M.stops.map(s=>`${s.label} at ${fmt(s.offset)}`).join(', ')+', and every 5 minutes after.';
+  $('#busNote').textContent='Buses leave every 5 minutes: '+M.stops.map(s=>`${s.label} at ${fmt(s.offset)}`).join(', ')+', and every 5 minutes after. Each bus pulls up 90 seconds before it leaves.';
   updatePanel(true);
 }
 function readColors(){
@@ -715,16 +907,40 @@ function draw(){
   ctx.setLineDash([]);
   // intersection numbers
   ctx.font=`500 ${px(9.5)}px ${MONO}`;ctx.fillStyle=C['map-ink-soft'];ctx.textAlign='right';ctx.textBaseline='top';
-  for(const n of M.nodes)ctx.fillText(String(n.id+1),n.x-px(5),n.y+px(5));
-  // bus stops
-  ctx.font=`700 ${px(11)}px ${DISPLAY}`;ctx.textAlign='center';ctx.textBaseline='middle';
-  for(const s of M.stops){
+  for(const n of M.nodes)if(M.isX[n.id])ctx.fillText(String(M.label[n.id]),n.x-px(5),n.y+px(5));
+  // bus stops, with a bus that pulls up, waits, and drives off along the edge of the map
+  const T=G.t+(playing&&!G.over?acc:0);
+  const rrect=(x,y,w,h,r)=>{ctx.beginPath();if(ctx.roundRect)ctx.roundRect(x,y,w,h,r);else ctx.rect(x,y,w,h);};
+  ctx.textAlign='center';ctx.textBaseline='middle';
+  M.stops.forEach((s,si)=>{
     const n=M.nodes[s.node],bx=n.x+s.dx*px(30),by=n.y+s.dy*px(24);
     ctx.strokeStyle=C['map-bus'];ctx.lineWidth=px(1.5);ctx.beginPath();ctx.moveTo(n.x,n.y);ctx.lineTo(bx,by);ctx.stroke();
-    ctx.fillStyle=C['map-bus'];ctx.beginPath();
-    if(ctx.roundRect)ctx.roundRect(bx-px(13),by-px(8),px(26),px(16),px(3));else ctx.rect(bx-px(13),by-px(8),px(26),px(16));
-    ctx.fill();ctx.fillStyle=C['map-paper'];ctx.fillText(s.label,bx,by+px(.5));
-  }
+    // the stop itself: an outline, seen when no bus is there
+    ctx.font=`700 ${px(11)}px ${DISPLAY}`;
+    rrect(bx-px(13),by-px(8),px(26),px(16),px(3));ctx.fillStyle=C['map-paper'];ctx.fill();
+    ctx.setLineDash([px(3),px(2)]);ctx.stroke();ctx.setLineDash([]);
+    ctx.fillStyle=C['map-bus'];ctx.fillText(s.label,bx,by+px(.5));
+    // where this stop's bus is: tau is seconds since its last bus left
+    const tau=((T-s.offset)%PERIOD+PERIOD)%PERIOD;
+    let off=null,alpha=1,riders=[];
+    if(tau<BUS_GO){
+      const k=tau/BUS_GO;off=k*k*px(90);alpha=1-k; // drives off, speeding up
+      const dep=s.offset+Math.floor((T-s.offset)/PERIOD)*PERIOD;
+      riders=G.players.filter(p=>p.state==='done'&&p.stop===si&&p.busAt===dep);
+    }else if(tau>=PERIOD-BUS_WAIT-BUS_COME){
+      const k=Math.min(1,(tau-(PERIOD-BUS_WAIT-BUS_COME))/BUS_COME);off=-(1-k)*(1-k)*px(90);alpha=k; // pulls up, slowing down
+    }
+    if(off==null)return;
+    const ux=-s.dy,uy=s.dx,x=bx+ux*off,y=by+uy*off,horiz=ux!==0;
+    const w=horiz?px(34):px(20),h=horiz?px(20):px(34);
+    ctx.globalAlpha=alpha;
+    rrect(x-w/2,y-h/2,w,h,px(4));ctx.fillStyle=C['map-bus'];ctx.fill();
+    ctx.lineWidth=px(1.3);ctx.strokeStyle=C['map-paper'];ctx.stroke();
+    ctx.fillStyle=C['map-paper'];ctx.font=`700 ${px(10)}px ${DISPLAY}`;ctx.fillText(s.label,x,y-(horiz?px(4):px(9)));
+    riders.forEach((p,i)=>{const j=i-(riders.length-1)/2;ctx.fillStyle=C.team[p.team];ctx.beginPath();
+      ctx.arc(x+(horiz?j*px(5):((i%2)-.5)*px(6)),y+(horiz?px(5):px(1)+Math.floor(i/2)*px(5)),px(2.2),0,Math.PI*2);ctx.fill();});
+    ctx.globalAlpha=1;
+  });
   // start
   const st=M.nodes[M.start],tr=px(13);
   ctx.strokeStyle=C['map-cp'];ctx.lineWidth=px(2);ctx.beginPath();
