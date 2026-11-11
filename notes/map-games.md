@@ -77,6 +77,15 @@ Ways to run the game, from no technology up. The pieces mix and match, and each 
 
 **Electronic timing.** SI boxes at the checkpoints record visits (see the curriculum's Electronic Timing pages). Boxes at intersections would also log every arrival, so holds could be checked afterward, but a trail network needs a lot of boxes.
 
+**Road Block and Ingress (Barb's note, November 11, 2026).** Played with GPS and an app as referee, Road Block becomes a game of capturing territory, a lot like Ingress (Niantic's location game, launched 2012, where two factions capture real-world "portals" by getting close to them with a phone). It would be cool to play that way, but we don't want to just reinvent Ingress. In Ingress, players end up gathering near a portal in real life, because control stays with a faction until someone takes it back. What keeps Road Block its own game:
+
+- **Blocking lasts only while bodies are there.** A team blocks an intersection by having the most players standing at it, right now. Walk away and the block is gone. Nothing is owned between games, or even between minutes.
+- **It's a race with a finish.** Every player standing at an intersection is a player not getting checkpoints, so gathering costs the team something. The simulator keeps finding that teams who spread out usually beat teams who block, which is what stops Road Block from turning into everyone camping at a few intersections.
+- **Map reading is the skill.** Trails only, a paper map, and at Level 1 no dot showing where you are. In Ingress the phone does the navigating.
+- **It's one short game for a class or a club,** on a network the course setter chose, rather than a game that runs worldwide for years.
+
+Worth borrowing from Ingress if we build a GPS version: its clear feedback on the phone (you're in range, you're held, you're free), and the fun of a map showing who holds what right now.
+
 ### What the simulator shows
 
 [Simulator](https://curriculum.navigationgames.org/games/road-block.html) (November 2026; the file is `site/static/games/road-block.html`, not linked from the site menus). Its [help page](https://curriculum.navigationgames.org/games/road-block-help.html) explains every setting and how the players decide. `site/static/games/README.md` covers how it's built, and has a script for running test games.
