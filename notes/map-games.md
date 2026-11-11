@@ -24,6 +24,8 @@ Game ideas that use a map, beyond the activities in the curriculum. Each one is 
 
 **Held players.** If you arrive at an intersection where another team has more players, you're held. You leave only when the blocking team says you can, by the trail they choose. Example: 2 Red and 1 Green are at intersection 12. Red blocks it. The Green player stays until Red releases them, and Red decides whether Green goes north toward the checkpoint or back south the way they came. If 2 more Greens arrive, Green has 3 to Red's 2: Green now blocks the intersection, and the Reds are held.
 
+**Herding (variation, November 2026).** Blocking happens on the trails too. When two teams meet coming toward each other and one has more players, the smaller group turns around and is herded along in front of the bigger one, at a steady pace, until the next intersection. There the usual rules apply: they're outnumbered, so they're held. Same size: both step aside and pass. Not in the simulator yet.
+
 **No contact.** Blocking is a rule, not a body block. Nobody touches, grabs or stands in another player's way. Held players step to the side of the trail.
 
 **Goal.** A team wins by having someone on the team visit every checkpoint, and getting everyone onto a bus first. A team's finish time is when its last player's bus leaves. If two teams finish on buses leaving at the same moment, the team whose last player reached a bus stop first wins. Proof of a visit: a code at the checkpoint, a photo, or an electronic punch.

@@ -86,6 +86,7 @@ It's a good game for students who can already follow a simple map of their schoo
 - **Hold limit**: if players get stuck too long, let held players go after one minute, still by the path the blocking team chooses
 - **Show the block**: give each team clothespins in its color. The blocking team clips one on the intersection cone, so everyone can see the block from a distance
 - **Buses**: instead of finishing at the start, put pickup cones around the edge with bus times on a whiteboard (a bus every 2 minutes at each cone, staggered). Once a team has every letter, each player can take any bus. The team finishes when its last player's bus leaves. If two teams finish on the same bus time, the team whose last player reached a pickup cone first wins
+- **Herding**: blocking happens on the paths too. When two teams meet coming toward each other and one has more players, the smaller group turns around and is herded along in front of the bigger one, at a steady pace, until the next intersection. There the usual rules apply: they're outnumbered, so they're held. Keep a few steps apart, no touching. If the groups are the same size, both step aside and pass
 - **Head to head**: two teams at a time, with the third team as referees at the busiest intersections
 - **Out of sight**: on forest trails, a large campus, or in a building's hallways, players can't see each other. Teams talk by radio or texting, and the game operator decides who can talk to whom and when
 
