@@ -11,7 +11,7 @@ A team game on a trail network: teams race to visit every checkpoint, traveling 
 | File | What it is |
 |---|---|
 | `road-block.html` | The simulator: <https://curriculum.navigationgames.org/games/road-block.html> |
-| `road-block.gif` | The first 7.5 minutes of a game on the default map and settings except two bus stops (20 seconds, looping), shown on the games page. Made November 11, 2026 by capturing the canvas in headless Chrome, 1.5 game seconds per 60 ms frame; remake it if the map drawing changes |
+| `road-block.gif` | One whole game, 7.5 minutes, on map 12 with a 5 × 4 network, 6 checkpoints and two bus stops, other settings default (20 seconds, looping), shown on the games page. Made November 11, 2026 by capturing the canvas in headless Chrome, 1.5 game seconds per 60 ms frame; remake it if the map drawing changes |
 | `road-block-help.html` | Help page for the simulator: every setting, each way of playing, how the players decide, and what the simulator has shown |
 | `../../../notes/map-games.md` | The game's rules, decisions, levels and open questions |
 | `../../../content/activities/road-block.md` | The Level 1 school activity (live at `/activities/core/road-block/`) |
