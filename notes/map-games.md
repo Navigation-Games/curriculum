@@ -61,6 +61,8 @@ The operator can also decide who gets which channel when: for example, giving a 
 
 [Simulator](https://curriculum.navigationgames.org/games/junction-control.html) (November 2026; the file is `site/static/games/junction-control.html`, not linked from the site menus). Its [help page](https://curriculum.navigationgames.org/games/junction-control-help.html) explains every setting and how the players decide. `site/static/games/README.md` covers how it's built, and has a script for running test games.
 
+**Read this first.** These are simulated players following simple rules, not kids, and results shift with the other teams' ways of playing and with the settings. The help page section "What the simulator has shown" is the tempered summary (November 11, 2026, all on the same 150 maps): matchups at the default settings first, then Two blockers together / Everyone alone / Pairs with one setting changed at a time. In short: at the defaults spreading out did best, blocking paid only against teams traveling in groups, the rule for who can leave mattered most, fewer bus stops and fewer checkpoints helped blocking a little, and distance, network size, loops, sight and wrong turns changed little besides game length. The sections below are the working record, and some of their numbers come from earlier versions of the simulator.
+
 **How these were measured.** Batches of 100 to 150 random games, run in Node. Unless it says otherwise: three teams of 5, 10 checkpoints at intersections, a 6 × 5 network with 150 m between points and some loops, hold up to 1 minute, the team with the most and tied teams can leave (the default until November 11; the planning findings use the new default, a lead frees all), players always know every block, rescue on, 4 bus stops with a bus somewhere every 75 seconds. Wins for three teams are listed in team order, for example "Two blockers together / Everyone alone / Pairs: 20 / 100 / 30". With 150 games, a difference of 10 wins or so can be chance. The simulator changed during November 2026 (bends stopped counting as intersections, rescue became a swap, blockers started timing their exit), so older numbers are rough.
 
 **Ways of playing**
@@ -136,7 +138,7 @@ The rule for leaving changes the game more than anything else tried. The "lead" 
 
 - **Herding** happens 3 to 5 times a game and costs players 5 to 15 seconds each, a bit more for teams that spread out. Everyone alone still wins most games.
 - **Intersections.** Since November 11, only places with 3 or more ways out count. A 6 × 5 network has about 16 intersections among its 30 points with some loops (12 with few loops, 22 with many). A 4 × 3 network has 4 to 7, so some checkpoints go at bends and dead ends.
-- **Game length:** on schoolyard paths (40 m apart) a game takes about 5 minutes; on forest trails (250 m), about 35.
+- **Game length** (November 11, defaults): Everyone alone finished in about 5 minutes on schoolyard paths 40 m apart, 9 at 80 m, 13 at 150 m and 20 on forest trails 250 m apart.
 
 ### Open questions
 
