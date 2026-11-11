@@ -117,6 +117,36 @@ The game already has these options (`notes/map-games.md`, "Communication" and "P
 - **Neither score predicts who wins.** Playing each map with the blockers at each of the 6 busiest intersections in turn, both scores predicted the other teams' time held only weakly (rank correlation about 0.3) and the blocking team's winning margin not at all (about 0). A score built from the trips the other teams actually walked in a game without blocking did no better. Where a team blocks matters much less than the fact that it's 2 runners short, which fits "spreading out wins."
 - **A possible rule gap: sending players back at a gate.** Some intersections are gates: the only way from one key place to another (225 of 2,076 intersections over 150 maps; 115 of the maps have at least one). Under the current rule, the blocking team picks the trail a held player leaves by. At a gate it can send them back every time, so the player comes back, is held another minute, and is sent back again, for as long as the blockers stay. The simulator shows players held again at the same intersection 1.5 to 7 minutes after their last hold 549 times in 127 of 150 games, nearly all by Two blockers together. Many of those are rescue swaps rather than send-backs, but genuine returns happen (seed 1: Green held at intersection 11 at 3:54, sent toward 14 at 4:54, held at 11 again at 5:30). Possible fixes, for Barb to decide: the held player picks the way out (the simulator's "Who picks the way out" setting already has this), or a released player can't be held at the same intersection again for a few minutes.
 
+**Other leaving rules (November 11, 2026).** The same tests under every rule in the simulator: Two blockers together / Everyone alone / Pairs, seeds 1 to 150. "Held again" counts other teams' players held at the same intersection 1.5 to 7 minutes after their last hold there.
+
+| Who can leave | Hold, and who picks the way out | Wins, blockers at the busiest | Wins, blockers at the map's top spot | Others held a player | Held again |
+|---|---|---|---|---|---|
+| The most; a tie freezes (default) | 1 min, blocking team picks | 24 / 78 / 48 | 35 / 76 / 39 | 52 s | 549 |
+| The most; a tie freezes | 1 min, held player picks | 11 / 101 / 38 | 12 / 106 / 32 | 40 s | 190 |
+| The most; a tie freezes | 1 min, sent back the way they came | 23 / 77 / 50 | 28 / 80 / 42 | 54 s | 579 |
+| The most; a tie freezes | No time limit | 19 / 85 / 46 | 24 / 72 / 54 | 74 s | 45 |
+| The most and tied teams | 1 min, blocking team picks | 22 / 99 / 29 | 25 / 99 / 26 | 39 s | 474 |
+| The most and tied teams | 1 min, held player picks | 15 / 107 / 28 | 15 / 104 / 31 | 31 s | 213 |
+| The most and tied teams | 1 min, sent back | 22 / 100 / 28 | 24 / 92 / 34 | 38 s | 461 |
+| The most and tied teams | No time limit | 23 / 102 / 25 | 16 / 106 / 28 | 65 s | 167 |
+| Only the blocking team | 1 min, blocking team picks | 42 / 89 / 19 | 41 / 83 / 26 | 52 s | 592 |
+| Only the blocking team | 1 min, held player picks | 15 / 102 / 33 | 17 / 100 / 33 | 37 s | 200 |
+| Only the blocking team | 1 min, sent back | 31 / 85 / 34 | 41 / 75 / 34 | 55 s | 692 |
+| Only the blocking team | No time limit | 52 / 60 / 38 | 54 / 64 / 32 | 98 s | 141 |
+
+("Others held" and "Held again" are for blockers at the busiest intersection.)
+
+- Under no rule did the map's spot reliably beat the busiest one: every difference is about 10 wins or less, within chance.
+- **Who picks the way out matters more than the map.** When the held player picks, going through and being held beats the detour on 58% of the trips a block affects (a minute's hold is cheaper than a long detour). Blocking gets much weaker (11 to 17 wins, against 22 to 42 when the blocking team picks), and "held again" drops by half to two thirds. So letting the held player pick closes the send-back gap, at the cost of making blocking weaker still. "Sent back the way they came" behaves like the blocking team picking.
+- **"Only the blocking team can leave" makes blocking pay most** (42 with a 1-minute hold, 52 with no limit).
+
+**Barb's rule: you can't leave at all if another team has more players there** (November 11, 2026). In the simulator that's "the most and tied teams" with "No time limit": a tie doesn't hold anyone, and nobody picks a way out, since you leave by your own choice once you're no longer outnumbered. Two blockers together / Everyone alone / Pairs won 23 / 102 / 25 on seeds 1 to 150 (others held 65 s a player).
+
+- **It matches the paper's model exactly.** A group of g gets through an intersection unless some team there has more than g players, so a block is a wall for every smaller group and nothing for an equal or bigger one. Theorem 1 is this game with the blockers placed first. To block a group of g takes g + 1 blockers, which is the majority version of the budget.
+- **The send-back gap disappears**, since nobody chooses the held player's way out.
+- **Players can be stuck for a long time.** Against Two blockers together, 69 players were held 5 minutes or more in one hold over 150 games (the longest 11:41). With no blockers on any team (Everyone alone / Pairs / Packs), none were, and the longest hold was 37 seconds. Getting out means bringing teammates to match the blockers, so calling for help ("held at 9, need one") becomes the key message. That ties this rule to the communication direction.
+- For comparison, "the most can leave, a tie freezes, no time limit" (ties hold everyone) had 74 players held 5 minutes or more.
+
 **What this means for the paper.** The blocking map is cheap and well defined, and on networks with loops it reduces to the node-removal version, where fast algorithms are known. As a strategy tool in the simulator, it's a small improvement at best. That supports "blocking is hard to plan and rarely worth it" rather than a "surprisingly useful algorithm." The map may still be useful for game design (which maps make blocking matter) and for the storm-crew version, where a closed road is a wall rather than a team counting heads. Open algorithmic question: with a hold limit and the blocker picking the exit, the map needs, for every intersection x and every neighbor y, the fastest route from y avoiding x. Whether all of these can be found in about the time of one shortest-path computation is worth checking against the replacement-paths literature.
 
 ## Suggested story for the paper
