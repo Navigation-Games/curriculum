@@ -11,7 +11,7 @@ audio_caption: Barb on what Unit 1 is for (about 45 seconds)
 ## Page
 
 :::tip[Done this before?]
-If you've orienteered or taught orienteering, tell the tutor at the start and keep your answers short. It will skip what it doesn't need. If you already have a map, or won't use one yet, skip the map application section below. Without the map application, this unit takes about 10 minutes.
+If you've orienteered or taught orienteering, tell the tutor at the start. The tutor will skip what it doesn't need. If you already have a map, or won't use one yet, tell the tutor and skip the map application section below. Without the map application, this unit takes about 10 minutes.
 :::
 
 This first unit is about you, so the rest of the course fits your school. The tutor will ask what orienteering you've done (or something like it, such as hiking with a map, geocaching or map games) and whether you've taught it, what your school and students are like, which spaces you can use and when, what you hope orienteering will do for your students, and what worries you about it. Doubts are useful to us. They show us where the course needs to do more.

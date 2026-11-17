@@ -10,7 +10,7 @@ summary: You'll see the activities your students will do, choose one, write the 
 ## Page
 
 :::tip[Done this before?]
-If you've taught these activities, skim the sections and skip the videos. If you've taught the activity you choose to a class, you don't need a dry run: tell the tutor how it went with your class instead. You still write the briefing. The tutor starts by asking which activities you've taught and what you tell students before you send them off.
+If you've taught these activities, skim the section descriptions below. Pick one activity and tell the tutor you've already taught it; describe how it went with your class, skipping the dry run. You'll still write the briefing.
 :::
 
 This unit shows you the progression of activities in the Grades 3-5 curriculum. Please expand each section and read the short description about how to run the activity, and watch the video, if we have one. Visit at least one of the linked activity pages, so you know how it is organized. An activity page has the full details, vocabulary and script. Note that activities also have a one-pager version (see the button near the top of an activity page) that can be useful to review the plan once you're familiar with it. Note also that there are different tabs in the activity description, such as Learning Goals, How to Run It, Reflection, Script and Vocabulary.
@@ -18,9 +18,9 @@ This unit shows you the progression of activities in the Grades 3-5 curriculum. 
 <details>
 <summary>1. Boundary Run and Gathering: learn the space and come back on a signal</summary>
 
-**[Boundary Run](/activities/core/boundary-run/).** You run the boundary of the play area with the class following you in single file. Then you quiz them: point to places and ask, "Inside or outside?" Ask about off-limits spots inside the boundary too, like a garden or playground equipment. Before class, walk the space and put cones anywhere the edge is unclear. Running it beats describing it, because students remember where they went.
+**[Boundary Run](/activities/core/boundary-run/).** You run the boundary of the play area with the class following you in single file. Then you quiz them: point to places and ask, "Inside or outside?" Ask about off-limits spots inside the boundary too, like a garden or playground equipment. Before class, walk the space and put cones anywhere the edge is unclear. Physically traversing the boundary, instead of describing it in words, makes it easier for students to remember.
 
-**[Gathering](/activities/core/gathering/).** Demonstrate the gathering signal (a whistle works well). Students move freely inside the boundary, and when they hear the signal they come back to you as quickly and safely as they can. Time how long it takes, then try again and ask the class for ideas to get faster. This becomes your safety routine for every lesson after it.
+**[Gathering](/activities/core/gathering/).** Demonstrate the gathering signal (a whistle works well). Students move freely inside the boundary, and when they hear the signal they come back to you as quickly and safely as they can. Time how long it takes, then try again and ask the class for ideas to get faster. Use Gathering in future activities when you need students to return.
 
 Together they take about 15 to 20 minutes, and need no equipment beyond cones and a whistle.
 
@@ -33,7 +33,7 @@ Together they take about 15 to 20 minutes, and need no equipment beyond cones an
 
 **[Explore & Find](/activities/core/explore-and-find/)** (10 to 20 minutes). Place the animal checkpoints from the kit around the space, with a start/finish marker where you gather. Say "Go explore!" and let students find as many animals as they can. Signal them back, and ask what they found and where ("The elephant was near the fence"). Send them out again to find different ones. Then test their memory: "Run to the lion and back!" "Run to the octopus, then the dog, and back!"
 
-There's no map or clue sheet yet. Students build a picture of the space in their heads, which is what they'll match a map to later.
+There's no map or clue sheet yet. Students are building a mental map of the space and checkpoint locations.
 
 </details>
 
@@ -55,7 +55,7 @@ Then do it again, faster. Then from memory. Then trade for a different clue shee
 
 Start at a whiteboard with the map drawn upside down, and have students shout "Stop!" as you turn it until it matches the cones. Point to a dot and ask which animal is there, then point to an animal and ask where it is on the map. Then give spatial challenges ("Find the animal closest to the red cone"). Finally, pairs share a 5-checkpoint map and visit the checkpoints in order, starting at the triangle, then move up to 10-checkpoint maps.
 
-This is where students learn to turn a map to match the ground, the most important map skill there is.
+This is where students learn to turn a map to match the ground. Orienting the map is a key skill.
 
 <YouTube id="-Nk2K_QQ89s" title="Geometric-O in action" maxWidth={360} />
 
@@ -68,19 +68,19 @@ This is where students learn to turn a map to match the ground, the most importa
 
 These need a map of your school grounds or park, with the checkpoints drawn on it (Visit page [Drawing courses on maps](/reference/equipment/maps/#drawing-courses) for instructions).
 
-**[Score-O](/activities/core/score-o/)** (15 to 30 minutes). Students visit as many checkpoints as they can in a set time (8 to 12 minutes for beginners), in any order, and write down the letter code at each one. Before the start, review the boundary on the map, describe a few checkpoint locations and have students point to them on their maps, and ask what their plan would be. There's no single best strategy. Only correct codes count. This is the first time students choose their own route.
+**[Score-O](/activities/core/score-o/)** (15 to 30 minutes). Students visit as many checkpoints as they can in a set time (8 to 12 minutes for beginners), in any order, and write down the letter code at each one. Before the start, review the boundary, ask students to orient their map, and have them point to one of the checkpoints both on the map and in real life.
 
-**[Point-to-Point](/activities/core/point-to-point/)** (30 to 60 minutes). This is "real" orienteering: visit the checkpoints in order, from 1 to 2 to 3. Have everyone orient the map together first ("If something is behind you, turn your map so it's behind you on the map too"). At each checkpoint, students check the code. If it doesn't match, they're in the wrong place: stop, turn the map to match the ground, find where they are, and go on. Pairs plan the route to the first checkpoint before they move. Going the right way matters more than going fast.
+**[Point-to-Point](/activities/core/point-to-point/)** (30 to 60 minutes). This is "classic" orienteering: visit the checkpoints in order, from 1 to 2 to 3. Have everyone orient the map together first. At each checkpoint, students check the code. If it doesn't match, they're in the wrong place: stop, turn the map to match the ground, find where they are, and navigate to the correct checkpoint. Suggest that pairs plan the route to the first checkpoint before they leave the start for their first checkpoint.
 
 </details>
 
-Every activity starts with a short briefing: a safety reminder (where the boundary is, and the gathering signal), why you're doing the activity, and what to do. A calm, clear briefing is what makes it safe to let students go off on their own. Each activity page opens with a sentence on why, such as "In orienteering, you find checkpoints in order using clue sheets."
+Every activity starts with a short briefing: a safety reminder (where the boundary is, and the gathering signal), why you're doing the activity, and what to do. A calm, clear briefing is what makes it safe to let students go off on their own. Each activity page opens with a sentence explaining how the activity relates to orienteering, such as "In orienteering, you find checkpoints in order using clue sheets."
 
 ## Assignments
 
 Choose one of the activities above. You'll work with the tutor below to produce:
 
-- Your **opening briefing** for it, about a minute when spoken. For now, type or paste what you'd say.
+- Your **opening briefing** for it, no more than a minute when spoken. For now, type or paste what you'd say.
 - A **dry run** of the activity with colleagues, family or a few students, and a line or two on how it went.
 
 If you're taking this course as part of Kickstart Orienteering, you may not have a kit yet. (We ship it after you complete Unit 5.) So for the dry run:
@@ -89,7 +89,7 @@ If you're taking this course as part of Kickstart Orienteering, you may not have
 - **Explore & Find** works with any set of objects as checkpoint markers, like stuffed animals or pictures.
 - **Animal-O** needs markers and a clue sheet. Make your own, or print ours.
 - **Geometric-O** needs a simple map of the checkpoints. Draw your own, or print ours.
-- **Courses** need a map of your space with the course drawn on it, like the one you made in Unit 2.
+- **Courses** need a map of your space with a course drawn on it.
 
 For our printable animal markers, clue sheets and Geometric-O maps, write to [admin@navigationgames.org](mailto:admin@navigationgames.org).
 
@@ -100,7 +100,7 @@ In the briefing:
 - Safety: the boundary is clear, and students are reminded of the gathering signal
 - Why: one sentence on why you're doing the activity, and how it connects to orienteering
 - What to do, in simple words for the age group
-- About 60 seconds when spoken
+- No more than 60 seconds when spoken
 
 In your dry run:
 
@@ -137,7 +137,7 @@ Briefing rubric:
 - Safety: the boundary is clear, and students are reminded of the gathering signal
 - Why: one sentence on why they're doing the activity and how it connects to orienteering
 - What to do, in simple words for the age group
-- About 60 seconds when spoken (roughly 120 to 150 words)
+- No more than 60 seconds when spoken (about 150 words at most)
 
 Dry run rubric (the teacher judges this, with your help):
 
