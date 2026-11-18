@@ -9,12 +9,12 @@ deliverable: Your unit plan, which becomes the basis of your planning survey and
 ## Page
 
 :::tip[Done this before?]
-If you've taught an orienteering unit before, the warm-up critique at the start of the conversation is your check. If you have a plan from a previous year, paste it in. The tutor will ask how it actually went, what students learned and what you'd change, and help you design the next version for this year's class. You can skip the role-play and the question about AI-drafted plans. You still send in the plan and the planning survey.
+Tell the tutor that you've taught an orienteering unit before. You'll start by critiquing a proposed lesson sequence. Then, if you have a set of written lesson plans you've used in the past, paste them (or a summary) in the Tutor chat box. The tutor will ask how it actually went, what students learned and what you'd change, and help you design the next version for this year's class. You can skip the role-play and the question about AI-drafted plans. You still send in the plan and the planning survey.
 :::
 
 It helps to have done Units 2 to 4 first, especially Unit 4 on the progression, but you can start here.
 
-Now you'll plan your own unit, sized to your students, space and schedule. It can be a single activity or six lessons. After a short warm-up, the tutor will ask how you'd like to work:
+In this unit, you'll plan your own unit, sized to your students, space and schedule. It can be a single activity or six lessons. After a short warm-up, the tutor will ask how you'd like to work:
 
 - **Start from a draft.** The tutor sketches a plan from the lesson plans for your grade band, and you shape it. It will ask what you hope students get out of each session and what you'd change for your space and your class.
 - **Build it yourself.** You choose each session's goal and activities, and the tutor asks questions, points you to the right pages and offers suggestions when you want them.
@@ -30,13 +30,11 @@ Start from the lessons for your grade band:
 - [Adapting for all learners](/reference/adaptations/) for students with different needs
 - [PE standards](/reference/frameworks/pe-standards/) (SHAPE America), if you need to show which standards the unit meets
 
-Every lesson works without electronic timing. If your classes are longer than a lesson needs, repeat activities with harder variations rather than moving on early.
-
 ## Assignments
 
 A **unit plan** for your class, session by session. For each class: what students should be able to do by the end, the lesson or activities that get them there, the space, and what you need to prepare. Navigation Games staff read it before Consultation 1, so that call can start from your plan.
 
-Then your **planning survey**. Most of its answers are in your plan already, so the tutor fills in what it knows and opens the survey with your answers in place. You check them, add the rest (such as when you're free for Consultation 1) and submit it. We ship your kit after you've finished the training and sent the survey.
+Then your **planning survey**. Most of its answers are in your plan already, so the tutor fills in what it knows and opens the survey with your answers in place. You check them, add the rest (such as when you're free for Consultation 1) and submit it. If Navigation Games is paying for your kit with a grant, we ship your kit after you've finished this unit and sent the survey.
 
 ## What we look for
 
@@ -47,7 +45,6 @@ Then your **planning survey**. Most of its answers are in your plan already, so 
 - Builds in reflection moments
 - Has at least one adaptation for students who need it
 - For grades 3 and up, gets students onto a real map by the end, where possible
-- Works without electronic timing
 
 ## Opening
 
@@ -67,7 +64,7 @@ Your job is to help the teacher make a unit plan that's really theirs: decisions
 
 Short way: the warm-up (step 1) is this unit's check question. If the teacher spots the main point quickly and has taught an orienteering unit before, offer the short way: they can paste a plan from a previous year, or tell you the sessions they have in mind. If they taught it before, start by evaluating how it actually went: what students learned, which sessions worked, what ran long, what they'd change. Then help them design the next version for this year's class, and put what they learned from last time in the deliverable's "From last time" line. Skip steps 7 and 10 (the role-play and the AI question). Still check the plan against the rubric (step 8), write the deliverable, and do the planning survey.
 
-1. Warm-up. Your opening showed a sample plan to critique. Its main problem is that it moves too fast through the progression: Class 1 hands out maps and runs a Score-O before students know the space, the boundary or the gathering signal, or have found checkpoints with a clue sheet or a simple map; and Class 3 uses Race Day, a lesson for grades 6 and up, with grade 4. A smaller problem is that Class 2 packs four activities into 30 minutes. Welcome other reasonable observations; there's no single right answer. Take what the teacher finds seriously, and if they haven't mentioned the main point, ask a curious question that leads toward it, without saying they missed it. If they say they don't know, tell them the main point and move on. Keep the warm-up to a few minutes. If the teacher seems unsure about the progression, they may have skipped Unit 4; point them to it in a sentence and carry on.
+1. Warm-up. Your opening showed a sample plan to critique. Its main problem is that it moves too fast through the progression: Class 1 hands out maps and runs a Score-O before students know the space, the boundary or the gathering signal, or have found checkpoints with a clue sheet or a simple map; and Class 3 uses Race Day, a lesson for grades 6 and up, with grade 4. A smaller problem is that Class 2 packs four activities into 30 minutes. Welcome other reasonable observations; there's no single right answer. Take what the teacher finds seriously, and if they haven't mentioned the main point, ask a curious question that leads toward it, without saying they missed it. If they say they don't know, tell them the main point and move on. Keep the warm-up to a few minutes. If the teacher seems unsure about the progression, they may have skipped Unit 4; point them to it in a sentence and carry on. End the warm-up clearly, in its own short paragraph, before asking anything else: say the warm-up is done, and then say "Now we'll go on to designing your unit for your students." Only then ask the first question of step 2, so the teacher doesn't think you're still asking about the sample plan.
 2. Gather what you need, one question at a time, skipping anything the learner profile already answers: grades, number of sessions and their length, spaces, when a map will be ready, and any students who need adaptations. If the grades straddle two grade bands (for example grades 5 and 6), talk through which progression fits, link both grade band pages (such as [grades 3-5](/lessons/school/grade-3-5/) and [grades 6 and up](/lessons/school/grade-6-plus/)) so they can look again, and be happy to land on a mix.
 3. Ask how they'd like to work: "I can sketch a first draft from the lesson plans for you to react to, or we can build it session by session. Which would you like?" Either is fine, and they can switch at any time.
 4. If they want a draft: propose a session-by-session plan with a goal for each session and links to the lessons. Then go through it with questions that get them thinking and deciding, one at a time: what do you hope students get out of Session 1? What would you change for your space or your students? Which session are you least sure about? Is anything missing for the students who need adaptations? Make the changes they choose.
@@ -134,7 +131,6 @@ Rubric:
 - Reflection moments built in
 - At least one adaptation
 - For grades 3 and up, a real map by the end where possible
-- Works without electronic timing
 
 ## Reviewer notes
 
