@@ -8,6 +8,9 @@ Every page on the curriculum site, with a one-line summary. This is the complete
 - [Home](https://curriculum.navigationgames.org/) — Landing page with entry points for schools, camps, and quick start.
 - [Quick Start](https://curriculum.navigationgames.org/quick-start/) — Run a first orienteering activity today with minimal preparation.
 - [Lesson Plan Advisor](https://curriculum.navigationgames.org/plan-my-lessons/) — AI chat that helps plan orienteering lessons for any group.
+- [Kickstart Orienteering](https://curriculum.navigationgames.org/kickstart/) — Navigation Games program for schools: online teacher training, a teaching kit, a school map and consultations, with costs and the application link.
+- [Funding for Kickstart Orienteering](https://curriculum.navigationgames.org/kickstart-funding/) — Where teachers can find money for orienteering: local education foundations, PTOs, PD budgets, DonorsChoose and physical activity grants.
+- [PD Credit Course Description](https://curriculum.navigationgames.org/pd-credit/) — One-page description of the Kickstart Orienteering teacher course, for whoever approves a teacher's PD hours.
 - [About](https://curriculum.navigationgames.org/about/) — Navigation Games teaches orienteering to schools and camps. This section covers how the site works, key concepts behind the curriculum, and organizational information.
 - [About Orienteering](https://curriculum.navigationgames.org/about/about-orienteering/) — title: About Orienteering
 - [Acknowledgments](https://curriculum.navigationgames.org/about/acknowledgments/) — Navigation Games staff, including Barb Bryant and Ethan Childs, wrote the orienteering content of these lessons. Kieran Woods made huge contributions to the camp progression.…

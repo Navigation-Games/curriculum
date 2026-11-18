@@ -223,6 +223,9 @@ const STANDALONE_PAGES = [
   { title: 'Home', url: `${SITE_BASE_URL}/`, desc: 'Landing page with entry points for schools, camps, and quick start.' },
   { title: 'Quick Start', url: `${SITE_BASE_URL}/quick-start/`, desc: 'Run a first orienteering activity today with minimal preparation.' },
   { title: 'Lesson Plan Advisor', url: `${SITE_BASE_URL}/plan-my-lessons/`, desc: 'AI chat that helps plan orienteering lessons for any group.' },
+  { title: 'Kickstart Orienteering', url: `${SITE_BASE_URL}/kickstart/`, desc: 'Navigation Games program for schools: online teacher training, a teaching kit, a school map and consultations, with costs and the application link.' },
+  { title: 'Funding for Kickstart Orienteering', url: `${SITE_BASE_URL}/kickstart-funding/`, desc: 'Where teachers can find money for orienteering: local education foundations, PTOs, PD budgets, DonorsChoose and physical activity grants.' },
+  { title: 'PD Credit Course Description', url: `${SITE_BASE_URL}/pd-credit/`, desc: 'One-page description of the Kickstart Orienteering teacher course, for whoever approves a teacher\'s PD hours.' },
 ];
 
 // ===========================================================================

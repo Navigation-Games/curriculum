@@ -61,6 +61,11 @@ export default function Home(): React.ReactElement {
             <strong>Plan My Lessons</strong>
             <span className={styles.secondaryDesc}>Get personalized recommendations from our AI advisor</span>
           </Link>
+          <Link to="/kickstart" className={styles.secondaryLink}>
+            <span className={styles.secondaryEmoji}>🗺️</span>
+            <strong>Kickstart Orienteering</strong>
+            <span className={styles.secondaryDesc}>Training, a teaching kit and a map to bring orienteering to your school</span>
+          </Link>
           <Link to="/about/how-to-use-this-site" className={styles.secondaryLink}>
             <span className={styles.secondaryEmoji}>📖</span>
             <strong>How to Use This Site</strong>

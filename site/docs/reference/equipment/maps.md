@@ -13,7 +13,7 @@ You do not need a professional orienteering map to start teaching orienteering. 
 
 ### OUSA Youth Mapping Project
 
-Orienteering USA runs the [Youth Mapping Project (YMP)](https://orienteeringusa.org/resources/ymp/), which connects schools and youth organizations with professional orienteering cartographers. OUSA grants can cover up to half the mapping cost.
+Orienteering USA runs the [Youth Mapping Project (YMP)](https://orienteeringusa.org/resources/ymp/), which connects schools and youth organizations with professional orienteering cartographers. OUSA grants can cover up to half the mapping cost. For ways to pay for the rest, see [Funding for Kickstart Orienteering](/kickstart-funding/).
 
 **How to apply:**
 

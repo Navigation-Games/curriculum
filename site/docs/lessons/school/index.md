@@ -12,6 +12,8 @@ Structured lesson progressions organized by grade level. Each progression builds
 
 The grade levels follow the same underlying sequence of skills, the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence), tuned to each age group's pacing and depth. Students who are new to orienteering start at Lesson 1 of their grade band, whatever their age: the early lessons build foundations every navigator needs, and older beginners simply move through them faster.
 
+If you'd like help getting started, with training, a teaching kit and a map of your school, see [Kickstart Orienteering](/kickstart/).
+
 ## Lesson Plan Progressions
 
 <CardGrid columns={3}>

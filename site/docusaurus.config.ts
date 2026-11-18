@@ -112,7 +112,10 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Navigation Games',
+      // The title links to the curriculum home; the main website is the
+      // navigationgames.org link at the right (it replaced GitHub, Nov 2026,
+      // since the repo is going private).
+      title: 'Navigation Games Curriculum',
       items: [
         {
           type: 'docSidebar',
@@ -146,8 +149,8 @@ const config: Config = {
           className: 'navbar-editors-link',
         },
         {
-          href: 'https://github.com/Navigation-Games/curriculum',
-          label: 'GitHub',
+          href: 'https://www.navigationgames.org/',
+          label: 'navigationgames.org',
           position: 'right',
         },
       ],
@@ -155,7 +158,7 @@ const config: Config = {
     footer: {
       style: 'dark',
       // Docusaurus renders this as HTML, so the link works
-      copyright: `<a href="/about/copyright/">Copyright © ${new Date().getFullYear()} Navigation Games</a>. Built with Docusaurus.`,
+      copyright: `<a href="https://www.navigationgames.org/">navigationgames.org</a> · <a href="/about/copyright/">Copyright © ${new Date().getFullYear()} Navigation Games</a>. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
