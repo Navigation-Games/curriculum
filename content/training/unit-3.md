@@ -83,7 +83,7 @@ Choose one of the activities above. You'll work with the tutor below to produce:
 - Your **opening briefing** for it, no more than a minute when spoken. For now, type or paste what you'd say.
 - A **dry run** of the activity with colleagues, family or a few students, and a line or two on how it went.
 
-If you're taking this course as part of Kickstart Orienteering, you may not have a kit yet. (We ship it after you complete Unit 5.) So for the dry run:
+If you will be getting a free kit from Navigation Games as part of a Kickstart Orienteering grant, you may not have a kit yet. (We ship it after you complete Unit 5.) So for the dry run:
 
 - **Boundary Run and Gathering** have no required equipment. A whistle is useful as the signal, and cones can be helpful if you want to define a boundary across an area with few features.
 - **Explore & Find** works with any set of objects as checkpoint markers, like stuffed animals or pictures.
