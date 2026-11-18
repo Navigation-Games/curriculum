@@ -47,6 +47,8 @@ Kickstart Orienteering is Navigation Games' program for teachers and school lead
 
 You only pay for what you need. If you want to print and laminate materials yourself, you won't need a kit. If you are teaching young children and won't need a map, you can leave that cost out. The site visit is optional.
 
+Kickstart covers what you need to start. If you're applying for a grant, it's worth asking for a few extras too, such as color printing of your map, a large laminated map to teach from, and orienteering flags and punches. Our page on [applying for a grant](/kickstart-grant-application/#budget) lists them with typical costs.
+
 There are several ways to pay for it, from your school's education foundation to your PD budget. See [Funding for Kickstart Orienteering](/kickstart-funding/). Navigation Games may have grant funding available for some schools.
 
 ## Who we are

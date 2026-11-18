@@ -22,15 +22,30 @@ For where to find a grant, see [Funding for Kickstart Orienteering](/kickstart-f
 
 ## Budget
 
-Forms usually sort costs into categories. Here's how Kickstart's parts usually fit. Leave out what you don't need.
+Forms usually sort costs into categories. Here's how the costs usually fit. Leave out what you don't need.
+
+**Kickstart Orienteering**, what you need to start:
 
 | Item | Cost | Usual category |
 |---|---|---|
 | Online training, including two consultations with Navigation Games | $185 | Professional development |
 | Beginning Orienteering Instruction Kit | $250 | Equipment |
 | Orienteering map of the school grounds (Navigation Games' share) | $300 | Fees or Other |
-| Site visit from Navigation Games (optional) | $1,000 | Fees |
-| **Total without the site visit** | **$735** | |
+
+**Worth adding to a grant.** You might only apply once, so ask for what will make teaching easier, too:
+
+| Item | Cost | Usual category |
+|---|---|---|
+| Printing the map in color | $200 | Materials |
+| Large laminated poster-sized map, for teaching | $200 | Materials |
+| Orienteering flags and punches | $175 | Equipment |
+
+**Additional options.** A site visit from Navigation Games staff means a day of teaching with you and your students. We offer it where we have staff or partners nearby, and we can travel farther if your school covers the cost.
+
+| Item | Cost | Usual category |
+|---|---|---|
+| Site visit from Navigation Games | $1,000 | Fees |
+| Staff travel, for a school more than 200 miles from Boston | $500 to $2,000 | Fees or Other |
 
 The kit price may rise to $300 in 2027. Check [the Kickstart page](/kickstart/) for current prices.
 
@@ -40,23 +55,41 @@ The kit price may rise to $300 in 2027. Check [the Kickstart page](/kickstart/) 
 
 *A short paragraph, often shown to the whole committee.*
 
-> I'd like to bring orienteering to [school]. In orienteering, you use a map to find a series of checkpoints. Our [number] students in grades [grades] will play navigation games in PE, learn to read a map of our own school grounds, and spend more of their class time moving outdoors. The grant pays for training for me, a teaching kit, and an orienteering map of our school, through Navigation Games' Kickstart Orienteering program.
+> I'd like to bring orienteering to [school]. In orienteering, you use a map to find a series of checkpoints. Our [number] students in grades [grades] will play navigation games in PE, learn to read a map of our own school grounds, and spend more of their class time moving outdoors. Along the way they practice spatial thinking, decision-making and recovering from mistakes, skills that research links to later success in math and to confidence in unfamiliar places. The grant pays for training for me, a teaching kit, and an orienteering map of our school, through Navigation Games' Kickstart Orienteering program.
+
+### Why orienteering? What need does this project address?
+
+*Sometimes asked as "statement of need" or "rationale". Pick the points that matter most to your school and community. The research is summarized on [Our Impact](/about/impact/), with sources.*
+
+> Orienteering asks students to do something rare in their school day: make real decisions on their own, while moving. With a map in hand, each student decides where to go, chooses a route, and notices and fixes their own mistakes. Every checkpoint is a small goal they can reach, so they build up proof that they can find their way.
+>
+> **Physical activity.** Most children don't get the hour a day of activity the World Health Organization recommends; worldwide, 81% of 11- to 17-year-olds fall short. Children are more active outdoors, and in orienteering they keep moving for the whole class. Students who rarely take part in PE often spend the whole period running, because it's a game they can play at their own pace.
+>
+> **Spatial thinking and math.** Reading a map means constantly translating between the map and the world. Spatial skills predict later success in math and STEM, and they can be taught: a meta-analysis of 217 studies found that training improves them, and the students who start out weakest improve the most. Children are still developing the ability to build a mental map of a place until about age 12, and many now rely on GPS instead. In orienteering, they do the navigating themselves.
+>
+> **Thinking skills.** A 2025 meta-analysis found that orienteering programs had large effects on fitness and memory and a medium effect on spatial skills. Studies with schoolchildren have linked orienteering to better executive function and attention.
+>
+> **Confidence and independence.** Students head off with a map, find their way, and come back. Recovering from a wrong turn without panicking is a skill that carries over to any unfamiliar problem. [If your community talks about student anxiety or screen time, say so here: orienteering gives kids the kind of independence and real-world responsibility that Jonathan Haidt calls for in *The Anxious Generation*.]
+>
+> **Teamwork.** Partner roles and relays give every student a real job and a real reason to talk and agree.
+>
+> **Comfort outdoors.** Students start in the schoolyard with a job to do, so they get comfortable outside while they're busy with something else. Many find green spaces near the school that they'd never really explored.
 
 ### How will the grant funds be used?
 
 *Often with: how did you choose these items, and who will pay to replace supplies?*
 
-> The online training (eight short units with two consultations) prepares me to teach a unit of orienteering, using Navigation Games' lesson plans, which are written for PE classes and aligned with SHAPE America standards. The kit has everything for the first lessons, which don't need a map. The map is drawn to orienteering standards by a mapper, through Orienteering USA's Youth Map Program, which pays about half its cost. I chose this program because it gives me the training, equipment and map together, and because the lessons start in the schoolyard with no special space needed.
+> The online training (eight short units with two consultations) prepares me to teach a unit of orienteering, using Navigation Games' lesson plans, which are written for PE classes and aligned with SHAPE America standards. The kit has everything for the first lessons, which don't need a map. The map is drawn to orienteering standards by a mapper, through Orienteering USA's Youth Map Program, which pays about half its cost. We'll print it in color, so students can tell the features apart, plus a large laminated poster-sized copy to teach from with the whole class, and use orienteering flags and punches to mark checkpoints on the school grounds. I chose this program because it gives me the training, equipment and map together, and because the lessons start in the schoolyard with no special space needed.
 >
-> The kit is durable and will last for years. Printed maps are the only supply we'll need to replace, and our department can print those.
+> The kit, flags and punches are durable and will last for years. Printed maps are the only supply we'll need to replace.
 
 ### Who will be affected, and how?
 
-> In the first year, about [number] students in grades [grades] will take part in a [number]-lesson orienteering unit in PE. They'll learn to read a map, plan a route, and find their way around a space they know, while running. Orienteering works for students of every fitness level, because thinking matters as much as speed, and students who don't shine in ball sports often do well. Once the map exists, other teachers can use it too, for example in math (scale and distance) or social studies (maps and directions).
+> In the first year, about [number] students in grades [grades] will take part in a [number]-lesson orienteering unit in PE. They'll learn to read a map, plan a route, and find their way around a space they know, while running. Orienteering works for students of every fitness level, because thinking matters as much as speed. Teachers who have taught it say the biggest surprise is engagement: students who rarely take part in PE spend the whole class running, because it's a game they can play at their own pace. Once the map exists, other teachers can use it too, for example in math (scale and distance) or social studies (maps and directions).
 
 ### How is this project innovative or enriching?
 
-> No one at [school] teaches orienteering now. It combines physical activity with spatial thinking and problem solving in a way most PE units don't, and it takes students outdoors into their own school grounds. It also connects students to a lifelong sport: [local orienteering club] holds events near us that families can attend.
+> No one at [school] teaches orienteering now. Most PE units teach a set skill or a game with fixed rules. In orienteering, every student makes their own decisions: which checkpoint next, which way to go, what to do after a wrong turn. It combines physical activity with spatial thinking and problem solving, and it takes students outdoors into their own school grounds, which they'll see in a new way once they have a map of them. It's one of the most age-inclusive sports there is, with beginner courses for four-year-olds and competitors in their eighties, and it connects students to a lifelong sport: [local orienteering club] holds events near us that families can attend.
 
 ### How does it connect to the curriculum or to district priorities?
 
@@ -97,4 +130,4 @@ The kit price may rise to $300 in 2027. Check [the Kickstart page](/kickstart/) 
 
 ### Are there ongoing costs?
 
-> Very few. The kit is durable and the map lasts for years. A map may need an update after major construction on the grounds. Printing maps is the only regular cost.
+> Very few. The kit, flags and punches are durable, and the map lasts for years. A map may need an update after major construction on the grounds. Printing maps is the only regular cost.
