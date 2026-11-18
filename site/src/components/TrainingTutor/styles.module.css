@@ -142,6 +142,22 @@ div.tutorMessages {
   cursor: wait;
 }
 
+/* Shown above the chat until the unit's work is sent */
+.notDone {
+  margin: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border-left: 4px solid var(--ifm-color-warning);
+  background: var(--ifm-color-emphasis-100);
+}
+
+.notDone p {
+  margin: 0 0 0.4rem;
+}
+
+.notDone p:last-child {
+  margin-bottom: 0;
+}
+
 /* Shown under the chat once the unit's work is sent: what's done and where to go next */
 .unitDone {
   margin: 0.75rem;

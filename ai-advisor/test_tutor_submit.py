@@ -134,3 +134,15 @@ def test_progress_brings_back_the_latest_plan():
         ["2026-10-26 10:00:00 UTC", "tutor-unit-2-xyz", "2", "assistant", "```deliverable\nA pitch\n```", "", "", "", "", TEACHER],
     ]
     assert advisor.rebuild_progress(rows, TEACHER)["plan"] == "New plan"
+
+
+def test_sent_units_lists_each_teachers_sent_work_by_unit():
+    rows = [
+        ["timestamp", "email", "name", "unit", "kind", "conversation_id", "text"],
+        ["2026-11-17 20:44:28 UTC", TEACHER.upper(), "", "unit-1", "ymp_done", "c1", "..."],
+        ["2026-11-17 20:52:28 UTC", TEACHER, "", "unit-1", "profile", "c1", "..."],
+        ["2026-11-18 10:00:00 UTC", TEACHER, "", "unit-1", "profile", "c1", "fixed"],
+        ["2026-11-18 11:00:00 UTC", "someone@else.org", "", "unit-2", "deliverable", "c2", "..."],
+    ]
+    assert advisor.sent_units(rows, TEACHER) == {"unit-1": ["ymp_done", "profile"]}
+    assert advisor.sent_units(rows, "nobody@x.org") == {}

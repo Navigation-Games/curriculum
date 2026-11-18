@@ -60,6 +60,10 @@ const conversationKey = (unit: string) => `ng-course-${unit}-conversation`;
 const deliverableKey = (unit: string) => `ng-course-${unit}-deliverable`;
 const sentKey = (unit: string) => `ng-course-${unit}-sent`; // kind -> the text last sent
 
+// A unit is finished once its profile (Unit 1) or deliverable is sent
+const isFinished = (kinds: string[] | undefined) =>
+  !!kinds && (kinds.includes('profile') || kinds.includes('deliverable'));
+
 function load<T>(key: string, fallback: T): T {
   try {
     const raw = localStorage.getItem(key);
@@ -417,6 +421,26 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
       }
     : undefined;
 
+  // What the teacher has sent, by unit, from the server (null until loaded, or with an older backend)
+  const [serverSent, setServerSent] = useState<Record<string, string[]> | null>(null);
+  const unitFinished = isFinished(Object.keys(sentText)) || isFinished(serverSent?.[unit]);
+
+  // The first earlier unit that isn't sent yet, checked against this browser and the server
+  const [earlierUnfinished, setEarlierUnfinished] = useState<number | null>(null);
+  useEffect(() => {
+    if (!serverSent) return;
+    const current = parseInt(unit.replace('unit-', ''), 10);
+    let found: number | null = null;
+    for (let n = 1; n < current; n++) {
+      const slug = `unit-${n}`;
+      if (!isFinished(Object.keys(load(sentKey(slug), {}))) && !isFinished(serverSent[slug])) {
+        found = n;
+        break;
+      }
+    }
+    setEarlierUnfinished(found);
+  }, [serverSent, unit]);
+
   // The teacher got a map application box from the tutor but hasn't pressed Step 2 yet
   const mapStepPending =
     !Object.keys(sentText).some(kind => kind === 'ymp_done') &&
@@ -450,6 +474,7 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
         if (!progress) return;
         if (progress.profile) save(PROFILE_KEY, progress.profile);
         if (progress.person) setPerson(progress.person);
+        if (progress.sent) setServerSent(progress.sent);
         if (progress.plan) save(deliverableKey(PLAN_UNIT), progress.plan);
         const saved = progress.units?.[unit];
         if (saved?.messages?.length && saved.messages.length >= messagesRef.current.length) {
@@ -604,6 +629,23 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
         </div>
       )}
 
+      {/* Until the unit's work is sent, say plainly that the unit isn't finished and how to finish it */}
+      {googleUser && !unitFinished && (
+        <div className={styles.notDone}>
+          {earlierUnfinished && (
+            <p>
+              <strong>Unit {earlierUnfinished} isn't sent yet.</strong>{' '}
+              <Link to={`/training/unit-${earlierUnfinished}/`}>Finish Unit {earlierUnfinished} first</Link>.
+            </p>
+          )}
+          <p>
+            <strong>This unit isn't finished yet.</strong> Keep going with the tutor until it writes a box with
+            a <strong>Send to Navigation Games</strong> button under it, then press the button. You can leave and
+            come back; your conversation is saved.
+          </p>
+        </div>
+      )}
+
       <div className={`${chatStyles.messages} ${styles.tutorMessages}`} ref={messagesBoxRef}>
         <div className={`${chatStyles.message} ${chatStyles.assistant}`}>
           <div className={chatStyles.bubble}>
@@ -646,7 +688,7 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
       </div>
 
       {/* Once the unit's work is sent, say plainly that the unit is done and what comes next */}
-      {googleUser && (sentText.profile || sentText.deliverable) && (
+      {googleUser && unitFinished && (
         <div className={styles.unitDone}>
           <p className={styles.unitDoneHeading}>You've finished this unit.</p>
           {mapStepPending && (

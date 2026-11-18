@@ -233,7 +233,17 @@ function renderUnit(unit, previous, next) {
     ...audioPlayer(unit.meta),
     s['Page'],
     '',
-    ...(s['Assignments'] ? ['## Assignments', '', s['Assignments'], ''] : []),
+    // Every unit's Assignments ends with how to finish the unit (Unit 2 says it in its page text instead)
+    ...(s['Assignments']
+      ? [
+          '## Assignments',
+          '',
+          s['Assignments'],
+          '',
+          "**You've finished this unit when you press Send to Navigation Games** under the box the tutor writes at the end of your conversation. You can stop partway and come back; your conversation is saved.",
+          '',
+        ]
+      : []),
     ...(s['What we look for'] ? [`## ${s.lookForHeading || 'What we look for'}`, '', s['What we look for'], ''] : []),
     '## Talk it through with the tutor',
     '',

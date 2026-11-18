@@ -1025,6 +1025,23 @@ def rebuild_progress(rows: list[list[str]], email: str) -> dict:
     return {"units": units, "profile": profile, "plan": plan}
 
 
+def sent_units(rows: list[list[str]], email: str) -> dict[str, list[str]]:
+    """
+    Which kinds of work a teacher has sent, by unit, from the Submissions tab
+    rows (timestamp, email, name, unit, kind, ...). The course page uses it to
+    tell a teacher, on any device, whether a unit is finished.
+    """
+    email = email.lower()
+    sent: dict[str, list[str]] = {}
+    for row in rows:
+        if len(row) < 5 or row[1].strip().lower() != email:
+            continue
+        kinds = sent.setdefault(row[3], [])
+        if row[4] not in kinds:
+            kinds.append(row[4])
+    return sent
+
+
 @app.route("/tutor/progress", methods=["GET"])
 def tutor_progress():
     """
@@ -1032,9 +1049,11 @@ def tutor_progress():
     any device.
 
     Response: {"units": {"unit-1": {"conversation_id", "updated", "messages"}}, "profile": "...", "plan": "...",
-               "person": {"name": "...", "applicant_id": "..."}}
+               "person": {"name": "...", "applicant_id": "..."}, "sent": {"unit-1": ["profile", "ymp_done"]}}
     "person" comes from the teacher's CourseAccess row ({} if they have none) and
-    is used to pre-fill the survey links.
+    is used to pre-fill the survey links. "sent" lists what they've pressed
+    Send for, by unit, from the Submissions tab, so the page knows which units
+    are finished.
 
     Rebuilt from the conversation log sheet on every request. Fine for a
     prototype; move to a real datastore before the course is large.
@@ -1054,12 +1073,19 @@ def tutor_progress():
     if not gc:
         return jsonify({"units": {}, "profile": "", "plan": "", "person": person})
     try:
-        rows = gc.open_by_key(SPREADSHEET_ID).sheet1.get_all_values()
+        book = gc.open_by_key(SPREADSHEET_ID)
+        rows = book.sheet1.get_all_values()
     except Exception as e:
         app.logger.error(f"Could not read the log sheet for progress: {e}")
         return jsonify({"units": {}, "profile": "", "plan": "", "person": person})
     progress = rebuild_progress(rows, user["email"])
     progress["person"] = person
+    try:
+        progress["sent"] = sent_units(book.worksheet(SUBMISSIONS_SHEET_TITLE).get_all_values(), user["email"])
+    except Exception as e:
+        # No Submissions tab yet, or it couldn't be read: the page falls back to this browser's record
+        app.logger.info(f"No sent units for progress: {e}")
+        progress["sent"] = {}
     if voice_enabled():
         for saved in progress["units"].values():
             for m in saved["messages"]:

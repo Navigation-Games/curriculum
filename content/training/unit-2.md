@@ -23,7 +23,7 @@ You turn in everything through the conversation with the tutor below. You write 
 
 Expand each section below for more information as you work through the assignment.
 
-**Say hello to your cohort.** After you finish Unit 1, we add you to a Google Group with the other teachers starting the course around the same time. When the welcome email arrives, please reply to the group with a short introduction: who you are, where you teach, and one hope and one doubt about teaching orienteering.
+**Say hello to your cohort.** Once you start Unit 1, we add you to a Google Group with the other teachers starting the course around the same time. When the welcome email arrives, please reply to the group with a short introduction: who you are, where you teach, and one hope and one doubt about teaching orienteering.
 
 <details>
 <summary>1. The pitch: what orienteering is, and why it's good for kids</summary>
