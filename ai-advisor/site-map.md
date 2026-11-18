@@ -10,6 +10,7 @@ Every page on the curriculum site, with a one-line summary. This is the complete
 - [Lesson Plan Advisor](https://curriculum.navigationgames.org/plan-my-lessons/) — AI chat that helps plan orienteering lessons for any group.
 - [Kickstart Orienteering](https://curriculum.navigationgames.org/kickstart/) — Navigation Games program for schools: online teacher training, a teaching kit, a school map and consultations, with costs and the application link.
 - [Funding for Kickstart Orienteering](https://curriculum.navigationgames.org/kickstart-funding/) — Where teachers can find money for orienteering: local education foundations, PTOs, PD budgets, DonorsChoose and physical activity grants.
+- [Applying for a Grant for Kickstart Orienteering](https://curriculum.navigationgames.org/kickstart-grant-application/) — Questions education foundation grant applications usually ask, with example answers and a budget for Kickstart Orienteering.
 - [PD Credit Course Description](https://curriculum.navigationgames.org/pd-credit/) — One-page description of the Kickstart Orienteering teacher course, for whoever approves a teacher's PD hours.
 - [About](https://curriculum.navigationgames.org/about/) — Navigation Games teaches orienteering to schools and camps. This section covers how the site works, key concepts behind the curriculum, and organizational information.
 - [About Orienteering](https://curriculum.navigationgames.org/about/about-orienteering/) — title: About Orienteering

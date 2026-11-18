@@ -17,7 +17,7 @@ How common they are depends on where you are. Some estimates say nearly half of 
 
 To find yours, search for your town or district name plus "education foundation", or ask your principal or district office. Not every foundation takes applications from teachers, so look for words like "teacher grants", "mini-grants" or "innovation grants" on its website, and check the deadline. Many have one round a year.
 
-We'd be glad to help you with the application. Write to admin@navigationgames.org.
+For the questions these applications usually ask, with example answers, see [Applying for a Grant for Kickstart Orienteering](/kickstart-grant-application/). We'd be glad to help you with the application. Write to admin@navigationgames.org.
 
 ## Your PTO or PTA
 
