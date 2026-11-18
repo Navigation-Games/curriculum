@@ -363,3 +363,9 @@ body.page-camp-overview {
   width: 100%;
   max-width: 28rem;
 }
+
+/* Lesson pages: the teacher-facing summary under the title (from `summary:` in the lesson file) */
+.lesson-summary {
+  font-size: 1.15rem;
+  color: var(--ifm-color-emphasis-800);
+}

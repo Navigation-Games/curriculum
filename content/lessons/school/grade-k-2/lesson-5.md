@@ -2,6 +2,7 @@
 
 ---
 tagline: Draw a picture of the space to show where things are
+summary: "Draw the space, to create your own map."
 epigraph: A map is a picture of a place, drawn from above
 sidebar_position: 5
 time: 30-45 minutes

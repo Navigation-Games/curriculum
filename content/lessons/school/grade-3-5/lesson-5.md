@@ -2,6 +2,7 @@
 
 ---
 tagline: Navigate using a map, visit checkpoints in any order
+summary: "Navigate with a map, visiting checkpoints in any order."
 epigraph: Today we will navigate using a real orienteering map
 sidebar_position: 5
 time: 30-60 minutes

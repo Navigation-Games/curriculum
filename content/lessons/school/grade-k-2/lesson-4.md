@@ -2,6 +2,7 @@
 
 ---
 tagline: Find them in this specific order
+summary: "Follow a clue sheet to visit checkpoints in order, checking each picture with a partner."
 epigraph: In orienteering, you find checkpoints in order using clue sheets
 sidebar_position: 4
 time: 30-45 minutes

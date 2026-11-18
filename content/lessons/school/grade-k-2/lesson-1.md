@@ -2,6 +2,7 @@
 
 ---
 tagline: Here is where you can go; come back when you hear the signal
+summary: "Learn the boundary, and come back quickly on the gathering signal."
 epigraph: In orienteering, you go out and you come back
 sidebar_position: 1
 time: 30-45 minutes

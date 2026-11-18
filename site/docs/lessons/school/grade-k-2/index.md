@@ -7,19 +7,20 @@ pagination_next: lessons/school/grade-k-2/lesson-1
 ---
 
 import ActivityLink from '@site/src/components/ActivityLink';
+import LessonSummary from '@site/src/components/LessonSummary';
 
 # Grade K-2: Six Progressive Lessons
 
 **These lessons are ready to teach.** Designed for grades K-2 (ages 5-7), they build from safety and exploration through early map reading. Every activity is a game, run in pairs or small groups, with time for repetition and play.
 
-| Lesson | Theme | Key Activities |
+| Lesson | What students learn | Key Activities |
 |---|---|---|
-| [1. **Safety and Space**](./lesson-1) | Know the boundary, return on signal | <ActivityLink slug="boundary-run">Boundary Run</ActivityLink>, <ActivityLink slug="gathering">Gathering</ActivityLink>, tag extension |
-| [2. **Search and Remember**](./lesson-2) | Discover the space and what's in it | <ActivityLink slug="explore-and-find">Explore & Find</ActivityLink>, <ActivityLink slug="animal-o">Animal-O</ActivityLink> (free: meet the animals) |
-| [3. **Say Where**](./lesson-3) | Find things and describe where they are | <ActivityLink slug="clothespin-o">Clothespin-O</ActivityLink> (find hidden objects, describe where) |
-| [4. **Visit Checkpoints in Order**](./lesson-4) | Follow a sequence | <ActivityLink slug="animal-o">Animal-O</ActivityLink> (in order) |
-| [5. **Picture the Space**](./lesson-5) | Create a picture of the space | <ActivityLink slug="draw-the-space">Draw the Space</ActivityLink> |
-| [6. **Read a Map**](./lesson-6) | Use a map to find things | Simple <ActivityLink slug="geometric-o">Geometric-O</ActivityLink> or [Map Maker](/activities/core/draw-the-space) |
+| [1. **Safety and Space**](./lesson-1) | <LessonSummary lesson="grade-k-2/lesson-1" /> | <ActivityLink slug="boundary-run">Boundary Run</ActivityLink>, <ActivityLink slug="gathering">Gathering</ActivityLink>, tag extension |
+| [2. **Search and Remember**](./lesson-2) | <LessonSummary lesson="grade-k-2/lesson-2" /> | <ActivityLink slug="explore-and-find">Explore & Find</ActivityLink>, <ActivityLink slug="animal-o">Animal-O</ActivityLink> (free: meet the animals) |
+| [3. **Say Where**](./lesson-3) | <LessonSummary lesson="grade-k-2/lesson-3" /> | <ActivityLink slug="clothespin-o">Clothespin-O</ActivityLink> (find hidden objects, describe where) |
+| [4. **Visit Checkpoints in Order**](./lesson-4) | <LessonSummary lesson="grade-k-2/lesson-4" /> | <ActivityLink slug="animal-o">Animal-O</ActivityLink> (in order) |
+| [5. **Picture the Space**](./lesson-5) | <LessonSummary lesson="grade-k-2/lesson-5" /> | <ActivityLink slug="draw-the-space">Draw the Space</ActivityLink> |
+| [6. **Read a Map**](./lesson-6) | <LessonSummary lesson="grade-k-2/lesson-6" /> | Simple <ActivityLink slug="geometric-o">Geometric-O</ActivityLink> or [Map Maker](/activities/core/draw-the-space) |
 
 These lessons align with entries 1-5 (Pre-Map Skills) and 6-7 (Sequential Navigation) of the [Navigation Games skill and concept sequence](https://curriculum.navigationgames.org/reference/frameworks/skill-concept-sequence/), with early exposure to 8-10 (Map Introduction). Communication and collaboration (#36-41) are woven throughout.
 

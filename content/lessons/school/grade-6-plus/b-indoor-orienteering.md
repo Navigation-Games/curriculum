@@ -2,6 +2,7 @@
 
 ---
 tagline: Build a world from a map, or map the world you build
+summary: "Build a world and map it, or build a world to match a map, then design courses for each other."
 epigraph: The map and the terrain are two sides of the same idea
 sidebar_position: 7
 time: 45-60 minutes

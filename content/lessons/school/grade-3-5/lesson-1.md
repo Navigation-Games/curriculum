@@ -2,6 +2,7 @@
 
 ---
 tagline: Here is where you can go; there are things to find
+summary: "Learn where you can go, and practice observational skills."
 epigraph: In orienteering, you go out and you come back
 sidebar_position: 1
 time: 30-45 minutes

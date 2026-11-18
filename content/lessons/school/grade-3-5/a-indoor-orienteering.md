@@ -2,6 +2,7 @@
 
 ---
 tagline: Navigate on a basketball court
+summary: "Orient a map and plan routes, using the lines of a basketball court as landmarks."
 epigraph: Today we will be finding our way on a basketball court
 sidebar_position: 7
 time: 30-60 minutes

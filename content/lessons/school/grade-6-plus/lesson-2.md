@@ -2,6 +2,7 @@
 
 ---
 tagline: Symbols tell you what is on the ground
+summary: "Learn map symbols, and keep track of where you are on the map as you move."
 epigraph: Every color, shape, and line on the map means something you can see and touch
 sidebar_position: 2
 time: 45-60 minutes

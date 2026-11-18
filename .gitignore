@@ -65,3 +65,4 @@ Desktop.ini
 # Temp
 *.tmp
 ~$*
+site/src/components/LessonSummary/lessonSummaries.ts

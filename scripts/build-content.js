@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require(require.resolve('js-yaml', { paths: [path.join(__dirname, '..', 'site')] }));
 const { buildTraining } = require('./build-training.js');
+const { collectLessonSummaries, writeLessonSummaries } = require('./lesson-summaries.js');
 
 const REPO_ROOT = path.join(__dirname, '..');
 const DIRS = {
@@ -39,6 +40,13 @@ function main() {
       cleanGeneratedFiles(outputDir);
       buildDir(contentDir, outputDir, 'lesson', errors, warnings, activityMaterials, band, 'school');
     }
+  }
+
+  // Teacher-facing lesson summaries, for <LessonSummary> in tables and lists
+  const lessonSummaries = collectLessonSummaries();
+  console.log(`  lesson summaries -> ${writeLessonSummaries(lessonSummaries)}`);
+  for (const [key, l] of Object.entries(lessonSummaries)) {
+    if (!l.summary && /^grade-/.test(key)) warnings.push(`${key}.md: No 'summary' in frontmatter (the teacher-facing one-liner)`);
   }
 
   // Process camp lessons
@@ -347,14 +355,16 @@ function siteMapEntry(relPath, raw) {
 }
 
 function siteMapDescription(relPath, raw) {
-  // Generated lesson pages are hard to scrape; use the content source's tagline
+  // Generated lesson pages are hard to scrape; use the content source's
+  // teacher-facing summary, or its tagline if it has none
   const contentSource = path.join(REPO_ROOT, 'content', relPath.replace(/\.mdx?$/, '.md'));
   if (relPath.startsWith('lessons/') && fs.existsSync(contentSource)) {
-    const srcFm = fs.readFileSync(contentSource, 'utf8').match(/---\n([\s\S]*?)\n---/);
+    const srcFm = fs.readFileSync(contentSource, 'utf8').replace(/\r\n/g, '\n').match(/---\n([\s\S]*?)\n---/);
     if (srcFm) {
       try {
-        const tagline = (yaml.load(srcFm[1]) || {}).tagline;
-        if (tagline) return String(tagline);
+        const lessonFm = yaml.load(srcFm[1]) || {};
+        const desc = lessonFm.summary || lessonFm.tagline;
+        if (desc) return String(desc);
       } catch { /* fall through to generic extraction */ }
     }
   }
@@ -1083,6 +1093,12 @@ function generateLessonMDX(slug, { fm, sections, goals }, activityMaterials = {}
   L.push('');
   L.push(`# ${lessonTitle}`);
   L.push('');
+
+  // The teacher-facing one-liner: what this lesson teaches
+  if (fm.summary) {
+    L.push(`<p className="lesson-summary">${mdToJsx(String(fm.summary))}</p>`);
+    L.push('');
+  }
 
   if (fm.epigraph) {
     L.push(`> "${escAttr(fm.epigraph)}"`);

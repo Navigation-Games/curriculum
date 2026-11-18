@@ -2,6 +2,7 @@
 
 ---
 tagline: Spatial relationships, orienting, connecting a map to the space
+summary: "Spatial relationships, turning a map to match the space, and connecting a map to the space, using a very simple map with colored shapes."
 epigraph: We use a map to know where something is before we even find it
 sidebar_position: 3
 time: 30-60 minutes

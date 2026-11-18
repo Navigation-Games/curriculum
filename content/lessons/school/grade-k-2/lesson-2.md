@@ -2,6 +2,7 @@
 
 ---
 tagline: There are things out there; go find them and come back
+summary: "Explore the space, find checkpoints, and remember where they are."
 sidebar_position: 2
 time: 30-45 minutes
 space: Gym, schoolyard, or local park

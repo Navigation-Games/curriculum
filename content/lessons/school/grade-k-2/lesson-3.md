@@ -2,6 +2,7 @@
 
 ---
 tagline: Find hidden things and tell someone where they are
+summary: "Find hidden objects and describe where they are, using words like next to and behind."
 sidebar_position: 3
 time: 30-45 minutes
 space: Gym, schoolyard, or local park

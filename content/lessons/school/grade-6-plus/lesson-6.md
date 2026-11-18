@@ -2,6 +2,7 @@
 
 ---
 tagline: Competition and independence
+summary: "Run courses on your own under time pressure, choosing a challenge level and balancing speed with accuracy."
 epigraph: Run your own race
 sidebar_position: 6
 time: 45-60 minutes

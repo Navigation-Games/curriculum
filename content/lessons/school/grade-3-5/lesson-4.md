@@ -2,6 +2,7 @@
 
 ---
 tagline: Symbols tell you what features are on the ground
+summary: "Symbols tell you what is on the ground."
 epigraph: Every color, shape, and line on the map means something you can see and touch
 sidebar_position: 4
 time: 30-60 minutes

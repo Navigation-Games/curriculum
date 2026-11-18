@@ -26,6 +26,10 @@
 //   ## Tutor              instructions for the AI tutor (not shown on the page)
 //   ## Reviewer notes     for Navigation Games reviewers (not shown on the page)
 //
+// {{lessons grade-3-5}} on a line of its own becomes a numbered list of that
+// band's lessons, each with its name, its `summary:` and its main activities
+// (scripts/lesson-summaries.js), so the course stays in step with the lessons.
+//
 // content/training/index.md is the course home. It has the same title and
 // frontmatter format; its sections are all shown, followed by the unit list.
 //
@@ -40,6 +44,11 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require(require.resolve('js-yaml', { paths: [path.join(__dirname, '..', 'site')] }));
+
+const { collectLessonSummaries, lessonListMarkdown } = require('./lesson-summaries');
+
+let cachedLessonSummaries = null;
+const lessonSummaries = () => (cachedLessonSummaries ||= collectLessonSummaries());
 
 const REPO_ROOT = path.join(__dirname, '..');
 const CONTENT_DIR = path.join(REPO_ROOT, 'content', 'training');
@@ -105,7 +114,14 @@ function buildTraining() {
 // ---------------------------------------------------------------------------
 
 function parseFile(filePath) {
-  const raw = fs.readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
+  const raw = fs
+    .readFileSync(filePath, 'utf8')
+    .replace(/\r\n/g, '\n')
+    .replace(/^\{\{lessons ([a-z0-9-]+)\}\}$/gm, (m, band) => {
+      const list = lessonListMarkdown(band, lessonSummaries());
+      if (!list) throw new Error(`${filePath}: no lessons found for {{lessons ${band}}}`);
+      return list;
+    });
   const slug = path.basename(filePath, '.md');
 
   const heading = raw.match(/^# (.+)\n/);

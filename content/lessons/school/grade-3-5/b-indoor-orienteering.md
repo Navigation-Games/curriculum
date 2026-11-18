@@ -2,6 +2,7 @@
 
 ---
 tagline: Build a world, make a map, then run the courses you drew
+summary: "Build a world in the gym, draw its map, and run courses that partners designed."
 epigraph: A map can come before the place, or after it
 sidebar_position: 8
 time: 45-60 minutes

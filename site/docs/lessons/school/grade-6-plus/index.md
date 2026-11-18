@@ -7,19 +7,20 @@ pagination_next: lessons/school/grade-6-plus/lesson-1
 ---
 
 import ActivityLink from '@site/src/components/ActivityLink';
+import LessonSummary from '@site/src/components/LessonSummary';
 
 # Grade 6+: Six Progressive Lessons
 
 **These lessons are ready to teach.** Designed for grades 6 and up (ages 11+), they move quickly from introductory activities to independent navigation with orienteering maps. Students at this level are ready for strategic thinking, competition, and self-directed navigation.
 
-| Lesson | Theme | Key Activities | Concepts Introduced |
+| Lesson | What students learn | Key Activities | Concepts Introduced |
 |---|---|---|---|
-| [1. **From Clues to Maps**](./lesson-1) | Quick intro, then maps | <ActivityLink slug="animal-o">Animal-O</ActivityLink> (quick), <ActivityLink slug="geometric-o">Geometric-O</ActivityLink> | Following a sequence, Confirming, Map as picture, Orienting, Pattern matching |
-| [2. **Map Reading**](./lesson-2) | Symbols, colors, thumbing | <ActivityLink slug="map-walk">Map Walk</ActivityLink>, <ActivityLink slug="symbol-o">Symbol-O</ActivityLink>, <ActivityLink slug="symbol-relay">Symbol Relay</ActivityLink> | Basic symbols, Legend, Colors, Tracking position |
-| [3. **Route Choice**](./lesson-3) | Plan and choose your route | <ActivityLink slug="score-o">Score-O</ActivityLink>, <ActivityLink slug="poison-o">Poison-O</ActivityLink> | Route choice, Planning under time pressure |
-| [4. **From Ground to Map**](./lesson-4) | From terrain back to map | [Reverse Score-O](/activities/core/score-o) (mark on map where checkpoints are) | Map-terrain connection (bidirectional), Spatial relations, Distance |
-| [5. **Course Navigation**](./lesson-5) | Point-to-point courses | <ActivityLink slug="point-to-point">Point-to-Point</ActivityLink>, course review and debrief | Handrails, Attack points, Debrief |
-| [6. **Race Day**](./lesson-6) | Competition and independence | [Relay Race](/activities/core/point-to-point), finish chute | Independence, Managing pressure, Choosing challenge |
+| [1. **From Clues to Maps**](./lesson-1) | <LessonSummary lesson="grade-6-plus/lesson-1" /> | <ActivityLink slug="animal-o">Animal-O</ActivityLink> (quick), <ActivityLink slug="geometric-o">Geometric-O</ActivityLink> | Following a sequence, Confirming, Map as picture, Orienting, Pattern matching |
+| [2. **Map Reading**](./lesson-2) | <LessonSummary lesson="grade-6-plus/lesson-2" /> | <ActivityLink slug="map-walk">Map Walk</ActivityLink>, <ActivityLink slug="symbol-o">Symbol-O</ActivityLink>, <ActivityLink slug="symbol-relay">Symbol Relay</ActivityLink> | Basic symbols, Legend, Colors, Tracking position |
+| [3. **Route Choice**](./lesson-3) | <LessonSummary lesson="grade-6-plus/lesson-3" /> | <ActivityLink slug="score-o">Score-O</ActivityLink>, <ActivityLink slug="poison-o">Poison-O</ActivityLink> | Route choice, Planning under time pressure |
+| [4. **From Ground to Map**](./lesson-4) | <LessonSummary lesson="grade-6-plus/lesson-4" /> | [Reverse Score-O](/activities/core/score-o) (mark on map where checkpoints are) | Map-terrain connection (bidirectional), Spatial relations, Distance |
+| [5. **Course Navigation**](./lesson-5) | <LessonSummary lesson="grade-6-plus/lesson-5" /> | <ActivityLink slug="point-to-point">Point-to-Point</ActivityLink>, course review and debrief | Handrails, Attack points, Debrief |
+| [6. **Race Day**](./lesson-6) | <LessonSummary lesson="grade-6-plus/lesson-6" /> | [Relay Race](/activities/core/point-to-point), finish chute | Independence, Managing pressure, Choosing challenge |
 
 These lessons cover entries 6-21 (Sequential Navigation through Score-O) of the [Navigation Games skill and concept sequence](https://curriculum.navigationgames.org/reference/frameworks/skill-concept-sequence/), with emphasis on 16-20 (Navigation with Maps). Communication (#36-41) and Individual Development (#42-45) are woven throughout, especially debrief and self-assessment. Compass skills (#22-25) can be added as extensions or in follow-up sessions.
 

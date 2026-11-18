@@ -2,6 +2,7 @@
 
 ---
 tagline: Navigate a course visiting checkpoints in order
+summary: "Navigate a point-to-point course using handrails and attack points, and check the code at every checkpoint."
 epigraph: Follow the map from start to finish, choosing your own route between checkpoints
 sidebar_position: 5
 time: 45-60 minutes

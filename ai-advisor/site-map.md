@@ -55,30 +55,30 @@ Every page on the curriculum site, with a one-line summary. This is the complete
 - [Lesson 3: Map Treasure Hunt](https://curriculum.navigationgames.org/lessons/camp/intro/lesson-3/) — Find as many checkpoints as you can using the map
 - [Teach at a School](https://curriculum.navigationgames.org/lessons/school/) — Structured lesson progressions organized by grade level. Each progression builds skills over multiple sessions, moving from basic spatial awareness to independent map navigation.…
 - [Without this, "Next" resolves to this same page (the index is both the](https://curriculum.navigationgames.org/lessons/school/grade-3-5/) — title: "Introduction: 3-5"
-- [Lesson A: Indoor Orienteering](https://curriculum.navigationgames.org/lessons/school/grade-3-5/a-indoor-orienteering/) — Navigate on a basketball court
-- [Lesson B: Indoor Orienteering](https://curriculum.navigationgames.org/lessons/school/grade-3-5/b-indoor-orienteering/) — Build a world, make a map, then run the courses you drew
-- [Lesson 1: Know Your Space](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-1/) — Here is where you can go; there are things to find
-- [Lesson 2: Match the Code](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-2/) — Find them in this specific order
-- [Lesson 3: Map Readiness](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-3/) — Spatial relationships, orienting, connecting a map to the space
-- [Lesson 4: Map Symbols](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-4/) — Symbols tell you what features are on the ground
-- [Lesson 5: Visiting Checkpoints](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-5/) — Navigate using a map, visit checkpoints in any order
-- [Lesson 6: Orienteering Course](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-6/) — Navigate a course visiting checkpoints in order
+- [Lesson A: Indoor Orienteering](https://curriculum.navigationgames.org/lessons/school/grade-3-5/a-indoor-orienteering/) — Orient a map and plan routes, using the lines of a basketball court as landmarks.
+- [Lesson B: Indoor Orienteering](https://curriculum.navigationgames.org/lessons/school/grade-3-5/b-indoor-orienteering/) — Build a world in the gym, draw its map, and run courses that partners designed.
+- [Lesson 1: Know Your Space](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-1/) — Learn where you can go, and practice observational skills.
+- [Lesson 2: Match the Code](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-2/) — Find checkpoints in a specific order, and confirm you're at the right one.
+- [Lesson 3: Map Readiness](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-3/) — Spatial relationships, turning a map to match the space, and connecting a map to the space, using a very simple map with colored shapes.
+- [Lesson 4: Map Symbols](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-4/) — Symbols tell you what is on the ground.
+- [Lesson 5: Visiting Checkpoints](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-5/) — Navigate with a map, visiting checkpoints in any order.
+- [Lesson 6: Orienteering Course](https://curriculum.navigationgames.org/lessons/school/grade-3-5/lesson-6/) — Navigate a course, visiting checkpoints in order.
 - [Without this, "Next" resolves to this same page (the index is both the](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/) — title: "Introduction: 6+"
-- [Lesson B: Indoor Orienteering](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/b-indoor-orienteering/) — Build a world from a map, or map the world you build
-- [Lesson 1: From Clues to Maps](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-1/) — Quick intro, then straight to maps
-- [Lesson 2: Map Reading](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-2/) — Symbols tell you what is on the ground
-- [Lesson 3: Route Choice](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-3/) — Plan your route, visit checkpoints in any order
-- [Lesson 4: From Ground to Map](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-4/) — From terrain back to map
-- [Lesson 5: Course Navigation](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-5/) — Navigate a course visiting checkpoints in order
-- [Lesson 6: Race Day](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-6/) — Competition and independence
+- [Lesson B: Indoor Orienteering](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/b-indoor-orienteering/) — Build a world and map it, or build a world to match a map, then design courses for each other.
+- [Lesson 1: From Clues to Maps](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-1/) — Run the boundary, return when called, learn how to match codes on clue sheets to codes at checkpoints, and use a simple map.
+- [Lesson 2: Map Reading](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-2/) — Learn map symbols, and keep track of where you are on the map as you move.
+- [Lesson 3: Route Choice](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-3/) — Plan your own route to visit as many checkpoints as you can in a set time.
+- [Lesson 4: From Ground to Map](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-4/) — Find checkpoints on the ground, then mark where they are on a blank map.
+- [Lesson 5: Course Navigation](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-5/) — Navigate a point-to-point course using handrails and attack points, and check the code at every checkpoint.
+- [Lesson 6: Race Day](https://curriculum.navigationgames.org/lessons/school/grade-6-plus/lesson-6/) — Run courses on your own under time pressure, choosing a challenge level and balancing speed with accuracy.
 - [Without this, "Next" resolves to this same page (the index is both the](https://curriculum.navigationgames.org/lessons/school/grade-k-2/) — title: "Introduction: K-2"
-- [Lesson B: Indoor Orienteering](https://curriculum.navigationgames.org/lessons/school/grade-k-2/b-indoor-orienteering/) — Build a world together, then explore what's inside it
-- [Lesson 1: Safety and Space](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-1/) — Here is where you can go; come back when you hear the signal
-- [Lesson 2: Search and Remember](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-2/) — There are things out there; go find them and come back
-- [Lesson 3: Say Where](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-3/) — Find hidden things and tell someone where they are
-- [Lesson 4: Visit Checkpoints in Order](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-4/) — Find them in this specific order
-- [Lesson 5: Picture the Space](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-5/) — Draw a picture of the space to show where things are
-- [Lesson 6: Read a Map](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-6/) — Use a map to find things in the space
+- [Lesson B: Indoor Orienteering](https://curriculum.navigationgames.org/lessons/school/grade-k-2/b-indoor-orienteering/) — Build an obstacle world in the gym, then find checkpoints in order around the obstacles.
+- [Lesson 1: Safety and Space](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-1/) — Learn the boundary, and come back quickly on the gathering signal.
+- [Lesson 2: Search and Remember](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-2/) — Explore the space, find checkpoints, and remember where they are.
+- [Lesson 3: Say Where](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-3/) — Find hidden objects and describe where they are, using words like next to and behind.
+- [Lesson 4: Visit Checkpoints in Order](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-4/) — Follow a clue sheet to visit checkpoints in order, checking each picture with a partner.
+- [Lesson 5: Picture the Space](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-5/) — Draw the space, to create your own map.
+- [Lesson 6: Read a Map](https://curriculum.navigationgames.org/lessons/school/grade-k-2/lesson-6/) — Understand how symbols on the map relate to features in terrain; orient the map by turning it until it is aligned with the space.
 - [Various](https://curriculum.navigationgames.org/lessons/school/various/) — Lesson plans for specific events, schools, and situations. Includes staff-designed programs and reviewed sessions from the AI Lesson Plan Advisor, edited and approved by…
 - [9th Graders for 4 Hours in a Park](https://curriculum.navigationgames.org/lessons/school/various/9th-graders-park/) — Three-station rotation with maps, navigation, and mapmaking
 - [Reference](https://curriculum.navigationgames.org/reference/) — Supporting materials for the Navigation Games curriculum.

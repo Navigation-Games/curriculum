@@ -2,6 +2,7 @@
 
 ---
 tagline: Navigate a course visiting checkpoints in order
+summary: "Navigate a course, visiting checkpoints in order."
 epigraph: Follow the map from start to finish
 sidebar_position: 6
 time: 30-60 minutes

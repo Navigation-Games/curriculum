@@ -2,6 +2,7 @@
 
 ---
 tagline: Plan your route, visit checkpoints in any order
+summary: "Plan your own route to visit as many checkpoints as you can in a set time."
 epigraph: You get to choose where to go and in what order
 sidebar_position: 3
 time: 45-60 minutes

@@ -2,6 +2,7 @@
 
 ---
 tagline: Build a world together, then explore what's inside it
+summary: "Build an obstacle world in the gym, then find checkpoints in order around the obstacles."
 epigraph: A gym full of mats and ropes can become a whole new place
 sidebar_position: 7
 time: 30-45 minutes

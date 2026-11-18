@@ -2,6 +2,7 @@
 
 ---
 tagline: Use a map to find things in the space
+summary: "Understand how symbols on the map relate to features in terrain; orient the map by turning it until it is aligned with the space."
 epigraph: The map shows you where to go before you get there
 sidebar_position: 6
 time: 30-60 minutes

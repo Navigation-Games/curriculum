@@ -2,6 +2,7 @@
 
 ---
 tagline: Quick intro, then straight to maps
+summary: "Run the boundary, return when called, learn how to match codes on clue sheets to codes at checkpoints, and use a simple map."
 epigraph: You already know how to explore. Now let's navigate.
 sidebar_position: 1
 time: 45-60 minutes

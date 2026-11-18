@@ -7,19 +7,20 @@ pagination_next: lessons/school/grade-3-5/lesson-1
 ---
 
 import ActivityLink from '@site/src/components/ActivityLink';
+import LessonSummary from '@site/src/components/LessonSummary';
 
 # Grade 3-5: Six Progressive Lessons
 
 **These lessons are ready to teach.** Designed for grades 3-5 (ages 9-11), they build in sequence from basic spatial awareness to independent navigation with a real map.
 
-| Lesson | What it adds | Activities |
+| Lesson | What students learn | Activities |
 |---|---|---|
-| [1. **Know Your Space**](./lesson-1) | Here is where you can go; there are things to find | <ActivityLink slug="boundary-run">Boundary Run</ActivityLink>, <ActivityLink slug="gathering">Gathering</ActivityLink>, <ActivityLink slug="explore-and-find">Explore & Find</ActivityLink> |
-| [2. **Match the Code**](./lesson-2) | Find them in this specific order | <ActivityLink slug="explore-and-find">Explore & Find</ActivityLink> (warm-up), <ActivityLink slug="animal-o">Animal-O</ActivityLink> |
-| [3. **Map Readiness**](./lesson-3) | Spatial relationships; orienting and relating a map to the space | <ActivityLink slug="geometric-o">Geometric-O</ActivityLink> |
-| [4. **Map Symbols**](./lesson-4) | Symbols tell you what features are on the ground | <ActivityLink slug="symbol-o">Symbol-O</ActivityLink>, <ActivityLink slug="map-walk">Map Walk</ActivityLink> |
-| [5. **Visiting Checkpoints**](./lesson-5) | Navigate using a map, visit checkpoints in any order | <ActivityLink slug="map-walk">Map Walk</ActivityLink>, <ActivityLink slug="score-o">Score-O</ActivityLink> |
-| [6. **Orienteering Course**](./lesson-6) | Navigate a course visiting checkpoints in order | <ActivityLink slug="point-to-point">Point-to-Point</ActivityLink> |
+| [1. **Know Your Space**](./lesson-1) | <LessonSummary lesson="grade-3-5/lesson-1" /> | <ActivityLink slug="boundary-run">Boundary Run</ActivityLink>, <ActivityLink slug="gathering">Gathering</ActivityLink>, <ActivityLink slug="explore-and-find">Explore & Find</ActivityLink> |
+| [2. **Match the Code**](./lesson-2) | <LessonSummary lesson="grade-3-5/lesson-2" /> | <ActivityLink slug="explore-and-find">Explore & Find</ActivityLink> (warm-up), <ActivityLink slug="animal-o">Animal-O</ActivityLink> |
+| [3. **Map Readiness**](./lesson-3) | <LessonSummary lesson="grade-3-5/lesson-3" /> | <ActivityLink slug="geometric-o">Geometric-O</ActivityLink> |
+| [4. **Map Symbols**](./lesson-4) | <LessonSummary lesson="grade-3-5/lesson-4" /> | <ActivityLink slug="symbol-o">Symbol-O</ActivityLink>, <ActivityLink slug="map-walk">Map Walk</ActivityLink> |
+| [5. **Visiting Checkpoints**](./lesson-5) | <LessonSummary lesson="grade-3-5/lesson-5" /> | <ActivityLink slug="map-walk">Map Walk</ActivityLink>, <ActivityLink slug="score-o">Score-O</ActivityLink> |
+| [6. **Orienteering Course**](./lesson-6) | <LessonSummary lesson="grade-3-5/lesson-6" /> | <ActivityLink slug="point-to-point">Point-to-Point</ActivityLink> |
 
 These lessons cover entries 6-13 (Sequential Navigation through Map Symbols) of the [Navigation Games skill and concept sequence](https://curriculum.navigationgames.org/reference/frameworks/skill-concept-sequence/), with introduction to 14-22 (Colors, Navigation with Maps, and Score-O strategy). Communication and Individual Development are woven throughout.
 

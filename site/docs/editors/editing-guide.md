@@ -199,6 +199,7 @@ Lesson files live in `content/lessons/school/grade-3-5/`. They are simpler than 
 
 ---
 tagline: There are things out there; go find them and come back
+summary: Explore the space, find checkpoints, and remember where they are.
 sidebar_position: 3
 time: 30-45 minutes
 space: Gym, schoolyard, or local park
@@ -318,12 +319,23 @@ npm start
 
 The preview runs at http://localhost:3000/. Changes to content files require re-running the build script, then the dev server will pick up the changes automatically. Changes to directly-edited pages and data files are picked up by the dev server automatically (no build step needed).
 
+#### Lesson summaries
+
+The `tagline:` is for kids. The `summary:` is one sentence for teachers about what students learn in the lesson. Write it once in the lesson file; the build shows it:
+
+- under the lesson page title
+- in the grade band tables and on the Activities & Lesson Plans page, through `<LessonSummary lesson="grade-k-2/lesson-5" />` (hand-maintained pages need `import LessonSummary from '@site/src/components/LessonSummary';`)
+- in the teacher course, where `{{lessons grade-3-5}}` on a line of its own becomes a numbered list of that band's lessons with their summaries and main activities (Unit 4 uses it)
+- in the advisor's site map (redeploy the advisor to pick up changes)
+
+The build warns when a grade band lesson has no summary.
+
 ### What the build script checks
 
 The build script validates your content files and reports problems:
 
 - **Errors** (build fails): missing title, missing tagline, missing required sections (Description, Goals for activities; Goals, Delivery for lessons), goals section with no goals
-- **Warnings** (build succeeds but check these): missing time, space, vocabulary, sidebar_position
+- **Warnings** (build succeeds but check these): missing time, space, vocabulary, sidebar_position, and a missing `summary` on a grade band lesson
 
 Error messages include the filename and what is wrong, for example:
 ```

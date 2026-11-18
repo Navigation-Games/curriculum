@@ -2,6 +2,7 @@
 
 ---
 tagline: From terrain back to map
+summary: "Find checkpoints on the ground, then mark where they are on a blank map."
 epigraph: Can you find it on the ground and mark it on the map?
 sidebar_position: 4
 time: 45-60 minutes
