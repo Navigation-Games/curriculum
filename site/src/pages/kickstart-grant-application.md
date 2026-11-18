@@ -32,18 +32,13 @@ Forms usually sort costs into categories. Here's how the costs usually fit. Leav
 | Beginning Orienteering Instruction Kit | $250 | Equipment |
 | Orienteering map of the school grounds (Navigation Games' share) | $300 | Fees or Other |
 
-**Worth adding to a grant.** You might only apply once, so ask for what will make teaching easier, too:
+**Additional options.** You might only apply once, so ask for what will make teaching easier, too. A site visit from Navigation Games staff means a day of teaching with you and your students. We offer it where we have staff or partners nearby, and we can travel farther if your school covers the cost.
 
 | Item | Cost | Usual category |
 |---|---|---|
 | Printing the map in color | $200 | Materials |
 | Large laminated poster-sized map, for teaching | $200 | Materials |
 | Orienteering flags and punches | $175 | Equipment |
-
-**Additional options.** A site visit from Navigation Games staff means a day of teaching with you and your students. We offer it where we have staff or partners nearby, and we can travel farther if your school covers the cost.
-
-| Item | Cost | Usual category |
-|---|---|---|
 | Site visit from Navigation Games | $1,000 | Fees |
 | Staff travel, for a school more than 200 miles from Boston | $500 to $2,000 | Fees or Other |
 
