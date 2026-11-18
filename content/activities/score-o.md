@@ -126,6 +126,7 @@ You can choose how much of the setup students do themselves. The more they do, t
 - **Poker-O**: collect the best poker hand at checkpoints (see Related Activities tab)
 - **Poison-O**: some checkpoints are poison and cost points (see Related Activities tab)
 - **Vampire-O**: vampire teams chase and tag others (see Related Activities tab)
+- **Checkpoint Questions**: a question or task at each checkpoint for teams to do when they get there (see Related Activities tab)
 
 
 ## Tips
@@ -206,3 +207,25 @@ Score-O with a chase: vampire teams tag others and take their punch cards. See t
 ### Reverse Score-O *(variation)*
 
 The map shows no checkpoints. Students find checkpoint markers on the ground and mark their locations on a blank map instead, then compare against the all-checkpoints map. Reverses the usual direction of navigation and deepens the connection between map and terrain. Takes 15-20 minutes per round; demo one checkpoint together first, then discuss which were hardest to place when gathering to verify.
+
+### Checkpoint Questions *(variation)*
+
+Write a question or task at each checkpoint for teams to do together when they get there. It's good for team building and getting team members to know each other, and it gets people thinking about navigation. Teams stay together, so this works best in groups of three or more. Allow extra time, since teams stop at each checkpoint.
+
+Example questions and tasks:
+
+1. Tell your group about a time you got lost. How did you figure out where you were?
+2. What's the best thing you ever found by accident while exploring?
+3. When did you last use a paper map? What for?
+4. Has a phone map ever sent you the wrong way? What happened?
+5. Name a place you know so well you could walk around it with your eyes closed.
+6. When you give someone directions in your town, what landmark do you often use?
+7. Has a kid ever shown you the way somewhere?
+8. What place would you love a map of, that doesn't have one?
+9. Orient your map: turn it so it lines up with what you see. Now point to the next checkpoint you want to visit, both on the map and in real life.
+10. Without looking at the map, point to where we started.
+11. Don't look at the map. Now, everyone point north on the count of three. Use your map to figure out how close you were.
+12. Find something you can see from here that's also on the map.
+13. Describe this checkpoint's location in one sentence.
+14. Guess how many steps to the next checkpoint. Count them on the way and see who was closest.
+15. Hand the map to someone who hasn't navigated yet. They're the Navigator now, to the next checkpoint.
