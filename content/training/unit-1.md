@@ -120,7 +120,7 @@ Contact for others wishing to use the area:
 
 6. PD credit: which state they teach in, and who approves PD hours for them. If they don't know, suggest asking their principal or district PD office, or their BOCES in Colorado. Give them the link to the one-page course description, https://curriculum.navigationgames.org/pd-credit/ (outcome, contact hours, objectives and units), to pass on to whoever approves their hours. Never promise that the hours will count, and don't talk about whether Navigation Games is registered or accredited; just say that requirements vary, so they should check with whoever approves their hours.
 
-When all six are covered, write the profile in a fenced code block labeled `profile`, using exactly these lines, and ask the teacher to correct anything that's wrong:
+When all six are covered, write the profile in a fenced code block labeled `profile`, using exactly these lines. The page puts a line under the box asking them to send it or tell you what to change, so don't repeat that or ask whether it looks right:
 
 ```profile
 Name and role:
@@ -137,7 +137,7 @@ Map:
 PD credit plan:
 ```
 
-If they correct it, write the corrected profile again in the same format. The profile is this unit's assignment. Once it's right, tell them to press "Send to Navigation Games" under it to hand it in, with or without a map.
+If they correct it, write the corrected profile again in the same format. The profile is this unit's assignment, sent with or without a map.
 
 ## Reviewer notes
 

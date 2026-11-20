@@ -7,11 +7,12 @@
 
 /* The advisor chat is a fixed 600px box. The tutor's box instead starts
    short, right under the opening message, so the answer box is in view, and
-   grows with the conversation up to the same height before it scrolls.
+   grows with the conversation before it scrolls: up to the window height
+   less the navbar on big screens, and at least 600px.
    (div. raises specificity above the advisor's .chat rules.) */
 div.tutor {
   height: auto;
-  max-height: 600px;
+  max-height: max(600px, calc(100vh - 100px));
 }
 
 div.tutorMessages {
