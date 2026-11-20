@@ -308,7 +308,31 @@ Teachers without a Google account can sign in to the course with a link we email
 6. **Delete the downloaded key file** from your computer once it is in Secret Manager.
 7. **Test it**: open a course unit while signed out, enter your own address under "No Google account?", and check that the email arrives and the link signs you in.
 
-If your Workspace blocks service account keys (some organizations do), tell Claude: the sender can instead sign as the Cloud Run service account without a key file, which takes a little more code.
+### Switching the sender to keyless (November 2026)
+
+The steps above use a key file. Keyless is safer: Cloud Run's own service account signs for `course-mailer` through the IAM Credentials API, so no key exists that could leak. Domain-wide delegation stays exactly as it is, since it belongs to `course-mailer`'s Client ID. The code (`gmail_credentials()` in `app.py`) uses keyless whenever `GMAIL_SERVICE_ACCOUNT_EMAIL` is set, and the key otherwise. To switch, in PowerShell:
+
+```powershell
+# 1. Find the mailer's email (the one you made in step 3, e.g. course-mailer@navigation-games-curriculum.iam.gserviceaccount.com)
+gcloud iam service-accounts list --project navigation-games-curriculum
+
+# 2. Turn on the IAM Service Account Credentials API
+gcloud services enable iamcredentials.googleapis.com --project navigation-games-curriculum
+
+# 3. Let Cloud Run's service account sign for the mailer
+gcloud iam service-accounts add-iam-policy-binding <mailer email> `
+  --member="serviceAccount:523012695945-compute@developer.gserviceaccount.com" `
+  --role="roles/iam.serviceAccountTokenCreator" --project navigation-games-curriculum
+
+# 4. Deploy the new code (the usual rebuild and deploy), then point Cloud Run at the mailer
+#    and stop giving it the key
+gcloud run services update lesson-advisor --region us-central1 `
+  --update-env-vars GMAIL_SERVICE_ACCOUNT_EMAIL=<mailer email> `
+  --remove-secrets GMAIL_SERVICE_ACCOUNT_JSON
+```
+
+5. **Test it**: send yourself a sign-in link (step 7 above). If it fails, `gcloud run services logs read lesson-advisor --region us-central1 --limit 50` usually names the missing permission. To go back, re-add the secret with `--update-secrets` and `--remove-env-vars GMAIL_SERVICE_ACCOUNT_EMAIL`.
+6. **Delete the old key** once the test works: `gcloud iam service-accounts keys list --iam-account <mailer email>` shows its key IDs (ignore any marked SYSTEM_MANAGED), and `gcloud iam service-accounts keys delete <key id> --iam-account <mailer email>` deletes each one. Then delete the `gmail-service-account` secret in Secret Manager.
 
 ## Tutor voice setup (one time)
 
@@ -571,7 +595,8 @@ If you only change the `ADVISOR_API_URL` GitHub Actions variable or other GitHub
 | `ADVISOR_API_URL` | Frontend (build time) | Backend URL for the chat component |
 | `SIGN_IN_SECRET` | Backend (Cloud Run secret) | Signs email sign-in links and sessions. Any long random string. Changing it signs everyone out who used an email link |
 | `EMAIL_LINK_SENDER` | Backend | The Workspace address sign-in emails come from, e.g. `training@navigationgames.org` |
-| `GMAIL_SERVICE_ACCOUNT_JSON` | Backend (Cloud Run secret) | Key for the service account that sends as `EMAIL_LINK_SENDER` (see "Email sign-in links setup") |
+| `GMAIL_SERVICE_ACCOUNT_EMAIL` | Backend (Cloud Run env var) | Email of the service account that sends as `EMAIL_LINK_SENDER`, signed for keylessly by Cloud Run's service account (preferred; see "Switching the sender to keyless") |
+| `GMAIL_SERVICE_ACCOUNT_JSON` | Backend (Cloud Run secret) | Older alternative: a key for that service account. Remove once keyless works |
 | `EMAIL_LINK_LOG_ONLY` | Backend (local development) | `true` writes sign-in links to the log instead of emailing them. Never set it in production |
 | `ELEVENLABS_API_KEY` | Backend (Cloud Run secret) | ElevenLabs key for the tutor's voice (see "Tutor voice setup"). Without it, or without `ELEVENLABS_VOICE_ID` or `SIGN_IN_SECRET`, there are no speaker buttons |
 | `ELEVENLABS_VOICE_ID` | Backend | The ElevenLabs voice the tutor speaks in |

@@ -25,7 +25,7 @@ def mail(monkeypatch):
     monkeypatch.setattr(advisor, "SIGN_IN_SECRET", "test-secret")
     monkeypatch.setattr(advisor, "EMAIL_LINK_SENDER", "course@navigationgames.org")
     monkeypatch.setattr(advisor, "COURSE_REVIEWER_EMAIL", "reviewer@navigationgames.org")
-    monkeypatch.setattr(advisor, "GMAIL_SERVICE_ACCOUNT_JSON", "{}")
+    monkeypatch.setattr(advisor, "GMAIL_SENDER_CONFIGURED", True)
     monkeypatch.setattr(advisor, "submission_rate_store", {})
     monkeypatch.setattr(advisor, "tutor_rate_store", {})
     monkeypatch.setattr(

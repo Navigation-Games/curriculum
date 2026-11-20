@@ -324,7 +324,12 @@ def get_optional_user():
 
 SIGN_IN_SECRET = os.environ.get("SIGN_IN_SECRET", "")
 EMAIL_LINK_SENDER = os.environ.get("EMAIL_LINK_SENDER", "")  # e.g. course@navigationgames.org
+# Keyless (preferred): the mailer service account's email. Cloud Run's own
+# service account signs for it through the IAM Credentials API, so no key
+# file exists. The older GMAIL_SERVICE_ACCOUNT_JSON key still works if set.
+GMAIL_SERVICE_ACCOUNT_EMAIL = os.environ.get("GMAIL_SERVICE_ACCOUNT_EMAIL", "")
 GMAIL_SERVICE_ACCOUNT_JSON = os.environ.get("GMAIL_SERVICE_ACCOUNT_JSON", "")
+GMAIL_SENDER_CONFIGURED = bool(GMAIL_SERVICE_ACCOUNT_EMAIL or GMAIL_SERVICE_ACCOUNT_JSON)
 EMAIL_LINK_LOG_ONLY = os.environ.get("EMAIL_LINK_LOG_ONLY", "").lower() == "true"
 
 LINK_TOKEN_MAX_AGE = 15 * 60  # seconds
@@ -374,7 +379,7 @@ def read_session_token(token: str) -> str | None:
 
 def email_sign_in_enabled() -> bool:
     return bool(SIGN_IN_SECRET) and (
-        EMAIL_LINK_LOG_ONLY or bool(EMAIL_LINK_SENDER and GMAIL_SERVICE_ACCOUNT_JSON)
+        EMAIL_LINK_LOG_ONLY or bool(EMAIL_LINK_SENDER and GMAIL_SENDER_CONFIGURED)
     )
 
 
@@ -395,6 +400,39 @@ def safe_return_to(return_to: str) -> tuple[str, str] | None:
     return origin, path
 
 
+GMAIL_SEND_SCOPE = "https://www.googleapis.com/auth/gmail.send"
+
+
+def gmail_credentials():
+    """
+    Credentials that send mail as EMAIL_LINK_SENDER (domain-wide delegation,
+    send-only scope). Keyless when GMAIL_SERVICE_ACCOUNT_EMAIL is set: Cloud
+    Run's service account signs for the mailer account, which needs the
+    Service Account Token Creator role on it. Otherwise the stored key.
+    """
+    from google.oauth2 import service_account
+
+    if GMAIL_SERVICE_ACCOUNT_EMAIL:
+        import google.auth
+        from google.auth import iam
+        from google.auth.transport.requests import Request
+
+        source, _ = google.auth.default(scopes=["https://www.googleapis.com/auth/cloud-platform"])
+        signer = iam.Signer(Request(), source, GMAIL_SERVICE_ACCOUNT_EMAIL)
+        return service_account.Credentials(
+            signer,
+            GMAIL_SERVICE_ACCOUNT_EMAIL,
+            "https://oauth2.googleapis.com/token",
+            scopes=[GMAIL_SEND_SCOPE],
+            subject=EMAIL_LINK_SENDER,
+        )
+    return service_account.Credentials.from_service_account_info(
+        json.loads(GMAIL_SERVICE_ACCOUNT_JSON),
+        scopes=[GMAIL_SEND_SCOPE],
+        subject=EMAIL_LINK_SENDER,  # domain-wide delegation: send as this address
+    )
+
+
 def send_email(to_address: str, subject: str, body: str, reply_to: str = "") -> None:
     """
     Send a plain-text email as EMAIL_LINK_SENDER through the Gmail API, or
@@ -406,13 +444,7 @@ def send_email(to_address: str, subject: str, body: str, reply_to: str = "") -> 
         return
 
     from google.auth.transport.requests import AuthorizedSession
-    from google.oauth2 import service_account
 
-    credentials = service_account.Credentials.from_service_account_info(
-        json.loads(GMAIL_SERVICE_ACCOUNT_JSON),
-        scopes=["https://www.googleapis.com/auth/gmail.send"],
-        subject=EMAIL_LINK_SENDER,  # domain-wide delegation: send as this address
-    )
     message = EmailMessage()
     message["To"] = to_address
     message["From"] = f"Navigation Games Training <{EMAIL_LINK_SENDER}>"
@@ -421,7 +453,7 @@ def send_email(to_address: str, subject: str, body: str, reply_to: str = "") -> 
         message["Reply-To"] = reply_to
     message.set_content(body)
     raw = base64.urlsafe_b64encode(message.as_bytes()).decode()
-    response = AuthorizedSession(credentials).post(
+    response = AuthorizedSession(gmail_credentials()).post(
         "https://gmail.googleapis.com/gmail/v1/users/me/messages/send",
         json={"raw": raw},
         timeout=20,
@@ -1231,7 +1263,7 @@ def tutor_submit():
     _log_submission([now, user["email"], user["name"], unit_slug, kind, conversation_id, text])
 
     emailed = False
-    if EMAIL_LINK_SENDER and COURSE_REVIEWER_EMAIL and (GMAIL_SERVICE_ACCOUNT_JSON or EMAIL_LINK_LOG_ONLY):
+    if EMAIL_LINK_SENDER and COURSE_REVIEWER_EMAIL and (GMAIL_SENDER_CONFIGURED or EMAIL_LINK_LOG_ONLY):
         reviewer, teacher = submission_emails(unit_slug, unit, kind, text, user, conversation_id)
         try:
             send_email(COURSE_REVIEWER_EMAIL, *reviewer, reply_to=user["email"])
