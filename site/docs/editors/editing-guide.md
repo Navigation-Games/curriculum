@@ -325,7 +325,7 @@ The `tagline:` is for kids. The `summary:` is one sentence for teachers about wh
 
 - under the lesson page title
 - in the grade band tables and on the Activities & Lesson Plans page, through `<LessonSummary lesson="grade-k-2/lesson-5" />` (hand-maintained pages need `import LessonSummary from '@site/src/components/LessonSummary';`)
-- in the teacher course, where `{{lessons grade-3-5}}` on a line of its own becomes a numbered list of that band's lessons with their summaries and main activities (Unit 4 uses it)
+- in the teacher course, where `{{lessons grade-3-5}}` on a line of its own becomes a numbered list of that band's lessons with their summaries and main activities (Unit 4 uses it). `{{lessons grade-3-5 shuffled}}` lists the same lessons lettered A, B, C... in a fixed scrambled order, with names and summaries only, for Unit 4's ordering exercise
 - in the advisor's site map (redeploy the advisor to pick up changes)
 
 The build warns when a grade band lesson has no summary.

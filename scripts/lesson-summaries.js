@@ -77,10 +77,23 @@ function writeLessonSummaries(lessons) {
 
 // Markdown list of a band's numbered lessons, for {{lessons <band>}} in course pages:
 // "1. **[Know Your Space](/lessons/...).** Summary. Boundary Run, Gathering."
-function lessonListMarkdown(band, lessons = collectLessonSummaries()) {
-  return Object.entries(lessons)
+// With shuffled, the list is lettered A, B, C... in a fixed scrambled order,
+// with names and summaries only (no links or numbers, which would give the
+// order away), for Unit 4's "put the lessons in order" exercise. The order is
+// the same on every build, so the page and the tutor always agree.
+function lessonListMarkdown(band, lessons = collectLessonSummaries(), { shuffled = false } = {}) {
+  const inOrder = Object.entries(lessons)
     .filter(([key, l]) => key.startsWith(`${band}/`) && /^[0-9]+$/.test(l.number))
-    .sort(([, a], [, b]) => Number(a.number) - Number(b.number))
+    .sort(([, a], [, b]) => Number(a.number) - Number(b.number));
+  if (shuffled) {
+    const n = inOrder.length;
+    return inOrder
+      .map(([, l], i) => ({ l, key: ((i + 1) * 5) % (n + 1) }))
+      .sort((a, b) => a.key - b.key || a.l.name.localeCompare(b.l.name))
+      .map(({ l }, i) => `- **${String.fromCharCode(65 + i)}. ${l.name}.**${l.summary ? ` ${l.summary}` : ''}`)
+      .join('\n');
+  }
+  return inOrder
     .map(([, l]) => {
       const summary = l.summary ? ` ${l.summary}` : '';
       const acts = l.activities.length ? ` ${l.activities.join(', ')}.` : '';

@@ -2,15 +2,15 @@
 
 ---
 phase: 1
-minutes: 15-75
-deliverable: An opening briefing for one activity, plus a dry run of it
-summary: You'll see the activities your students will do, choose one, write the briefing you'll give before it, and try it yourself.
+minutes: 35-95
+deliverable: Short answers from one activity's page, an opening briefing for that activity, and a dry run of it
+summary: You'll see the activities your students will do, choose one, look closely at its page, write the briefing you'll give before it, and try it yourself.
 ---
 
 ## Page
 
 :::tip[Done this before?]
-If you've taught these activities, skim the section descriptions below. Pick one activity and tell the tutor you've already taught it; describe how it went with your class, skipping the dry run. You'll still write the briefing.
+If you've taught these activities, skim the section descriptions below. Pick one activity and tell the tutor you've already taught it; describe how it went with your class, skipping the dry run. You'll still answer the questions about its page and write the briefing.
 :::
 
 This unit shows you the progression of activities in the Grades 3-5 curriculum. Please expand each section and read the short description about how to run the activity, and watch the video, if we have one. Visit at least one of the linked activity pages, so you know how it is organized. An activity page has the full details, vocabulary and script. Note that activities also have a one-pager version (see the button near the top of an activity page) that can be useful to review the plan once you're familiar with it. Note also that there are different tabs in the activity description, such as Learning Goals, How to Run It, Reflection, Script and Vocabulary.
@@ -80,6 +80,15 @@ Every activity starts with a short briefing: a safety reminder (where the bounda
 
 Choose one of the activities above. You'll work with the tutor below to produce:
 
+- **Short answers** to these questions about the activity's page. Open the activity page and look in each tab:
+  1. In **Learning Goals**: choose one goal, and say how you might tell whether your students have learned it.
+  2. In **How to Run It**, under Setup: what would you set out before class, and where in your space?
+  3. In **How to Run It**, under Adaptations: which adaptation is most relevant for your students? Think of two different students (one older and one younger, or two who learn in different ways). How might you adjust the activity for each?
+  4. In **Reflection**: is there a question that speaks to the goal you chose? If not, write one.
+  5. In **Script**: find a line you'd say differently to your students, and rewrite it.
+  6. In **Vocabulary**: which words, if any, are new to you or have a new meaning?
+  7. In **Related Activities** (if the page has one): pick one activity that comes before or after this one. What connects the two?
+  8. In the **video** (if the page has one): what's one thing the teacher or students do that you'd copy?
 - Your **opening briefing** for it, no more than a minute when spoken. For now, type or paste what you'd say.
 - A **dry run** of the activity with colleagues, family or a few students, and a line or two on how it went.
 
@@ -94,6 +103,11 @@ If you will be getting a free kit from Navigation Games as part of a Kickstart O
 For our printable animal markers, clue sheets and Geometric-O maps, write to [admin@navigationgames.org](mailto:admin@navigationgames.org).
 
 ## What we look for
+
+In the short answers:
+
+- They come from the activity page, and you've applied them to your own students
+- A practical way to tell whether students have learned the goal you chose
 
 In the briefing:
 
@@ -117,20 +131,34 @@ This unit is about running the activities, starting with the briefing you'll giv
 
 Your job is to help the teacher feel ready to run the activities, and to write a strong opening briefing. Keep it efficient.
 
-Short way: if the learner profile or the teacher says they've taught these activities, ask the check question: "Which of these have you taught, and what do you tell students before you send them off?" If their answer covers the boundary and the gathering signal, skip step 1, and ask them to write the briefing for the activity they choose (step 2). In step 4, if they've taught that activity to a class, skip the dry run: ask how it went with their class and what they'd change, and use that for the deliverable's dry run line ("Taught it to grade 4 last spring: ...").
+Short way: if the learner profile or the teacher says they've taught these activities, ask the check question: "Which of these have you taught, and what do you tell students before you send them off?" If their answer covers the boundary and the gathering signal, skip step 1, then go on to the short questions (step 2) and the briefing (step 3) for the activity they choose. In step 5, if they've taught that activity to a class, skip the dry run: ask how it went with their class and what they'd change, and use that for the deliverable's dry run line ("Taught it to grade 4 last spring: ...").
 
 1. Ask which activity they chose and with which grade. If a learner profile is provided, use it. Briefly confirm the setup and steps for that activity, based on the page above and the activity page, and ask whether anything is unclear. Don't invent steps that aren't on the activity page.
-2. Ask them to write the briefing they would give before that activity, for their grade and their space. Mention that the activity page's opening sentence is a good start for the "why."
-3. Give feedback against the briefing rubric below. Point out what works first, then one or two suggestions, often as a question. Pay attention to the age group: younger students need shorter sentences and a demonstration. Let them revise if they want; it's their briefing.
-4. Ask them to do a dry run of the activity, even in a living room or with two colleagues, and to come back to this conversation afterward. They may not have a kit yet, so if they ask about materials, point them to the list on the page: their own objects, markers, clue sheets or maps, or Navigation Games' printables from admin@navigationgames.org. When they're back, ask them to judge it against the dry run rubric below, one question at a time if needed, and ask what they'd change before teaching it to their class.
-5. Then write a fenced code block labeled `deliverable` with exactly these lines, and tell them to press "Send to Navigation Games" under it:
+2. Ask them to open the activity page and answer the short questions on the page, one at a time and in that order: a learning goal and how they might tell whether students learned it (Learning Goals tab); what they'd set out before class and where (Setup, in How to Run It); the most relevant adaptation, and how they'd adjust for two different students (Adaptations, in How to Run It); a reflection question for that goal, or one they write (Reflection tab); a line from the script they'd say differently (Script tab); new vocabulary, if any (Vocabulary tab); a connection to an activity before or after this one (Related Activities tab); and one thing from the video they'd copy. Skip the Related Activities or video question if the page doesn't have one. There are several questions, so keep your responses to a sentence and move on. The point is for them to look at the page themselves, so don't answer for them. You don't have the text of every activity page, so accept what they report from it and don't describe a tab's contents unless they're in the unit material above. Respond briefly to each answer and connect it to their students. For the goal, if their idea for telling whether students learned it is vague, ask what they'd watch for or ask students during the activity. Everyone answers these, including teachers on the short way; their answers can be short.
+3. Ask them to write the briefing they would give before that activity, for their grade and their space. Mention that the activity page's opening sentence is a good start for the "why," and that a vocabulary word belongs in the briefing.
+4. Give feedback against the briefing rubric below. Point out what works first, then one or two suggestions, often as a question. Pay attention to the age group: younger students need shorter sentences and a demonstration. Let them revise if they want; it's their briefing.
+5. Ask them to do a dry run of the activity, even in a living room or with two colleagues, and to come back to this conversation afterward. They may not have a kit yet, so if they ask about materials, point them to the list on the page: their own objects, markers, clue sheets or maps, or Navigation Games' printables from admin@navigationgames.org. When they're back, ask them to judge it against the dry run rubric below, one question at a time if needed, and ask what they'd change before teaching it to their class.
+6. Then write a fenced code block labeled `deliverable` with exactly these lines, and tell them to press "Send to Navigation Games" under it:
 
 ```deliverable
 Activity and grade:
+A learning goal, and how I'd tell whether students learned it:
+Setup, and where in my space:
+Most relevant adaptation, and how I'd adjust for two different students:
+Reflection question for that goal:
+A script line in my words:
+Vocabulary new to me:
+Connection to a related activity:
+From the video:
 My briefing:
 Dry run, or when I taught it (who, and how it went):
 What I'd change:
 ```
+
+Short answers rubric:
+
+- Each answer comes from the activity page and is applied to their own students
+- A practical way to tell whether students learned the goal (something to watch for or ask)
 
 Briefing rubric:
 

@@ -2,9 +2,9 @@
 
 ---
 phase: 1
-minutes: 10-35
-deliverable: The main thing students learn in one lesson, in your words, connected to a framework you choose, and how the lessons fit your biggest teaching challenge
-summary: You'll say in your own words the main thing students learn in one lesson, connect it to a framework your school cares about, and think about how the lessons fit your biggest teaching challenge.
+minutes: 20-50
+deliverable: Your order for the lessons, the main thing students learn in one lesson, in your words, six short answers from that lesson's page, a connection to a framework you choose, and how the lessons fit your biggest teaching challenge
+summary: You'll put the lessons in an order that makes sense to you, say in your own words the main thing students learn in one lesson, look closely at its page, connect it to a framework your school cares about, and think about how the lessons fit your biggest teaching challenge.
 ---
 
 ## Page
@@ -13,9 +13,20 @@ summary: You'll say in your own words the main thing students learn in one lesso
 If you've taught these lessons in order, skip the lesson list and the framework pages, and go straight to the tutor. Its first question checks what you remember about the order. If you already connect orienteering to a framework at your school, use that one. If theory interests you, the tutor can go deeper: into the frameworks below, or into writing your own philosophy of experiential teaching, which can be the framework you use here.
 :::
 
-The activities you saw in Unit 3 come together in lessons, in a set order. Students learn their space before they see a map, and each lesson builds on the last. The full sequence of orienteering concepts is in the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence/). Here are the six lessons for grades 3 to 5:
+Lessons are different from activities. An activity, like Boundary Run or Animal-O in Unit 3, is one thing students do. A lesson is a plan for a class: it is made up of several activities, in order, with what to say, when to reflect and how to extend it. The lessons for a grade band, in order, are a sequence of classes.
+
+Here are the six lessons for grades 3 to 5. Put them in an order that makes sense to you, and tell the tutor why.
+
+{{lessons grade-3-5 shuffled}}
+
+<details>
+<summary>The order in the curriculum (open after you've made yours)</summary>
+
+Students learn their space before they see a map, and each lesson builds on the last. The full sequence of orienteering concepts is in the [Navigation Games Progression](/reference/frameworks/skill-concept-sequence/).
 
 {{lessons grade-3-5}}
+
+</details>
 
 The other grade bands follow the same path at a different speed: [grades K-2](/lessons/school/grade-k-2/) spend more time in activities that don't require a map, and [grades 6 and up](/lessons/school/grade-6-plus/) get to maps quickly.
 
@@ -48,39 +59,56 @@ You can also use your state's or district's standards, or another subject such a
 
 With the tutor:
 
+- Put the six lessons above in **an order that makes sense to you**, and say why.
 - Pick one lesson from your grade band and say, in your own words, the **main thing students learn** in it. The lesson's name and the brief summary above are a good start; its Goals section lists the details.
 - Say how that lesson **builds on the one before it**, or **paves the way** for the one after it.
+- Give **short answers** to six questions about the lesson's page. Open the lesson page and look in each section:
+  1. In **Activities**: how many activities are in this lesson? Each card says what kind it is, such as warm-up, core or extension.
+  2. In **Goals**, under Orienteering Goals: choose one goal. In **Delivery**, which step is where students practice it?
+  3. In **Goals**, open PE Standards: which of these outcomes is most important to you, and how could you make sure the lesson includes it?
+  4. In **Reflection**: pick one question you could weave into the lesson instead of saving it until the end. Where in the Delivery steps would you ask it?
+  5. In **Extensions**: which one would you use, and for which students?
+  6. Press **One-pager** near the top of the page. What's something that is only in the full view, not in the one-pager, that you find useful?
 - Choose a **framework** your school cares about, and say how that lesson connects to it.
 - Name your **biggest teaching challenge** (behavior, space, short classes, too many kids, or something else), and say how the lessons help with it or what you'd change.
 
 ## What we look for
 
+- You've thought about why the lessons might come in the order you chose
 - The main thing students learn is in your own words and fits the lesson
 - You say how the lesson builds on the one before it, or paves the way for the one after it
+- Your short answers come from the lesson page, and you've applied them to your own class
 - The connection to your framework is specific: a standard, an outcome or a skill, and what students do in the lesson that meets it
 - Your challenge is real for your school, and you've thought about how to handle it
 
 ## Opening
 
-This unit is about what students learn in each lesson, and how that connects to what your school cares about. To start: why do you think Boundary Run, which has no map at all, comes before every lesson that uses one?
+This unit is about what students learn in each lesson, and how that connects to what your school cares about. To start: put the six lessons listed on the page (A to F) in an order that makes sense to you. Why that order?
 
 ## Tutor
 
 Your job is to help the teacher think about what students learn in the lessons and why, and connect it to their own school. Accept any reasonable answer, and ask about their reasoning instead of steering them to one right answer. Keep it efficient.
 
-Short way: the opening question is this unit's check question. If the teacher answers it well and has taught the lessons before, skip the follow-up in step 1, and in steps 2 to 4 ask for each answer directly, without offering the lists or links unless they want them. If they already use a framework at school, take it. If they're interested in theory, offer to go deeper: how a framework on the page (such as [experiential learning](/reference/frameworks/experiential-learning/)) shows up in the lessons, or putting their own philosophy of experiential teaching into a few sentences. Their own philosophy counts as the framework in the deliverable.
+Short way: the opening question is this unit's check question. If the teacher has taught the lessons before and their order and reasons show it, keep step 1 to a sentence, and in steps 2 to 5 ask for each answer directly, without offering the lists or links unless they want them. If they already use a framework at school, take it. If they're interested in theory, offer to go deeper: how a framework on the page (such as [experiential learning](/reference/frameworks/experiential-learning/)) shows up in the lessons, or putting their own philosophy of experiential teaching into a few sentences. Their own philosophy counts as the framework in the deliverable.
 
-1. Follow up on the opening question briefly. The key ideas: students need to know the boundary, the gathering signal and the space before they can safely go off on their own, and a map only makes sense once you can relate places to each other.
+1. Follow up on the order they chose. There's no one right answer, so never say or hint that theirs is wrong. The page above shows the lettered list and, under it, the curriculum's numbered order; match them by lesson name. They may have a good reason for their order. Stay positive: it's fine to say the curriculum's lessons go in a particular order for a reason, and to explain that reason, but then ask about theirs. If their order differs somewhere, say how the curriculum's differs and why, then ask why they chose theirs, for example: "Interesting! The curriculum has a slightly different order: Match the Code comes before Map Readiness, so students already know how to check that they're at the right checkpoint before they get a map. Why did you put Map Readiness first?" Pick the one difference that matters most, not every one. If their reason holds up, say so plainly; a teacher may well teach some lessons in a different order. Point them to "The order in the curriculum" on the page. The ideas behind the curriculum's order: students need to know the boundary, the gathering signal and the space before they can safely go off on their own, and a map only makes sense once they can relate places to each other. If the teacher teaches K-2 or grades 6 and up, mention that their band follows the same path at a different speed.
 2. Ask them to pick one lesson from their grade band (from the learner profile, if provided) and say, in their own words, the main thing students learn in it. The lesson's name and its short summary on the page are a good start; point them to the lesson page if they want to look at its Goals section. Then, as a separate question, ask how that lesson builds on the one before it, or paves the way for the one after it (either is fine, since they may have picked the first or last lesson). If their answer doesn't connect the lessons, ask one curious question about it, without suggesting they missed something (for example, "What would go wrong if students skipped Map Readiness and went straight to symbols?").
-3. Ask which framework or outcomes their school cares about. Offer the frameworks on the page as options, and say their own state or district standards, or another subject, are fine too. Ask them to connect the lesson to it: a specific standard, outcome or skill, and what students do in the lesson that meets it. For the PE standards, the lesson page lists them; let them use those or find their own. Never invent standard codes or the wording of a standard you don't have on the page; if they name a framework you don't know, ask them to tell you the outcome they have in mind.
-4. Ask about their biggest teaching challenge (behavior, engagement, space, little time outdoors, no outdoor clothing, short classes, too many kids, or something else). Then ask how the lessons might help with it, or whether they'd change something because of it. Respect their judgment about their school. Raise a safety concern plainly, and a progression concern once, as a question. If they have few class periods, say it's fine to move faster, but for grades 3 and up the priority is getting students onto a real map by the end.
-5. When all three are done, write a fenced code block labeled `deliverable` with exactly these lines, and tell them to send it in:
+3. Ask them to open the lesson page and answer the six short questions on the page, one at a time: how many activities the lesson has (Activities section; each card is labeled warm-up, readiness, core, variation or extension, and you can mention that in a sentence); one orienteering goal and the Delivery step where students practice it (Goals and Delivery sections); the PE standard outcome most important to them and how they'd make sure the lesson includes it (open PE Standards under Goals); a reflection question they could weave into the lesson instead of saving it for the end, and where in Delivery they'd ask it (Reflection section); an extension they'd use and for which students (Extensions section); and something useful to them that is only in the full view, not in the one-pager (the One-pager button near the top of the page switches between them). The point is for them to look at the page themselves, so don't answer for them. You don't have the text of every lesson page, so accept what they report from it and don't describe a section's contents. Respond briefly to each answer and connect it to their class. Everyone answers these, including teachers on the short way; their answers can be short.
+4. Ask which framework or outcomes their school cares about. Offer the frameworks on the page as options, and say their own state or district standards, or another subject, are fine too. Ask them to connect the lesson to it: a specific standard, outcome or skill, and what students do in the lesson that meets it. For the PE standards, the lesson page lists them; let them use those or find their own. Never invent standard codes or the wording of a standard you don't have on the page; if they name a framework you don't know, ask them to tell you the outcome they have in mind.
+5. Ask about their biggest teaching challenge (behavior, engagement, space, little time outdoors, no outdoor clothing, short classes, too many kids, or something else). Then ask how the lessons might help with it, or whether they'd change something because of it. Respect their judgment about their school. Raise a safety concern plainly, and a progression concern once, as a question. If they have few class periods, say it's fine to move faster, but for grades 3 and up the priority is getting students onto a real map by the end.
+6. When these are done, write a fenced code block labeled `deliverable` with exactly these lines, and tell them to send it in:
 
 ```deliverable
+My order for the lessons, and why:
 Grade band:
-Lesson:
+Lesson, and how many activities it has:
 Main thing students learn, in my words:
 How it builds on the lesson before, or paves the way for the next:
+A goal, and the Delivery step where students practice it:
+PE outcome most important to me, and how I'd include it:
+Reflection question I'd weave into the lesson, and where:
+Extension I'd use, and for whom:
+Useful in the full view but not the one-pager:
 Framework I chose:
 How the lesson connects to it:
 My biggest teaching challenge:
@@ -89,8 +117,10 @@ How the lessons help, or what I'd change:
 
 Rubric:
 
+- A reason for their order for the lessons (any reasonable order is fine)
 - The main thing students learn, in their own words, and it fits the lesson
 - How the lesson builds on the one before it, or paves the way for the one after it
+- The short answers come from the lesson page and are applied to their own class
 - The framework connection is specific: an outcome plus what students do that meets it
 - The challenge is real for their school, with a reasonable way to handle it
 

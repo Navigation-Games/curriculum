@@ -117,8 +117,8 @@ function parseFile(filePath) {
   const raw = fs
     .readFileSync(filePath, 'utf8')
     .replace(/\r\n/g, '\n')
-    .replace(/^\{\{lessons ([a-z0-9-]+)\}\}$/gm, (m, band) => {
-      const list = lessonListMarkdown(band, lessonSummaries());
+    .replace(/^\{\{lessons ([a-z0-9-]+)( shuffled)?\}\}$/gm, (m, band, shuffled) => {
+      const list = lessonListMarkdown(band, lessonSummaries(), { shuffled: Boolean(shuffled) });
       if (!list) throw new Error(`${filePath}: no lessons found for {{lessons ${band}}}`);
       return list;
     });
