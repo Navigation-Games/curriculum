@@ -142,9 +142,9 @@ function SendButton({kind, text, sending}: {kind: SavedKind; text: string; sendi
     );
   }
   return (
-    <p className={styles.savedAction}>
+    <p className={styles.savedAction} data-send-pending="">
       <button
-        className={styles.sendWorkButton}
+        className={`${styles.sendWorkButton} ${styles.sendPending}`}
         disabled={busy}
         onClick={() => {
           setBusy(true);
@@ -243,6 +243,70 @@ function SavedBlock({kind, text, sending}: {kind: SavedKind; text: string; sendi
       )}
       {kind === 'ymp' && <YmpDoneStep answers={text} sending={sending} />}
     </div>
+  );
+}
+
+// The steps to finish a unit, shown above the chat until the unit is sent, with the current one lit up
+interface TrackerState {
+  unit: string;
+  talked: boolean; // the teacher has written to the tutor
+  boxShown: boolean; // the tutor has written the profile (Unit 1) or deliverable box
+  mapStepPending: boolean; // a map application box is waiting for its Step 2 button
+  onShowSend: () => void; // scroll to the Send button
+}
+
+function StepTracker({unit, talked, boxShown, mapStepPending, onShowSend}: TrackerState) {
+  const isUnit1 = unit === 'unit-1';
+  const box = isUnit1 ? 'profile' : 'work';
+  const steps: {label: string; done: boolean; hint: React.ReactNode}[] = [
+    {
+      label: 'Talk with the tutor',
+      done: talked,
+      hint: 'Type your answer in the box at the bottom to get started.',
+    },
+    ...(isUnit1
+      ? [{
+          label: 'Map application (if you want a map)',
+          done: boxShown,
+          hint: mapStepPending
+            ? <>After you submit the YMP application to OUSA, press its <strong>Step 2</strong> button in the chat below, then keep going with the tutor.</>
+            : 'Keep going with the tutor. If it asked you to read something first, come back here when you\'re done and tell it you\'re ready.',
+        }]
+      : []),
+    {
+      label: `Your ${box} appears in a box`,
+      done: boxShown,
+      hint: `Keep going with the tutor until it writes your ${box} in a box.`,
+    },
+    {
+      label: 'Press Send to Navigation Games',
+      done: false,
+      hint: (
+        <>
+          Your {box} is ready. Press <strong>Send to Navigation Games</strong> under it.{' '}
+          <button className={styles.showSendButton} onClick={onShowSend}>Show me</button>
+        </>
+      ),
+    },
+  ];
+  const current = steps.findIndex(step => !step.done);
+  return (
+    <>
+      <ol className={styles.stepTracker} aria-label="Steps to finish this unit">
+        {steps.map((step, i) => (
+          <li
+            key={step.label}
+            className={i < current ? styles.stepDone : i === current ? styles.stepCurrent : styles.stepLater}
+            aria-current={i === current ? 'step' : undefined}>
+            <span className={styles.stepMark}>{i < current ? '✓' : i + 1}</span>
+            <span>{step.label}</span>
+          </li>
+        ))}
+      </ol>
+      <p className={styles.stepHint}>
+        <strong>Next:</strong> {steps[current].hint}
+      </p>
+    </>
   );
 }
 
@@ -446,6 +510,17 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
     !Object.keys(sentText).some(kind => kind === 'ymp_done') &&
     messages.some(m => m.role === 'assistant' && m.content.includes('```ymp'));
 
+  // Scroll the chat to the last Send button that hasn't been pressed, and make it pulse
+  const showSend = () => {
+    const pending = messagesBoxRef.current?.querySelectorAll('[data-send-pending]');
+    const target = pending?.[pending.length - 1] as HTMLElement | undefined;
+    if (!target) return;
+    target.scrollIntoView({behavior: 'smooth', block: 'center'});
+    target.classList.remove(styles.flash);
+    void target.offsetWidth; // restart the animation if pressed twice
+    target.classList.add(styles.flash);
+  };
+
   const toggleReadAloud = () => {
     const on = !readAloud;
     setReadAloud(on);
@@ -639,10 +714,17 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
             </p>
           )}
           <p>
-            <strong>This unit isn't finished yet.</strong> Keep going with the tutor until it writes a box with
-            a <strong>Send to Navigation Games</strong> button under it, then press the button. You can leave and
-            come back; your conversation is saved.
+            <strong>This unit isn't finished yet.</strong> You can leave and come back; your conversation is saved.
           </p>
+          <StepTracker
+            unit={unit}
+            talked={messages.some(m => m.role === 'user')}
+            boxShown={messages.some(
+              m => m.role === 'assistant' && m.content.includes(unit === 'unit-1' ? '```profile' : '```deliverable'),
+            )}
+            mapStepPending={mapStepPending}
+            onShowSend={showSend}
+          />
         </div>
       )}
 

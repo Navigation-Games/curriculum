@@ -158,6 +158,94 @@ div.tutorMessages {
   margin-bottom: 0;
 }
 
+/* Steps to finish the unit, inside .notDone: done ones checked, the current one lit up */
+.stepTracker {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.stepTracker li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem 0.25rem 0.3rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.stepMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.8rem;
+  background: var(--ifm-color-emphasis-200);
+}
+
+.stepDone {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.stepDone .stepMark {
+  background: var(--ifm-color-success);
+  color: var(--ifm-color-white);
+}
+
+.stepCurrent {
+  border: 2px solid var(--ifm-color-primary) !important;
+  font-weight: 700;
+}
+
+.stepCurrent .stepMark {
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+}
+
+.stepLater {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.stepHint {
+  margin: 0;
+}
+
+.showSendButton {
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 4px;
+  background: none;
+  color: var(--ifm-color-primary);
+  padding: 0 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* A Send button that hasn't been pressed yet stands out */
+.sendPending {
+  font-weight: 700;
+  padding: 0.35rem 1rem;
+  font-size: 0.95rem;
+  box-shadow: 0 0 0 3px var(--ifm-color-primary-lightest);
+}
+
+/* "Show me" makes the pending Send button pulse a few times */
+.flash .sendPending {
+  animation: sendPulse 0.8s ease-in-out 3;
+}
+
+@keyframes sendPulse {
+  50% {
+    box-shadow: 0 0 0 8px var(--ifm-color-warning);
+  }
+}
+
 /* Shown under the chat once the unit's work is sent: what's done and where to go next */
 .unitDone {
   margin: 0.75rem;

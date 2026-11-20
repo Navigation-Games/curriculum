@@ -134,4 +134,4 @@ Rubric:
 
 ## Reviewer notes
 
-About 20 minutes. This plan drives Consultation 1, so read it closely. Note whether they started from a draft or built it themselves, and look for the teacher's own changes and reasons. Then check safety, whether the sessions fit the class length, the map timeline against the YMP status in the Kickstart Tracker, and the questions the teacher listed. Target turnaround is 3 business days.
+About 20 minutes. This plan drives Consultation 1, so read it closely. Note whether they started from a draft or built it themselves, and look for the teacher's own changes and reasons. Then check safety, whether the sessions fit the class length, the map timeline against the YMP status in the Kickstart Tracker, and the questions the teacher listed. If the teacher teaches adapted PE or has students with disabilities (see the learner profile), plan time at Consultation 1 for their settings and students, and ask what they've seen work; the [Adapting for All Learners](/reference/adaptations/) page has ideas to build on. Target turnaround is 3 business days.
