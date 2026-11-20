@@ -12,7 +12,7 @@
    (div. raises specificity above the advisor's .chat rules.) */
 div.tutor {
   height: auto;
-  max-height: max(600px, calc(100vh - 100px));
+  max-height: max(600px, calc(100vh - 75px));
 }
 
 div.tutorMessages {
@@ -145,8 +145,8 @@ div.tutorMessages {
 
 /* Shown above the chat until the unit's work is sent */
 .notDone {
-  margin: 0.75rem;
-  padding: 0.6rem 0.9rem;
+  margin: 0.5rem 0.75rem;
+  padding: 0.4rem 0.75rem;
   border-left: 4px solid var(--ifm-color-warning);
   background: var(--ifm-color-emphasis-100);
 }
@@ -160,12 +160,19 @@ div.tutorMessages {
 }
 
 /* Steps to finish the unit, inside .notDone: done ones checked, the current one lit up */
+.trackerRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+}
+
 .stepTracker {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0.5rem 0;
+  gap: 0.35rem;
+  margin: 0;
   padding: 0;
 }
 
@@ -173,7 +180,7 @@ div.tutorMessages {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.25rem 0.6rem 0.25rem 0.3rem;
+  padding: 0.1rem 0.6rem 0.1rem 0.2rem;
   border-radius: 999px;
   font-size: 0.85rem;
   border: 1px solid var(--ifm-color-emphasis-300);
@@ -214,7 +221,7 @@ div.tutorMessages {
   color: var(--ifm-color-emphasis-600);
 }
 
-.stepHint {
+.notDone p.stepHint {
   margin: 0;
 }
 

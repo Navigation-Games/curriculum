@@ -713,10 +713,11 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
               <Link to={`/training/unit-${earlierUnfinished}/`}>Finish Unit {earlierUnfinished} first</Link>.
             </p>
           )}
-          <p>
-            <strong>This unit isn't finished yet.</strong> You can leave and come back; your conversation is saved.
-          </p>
-          <StepTracker
+          {/* One row on wide screens: label, steps, then the next-step hint, wrapping as needed.
+              (The note under the chat already says the conversation is saved.) */}
+          <div className={styles.trackerRow}>
+            <strong>Not finished yet:</strong>
+            <StepTracker
             unit={unit}
             talked={messages.some(m => m.role === 'user')}
             boxShown={messages.some(
@@ -724,7 +725,8 @@ export default function TrainingTutor({unit, opening, next}: Props): React.React
             )}
             mapStepPending={mapStepPending}
             onShowSend={showSend}
-          />
+            />
+          </div>
         </div>
       )}
 
