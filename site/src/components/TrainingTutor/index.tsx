@@ -260,33 +260,30 @@ function StepTracker({unit, talked, boxShown, mapStepPending, onShowSend}: Track
   const box = isUnit1 ? 'profile' : 'work';
   const steps: {label: string; done: boolean; hint: React.ReactNode}[] = [
     {
-      label: 'Talk with the tutor',
-      done: talked,
-      hint: 'Type your answer in the box at the bottom to get started.',
-    },
-    ...(isUnit1
-      ? [{
-          label: 'Map application (if you want a map)',
-          done: boxShown,
-          hint: mapStepPending
-            ? <>After you submit the YMP application to OUSA, press its <strong>Step 2</strong> button in the chat below, then keep going with the tutor.</>
-            : 'Keep going with the tutor. If it asked you to read something first, come back here when you\'re done and tell it you\'re ready.',
-        }]
-      : []),
-    {
-      label: `Your ${box} appears in a box`,
+      label: 'Talk it through with the tutor',
       done: boxShown,
-      hint: `Keep going with the tutor until it writes your ${box} in a box.`,
+      hint: mapStepPending
+        ? <>After you submit the YMP application to OUSA, press its <strong>Step 2</strong> button in the chat below, then keep going with the tutor.</>
+        : talked
+        ? `Keep answering the tutor. When you've covered everything, it writes your ${box} in a box.`
+        : 'Type your answer in the box at the bottom to get started.',
+    },
+    {
+      // Can't tell when they've finished checking, so this stays current until they send
+      label: `Check your ${box} in the box`,
+      done: false,
+      hint: (
+        <>
+          If anything is wrong, tell the tutor and it will rewrite it. When it's right, press{' '}
+          <strong>Send to Navigation Games</strong> under it.{' '}
+          <button className={styles.showSendButton} onClick={onShowSend}>Show me</button>
+        </>
+      ),
     },
     {
       label: 'Press Send to Navigation Games',
       done: false,
-      hint: (
-        <>
-          Your {box} is ready. Press <strong>Send to Navigation Games</strong> under it.{' '}
-          <button className={styles.showSendButton} onClick={onShowSend}>Show me</button>
-        </>
-      ),
+      hint: null, // never current: sending finishes the unit and the banner goes away
     },
   ];
   const current = steps.findIndex(step => !step.done);
